@@ -10,6 +10,17 @@ de quatro classes, aparelhos reservados, ruído, abstenção, INT8 e exportaçã
 O código do downloader também está incorporado ao notebook, que não depende dos scripts
 auxiliares para definir os experimentos.
 
+## Relatório técnico
+
+Leia o [relatório em PDF](output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf) ou a
+[versão em Markdown](reports/relatorio_classificacao_mosquitos.md). O documento reúne métodos,
+resultados, comparação com CNNs e artigos, explicabilidade disponível, limitações e próximos passos.
+Sua geração recalcula as métricas dos oito classificadores a partir das previsões salvas.
+
+Para regenerar o relatório sem treinar modelos, instale **requirements-report.txt** e execute
+**build_report.py**. São necessários fontconfig e DejaVu Sans. A auditoria específica do documento
+está em **reports/report_manifest.json**.
+
 ## Dados completos baixados
 
 - DOI: 10.5061/dryad.98d7s.

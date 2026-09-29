@@ -1,0 +1,125 @@
+{
+  "generated_at": "2026-09-29T18:41:49.171005-03:00",
+  "analysis_base_commit": "8e04b88d81be5b485fd0b60ec5ae9b62b000852e",
+  "source_run_utc": "2026-09-29T21:10:05.154280+00:00",
+  "pages": 12,
+  "new_models_trained": false,
+  "model_metrics_independently_recomputed": [
+    {
+      "model": "Majoritária",
+      "window_metrics": {
+        "accuracy": 0.10956150270134439,
+        "balanced_accuracy": 0.04918366036146722,
+        "macro_f1": 0.017517212979770026
+      },
+      "recording_macro_recall": 0.05028735632183908
+    },
+    {
+      "model": "F0: soma de densidades",
+      "window_metrics": {
+        "accuracy": 0.20299870167944045,
+        "balanced_accuracy": 0.32705949613133223,
+        "macro_f1": 0.19923843625421972
+      },
+      "recording_macro_recall": 0.42851841530059004
+    },
+    {
+      "model": "F0: log-verossimilhança",
+      "window_metrics": {
+        "accuracy": 0.29785986514218704,
+        "balanced_accuracy": 0.41812609894581304,
+        "macro_f1": 0.30636361027936626
+      },
+      "recording_macro_recall": 0.6589888868864842
+    },
+    {
+      "model": "PSD + SVM linear",
+      "window_metrics": {
+        "accuracy": 0.2746157389956862,
+        "balanced_accuracy": 0.41489325244373376,
+        "macro_f1": 0.27787056473110217
+      },
+      "recording_macro_recall": 0.6081362932354213
+    },
+    {
+      "model": "MFCC + regressão logística",
+      "window_metrics": {
+        "accuracy": 0.33961552958914437,
+        "balanced_accuracy": 0.479420311887959,
+        "macro_f1": 0.38102317754484716
+      },
+      "recording_macro_recall": 0.6396019897655264
+    },
+    {
+      "model": "MFCC/PSD/F0 + ExtraTrees",
+      "window_metrics": {
+        "accuracy": 0.4124890061565523,
+        "balanced_accuracy": 0.4892404235998614,
+        "macro_f1": 0.4561432427183306
+      },
+      "recording_macro_recall": 0.6826461899497289
+    },
+    {
+      "model": "CNN1D compacta",
+      "window_metrics": {
+        "accuracy": 0.2063910876575784,
+        "balanced_accuracy": 0.3576467607315502,
+        "macro_f1": 0.23322164672780826
+      },
+      "recording_macro_recall": 0.430071071972733
+    },
+    {
+      "model": "CNN2D + ruído real no treino",
+      "window_metrics": {
+        "accuracy": 0.2561042006952297,
+        "balanced_accuracy": 0.40780065792758513,
+        "macro_f1": 0.28748675404062907
+      },
+      "recording_macro_recall": 0.5177940772246974
+    }
+  ],
+  "group_fold_consistency_asserted": true,
+  "identical_waveform_fold_consistency_asserted": true,
+  "metric_absolute_tolerance": 1e-10,
+  "pdf_text_checked": true,
+  "reportlab_version": "4.5.1",
+  "noise_commit": "27fdf026728c66c3a8448454987aa18b904cfce2",
+  "inputs": {
+    "results/run_manifest.json": "0e09028ec96331425b0eddab52eca4fc2ad4806d02d2f5db54f60337f2c81d37",
+    "results/notebook_execution.json": "71da5c5e829809fd8a9c5ded9596df5af153e66412080d15be6d0b72a38d817c",
+    "results/species_metrics.csv": "fe800f77310de3be6eb718e669328146fbf948b063aef2646d1bbafc04941f6e",
+    "results/tinyml_metrics.csv": "72af7f0127577902d7e490a79a4a2eb4d5d6f3caf802df052f969192dfe4cc5d",
+    "results/int8_audit.json": "11db38fb3457a700e48e3fbce22b7669c630d6b20fd9522f5205cdeb81802345",
+    "results/device_transfer_metrics.csv": "3c8eaa3079a767c109575f265a95b8d8cfc09fd18ad8974c323c186954b7116e",
+    "results/noise_robustness.csv": "cd977ec9b2d60dff1930ca1a7803a87ea56e431095581cb57c67561365b6d8f5",
+    "results/selective_classification.csv": "c5dfae6d13c222005e4cb6c2f1678ab37425d90536ef2bad94122b3df22e8938",
+    "results/metadata_diagnostic.json": "23b9fd7233d2a8eee4c895e90ee81b3504c193b78b5b45976d20e67716fb9b2a",
+    "results/inventory.csv": "2c9079a2d8907be9a622003c0007797a2b85e6ff158ed341fa4d4a5aba73e519",
+    "results/segments.csv": "65542271586c308b5e9f164de96566dda9829dc0102ac0a736a64e899da65730",
+    "results/species_oof_probabilities.npz": "200f634c174e80e5927e171d631ad5798f4e64ce98f1a446f42bdb27862df701",
+    "results/predictions_classical_1.csv": "878cf804cd5ef71a44e6a62a76365c09edd8af1048f892ae9e5aa2b837649708",
+    "results/predictions_classical_2.csv": "cdeb6c034c521405742b76d6c033687d9fbab2be8df15654569ddfc6b7308d7d",
+    "results/predictions_classical_3.csv": "12d9644d1df5e436d9c5949a58b045b0695975a2475e54e2a92434e28010ec5a",
+    "results/predictions_classical_4.csv": "a4c93eca69b5f3c82123174c3ca68a65e1e06b09228959e1d3021e4356f41c62",
+    "results/predictions_classical_5.csv": "360311f193ea3371d31915a0a82d3e4e471f6c10dc74ed774c125ac6dd08c01e",
+    "results/predictions_classical_6.csv": "8a6953268c09c6efd9d1a20a67d10213a5e06bca9f5fbe9b8e3ce4ba80ed2c3a",
+    "results/predictions_species_cnn1d.csv": "4399ea0f30a27bc2df63a69442172c40a65a71ee0df62a5af114e945246c1167",
+    "results/predictions_species_cnn2d_noise.csv": "21c19e2a33102c1562eb265d3cc4ccf29a5af9705b418e8a8dfbf3449d0d8e8e",
+    "data/noise_manifest.json": "fd42adb331c352c93e3b5a1ec3767a7d99ab546048331742f897a91e140aa2ad",
+    "results/figures/tinyml_confusion.png": "45531c27571367690124d1eee765232af9eac5744f23dcda327827ee0ad3e952"
+  },
+  "outputs": {
+    "output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf": "f28f5195bed8e5f7388d37081ae121eac6e39c39ebd7397464ee41a6113df6a5",
+    "reports/relatorio_classificacao_mosquitos.md": "57e91001809802a52fb837674cae98ebe82dd2d86f52bfd9354b04691f7f6bf1",
+    "reports/assets/benchmark_por_grupo.png": "04072e6943775cc0cc1c26efa082dfede188626a4100044fca2062372eb04481",
+    "reports/assets/robustez_ruido.png": "8a2442323ad6e8a3a3b9556858b416d69e2ceafec21f44ea21af15550ff6d1f2"
+  },
+  "report_generator_sha256": "16cccf016ffa6b3d0e0acb1ff30801f505c353691728502254177825020dc1e3",
+  "pdf_visual_review": {
+    "pages_reviewed": 12,
+    "rendered_dpi": 110,
+    "status": "passed",
+    "checked_tables_figures_headers_footers": true
+  },
+  "original_experiment_output_hashes_verified": 46
+}

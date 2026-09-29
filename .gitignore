@@ -12,3 +12,4 @@ literature/*
 !literature/README.md
 .env
 .env.*
+tmp/
