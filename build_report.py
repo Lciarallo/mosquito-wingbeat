@@ -67,6 +67,18 @@ selective = pd.read_csv(RESULTS / "selective_classification.csv")
 inventory = pd.read_csv(RESULTS / "inventory.csv")
 segments = pd.read_csv(RESULTS / "segments.csv")
 best = species.loc[species.recording_macro_recall.idxmax()]
+improvements = pd.read_csv(RESULTS / "improvements/species_metrics.csv")
+improved_best = improvements.loc[improvements.recording_macro_recall.idxmax()]
+paired = pd.read_csv(RESULTS / "improvements/paired_group_differences.csv")
+arduino = pd.read_csv(RESULTS / "arduino/metrics.csv")
+arduino_selected = arduino.loc[arduino.model.eq("Escolha por validação interna")]
+arduino_default = arduino_selected.loc[arduino_selected["mode"].eq("Calibração FPR 10%")].iloc[0]
+arduino_protocol = json.loads((RESULTS / "arduino/protocol.json").read_text())
+native_audit = json.loads((RESULTS / "arduino/native_audit.json").read_text())
+compile_audit = json.loads((RESULTS / "arduino/compile_audit.json").read_text())
+importance = pd.read_csv(RESULTS / "arduino/permutation_importance.csv")
+persistence = pd.read_csv(RESULTS / "arduino/persistence_metrics.csv")
+arduino_noise = pd.read_csv(RESULTS / "arduino/noise_probe.csv")
 frequency = species.loc[species.model.eq("F0: log-verossimilhança")].iloc[0]
 date = datetime.now(ZoneInfo("America/Sao_Paulo"))
 base_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
@@ -104,6 +116,29 @@ for column in ["fold_species", "fold_tinyml"]:
 assert len(species) == 8 and len(primary) == manifest["species_windows"]
 assert manifest["verified_archives"] == 20 and execution["error_outputs"] == 0
 assert int8["c_python_matching_predictions"] == 400
+with np.load(RESULTS / "improvements/species_oof.npz", allow_pickle=False) as probabilities:
+    for i,row in improvements.iloc[1:].reset_index(drop=True).iterrows():
+        values=probabilities[f"model_{i}"]
+        assert values.shape==(len(primary),len(class_names))
+        predicted=values.argmax(axis=1)
+        for metric,value in dict(accuracy=accuracy_score(targets,predicted),
+                                balanced_accuracy=balanced_accuracy_score(targets,predicted),
+                                macro_f1=f1_score(targets,predicted,average="macro")).items():
+            assert abs(value-row[metric])<1e-10
+        suffix=i if i<4 else "ensemble"
+        groups=pd.read_csv(RESULTS/f"improvements/species_groups_{suffix}.csv")
+        assert abs(balanced_accuracy_score(groups.true,groups.predicted)-row.recording_macro_recall)<1e-10
+arduino_predictions=pd.read_csv(RESULTS / "arduino/predictions.csv.gz")
+for row in arduino.itertuples():
+    frame=arduino_predictions.loc[arduino_predictions.model.eq(row.model)&arduino_predictions["mode"].eq(row.mode)]
+    assert len(frame)==len(segments)
+    positive=frame.label.ne("noise")
+    assert abs(frame.loc[positive,"detected"].mean()-row.window_recall)<1e-10
+    assert abs(frame.loc[~positive,"detected"].mean()-row.window_false_positive_rate)<1e-10
+    for mask,metric in [(positive,"source_mean_recall"),(~positive,"source_mean_false_positive_rate")]:
+        assert abs(frame.loc[mask].groupby("group").detected.mean().mean()-getattr(row,metric))<1e-10
+assert native_audit["matching_decisions"]==native_audit["tested_windows"]==532
+assert compile_audit["compile_succeeded"] and not compile_audit["physical_board_tested"]
 recording = pd.read_csv(RESULTS / "predictions_classical_6.csv")
 confusions = (recording.loc[recording.true_label.ne(recording.predicted_label)]
               .groupby(["true_label", "predicted_label"]).size()
@@ -150,6 +185,26 @@ axes[0].set_ylabel("Acurácia balanceada por janela (%)")
 fig.tight_layout()
 noise_figure = ASSETS / "robustez_ruido.png"
 fig.savefig(noise_figure, bbox_inches="tight"); plt.close(fig)
+
+fig,axes=plt.subplots(1,2,figsize=(8,3.6))
+names={"ExtraTrees original (referência)":"ExtraTrees inicial","SVM RBF":"SVM RBF",
+       "ExtraTrees + contraste/dinâmica":"ExtraTrees + contraste","HistGradientBoosting + contraste/dinâmica":"Boosting + contraste",
+       "MLP compacta + contraste/dinâmica":"MLP + contraste","Ensemble fixo (RBF + árvores + boosting)":"Ensemble"}
+for ax,column,title_plot in zip(axes,["balanced_accuracy","recording_macro_recall"],["Balanceada por janela","Macro recall por grupo"]):
+    ax.barh(np.arange(len(improvements)),improvements[column]*100,color=["#91a8c4"]+[BLUE]*5)
+    ax.set(yticks=np.arange(len(improvements)),yticklabels=[names[name] for name in improvements.model],xlim=(0,100),title=title_plot,xlabel="%")
+    for i,value in enumerate(improvements[column]):ax.text(value*100+1,i,pct(value),va="center",fontsize=8)
+    ax.xaxis.grid(True,alpha=.15);ax.set_axisbelow(True)
+fig.tight_layout();improvements_figure=ASSETS/"melhorias_especies.png"
+fig.savefig(improvements_figure,bbox_inches="tight");plt.close(fig)
+
+summary=importance.groupby("family").source_weighted_auc_drop.mean().sort_values()
+fig,ax=plt.subplots(figsize=(8,3.2));ax.barh(summary.index,summary.values,color=BLUE)
+ax.set_xlabel("Queda média de ROC AUC ponderada por fonte");ax.set_xlim(0,.24)
+ax.xaxis.grid(True,alpha=.15);ax.set_axisbelow(True)
+for i,value in enumerate(summary):ax.text(value+.004,i,f"{value:.3f}".replace(".",","),va="center",fontsize=9)
+fig.tight_layout();importance_figure=ASSETS/"explicabilidade_detector.png"
+fig.savefig(importance_figure,bbox_inches="tight");plt.close(fig)
 
 def font_file(pattern):
     return subprocess.check_output(["fc-match", "-f", "%{file}", pattern], text=True).strip()
@@ -243,18 +298,23 @@ paragraph(f"O estudo reúne a leitura de três artigos, o download completo de u
           f"e a comparação de oito classificadores. O benchmark principal inclui **20 espécies, "
           f"{integer(manifest['species_windows'])} janelas de um segundo e {manifest['species_groups']} grupos**. "
           "As janelas de um mesmo grupo são reservadas juntas na avaliação.")
-paragraph(f"O melhor resultado observado foi **{best.model}**, com **{pct(best.balanced_accuracy)} de "
-          f"acurácia balanceada por janela** e **{pct(best.recording_macro_recall)} de macro recall por grupo**. "
-          f"O intervalo bootstrap descritivo por grupo foi {pct(best.ci_low)} a {pct(best.ci_high)}. "
-          "As CNNs compactas testadas ficaram abaixo desse resultado no benchmark principal.")
+paragraph(f"A atualização melhorou o macro recall por grupo de {pct(best.recording_macro_recall)} para "
+          f"**{pct(improved_best.recording_macro_recall)} com boosting e contraste/dinâmica**, com "
+          f"**{pct(improved_best.balanced_accuracy)} de acurácia balanceada por janela**. "
+          "As CNNs e MLPs próprias também foram comparadas. A reanálise é exploratória e usa o mesmo corpus.")
+paragraph(f"Para Arduino, foi implementada uma rede de 16 unidades com frontend incremental e sketch "
+          f"compilado para Nano 33 BLE Sense. No modo padrão, detectou {pct(arduino_default.window_recall)} "
+          f"dos trechos positivos e marcou {pct(arduino_default.window_false_positive_rate)} dos trechos "
+          "de ruído como candidatos. O sistema ainda erraria bastante; não foi testado numa placa física.")
 table(["Questão", "Conclusão sustentada"], [
-    ["Outros métodos melhoraram a classificação?", "Sim, no protocolo local. ExtraTrees teve o maior resultado observado."],
-    ["Houve comparação com redes neurais?", "Sim. CNN1D, CNN2D com ruído e uma tarefa TinyML de quatro classes."],
-    ["Existe explicabilidade?", "Parcial: sinais, sobreposição, erros e sensibilidade. Faltam atribuições das decisões."],
+    ["Outros métodos melhoraram a classificação?", "Sim. Boosting + contraste teve 79,4% de macro recall por grupo; a comparação inicial está preservada."],
+    ["Houve comparação com redes neurais?", "Sim. CNNs, MLP de espécies e rede binária de 16 unidades para Arduino."],
+    ["Existe explicabilidade?", "Parcial: sinais, erros, sensibilidade e permutação de famílias no detector compacto."],
     ["O estudo superou os artigos?", "Superioridade não demonstrada. Dados, métricas e protocolos diferem."],
 ], [.38, .62])
 paragraph("Este documento sintetiza experimentos já executados. A geração do relatório não treinou novos "
           "modelos; recalculou as métricas salvas para conferir a consistência dos números.", small=True)
+paragraph("Seções 1-11: análise inicial de referência. Seções 12-15: melhorias executadas e protótipo Arduino.", small=True)
 paragraph("Repositório: [Lciarallo/mosquito-wingbeat](https://github.com/Lciarallo/mosquito-wingbeat).", small=True)
 
 new_page("1. Dados, origem e auditoria")
@@ -341,7 +401,7 @@ paragraph("Há uma comparação exploratória entre oito métodos, sem teste par
           "das diferenças e sem busca exaustiva de hiperparâmetros. Escolher o maior resultado observado "
           "não fornece uma estimativa imparcial para um produto futuro.")
 
-new_page("4. Resultados para 20 espécies")
+new_page("4. Resultados iniciais para 20 espécies")
 table(["Método", "Acurácia geral", "Balanceada / janela", "Macro F1", "Recall / grupo"], [
     [labels[row.model], pct(row.accuracy), pct(row.balanced_accuracy), pct(row.macro_f1), pct(row.recording_macro_recall)]
     for row in species.itertuples()
@@ -419,9 +479,10 @@ table(["Espécie verdadeira", "Predição", "Grupos"], [
 paragraph("A tabela lista as maiores contagens de erros; espécies com mais grupos podem aparecer "
           "mais vezes. Não se trata de ranking normalizado de dificuldade. Os rótulos e a agregação "
           "seguem o protocolo de avaliação do acervo.", small=True)
-paragraph("**Ainda não foram implementados SHAP, LIME, importância por permutação ou Grad-CAM**. "
-          "Também não foi medida a fidelidade ou estabilidade de uma explicação local. O relatório "
-          "não atribui uma previsão específica a determinada banda, MFCC ou mecanismo biológico.")
+paragraph("Na etapa inicial, não havia SHAP, LIME, importância por permutação ou Grad-CAM. "
+          "**Esta atualização acrescenta permutação de famílias para o detector compacto (seção 14)**. "
+          "Continuam ausentes SHAP/Grad-CAM e avaliação de fidelidade de uma explicação local; "
+          "não são demonstrados mecanismos biológicos causais.")
 paragraph("Uma próxima etapa pode avaliar importância agrupada das famílias MFCC/PSD/frequência "
           "em dados reservados, ablações controladas e mapas de relevância das CNNs, com testes de "
           "estabilidade. Essas propostas são trabalho futuro.")
@@ -496,9 +557,9 @@ table(["Prioridade", "Trabalho futuro e critério de avaliação"], [
     ["5. Comparar justamente", "Reproduzir protocolos dos artigos e comparar os mesmos exemplos/métricas; usar teste pareado por unidade independente."],
     ["6. Medir implantação", "Executar frontend e modelo no dispositivo alvo; medir RAM/flash, latência, energia e rejeição de classes desconhecidas."],
 ], [.28, .72])
-paragraph("A conclusão atual é exploratória: a combinação de características acústicas com ExtraTrees "
-          "foi a melhor entre os métodos implementados nesse acervo, e os testes de transferência e "
-          "ruído mostram limitações práticas que precisam ser resolvidas antes de uso em campo.")
+paragraph("Na etapa inicial, ExtraTrees foi o melhor entre os oito métodos implementados. "
+          "As extensões das seções 12-15 melhoraram o resultado local e acrescentaram um protótipo "
+          "Arduino. Transferência e ruído continuam impondo limitações antes de uso em campo.")
 
 new_page("11. Reprodutibilidade, auditoria e referências")
 paragraph(f"A execução registrada contém **{execution['total_cells']} células, "
@@ -534,6 +595,118 @@ paragraph("Licenças e direitos: o dataset Dryad/Zenodo declara CC0; ruídos e a
           "termos de suas fontes. O relatório publica a análise e as citações, sem reproduzir "
           "os textos integrais dos artigos.", small=True)
 
+new_page("12. Melhorias executadas para 20 espécies")
+paragraph("Foram mantidas as mesmas 23.877 janelas, 569 grupos e três dobras externas. "
+          "A extensão acrescenta 181 características: contraste espectral local em 75 frequências "
+          "(média/desvio), dinâmica dos MFCC e rastreamento de picos. Árvores, boosting e MLP usam "
+          "293 entradas; SVM RBF usa as 112 originais. Mudam representação, modelo e hiperparâmetros; "
+          "o ganho não foi isolado por ablação de cada componente.")
+table(["Método", "Geral / janela", "Balanceada / janela", "Recall / grupo"], [
+    [names[row.model],pct(row.accuracy),pct(row.balanced_accuracy),pct(row.recording_macro_recall)]
+    for row in improvements.itertuples()
+], [.43,.19,.19,.19])
+paragraph(f"O boosting obteve {pct(improved_best.accuracy)} de acurácia geral e "
+          f"{pct(improved_best.recording_macro_recall)} de macro recall por grupo, ganho de "
+          f"**{decimal(100*(improved_best.recording_macro_recall-best.recording_macro_recall))} pontos "
+          "percentuais por grupo** sobre ExtraTrees inicial. O ensemble teve a maior acurácia "
+          "balanceada por janela (59,0%), mas macro recall por grupo inferior ao boosting.")
+figure(improvements_figure,"Figura 4. Etapa inicial e novos métodos nas mesmas dobras. São métricas diferentes, não taxas de detecção de mosquito.",75*mm)
+gain=paired.loc[paired.model.eq(improved_best.model)].iloc[0]
+paragraph(f"Bootstrap pareado: o intervalo descritivo do ganho de macro recall por grupo do boosting "
+          f"foi {decimal(gain.descriptive_ci_low*100)} a {decimal(gain.descriptive_ci_high*100)} pontos "
+          "percentuais, 2.000 reamostragens dentro das espécies. É condicionado às previsões salvas, "
+          "sem teste inferencial confirmatório, reotimização ou validação externa. A análise é adaptativa "
+          "sobre o corpus já utilizado; não estabelece superioridade sobre os artigos.",small=True)
+paragraph("A nova MLP 293-128-64-20 teve seleção por perda em grupos internos, até 70 épocas/paciência 10, "
+          "e ficou abaixo do boosting. Comparações neurais incluem essa MLP e as CNNs da etapa inicial.",small=True)
+
+new_page("13. Detecção binária e erros do aparelho")
+paragraph("Para a intenção de detectar sons em Arduino, foi criada uma tarefa binária independente "
+          "da identificação de espécie. O frontend incremental usa Hann/FFT de 512 amostras a 16 kHz, "
+          "31 frames por decisão (0,992 s) e 68 características: energia relativa em 31 bandas, "
+          "dispersão temporal, flatness e pico de 219-875 Hz. Não armazena um segundo inteiro nem "
+          "usa normalização dependente de áudio futuro.")
+paragraph("Logística, árvore, floresta e rede de 16 unidades foram comparadas. A seleção usa ROC AUC "
+          "ponderada por fonte numa divisão interna de grupos, separada da calibração. A rede foi "
+          "escolhida nas três dobras; número de épocas e padronização também respeitam essas divisões. "
+          "As saídas são calibradas com pesos iguais para fontes positivas/negativas (mistura 50/50), "
+          "que não é a prevalência real do ambiente.")
+table(["Modo", "Recall positivo / janela", "Falso positivo / janela", "Recall / fonte", "Falso positivo / fonte"], [
+    [row.mode,pct(row.window_recall),pct(row.window_false_positive_rate),pct(row.source_mean_recall),pct(row.source_mean_false_positive_rate)]
+    for row in arduino_selected.itertuples()
+], [.32,.17,.17,.17,.17])
+paragraph(f"**Sim, o aparelho ainda erraria bastante:** no modo moderado padrão, perderia "
+          f"{pct(1-arduino_default.window_recall)} dos trechos positivos e marcaria "
+          f"{pct(arduino_default.window_false_positive_rate)} dos trechos de ruído como candidatos "
+          "antes da confirmação. Há 23.877 trechos positivos de 569 fontes e 528 trechos negativos de "
+          "44 fontes. Os rótulos são por arquivo, sem anotação de cada mosquito ativo ou voo.")
+paragraph(f"No modo padrão, intervalos bootstrap descritivos por fonte: recall "
+          f"{pct(arduino_default.source_recall_ci_low)}-{pct(arduino_default.source_recall_ci_high)}; "
+          f"falsos positivos {pct(arduino_default.source_false_positive_rate_ci_low)}-"
+          f"{pct(arduino_default.source_false_positive_rate_ci_high)}. As taxas por fonte dão peso igual "
+          "a gravações e diferem das taxas por janela, dominadas por fontes longas.",small=True)
+paragraph("As metas de 5%/10% na calibração não foram garantidas no teste. Na comparação no limiar "
+          "0,5, a rede aumentou recall de 75,9% (logística) para 82,7%, mas falsos positivos passaram "
+          "de 33,1% para 35,2%. Isso mostra a troca entre sensibilidade e alarmes; não é uma melhora "
+          "uniforme de todas as métricas. A árvore no limiar conservador não aceitou nenhum trecho.")
+
+new_page("14. Explicabilidade e ruído do detector")
+paragraph("A atualização executou importância por permutação em cinco famílias de características: "
+          "cada família é embaralhada conjuntamente, cinco repetições por dobra, nos dados de teste "
+          "reservados. A métrica é a queda de ROC AUC ponderada por fonte. Relações internas da família "
+          "são preservadas; as relações entre famílias podem resultar em entradas pouco usuais.")
+figure(importance_figure,"Figura 5. Sensibilidade preditiva média do detector compacto após permutar famílias. Sem atribuição causal ou intervalo inferencial.",76*mm)
+paragraph("As bandas de 1.125-4.000 Hz tiveram a maior queda média, cerca de 0,175 de ROC AUC; "
+          "as bandas de 125-1.125 Hz, 0,091. Isso mostra dependência preditiva do espectro, não prova "
+          "que essas bandas representam exclusivamente asas ou que eliminam o efeito do aparelho. "
+          "SHAP, LIME, Grad-CAM e fidelidade de explicações locais continuam ausentes.")
+heading("Confirmação temporal",3)
+paragraph("A regra causal aceita duas de três janelas completas, reiniciando em lacunas ou mudança "
+          "de arquivo. O corpus foi amostrado com no máximo 60 janelas por arquivo, muitas espaçadas. "
+          "A comparação nos mesmos endpoints contíguos teve 18.180 trechos positivos e 244 negativos, "
+          "mas só duas fontes de ruído. No modo padrão, o falso positivo por janela mudou de 44,3% "
+          "para 43,9%. A confirmação não demonstrou controle confiável de ruídos persistentes; "
+          "não pode ser apresentada como solução comprovada para alarmes contínuos.")
+heading("Sonda com ruído real reservado",3)
+curve=arduino_noise.loc[arduino_noise["mode"].eq("Calibração FPR 10%")]
+table(["Condição", "Recall dos trechos positivos"], [
+    ["Sem ruído adicionado",pct(curve.loc[curve.noise.eq("Sem ruído adicionado"),"positive_window_recall"].mean())],
+] + [[f"Ruído real: SNR {snr} dB",pct(curve.loc[curve.added_snr_db.eq(snr),"positive_window_recall"].mean())] for snr in [20,10,0]], [.65,.35])
+paragraph("São 480 trechos, oito por espécie/dobra, com fontes de ruído exclusivas do teste. "
+          "A sonda mede sensibilidade a mistura em níveis definidos; não mede desempenho em campo, "
+          "distância de alcance ou alarmes por hora.",small=True)
+
+new_page("15. Firmware Arduino e avanço necessário")
+paragraph("O sketch inclui captura PDM, fila de áudio, frontend, rede neural e confirmação, com "
+          "avisos e reset quando perde amostras. O alvo inicial é Nano 33 BLE Sense / Sense Rev2, "
+          "com microfone integrado. O Uno R3/Nano clássico não tem memória suficiente para este "
+          "firmware; outra placa exige adaptador de captura e compilação próprios.")
+table(["Verificação", "Resultado / limite"], [
+    ["Modelo compacto", "68-16-1 com ReLU, 1.121 parâmetros; aproximadamente 4.504 bytes numéricos incluindo constantes."],
+    ["Frontend incremental", f"Objeto C++ nativo: {integer(native_audit['streaming_frontend_object_bytes'])} bytes, mais buffers/componentes no sketch."],
+    ["Compilação Nano 33 BLE", f"CLI 1.5.1/core 4.6.0; {integer(compile_audit['program_storage_bytes'])} bytes de programa / {integer(compile_audit['global_static_memory_bytes'])} bytes globais."],
+    ["Equivalência PCM-C++/Python", f"{native_audit['matching_decisions']}/{native_audit['tested_windows']} decisões iguais; maior erro de característica {native_audit['max_absolute_feature_error']:.2e}, de escore {native_audit['max_absolute_score_error']:.2e}."],
+    ["Lógica de confirmação", "Testes causais e reset por lacunas passaram. Isso não comprova benefício em campo."],
+    ["Placa física", "Sem upload, teste do microfone, latência, consumo, bateria ou pico de RAM medidos."],
+], [.30,.70])
+paragraph("A compilação informa programa e RAM estática, excluindo pico de pilha/heap. O teste nativo "
+          "usa 400 trechos positivos e todos os 132 negativos de teste da dobra 0. A exportação padrão "
+          "é dessa dobra; o benchmark agregado aplica cada modelo à sua própria dobra. Não houve "
+          "retreino e validação de um modelo de produção.",small=True)
+paragraph("A primeira confirmação exige três janelas completas, ou 2,976 s de observação, "
+          "além do tempo computacional não medido. Passagens muito curtas podem ser perdidas; "
+          "não foi validada a detecção de cada voo isolado.",small=True)
+heading("Para reduzir erros de forma verificável",3)
+bullets([
+    "Coletar áudio com a placa e microfone escolhidos no local de uso, incluindo distância, ganho e qualidade de captura.",
+    "Anotar mosquito realmente ativo/inativo e gravar horas sem mosquito com ventilador, fala, chuva, máquinas e outros insetos.",
+    "Reservar dias e locais inteiros antes do ajuste; treinar com ruídos locais, recalibrar limiares e testar classes desconhecidas.",
+    "Medir sensibilidade por evento, falsos alarmes por hora, latência e perdas de amostras no hardware. Estes resultados requerem a coleta física que ainda não existe.",
+])
+paragraph("Instalação e modos de operação: firmware/README.md. Arquivos de auditoria: "
+          "results/arduino/. Documentação oficial: [Nano 33 BLE Sense Rev2](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2), "
+          "[Uno R3](https://docs.arduino.cc/hardware/uno-rev3).",small=True)
+
 def footer(canvas, doc):
     canvas.saveState()
     canvas.setStrokeColor(colors.HexColor("#d8e1eb"))
@@ -567,11 +740,15 @@ input_paths = [RESULTS/p for p in [
     "metadata_diagnostic.json", "inventory.csv", "segments.csv", "species_oof_probabilities.npz",
 ] + recording_files]
 input_paths += [ROOT/"data/noise_manifest.json", RESULTS/"figures/tinyml_confusion.png"]
-output_paths = [pdf_path, md_path, benchmark_figure, noise_figure]
+input_paths += [p for folder in [RESULTS/"improvements",RESULTS/"arduino"] for p in folder.glob("*") if p.is_file()]
+input_paths += [p for p in (ROOT/"firmware").rglob("*") if p.is_file()]
+output_paths = [pdf_path, md_path, benchmark_figure, noise_figure, improvements_figure, importance_figure]
 report_audit = dict(
     generated_at=date.isoformat(), analysis_base_commit=base_commit,
     source_run_utc=manifest["generated_utc"], pages=len(pdf.pages),
     new_models_trained=False, model_metrics_independently_recomputed=checks,
+    update_contains_new_executed_experiments=True,improvement_models_metrics_verified=5,
+    arduino_operating_rows_independently_verified=len(arduino),
     group_fold_consistency_asserted=True, identical_waveform_fold_consistency_asserted=True,
     metric_absolute_tolerance=1e-10, pdf_text_checked=True,
     reportlab_version=importlib.metadata.version("reportlab"),

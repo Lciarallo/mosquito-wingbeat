@@ -1,0 +1,37 @@
+fold,noise,added_snr_db,mode,n_windows,positive_window_recall,positive_groups,noise_groups
+0,Sem ruído adicionado,,"Balanceado 0,5",160,0.8,94,15
+0,Sem ruído adicionado,,Calibração FPR 5%,160,0.0,94,15
+0,Sem ruído adicionado,,Calibração FPR 10%,160,0.6375,94,15
+0,Ruído real reservado,20.0,"Balanceado 0,5",160,0.75625,94,15
+0,Ruído real reservado,20.0,Calibração FPR 5%,160,0.0,94,15
+0,Ruído real reservado,20.0,Calibração FPR 10%,160,0.59375,94,15
+0,Ruído real reservado,10.0,"Balanceado 0,5",160,0.73125,94,15
+0,Ruído real reservado,10.0,Calibração FPR 5%,160,0.0,94,15
+0,Ruído real reservado,10.0,Calibração FPR 10%,160,0.5,94,15
+0,Ruído real reservado,0.0,"Balanceado 0,5",160,0.55625,94,15
+0,Ruído real reservado,0.0,Calibração FPR 5%,160,0.0,94,15
+0,Ruído real reservado,0.0,Calibração FPR 10%,160,0.325,94,15
+1,Sem ruído adicionado,,"Balanceado 0,5",160,0.8125,83,15
+1,Sem ruído adicionado,,Calibração FPR 5%,160,0.79375,83,15
+1,Sem ruído adicionado,,Calibração FPR 10%,160,0.79375,83,15
+1,Ruído real reservado,20.0,"Balanceado 0,5",160,0.79375,83,15
+1,Ruído real reservado,20.0,Calibração FPR 5%,160,0.76875,83,15
+1,Ruído real reservado,20.0,Calibração FPR 10%,160,0.76875,83,15
+1,Ruído real reservado,10.0,"Balanceado 0,5",160,0.74375,83,15
+1,Ruído real reservado,10.0,Calibração FPR 5%,160,0.7125,83,15
+1,Ruído real reservado,10.0,Calibração FPR 10%,160,0.7125,83,15
+1,Ruído real reservado,0.0,"Balanceado 0,5",160,0.5875,83,15
+1,Ruído real reservado,0.0,Calibração FPR 5%,160,0.55625,83,15
+1,Ruído real reservado,0.0,Calibração FPR 10%,160,0.55625,83,15
+2,Sem ruído adicionado,,"Balanceado 0,5",160,0.7875,87,14
+2,Sem ruído adicionado,,Calibração FPR 5%,160,0.6375,87,14
+2,Sem ruído adicionado,,Calibração FPR 10%,160,0.675,87,14
+2,Ruído real reservado,20.0,"Balanceado 0,5",160,0.74375,87,14
+2,Ruído real reservado,20.0,Calibração FPR 5%,160,0.6,87,14
+2,Ruído real reservado,20.0,Calibração FPR 10%,160,0.65625,87,14
+2,Ruído real reservado,10.0,"Balanceado 0,5",160,0.64375,87,14
+2,Ruído real reservado,10.0,Calibração FPR 5%,160,0.4875,87,14
+2,Ruído real reservado,10.0,Calibração FPR 10%,160,0.5375,87,14
+2,Ruído real reservado,0.0,"Balanceado 0,5",160,0.5125,87,14
+2,Ruído real reservado,0.0,Calibração FPR 5%,160,0.275,87,14
+2,Ruído real reservado,0.0,Calibração FPR 10%,160,0.325,87,14

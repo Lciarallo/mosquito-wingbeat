@@ -1,0 +1,25 @@
+{
+  "board_fqbn": "arduino:mbed_nano:nano33ble",
+  "target": "Arduino Nano 33 BLE Sense / Sense Rev2",
+  "arduino_cli_version": "1.5.1",
+  "core_version": "4.6.0",
+  "compile_succeeded": true,
+  "program_storage_bytes": 100832,
+  "global_static_memory_bytes": 59584,
+  "maximum_program_storage_bytes": 983040,
+  "maximum_ram_bytes": 262144,
+  "global_memory_excludes_runtime_peak_stack_and_heap": true,
+  "physical_board_tested": false,
+  "flashed": false,
+  "sample_rate_hz": 16000,
+  "compile_output": "Sketch uses 100832 bytes (10%) of program storage space. Maximum is 983040 bytes.\nGlobal variables use 59584 bytes (22%) of dynamic memory, leaving 202560 bytes for local variables. Maximum is 262144 bytes.",
+  "command": "arduino-cli compile --fqbn arduino:mbed_nano:nano33ble --build-path tmp/arduino-build firmware/MosquitoPresence",
+  "compiled_elf_sha256": "3c0e0ab41a45a72d208fb75d5b19dd0583ea9975f1524304f6ac087f7345bdc7",
+  "source_sha256": {
+    "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
+    "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
+    "firmware/MosquitoPresence/PresenceModelFold2.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "firmware/MosquitoPresence/MosquitoPresence.ino": "6b26b02cbfd1242e2bcf42557d745d6ff7bc37c598cc7549d485f5a318e0fdf6"
+  }
+}

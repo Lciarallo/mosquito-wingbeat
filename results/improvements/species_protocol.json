@@ -1,0 +1,547 @@
+{
+  "method_order": [
+    "SVM RBF",
+    "ExtraTrees + contraste/dinâmica",
+    "HistGradientBoosting + contraste/dinâmica",
+    "MLP compacta + contraste/dinâmica",
+    "ensemble"
+  ],
+  "classes": [
+    "Aedes aegypti",
+    "Aedes albopictus",
+    "Aedes mediovittatus",
+    "Aedes sierrensis",
+    "Anopheles albimanus",
+    "Anopheles arabiensis",
+    "Anopheles atroparvus",
+    "Anopheles dirus",
+    "Anopheles farauti",
+    "Anopheles freeborni",
+    "Anopheles gambiae",
+    "Anopheles merus",
+    "Anopheles minimus",
+    "Anopheles quadriannulatus",
+    "Anopheles quadrimaculatus",
+    "Anopheles stephensi",
+    "Culex pipiens",
+    "Culex quinquefasciatus",
+    "Culex tarsalis",
+    "Culiseta incidens"
+  ],
+  "config_feature_version": "contrast-delta-1",
+  "feature_names": [
+    "mfcc_mean_0",
+    "mfcc_mean_1",
+    "mfcc_mean_2",
+    "mfcc_mean_3",
+    "mfcc_mean_4",
+    "mfcc_mean_5",
+    "mfcc_mean_6",
+    "mfcc_mean_7",
+    "mfcc_mean_8",
+    "mfcc_mean_9",
+    "mfcc_mean_10",
+    "mfcc_mean_11",
+    "mfcc_mean_12",
+    "mfcc_std_0",
+    "mfcc_std_1",
+    "mfcc_std_2",
+    "mfcc_std_3",
+    "mfcc_std_4",
+    "mfcc_std_5",
+    "mfcc_std_6",
+    "mfcc_std_7",
+    "mfcc_std_8",
+    "mfcc_std_9",
+    "mfcc_std_10",
+    "mfcc_std_11",
+    "mfcc_std_12",
+    "psd_150Hz",
+    "psd_200Hz",
+    "psd_250Hz",
+    "psd_300Hz",
+    "psd_350Hz",
+    "psd_400Hz",
+    "psd_450Hz",
+    "psd_500Hz",
+    "psd_550Hz",
+    "psd_600Hz",
+    "psd_650Hz",
+    "psd_700Hz",
+    "psd_750Hz",
+    "psd_800Hz",
+    "psd_850Hz",
+    "psd_900Hz",
+    "psd_950Hz",
+    "psd_1000Hz",
+    "psd_1050Hz",
+    "psd_1100Hz",
+    "psd_1150Hz",
+    "psd_1200Hz",
+    "psd_1250Hz",
+    "psd_1300Hz",
+    "psd_1350Hz",
+    "psd_1400Hz",
+    "psd_1450Hz",
+    "psd_1500Hz",
+    "psd_1550Hz",
+    "psd_1600Hz",
+    "psd_1650Hz",
+    "psd_1700Hz",
+    "psd_1750Hz",
+    "psd_1800Hz",
+    "psd_1850Hz",
+    "psd_1900Hz",
+    "psd_1950Hz",
+    "psd_2000Hz",
+    "psd_2050Hz",
+    "psd_2100Hz",
+    "psd_2150Hz",
+    "psd_2200Hz",
+    "psd_2250Hz",
+    "psd_2300Hz",
+    "psd_2350Hz",
+    "psd_2400Hz",
+    "psd_2450Hz",
+    "psd_2500Hz",
+    "psd_2550Hz",
+    "psd_2600Hz",
+    "psd_2650Hz",
+    "psd_2700Hz",
+    "psd_2750Hz",
+    "psd_2800Hz",
+    "psd_2850Hz",
+    "psd_2900Hz",
+    "psd_2950Hz",
+    "psd_3000Hz",
+    "psd_3050Hz",
+    "psd_3100Hz",
+    "psd_3150Hz",
+    "psd_3200Hz",
+    "psd_3250Hz",
+    "psd_3300Hz",
+    "psd_3350Hz",
+    "psd_3400Hz",
+    "psd_3450Hz",
+    "psd_3500Hz",
+    "psd_3550Hz",
+    "psd_3600Hz",
+    "psd_3650Hz",
+    "psd_3700Hz",
+    "psd_3750Hz",
+    "psd_3800Hz",
+    "psd_3850Hz",
+    "psd_3900Hz",
+    "psd_3950Hz",
+    "f0_median",
+    "f0_std",
+    "f0_q10",
+    "f0_q90",
+    "peak_frequency",
+    "harmonic_f0",
+    "spectral_centroid",
+    "spectral_flatness",
+    "spectral_entropy",
+    "contrast_mean_200",
+    "contrast_mean_250",
+    "contrast_mean_300",
+    "contrast_mean_350",
+    "contrast_mean_400",
+    "contrast_mean_450",
+    "contrast_mean_500",
+    "contrast_mean_550",
+    "contrast_mean_600",
+    "contrast_mean_650",
+    "contrast_mean_700",
+    "contrast_mean_750",
+    "contrast_mean_800",
+    "contrast_mean_850",
+    "contrast_mean_900",
+    "contrast_mean_950",
+    "contrast_mean_1000",
+    "contrast_mean_1050",
+    "contrast_mean_1100",
+    "contrast_mean_1150",
+    "contrast_mean_1200",
+    "contrast_mean_1250",
+    "contrast_mean_1300",
+    "contrast_mean_1350",
+    "contrast_mean_1400",
+    "contrast_mean_1450",
+    "contrast_mean_1500",
+    "contrast_mean_1550",
+    "contrast_mean_1600",
+    "contrast_mean_1650",
+    "contrast_mean_1700",
+    "contrast_mean_1750",
+    "contrast_mean_1800",
+    "contrast_mean_1850",
+    "contrast_mean_1900",
+    "contrast_mean_1950",
+    "contrast_mean_2000",
+    "contrast_mean_2050",
+    "contrast_mean_2100",
+    "contrast_mean_2150",
+    "contrast_mean_2200",
+    "contrast_mean_2250",
+    "contrast_mean_2300",
+    "contrast_mean_2350",
+    "contrast_mean_2400",
+    "contrast_mean_2450",
+    "contrast_mean_2500",
+    "contrast_mean_2550",
+    "contrast_mean_2600",
+    "contrast_mean_2650",
+    "contrast_mean_2700",
+    "contrast_mean_2750",
+    "contrast_mean_2800",
+    "contrast_mean_2850",
+    "contrast_mean_2900",
+    "contrast_mean_2950",
+    "contrast_mean_3000",
+    "contrast_mean_3050",
+    "contrast_mean_3100",
+    "contrast_mean_3150",
+    "contrast_mean_3200",
+    "contrast_mean_3250",
+    "contrast_mean_3300",
+    "contrast_mean_3350",
+    "contrast_mean_3400",
+    "contrast_mean_3450",
+    "contrast_mean_3500",
+    "contrast_mean_3550",
+    "contrast_mean_3600",
+    "contrast_mean_3650",
+    "contrast_mean_3700",
+    "contrast_mean_3750",
+    "contrast_mean_3800",
+    "contrast_mean_3850",
+    "contrast_mean_3900",
+    "contrast_std_200",
+    "contrast_std_250",
+    "contrast_std_300",
+    "contrast_std_350",
+    "contrast_std_400",
+    "contrast_std_450",
+    "contrast_std_500",
+    "contrast_std_550",
+    "contrast_std_600",
+    "contrast_std_650",
+    "contrast_std_700",
+    "contrast_std_750",
+    "contrast_std_800",
+    "contrast_std_850",
+    "contrast_std_900",
+    "contrast_std_950",
+    "contrast_std_1000",
+    "contrast_std_1050",
+    "contrast_std_1100",
+    "contrast_std_1150",
+    "contrast_std_1200",
+    "contrast_std_1250",
+    "contrast_std_1300",
+    "contrast_std_1350",
+    "contrast_std_1400",
+    "contrast_std_1450",
+    "contrast_std_1500",
+    "contrast_std_1550",
+    "contrast_std_1600",
+    "contrast_std_1650",
+    "contrast_std_1700",
+    "contrast_std_1750",
+    "contrast_std_1800",
+    "contrast_std_1850",
+    "contrast_std_1900",
+    "contrast_std_1950",
+    "contrast_std_2000",
+    "contrast_std_2050",
+    "contrast_std_2100",
+    "contrast_std_2150",
+    "contrast_std_2200",
+    "contrast_std_2250",
+    "contrast_std_2300",
+    "contrast_std_2350",
+    "contrast_std_2400",
+    "contrast_std_2450",
+    "contrast_std_2500",
+    "contrast_std_2550",
+    "contrast_std_2600",
+    "contrast_std_2650",
+    "contrast_std_2700",
+    "contrast_std_2750",
+    "contrast_std_2800",
+    "contrast_std_2850",
+    "contrast_std_2900",
+    "contrast_std_2950",
+    "contrast_std_3000",
+    "contrast_std_3050",
+    "contrast_std_3100",
+    "contrast_std_3150",
+    "contrast_std_3200",
+    "contrast_std_3250",
+    "contrast_std_3300",
+    "contrast_std_3350",
+    "contrast_std_3400",
+    "contrast_std_3450",
+    "contrast_std_3500",
+    "contrast_std_3550",
+    "contrast_std_3600",
+    "contrast_std_3650",
+    "contrast_std_3700",
+    "contrast_std_3750",
+    "contrast_std_3800",
+    "contrast_std_3850",
+    "contrast_std_3900",
+    "mfcc_delta_abs_0",
+    "mfcc_delta_abs_1",
+    "mfcc_delta_abs_2",
+    "mfcc_delta_abs_3",
+    "mfcc_delta_abs_4",
+    "mfcc_delta_abs_5",
+    "mfcc_delta_abs_6",
+    "mfcc_delta_abs_7",
+    "mfcc_delta_abs_8",
+    "mfcc_delta_abs_9",
+    "mfcc_delta_abs_10",
+    "mfcc_delta_abs_11",
+    "mfcc_delta_abs_12",
+    "mfcc_delta_std_0",
+    "mfcc_delta_std_1",
+    "mfcc_delta_std_2",
+    "mfcc_delta_std_3",
+    "mfcc_delta_std_4",
+    "mfcc_delta_std_5",
+    "mfcc_delta_std_6",
+    "mfcc_delta_std_7",
+    "mfcc_delta_std_8",
+    "mfcc_delta_std_9",
+    "mfcc_delta_std_10",
+    "mfcc_delta_std_11",
+    "mfcc_delta_std_12",
+    "tonal_contrast_mean",
+    "tonal_contrast_std",
+    "peak_track_std",
+    "peak_track_q10",
+    "peak_track_q90"
+  ],
+  "feature_signature": "2843d1b5519b708ac2e1c84c79bbaff3f20ba7dcad362e58aed8965dfe73c85a",
+  "outer_fold_column": "fold_species",
+  "seed": 42,
+  "mlp_history": {
+    "fold0": [
+      {
+        "epoch": 1,
+        "validation_loss": 1.912653923466953
+      },
+      {
+        "epoch": 2,
+        "validation_loss": 1.6100339121721388
+      },
+      {
+        "epoch": 3,
+        "validation_loss": 1.5807486921806315
+      },
+      {
+        "epoch": 4,
+        "validation_loss": 1.601006811000069
+      },
+      {
+        "epoch": 5,
+        "validation_loss": 1.6370269770063774
+      },
+      {
+        "epoch": 6,
+        "validation_loss": 1.6078687955089332
+      },
+      {
+        "epoch": 7,
+        "validation_loss": 1.6720895624465575
+      },
+      {
+        "epoch": 8,
+        "validation_loss": 1.6478342500291083
+      },
+      {
+        "epoch": 9,
+        "validation_loss": 1.6578020592598608
+      },
+      {
+        "epoch": 10,
+        "validation_loss": 1.7050211566051652
+      },
+      {
+        "epoch": 11,
+        "validation_loss": 1.688673596085281
+      },
+      {
+        "epoch": 12,
+        "validation_loss": 1.7228403239599173
+      },
+      {
+        "epoch": 13,
+        "validation_loss": 1.7217408437021975
+      }
+    ],
+    "fold1": [
+      {
+        "epoch": 1,
+        "validation_loss": 1.9267164044726037
+      },
+      {
+        "epoch": 2,
+        "validation_loss": 1.5449002627013304
+      },
+      {
+        "epoch": 3,
+        "validation_loss": 1.4651543657217776
+      },
+      {
+        "epoch": 4,
+        "validation_loss": 1.440627592688963
+      },
+      {
+        "epoch": 5,
+        "validation_loss": 1.4340131540276122
+      },
+      {
+        "epoch": 6,
+        "validation_loss": 1.403220473370767
+      },
+      {
+        "epoch": 7,
+        "validation_loss": 1.418820123694201
+      },
+      {
+        "epoch": 8,
+        "validation_loss": 1.394219365801634
+      },
+      {
+        "epoch": 9,
+        "validation_loss": 1.3932889084935962
+      },
+      {
+        "epoch": 10,
+        "validation_loss": 1.4160406741134126
+      },
+      {
+        "epoch": 11,
+        "validation_loss": 1.3935837297948948
+      },
+      {
+        "epoch": 12,
+        "validation_loss": 1.426844802608634
+      },
+      {
+        "epoch": 13,
+        "validation_loss": 1.3983250367839608
+      },
+      {
+        "epoch": 14,
+        "validation_loss": 1.4165982148839802
+      },
+      {
+        "epoch": 15,
+        "validation_loss": 1.42654135857291
+      },
+      {
+        "epoch": 16,
+        "validation_loss": 1.4409680500626383
+      },
+      {
+        "epoch": 17,
+        "validation_loss": 1.4276482165473754
+      },
+      {
+        "epoch": 18,
+        "validation_loss": 1.4654374712976477
+      },
+      {
+        "epoch": 19,
+        "validation_loss": 1.4443469950700893
+      }
+    ],
+    "fold2": [
+      {
+        "epoch": 1,
+        "validation_loss": 1.9149989257682136
+      },
+      {
+        "epoch": 2,
+        "validation_loss": 1.54851591392791
+      },
+      {
+        "epoch": 3,
+        "validation_loss": 1.4827984683046
+      },
+      {
+        "epoch": 4,
+        "validation_loss": 1.4605434983024672
+      },
+      {
+        "epoch": 5,
+        "validation_loss": 1.4739831761139202
+      },
+      {
+        "epoch": 6,
+        "validation_loss": 1.4637400147440935
+      },
+      {
+        "epoch": 7,
+        "validation_loss": 1.4755886510033953
+      },
+      {
+        "epoch": 8,
+        "validation_loss": 1.4364721563878404
+      },
+      {
+        "epoch": 9,
+        "validation_loss": 1.4729177257005897
+      },
+      {
+        "epoch": 10,
+        "validation_loss": 1.4707487737434812
+      },
+      {
+        "epoch": 11,
+        "validation_loss": 1.4839353075607202
+      },
+      {
+        "epoch": 12,
+        "validation_loss": 1.5033613388692073
+      },
+      {
+        "epoch": 13,
+        "validation_loss": 1.4681316635645483
+      },
+      {
+        "epoch": 14,
+        "validation_loss": 1.5011203586762116
+      },
+      {
+        "epoch": 15,
+        "validation_loss": 1.5098935227690613
+      },
+      {
+        "epoch": 16,
+        "validation_loss": 1.4791493135556957
+      },
+      {
+        "epoch": 17,
+        "validation_loss": 1.4949347000508342
+      },
+      {
+        "epoch": 18,
+        "validation_loss": 1.5031878847788145
+      }
+    ]
+  },
+  "group_disjointness": true,
+  "identical_waveform_disjointness": true,
+  "svm_scores_calibrated": false,
+  "ensemble_weights": [
+    0.3333333333333333,
+    0.3333333333333333,
+    0.3333333333333333
+  ],
+  "adaptive_analysis_of_previously_used_corpus": true
+}

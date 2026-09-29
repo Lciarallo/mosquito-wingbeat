@@ -318,7 +318,7 @@ for name, source in sections.items():
 
 cells.append(nbf.v4.new_code_cell("""
 display(Markdown(
-    f"**Resultado local:** {len(SPECIES)} espécies, {len(PRIMARY):,} janelas e "
+    f"**Resultado da etapa inicial:** {len(SPECIES)} espécies, {len(PRIMARY):,} janelas e "
     f"{segments.iloc[PRIMARY].group.nunique()} grupos. O maior macro recall por grupo "
     f"foi **{best.recording_macro_recall:.1%}** com **{best.model}**.\\n\\n"
     f"**Generalização:** no teste com aparelhos não vistos e sete ou mais classes, "
@@ -331,6 +331,141 @@ display(Markdown(
     f"**INT8:** acurácia balanceada por janela de **{quantized_metrics['balanced_accuracy']:.1%}**, "
     f"payload de **{payload_bytes} bytes** e **{len(c_test)}/{len(c_test)}** "
     f"previsões C/Python correspondentes. Frontend e hardware não foram medidos."
+))
+""".strip()))
+md("""
+## 16. Melhorias executadas: contraste, dinâmica e novos modelos
+
+Esta extensão reutiliza **as mesmas janelas e três dobras por grupo** da etapa inicial.
+Acrescenta contraste espectral local em 75 frequências (média/desvio), variação temporal
+de MFCC e rastreamento de pico: 181 características novas, 293 no total. O contraste
+remove uma referência espectral local ampla; não garante remoção de ruído ou de
+diferenças entre microfones. O RBF usa as 112 características originais; árvores,
+boosting e MLP usam as 293. Mudam representação e modelo, sem isolar cada contribuição.
+
+O ensemble combina RBF, ExtraTrees e boosting com pesos iguais fixados. A MLP
+293 -> 128 -> 64 -> 20 tem validação interna por grupos. A comparação é uma
+**reanálise adaptativa do corpus já utilizado**, não um novo teste externo.
+O bootstrap pareado por grupo é descritivo e condicionado às previsões observadas.
+Os algoritmos desta extensão estão nos scripts incluídos no repositório.
+""")
+cells.append(nbf.v4.new_code_cell("""
+import improve_device
+improve_device.main()
+improved_metrics = pd.read_csv(RESULTS / "improvements/species_metrics.csv")
+display(improved_metrics[["model", "accuracy", "balanced_accuracy", "recording_macro_recall"]].round(4))
+display(pd.read_csv(RESULTS / "improvements/paired_group_differences.csv").round(4))
+ax = improved_metrics.plot.barh(x="model", y=["balanced_accuracy", "recording_macro_recall"], figsize=(10, 4))
+ax.set_xlabel("Métrica (0–1)"); ax.legend(["Balanceada por janela", "Macro recall por grupo"])
+plt.tight_layout(); plt.show()
+""".strip()))
+md("""
+## 17. Presença de mosquito para Arduino: frontend completo e modelos compactos
+
+Detecção binária e reconhecimento de 20 espécies são tarefas distintas. Os rótulos
+de presença continuam **fracos, por arquivo**; não anotamos cada batimento/voo.
+O novo frontend usa mono a 16 kHz, Hann de 512 amostras sem sobreposição e 31 frames
+por decisão (**0,992 s**). Calcula 68 características de energia relativa, dispersão,
+flatness e pico de 219–875 Hz. É incremental e não depende da normalização usando
+uma janela inteira ou de áudio futuro. A implementação C++ guarda um frame de FFT.
+
+Comparamos logística, árvore de profundidade 6, floresta de 32 árvores de profundidade 5
+e uma **rede neural de 16 unidades ReLU** (1.121 parâmetros). Cada dobra externa
+reserva grupos para calibração; outra divisão interna seleciona o candidato por ROC AUC
+ponderada por fonte. A rede seleciona épocas por perda ponderada nessa validação interna
+e treina novamente no conjunto de ajuste pelo mesmo número de épocas.
+Padronizadores, calibradores, limiares e épocas não usam os grupos de teste externo.
+
+A calibração binária usa pesos iguais para fontes positivas e negativas, equivalente
+a uma mistura 50/50, **sem representar prevalência real**. Comparamos limiar 0,5
+e metas de FPR médio por fonte de 5%/10% na calibração. Metas não garantem desempenho
+no teste, e controlar alarmes pode perder sinais. Há somente 44 fontes de ruído.
+""")
+cells.append(nbf.v4.new_code_cell("""
+import train_arduino
+train_arduino.main()
+arduino_metrics = pd.read_csv(RESULTS / "arduino/metrics.csv")
+display(arduino_metrics[["model", "mode", "window_recall", "window_false_positive_rate",
+                         "source_mean_recall", "source_mean_false_positive_rate"]].round(4))
+selected = arduino_metrics.loc[arduino_metrics.model.eq("Escolha por validação interna")]
+display(selected[["mode", "source_recall_ci_low", "source_recall_ci_high",
+                  "source_false_positive_rate_ci_low", "source_false_positive_rate_ci_high"]].round(4))
+ax = selected.plot.bar(x="mode", y=["source_mean_recall", "source_mean_false_positive_rate"], figsize=(9, 4), rot=0)
+ax.set_ylabel("Média por fonte (0–1)"); ax.legend(["Recall positivo", "Falsos positivos no ruído"])
+plt.tight_layout(); plt.show()
+""".strip()))
+md("""
+### 17.1 Confirmação temporal e ruído persistente
+
+A regra causal exige duas de três janelas completas e reinicia quando muda arquivo
+ou há uma lacuna. Como o corpus amostra até 60 janelas por arquivo, muitas não são
+contíguas. A comparação abaixo usa **os mesmos endpoints elegíveis** para uma janela
+e para confirmação, sem tratar janelas espaçadas como áudio contínuo.
+Restaram somente **duas fontes de ruído** nesse subconjunto; não há validação suficiente
+de falsos alarmes contínuos. A correlação temporal pode manter ruídos como falsos positivos.
+Estas taxas não permitem calcular alarmes/hora ou contar mosquitos individuais.
+""")
+cells.append(nbf.v4.new_code_cell("""
+display(pd.read_csv(RESULTS / "arduino/persistence_metrics.csv").round(4))
+import probe_arduino_noise
+probe_arduino_noise.main()
+arduino_noise = pd.read_csv(RESULTS / "arduino/noise_probe.csv")
+display(arduino_noise.groupby(["mode", "noise", "added_snr_db"], dropna=False).positive_window_recall.mean().round(4))
+""".strip()))
+md("""
+## 18. Explicabilidade e validação do processamento embarcado
+
+Permutamos cinco famílias de características em conjunto, cinco repetições por dobra,
+e medimos a queda de ROC AUC ponderada por fonte nos dados de teste reservados.
+Dentro da família, preservamos a relação entre características; entre famílias,
+a permutação pode criar entradas incomuns. É uma análise de **sensibilidade preditiva**,
+sem explicação causal, identificação biológica exclusiva ou atribuição local SHAP/Grad-CAM.
+A dispersão abaixo combina dobras/repetições correlacionadas, não é intervalo inferencial.
+""")
+cells.append(nbf.v4.new_code_cell("""
+importance = pd.read_csv(RESULTS / "arduino/permutation_importance.csv")
+importance_summary = importance.groupby("family").source_weighted_auc_drop.agg(["mean", "std"])
+display(importance_summary.round(4))
+importance_summary.sort_values("mean").plot.barh(y="mean", legend=False, figsize=(9, 3.5))
+plt.xlabel("Queda de ROC AUC após permutar a família"); plt.tight_layout(); plt.show()
+import verify_arduino
+verify_arduino.main()
+display(pd.Series(json.loads((RESULTS / "arduino/native_audit.json").read_text())).to_frame("Auditoria nativa"))
+""".strip()))
+md("""
+### 18.1 Firmware Arduino e limites do aparelho
+
+O sketch [MosquitoPresence.ino](firmware/MosquitoPresence/MosquitoPresence.ino) captura
+PDM, extrai características, executa a rede e confirma candidatos em 2/3 janelas.
+Está compilado para **Arduino Nano 33 BLE Sense / Sense Rev2**, CLI 1.5.1/core 4.6.0.
+O Uno R3/Nano clássico tem memória insuficiente para este firmware; outro modelo
+Arduino exige seu adaptador de captura e nova compilação/avaliação.
+
+**Não houve upload ou teste em placa física**. O compilador informa memória estática,
+sem medir pico de pilha/heap, consumo ou prazo em tempo real. Os testes C++/Python
+validam equivalência numérica e lógica. O modelo exportado é da dobra 0; o resultado
+agregado usa cada modelo de sua própria dobra, sem retreino para produção.
+O limiar moderado (meta 10% na calibração) é o padrão do sketch, antes da confirmação.
+Os guardas de silêncio/clipping da captura ainda não têm taxas de campo medidas.
+A primeira confirmação requer 2,976 s de áudio; passagens muito curtas podem ser
+perdidas. Não há validação por voo isolado.
+""")
+cells.append(nbf.v4.new_code_cell("""
+compile_path = RESULTS / "arduino/compile_audit.json"
+if compile_path.exists():
+    display(pd.Series(json.loads(compile_path.read_text())).to_frame("Compilação registrada"))
+else:
+    print("Para recompilar: arduino-cli compile --fqbn arduino:mbed_nano:nano33ble firmware/MosquitoPresence")
+default = selected.loc[selected["mode"].eq("Calibração FPR 10%")].iloc[0]
+display(Markdown(
+    f"**O aparelho ainda erraria:** no teste com rótulos por arquivo, o modo padrão "
+    f"perdeu **{1-default.window_recall:.1%}** dos trechos positivos e marcou "
+    f"**{default.window_false_positive_rate:.1%}** dos trechos de ruído como candidatos, "
+    f"antes da confirmação. Isso não estima erros por mosquito individual.\\n\\n"
+    "Para melhorar de forma verificável: coletar áudio com a placa no ambiente real, "
+    "anotar atividade/distância e horas sem mosquito, reservar dias/locais, treinar "
+    "com os ruídos locais e medir sensibilidade por evento, falsos alarmes/hora e latência. "
+    "Não há evidência de superioridade sobre os artigos com protocolos diferentes."
 ))
 """.strip()))
 md("""

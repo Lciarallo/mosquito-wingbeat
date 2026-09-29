@@ -1,0 +1,7 @@
+{
+  "script_sha256": "5e896ebb0dd5353229729cbdab5220002fdc52ddfc5f884643812663ec732877",
+  "positive_label": "recording-level mosquito, not event annotations",
+  "windows_per_species_per_fold": 8,
+  "heldout_noise_sources_only": true,
+  "false_alarms_per_hour_measured": false
+}

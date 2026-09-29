@@ -8,16 +8,20 @@ Emitido em 29/09/2026. Execução analisada: 2026-09-29. Projeto: mosquito-wingb
 
 O estudo reúne a leitura de três artigos, o download completo de um acervo de celulares e a comparação de oito classificadores. O benchmark principal inclui **20 espécies, 23.877 janelas de um segundo e 569 grupos**. As janelas de um mesmo grupo são reservadas juntas na avaliação.
 
-O melhor resultado observado foi **MFCC/PSD/F0 + ExtraTrees**, com **48,9% de acurácia balanceada por janela** e **68,3% de macro recall por grupo**. O intervalo bootstrap descritivo por grupo foi 63,5% a 72,4%. As CNNs compactas testadas ficaram abaixo desse resultado no benchmark principal.
+A atualização melhorou o macro recall por grupo de 68,3% para **79,4% com boosting e contraste/dinâmica**, com **58,5% de acurácia balanceada por janela**. As CNNs e MLPs próprias também foram comparadas. A reanálise é exploratória e usa o mesmo corpus.
+
+Para Arduino, foi implementada uma rede de 16 unidades com frontend incremental e sketch compilado para Nano 33 BLE Sense. No modo padrão, detectou 72,6% dos trechos positivos e marcou 29,2% dos trechos de ruído como candidatos. O sistema ainda erraria bastante; não foi testado numa placa física.
 
 | Questão | Conclusão sustentada |
 | --- | --- |
-| Outros métodos melhoraram a classificação? | Sim, no protocolo local. ExtraTrees teve o maior resultado observado. |
-| Houve comparação com redes neurais? | Sim. CNN1D, CNN2D com ruído e uma tarefa TinyML de quatro classes. |
-| Existe explicabilidade? | Parcial: sinais, sobreposição, erros e sensibilidade. Faltam atribuições das decisões. |
+| Outros métodos melhoraram a classificação? | Sim. Boosting + contraste teve 79,4% de macro recall por grupo; a comparação inicial está preservada. |
+| Houve comparação com redes neurais? | Sim. CNNs, MLP de espécies e rede binária de 16 unidades para Arduino. |
+| Existe explicabilidade? | Parcial: sinais, erros, sensibilidade e permutação de famílias no detector compacto. |
 | O estudo superou os artigos? | Superioridade não demonstrada. Dados, métricas e protocolos diferem. |
 
 Este documento sintetiza experimentos já executados. A geração do relatório não treinou novos modelos; recalculou as métricas salvas para conferir a consistência dos números.
+
+Seções 1-11: análise inicial de referência. Seções 12-15: melhorias executadas e protótipo Arduino.
 
 Repositório: [Lciarallo/mosquito-wingbeat](https://github.com/Lciarallo/mosquito-wingbeat).
 
@@ -100,7 +104,7 @@ Agregar várias janelas pode melhorar o resultado por grupo. Portanto, 68,3% por
 
 Há uma comparação exploratória entre oito métodos, sem teste pareado de significância das diferenças e sem busca exaustiva de hiperparâmetros. Escolher o maior resultado observado não fornece uma estimativa imparcial para um produto futuro.
 
-## 4. Resultados para 20 espécies
+## 4. Resultados iniciais para 20 espécies
 
 | Método | Acurácia geral | Balanceada / janela | Macro F1 | Recall / grupo |
 | --- | --- | --- | --- | --- |
@@ -199,7 +203,7 @@ A explicabilidade implementada é **parcial e predominantemente descritiva**. H�
 
 A tabela lista as maiores contagens de erros; espécies com mais grupos podem aparecer mais vezes. Não se trata de ranking normalizado de dificuldade. Os rótulos e a agregação seguem o protocolo de avaliação do acervo.
 
-**Ainda não foram implementados SHAP, LIME, importância por permutação ou Grad-CAM**. Também não foi medida a fidelidade ou estabilidade de uma explicação local. O relatório não atribui uma previsão específica a determinada banda, MFCC ou mecanismo biológico.
+Na etapa inicial, não havia SHAP, LIME, importância por permutação ou Grad-CAM. **Esta atualização acrescenta permutação de famílias para o detector compacto (seção 14)**. Continuam ausentes SHAP/Grad-CAM e avaliação de fidelidade de uma explicação local; não são demonstrados mecanismos biológicos causais.
 
 Uma próxima etapa pode avaliar importância agrupada das famílias MFCC/PSD/frequência em dados reservados, ablações controladas e mapas de relevância das CNNs, com testes de estabilidade. Essas propostas são trabalho futuro.
 
@@ -269,11 +273,11 @@ MosquitoSong+ [5] motivou o uso de ruído real no treino e o teste com fontes re
 | 5. Comparar justamente | Reproduzir protocolos dos artigos e comparar os mesmos exemplos/métricas; usar teste pareado por unidade independente. |
 | 6. Medir implantação | Executar frontend e modelo no dispositivo alvo; medir RAM/flash, latência, energia e rejeição de classes desconhecidas. |
 
-A conclusão atual é exploratória: a combinação de características acústicas com ExtraTrees foi a melhor entre os métodos implementados nesse acervo, e os testes de transferência e ruído mostram limitações práticas que precisam ser resolvidas antes de uso em campo.
+Na etapa inicial, ExtraTrees foi o melhor entre os oito métodos implementados. As extensões das seções 12-15 melhoraram o resultado local e acrescentaram um protótipo Arduino. Transferência e ruído continuam impondo limitações antes de uso em campo.
 
 ## 11. Reprodutibilidade, auditoria e referências
 
-A execução registrada contém **43 células, 22 células de código executadas e 0 erros**. A última execução levou 57,6 s, reutilizando caches e checkpoints de CNN quando as assinaturas coincidiram; esse tempo não é o treinamento completo do projeto.
+A execução registrada contém **53 células, 27 células de código executadas e 0 erros**. A última execução levou 66,3 s, reutilizando caches e checkpoints de CNN quando as assinaturas coincidiram; esse tempo não é o treinamento completo do projeto.
 
 Ambiente: Python 3.14.7; NumPy 2.5.3; SciPy 1.17.1; scikit-learn 1.8.0; PyTorch 2.12.0+rocm7.2; GPU AMD Radeon RX 9070 XT. O erro absoluto máximo entre os frontends SciPy/Torch foi 8.34e-07, abaixo do limite de 1e-4.
 
@@ -281,7 +285,7 @@ A geração deste documento recalculou acurácia geral, acurácia balanceada e m
 
 Para reproduzir: instalar requirements.txt, seguir README.md e executar o notebook. Para gerar somente o relatório a partir dos resultados existentes: instalar requirements-report.txt e executar build_report.py. A máquina precisa de fontconfig e da fonte DejaVu Sans.
 
-Código de análise de referência: 8e04b88d81be. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
+Código de análise de referência: 714f61305d79. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
 
 ### Referências
 
@@ -298,3 +302,95 @@ Código de análise de referência: 8e04b88d81be. Fonte dos resultados: results/
 [6] Documentação dos métodos: [SciPy resample_poly](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.resample_poly.html), [scikit-learn avaliação](https://scikit-learn.org/stable/modules/model_evaluation.html), [PyTorch](https://docs.pytorch.org/docs/stable/index.html).
 
 Licenças e direitos: o dataset Dryad/Zenodo declara CC0; ruídos e artigos mantêm os termos de suas fontes. O relatório publica a análise e as citações, sem reproduzir os textos integrais dos artigos.
+
+## 12. Melhorias executadas para 20 espécies
+
+Foram mantidas as mesmas 23.877 janelas, 569 grupos e três dobras externas. A extensão acrescenta 181 características: contraste espectral local em 75 frequências (média/desvio), dinâmica dos MFCC e rastreamento de picos. Árvores, boosting e MLP usam 293 entradas; SVM RBF usa as 112 originais. Mudam representação, modelo e hiperparâmetros; o ganho não foi isolado por ablação de cada componente.
+
+| Método | Geral / janela | Balanceada / janela | Recall / grupo |
+| --- | --- | --- | --- |
+| ExtraTrees inicial | 41,2% | 48,9% | 68,3% |
+| SVM RBF | 46,1% | 55,6% | 76,7% |
+| ExtraTrees + contraste | 47,7% | 53,8% | 72,8% |
+| Boosting + contraste | 52,7% | 58,5% | 79,4% |
+| MLP + contraste | 40,7% | 51,6% | 72,8% |
+| Ensemble | 50,7% | 59,0% | 77,9% |
+
+O boosting obteve 52,7% de acurácia geral e 79,4% de macro recall por grupo, ganho de **11,2 pontos percentuais por grupo** sobre ExtraTrees inicial. O ensemble teve a maior acurácia balanceada por janela (59,0%), mas macro recall por grupo inferior ao boosting.
+
+![Figura 4. Etapa inicial e novos métodos nas mesmas dobras. São métricas diferentes, não taxas de detecção de mosquito.](../reports/assets/melhorias_especies.png)
+
+Figura 4. Etapa inicial e novos métodos nas mesmas dobras. São métricas diferentes, não taxas de detecção de mosquito.
+
+Bootstrap pareado: o intervalo descritivo do ganho de macro recall por grupo do boosting foi 8,9 a 13,6 pontos percentuais, 2.000 reamostragens dentro das espécies. É condicionado às previsões salvas, sem teste inferencial confirmatório, reotimização ou validação externa. A análise é adaptativa sobre o corpus já utilizado; não estabelece superioridade sobre os artigos.
+
+A nova MLP 293-128-64-20 teve seleção por perda em grupos internos, até 70 épocas/paciência 10, e ficou abaixo do boosting. Comparações neurais incluem essa MLP e as CNNs da etapa inicial.
+
+## 13. Detecção binária e erros do aparelho
+
+Para a intenção de detectar sons em Arduino, foi criada uma tarefa binária independente da identificação de espécie. O frontend incremental usa Hann/FFT de 512 amostras a 16 kHz, 31 frames por decisão (0,992 s) e 68 características: energia relativa em 31 bandas, dispersão temporal, flatness e pico de 219-875 Hz. Não armazena um segundo inteiro nem usa normalização dependente de áudio futuro.
+
+Logística, árvore, floresta e rede de 16 unidades foram comparadas. A seleção usa ROC AUC ponderada por fonte numa divisão interna de grupos, separada da calibração. A rede foi escolhida nas três dobras; número de épocas e padronização também respeitam essas divisões. As saídas são calibradas com pesos iguais para fontes positivas/negativas (mistura 50/50), que não é a prevalência real do ambiente.
+
+| Modo | Recall positivo / janela | Falso positivo / janela | Recall / fonte | Falso positivo / fonte |
+| --- | --- | --- | --- | --- |
+| Balanceado 0,5 | 82,7% | 35,2% | 81,0% | 21,8% |
+| Calibração FPR 5% | 48,9% | 20,3% | 48,3% | 9,2% |
+| Calibração FPR 10% | 72,6% | 29,2% | 70,9% | 15,9% |
+
+**Sim, o aparelho ainda erraria bastante:** no modo moderado padrão, perderia 27,4% dos trechos positivos e marcaria 29,2% dos trechos de ruído como candidatos antes da confirmação. Há 23.877 trechos positivos de 569 fontes e 528 trechos negativos de 44 fontes. Os rótulos são por arquivo, sem anotação de cada mosquito ativo ou voo.
+
+No modo padrão, intervalos bootstrap descritivos por fonte: recall 68,5%-73,3%; falsos positivos 8,9%-24,1%. As taxas por fonte dão peso igual a gravações e diferem das taxas por janela, dominadas por fontes longas.
+
+As metas de 5%/10% na calibração não foram garantidas no teste. Na comparação no limiar 0,5, a rede aumentou recall de 75,9% (logística) para 82,7%, mas falsos positivos passaram de 33,1% para 35,2%. Isso mostra a troca entre sensibilidade e alarmes; não é uma melhora uniforme de todas as métricas. A árvore no limiar conservador não aceitou nenhum trecho.
+
+## 14. Explicabilidade e ruído do detector
+
+A atualização executou importância por permutação em cinco famílias de características: cada família é embaralhada conjuntamente, cinco repetições por dobra, nos dados de teste reservados. A métrica é a queda de ROC AUC ponderada por fonte. Relações internas da família são preservadas; as relações entre famílias podem resultar em entradas pouco usuais.
+
+![Figura 5. Sensibilidade preditiva média do detector compacto após permutar famílias. Sem atribuição causal ou intervalo inferencial.](../reports/assets/explicabilidade_detector.png)
+
+Figura 5. Sensibilidade preditiva média do detector compacto após permutar famílias. Sem atribuição causal ou intervalo inferencial.
+
+As bandas de 1.125-4.000 Hz tiveram a maior queda média, cerca de 0,175 de ROC AUC; as bandas de 125-1.125 Hz, 0,091. Isso mostra dependência preditiva do espectro, não prova que essas bandas representam exclusivamente asas ou que eliminam o efeito do aparelho. SHAP, LIME, Grad-CAM e fidelidade de explicações locais continuam ausentes.
+
+### Confirmação temporal
+
+A regra causal aceita duas de três janelas completas, reiniciando em lacunas ou mudança de arquivo. O corpus foi amostrado com no máximo 60 janelas por arquivo, muitas espaçadas. A comparação nos mesmos endpoints contíguos teve 18.180 trechos positivos e 244 negativos, mas só duas fontes de ruído. No modo padrão, o falso positivo por janela mudou de 44,3% para 43,9%. A confirmação não demonstrou controle confiável de ruídos persistentes; não pode ser apresentada como solução comprovada para alarmes contínuos.
+
+### Sonda com ruído real reservado
+
+| Condição | Recall dos trechos positivos |
+| --- | --- |
+| Sem ruído adicionado | 70,2% |
+| Ruído real: SNR 20 dB | 67,3% |
+| Ruído real: SNR 10 dB | 58,3% |
+| Ruído real: SNR 0 dB | 40,2% |
+
+São 480 trechos, oito por espécie/dobra, com fontes de ruído exclusivas do teste. A sonda mede sensibilidade a mistura em níveis definidos; não mede desempenho em campo, distância de alcance ou alarmes por hora.
+
+## 15. Firmware Arduino e avanço necessário
+
+O sketch inclui captura PDM, fila de áudio, frontend, rede neural e confirmação, com avisos e reset quando perde amostras. O alvo inicial é Nano 33 BLE Sense / Sense Rev2, com microfone integrado. O Uno R3/Nano clássico não tem memória suficiente para este firmware; outra placa exige adaptador de captura e compilação próprios.
+
+| Verificação | Resultado / limite |
+| --- | --- |
+| Modelo compacto | 68-16-1 com ReLU, 1.121 parâmetros; aproximadamente 4.504 bytes numéricos incluindo constantes. |
+| Frontend incremental | Objeto C++ nativo: 6.420 bytes, mais buffers/componentes no sketch. |
+| Compilação Nano 33 BLE | CLI 1.5.1/core 4.6.0; 100.832 bytes de programa / 59.584 bytes globais. |
+| Equivalência PCM-C++/Python | 532/532 decisões iguais; maior erro de característica 3.48e-05, de escore 8.72e-06. |
+| Lógica de confirmação | Testes causais e reset por lacunas passaram. Isso não comprova benefício em campo. |
+| Placa física | Sem upload, teste do microfone, latência, consumo, bateria ou pico de RAM medidos. |
+
+A compilação informa programa e RAM estática, excluindo pico de pilha/heap. O teste nativo usa 400 trechos positivos e todos os 132 negativos de teste da dobra 0. A exportação padrão é dessa dobra; o benchmark agregado aplica cada modelo à sua própria dobra. Não houve retreino e validação de um modelo de produção.
+
+A primeira confirmação exige três janelas completas, ou 2,976 s de observação, além do tempo computacional não medido. Passagens muito curtas podem ser perdidas; não foi validada a detecção de cada voo isolado.
+
+### Para reduzir erros de forma verificável
+
+- Coletar áudio com a placa e microfone escolhidos no local de uso, incluindo distância, ganho e qualidade de captura.
+- Anotar mosquito realmente ativo/inativo e gravar horas sem mosquito com ventilador, fala, chuva, máquinas e outros insetos.
+- Reservar dias e locais inteiros antes do ajuste; treinar com ruídos locais, recalibrar limiares e testar classes desconhecidas.
+- Medir sensibilidade por evento, falsos alarmes por hora, latência e perdas de amostras no hardware. Estes resultados requerem a coleta física que ainda não existe.
+
+Instalação e modos de operação: firmware/README.md. Arquivos de auditoria: results/arduino/. Documentação oficial: [Nano 33 BLE Sense Rev2](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2), [Uno R3](https://docs.arduino.cc/hardware/uno-rev3).

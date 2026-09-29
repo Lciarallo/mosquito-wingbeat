@@ -4,6 +4,8 @@ data/raw/
 data/noise/
 data/cache/
 results/models/*.joblib
+results/improvements/models/*.joblib
+results/arduino/models/*.joblib
 __pycache__/
 .ipynb_checkpoints/
 *.log

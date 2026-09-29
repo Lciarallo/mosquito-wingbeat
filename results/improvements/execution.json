@@ -1,0 +1,15 @@
+{
+  "phase": "all",
+  "elapsed_seconds": 5.483958240947686,
+  "feature_signature": "2843d1b5519b708ac2e1c84c79bbaff3f20ba7dcad362e58aed8965dfe73c85a",
+  "script_sha256": "6cc79388677e20577e5dc006f2d6fd1121482e9895428cbcbdc805b28372a536",
+  "python_versions": {
+    "numpy": "2.5.3",
+    "torch": "2.12.0+rocm7.2"
+  },
+  "same_outer_folds_as_original": true,
+  "new_features": 181,
+  "total_features": 293,
+  "physical_device_tested": false,
+  "field_false_alarms_per_hour_measured": false
+}

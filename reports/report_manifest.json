@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-29T18:41:49.171005-03:00",
-  "analysis_base_commit": "8e04b88d81be5b485fd0b60ec5ae9b62b000852e",
-  "source_run_utc": "2026-09-29T21:10:05.154280+00:00",
-  "pages": 12,
+  "generated_at": "2026-09-29T19:48:25.226758-03:00",
+  "analysis_base_commit": "714f61305d79fd911100324729f07674f5d36c1b",
+  "source_run_utc": "2026-09-29T22:47:33.803709+00:00",
+  "pages": 16,
   "new_models_trained": false,
   "model_metrics_independently_recomputed": [
     {
@@ -78,6 +78,9 @@
       "recording_macro_recall": 0.5177940772246974
     }
   ],
+  "update_contains_new_executed_experiments": true,
+  "improvement_models_metrics_verified": 5,
+  "arduino_operating_rows_independently_verified": 15,
   "group_fold_consistency_asserted": true,
   "identical_waveform_fold_consistency_asserted": true,
   "metric_absolute_tolerance": 1e-10,
@@ -85,9 +88,9 @@
   "reportlab_version": "4.5.1",
   "noise_commit": "27fdf026728c66c3a8448454987aa18b904cfce2",
   "inputs": {
-    "results/run_manifest.json": "0e09028ec96331425b0eddab52eca4fc2ad4806d02d2f5db54f60337f2c81d37",
-    "results/notebook_execution.json": "71da5c5e829809fd8a9c5ded9596df5af153e66412080d15be6d0b72a38d817c",
-    "results/species_metrics.csv": "fe800f77310de3be6eb718e669328146fbf948b063aef2646d1bbafc04941f6e",
+    "results/run_manifest.json": "991327e80df1727faa3f7e67af2e979c5dc6929b159f5a8cc7beef24dca078fb",
+    "results/notebook_execution.json": "6a06393483fc2cbeec57bf68e66de7d16e14e2911fd2cce20f4337af928a45c0",
+    "results/species_metrics.csv": "930f5721df79e77fe9a338dd48a879b393f3fce4639d19810d9172da33adae90",
     "results/tinyml_metrics.csv": "72af7f0127577902d7e490a79a4a2eb4d5d6f3caf802df052f969192dfe4cc5d",
     "results/int8_audit.json": "11db38fb3457a700e48e3fbce22b7669c630d6b20fd9522f5205cdeb81802345",
     "results/device_transfer_metrics.csv": "3c8eaa3079a767c109575f265a95b8d8cfc09fd18ad8974c323c186954b7116e",
@@ -106,20 +109,65 @@
     "results/predictions_species_cnn1d.csv": "4399ea0f30a27bc2df63a69442172c40a65a71ee0df62a5af114e945246c1167",
     "results/predictions_species_cnn2d_noise.csv": "21c19e2a33102c1562eb265d3cc4ccf29a5af9705b418e8a8dfbf3449d0d8e8e",
     "data/noise_manifest.json": "fd42adb331c352c93e3b5a1ec3767a7d99ab546048331742f897a91e140aa2ad",
-    "results/figures/tinyml_confusion.png": "45531c27571367690124d1eee765232af9eac5744f23dcda327827ee0ad3e952"
+    "results/figures/tinyml_confusion.png": "45531c27571367690124d1eee765232af9eac5744f23dcda327827ee0ad3e952",
+    "results/improvements/species_groups_0.csv": "9bb4673f1472ecc236ee8b8d01c2b28e2b90d4495994dd342a7a95816e4692fc",
+    "results/improvements/species_metrics.csv": "ac38a6537d8d2b816253c457d26db2fff496a30174f2b6e8185c4dab5d24ede0",
+    "results/improvements/species_groups_1.csv": "3ec89e866d75d5a9db1af9cca515e21f7104b9830fe0c5d147d343be02684f44",
+    "results/improvements/species_groups_2.csv": "741c66c2d817d4d5b82531410839f9c7d0b1bd42cd577969a6653b81e7dec25d",
+    "results/improvements/species_groups_3.csv": "10c97191513805411dba5399b707e5c4e7542e36e0dece7499dc27b188161f10",
+    "results/improvements/species_groups_ensemble.csv": "d128bf09286d7e115d48c1e043268c955fe16f8887b0b12c389ca46346c54128",
+    "results/improvements/species_oof.npz": "b4d14bbc39eb7498b8e40899338dce960fd7a55baae4f563daf6371b23e9dd44",
+    "results/improvements/paired_group_differences.csv": "18ee28e91f604cbddd430faa200fd3de1bad837e22aaec0c3d070f594bb10e25",
+    "results/improvements/presence_metrics.csv": "d52fc14d39a3396af91c28b93f4925a4f5295788c56e981b0c5ab391394496bd",
+    "results/improvements/abstention_metrics.csv": "4e12f9de5b3ed3de6d1441da001369b8f8a4eee90ab41bb826df6000650fe5a3",
+    "results/improvements/device_predictions.csv": "04cb354e534e930742f2887824a3529e06efefa6f55cedd9724950cc37eda908",
+    "results/improvements/presence_pooled_metrics.csv": "5fbf75a01f4de7a94178575bf3cbf4a5ed836c4a10091f084f94e0c79a45582e",
+    "results/improvements/baseline_consistency.json": "2348ddeb14d2606d0cbb63df0099ba12c4cc59baadf91853f3a2e45dd40bc744",
+    "results/improvements/species_protocol.json": "d37843dcf126854e6cc72c81aab7c7fad5942ef67c85e5d5aeacc80bdf52f321",
+    "results/improvements/device_protocol.json": "e5d9af722b03806e90de941aeccc85b6c4156f7f68d91e18d65f345c428ec395",
+    "results/improvements/execution.json": "4d6d813a73b4f37350a4931a447255577ace28979fd1a2b2b3f3fea09984073e",
+    "results/arduino/metrics.csv": "8aaa1ccbba1063fb0c2374c4764c6a47d87b2e26393129c82ffc35c48b2721e3",
+    "results/arduino/persistence_metrics.csv": "c1e382165e41d82efa2e0f664766827356fbf12a9552ce71f8612efc5d2e06f5",
+    "results/arduino/permutation_importance.csv": "aaafdac321f383cf73c1e14047e7cd17580ad0eecbbb049c9dcfebe3afad34e7",
+    "results/arduino/noise_probe.csv": "9c78eddd632deb7c2d2cfb8afc1cf9012b791345e55a7d2c0f88118555545a0c",
+    "results/arduino/compile_audit.json": "813698320132c8b6b3ce01b688cd738719e42897b0d5875e7f95fb5ccf617d7d",
+    "results/arduino/predictions.csv.gz": "04a93cce429f03d2e641e6bb6dac10c00242323da2eb2791deebe015449a763d",
+    "results/arduino/persistence_Balanceado.csv.gz": "339af61919e4bdb1029e997266e4f964b8a87371811b49248c0c76e72c915a47",
+    "results/arduino/persistence_Calibração05.csv.gz": "951cdefaaaa18c90a2a6653c289e858209d733e5575acd6e7206a6ccae0ebc44",
+    "results/arduino/persistence_Calibração10.csv.gz": "950f7c536954eed006d31275055f674ef7c366fe3601d36b825ba0b2e036d0d1",
+    "results/arduino/protocol.json": "7a6f90f0098242aee279136d3b311f5382a0080e2c15caca02c0bbbc82860c3c",
+    "results/arduino/execution.json": "46c070ff637f7769f83deda179d3bfde2617f16cfed67b38bbf2059097b47570",
+    "results/arduino/noise_probe_manifest.json": "eef338cd19c623963d174bfa826e6eae39067f52cb8ccb3b20007bb1047cd41a",
+    "results/arduino/native_audit.json": "1106e8d4586b1ed6b86c3ea5643a050ca865e07671ba937f405399d013a2751e",
+    "firmware/host_bridge.cpp": "1eb75ec8828cb8d0cd77db7a99696b8fa8ffe07092ba07f9ea1c22dbb6aacc00",
+    "firmware/README.md": "899722bc09fe9924c24d31f5d166df49eb4b5b975e06e84a16189b884d4c5838",
+    "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
+    "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
+    "firmware/MosquitoPresence/PresenceModelFold2.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "firmware/MosquitoPresence/MosquitoPresence.ino": "6b26b02cbfd1242e2bcf42557d745d6ff7bc37c598cc7549d485f5a318e0fdf6"
   },
   "outputs": {
-    "output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf": "f28f5195bed8e5f7388d37081ae121eac6e39c39ebd7397464ee41a6113df6a5",
-    "reports/relatorio_classificacao_mosquitos.md": "57e91001809802a52fb837674cae98ebe82dd2d86f52bfd9354b04691f7f6bf1",
+    "output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf": "9b5446227667dd05376ad77cdfd9193d1984d11d95dcf63eaa932361f4803fd4",
+    "reports/relatorio_classificacao_mosquitos.md": "d168c7d144c844c118f5a53514731b017d437f40e9b3fb41c594860f4e386860",
     "reports/assets/benchmark_por_grupo.png": "04072e6943775cc0cc1c26efa082dfede188626a4100044fca2062372eb04481",
-    "reports/assets/robustez_ruido.png": "8a2442323ad6e8a3a3b9556858b416d69e2ceafec21f44ea21af15550ff6d1f2"
+    "reports/assets/robustez_ruido.png": "8a2442323ad6e8a3a3b9556858b416d69e2ceafec21f44ea21af15550ff6d1f2",
+    "reports/assets/melhorias_especies.png": "8c178c9e250bd73748bc1c4740118702846bdcf82271cd34b1fb822396f419a6",
+    "reports/assets/explicabilidade_detector.png": "d69ba4e3055755ca036d1f6767278152dd1bbd74426cddecd89150442fd548ac"
   },
-  "report_generator_sha256": "16cccf016ffa6b3d0e0acb1ff30801f505c353691728502254177825020dc1e3",
+  "report_generator_sha256": "6b07fb94b5bcc5005233a9bf4cc64c6df986e8d36fc641b73a1cee1bb282e3c3",
   "pdf_visual_review": {
-    "pages_reviewed": 12,
-    "rendered_dpi": 110,
+    "pages_reviewed": 16,
+    "rendered_dpi": 100,
     "status": "passed",
-    "checked_tables_figures_headers_footers": true
-  },
-  "original_experiment_output_hashes_verified": 46
+    "headers_and_footers_checked": true,
+    "updated_pages_reviewed_at_full_resolution": [
+      1,
+      13,
+      14,
+      15,
+      16
+    ],
+    "latest_page16_rerender_checked": true
+  }
 }

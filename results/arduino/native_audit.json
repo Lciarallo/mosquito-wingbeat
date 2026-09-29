@@ -1,0 +1,38 @@
+{
+  "native_compiler_command": [
+    "g++",
+    "-std=c++11",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-shared",
+    "-fPIC",
+    "firmware/host_bridge.cpp",
+    "-o",
+    "tmp/arduino-verify/frontend.so"
+  ],
+  "tested_windows": 532,
+  "heldout_positive_windows": 400,
+  "heldout_noise_windows": 132,
+  "max_absolute_feature_error": 3.4809112548828125e-05,
+  "mean_absolute_feature_error": 2.3100396617792285e-07,
+  "max_absolute_score_error": 8.717179298400879e-06,
+  "matching_decisions": 532,
+  "decision_agreement": 1.0,
+  "tested_operating_mode": "Calibração FPR 10% (default firmware)",
+  "streaming_frontend_object_bytes": 6420,
+  "gain_and_dc_feature_max_error": 4.76837158203125e-07,
+  "confirmation_and_gap_reset_tests_passed": true,
+  "actual_board_flashing": false,
+  "real_time_deadline_measured_on_board": false,
+  "artifacts": {
+    "firmware/host_bridge.cpp": "1eb75ec8828cb8d0cd77db7a99696b8fa8ffe07092ba07f9ea1c22dbb6aacc00",
+    "firmware/README.md": "899722bc09fe9924c24d31f5d166df49eb4b5b975e06e84a16189b884d4c5838",
+    "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
+    "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
+    "firmware/MosquitoPresence/PresenceModelFold2.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "firmware/MosquitoPresence/MosquitoPresence.ino": "6b26b02cbfd1242e2bcf42557d745d6ff7bc37c598cc7549d485f5a318e0fdf6"
+  }
+}

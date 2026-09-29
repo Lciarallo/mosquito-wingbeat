@@ -1,0 +1,7 @@
+{
+  "species_metrics.csv": "same predictions and metrics; timings refreshed",
+  "classical_metrics.csv": "same predictions and metrics; timings refreshed",
+  "device_transfer": "identical classes and predictions; numerical score rounding <=1e-14",
+  "download": "same 20 archives and integrity checks",
+  "base_commit": "714f61305d79fd911100324729f07674f5d36c1b"
+}
