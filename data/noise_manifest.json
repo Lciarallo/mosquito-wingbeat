@@ -1,0 +1,7 @@
+{
+  "source_url": "https://raw.githubusercontent.com/Mjrovai/wingbeat-mosquito-tinyml/27fdf026728c66c3a8448454987aa18b904cfce2/dataset/noise.zip",
+  "commit": "27fdf026728c66c3a8448454987aa18b904cfce2",
+  "size": 14726679,
+  "sha256": "5f4ba031c47b4766d09d13b71a7991b8d153ba3e635c623be480128e7d3895e5",
+  "label": "noise as provided by Altayeb et al. authors"
+}

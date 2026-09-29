@@ -1,0 +1,37 @@
+model,fold,noise,added_snr_db,n_windows,accuracy,balanced_accuracy,macro_f1
+MFCC/PSD/F0 + ExtraTrees,0,ruído real reservado,20,160,0.48125,0.48125,0.4933079544406776
+CNN2D + ruído real no treino,0,ruído real reservado,20,160,0.425,0.425,0.41179484837413227
+MFCC/PSD/F0 + ExtraTrees,0,ruído real reservado,10,160,0.40625,0.40625,0.4194327317848989
+CNN2D + ruído real no treino,0,ruído real reservado,10,160,0.375,0.375,0.34769456236618707
+MFCC/PSD/F0 + ExtraTrees,0,ruído real reservado,0,160,0.225,0.225,0.2205950078290504
+CNN2D + ruído real no treino,0,ruído real reservado,0,160,0.24375,0.24375,0.22841942371354138
+MFCC/PSD/F0 + ExtraTrees,0,ruído gaussiano,20,160,0.45625,0.45625,0.45378066715992416
+CNN2D + ruído real no treino,0,ruído gaussiano,20,160,0.38125,0.38125,0.3652389275241443
+MFCC/PSD/F0 + ExtraTrees,0,ruído gaussiano,10,160,0.3,0.3,0.2702571811610713
+CNN2D + ruído real no treino,0,ruído gaussiano,10,160,0.29375,0.29375,0.2615942854874743
+MFCC/PSD/F0 + ExtraTrees,0,ruído gaussiano,0,160,0.20625,0.20625,0.1508959067497967
+CNN2D + ruído real no treino,0,ruído gaussiano,0,160,0.14375,0.14375,0.0802438840229538
+MFCC/PSD/F0 + ExtraTrees,1,ruído real reservado,20,160,0.50625,0.50625,0.4946703523103779
+CNN2D + ruído real no treino,1,ruído real reservado,20,160,0.5,0.5,0.44203010697592743
+MFCC/PSD/F0 + ExtraTrees,1,ruído real reservado,10,160,0.425,0.425,0.42525204542619405
+CNN2D + ruído real no treino,1,ruído real reservado,10,160,0.4125,0.4125,0.35125249819354004
+MFCC/PSD/F0 + ExtraTrees,1,ruído real reservado,0,160,0.16875,0.16875,0.15624225695293642
+CNN2D + ruído real no treino,1,ruído real reservado,0,160,0.225,0.225,0.19059951486422072
+MFCC/PSD/F0 + ExtraTrees,1,ruído gaussiano,20,160,0.48125,0.48125,0.47388343124024235
+CNN2D + ruído real no treino,1,ruído gaussiano,20,160,0.475,0.475,0.413448491625112
+MFCC/PSD/F0 + ExtraTrees,1,ruído gaussiano,10,160,0.36875,0.36875,0.3379454627999339
+CNN2D + ruído real no treino,1,ruído gaussiano,10,160,0.2875,0.2875,0.21205119549299073
+MFCC/PSD/F0 + ExtraTrees,1,ruído gaussiano,0,160,0.24375,0.24375,0.18562665075201237
+CNN2D + ruído real no treino,1,ruído gaussiano,0,160,0.1375,0.1375,0.0683918549630624
+MFCC/PSD/F0 + ExtraTrees,2,ruído real reservado,20,160,0.51875,0.51875,0.5253301868410227
+CNN2D + ruído real no treino,2,ruído real reservado,20,160,0.3625,0.3625,0.3393443321384497
+MFCC/PSD/F0 + ExtraTrees,2,ruído real reservado,10,160,0.39375,0.39375,0.4024795434034565
+CNN2D + ruído real no treino,2,ruído real reservado,10,160,0.28125,0.28125,0.26314887640739026
+MFCC/PSD/F0 + ExtraTrees,2,ruído real reservado,0,160,0.2375,0.2375,0.23390237042868622
+CNN2D + ruído real no treino,2,ruído real reservado,0,160,0.225,0.225,0.21850666275588876
+MFCC/PSD/F0 + ExtraTrees,2,ruído gaussiano,20,160,0.5125,0.5125,0.5188652417488734
+CNN2D + ruído real no treino,2,ruído gaussiano,20,160,0.3875,0.3875,0.3564592588354198
+MFCC/PSD/F0 + ExtraTrees,2,ruído gaussiano,10,160,0.30625,0.30625,0.2848609146368945
+CNN2D + ruído real no treino,2,ruído gaussiano,10,160,0.23125,0.23125,0.1640164614980516
+MFCC/PSD/F0 + ExtraTrees,2,ruído gaussiano,0,160,0.19375,0.19375,0.15817326739308163
+CNN2D + ruído real no treino,2,ruído gaussiano,0,160,0.14375,0.14375,0.08401414952267978

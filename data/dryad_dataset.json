@@ -1,0 +1,143 @@
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+    },
+    "stash:versions": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s/versions"
+    },
+    "stash:version": {
+      "href": "/api/v2/versions/20014"
+    },
+    "stash:download": {
+      "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s/download"
+    },
+    "curies": [
+      {
+        "name": "stash",
+        "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+        "templated": "true"
+      }
+    ]
+  },
+  "identifier": "doi:10.5061/dryad.98d7s",
+  "id": 19950,
+  "storageSize": 1232964187,
+  "relatedPublicationISSN": "2050-084X",
+  "title": "Data from: Using mobile phones as acoustic sensors for high-throughput mosquito surveillance",
+  "authors": [
+    {
+      "firstName": "Haripriya",
+      "lastName": "Mukundarajan",
+      "affiliation": "Stanford University",
+      "affiliationROR": "https://ror.org/00f54p054",
+      "affiliations": [
+        {
+          "organization": "Stanford University",
+          "identifier": "https://ror.org/00f54p054"
+        }
+      ]
+    },
+    {
+      "firstName": "Felix Jan Hein",
+      "lastName": "Hol",
+      "affiliation": "Stanford University",
+      "affiliationROR": "https://ror.org/00f54p054",
+      "affiliations": [
+        {
+          "organization": "Stanford University",
+          "identifier": "https://ror.org/00f54p054"
+        }
+      ]
+    },
+    {
+      "firstName": "Erica Araceli",
+      "lastName": "Castillo",
+      "affiliation": "Stanford University",
+      "affiliationROR": "https://ror.org/00f54p054",
+      "affiliations": [
+        {
+          "organization": "Stanford University",
+          "identifier": "https://ror.org/00f54p054"
+        }
+      ]
+    },
+    {
+      "firstName": "Cooper",
+      "lastName": "Newby",
+      "affiliation": "Stanford University",
+      "affiliationROR": "https://ror.org/00f54p054",
+      "affiliations": [
+        {
+          "organization": "Stanford University",
+          "identifier": "https://ror.org/00f54p054"
+        }
+      ]
+    },
+    {
+      "firstName": "Manu",
+      "lastName": "Prakash",
+      "affiliation": "Stanford University",
+      "affiliationROR": "https://ror.org/00f54p054",
+      "affiliations": [
+        {
+          "organization": "Stanford University",
+          "identifier": "https://ror.org/00f54p054"
+        }
+      ]
+    }
+  ],
+  "abstract": "The direct monitoring of mosquito populations in field settings is a crucial input for shaping appropriate and timely control measures for mosquito-borne diseases. Here, we demonstrate that commercially available mobile phones are a powerful tool for acoustically mapping mosquito species distributions worldwide. We show that even low-cost mobile phones with very basic functionality are capable of sensitively acquiring acoustic data on species-specific mosquito wingbeat sounds, while simultaneously recording the time and location of the human-mosquito encounter. We survey a wide range of medically important mosquito species, to quantitatively demonstrate how acoustic recordings supported by spatio-temporal metadata enable rapid, non-invasive species identification. As proof-of-concept, we carry out field demonstrations where minimally-trained users map local mosquitoes using their personal phones. Thus, we establish a new paradigm for mosquito surveillance that takes advantage of the existing global mobile network infrastructure, to enable continuous and large-scale data acquisition in resource-constrained areas.",
+  "keywords": [
+    "Anopheles atroparvus",
+    "wingbeat frequency",
+    "Anopheles arabiensis",
+    "Anopheles dirus",
+    "Culex pipiens",
+    "Anopheles albimanus",
+    "Anopheles quadrimaculatus",
+    "Culex tarsalis",
+    "Anopheles gambiae",
+    "mosquito",
+    "species identification",
+    "Anopheles minimus",
+    "Aedes mediovittatus",
+    "Anopheles freeborni",
+    "Culiseta incidens",
+    "Culex quinquefasciatus",
+    "Aedes albopictus",
+    "Anopheles stephensi",
+    "acoustic surveillance",
+    "computational entomology",
+    "Anopheles farauti",
+    "Aedes aegypti",
+    "Aedes sierrensis",
+    "Anopheles merus",
+    "Anopheles quadriannulatus"
+  ],
+  "usageNotes": "<div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Aedes aegypti</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes aegypti from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Aedes albopictus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes albopictus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Aedes mediovittatus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes mediovittatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Aedes sierrensis</h4><div class=\"o-metadata__file-description\">Wingbeat data for Aedes sierrensis mosquitoes from the field - both raw data with noises and cleaned data with manually isolated mosquito sounds included</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles albimanus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles albimanus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles arabiensis</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles arabiensis from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles atroparvus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles atroparvus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles dirus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles dirus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles farauti</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles farauti from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles freeborni</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles freeborni from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles gambiae</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles gambiae from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles merus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles merus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles minimus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles minimus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles quadriannulatus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles quadriannulatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles quadrimaculatus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles quadrimaculatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Anopheles stephensi</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles stephensi from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Culex pipiens</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex pipiens from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Culex quinquefasciatus</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex quinquefasciatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Culex tarsalis</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex tarsalis from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\"><h4 class=\"o-heading__level3-file-title\">Culiseta incidens</h4><div class=\"o-metadata__file-description\">Wingbeat frequency data for Culiseta incidens from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div>",
+  "relatedWorks": [
+    {
+      "relationship": "primary_article",
+      "identifierType": "DOI",
+      "identifier": "https://doi.org/10.7554/elife.27854"
+    }
+  ],
+  "versionNumber": 1,
+  "versionStatus": "submitted",
+  "curationStatus": "Published",
+  "versionChanges": "none",
+  "publicationDate": "2018-10-02",
+  "lastModificationDate": "2020-06-24",
+  "visibility": "public",
+  "sharingLink": "http://datadryad.org/dataset/doi:10.5061/dryad.98d7s",
+  "changedFields": [
+    "none"
+  ],
+  "license": "https://spdx.org/licenses/CC0-1.0.html",
+  "metrics": {
+    "views": 3335,
+    "downloads": 805,
+    "citations": 2
+  }
+}

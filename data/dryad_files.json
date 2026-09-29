@@ -1,0 +1,679 @@
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/versions/20014/files"
+    },
+    "first": {
+      "href": "/api/v2/versions/20014/files"
+    },
+    "last": {
+      "href": "/api/v2/versions/20014/files?page=1"
+    }
+  },
+  "count": 20,
+  "total": 20,
+  "_embedded": {
+    "stash:files": [
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66979"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66979/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Aedes aegypti.rar",
+        "size": 38217065,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "f0d5a12aa87111f7aad8267d856f80c2",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Aedes aegypti from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66980"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66980/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Aedes albopictus.rar",
+        "size": 30090736,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "49939d76eb5d69fcf4d460cb23d5d830",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Aedes albopictus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66981"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66981/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Aedes mediovittatus.rar",
+        "size": 1768569,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "46d1441939f8e30e04531ab69713d2b2",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Aedes mediovittatus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66982"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66982/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Aedes sierrensis.rar",
+        "size": 133048559,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "95fbc229d061bfd3e94289d7bf790f61",
+        "digestType": "md5",
+        "description": "Wingbeat data for Aedes sierrensis mosquitoes from the field - both raw data with noises and cleaned data with manually isolated mosquito sounds included"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66983"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66983/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles albimanus.rar",
+        "size": 47818815,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "2ac9b7ddaae03d377d0b470be157e387",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles albimanus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66984"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66984/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles arabiensis.rar",
+        "size": 63891886,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "07f945f3678898f3b2e44415aa9f7b04",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles arabiensis from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66985"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66985/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles atroparvus.rar",
+        "size": 28903009,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "8b33628ea6faf6cc36e3a82eb7734962",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles atroparvus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66986"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66986/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles dirus.rar",
+        "size": 49678035,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "1cf10bf9de8e98987d146b267a7913ea",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles dirus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66987"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66987/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles farauti.rar",
+        "size": 47251944,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "78000b1310a6ec4e461f1dac20117fd2",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles farauti from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66988"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66988/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles freeborni.rar",
+        "size": 64978452,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "869632d295b451d221647b3a35a3a396",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles freeborni from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66989"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66989/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles gambiae.rar",
+        "size": 100769456,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "1cbb81a92667cc4f26f277d9e44231e0",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles gambiae from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66991"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66991/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles merus.rar",
+        "size": 2964323,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "badd4f2f8ef9542a2d92b3370e26eb3a",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles merus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66992"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66992/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles minimus.rar",
+        "size": 86385069,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "f8c7813236bb67a4d18af310ff961c19",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles minimus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66993"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66993/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles quadriannulatus.rar",
+        "size": 34407417,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "78fc720b864c04d75b3473430c37dafa",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles quadriannulatus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66994"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66994/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles quadrimaculatus.rar",
+        "size": 18750003,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "80d9fea448c3f6cc419192962bed009e",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles quadrimaculatus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66995"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66995/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Anopheles stephensi.rar",
+        "size": 81737548,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "173e2d49ac9926155b12b21831a33676",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Anopheles stephensi from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66996"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66996/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Culex pipiens.rar",
+        "size": 25933985,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "dc16032da24b3ca031e00ec025cd0a97",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Culex pipiens from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66997"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66997/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Culex quinquefasciatus.rar",
+        "size": 27849486,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "c4f64a5da25b802b2641bd0010d8e420",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Culex quinquefasciatus from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66998"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66998/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Culex tarsalis.rar",
+        "size": 18823639,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "6518c0c72e9997065967e46c773dd247",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Culex tarsalis from various mobile phones"
+      },
+      {
+        "_links": {
+          "self": {
+            "href": "/api/v2/files/66999"
+          },
+          "stash:dataset": {
+            "href": "/api/v2/datasets/doi%3A10.5061%2Fdryad.98d7s"
+          },
+          "stash:version": {
+            "href": "/api/v2/versions/20014"
+          },
+          "stash:files": {
+            "href": "/api/v2/versions/20014/files"
+          },
+          "stash:download": {
+            "href": "/api/v2/files/66999/download"
+          },
+          "curies": [
+            {
+              "name": "stash",
+              "href": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/link_relations.md#{rel}",
+              "templated": "true"
+            }
+          ]
+        },
+        "path": "Culiseta incidens.rar",
+        "size": 329696191,
+        "mimeType": "application/x-rar-compressed",
+        "status": "created",
+        "digest": "aacb803f5937c860876b0f600bd824fe",
+        "digestType": "md5",
+        "description": "Wingbeat frequency data for Culiseta incidens from various mobile phones"
+      }
+    ]
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "created": "2021-06-16T10:22:41.853965+00:00",
+  "modified": "2022-05-31T05:38:04.779280+00:00",
+  "id": 4964774,
+  "conceptrecid": "4964773",
+  "doi": "10.5061/dryad.98d7s",
+  "doi_url": "https://doi.org/10.5061/dryad.98d7s",
+  "metadata": {
+    "title": "Data from: Using mobile phones as acoustic sensors for high-throughput mosquito surveillance",
+    "doi": "10.5061/dryad.98d7s",
+    "publication_date": "2018-10-02",
+    "description": "The direct monitoring of mosquito populations in field settings is a crucial input for shaping appropriate and timely control measures for mosquito-borne diseases. Here, we demonstrate that commercially available mobile phones are a powerful tool for acoustically mapping mosquito species distributions worldwide. We show that even low-cost mobile phones with very basic functionality are capable of sensitively acquiring acoustic data on species-specific mosquito wingbeat sounds, while simultaneously recording the time and location of the human-mosquito encounter. We survey a wide range of medically important mosquito species, to quantitatively demonstrate how acoustic recordings supported by spatio-temporal metadata enable rapid, non-invasive species identification. As proof-of-concept, we carry out field demonstrations where minimally-trained users map local mosquitoes using their personal phones. Thus, we establish a new paradigm for mosquito surveillance that takes advantage of the existing global mobile network infrastructure, to enable continuous and large-scale data acquisition in resource-constrained areas.",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Mukundarajan, Haripriya",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Hol, Felix Jan Hein",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Castillo, Erica Araceli",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Newby, Cooper",
+        "affiliation": "Stanford University"
+      },
+      {
+        "name": "Prakash, Manu",
+        "affiliation": "Stanford University"
+      }
+    ],
+    "keywords": [
+      "Anopheles atroparvus",
+      "wingbeat frequency",
+      "Anopheles arabiensis",
+      "Anopheles dirus",
+      "Culex pipiens",
+      "Anopheles albimanus",
+      "Anopheles quadrimaculatus",
+      "Culex tarsalis",
+      "Anopheles gambiae",
+      "mosquito",
+      "species identification",
+      "Anopheles minimus",
+      "Aedes mediovittatus",
+      "Anopheles freeborni",
+      "Culiseta incidens",
+      "Culex quinquefasciatus",
+      "Aedes albopictus",
+      "Anopheles stephensi",
+      "acoustic surveillance",
+      "computational entomology",
+      "Anopheles farauti",
+      "Aedes aegypti",
+      "Aedes sierrensis",
+      "Anopheles merus",
+      "Anopheles quadriannulatus"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.7554/elife.27854",
+        "relation": "isCitedBy",
+        "scheme": "doi"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-zero"
+    },
+    "communities": [
+      {
+        "id": "dryad"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "4964773"
+          }
+        }
+      ]
+    },
+    "notes": "<div class=\"o-metadata__file-usage-entry\">Aedes aegypti<div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes aegypti from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Aedes albopictus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes albopictus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Aedes mediovittatus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Aedes mediovittatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Aedes sierrensis<div class=\"o-metadata__file-description\">Wingbeat data for Aedes sierrensis mosquitoes from the field - both raw data with noises and cleaned data with manually isolated mosquito sounds included</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles albimanus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles albimanus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles arabiensis<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles arabiensis from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles atroparvus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles atroparvus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles dirus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles dirus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles farauti<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles farauti from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles freeborni<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles freeborni from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles gambiae<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles gambiae from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles merus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles merus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles minimus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles minimus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles quadriannulatus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles quadriannulatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles quadrimaculatus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles quadrimaculatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Anopheles stephensi<div class=\"o-metadata__file-description\">Wingbeat frequency data for Anopheles stephensi from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Culex pipiens<div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex pipiens from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Culex quinquefasciatus<div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex quinquefasciatus from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Culex tarsalis<div class=\"o-metadata__file-description\">Wingbeat frequency data for Culex tarsalis from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div><div class=\"o-metadata__file-usage-entry\">Culiseta incidens<div class=\"o-metadata__file-description\">Wingbeat frequency data for Culiseta incidens from various mobile phones</div><div class=\"o-metadata__file-name\"></div></div>"
+  },
+  "title": "Data from: Using mobile phones as acoustic sensors for high-throughput mosquito surveillance",
+  "links": {
+    "self": "https://zenodo.org/api/records/4964774",
+    "self_html": "https://zenodo.org/records/4964774",
+    "preview_html": "https://zenodo.org/records/4964774?preview=1",
+    "doi": "https://doi.org/10.5061/dryad.98d7s",
+    "self_doi": "https://doi.org/10.5061/dryad.98d7s",
+    "self_doi_html": "https://zenodo.org/doi/10.5061/dryad.98d7s",
+    "reserve_doi": "https://zenodo.org/api/records/4964774/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/4964773",
+    "parent_html": "https://zenodo.org/records/4964773",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:4964774/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:4964774/sequence/default",
+    "files": "https://zenodo.org/api/records/4964774/files",
+    "media_files": "https://zenodo.org/api/records/4964774/media-files",
+    "archive": "https://zenodo.org/api/records/4964774/files-archive",
+    "archive_media": "https://zenodo.org/api/records/4964774/media-files-archive",
+    "latest": "https://zenodo.org/api/records/4964774/versions/latest",
+    "latest_html": "https://zenodo.org/records/4964774/latest",
+    "versions": "https://zenodo.org/api/records/4964774/versions",
+    "draft": "https://zenodo.org/api/records/4964774/draft",
+    "access_links": "https://zenodo.org/api/records/4964774/access/links",
+    "access_grants": "https://zenodo.org/api/records/4964774/access/grants",
+    "access_users": "https://zenodo.org/api/records/4964774/access/users",
+    "access_request": "https://zenodo.org/api/records/4964774/access/request",
+    "access": "https://zenodo.org/api/records/4964774/access",
+    "communities": "https://zenodo.org/api/records/4964774/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/4964774/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/4964774/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/4964774/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/4964774/quota-increase",
+    "requests": "https://zenodo.org/api/records/4964774/requests"
+  },
+  "updated": "2022-05-31T05:38:04.779280+00:00",
+  "recid": "4964774",
+  "revision": 3,
+  "files": [
+    {
+      "id": "7021c229-cb18-4cb9-b03a-8217237e7dbe",
+      "key": "Anopheles freeborni.rar",
+      "size": 64978452,
+      "checksum": "md5:869632d295b451d221647b3a35a3a396",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20freeborni.rar/content"
+      }
+    },
+    {
+      "id": "72636e85-6e2e-44fc-924a-f162d147bc2e",
+      "key": "Culex tarsalis.rar",
+      "size": 18823639,
+      "checksum": "md5:6518c0c72e9997065967e46c773dd247",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Culex%20tarsalis.rar/content"
+      }
+    },
+    {
+      "id": "b42a320c-a48a-4ee7-9f70-540a22c3447c",
+      "key": "Culex quinquefasciatus.rar",
+      "size": 27849486,
+      "checksum": "md5:c4f64a5da25b802b2641bd0010d8e420",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Culex%20quinquefasciatus.rar/content"
+      }
+    },
+    {
+      "id": "b85c3b82-e924-40b0-9b2c-bb459ea819f9",
+      "key": "Culex pipiens.rar",
+      "size": 25933985,
+      "checksum": "md5:dc16032da24b3ca031e00ec025cd0a97",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Culex%20pipiens.rar/content"
+      }
+    },
+    {
+      "id": "6e3e5a5e-c57a-4431-bb09-8f836cbc25d1",
+      "key": "Anopheles stephensi.rar",
+      "size": 81737548,
+      "checksum": "md5:173e2d49ac9926155b12b21831a33676",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20stephensi.rar/content"
+      }
+    },
+    {
+      "id": "95948d7f-e733-4848-adf2-748979610865",
+      "key": "Anopheles quadrimaculatus.rar",
+      "size": 18750003,
+      "checksum": "md5:80d9fea448c3f6cc419192962bed009e",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20quadrimaculatus.rar/content"
+      }
+    },
+    {
+      "id": "864f3f5d-98fd-4600-beec-fe794089e72f",
+      "key": "Anopheles quadriannulatus.rar",
+      "size": 34407417,
+      "checksum": "md5:78fc720b864c04d75b3473430c37dafa",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20quadriannulatus.rar/content"
+      }
+    },
+    {
+      "id": "0a13ac3f-7d73-409b-8a71-f7da72ca7abe",
+      "key": "Anopheles minimus.rar",
+      "size": 86385069,
+      "checksum": "md5:f8c7813236bb67a4d18af310ff961c19",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20minimus.rar/content"
+      }
+    },
+    {
+      "id": "7b608463-05be-4ac2-864e-5edfcdd2609c",
+      "key": "Anopheles merus.rar",
+      "size": 2964323,
+      "checksum": "md5:badd4f2f8ef9542a2d92b3370e26eb3a",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20merus.rar/content"
+      }
+    },
+    {
+      "id": "e84e06fa-60b2-4d02-90ed-f03c08ed72b8",
+      "key": "Anopheles gambiae.rar",
+      "size": 100769456,
+      "checksum": "md5:1cbb81a92667cc4f26f277d9e44231e0",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20gambiae.rar/content"
+      }
+    },
+    {
+      "id": "3c56aee1-0d45-4c4a-94b3-09161f765fad",
+      "key": "Culiseta incidens.rar",
+      "size": 329696191,
+      "checksum": "md5:aacb803f5937c860876b0f600bd824fe",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Culiseta%20incidens.rar/content"
+      }
+    },
+    {
+      "id": "fb1f092d-8c20-4f28-904e-2a5a5170ff1c",
+      "key": "Anopheles farauti.rar",
+      "size": 47251944,
+      "checksum": "md5:78000b1310a6ec4e461f1dac20117fd2",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20farauti.rar/content"
+      }
+    },
+    {
+      "id": "178299d9-4743-4b76-88f0-f59849c7e8ba",
+      "key": "Anopheles dirus.rar",
+      "size": 49678035,
+      "checksum": "md5:1cf10bf9de8e98987d146b267a7913ea",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20dirus.rar/content"
+      }
+    },
+    {
+      "id": "7c2f1fb4-296a-4086-a9db-407ac0a557eb",
+      "key": "Anopheles atroparvus.rar",
+      "size": 28903009,
+      "checksum": "md5:8b33628ea6faf6cc36e3a82eb7734962",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20atroparvus.rar/content"
+      }
+    },
+    {
+      "id": "196aa01a-1cba-45ab-8ac5-538c6dedefed",
+      "key": "Anopheles arabiensis.rar",
+      "size": 63891886,
+      "checksum": "md5:07f945f3678898f3b2e44415aa9f7b04",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20arabiensis.rar/content"
+      }
+    },
+    {
+      "id": "a0145ba5-3efd-423a-ba9b-eb928fa0bb97",
+      "key": "Anopheles albimanus.rar",
+      "size": 47818815,
+      "checksum": "md5:2ac9b7ddaae03d377d0b470be157e387",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Anopheles%20albimanus.rar/content"
+      }
+    },
+    {
+      "id": "1490806f-d078-4dc9-a381-65547ba31ac5",
+      "key": "Aedes sierrensis.rar",
+      "size": 133048559,
+      "checksum": "md5:95fbc229d061bfd3e94289d7bf790f61",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Aedes%20sierrensis.rar/content"
+      }
+    },
+    {
+      "id": "899a8449-f131-4b0b-af4b-da8490855b1b",
+      "key": "Aedes mediovittatus.rar",
+      "size": 1768569,
+      "checksum": "md5:46d1441939f8e30e04531ab69713d2b2",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Aedes%20mediovittatus.rar/content"
+      }
+    },
+    {
+      "id": "9ba34dd0-64eb-4984-98bc-b012c1bae31c",
+      "key": "Aedes albopictus.rar",
+      "size": 30090736,
+      "checksum": "md5:49939d76eb5d69fcf4d460cb23d5d830",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Aedes%20albopictus.rar/content"
+      }
+    },
+    {
+      "id": "031956e6-6a71-4986-8def-dbc7252b7ae9",
+      "key": "Aedes aegypti.rar",
+      "size": 38217065,
+      "checksum": "md5:f0d5a12aa87111f7aad8267d856f80c2",
+      "links": {
+        "self": "https://zenodo.org/api/records/4964774/files/Aedes%20aegypti.rar/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "90070"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 304,
+    "unique_downloads": 275,
+    "views": 209,
+    "unique_views": 204,
+    "version_downloads": 304,
+    "version_unique_downloads": 275,
+    "version_unique_views": 204,
+    "version_views": 209
+  },
+  "state": "done",
+  "submitted": true
+}

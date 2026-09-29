@@ -1,0 +1,16 @@
+{
+  "payload_bytes": 892,
+  "c_python_matching_predictions": 400,
+  "prediction_agreement": 0.9774678560958244,
+  "original_float_metrics": {
+    "accuracy": 0.33961552958914437,
+    "balanced_accuracy": 0.479420311887959,
+    "macro_f1": 0.38102317754484716
+  },
+  "int8_metrics": {
+    "accuracy": 0.3394480043556561,
+    "balanced_accuracy": 0.47933295520647057,
+    "macro_f1": 0.38083528504872016
+  },
+  "maximum_int32_accumulator": 419354
+}

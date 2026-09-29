@@ -1,0 +1,14 @@
+.venv/
+data/archives/
+data/raw/
+data/noise/
+data/cache/
+results/models/*.joblib
+__pycache__/
+.ipynb_checkpoints/
+*.log
+dist/
+literature/*
+!literature/README.md
+.env
+.env.*
