@@ -10,6 +10,9 @@ Documentação oficial: [Nano 33 BLE Sense Rev2](https://docs.arduino.cc/hardwar
 [microfone PDM](https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/microphone-sensor/),
 [Uno R3](https://docs.arduino.cc/hardware/uno-rev3).
 
+> 📘 **Guia Completo para Montagem e Instalação:**
+> Consulte o [Manual de Montagem e Instalação](MANUAL_DE_MONTAGEM_E_INSTALACAO.md) para detalhes de seleção de componentes, diagrama do microfone PDM, alimentação, permissões no Linux/Windows, pinout e resolução de problemas.
+
 ## Instalar
 
 1. Instale **Arduino Mbed OS Nano Boards** no Gerenciador de Placas da Arduino IDE.

@@ -39,6 +39,7 @@ autonomia, sensibilidade por evento e falsos alarmes/hora.
 Coletar áudio com a placa no local de uso, anotar atividade real e gravar horas sem
 mosquito são os próximos passos necessários para reduzir e medir os erros de campo.
 Código, modos, instalação e limites: [firmware/README.md](firmware/README.md).
+Manual detalhado de montagem e gravação: [firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
 
 ## Relatório técnico
 
