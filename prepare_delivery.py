@@ -15,6 +15,15 @@ improvements = pd.read_csv(RESULTS / "improvements/species_metrics.csv")
 arduino = pd.read_csv(RESULTS / "arduino/metrics.csv")
 native_audit = json.loads((RESULTS / "arduino/native_audit.json").read_text())
 compile_audit = json.loads((RESULTS / "arduino/compile_audit.json").read_text())
+species_protocol = json.loads((RESULTS / "arduino_species/protocol.json").read_text())
+species_metrics = pd.read_csv(RESULTS / "arduino_species/metrics.csv")
+species_selected = species_metrics.loc[species_metrics.model.eq("Escolha por validação interna")].iloc[0]
+species_fold = species_protocol["default_export_fold"]
+species_default = pd.read_csv(RESULTS / "arduino_species/fold_metrics.csv")
+species_default = species_default.loc[species_default.fold.eq(species_fold)].iloc[0]
+species_selective = pd.read_csv(RESULTS / "arduino_species/default_selective_metrics.csv").iloc[-1]
+species_native = json.loads((RESULTS / "arduino_species/native_audit.json").read_text())
+species_compile = json.loads((RESULTS / "arduino_species/compile_audit.json").read_text())
 quantization = json.loads((RESULTS / "int8_audit.json").read_text())
 notebook = nbformat.read(ROOT / "mosquito_wingbeat_estudo.ipynb", as_version=4)
 nbformat.validate(notebook)
@@ -24,6 +33,9 @@ assert not any(o.output_type == "error" for c in notebook.cells for o in c.get("
 assert manifest["verified_archives"] == 20
 assert quantization["c_python_matching_predictions"] == 400
 assert len(metrics) == 8
+assert species_native["feature_only_matching_threshold_decisions"]==species_native["feature_only_test_windows"]
+assert species_native["complete_pcm_matching_threshold_decisions"]==species_native["complete_pcm_test_windows"]
+assert species_compile["compile_succeeded"] and not species_compile["physical_board_tested"]
 
 def sha256_file(path):
     digest = hashlib.sha256()
@@ -56,7 +68,42 @@ O código do downloader também está incorporado ao notebook, que não depende 
 auxiliares para definir os experimentos iniciais. A extensão executa os scripts incluídos
 para contraste/dinâmica, novos classificadores e detecção binária com firmware Arduino.
 
-## Arduino: implementação e desempenho real disponível
+## Arduino Nano 33 BLE Sense: identificar espécies
+
+Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
+**MosquitoSpecies/MosquitoSpecies.ino** na Arduino IDE, mantendo todos os headers juntos.
+Instale **Arduino Mbed OS Nano Boards**, selecione **Arduino Nano 33 BLE**, escolha
+a porta, faça upload e abra o monitor serial em **115200 baud**.
+
+O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
+integrado, FFT incremental e modelos treinados para indicar presença e classificar
+**20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
+concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
+observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
+
+| Avaliação do modelo exportado | Resultado |
+|---|---:|
+| Escolha forçada nas {int(species_default.positive_windows):,} janelas positivas do seu teste | {species_default.accuracy:.1%} geral; {species_default.balanced_accuracy:.1%} balanceada |
+| Rejeição + confirmação, acerto entre identificações emitidas | {species_selective.accepted_positive_class_accuracy:.1%}, {int(species_selective.accepted_positive_windows)} identificações |
+| Cobertura com confirmação | {species_selective.positive_coverage:.1%} de {int(species_selective.positive_windows):,} endpoints positivos contíguos |
+
+O acerto maior vem com **muita rejeição**; o aparelho deverá responder incerto com
+frequência. Os escores não garantem que uma identificação esteja correta. O padrão
+é a dobra {species_fold}, primeira que atingiu a meta de calibração; não foi escolhido
+pelo teste. O agregado das três dobras usa modelos próprios e teve {species_selected.accuracy:.1%} geral /
+{species_selected.balanced_accuracy:.1%} balanceada na escolha forçada. Estes são testes do corpus de celulares, sem
+anotação de cada voo ou validação no Arduino físico.
+
+Compilou para o alvo com **{species_compile['program_storage_bytes']:,} bytes de programa** /
+**{species_compile['global_static_memory_bytes']:,} bytes globais** (exclui pico de pilha/heap).
+C++/Python: **{species_native['feature_only_matching_threshold_decisions']}/{species_native['feature_only_test_windows']}**
+decisões com features iguais e **{species_native['complete_pcm_matching_threshold_decisions']}/{species_native['complete_pcm_test_windows']}**
+no caminho completo PCM. **Não houve upload ou teste físico**: microfone, distância,
+latência, autonomia e alarmes/hora continuam sem medição. A dobra exportada não
+tem ruído contíguo elegível para testar a confirmação. Resultados/auditorias:
+[results/arduino_species](results/arduino_species/); seção 19 do notebook.
+
+## Arduino: detector de presença da versão anterior
 
 O [firmware](firmware/README.md) foi preparado para **Arduino Nano 33 BLE Sense / Sense Rev2**,
 com microfone PDM, frontend incremental FFT, rede neural de 16 unidades e confirmação 2/3.
@@ -183,6 +230,8 @@ Para executar somente a extensão, depois de preparar o acervo no notebook:
     .venv/bin/python train_arduino.py
     .venv/bin/python verify_arduino.py
     .venv/bin/python probe_arduino_noise.py
+    .venv/bin/python train_arduino_species.py
+    .venv/bin/python verify_arduino_species.py
 
 Previsões extensas são publicadas em **results/arduino/*.csv.gz** e podem ser lidas
 diretamente com pandas.read_csv. Checkpoints grandes em joblib permanecem locais;
@@ -196,6 +245,7 @@ o notebook os regenera. Modelos numéricos compactos e headers C++ estão public
 - 400 previsões C/Python correspondentes.
 - {native_audit['matching_decisions']} decisões do frontend/modelo Arduino C++/Python correspondentes.
 - Sketch compilado para Nano 33 BLE; sem teste em placa física.
+- Modelo de 20 espécies: {species_native['feature_only_test_windows']} decisões equivalentes e {species_native['complete_pcm_test_windows']} trechos PCM verificados; sketch compilado.
 - SHA-256 e configuração dos arquivos/resultados nos manifests.
 - Figuras revisadas visualmente.
 
@@ -228,7 +278,19 @@ delivered = [ROOT / name for name in [
     "build_report.py", "requirements-report.txt",
     "improve_device.py", "arduino_frontend.py", "arduino_models.py", "train_arduino.py",
     "verify_arduino.py", "probe_arduino_noise.py",
+    "arduino_species_models.py", "train_arduino_species.py", "verify_arduino_species.py",
 ]]
+# A self-contained Arduino IDE bundle, separate from the complete research ZIP.
+sketch_bundle = ROOT/"output/arduino/MosquitoSpecies.zip"
+sketch_bundle.parent.mkdir(parents=True,exist_ok=True)
+sketch_files = [ROOT/"firmware/MosquitoSpecies"/name for name in [
+    "MosquitoSpecies.ino","StreamingFeatures.h","PresenceModel.h","SpeciesModel.h","SpeciesDecision.h","README.md"]]
+with zipfile.ZipFile(sketch_bundle,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as handle:
+    for path in sketch_files:
+        handle.write(path,"MosquitoSpecies/"+path.name)
+with zipfile.ZipFile(sketch_bundle) as handle:
+    assert handle.testzip() is None
+delivered.append(sketch_bundle)
 delivered += [p for p in (ROOT / "firmware").rglob("*") if p.is_file()]
 delivered += sorted((ROOT / "data").glob("*.json"))
 delivered += [p for p in (ROOT / "reports").rglob("*") if p.is_file()]

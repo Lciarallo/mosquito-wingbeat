@@ -1,4 +1,16 @@
-# Detector acústico para Arduino
+# Classificação acústica para Arduino
+
+Para **identificar espécies no Nano 33 BLE Sense**, use a versão
+[MosquitoSpecies](MosquitoSpecies/README.md). Ela inclui o modelo treinado para
+20 espécies, captura PDM, confirmação, saída incerta e instruções de instalação.
+Baixe a [pasta completa em ZIP](../output/arduino/MosquitoSpecies.zip).
+
+O modelo exportado acertou 42,2% quando forçado a escolher em todos os trechos de
+teste. Com rejeição e confirmação, acertou 87,9% entre 231 identificações emitidas,
+mas cobriu só 3,9% dos 5.983 trechos positivos contíguos. Não houve teste físico.
+Veja o manual dessa versão para interpretar acurácia, cobertura e limites.
+
+## Versão anterior: detector de presença
 
 O protótipo detecta **candidatos acústicos de presença de mosquito**. Não conta
 indivíduos nem reconhece a espécie. A versão foi compilada para **Arduino Nano 33

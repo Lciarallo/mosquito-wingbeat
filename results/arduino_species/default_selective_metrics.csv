@@ -1,0 +1,4 @@
+rule,positive_windows,noise_windows,positive_groups,noise_groups,positive_coverage,noise_false_species_rate,positive_source_mean_coverage,noise_source_mean_false_species_rate,accepted_windows,accepted_positive_windows,accepted_noise_windows,accepted_accuracy_including_noise,accepted_positive_class_accuracy,correct_positive_fraction
+Uma janela: presença + confiança,7845,56,190,14,0.0745697896749522,0.0,0.07829013190637664,0.0,585,585,0,0.7692307692307693,0.7692307692307693,0.05736137667304015
+Uma janela nos endpoints contíguos,5983,0,165,0,0.0757145244860438,,0.0684569286653061,,453,453,0,0.7748344370860927,0.7748344370860927,0.058666220959384924
+2/3 mesma espécie nos endpoints contíguos,5983,0,165,0,0.03860939328096273,,0.03478353552129576,,231,231,0,0.8787878787878788,0.8787878787878788,0.03392946682266421

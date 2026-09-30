@@ -2,7 +2,7 @@
 
 Relatório técnico de métodos, resultados, explicabilidade e comparação com a literatura
 
-Emitido em 29/09/2026. Execução analisada: 2026-09-29. Projeto: mosquito-wingbeat. Idioma: português.
+Emitido em 29/09/2026. Execução analisada: 2026-09-30. Projeto: mosquito-wingbeat. Idioma: português.
 
 ### Resumo executivo
 
@@ -21,7 +21,9 @@ Para Arduino, foi implementada uma rede de 16 unidades com frontend incremental 
 
 Este documento sintetiza experimentos já executados. A geração do relatório não treinou novos modelos; recalculou as métricas salvas para conferir a consistência dos números.
 
-Seções 1-11: análise inicial de referência. Seções 12-15: melhorias executadas e protótipo Arduino.
+O firmware de espécies para Nano 33 BLE Sense usa dois modelos e saída incerta. O modelo exportado acertou 42,2% por janela na escolha forçada. Com rejeição e confirmação, acertou 87,9% entre 231 emissões, cobrindo apenas 3,9% dos trechos positivos contíguos. Código compilado e comparado com Python, sem teste físico.
+
+Seções 1-11: análise inicial de referência. Seções 12-15: melhorias e presença. Seções 16-17: identificação de espécies, rejeição e firmware para a placa.
 
 Repositório: [Lciarallo/mosquito-wingbeat](https://github.com/Lciarallo/mosquito-wingbeat).
 
@@ -277,7 +279,7 @@ Na etapa inicial, ExtraTrees foi o melhor entre os oito métodos implementados. 
 
 ## 11. Reprodutibilidade, auditoria e referências
 
-A execução registrada contém **53 células, 27 células de código executadas e 0 erros**. A última execução levou 66,3 s, reutilizando caches e checkpoints de CNN quando as assinaturas coincidiram; esse tempo não é o treinamento completo do projeto.
+A execução registrada contém **59 células, 30 células de código executadas e 0 erros**. A última execução levou 69,6 s, reutilizando caches e checkpoints de CNN quando as assinaturas coincidiram; esse tempo não é o treinamento completo do projeto.
 
 Ambiente: Python 3.14.7; NumPy 2.5.3; SciPy 1.17.1; scikit-learn 1.8.0; PyTorch 2.12.0+rocm7.2; GPU AMD Radeon RX 9070 XT. O erro absoluto máximo entre os frontends SciPy/Torch foi 8.34e-07, abaixo do limite de 1e-4.
 
@@ -285,7 +287,7 @@ A geração deste documento recalculou acurácia geral, acurácia balanceada e m
 
 Para reproduzir: instalar requirements.txt, seguir README.md e executar o notebook. Para gerar somente o relatório a partir dos resultados existentes: instalar requirements-report.txt e executar build_report.py. A máquina precisa de fontconfig e da fonte DejaVu Sans.
 
-Código de análise de referência: 714f61305d79. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
+Código de análise de referência: 31216410e9a1. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
 
 ### Referências
 
@@ -394,3 +396,49 @@ A primeira confirmação exige três janelas completas, ou 2,976 s de observaç�
 - Medir sensibilidade por evento, falsos alarmes por hora, latência e perdas de amostras no hardware. Estes resultados requerem a coleta física que ainda não existe.
 
 Instalação e modos de operação: firmware/README.md. Arquivos de auditoria: results/arduino/. Documentação oficial: [Nano 33 BLE Sense Rev2](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2), [Uno R3](https://docs.arduino.cc/hardware/uno-rev3).
+
+## 16. Identificação de espécies no Nano 33 BLE Sense
+
+A versão MosquitoSpecies acrescenta identificação de 20 espécies ao microfone PDM integrado. Reutiliza o frontend de 68 características e o detector de presença, mas inclui um classificador multiclasse. Foram treinados logística, MLP de 64 unidades e MLP de 128/64 unidades, com treino, seleção interna, calibração e teste separados por grupo e conteúdo de forma de onda.
+
+| Candidato | Geral / janela | Balanceada / janela | Recall / grupo |
+| --- | --- | --- | --- |
+| Logística 68 - 20 | 38,4% | 50,3% | 70,8% |
+| MLP 68 - 64 - 20 | 39,7% | 52,2% | 68,7% |
+| MLP 68 - 128 - 64 - 20 | 38,9% | 52,4% | 67,3% |
+| Escolha por validação interna | 39,5% | 52,1% | 69,8% |
+
+Forçando uma classe em cada trecho, a escolha interna obteve **39,5% de acurácia geral por janela** e 52,1% balanceada. Ficou abaixo dos classificadores maiores de computador. O frontend, conjunto de ajuste e seleção são diferentes; não é uma ablação isolada de tamanho da rede.
+
+Aedes mediovittatus tem apenas três grupos: um por teste, calibração e ajuste. O único grupo de ajuste permanece no treino interno; não há validação interna independente dessa classe. A seleção usa as demais classes disponíveis. As fontes de calibração são as mesmas do detector binário, evitando que este treine nelas.
+
+Uma temperatura de softmax e o limiar de abstenção são ajustados em fontes positivas de calibração, com pesos por fonte/espécie. A meta pré-definida exige 80% de acerto ponderado entre aceitos, cobertura ponderada de ao menos 10% e 15 fontes. Se a meta não é atingida, a dobra rejeita todas as identificações.
+
+A exportação usa a **dobra 2**, primeira que cumpriu a meta de calibração, sem escolher pela acurácia de teste. As outras duas rejeitam todas as identificações. Esse modelo é 68-64-20, com 5.716 parâmetros e 22.872 bytes numéricos incluindo temperatura/limiar. No seu teste, a escolha forçada acertou **42,2%** das 7.845 janelas positivas, com 54,0% de acurácia balanceada.
+
+Os escores não são garantia de que uma previsão está correta. O rótulo vem do arquivo; não foi anotado cada voo. Uma espécie desconhecida pode receber o nome de uma classe conhecida. Não há demonstração de desempenho superior aos artigos ou em campo.
+
+## 17. Rejeição, firmware de espécies e instalação
+
+O aparelho só emite IDENTIFICACAO_PROVISORIA se a presença passa pelo limiar, a classe passa pelo seu limiar e a mesma espécie é elegível em duas das três janelas. A janela atual também precisa ser elegível. INCERTO mostra a candidata, mas não emite identificação; SEM_EVIDENCIA e AUDIO_INVALIDO indicam outras condições. Falhas de captura reiniciam o histórico. A primeira emissão exige 2,976 s de áudio.
+
+| Dobra exportada | Identificações | Acerto entre emitidas | Cobertura positiva |
+| --- | --- | --- | --- |
+| Uma janela / todos os trechos | 585 | 76,9% | 7,5% |
+| Uma janela / endpoints contíguos | 453 | 77,5% | 7,6% |
+| 2/3 / mesmos endpoints | 231 | 87,9% | 3,9% |
+
+A confirmação acertou **87,9% entre 231 identificações emitidas**, mas cobriu somente **3,9%** dos 5.983 endpoints positivos contíguos. Esse acerto condicional não descreve todos os sons: a maioria continua rejeitada. O modelo não emitiu espécie nos 56 trechos negativos reservados dessa dobra, mas não há trechos negativos contíguos elegíveis nela para testar confirmação. Zero observado antes da confirmação não garante zero alarmes de campo.
+
+O acerto também varia entre nomes emitidos: Aedes aegypti teve 21 corretas em 22 emissões confirmadas; Aedes albopictus, cinco em cinco. São poucos trechos correlacionados, não indivíduos independentes. Culex quinquefasciatus não teve nenhuma emissão aceita, portanto não há acerto condicional estimável para essa classe. Suporte e cobertura por classe estão em selective_per_class.csv.
+
+| Verificação | Resultado |
+| --- | --- |
+| Alvo e compilação | Nano 33 BLE Sense / Sense Rev2; CLI 1.5.1/core 4.6.0; 125.120 bytes de programa; 59.664 bytes globais. |
+| C++ / Python | 7901/7901 decisões com features iguais; 456/456 no caminho PCM completo. |
+| Confirmação e checkpoint | Warmup, discordância, janela incerta, reset e restauração de pesos/calibração passaram. |
+| Placa física | Sem upload, teste do microfone, latência total, distância, autonomia ou pico de RAM medidos. |
+
+Para instalar: baixe output/arduino/MosquitoSpecies.zip, extraia a pasta e abra MosquitoSpecies.ino mantendo todos os headers juntos. Na Arduino IDE, instale Arduino Mbed OS Nano Boards, selecione Arduino Nano 33 BLE e a porta da sua placa; faça upload e abra o monitor serial em 115200 baud. Não precisa instalar biblioteca externa de machine learning. Código e manual: firmware/MosquitoSpecies/.
+
+A memória do compilador exclui pico de pilha/heap. Os guardas de silêncio/clipping e o tempo computacional ainda precisam de medição física. A melhoria prioritária continua sendo áudio anotado do próprio Arduino, ruídos locais, mais fontes das espécies raras e teste em dias/locais reservados. Auditorias: results/arduino_species/.

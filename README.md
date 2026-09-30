@@ -11,7 +11,42 @@ O código do downloader também está incorporado ao notebook, que não depende 
 auxiliares para definir os experimentos iniciais. A extensão executa os scripts incluídos
 para contraste/dinâmica, novos classificadores e detecção binária com firmware Arduino.
 
-## Arduino: implementação e desempenho real disponível
+## Arduino Nano 33 BLE Sense: identificar espécies
+
+Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
+**MosquitoSpecies/MosquitoSpecies.ino** na Arduino IDE, mantendo todos os headers juntos.
+Instale **Arduino Mbed OS Nano Boards**, selecione **Arduino Nano 33 BLE**, escolha
+a porta, faça upload e abra o monitor serial em **115200 baud**.
+
+O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
+integrado, FFT incremental e modelos treinados para indicar presença e classificar
+**20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
+concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
+observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
+
+| Avaliação do modelo exportado | Resultado |
+|---|---:|
+| Escolha forçada nas 7,845 janelas positivas do seu teste | 42.2% geral; 54.0% balanceada |
+| Rejeição + confirmação, acerto entre identificações emitidas | 87.9%, 231 identificações |
+| Cobertura com confirmação | 3.9% de 5,983 endpoints positivos contíguos |
+
+O acerto maior vem com **muita rejeição**; o aparelho deverá responder incerto com
+frequência. Os escores não garantem que uma identificação esteja correta. O padrão
+é a dobra 2, primeira que atingiu a meta de calibração; não foi escolhido
+pelo teste. O agregado das três dobras usa modelos próprios e teve 39.5% geral /
+52.1% balanceada na escolha forçada. Estes são testes do corpus de celulares, sem
+anotação de cada voo ou validação no Arduino físico.
+
+Compilou para o alvo com **125,120 bytes de programa** /
+**59,664 bytes globais** (exclui pico de pilha/heap).
+C++/Python: **7901/7901**
+decisões com features iguais e **456/456**
+no caminho completo PCM. **Não houve upload ou teste físico**: microfone, distância,
+latência, autonomia e alarmes/hora continuam sem medição. A dobra exportada não
+tem ruído contíguo elegível para testar a confirmação. Resultados/auditorias:
+[results/arduino_species](results/arduino_species/); seção 19 do notebook.
+
+## Arduino: detector de presença da versão anterior
 
 O [firmware](firmware/README.md) foi preparado para **Arduino Nano 33 BLE Sense / Sense Rev2**,
 com microfone PDM, frontend incremental FFT, rede neural de 16 unidades e confirmação 2/3.
@@ -152,6 +187,8 @@ Para executar somente a extensão, depois de preparar o acervo no notebook:
     .venv/bin/python train_arduino.py
     .venv/bin/python verify_arduino.py
     .venv/bin/python probe_arduino_noise.py
+    .venv/bin/python train_arduino_species.py
+    .venv/bin/python verify_arduino_species.py
 
 Previsões extensas são publicadas em **results/arduino/*.csv.gz** e podem ser lidas
 diretamente com pandas.read_csv. Checkpoints grandes em joblib permanecem locais;
@@ -159,12 +196,13 @@ o notebook os regenera. Modelos numéricos compactos e headers C++ estão public
 
 ## Evidências de execução
 
-- 27 células de código executadas; 0 erros.
+- 30 células de código executadas; 0 erros.
 - Asserções de separação por grupos e formas de onda idênticas.
 - Comparação numérica dos frontends SciPy/Torch.
 - 400 previsões C/Python correspondentes.
 - 532 decisões do frontend/modelo Arduino C++/Python correspondentes.
 - Sketch compilado para Nano 33 BLE; sem teste em placa física.
+- Modelo de 20 espécies: 7901 decisões equivalentes e 456 trechos PCM verificados; sketch compilado.
 - SHA-256 e configuração dos arquivos/resultados nos manifests.
 - Figuras revisadas visualmente.
 

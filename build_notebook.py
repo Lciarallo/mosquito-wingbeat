@@ -469,6 +469,107 @@ display(Markdown(
 ))
 """.strip()))
 md("""
+## 19. Identificação de 20 espécies no Nano 33 BLE Sense
+
+O novo sketch [MosquitoSpecies.ino](firmware/MosquitoSpecies/MosquitoSpecies.ino)
+usa o microfone PDM integrado e o mesmo frontend incremental de 68 características.
+Uma rede indica presença; outro modelo escolhe entre as **20 espécies conhecidas**.
+Comparamos logística 68 -> 20, MLP 68 -> 64 -> 20 e MLP 68 -> 128 -> 64 -> 20.
+Todos cabem na memória da placa; o modelo escolhido pela validação interna varia
+entre dobras. A época da rede usa perda em grupos internos; a seleção do candidato
+usa acurácia ponderada por fonte/espécie. As fontes de calibração são as mesmas
+reservadas na tarefa binária, para que o detector também não treine nesses áudios.
+
+**Poucos grupos:** Aedes mediovittatus tem três grupos. Em cada dobra há um no teste,
+um na calibração e um no ajuste. Esse último permanece no treino interno, sem
+validação interna independente dessa espécie; os outros rótulos sustentam a seleção.
+O protocolo registra essa limitação. Temperatura e limiar de abstenção usam apenas
+grupos positivos de calibração, com pesos iguais para fontes/espécies. A meta é 80%
+de acerto ponderado entre aceitos, cobertura ponderada mínima de 10% e 15 fontes.
+Se a meta não é alcançada, aquela dobra rejeita todas as identificações.
+
+O protótipo exportado é a **primeira dobra que atende à meta de calibração**;
+nenhum resultado do teste determina essa escolha. Não há retreino em todo o corpus.
+O benchmark agregado aplica a cada teste seu próprio modelo/limiares; a tabela
+da dobra exportada abaixo permite distinguir o resultado desse firmware.
+""")
+cells.append(nbf.v4.new_code_cell("""
+import train_arduino_species
+train_arduino_species.main()
+species_board = RESULTS / "arduino_species"
+species_protocol = json.loads((species_board / "protocol.json").read_text())
+species_compact = pd.read_csv(species_board / "metrics.csv")
+display(species_compact.round(4))
+display(pd.read_csv(species_board / "fold_metrics.csv").round(4))
+display(pd.read_csv(species_board / "per_class.csv").round(4))
+display(Markdown(f"**Dobra exportada:** {species_protocol['default_export_fold']}. "
+                 "Veja os grupos, seleção, temperatura e busca do limiar em protocol.json."))
+""".strip()))
+md("""
+### 19.1 Acurácia, cobertura e confirmação de espécie
+
+O firmware só emite identificação provisória se há evidência de presença, o escore
+da classe passa pelo limiar e a **mesma classe aparece em duas de três janelas**.
+A janela atual deve ser elegível; uma janela incerta não repete um rótulo anterior.
+Falhas de captura reiniciam a confirmação. A primeira decisão requer 2,976 s de
+observação, além do tempo computacional. A espécie candidata aparece no serial
+mesmo quando a decisão é INCERTO; o LED indica uma identificação emitida.
+
+A rejeição aumenta o acerto **condicional**, mas perde muitos trechos. Não interpreta
+o escore como probabilidade garantida de acerto. Classes ausentes do dataset podem
+receber um nome conhecido. Acurácia por arquivo agrega vários trechos, diferindo
+de um único som; nenhuma dessas taxas valida cada voo em campo.
+
+No corpus, comparamos a confirmação somente nos mesmos endpoints contíguos, com
+reset em arquivos/lacunas. Há só duas fontes de ruído nesse subconjunto agregado;
+na dobra exportada não há nenhum trecho negativo elegível para confirmação.
+Uma taxa zero observada antes da confirmação **não garante** zero alarmes em campo.
+Os guardas de silêncio/clipping do microfone também não foram avaliados nesse teste.
+""")
+cells.append(nbf.v4.new_code_cell("""
+display(pd.read_csv(species_board / "selective_metrics.csv").round(4))
+display(pd.read_csv(species_board / "default_selective_metrics.csv").round(4))
+display(pd.read_csv(species_board / "selective_per_class.csv").round(4))
+compact_best = species_compact.loc[species_compact.model.eq("Escolha por validação interna")].iloc[0]
+exported_fold = pd.read_csv(species_board / "fold_metrics.csv")
+exported_fold = exported_fold.loc[exported_fold.fold.eq(species_protocol["default_export_fold"])].iloc[0]
+default_selective = pd.read_csv(species_board / "default_selective_metrics.csv").iloc[-1]
+display(Markdown(
+    f"**Escolha forçada, agregado:** {compact_best.accuracy:.1%} de acerto geral por janela; "
+    f"{compact_best.balanced_accuracy:.1%} de acurácia balanceada.\\n\\n"
+    f"**Modelo exportado, escolha forçada:** {exported_fold.accuracy:.1%} geral e "
+    f"{exported_fold.balanced_accuracy:.1%} balanceada na sua própria dobra de teste.\\n\\n"
+    f"**Modelo exportado, confirmação e rejeição:** "
+    f"{default_selective.accepted_positive_class_accuracy:.1%} de acerto entre "
+    f"{int(default_selective.accepted_positive_windows)} identificações emitidas, "
+    f"cobrindo apenas {default_selective.positive_coverage:.1%} dos "
+    f"{int(default_selective.positive_windows)} endpoints positivos contíguos. "
+    "Não é a acurácia em todos os sons nem uma medida na placa física."
+))
+""".strip()))
+md("""
+### 19.2 Compilação, equivalência e instalação
+
+A pasta `firmware/MosquitoSpecies/` é completa: sketch, captura, frontend, rede de
+presença, modelo de espécies e confirmação. Use **Arduino Mbed OS Nano Boards**,
+placa **Arduino Nano 33 BLE** e monitor serial a **115200 baud**. O ZIP de instalação
+está em `output/arduino/MosquitoSpecies.zip`; todas as dependências são fornecidas
+pelo core ou pelos headers incluídos. Não é necessário TensorFlow/Edge Impulse.
+
+Validamos os 20 escores e a decisão em todas as janelas de teste da dobra exportada,
+além do processamento completo de PCM em 400 trechos positivos e todos os negativos
+dessa dobra. A auditoria também verifica warmup, discordância entre espécies,
+rejeição da janela atual, reset e restauração do checkpoint numérico completo.
+**A compilação e os testes nativos não substituem o upload e a medição na placa.**
+Não medimos microfone, distância, consumo, pico de RAM ou latência total no hardware.
+""")
+cells.append(nbf.v4.new_code_cell("""
+import verify_arduino_species
+verify_arduino_species.main()
+display(pd.Series(json.loads((species_board / "native_audit.json").read_text())).to_frame("Auditoria de espécies"))
+display(pd.Series(json.loads((species_board / "compile_audit.json").read_text())).to_frame("Compilação de espécies"))
+""".strip()))
+md("""
 ## Referências e fontes
 
 1. Mukundarajan H. et al. (2017). *Using mobile phones as acoustic sensors for high-throughput mosquito surveillance*. eLife 6:e27854. [Artigo](https://elifesciences.org/articles/27854), [DOI](https://doi.org/10.7554/eLife.27854).

@@ -1,0 +1,22 @@
+{
+  "zip_path": "output/arduino/MosquitoSpecies.zip",
+  "zip_sha256": "a12120b13d455d92fbc0686892ef37788086f3ec58fd42c1a6c59ce257eefa61",
+  "zip_bytes": 49029,
+  "zip_required_files_verified": 6,
+  "zip_sources_match_repository": true,
+  "extracted_zip_compile_succeeded": true,
+  "board_fqbn": "arduino:mbed_nano:nano33ble",
+  "program_storage_bytes": 125120,
+  "global_static_memory_bytes": 59664,
+  "compile_output": "Sketch uses 125120 bytes (12%) of program storage space. Maximum is 983040 bytes.\nGlobal variables use 59664 bytes (22%) of dynamic memory, leaving 202480 bytes for local variables. Maximum is 262144 bytes.",
+  "archive_file_sha256": {
+    "MosquitoSpecies/MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
+    "MosquitoSpecies/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "MosquitoSpecies/PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "MosquitoSpecies/SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+    "MosquitoSpecies/SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5",
+    "MosquitoSpecies/README.md": "24aca3727ced94f73f98841c89866603ca2eb663cb84d4da4968c97a485b1eca"
+  },
+  "physical_board_tested": false,
+  "flashed": false
+}

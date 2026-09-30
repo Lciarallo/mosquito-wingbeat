@@ -1,0 +1,59 @@
+{
+  "reference_commit": "31216410e9a13bcdffce8e4fa1efb580265d8b64",
+  "original_metric_rows_verified": [
+    {
+      "file": "species_metrics.csv",
+      "maximum_metric_deltas": {
+        "n_classes": 0.0,
+        "n_windows": 0.0,
+        "n_groups": 0.0,
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "macro_f1": 0.0,
+        "recording_macro_recall": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      }
+    },
+    {
+      "file": "classical_metrics.csv",
+      "maximum_metric_deltas": {
+        "n_classes": 0.0,
+        "n_windows": 0.0,
+        "n_groups": 0.0,
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "macro_f1": 0.0,
+        "recording_macro_recall": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      }
+    },
+    {
+      "file": "improvements/species_metrics.csv",
+      "maximum_metric_deltas": {
+        "n_classes": 0.0,
+        "n_windows": 0.0,
+        "n_groups": 0.0,
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "macro_f1": 0.0,
+        "recording_macro_recall": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.0
+      }
+    }
+  ],
+  "metric_absolute_tolerance": 1e-10,
+  "unchanged_artifacts": [
+    "results/segments.csv",
+    "results/species_oof_probabilities.npz",
+    "results/int8_audit.json",
+    "firmware/MosquitoPresence/StreamingFeatures.h",
+    "firmware/MosquitoPresence/PresenceModel.h",
+    "firmware/MosquitoPresence/PresenceModelFold1.h",
+    "firmware/MosquitoPresence/PresenceModelFold2.h",
+    "firmware/MosquitoPresence/MosquitoPresence.ino"
+  ],
+  "original_binary_firmware_preserved": true
+}

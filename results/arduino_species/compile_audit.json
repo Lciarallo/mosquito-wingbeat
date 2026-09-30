@@ -1,0 +1,32 @@
+{
+  "board_fqbn": "arduino:mbed_nano:nano33ble",
+  "target": "Arduino Nano 33 BLE Sense / Sense Rev2",
+  "arduino_cli_version": "1.5.1",
+  "core_version": "4.6.0",
+  "compile_succeeded": true,
+  "default_model_fold": 2,
+  "program_storage_bytes": 125120,
+  "maximum_program_storage_bytes": 983040,
+  "global_static_memory_bytes": 59664,
+  "maximum_ram_bytes": 262144,
+  "global_memory_excludes_runtime_peak_stack_and_heap": true,
+  "physical_board_tested": false,
+  "flashed": false,
+  "sample_rate_hz": 16000,
+  "compile_output": "Sketch uses 125120 bytes (12%) of program storage space. Maximum is 983040 bytes.\nGlobal variables use 59664 bytes (22%) of dynamic memory, leaving 202480 bytes for local variables. Maximum is 262144 bytes.",
+  "command": "tmp/arduino-toolchain/arduino-cli --config-file tmp/arduino-toolchain/arduino-cli.yaml compile --fqbn arduino:mbed_nano:nano33ble --build-path tmp/arduino-species-build firmware/MosquitoSpecies",
+  "compiled_elf_sha256": "9ef7093e5e35f1016d9ed09ba5886cbc22d7ac3c286ffc62f4fc93076e441fb7",
+  "source_sha256": {
+    "firmware/MosquitoSpecies/SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+    "firmware/MosquitoSpecies/SpeciesModelFold1.h": "66488cf1660d2b66bb608416953c514a2f0bf603f2099b8032c33f6276709c34",
+    "firmware/MosquitoSpecies/SpeciesModelFold2.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+    "firmware/MosquitoSpecies/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "firmware/MosquitoSpecies/PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "firmware/MosquitoSpecies/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
+    "firmware/MosquitoSpecies/PresenceModelFold2.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "firmware/MosquitoSpecies/SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5",
+    "firmware/MosquitoSpecies/MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
+    "firmware/MosquitoSpecies/SpeciesModelFold0.h": "99f16d4fd05fba713562b25edfdccfb1eb13c79c3681e38ed1589f5d8b136a89",
+    "firmware/MosquitoSpecies/PresenceModelFold0.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749"
+  }
+}

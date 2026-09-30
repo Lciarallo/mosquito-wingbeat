@@ -6,6 +6,7 @@ data/cache/
 results/models/*.joblib
 results/improvements/models/*.joblib
 results/arduino/models/*.joblib
+results/arduino_species/models/*.joblib
 __pycache__/
 .ipynb_checkpoints/
 *.log

@@ -79,6 +79,17 @@ compile_audit = json.loads((RESULTS / "arduino/compile_audit.json").read_text())
 importance = pd.read_csv(RESULTS / "arduino/permutation_importance.csv")
 persistence = pd.read_csv(RESULTS / "arduino/persistence_metrics.csv")
 arduino_noise = pd.read_csv(RESULTS / "arduino/noise_probe.csv")
+species_board = RESULTS / "arduino_species"
+compact_species = pd.read_csv(species_board / "metrics.csv")
+compact_selected = compact_species.loc[compact_species.model.eq("Escolha por validação interna")].iloc[0]
+compact_protocol = json.loads((species_board / "protocol.json").read_text())
+compact_fold = compact_protocol["default_export_fold"]
+compact_default = pd.read_csv(species_board / "fold_metrics.csv").query("fold == @compact_fold").iloc[0]
+compact_selective = pd.read_csv(species_board / "default_selective_metrics.csv")
+compact_confirmed = compact_selective.iloc[-1]
+compact_class_selective = pd.read_csv(species_board / "selective_per_class.csv")
+compact_native = json.loads((species_board / "native_audit.json").read_text())
+compact_compile = json.loads((species_board / "compile_audit.json").read_text())
 frequency = species.loc[species.model.eq("F0: log-verossimilhança")].iloc[0]
 date = datetime.now(ZoneInfo("America/Sao_Paulo"))
 base_commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
@@ -139,6 +150,52 @@ for row in arduino.itertuples():
         assert abs(frame.loc[mask].groupby("group").detected.mean().mean()-getattr(row,metric))<1e-10
 assert native_audit["matching_decisions"]==native_audit["tested_windows"]==532
 assert compile_audit["compile_succeeded"] and not compile_audit["physical_board_tested"]
+with np.load(species_board / "oof_probabilities.npz",allow_pickle=False) as saved:
+    compact_values = saved["probabilities"].copy()
+    compact_indices = saved["segment_index"].copy()
+    compact_classes = saved["classes"].tolist()
+assert compact_classes==compact_protocol["classes"]
+assert set(compact_indices)==set(segments.index) and len(np.unique(compact_indices))==len(segments)
+assert np.isfinite(compact_values).all() and np.allclose(compact_values.sum(axis=1),1,atol=1e-5)
+compact_frame = segments.iloc[compact_indices].copy()
+compact_positive = compact_frame.label.ne("noise").to_numpy()
+compact_target = compact_frame.label.map({c:i for i,c in enumerate(compact_classes)}).fillna(-1).to_numpy().astype(int)
+for metric,value in dict(accuracy=accuracy_score(compact_target[compact_positive],compact_values[compact_positive].argmax(axis=1)),
+                        balanced_accuracy=balanced_accuracy_score(compact_target[compact_positive],compact_values[compact_positive].argmax(axis=1)),
+                        macro_f1=f1_score(compact_target[compact_positive],compact_values[compact_positive].argmax(axis=1),average="macro")).items():
+    assert abs(value-compact_selected[metric])<1e-10
+compact_groups = pd.DataFrame(compact_values[compact_positive],index=compact_frame.loc[compact_positive,"group"].to_numpy()).groupby(level=0).mean()
+compact_group_target = compact_frame.loc[compact_positive].groupby("group").label.first().map({c:i for i,c in enumerate(compact_classes)}).reindex(compact_groups.index)
+assert abs(balanced_accuracy_score(compact_group_target,compact_groups.to_numpy().argmax(axis=1))-compact_selected.recording_macro_recall)<1e-10
+compact_predictions = pd.read_csv(species_board / "predictions.csv.gz")
+compact_default_predictions = compact_predictions.loc[compact_predictions.fold.eq(compact_fold)]
+for row in compact_selective.itertuples():
+    current = compact_default_predictions if row.rule.startswith("Uma janela:") else compact_default_predictions.loc[compact_default_predictions.contiguous_endpoint]
+    column = "confirmed_candidate" if row.rule.startswith("2/3") else "eligible_candidate"
+    labels = current.label.map({c:i for i,c in enumerate(compact_classes)}).fillna(-1).to_numpy().astype(int)
+    emitted = current[column].to_numpy()>=0
+    positive_mask = labels>=0
+    assert int(emitted.sum())==row.accepted_windows
+    assert abs(emitted[positive_mask].mean()-row.positive_coverage)<1e-10
+    assert abs((current[column].to_numpy()[emitted]==labels[emitted]).mean()-row.accepted_accuracy_including_noise)<1e-10
+assert compact_native["feature_only_matching_threshold_decisions"]==compact_native["feature_only_test_windows"]
+assert compact_native["complete_pcm_matching_threshold_decisions"]==compact_native["complete_pcm_test_windows"]
+assert compact_compile["compile_succeeded"] and not compact_compile["physical_board_tested"]
+for row in compact_class_selective.itertuples():
+    current = compact_default_predictions
+    column = "eligible_candidate"
+    if "2/3" in row.scope:
+        current = current.loc[current.contiguous_endpoint]
+        column = "confirmed_candidate"
+    c = compact_classes.index(row.species)
+    emitted = current.loc[current[column].eq(c)]
+    correct_count = int(emitted.label.eq(row.species).sum())
+    assert len(emitted)==row.emitted_as_species and correct_count==row.correct_identifications
+    assert int(current.label.eq(row.species).sum())==row.positive_endpoints
+    if len(emitted):
+        assert abs(correct_count/len(emitted)-row.emitted_species_precision)<1e-10
+    else:
+        assert pd.isna(row.emitted_species_precision)
 recording = pd.read_csv(RESULTS / "predictions_classical_6.csv")
 confusions = (recording.loc[recording.true_label.ne(recording.predicted_label)]
               .groupby(["true_label", "predicted_label"]).size()
@@ -314,7 +371,14 @@ table(["Questão", "Conclusão sustentada"], [
 ], [.38, .62])
 paragraph("Este documento sintetiza experimentos já executados. A geração do relatório não treinou novos "
           "modelos; recalculou as métricas salvas para conferir a consistência dos números.", small=True)
-paragraph("Seções 1-11: análise inicial de referência. Seções 12-15: melhorias executadas e protótipo Arduino.", small=True)
+paragraph(f"O firmware de espécies para Nano 33 BLE Sense usa dois modelos e saída incerta. "
+          f"O modelo exportado acertou {pct(compact_default.accuracy)} por janela na escolha forçada. "
+          f"Com rejeição e confirmação, acertou {pct(compact_confirmed.accepted_positive_class_accuracy)} "
+          f"entre {integer(compact_confirmed.accepted_positive_windows)} emissões, cobrindo apenas "
+          f"{pct(compact_confirmed.positive_coverage)} dos trechos positivos contíguos. "
+          "Código compilado e comparado com Python, sem teste físico.")
+paragraph("Seções 1-11: análise inicial de referência. Seções 12-15: melhorias e presença. "
+          "Seções 16-17: identificação de espécies, rejeição e firmware para a placa.", small=True)
 paragraph("Repositório: [Lciarallo/mosquito-wingbeat](https://github.com/Lciarallo/mosquito-wingbeat).", small=True)
 
 new_page("1. Dados, origem e auditoria")
@@ -707,6 +771,81 @@ paragraph("Instalação e modos de operação: firmware/README.md. Arquivos de a
           "results/arduino/. Documentação oficial: [Nano 33 BLE Sense Rev2](https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2), "
           "[Uno R3](https://docs.arduino.cc/hardware/uno-rev3).",small=True)
 
+new_page("16. Identificação de espécies no Nano 33 BLE Sense")
+paragraph("A versão MosquitoSpecies acrescenta identificação de 20 espécies ao microfone PDM "
+          "integrado. Reutiliza o frontend de 68 características e o detector de presença, mas "
+          "inclui um classificador multiclasse. Foram treinados logística, MLP de 64 unidades "
+          "e MLP de 128/64 unidades, com treino, seleção interna, calibração e teste separados "
+          "por grupo e conteúdo de forma de onda.")
+table(["Candidato", "Geral / janela", "Balanceada / janela", "Recall / grupo"], [
+    [row.model.replace("→","-"),pct(row.accuracy),pct(row.balanced_accuracy),pct(row.recording_macro_recall)]
+    for row in compact_species.itertuples()
+], [.43,.19,.19,.19])
+paragraph(f"Forçando uma classe em cada trecho, a escolha interna obteve **{pct(compact_selected.accuracy)} "
+          f"de acurácia geral por janela** e {pct(compact_selected.balanced_accuracy)} balanceada. "
+          "Ficou abaixo dos classificadores maiores de computador. O frontend, conjunto de ajuste "
+          "e seleção são diferentes; não é uma ablação isolada de tamanho da rede.")
+paragraph("Aedes mediovittatus tem apenas três grupos: um por teste, calibração e ajuste. "
+          "O único grupo de ajuste permanece no treino interno; não há validação interna "
+          "independente dessa classe. A seleção usa as demais classes disponíveis. As fontes "
+          "de calibração são as mesmas do detector binário, evitando que este treine nelas.",small=True)
+paragraph("Uma temperatura de softmax e o limiar de abstenção são ajustados em fontes positivas "
+          "de calibração, com pesos por fonte/espécie. A meta pré-definida exige 80% de acerto "
+          "ponderado entre aceitos, cobertura ponderada de ao menos 10% e 15 fontes. "
+          "Se a meta não é atingida, a dobra rejeita todas as identificações.")
+paragraph(f"A exportação usa a **dobra {compact_fold}**, primeira que cumpriu a meta de calibração, "
+          "sem escolher pela acurácia de teste. As outras duas rejeitam todas as identificações. "
+          f"Esse modelo é 68-64-20, com 5.716 parâmetros e 22.872 bytes numéricos incluindo temperatura/limiar. "
+          f"No seu teste, a escolha forçada acertou **{pct(compact_default.accuracy)}** das "
+          f"{integer(compact_default.positive_windows)} janelas positivas, com "
+          f"{pct(compact_default.balanced_accuracy)} de acurácia balanceada.")
+paragraph("Os escores não são garantia de que uma previsão está correta. O rótulo vem do arquivo; "
+          "não foi anotado cada voo. Uma espécie desconhecida pode receber o nome de uma classe "
+          "conhecida. Não há demonstração de desempenho superior aos artigos ou em campo.",small=True)
+
+new_page("17. Rejeição, firmware de espécies e instalação")
+paragraph("O aparelho só emite IDENTIFICACAO_PROVISORIA se a presença passa pelo limiar, "
+          "a classe passa pelo seu limiar e a mesma espécie é elegível em duas das três janelas. "
+          "A janela atual também precisa ser elegível. INCERTO mostra a candidata, mas não "
+          "emite identificação; SEM_EVIDENCIA e AUDIO_INVALIDO indicam outras condições. "
+          "Falhas de captura reiniciam o histórico. A primeira emissão exige 2,976 s de áudio.")
+table(["Dobra exportada", "Identificações", "Acerto entre emitidas", "Cobertura positiva"], [
+    ["Uma janela / todos os trechos",integer(compact_selective.iloc[0].accepted_positive_windows),
+     pct(compact_selective.iloc[0].accepted_positive_class_accuracy),pct(compact_selective.iloc[0].positive_coverage)],
+    ["Uma janela / endpoints contíguos",integer(compact_selective.iloc[1].accepted_positive_windows),
+     pct(compact_selective.iloc[1].accepted_positive_class_accuracy),pct(compact_selective.iloc[1].positive_coverage)],
+    ["2/3 / mesmos endpoints",integer(compact_confirmed.accepted_positive_windows),
+     pct(compact_confirmed.accepted_positive_class_accuracy),pct(compact_confirmed.positive_coverage)],
+], [.40,.18,.21,.21])
+paragraph(f"A confirmação acertou **{pct(compact_confirmed.accepted_positive_class_accuracy)} entre "
+          f"{integer(compact_confirmed.accepted_positive_windows)} identificações emitidas**, mas cobriu "
+          f"somente **{pct(compact_confirmed.positive_coverage)}** dos "
+          f"{integer(compact_confirmed.positive_windows)} endpoints positivos contíguos. "
+          "Esse acerto condicional não descreve todos os sons: a maioria continua rejeitada. "
+          "O modelo não emitiu espécie nos 56 trechos negativos reservados dessa dobra, mas não "
+          "há trechos negativos contíguos elegíveis nela para testar confirmação. Zero observado "
+          "antes da confirmação não garante zero alarmes de campo.")
+paragraph("O acerto também varia entre nomes emitidos: Aedes aegypti teve 21 corretas "
+          "em 22 emissões confirmadas; Aedes albopictus, cinco em cinco. São poucos trechos "
+          "correlacionados, não indivíduos independentes. Culex quinquefasciatus não teve "
+          "nenhuma emissão aceita, portanto não há acerto condicional estimável para essa "
+          "classe. Suporte e cobertura por classe estão em selective_per_class.csv.",small=True)
+table(["Verificação", "Resultado"], [
+    ["Alvo e compilação",f"Nano 33 BLE Sense / Sense Rev2; CLI 1.5.1/core 4.6.0; {integer(compact_compile['program_storage_bytes'])} bytes de programa; {integer(compact_compile['global_static_memory_bytes'])} bytes globais."],
+    ["C++ / Python",f"{compact_native['feature_only_matching_threshold_decisions']}/{compact_native['feature_only_test_windows']} decisões com features iguais; {compact_native['complete_pcm_matching_threshold_decisions']}/{compact_native['complete_pcm_test_windows']} no caminho PCM completo."],
+    ["Confirmação e checkpoint", "Warmup, discordância, janela incerta, reset e restauração de pesos/calibração passaram."],
+    ["Placa física", "Sem upload, teste do microfone, latência total, distância, autonomia ou pico de RAM medidos."],
+], [.30,.70])
+paragraph("Para instalar: baixe output/arduino/MosquitoSpecies.zip, extraia a pasta e abra "
+          "MosquitoSpecies.ino mantendo todos os headers juntos. Na Arduino IDE, instale "
+          "Arduino Mbed OS Nano Boards, selecione Arduino Nano 33 BLE e a porta da sua placa; "
+          "faça upload e abra o monitor serial em 115200 baud. Não precisa instalar biblioteca "
+          "externa de machine learning. Código e manual: firmware/MosquitoSpecies/.",small=True)
+paragraph("A memória do compilador exclui pico de pilha/heap. Os guardas de silêncio/clipping "
+          "e o tempo computacional ainda precisam de medição física. A melhoria prioritária "
+          "continua sendo áudio anotado do próprio Arduino, ruídos locais, mais fontes das "
+          "espécies raras e teste em dias/locais reservados. Auditorias: results/arduino_species/.",small=True)
+
 def footer(canvas, doc):
     canvas.saveState()
     canvas.setStrokeColor(colors.HexColor("#d8e1eb"))
@@ -740,7 +879,7 @@ input_paths = [RESULTS/p for p in [
     "metadata_diagnostic.json", "inventory.csv", "segments.csv", "species_oof_probabilities.npz",
 ] + recording_files]
 input_paths += [ROOT/"data/noise_manifest.json", RESULTS/"figures/tinyml_confusion.png"]
-input_paths += [p for folder in [RESULTS/"improvements",RESULTS/"arduino"] for p in folder.glob("*") if p.is_file()]
+input_paths += [p for folder in [RESULTS/"improvements",RESULTS/"arduino",species_board] for p in folder.glob("*") if p.is_file()]
 input_paths += [p for p in (ROOT/"firmware").rglob("*") if p.is_file()]
 output_paths = [pdf_path, md_path, benchmark_figure, noise_figure, improvements_figure, importance_figure]
 report_audit = dict(
@@ -749,6 +888,9 @@ report_audit = dict(
     new_models_trained=False, model_metrics_independently_recomputed=checks,
     update_contains_new_executed_experiments=True,improvement_models_metrics_verified=5,
     arduino_operating_rows_independently_verified=len(arduino),
+    arduino_species_selected_metrics_independently_verified=True,
+    arduino_species_default_operating_rows_independently_verified=len(compact_selective),
+    arduino_species_selective_class_rows_independently_verified=len(compact_class_selective),
     group_fold_consistency_asserted=True, identical_waveform_fold_consistency_asserted=True,
     metric_absolute_tolerance=1e-10, pdf_text_checked=True,
     reportlab_version=importlib.metadata.version("reportlab"),

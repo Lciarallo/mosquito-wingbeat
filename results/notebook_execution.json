@@ -1,7 +1,7 @@
 {
-  "total_cells": 53,
-  "executed_code_cells": 27,
+  "total_cells": 59,
+  "executed_code_cells": 30,
   "error_outputs": 0,
-  "elapsed_seconds": 66.32710444694385,
+  "elapsed_seconds": 69.57680515403626,
   "executor_python": ".venv/bin/python"
 }
