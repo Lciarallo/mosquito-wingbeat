@@ -43,7 +43,16 @@ class InstallError(Exception):
 
 
 def say(message):
-    print(message, flush=True)
+    if sys.stdout is not None:
+        print(message, flush=True)
+
+
+def process_options():
+    """Evita janelas de terminal ao chamar a CLI pelo aplicativo Windows."""
+    options = {"creationflags": subprocess.CREATE_NO_WINDOW} if os.name == "nt" else {}
+    if sys.stdin is None:
+        options["stdin"] = subprocess.DEVNULL
+    return options
 
 
 def file_hash(path):
@@ -126,7 +135,7 @@ def download_cli(tools):
 
 def cli_version(executable):
     try:
-        result = subprocess.run([str(executable), "--json", "version"], capture_output=True, text=True, timeout=15)
+        result = subprocess.run([str(executable), "--json", "version"], capture_output=True, text=True, timeout=15, **process_options())
         return json.loads(result.stdout).get("VersionString") if result.returncode == 0 else None
     except (OSError, ValueError, subprocess.TimeoutExpired):
         return None
@@ -173,16 +182,17 @@ def make_config(tools, explicit):
 
 
 class ArduinoCLI:
-    def __init__(self, executable, config, tools):
+    def __init__(self, executable, config, tools, on_output=None):
         self.command = [str(executable), "--config-file", str(config), "--no-color"]
         self.tools = tools
+        self.on_output = on_output or say
         # Estas variáveis precederiam o YAML e poderiam escrever na instalação da IDE.
         self.env = {k: v for k, v in os.environ.items()
                     if not k.startswith("ARDUINO_DIRECTORIES_") and k != "ARDUINO_BUILD_CACHE_PATH"}
 
     def json(self, *args):
         result = subprocess.run(self.command + ["--json", *args], capture_output=True,
-                                text=True, encoding="utf-8", errors="replace", env=self.env)
+                                text=True, encoding="utf-8", errors="replace", env=self.env, **process_options())
         if result.returncode:
             raise InstallError(f"Arduino CLI falhou em {' '.join(args)}:\n{(result.stderr or result.stdout)[-2000:]}")
         try:
@@ -193,16 +203,16 @@ class ArduinoCLI:
     def run(self, *args, log_name=None):
         command = self.command + list(args)
         if log_name is None:
-            result = subprocess.run(command, env=self.env)
+            result = subprocess.run(command, env=self.env, **process_options())
             code = result.returncode
         else:
             log = self.tools / log_name
             with log.open("w", encoding="utf-8") as stream, subprocess.Popen(
                 command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-                text=True, encoding="utf-8", errors="replace", env=self.env,
+                text=True, encoding="utf-8", errors="replace", env=self.env, **process_options(),
             ) as process:
                 for line in process.stdout:
-                    print(line, end="", flush=True)
+                    self.on_output(line.rstrip("\r\n"))
                     stream.write(line)
                 code = process.wait()
         if code:
