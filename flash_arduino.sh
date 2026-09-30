@@ -4,7 +4,16 @@
 # ==============================================================================
 set -e
 
-SKETCH_DIR="firmware/MosquitoPresence"
+if [[ "${1:-}" == "--help" || "${1:-}" == "-h" ]]; then
+    echo "Uso: bash flash_arduino.sh [porta] [pasta_do_sketch]"
+    echo "Padrão: firmware/MosquitoSpecies (identificação experimental de 20 espécies)."
+    echo "Presença apenas: bash flash_arduino.sh /dev/ttyACM0 firmware/MosquitoPresence"
+    exit 0
+fi
+
+TASK_SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+cd "$TASK_SCRIPT_DIR"
+SKETCH_DIR="${2:-firmware/MosquitoSpecies}"
 FQBN="arduino:mbed_nano:nano33ble"
 
 echo "=== Gravador Automático de Firmware - Mosquito Wingbeat ==="
@@ -35,7 +44,7 @@ if ! $ARDUINO_CLI core list | grep -q "arduino:mbed_nano"; then
 fi
 
 # 3. Detectar porta serial automaticamente ou permitir informar manualmente
-PORT="$1"
+PORT="${1:-}"
 if [ -z "$PORT" ]; then
     echo "[*] Procurando placa Arduino conectada..."
     DETECTED_PORT=$($ARDUINO_CLI board list | grep -i "nano.*33.*ble" | awk '{print $1}' | head -n 1)

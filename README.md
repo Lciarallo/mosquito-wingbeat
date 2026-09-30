@@ -23,6 +23,9 @@ integrado, FFT incremental e modelos treinados para indicar presença e classifi
 **20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
 concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
 observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
+Montagem e gravação: [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
+O script **flash_arduino.sh** grava esse sketch por padrão; **serve.py** é o
+servidor de visualização incluído na atualização do projeto.
 
 | Avaliação do modelo exportado | Resultado |
 |---|---:|
@@ -74,7 +77,6 @@ autonomia, sensibilidade por evento e falsos alarmes/hora.
 Coletar áudio com a placa no local de uso, anotar atividade real e gravar horas sem
 mosquito são os próximos passos necessários para reduzir e medir os erros de campo.
 Código, modos, instalação e limites: [firmware/README.md](firmware/README.md).
-Manual detalhado de montagem e gravação: [firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
 
 ## Relatório técnico
 

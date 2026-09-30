@@ -28,8 +28,9 @@
   "real_time_deadline_measured_on_board": false,
   "artifacts": {
     "firmware/host_bridge.cpp": "1eb75ec8828cb8d0cd77db7a99696b8fa8ffe07092ba07f9ea1c22dbb6aacc00",
-    "firmware/README.md": "1bbff2e87b128c63b6d2db05e0a58ee711850afc667b8c120dc4d069d916f93f",
     "firmware/species_host_bridge.cpp": "dd247abfd6edd448367cff958c54a9503a457872a574d997c4c6909236d640db",
+    "firmware/README.md": "3ffae833a1cff731de6d8a10d25276afe75478e12dbba768976b88bda6676fb4",
+    "firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "577aa806e13da7bd72aa73981dc58317cf73154fa5839dc83af281c77dd8ae79",
     "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
     "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
     "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",

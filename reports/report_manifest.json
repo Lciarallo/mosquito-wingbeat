@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-29T21:54:12.925419-03:00",
-  "analysis_base_commit": "31216410e9a13bcdffce8e4fa1efb580265d8b64",
+  "generated_at": "2026-09-29T22:14:38.137970-03:00",
+  "analysis_base_commit": "435adef933745c64c7b04fd14509152a5ef068a4",
   "source_run_utc": "2026-09-30T00:50:12.073453+00:00",
   "pages": 18,
   "new_models_trained": false,
@@ -141,7 +141,7 @@
     "results/arduino/protocol.json": "7a6f90f0098242aee279136d3b311f5382a0080e2c15caca02c0bbbc82860c3c",
     "results/arduino/execution.json": "918bef2d7c4da2c4e2e6bf2548ac234124f4a32d4cfbb71b5744be4b2a47d880",
     "results/arduino/noise_probe_manifest.json": "eef338cd19c623963d174bfa826e6eae39067f52cb8ccb3b20007bb1047cd41a",
-    "results/arduino/native_audit.json": "fb8ce865b9d11abd7b5df3b39bac1ec305b175c7c19157b73303fd0baa73ab35",
+    "results/arduino/native_audit.json": "eed1638bacc4ce39804de79c04623ec73ff0687127afc592f2526c2ae0d67666",
     "results/arduino_species/metrics.csv": "304fe8e8f23dfcc7fe66ce4f1065423faef8cab48f9d4a9a1991324e12aacead",
     "results/arduino_species/fold_metrics.csv": "df71523fe09c8f7b2df1398e35f57a94a40aafa50550218bc8d24ea86c1c6041",
     "results/arduino_species/confusion_matrix.csv": "a5e99dcc54b73a42e6ed1c2af2b263e2853fb6c398fc18d521d1759b16464c92",
@@ -155,9 +155,11 @@
     "results/arduino_species/selective_per_class.csv": "b5d9304193b0d0f26193abdfbd792a4fe1374e9e96090a8f39497e411a5ff315",
     "results/arduino_species/protocol.json": "a1218969eb3d7b03353488040e2001e29ce4de0987b476aaada55d051fceeaa6",
     "results/arduino_species/native_audit.json": "864c97f6fcf33b8f431ed674d13857a3257668f05734910cc163b69b6dfa53cd",
+    "results/arduino_species/package_audit.json": "f284afc6742f11eb3e21bd39c9cb6bc3117cd1c1d5b6c353319c72efbb971eaa",
     "firmware/host_bridge.cpp": "1eb75ec8828cb8d0cd77db7a99696b8fa8ffe07092ba07f9ea1c22dbb6aacc00",
-    "firmware/README.md": "1bbff2e87b128c63b6d2db05e0a58ee711850afc667b8c120dc4d069d916f93f",
     "firmware/species_host_bridge.cpp": "dd247abfd6edd448367cff958c54a9503a457872a574d997c4c6909236d640db",
+    "firmware/README.md": "3ffae833a1cff731de6d8a10d25276afe75478e12dbba768976b88bda6676fb4",
+    "firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "577aa806e13da7bd72aa73981dc58317cf73154fa5839dc83af281c77dd8ae79",
     "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
     "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
     "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
@@ -177,8 +179,8 @@
     "firmware/MosquitoSpecies/README.md": "24aca3727ced94f73f98841c89866603ca2eb663cb84d4da4968c97a485b1eca"
   },
   "outputs": {
-    "output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf": "29e211ae5b253a2a19f1b0df5aac935f28a8ebc1553a2cec0418bb4264fbde81",
-    "reports/relatorio_classificacao_mosquitos.md": "228da2a383be4d1ba212804a7ee8d1104170ec266a846074f471b09082858b32",
+    "output/pdf/Relatorio_Classificacao_Acustica_Mosquitos.pdf": "6b2496eff98baf20cf9f6ab4bd2b6d244f4b1a5f4c42c0a032525cbef63a185b",
+    "reports/relatorio_classificacao_mosquitos.md": "cb0b294087e8c6eac865bb43b5da7a38121664c568cb95900fc3b8cad639ab42",
     "reports/assets/benchmark_por_grupo.png": "04072e6943775cc0cc1c26efa082dfede188626a4100044fca2062372eb04481",
     "reports/assets/robustez_ruido.png": "8a2442323ad6e8a3a3b9556858b416d69e2ceafec21f44ea21af15550ff6d1f2",
     "reports/assets/melhorias_especies.png": "8c178c9e250bd73748bc1c4740118702846bdcf82271cd34b1fb822396f419a6",
@@ -191,6 +193,7 @@
     "contact_sheet_all_pages": true,
     "full_resolution_pages": [
       1,
+      12,
       17,
       18
     ],

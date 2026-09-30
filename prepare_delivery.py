@@ -80,6 +80,9 @@ integrado, FFT incremental e modelos treinados para indicar presença e classifi
 **20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
 concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
 observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
+Montagem e gravação: [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
+O script **flash_arduino.sh** grava esse sketch por padrão; **serve.py** é o
+servidor de visualização incluído na atualização do projeto.
 
 | Avaliação do modelo exportado | Resultado |
 |---|---:|
@@ -279,6 +282,7 @@ delivered = [ROOT / name for name in [
     "improve_device.py", "arduino_frontend.py", "arduino_models.py", "train_arduino.py",
     "verify_arduino.py", "probe_arduino_noise.py",
     "arduino_species_models.py", "train_arduino_species.py", "verify_arduino_species.py",
+    "flash_arduino.sh", "serve.py",
 ]]
 # A self-contained Arduino IDE bundle, separate from the complete research ZIP.
 sketch_bundle = ROOT/"output/arduino/MosquitoSpecies.zip"

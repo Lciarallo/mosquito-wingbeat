@@ -16,3 +16,4 @@ literature/*
 .env
 .env.*
 tmp/
+/arduino-cli
