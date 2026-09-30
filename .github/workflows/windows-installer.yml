@@ -10,7 +10,9 @@ on:
       - requirements-windows.txt
       - scripts/build_windows.py
       - tests/test_windows_installer.py
-      - firmware/MosquitoSpecies/**
+      - firmware/MosquitoSpecies/*.ino
+      - firmware/MosquitoSpecies/*.h
+      - .gitattributes
       - .github/workflows/windows-installer.yml
 
 permissions:

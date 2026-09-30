@@ -40,6 +40,7 @@ def main():
     if args.verify_runtime:
         runtime = json.loads((DEST / "windows_runtime_audit.json").read_text(encoding="utf-8"))
         assert runtime["success"] and runtime["frozen_executable"] and runtime["gui_created"]
+        assert runtime["gui_layout_fits"], "A janela deve mostrar os controles e resultados completos"
         assert runtime["compile_succeeded"] and runtime["cli_version"] == "1.5.1"
         assert runtime["core_version"] == "4.6.0" and not runtime["flashed"]
         assert runtime["serial_module_version"] == "3.5" and runtime["result_parser_checked"]
@@ -51,10 +52,12 @@ def main():
         audit["runtime_audit"] = runtime
         audit_path.write_text(json.dumps(audit, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     else:
+        payload_options = [value for name in app.PAYLOAD_FILES for value in (
+            "--add-data", str(ROOT / "firmware/MosquitoSpecies" / name) + ":firmware/MosquitoSpecies")]
         subprocess.run([sys.executable, "-m", "PyInstaller", "--noconfirm", "--clean", "--onefile", "--windowed",
                         "--name", "MosquitoWingbeat-Windows", "--distpath", str(DEST),
                         "--workpath", str(ROOT / "tmp/pyinstaller-build"), "--specpath", str(ROOT / "tmp"),
-                        "--add-data", str(ROOT / "firmware/MosquitoSpecies") + ":firmware/MosquitoSpecies",
+                        *payload_options,
                         str(ROOT / "windows_installer.py")], cwd=ROOT, check=True)
         verify_pe(exe)
         audit = dict(version=app.VERSION, exe_sha256=sha(exe), exe_bytes=exe.stat().st_size,

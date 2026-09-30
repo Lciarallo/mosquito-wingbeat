@@ -16,6 +16,7 @@ import sys
 import threading
 import time
 import tkinter as tk
+from tkinter import font as tkfont
 from tkinter import messagebox, scrolledtext, ttk
 import webbrowser
 
@@ -138,8 +139,22 @@ class InstallerWindow:
         self.monitor_thread = None
         self.monitor_port = None
         self.root.title("Mosquito Wingbeat | Instalar no Arduino")
-        self.root.geometry("860x660")
-        self.root.minsize(790, 600)
+        left, top, right, bottom = 0, 0, root.winfo_screenwidth(), root.winfo_screenheight()
+        if os.name == "nt":
+            from ctypes import wintypes
+            area = wintypes.RECT()
+            if ctypes.windll.user32.SystemParametersInfoW(0x0030, 0, ctypes.byref(area), 0):
+                left, top, right, bottom = area.left, area.top, area.right, area.bottom
+        # Fontes em pixels e dimensões na mesma escala evitam cortes em monitores
+        # com DPI alto. Reservar espaço para a barra de tarefas e bordas da janela.
+        self.scale = min(max(float(root.tk.call("tk", "scaling")) / (96 / 72), 1),
+                         (right - left - 60) / 860, (bottom - top - 60) / 660)
+        width, height = self.px(860), self.px(660)
+        x, y = left + max(0, (right - left - width) // 2), top + max(0, (bottom - top - height - 40) // 2)
+        self.root.geometry(f"{width}x{height}+{x}+{y}")
+        self.root.minsize(self.px(790), self.px(600))
+        for name in ("TkDefaultFont", "TkTextFont", "TkMenuFont"):
+            tkfont.nametofont(name, root=root).configure(family="Segoe UI", size=-self.px(15))
         self.root.configure(bg="#edf2f8")
         self.root.protocol("WM_DELETE_WINDOW", self.close)
         self._build_widgets()
@@ -149,52 +164,59 @@ class InstallerWindow:
             ctypes.windll.kernel32.SetDllDirectoryW(None)
         self.root.after(80, self._poll)
 
+    def px(self, value):
+        return max(1, round(value * self.scale))
+
     def _build_widgets(self):
+        p = self.px
         style = ttk.Style(self.root)
         style.theme_use("clam")
         style.configure("TFrame", background="#edf2f8")
-        style.configure("TLabel", background="#edf2f8", foreground="#16314d", font=("Segoe UI", 11))
-        style.configure("Title.TLabel", font=("Segoe UI", 23, "bold"))
-        style.configure("Small.TLabel", font=("Segoe UI", 10), foreground="#52677e")
-        style.configure("TButton", font=("Segoe UI", 11), padding=(12, 10))
-        style.configure("Install.TButton", background="#2463dc", foreground="white", font=("Segoe UI", 11, "bold"))
+        style.configure("TLabel", background="#edf2f8", foreground="#16314d", font=("Segoe UI", -p(15)))
+        style.configure("Title.TLabel", font=("Segoe UI", -p(30), "bold"))
+        style.configure("Small.TLabel", font=("Segoe UI", -p(13)), foreground="#52677e")
+        style.configure("TButton", font=("Segoe UI", -p(15)), padding=(p(12), p(10)))
+        style.configure("Install.TButton", background="#2463dc", foreground="white", font=("Segoe UI", -p(15), "bold"))
         style.map("Install.TButton", background=[("disabled", "#becadb"), ("active", "#1d4eb3")])
-        style.configure("TCombobox", padding=8, font=("Segoe UI", 11))
-        body = ttk.Frame(self.root, padding=(28, 22))
+        style.configure("TCombobox", padding=p(8), font=("Segoe UI", -p(15)))
+        style.configure("TNotebook.Tab", font=("Segoe UI", -p(13)), padding=(p(10), p(6)))
+        body = ttk.Frame(self.root, padding=(p(28), p(22)))
         body.pack(fill="both", expand=True)
         ttk.Label(body, text="Instalar detector no Arduino", style="Title.TLabel").pack(anchor="w")
-        ttk.Label(body, text="Nano 33 BLE Sense ou Sense Rev2 • Versão " + VERSION, style="Small.TLabel").pack(anchor="w", pady=(4, 17))
+        ttk.Label(body, text="Nano 33 BLE Sense ou Sense Rev2 • Versão " + VERSION, style="Small.TLabel").pack(anchor="w", pady=(p(4), p(17)))
         ttk.Label(body, text="1. Conecte a placa ao computador com um cabo USB de dados.").pack(anchor="w")
-        ttk.Label(body, text="2. Busque sua placa e depois clique em Instalar no Arduino.").pack(anchor="w", pady=(3, 14))
+        ttk.Label(body, text="2. Busque sua placa e depois clique em Instalar no Arduino.").pack(anchor="w", pady=(p(3), p(14)))
         row = ttk.Frame(body)
         row.pack(fill="x")
         self.scan_button = ttk.Button(row, text="Buscar minha placa", command=self.scan)
-        self.scan_button.pack(side="left", padx=(0, 12))
-        self.port_box = ttk.Combobox(row, state="disabled")
+        self.scan_button.pack(side="left", padx=(0, p(12)))
+        self.port_box = ttk.Combobox(row, state="disabled", font=("Segoe UI", -p(15)))
         self.port_box.pack(side="left", fill="x", expand=True)
         self.port_box.bind("<<ComboboxSelected>>", lambda _: self._controls())
         actions = ttk.Frame(body)
-        actions.pack(fill="x", pady=(14, 12))
+        actions.pack(fill="x", pady=(p(14), p(12)))
         self.install_button = ttk.Button(actions, text="Instalar no Arduino", style="Install.TButton", command=self.install, state="disabled")
-        self.install_button.pack(side="left", padx=(0, 10))
+        self.install_button.pack(side="left", padx=(0, p(10)))
         self.monitor_button = ttk.Button(actions, text="Ver resultados", command=self.toggle_monitor, state="disabled")
         self.monitor_button.pack(side="left")
         ttk.Button(actions, text="Passo a passo", command=lambda: webbrowser.open(DOWNLOAD_PAGE)).pack(side="right")
         self.status = tk.StringVar(value="Pronto para começar. A primeira preparação usa internet e cerca de 1 GB de espaço.")
-        ttk.Label(body, textvariable=self.status, wraplength=795).pack(anchor="w", fill="x", pady=(3, 8))
+        self.status_label = ttk.Label(body, textvariable=self.status, wraplength=p(735), justify="left")
+        self.status_label.pack(anchor="w", fill="x", pady=(p(3), p(8)))
         self.progress = ttk.Progressbar(body, mode="indeterminate")
-        self.progress.pack(fill="x", pady=(0, 16))
+        self.progress.pack(fill="x", pady=(0, p(16)))
         tabs = ttk.Notebook(body)
         tabs.pack(fill="both", expand=True)
-        result_panel = tk.Frame(tabs, bg="white", padx=22, pady=22)
+        result_panel = tk.Frame(tabs, bg="white", padx=p(22), pady=p(22))
         tabs.add(result_panel, text=" Resultado ")
-        self.result_title = tk.Label(result_panel, text="Aguardando a placa", bg="white", fg="#16314d", font=("Segoe UI", 21, "bold"), anchor="w", wraplength=720)
-        self.result_title.pack(fill="x", pady=(0, 9))
-        self.result_detail = tk.Label(result_panel, text="Após a instalação, os resultados aparecem aqui automaticamente.", bg="white", fg="#52677e", font=("Segoe UI", 11), anchor="w", justify="left", wraplength=720)
+        self.result_title = tk.Label(result_panel, text="Aguardando a placa", bg="white", fg="#16314d", font=("Segoe UI", -p(28), "bold"), anchor="w", justify="left", wraplength=p(660))
+        self.result_title.pack(fill="x", pady=(0, p(9)))
+        self.result_detail = tk.Label(result_panel, text="Após a instalação, os resultados aparecem aqui automaticamente.", bg="white", fg="#52677e", font=("Segoe UI", -p(15)), anchor="w", justify="left", wraplength=p(660))
         self.result_detail.pack(fill="x")
-        self.log = scrolledtext.ScrolledText(tabs, height=9, font=("Consolas", 9), bg="#102339", fg="#dfeafa", state="disabled")
+        self.log = scrolledtext.ScrolledText(tabs, height=9, font=("Consolas", -p(12)), bg="#102339", fg="#dfeafa", state="disabled")
         tabs.add(self.log, text=" Detalhes ")
-        ttk.Label(body, text="Modelo experimental: pode errar e frequentemente responde “espécie incerta”.", style="Small.TLabel").pack(anchor="w", pady=(14, 0))
+        self.footer = ttk.Label(body, text="Modelo experimental: pode errar e frequentemente responde “espécie incerta”.", style="Small.TLabel")
+        self.footer.pack(anchor="w", pady=(p(14), 0))
         self._controls()
 
     def _controls(self):
@@ -379,11 +401,26 @@ class InstallerWindow:
         report = self.diagnostic_result
         self.status.set("Verificação concluída. Nenhuma placa foi gravada.")
         self.root.update_idletasks()
+        key_widgets = (self.scan_button, self.port_box, self.install_button,
+                       self.monitor_button, self.result_title, self.result_detail, self.footer)
+        report["gui_layout_fits"] = all(
+            widget.winfo_ismapped() and widget.winfo_height() >= widget.winfo_reqheight()
+            and widget.winfo_rooty() + widget.winfo_height() <= self.root.winfo_rooty() + self.root.winfo_height()
+            for widget in key_widgets)
+        report["gui_scale"] = self.scale
+        report["gui_client_size"] = [self.root.winfo_width(), self.root.winfo_height()]
+        if not report["gui_layout_fits"]:
+            report["success"], report["error"] = False, "A janela cortou controles ou resultados."
         try:
             from PIL import ImageGrab
-            x, y = self.root.winfo_rootx(), self.root.winfo_rooty()
-            capture_options = {"xdisplay": os.environ.get("DISPLAY", "")} if platform.system() == "Linux" else {}
-            image = ImageGrab.grab(bbox=(x, y, x + self.root.winfo_width(), y + self.root.winfo_height()), **capture_options)
+            if os.name == "nt":
+                ancestor = ctypes.windll.user32.GetAncestor
+                ancestor.argtypes, ancestor.restype = [ctypes.c_void_p, ctypes.c_uint], ctypes.c_void_p
+                image = ImageGrab.grab(window=ancestor(self.root.winfo_id(), 2))
+            else:
+                x, y = self.root.winfo_rootx(), self.root.winfo_rooty()
+                image = ImageGrab.grab(bbox=(x, y, x + self.root.winfo_width(), y + self.root.winfo_height()),
+                                       xdisplay=os.environ.get("DISPLAY", ""))
             image.save(self.diagnostic_path.with_suffix(".png"))
             report["gui_screenshot_captured"] = True
         except Exception as exc:
