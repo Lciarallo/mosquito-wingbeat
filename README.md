@@ -14,9 +14,25 @@ para contraste/dinâmica, novos classificadores e detecção binária com firmwa
 ## Arduino Nano 33 BLE Sense: identificar espécies
 
 Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
-**MosquitoSpecies/MosquitoSpecies.ino** na Arduino IDE, mantendo todos os headers juntos.
-Instale **Arduino Mbed OS Nano Boards**, selecione **Arduino Nano 33 BLE**, escolha
-a porta, faça upload e abra o monitor serial em **115200 baud**.
+a pasta **MosquitoSpecies**. No Linux/macOS com Python 3.9+, conecte a placa e execute:
+
+```bash
+bash flash_arduino.sh --monitor
+```
+
+O instalador baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
+compila, grava e abre o monitor a **115200 baud**. A primeira preparação precisa
+de internet e cerca de 1 GB livre. No Windows x86/x64 com Python, abra o atalho
+**Instalar_no_Windows.cmd**. O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
+e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
+`--compile-only` compila sem placa/upload; `--list-ports` consulta portas;
+`--port PORTA` seleciona uma placa e `--monitor-only` abre o serial sem regravar.
+
+Alternativa pela Arduino IDE, sem Python: abra **MosquitoSpecies.ino**, mantenha
+os quatro headers juntos, instale **Arduino Mbed OS Nano Boards 4.6.0**, selecione
+**Arduino Nano 33 BLE** e a porta, faça upload e abra o monitor em **115200 baud**.
+Preparação/compilação reais verificadas no Linux; não houve execução nativa
+Windows/macOS nem upload em placa física.
 
 O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
 integrado, FFT incremental e modelos treinados para indicar presença e classificar

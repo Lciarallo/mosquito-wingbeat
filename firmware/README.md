@@ -4,6 +4,9 @@ Para **identificar espécies no Nano 33 BLE Sense**, use a versão
 [MosquitoSpecies](MosquitoSpecies/README.md). Ela inclui o modelo treinado para
 20 espécies, captura PDM, confirmação, saída incerta e instruções de instalação.
 Baixe a [pasta completa em ZIP](../output/arduino/MosquitoSpecies.zip).
+Extraia e siga o [guia rápido](LEIA_PRIMEIRO.md): no Linux/macOS com Python,
+`bash flash_arduino.sh --monitor` prepara as ferramentas e grava. No Windows,
+use o atalho incluído ou a Arduino IDE. O pacote dispensa o dataset e o notebook.
 
 O modelo exportado acertou 42,2% quando forçado a escolher em todos os trechos de
 teste. Com rejeição e confirmação, acertou 87,9% entre 231 identificações emitidas,
@@ -42,7 +45,7 @@ Por linha de comando:
 
 ```bash
 arduino-cli core update-index
-arduino-cli core install arduino:mbed_nano
+arduino-cli core install arduino:mbed_nano@4.6.0
 arduino-cli compile --fqbn arduino:mbed_nano:nano33ble firmware/MosquitoPresence
 arduino-cli upload --fqbn arduino:mbed_nano:nano33ble --port /dev/ttyACM0 firmware/MosquitoPresence
 ```

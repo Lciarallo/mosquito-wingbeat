@@ -29,8 +29,9 @@
   "artifacts": {
     "firmware/host_bridge.cpp": "1eb75ec8828cb8d0cd77db7a99696b8fa8ffe07092ba07f9ea1c22dbb6aacc00",
     "firmware/species_host_bridge.cpp": "dd247abfd6edd448367cff958c54a9503a457872a574d997c4c6909236d640db",
-    "firmware/README.md": "3ffae833a1cff731de6d8a10d25276afe75478e12dbba768976b88bda6676fb4",
-    "firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "577aa806e13da7bd72aa73981dc58317cf73154fa5839dc83af281c77dd8ae79",
+    "firmware/README.md": "d9f12b415bd96604271681ee9ec4920883847d0298bf8e1a1dd704da375c9352",
+    "firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "b84f851456274e2624c5bca1c774c0b21a032c562ddb0b5f2c8d483a2a752620",
+    "firmware/LEIA_PRIMEIRO.md": "0c23cd1119a8cd2034e36bd95a9faa0a977ef11957ed9be8a8cfc6669d14d7dd",
     "firmware/MosquitoPresence/StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
     "firmware/MosquitoPresence/PresenceModel.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
     "firmware/MosquitoPresence/PresenceModelFold1.h": "c78c3a01a92988276534d725710d9d7875cd0fc1cd7deb5454900e1ebf7cf0c6",
@@ -47,6 +48,6 @@
     "firmware/MosquitoSpecies/MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
     "firmware/MosquitoSpecies/SpeciesModelFold0.h": "99f16d4fd05fba713562b25edfdccfb1eb13c79c3681e38ed1589f5d8b136a89",
     "firmware/MosquitoSpecies/PresenceModelFold0.h": "906a2005ba649b22bcd01c5a8b04904b76c7a24db8dd51ad3cea7561dbaa6749",
-    "firmware/MosquitoSpecies/README.md": "24aca3727ced94f73f98841c89866603ca2eb663cb84d4da4968c97a485b1eca"
+    "firmware/MosquitoSpecies/README.md": "9438462d1bd9adb38a18912b229b6585e39cced956f93ec2b4ec0954aaece177"
   }
 }

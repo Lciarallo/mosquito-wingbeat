@@ -7,8 +7,30 @@ uma candidata de uma identificação provisória. É um protótipo experimental.
 
 ## Instalar na placa
 
-1. Baixe [MosquitoSpecies.zip](../../output/arduino/MosquitoSpecies.zip) e extraia.
-2. Na Arduino IDE, instale **Arduino Mbed OS Nano Boards** pelo Gerenciador de Placas.
+Baixe o ZIP abaixo e extraia tudo. **Não precisa baixar o dataset ou instalar
+dependências do notebook.** O pacote também contém instalador e guia rápido.
+
+No Linux/macOS com Python 3.9+, dentro da pasta extraída (ou na raiz do repositório):
+
+```bash
+bash flash_arduino.sh --monitor
+```
+
+Esse comando prepara CLI 1.5.1/core 4.6.0 na pasta local `.arduino-tools`, detecta,
+compila, grava e abre o monitor a 115200 baud. Múltiplas placas exigem escolha.
+Na primeira preparação, precisa de internet e cerca de 1 GB livre. Saia com Ctrl+C.
+Use `--compile-only` para conferir sem placa/upload, `--list-ports` para consultar
+portas e `--port /dev/ttyACM0` para escolher uma. No Windows x86/x64 com Python,
+abra **Instalar_no_Windows.cmd**; para Windows ARM, use a IDE.
+
+O guia [LEIA_PRIMEIRO.md](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/firmware/LEIA_PRIMEIRO.md)
+explica também permissões e recuperação por RESET. A instalação real e compilação
+foram verificadas no Linux; não houve execução nativa Windows/macOS nem upload físico.
+
+Se preferir a Arduino IDE, sem Python:
+
+1. Baixe [MosquitoSpecies.zip](https://github.com/Lciarallo/mosquito-wingbeat/raw/refs/heads/main/output/arduino/MosquitoSpecies.zip) e extraia.
+2. Na Arduino IDE, instale **Arduino Mbed OS Nano Boards 4.6.0** pelo Gerenciador de Placas.
 3. Abra `MosquitoSpecies/MosquitoSpecies.ino`. Mantenha **todos os `.h` na mesma pasta**.
 4. Selecione a placa **Arduino Nano 33 BLE**, escolha a porta e faça o upload.
 5. Abra o monitor serial em **115200 baud**. A placa também processa sem o monitor aberto.
@@ -137,7 +159,7 @@ python verify_arduino_species.py
 ```
 
 Resultados, matriz de confusão, recalls por espécie, calibração, grupos,
-probabilidades e auditorias: [results/arduino_species](../../results/arduino_species).
+probabilidades e auditorias: [results/arduino_species](https://github.com/Lciarallo/mosquito-wingbeat/tree/main/results/arduino_species).
 O checkpoint `.npz` inclui todos os pesos, temperatura, limiares e calibração do
 detector. Os arquivos `.joblib` ficam locais e são regenerados pelo treinamento.
 

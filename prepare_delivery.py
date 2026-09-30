@@ -71,9 +71,25 @@ para contraste/dinâmica, novos classificadores e detecção binária com firmwa
 ## Arduino Nano 33 BLE Sense: identificar espécies
 
 Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
-**MosquitoSpecies/MosquitoSpecies.ino** na Arduino IDE, mantendo todos os headers juntos.
-Instale **Arduino Mbed OS Nano Boards**, selecione **Arduino Nano 33 BLE**, escolha
-a porta, faça upload e abra o monitor serial em **115200 baud**.
+a pasta **MosquitoSpecies**. No Linux/macOS com Python 3.9+, conecte a placa e execute:
+
+```bash
+bash flash_arduino.sh --monitor
+```
+
+O instalador baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
+compila, grava e abre o monitor a **115200 baud**. A primeira preparação precisa
+de internet e cerca de 1 GB livre. No Windows x86/x64 com Python, abra o atalho
+**Instalar_no_Windows.cmd**. O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
+e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
+`--compile-only` compila sem placa/upload; `--list-ports` consulta portas;
+`--port PORTA` seleciona uma placa e `--monitor-only` abre o serial sem regravar.
+
+Alternativa pela Arduino IDE, sem Python: abra **MosquitoSpecies.ino**, mantenha
+os quatro headers juntos, instale **Arduino Mbed OS Nano Boards 4.6.0**, selecione
+**Arduino Nano 33 BLE** e a porta, faça upload e abra o monitor em **115200 baud**.
+Preparação/compilação reais verificadas no Linux; não houve execução nativa
+Windows/macOS nem upload em placa física.
 
 O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
 integrado, FFT incremental e modelos treinados para indicar presença e classificar
@@ -282,13 +298,16 @@ delivered = [ROOT / name for name in [
     "improve_device.py", "arduino_frontend.py", "arduino_models.py", "train_arduino.py",
     "verify_arduino.py", "probe_arduino_noise.py",
     "arduino_species_models.py", "train_arduino_species.py", "verify_arduino_species.py",
-    "flash_arduino.sh", "serve.py",
+    "flash_arduino.sh", "install_arduino.py", "Instalar_no_Windows.cmd", "serve.py",
+    "tests/test_install_arduino.py",
 ]]
-# A self-contained Arduino IDE bundle, separate from the complete research ZIP.
+# Pacote autônomo para IDE ou instalador; sem dataset/ambiente científico.
 sketch_bundle = ROOT/"output/arduino/MosquitoSpecies.zip"
 sketch_bundle.parent.mkdir(parents=True,exist_ok=True)
 sketch_files = [ROOT/"firmware/MosquitoSpecies"/name for name in [
     "MosquitoSpecies.ino","StreamingFeatures.h","PresenceModel.h","SpeciesModel.h","SpeciesDecision.h","README.md"]]
+sketch_files += [ROOT/name for name in ["flash_arduino.sh", "install_arduino.py", "Instalar_no_Windows.cmd"]]
+sketch_files += [ROOT/"firmware"/name for name in ["LEIA_PRIMEIRO.md", "MANUAL_DE_MONTAGEM_E_INSTALACAO.md"]]
 with zipfile.ZipFile(sketch_bundle,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as handle:
     for path in sketch_files:
         handle.write(path,"MosquitoSpecies/"+path.name)
