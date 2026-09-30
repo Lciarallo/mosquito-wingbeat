@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "frozen_executable": true,
+  "gui_created": true,
+  "physical_board_tested": false,
+  "flashed": false,
+  "firmware_sha256": {
+    "MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
+    "StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+    "SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5"
+  },
+  "serial_module_version": "3.5",
+  "program_storage_bytes": 124984,
+  "global_static_memory_bytes": 59664,
+  "compile_succeeded": true,
+  "cli_version": "1.5.1",
+  "core_version": "4.6.0",
+  "result_parser_checked": true,
+  "success": true,
+  "gui_layout_fits": true,
+  "gui_scale": 1,
+  "gui_client_size": [
+    860,
+    660
+  ],
+  "gui_screenshot_captured": true
+}

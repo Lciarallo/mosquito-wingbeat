@@ -1,7 +1,7 @@
 {
   "zip_path": "output/arduino/MosquitoSpecies.zip",
-  "zip_sha256": "fd5085500c47061d52acc811d1215219d04f6158723e3472f569c188b43d7cf7",
-  "zip_bytes": 64906,
+  "zip_sha256": "d4ea6a37ff2f1f23556f47823d9b35577850c0472803433270005ccc5a27ba5e",
+  "zip_bytes": 66535,
   "zip_required_files_verified": 11,
   "zip_sources_match_repository": true,
   "extracted_zip_compile_succeeded": true,
@@ -16,13 +16,14 @@
     "MosquitoSpecies/PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
     "MosquitoSpecies/SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
     "MosquitoSpecies/SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5",
-    "MosquitoSpecies/README.md": "9438462d1bd9adb38a18912b229b6585e39cced956f93ec2b4ec0954aaece177",
+    "MosquitoSpecies/README.md": "d7a60702fab3bf9635a18b3048043219d8cab59cef478d827f375b36304ca5dd",
     "MosquitoSpecies/flash_arduino.sh": "fb2b4f706691c7f8667a1bd57230cd4bfaeb3521325369690f7a01043504acd2",
-    "MosquitoSpecies/install_arduino.py": "6a671fe9b4a2a56081dfc0887ad6f5490dacfc0afe3eee91f7bd2b43136326be",
-    "MosquitoSpecies/Instalar_no_Windows.cmd": "2b55a89ef54fcf91c6028bb98567eafce5e73926e7b86ba87d9420f5587b62a8",
-    "MosquitoSpecies/LEIA_PRIMEIRO.md": "0c23cd1119a8cd2034e36bd95a9faa0a977ef11957ed9be8a8cfc6669d14d7dd",
-    "MosquitoSpecies/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "b84f851456274e2624c5bca1c774c0b21a032c562ddb0b5f2c8d483a2a752620"
+    "MosquitoSpecies/install_arduino.py": "cee5df831981fd1580bf22e13fe34da8edc1f067d38d8029c4b6e0d8231d4a79",
+    "MosquitoSpecies/Instalar_no_Windows.cmd": "f143dd65437bb1da1c72cfdc91eac666ec005715ab9e012f0e4b07f16cfb3ce7",
+    "MosquitoSpecies/LEIA_PRIMEIRO.md": "44e979d05b59bb515af66e206424f7dd5ba064707d6b84417a969f02fc15c61b",
+    "MosquitoSpecies/MANUAL_DE_MONTAGEM_E_INSTALACAO.md": "d1c6d08950472755ccc3913012fa9295573d60edfde792e76c6cc554a72fa39e"
   },
   "physical_board_tested": false,
-  "flashed": false
+  "flashed": false,
+  "extracted_zip_compile_log_sha256": "e432d0a7b2341898eea2678916c8456e5a43e6ba732a1f6ca622b74befbfdeea"
 }

@@ -5,10 +5,12 @@ integrado e calcula uma candidata entre 20 espécies. Inclui detecção de prese
 identificação, rejeição e confirmação temporal. O detector anterior, somente de
 presença, continua disponível em [MosquitoPresence](https://github.com/Lciarallo/mosquito-wingbeat/tree/main/firmware/MosquitoPresence).
 
-**Instalação rápida:** baixe o ZIP, extraia e siga
-[LEIA_PRIMEIRO.md](LEIA_PRIMEIRO.md). No Linux/macOS, basta
-`bash flash_arduino.sh --monitor` na pasta extraída. No Windows, use o atalho
-incluído ou a Arduino IDE. Não precisa baixar os áudios ou treinar os modelos.
+**Windows: [baixe o aplicativo gráfico](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe).**
+Abra, conecte a placa, clique em **Buscar minha placa** e em **Instalar no Arduino**.
+Não precisa de Python ou Arduino IDE. [Passo a passo para Windows](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md).
+No Linux/macOS, baixe o ZIP, extraia e siga [LEIA_PRIMEIRO.md](LEIA_PRIMEIRO.md):
+`bash flash_arduino.sh --monitor` na pasta extraída. Não precisa baixar os áudios
+ou treinar os modelos.
 
 ## 1. Funcionamento e resultado esperado
 
@@ -35,7 +37,8 @@ Detalhes por espécie, ruído e validação: [manual do sketch](https://github.c
 2. Cabo **Micro-B USB com dados**. Ambas as revisões oficiais usam Micro-B;
    confira o conector da sua placa. [Sense](https://docs.arduino.cc/resources/datasheets/ABX00031-datasheet.pdf),
    [Sense Rev2](https://docs.arduino.cc/resources/datasheets/ABX00069-datasheet.pdf).
-3. Computador com Arduino IDE ou Arduino CLI. A conexão USB fornece alimentação.
+3. Computador com Windows e o aplicativo deste projeto, ou Arduino IDE/CLI.
+   A conexão USB fornece alimentação.
 
 Para essa montagem, o microfone e o LED já estão na placa: não são necessárias
 conexões externas. Um power bank USB pode alimentar o protótipo; autonomia e
@@ -70,7 +73,14 @@ compatível, proteção da carga e alteração do firmware; essa montagem não f
 
 ## 4. Preparar o computador
 
-Para o instalador automático, use **Python 3.9 ou mais recente**, sem pacotes pip.
+No Windows 10/11 Intel/AMD de 64 bits, o `.exe` já inclui o que precisa para abrir
+a interface e não exige Python, IDE ou administrador. Ele baixa as ferramentas
+Arduino na primeira busca e as mantém em `%LOCALAPPDATA%\MosquitoWingbeat\tools`.
+Tenha internet e cerca de **1 GB livre**. O programa é portátil e não tem assinatura
+digital; o [guia Windows](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md)
+explica o aviso que pode aparecer. O `.exe` abre o passo a passo pelo botão próprio.
+
+Para o instalador por terminal no Linux/macOS, use **Python 3.9 ou mais recente**, sem pacotes pip.
 Na primeira preparação, tenha internet e cerca de **1 GB livre**. Ele instala
 Arduino CLI **1.5.1** e core **4.6.0** em `.arduino-tools`, dentro da pasta do
 projeto/ZIP. Reutiliza versões compatíveis e cache nas próximas execuções.
@@ -82,9 +92,28 @@ Placas instale **Arduino Mbed OS Nano Boards**, versão **4.6.0**.
 No Linux, se houver erro de permissão na porta, confira seu proprietário/grupo
 com `ls -l /dev/ttyACM*`. Use o grupo indicado pelo sistema; em distribuições que
 usam `dialout`, o comando é `sudo usermod -aG dialout "$USER"`, seguido de novo
-login. No Windows, selecione a porta COM reconhecida pela IDE.
+login. No Windows, o aplicativo lista e seleciona a placa; com várias portas,
+escolha a sua. O alvo também serve à Nano 33 BLE sem Sense, portanto confira o
+nome completo da placa: o microfone integrado é necessário.
 
 ## 5. Gravar o firmware
+
+### Aplicativo Windows: caminho recomendado
+
+1. Abra **MosquitoWingbeat-Windows.exe** e conecte a Sense/Sense Rev2 por USB.
+2. Clique em **Buscar minha placa** e aguarde a preparação inicial.
+3. Confira a placa selecionada e clique em **Instalar no Arduino**.
+4. Mantenha o cabo conectado. Quando o programa confirmar a gravação, os resultados
+   aparecem automaticamente na aba **Resultado**. A aba **Detalhes** mostra os logs.
+
+Em usos seguintes, busque a placa e clique em **Ver resultados**, sem regravar.
+O instalador só informa gravação concluída se o comando de upload retornar sucesso.
+Uma leitura incerta não é exibida como espécie identificada. Ele acompanha mudança
+de porta pelo identificador USB quando disponível.
+
+O executável abriu a interface e compilou o firmware em um ambiente Windows do
+GitHub Actions. Não houve gravação em placa física, teste do microfone ou medição
+de acurácia no aparelho. Para Windows ARM ou 32 bits, use a Arduino IDE.
 
 ### Instalador automático: caminho recomendado no Linux
 
@@ -109,16 +138,17 @@ Saia do monitor com **Ctrl+C**. Também pode escolher a porta:
 bash flash_arduino.sh --port /dev/ttyACM0 --monitor
 ```
 
-No macOS, use uma porta da listagem, como `/dev/cu.usbmodem...`. No Windows x86/x64,
-instale Python e abra **Instalar_no_Windows.cmd** dentro da pasta extraída; o atalho
-sem argumentos prepara, grava e abre o monitor. Num terminal Windows:
+No macOS, use uma porta da listagem, como `/dev/cu.usbmodem...`. No Windows,
+**Instalar_no_Windows.cmd** sem argumentos abre o aplicativo gráfico ou seu download.
+Para uso avançado por terminal no Windows x86/x64, com Python instalado:
 
 ```powershell
 py -3 install_arduino.py --port COM3 --monitor
 ```
 
-O caminho real de preparação/compilação foi verificado no Linux. Windows/macOS
-não foram executados em sistemas nativos. Para Windows ARM, use a Arduino IDE.
+O caminho real de preparação/compilação foi verificado no Linux; o aplicativo
+gráfico também foi executado em Windows e compilou o firmware. O caminho macOS
+não foi executado em sistema nativo. Para Windows ARM, use a Arduino IDE.
 
 Comandos auxiliares, sem upload:
 

@@ -1,5 +1,14 @@
 # Estudo de classificação acústica de mosquitos
 
+**[⬇ Baixar instalador para Windows](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe)**
+— [passo a passo com imagens](WINDOWS.md) · [página de downloads](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest)
+
+Para instalar no **Arduino Nano 33 BLE Sense / Sense Rev2**: abra o `.exe`, conecte
+a placa, clique em **Buscar minha placa** e em **Instalar no Arduino**. A janela
+mostra os resultados automaticamente. **Não precisa de Python, Arduino IDE,
+comandos ou conta no GitHub.** Windows 10/11 de 64 bits; internet no primeiro uso
+e cerca de 1 GB livre. Modelo experimental; acurácia em uso real ainda não medida.
+
 Abra [mosquito_wingbeat_estudo.ipynb](mosquito_wingbeat_estudo.ipynb) para executar ou baixe
 [mosquito_wingbeat_estudo.html](mosquito_wingbeat_estudo.html) e abra no navegador
 para ler o estudo e os gráficos sem Jupyter.
@@ -20,10 +29,12 @@ a pasta **MosquitoSpecies**. No Linux/macOS com Python 3.9+, conecte a placa e e
 bash flash_arduino.sh --monitor
 ```
 
-O instalador baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
+O instalador por terminal baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
 compila, grava e abre o monitor a **115200 baud**. A primeira preparação precisa
-de internet e cerca de 1 GB livre. No Windows x86/x64 com Python, abra o atalho
-**Instalar_no_Windows.cmd**. O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
+de internet e cerca de 1 GB livre. No Windows, use o **aplicativo gráfico acima**;
+**Instalar_no_Windows.cmd** abre o aplicativo ou seu download; opções por terminal
+são uma alternativa avançada que exige Python.
+O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
 e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
 `--compile-only` compila sem placa/upload; `--list-ports` consulta portas;
 `--port PORTA` seleciona uma placa e `--monitor-only` abre o serial sem regravar.
@@ -31,8 +42,9 @@ e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
 Alternativa pela Arduino IDE, sem Python: abra **MosquitoSpecies.ino**, mantenha
 os quatro headers juntos, instale **Arduino Mbed OS Nano Boards 4.6.0**, selecione
 **Arduino Nano 33 BLE** e a porta, faça upload e abra o monitor em **115200 baud**.
-Preparação/compilação reais verificadas no Linux; não houve execução nativa
-Windows/macOS nem upload em placa física.
+Preparação/compilação reais verificadas no Linux e pelo próprio `.exe` em Windows
+no GitHub Actions. A interface foi revisada visualmente. Não houve execução nativa
+macOS nem upload em placa física. [Auditoria do aplicativo Windows](results/arduino_species/windows_build_audit.json).
 
 O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
 integrado, FFT incremental e modelos treinados para indicar presença e classificar

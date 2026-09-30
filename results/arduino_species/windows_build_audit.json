@@ -1,0 +1,78 @@
+{
+  "version": "1.0.0",
+  "exe_sha256": "b552a7415f21397a61f3a2ae53f9b8d2936550ba3167346ed2388e45edf4cbed",
+  "exe_bytes": 18725474,
+  "build_platform": "Windows-2025Server-10.0.26100-SP0",
+  "python": "3.12.10",
+  "windows_x64_gui_subsystem_verified": true,
+  "requires_python_on_user_machine": false,
+  "requires_admin": false,
+  "signed": false,
+  "physical_board_tested": false,
+  "flashed": false,
+  "firmware_sha256": {
+    "MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
+    "StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+    "PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+    "SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+    "SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5"
+  },
+  "native_windows_executable_smoke_test_passed": true,
+  "native_windows_firmware_compile_passed": true,
+  "runtime_audit": {
+    "version": "1.0.0",
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "frozen_executable": true,
+    "gui_created": true,
+    "physical_board_tested": false,
+    "flashed": false,
+    "firmware_sha256": {
+      "MosquitoSpecies.ino": "fcfb0117b6f2e9e60f3dbcc335d01fa0ad347a920f514d1c15c836feeab8cc50",
+      "StreamingFeatures.h": "6d95c43befe53e1f60862e27c34af5563c0046bba36c6f140d686d4685dc7156",
+      "PresenceModel.h": "7b147ac7209f74f3dde59d911ecb00938f6a93dc656411d269ab06b240d8943a",
+      "SpeciesModel.h": "3749778871dd0265e6ebd4a49d9af6da5c6e93f5eb0840e352ca6c8e510c9f89",
+      "SpeciesDecision.h": "d4679cdf60fc5c167ab68ee784f62f1db57a424ed697a46777d0604a7134d2d5"
+    },
+    "serial_module_version": "3.5",
+    "program_storage_bytes": 124984,
+    "global_static_memory_bytes": 59664,
+    "compile_succeeded": true,
+    "cli_version": "1.5.1",
+    "core_version": "4.6.0",
+    "result_parser_checked": true,
+    "success": true,
+    "gui_layout_fits": true,
+    "gui_scale": 1,
+    "gui_client_size": [
+      860,
+      660
+    ],
+    "gui_screenshot_captured": true
+  },
+  "source_commit": "3614116572407d9456862fefa70d8e6abe849570",
+  "github_actions_run": "https://github.com/Lciarallo/mosquito-wingbeat/actions/runs/36680234529",
+  "download_url": "https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe",
+  "release_tag": "windows-v1.0.0",
+  "tests": {
+    "local_total_passed": 36,
+    "windows_total_run": 36,
+    "windows_executed_passed": 15,
+    "windows_skipped_posix_only": 21,
+    "physical_uploads_performed": 0
+  },
+  "visual_review": {
+    "native_windows_screenshot_checked": true,
+    "local_dpi_200_percent_checked": true,
+    "clipped_controls_or_text_found": false
+  },
+  "windows_10_11_desktop_hardware_tested": false,
+  "source_sha256": {
+    "windows_installer.py": "04c27f723d6080b0ac35fd0f610121b739a50cb1e7afc19473bc2da954eafbd3",
+    "install_arduino.py": "cee5df831981fd1580bf22e13fe34da8edc1f067d38d8029c4b6e0d8231d4a79",
+    "scripts/build_windows.py": "0192f005ffa371f1ccd34515643e2994f240970cf67d04d3e0c864c4e516b1aa",
+    "requirements-windows.txt": "8895a7ada3323e91a0b4d077c7dcc0572dad935af313802c4e75312a32a42629",
+    ".github/workflows/windows-installer.yml": "7121d6511348a879ae9e55c9d82166716ccb44f45485a7cdb0a126366fb4489c",
+    ".gitattributes": "348334adf833546e16904abc2c85a563bf5dd9468c5d5fdf479ee267a880c243"
+  },
+  "native_screenshot_sha256": "216bc0caf99b752c1a92c0687877098d3b60f86eee1f44d23257b73da451161a"
+}

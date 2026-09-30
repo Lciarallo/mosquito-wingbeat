@@ -836,13 +836,15 @@ table(["Verificação", "Resultado"], [
     ["Confirmação e checkpoint", "Warmup, discordância, janela incerta, reset e restauração de pesos/calibração passaram."],
     ["Placa física", "Sem upload, teste do microfone, latência total, distância, autonomia ou pico de RAM medidos."],
 ], [.30,.70])
-paragraph("Para instalar: baixe output/arduino/MosquitoSpecies.zip e extraia tudo. No Linux/macOS "
-          "com Python 3.9+, execute bash flash_arduino.sh --monitor dentro da pasta MosquitoSpecies. "
-          "O instalador prepara CLI 1.5.1/core 4.6.0, detecta, compila, grava e abre o serial. "
-          "No Windows x86/x64 com Python, use Instalar_no_Windows.cmd. Sem Python, abra o .ino na "
-          "Arduino IDE, instale Arduino Mbed OS Nano Boards 4.6.0, selecione Nano 33 BLE/porta e "
-          "grave; monitor em 115200 baud. O ZIP inclui LEIA_PRIMEIRO.md e o manual. Não precisa "
-          "do dataset ou de bibliotecas ML. --compile-only verifica sem gravar.",small=True)
+paragraph("Windows 10/11 x64: baixe MosquitoWingbeat-Windows.exe em "
+          "[GitHub Releases](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest). "
+          "Abra, conecte a Sense/Sense Rev2, clique em Buscar minha placa e em Instalar no Arduino. "
+          "Os resultados aparecem na janela; dispensa Python, IDE e terminal. O executável abriu "
+          "a interface e compilou o firmware em Windows no GitHub Actions, sem gravar placa física. "
+          "No Linux/macOS com Python 3.9+, extraia MosquitoSpecies.zip e execute "
+          "bash flash_arduino.sh --monitor. Alternativa: Arduino IDE/core 4.6.0, alvo Nano 33 BLE, "
+          "serial 115200 baud. Primeira preparação: internet e cerca de 1 GB livre. "
+          "WINDOWS.md e LEIA_PRIMEIRO.md trazem o passo a passo.",small=True)
 paragraph("A memória do compilador exclui pico de pilha/heap. Os guardas de silêncio/clipping "
           "e o tempo computacional ainda precisam de medição física. A melhoria prioritária "
           "continua sendo áudio anotado do próprio Arduino, ruídos locais, mais fontes das "
@@ -883,7 +885,9 @@ input_paths = [RESULTS/p for p in [
 input_paths += [ROOT/"data/noise_manifest.json", RESULTS/"figures/tinyml_confusion.png"]
 input_paths += [p for folder in [RESULTS/"improvements",RESULTS/"arduino",species_board] for p in folder.glob("*") if p.is_file()]
 input_paths += [p for p in (ROOT/"firmware").rglob("*") if p.is_file()]
-input_paths += [ROOT/p for p in ["install_arduino.py","flash_arduino.sh","Instalar_no_Windows.cmd"]]
+input_paths += [ROOT/p for p in ["install_arduino.py","flash_arduino.sh","Instalar_no_Windows.cmd",
+    "windows_installer.py","scripts/build_windows.py","requirements-windows.txt","WINDOWS.md",
+    ".github/workflows/windows-installer.yml",".gitattributes"]]
 output_paths = [pdf_path, md_path, benchmark_figure, noise_figure, improvements_figure, importance_figure]
 report_audit = dict(
     generated_at=date.isoformat(), analysis_base_commit=base_commit,

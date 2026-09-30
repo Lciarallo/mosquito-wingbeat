@@ -22,13 +22,17 @@ prepara as ferramentas de gravação automaticamente.
    enquanto o programa prepara o computador. Quando encontrar uma única placa
    reconhecida, ele a seleciona. Se aparecer uma lista, escolha a sua placa.
 4. Clique em **Instalar no Arduino**. Mantenha o cabo conectado até aparecer
-   **Programa gravado**. Essa ação substitui o programa que estava no Arduino.
+   **Instalação concluída**. Essa ação substitui o programa que estava no Arduino.
 5. Os resultados abrem automaticamente na aba **Resultado**. Nas próximas vezes,
    basta buscar a placa e clicar em **Ver resultados**, sem gravar de novo.
 
 O instalador é portátil: não pede administrador nem cria atalhos no sistema.
 Guarde o `.exe` onde preferir. As ferramentas baixadas ficam na pasta do seu
 usuário, em `%LOCALAPPDATA%\MosquitoWingbeat`, e são reutilizadas.
+
+![Janela do instalador para Windows](docs/windows-installer.png)
+
+Tela do aplicativo durante a verificação da versão, sem placa conectada.
 
 ## Entender o resultado
 

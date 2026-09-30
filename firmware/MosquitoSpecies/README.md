@@ -7,6 +7,13 @@ uma candidata de uma identificação provisória. É um protótipo experimental.
 
 ## Instalar na placa
 
+**Windows: [baixe MosquitoWingbeat-Windows.exe](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe).**
+Abra com dois cliques, conecte a Sense/Sense Rev2, clique em **Buscar minha placa**
+e em **Instalar no Arduino**. Os resultados aparecem na janela em português.
+Não precisa de Python, Arduino IDE, terminal ou conta no GitHub.
+[Guia ilustrado para Windows](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md).
+
+Para Linux/macOS ou instalação pela Arduino IDE:
 Baixe o ZIP abaixo e extraia tudo. **Não precisa baixar o dataset ou instalar
 dependências do notebook.** O pacote também contém instalador e guia rápido.
 
@@ -20,12 +27,14 @@ Esse comando prepara CLI 1.5.1/core 4.6.0 na pasta local `.arduino-tools`, detec
 compila, grava e abre o monitor a 115200 baud. Múltiplas placas exigem escolha.
 Na primeira preparação, precisa de internet e cerca de 1 GB livre. Saia com Ctrl+C.
 Use `--compile-only` para conferir sem placa/upload, `--list-ports` para consultar
-portas e `--port /dev/ttyACM0` para escolher uma. No Windows x86/x64 com Python,
-abra **Instalar_no_Windows.cmd**; para Windows ARM, use a IDE.
+portas e `--port /dev/ttyACM0` para escolher uma. **Instalar_no_Windows.cmd** sem
+argumentos abre o aplicativo ou seu download. Opções por terminal são uma alternativa
+avançada para Windows x86/x64 com Python; para Windows ARM, use a IDE.
 
 O guia [LEIA_PRIMEIRO.md](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/firmware/LEIA_PRIMEIRO.md)
 explica também permissões e recuperação por RESET. A instalação real e compilação
-foram verificadas no Linux; não houve execução nativa Windows/macOS nem upload físico.
+foram verificadas no Linux e pelo próprio `.exe` em Windows no GitHub Actions.
+Não houve execução nativa macOS nem upload físico.
 
 Se preferir a Arduino IDE, sem Python:
 

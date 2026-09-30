@@ -4,6 +4,13 @@ Use **Arduino Nano 33 BLE Sense ou Sense Rev2** e cabo Micro-B USB com dados.
 O microfone já está na placa. O modelo é experimental e frequentemente retorna
 `INCERTO`; instalação bem-sucedida não comprova acurácia em campo.
 
+**Windows: [baixe o aplicativo em português](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe).**
+Abra com dois cliques, conecte a placa, clique em **Buscar minha placa** e depois
+em **Instalar no Arduino**. Os resultados aparecem na janela. Não precisa de
+Python, Arduino IDE, terminal ou conta no GitHub.
+[Passo a passo para Windows](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md).
+
+Para Linux/macOS ou Arduino IDE:
 Baixe o [ZIP pronto para instalar](https://github.com/Lciarallo/mosquito-wingbeat/raw/refs/heads/main/output/arduino/MosquitoSpecies.zip).
 **Extraia tudo** e entre na pasta `MosquitoSpecies`.
 Não é necessário baixar o dataset, executar o notebook ou treinar modelos.
@@ -34,18 +41,25 @@ No macOS, use a porta mostrada na listagem, por exemplo `/dev/cu.usbmodem...`.
 
 ## Windows
 
-Instale [Python 3.9 ou mais recente](https://www.python.org/downloads/), com o
-launcher `py` ou Python no PATH. Conecte a placa e dê dois cliques em
-**Instalar_no_Windows.cmd**, dentro da pasta extraída. Ele prepara, grava e abre
-o monitor. Se necessário, informe a porta num terminal:
+O **MosquitoWingbeat-Windows.exe** é o caminho recomendado para Windows 10/11
+Intel/AMD de 64 bits. Ele prepara as ferramentas na pasta do seu usuário,
+`%LOCALAPPDATA%\MosquitoWingbeat`, sem administrador. No primeiro uso, precisa de
+internet e cerca de 1 GB livre. Há instruções para avisos do Windows e problemas
+de cabo/porta no [guia ilustrado](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md).
+
+O `.exe` foi executado em Windows no GitHub Actions e compilou o firmware incluído.
+Isso não substitui um teste de gravação/microfone na placa física.
+
+O atalho **Instalar_no_Windows.cmd** no ZIP abre o aplicativo se ele estiver na
+mesma pasta, ou abre seu download no navegador. Com argumentos, é uma alternativa
+avançada que exige Python 3.9+ e launcher `py` ou Python no PATH. Por terminal:
 
 ```powershell
 py -3 install_arduino.py --port COM3 --monitor
 ```
 
-O instalador tem downloads para Windows x86/x64; para Windows ARM, use a IDE.
-O atalho Windows e o caminho macOS não foram executados em sistemas nativos neste
-projeto; a preparação e a compilação reais foram verificadas no Linux.
+O instalador por terminal tem downloads para Windows x86/x64; para Windows ARM,
+use a IDE. O caminho macOS não foi executado em sistema nativo neste projeto.
 
 ## Pela Arduino IDE: alternativa sem Python
 
@@ -66,7 +80,8 @@ Não precisa instalar bibliotecas de machine learning; `PDM.h` vem no core.
 | `bash flash_arduino.sh --monitor-only` | Abre o serial sem gravar novamente. |
 | `bash flash_arduino.sh --help` | Mostra as opções. |
 
-No Windows, substitua `bash flash_arduino.sh` por `py -3 install_arduino.py`.
+No uso avançado por terminal no Windows, substitua `bash flash_arduino.sh` por
+`py -3 install_arduino.py`. No aplicativo, use os botões e a aba **Detalhes**.
 Nenhuma placa detectada: confira o cabo de dados, feche o monitor da IDE e, se
 precisar, toque duas vezes rapidamente em **RESET**, liste e selecione a nova porta.
 Permissão no Linux: o erro informa o grupo da porta e o comando aplicável; depois

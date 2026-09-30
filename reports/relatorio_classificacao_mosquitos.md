@@ -2,7 +2,7 @@
 
 Relatório técnico de métodos, resultados, explicabilidade e comparação com a literatura
 
-Emitido em 29/09/2026. Execução analisada: 2026-09-30. Projeto: mosquito-wingbeat. Idioma: português.
+Emitido em 30/09/2026. Execução analisada: 2026-09-30. Projeto: mosquito-wingbeat. Idioma: português.
 
 ### Resumo executivo
 
@@ -287,7 +287,7 @@ A geração deste documento recalculou acurácia geral, acurácia balanceada e m
 
 Para reproduzir: instalar requirements.txt, seguir README.md e executar o notebook. Para gerar somente o relatório a partir dos resultados existentes: instalar requirements-report.txt e executar build_report.py. A máquina precisa de fontconfig e da fonte DejaVu Sans.
 
-Código de análise de referência: 7f9d15afc77c. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
+Código de análise de referência: 361411657240. Fonte dos resultados: results/. Os áudios completos ficam em data/raw/ e são baixados pelo notebook em um clone novo. Os PDFs originais dos artigos ficam somente na cópia local.
 
 ### Referências
 
@@ -439,6 +439,6 @@ O acerto também varia entre nomes emitidos: Aedes aegypti teve 21 corretas em 2
 | Confirmação e checkpoint | Warmup, discordância, janela incerta, reset e restauração de pesos/calibração passaram. |
 | Placa física | Sem upload, teste do microfone, latência total, distância, autonomia ou pico de RAM medidos. |
 
-Para instalar: baixe output/arduino/MosquitoSpecies.zip e extraia tudo. No Linux/macOS com Python 3.9+, execute bash flash_arduino.sh --monitor dentro da pasta MosquitoSpecies. O instalador prepara CLI 1.5.1/core 4.6.0, detecta, compila, grava e abre o serial. No Windows x86/x64 com Python, use Instalar_no_Windows.cmd. Sem Python, abra o .ino na Arduino IDE, instale Arduino Mbed OS Nano Boards 4.6.0, selecione Nano 33 BLE/porta e grave; monitor em 115200 baud. O ZIP inclui LEIA_PRIMEIRO.md e o manual. Não precisa do dataset ou de bibliotecas ML. --compile-only verifica sem gravar.
+Windows 10/11 x64: baixe MosquitoWingbeat-Windows.exe em [GitHub Releases](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest). Abra, conecte a Sense/Sense Rev2, clique em Buscar minha placa e em Instalar no Arduino. Os resultados aparecem na janela; dispensa Python, IDE e terminal. O executável abriu a interface e compilou o firmware em Windows no GitHub Actions, sem gravar placa física. No Linux/macOS com Python 3.9+, extraia MosquitoSpecies.zip e execute bash flash_arduino.sh --monitor. Alternativa: Arduino IDE/core 4.6.0, alvo Nano 33 BLE, serial 115200 baud. Primeira preparação: internet e cerca de 1 GB livre. WINDOWS.md e LEIA_PRIMEIRO.md trazem o passo a passo.
 
 A memória do compilador exclui pico de pilha/heap. Os guardas de silêncio/clipping e o tempo computacional ainda precisam de medição física. A melhoria prioritária continua sendo áudio anotado do próprio Arduino, ruídos locais, mais fontes das espécies raras e teste em dias/locais reservados. Auditorias: results/arduino_species/.

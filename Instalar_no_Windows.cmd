@@ -1,8 +1,16 @@
 @echo off
 setlocal
 chcp 65001 >nul
+if "%~1"=="" (
+    if exist "%~dp0MosquitoWingbeat-Windows.exe" (
+        start "" "%~dp0MosquitoWingbeat-Windows.exe"
+    ) else (
+        echo Baixando o aplicativo grafico: nao precisa instalar Python.
+        start "" "https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe"
+    )
+    exit /b 0
+)
 set "TASK_DEFAULT_OPTION="
-if "%~1"=="" set "TASK_DEFAULT_OPTION=--monitor"
 where py >nul 2>nul
 if not errorlevel 1 (
     py -3 "%~dp0install_arduino.py" %TASK_DEFAULT_OPTION% %*
@@ -13,8 +21,8 @@ if not errorlevel 1 (
     python "%~dp0install_arduino.py" %TASK_DEFAULT_OPTION% %*
     goto finished
 )
-echo Instale Python 3.9 ou mais recente de https://www.python.org/downloads/
-echo ou use a Arduino IDE conforme LEIA_PRIMEIRO.md / o manual.
+echo Para uso sem comandos, abra este atalho sem argumentos e baixe o aplicativo grafico.
+echo Para usar estas opcoes avancadas por terminal, instale Python 3.9 ou mais recente.
 pause
 exit /b 1
 :finished

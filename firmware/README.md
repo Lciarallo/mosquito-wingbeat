@@ -6,7 +6,9 @@ Para **identificar espécies no Nano 33 BLE Sense**, use a versão
 Baixe a [pasta completa em ZIP](../output/arduino/MosquitoSpecies.zip).
 Extraia e siga o [guia rápido](LEIA_PRIMEIRO.md): no Linux/macOS com Python,
 `bash flash_arduino.sh --monitor` prepara as ferramentas e grava. No Windows,
-use o atalho incluído ou a Arduino IDE. O pacote dispensa o dataset e o notebook.
+use o [aplicativo gráfico, sem Python ou IDE](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe)
+e siga o [passo a passo](https://github.com/Lciarallo/mosquito-wingbeat/blob/main/WINDOWS.md).
+O pacote dispensa o dataset e o notebook.
 
 O modelo exportado acertou 42,2% quando forçado a escolher em todos os trechos de
 teste. Com rejeição e confirmação, acertou 87,9% entre 231 identificações emitidas,
