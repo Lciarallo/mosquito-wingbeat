@@ -1,0 +1,96 @@
+{
+  "audit_version": "1.0",
+  "overall_status": "ZERO_LEAKAGE_VERIFIED",
+  "species_task_audit": {
+    "status": "PASS",
+    "total_windows": 24405,
+    "total_groups": 613,
+    "total_hashes": 24405,
+    "folds": [
+      0,
+      1,
+      2
+    ],
+    "fold_audits": [
+      {
+        "test_fold": 0,
+        "train_windows": 16258,
+        "test_windows": 8147,
+        "train_groups": 408,
+        "test_groups": 205,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      },
+      {
+        "test_fold": 1,
+        "train_windows": 16048,
+        "test_windows": 8357,
+        "train_groups": 409,
+        "test_groups": 204,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      },
+      {
+        "test_fold": 2,
+        "train_windows": 16504,
+        "test_windows": 7901,
+        "train_groups": 409,
+        "test_groups": 204,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      }
+    ]
+  },
+  "tinyml_task_audit": {
+    "status": "PASS",
+    "total_windows": 24405,
+    "total_groups": 613,
+    "total_hashes": 24405,
+    "folds": [
+      0,
+      1,
+      2
+    ],
+    "fold_audits": [
+      {
+        "test_fold": 0,
+        "train_windows": 16152,
+        "test_windows": 8253,
+        "train_groups": 408,
+        "test_groups": 205,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      },
+      {
+        "test_fold": 1,
+        "train_windows": 16255,
+        "test_windows": 8150,
+        "train_groups": 409,
+        "test_groups": 204,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      },
+      {
+        "test_fold": 2,
+        "train_windows": 16403,
+        "test_windows": 8002,
+        "train_groups": 409,
+        "test_groups": 204,
+        "group_overlap_count": 0,
+        "hash_overlap_count": 0,
+        "path_overlap_count": 0,
+        "passed": true
+      }
+    ]
+  }
+}

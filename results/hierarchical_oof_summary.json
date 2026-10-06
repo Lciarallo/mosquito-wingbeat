@@ -1,0 +1,72 @@
+{
+  "audit_status": "PASS",
+  "total_windows": 23877,
+  "total_groups": 569,
+  "classes_genera": [
+    "Aedes",
+    "Anopheles",
+    "Culex",
+    "Culiseta"
+  ],
+  "confusion_matrix_window": {
+    "Aedes": {
+      "Aedes": 1564,
+      "Anopheles": 425,
+      "Culex": 27,
+      "Culiseta": 11
+    },
+    "Anopheles": {
+      "Aedes": 541,
+      "Anopheles": 18080,
+      "Culex": 136,
+      "Culiseta": 24
+    },
+    "Culex": {
+      "Aedes": 18,
+      "Anopheles": 197,
+      "Culex": 1419,
+      "Culiseta": 40
+    },
+    "Culiseta": {
+      "Aedes": 12,
+      "Anopheles": 89,
+      "Culex": 36,
+      "Culiseta": 1258
+    }
+  },
+  "confusion_matrix_recording": {
+    "Aedes": {
+      "Aedes": 70,
+      "Anopheles": 15,
+      "Culex": 3,
+      "Culiseta": 2
+    },
+    "Anopheles": {
+      "Aedes": 4,
+      "Anopheles": 412,
+      "Culex": 1,
+      "Culiseta": 0
+    },
+    "Culex": {
+      "Aedes": 0,
+      "Anopheles": 1,
+      "Culex": 31,
+      "Culiseta": 0
+    },
+    "Culiseta": {
+      "Aedes": 0,
+      "Anopheles": 0,
+      "Culex": 0,
+      "Culiseta": 30
+    }
+  },
+  "best_model_summary": {
+    "name": "Ensemble Bayesiano Calibrado",
+    "genus_window_accuracy": "93.48%",
+    "genus_recording_accuracy": "95.43%",
+    "genus_recording_balanced_acc": "93.36%",
+    "species_window_accuracy": "52.49%",
+    "species_recording_accuracy": "74.34%",
+    "brazil_endemic_species_accuracy": "85.15%"
+  }
+}
