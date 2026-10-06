@@ -1,0 +1,21 @@
+{
+  "audio_file": "drive_audio.wav",
+  "duration_seconds": 106.24,
+  "emulate_arduino_mic": true,
+  "total_windows": 211,
+  "detected_windows": 13,
+  "active_ratio_pct": 6.16,
+  "mosquito_present": true,
+  "mean_presence_score": 0.3405,
+  "max_presence_score": 0.9213,
+  "primary_candidate_species": "Aedes sierrensis",
+  "primary_confirmed_species": null,
+  "candidate_distribution": {
+    "Aedes sierrensis": 6,
+    "Anopheles minimus": 3,
+    "Anopheles albimanus": 2,
+    "Culex quinquefasciatus": 1,
+    "Aedes aegypti": 1
+  },
+  "confirmed_distribution": {}
+}

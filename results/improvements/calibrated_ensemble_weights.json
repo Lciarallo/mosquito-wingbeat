@@ -1,0 +1,29 @@
+{
+  "fold_0": {
+    "F0_Likelihood": 7.099412529073194e-33,
+    "MFCC_LogReg": 0.0193017919289439,
+    "ExtraTrees_Base": 7.099412529073194e-33,
+    "SVM_RBF": 0.07410825477339988,
+    "ExtraTrees_Contrast": 7.099412529073194e-33,
+    "HistGB_Contrast": 0.6988536677107031,
+    "MLP_Contrast": 0.2077362855869531
+  },
+  "fold_1": {
+    "F0_Likelihood": 5.944573900584703e-33,
+    "MFCC_LogReg": 0.015255545950211566,
+    "ExtraTrees_Base": 1.7322929064145795e-20,
+    "SVM_RBF": 0.06686907205477281,
+    "ExtraTrees_Contrast": 5.944573900584703e-33,
+    "HistGB_Contrast": 0.7338941679052543,
+    "MLP_Contrast": 0.18398121408976142
+  },
+  "fold_2": {
+    "F0_Likelihood": 6.765230467270516e-33,
+    "MFCC_LogReg": 1.97143831411698e-20,
+    "ExtraTrees_Base": 7.18920537233499e-18,
+    "SVM_RBF": 0.06946602085490047,
+    "ExtraTrees_Contrast": 0.012984958267171179,
+    "HistGB_Contrast": 0.7136441587911067,
+    "MLP_Contrast": 0.20390486208682154
+  }
+}

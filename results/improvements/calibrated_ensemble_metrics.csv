@@ -1,0 +1,2 @@
+model,task,n_classes,n_windows,n_groups,accuracy,balanced_accuracy,macro_f1,recording_macro_recall
+Ensemble OOF Calibrado (Joint Balanced/Macro),species,20,23877,569,0.5248984378271977,0.6084314033008633,0.5651400298207865,0.8059694683624297
