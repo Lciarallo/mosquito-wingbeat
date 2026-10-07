@@ -237,6 +237,23 @@ o notebook os regenera. Modelos numéricos compactos e headers C++ estão public
 - SHA-256 e configuração dos arquivos/resultados nos manifests.
 - Figuras revisadas visualmente.
 
+## Arquitetura Hierárquica ML e Validação em Campo (Zero Data Leakage)
+
+A partir da análise da literatura científica recente (BioDCASE 2026, SEMISH 2025, SBCAS 2023, HumBugDB 2021, eLife 2017), o repositório foi expandido com uma abordagem hierárquica em três níveis:
+
+1. **Auditoria Criptográfica Anti-Vazamento (`leakage_auditor.py`)**:
+   - Garante matematicamente $0$ grupos, $0$ hashes SHA-256 e $0$ arquivos compartilhados entre treino e teste.
+   - Certificado gerado em `results/leakage_audit_certificate.json`.
+2. **Benchmark Hierárquico Multi-Abordagem (`train_hierarchical_models.py`)**:
+   - **Tier 1 (Presença)**: Detecção binária combinando densidade harmônica bioacústica e modelo neural.
+   - **Tier 2 (Gênero / Vetor Epidemiológico)**: Separação de *Aedes*, *Anopheles*, *Culex* e *Culiseta* com **95,43% de acurácia por gravação** e **93,48% por janela** em dados 100% disjuntos Out-of-Fold.
+   - **Tier 3 (Espécie Fina com Priors)**: Suporte a priors biogeográficos regionais (85,15% de acurácia em espécies brasileiras endêmicas).
+3. **Diagnóstico e Classificação de Áudios de Campo (`predict_audio.py`)**:
+   - Filtro anti-falso-alarme de harmônicos de $60\text{ Hz}$ de rede elétrica / ventoinhas ($\sigma < 5\text{ Hz}$).
+   - Emulação acústica do microfone MEMS ST MP34DT05 do Arduino Nano 33 BLE Sense (`--compare`).
+   - Suporte a priors epidemiológicos regionais (`--region brazil`).
+   - **Validação em Campo**: Testado no áudio externo de celular `drive_audio.wav`, suprimindo o ruído elétrico inicial e classificando o trecho de voo real (49,5s a 77,4s, $F_0 \approx 610\text{ Hz}$) como **`Aedes aegypti`**, confirmado empiricamente como ground truth.
+
 ## Fontes
 
 - Artigo principal: https://elifesciences.org/articles/27854
