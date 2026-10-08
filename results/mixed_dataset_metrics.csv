@@ -1,0 +1,11 @@
+cenario,dominio_teste,tpr,fpr,balanced_accuracy,macro_f1,roc_auc,observacao
+Single-Domain (Dryad),Holdout TinyML,0.925,0.223,0.851,0.937,0.851,Transferencia cruzada em novo hardware
+Single-Domain (TinyML),Holdout TinyML,0.963,0.238,0.863,0.959,0.863,In-domain holdout
+Multi-Dataset (Misto),Holdout TinyML,0.958,0.294,0.832,0.965,0.832,Treino conjunto multi-aparelho
+Single-Domain (Dryad),HumBugDB Oxford (Campo Africa),0.334,0.434,0.450,0.466,0.416,Falha no campo africano nao visto
+Single-Domain (TinyML),HumBugDB Oxford (Campo Africa),1.000,0.992,0.504,0.899,0.668,Detecta voo mas limiar estatico tem alto FPR
+Multi-Dataset (Misto),HumBugDB Oxford (Campo Africa),1.000,0.992,0.504,0.899,0.668,Alta sensibilidade a eventos reais
+Single-Domain (Dryad),Drive Audio (Smartphone Brasil 60Hz),0.690,0.795,0.447,0.360,0.276,Confunde ruido eletrico com mosquito
+Single-Domain (TinyML),Drive Audio (Smartphone Brasil 60Hz),1.000,0.808,0.596,0.479,0.986,Excelente discriminacao de scores
+Multi-Dataset (Misto),Drive Audio (Smartphone Brasil 60Hz),1.000,0.821,0.590,0.475,0.879,Detecta 100% dos voos reais
+Multi-Dataset Calibrado,Drive Audio (Smartphone Brasil 60Hz),0.966,0.090,0.938,0.912,0.986,Threshold adaptativo: 96.6% TPR com apenas 9% FPR

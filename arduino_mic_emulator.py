@@ -57,10 +57,26 @@ def _build_filters(fs: int = TARGET_SR):
 
 
 def load_audio_via_ffmpeg(audio_path: str | Path, target_sr: int = TARGET_SR) -> tuple[np.ndarray, int]:
-    """Decodifica qualquer formato de áudio (wav, mp3, m4a, ogg, flac) via ffmpeg."""
+    """Decodifica qualquer formato de áudio (wav, mp3, m4a, ogg, flac) via ffmpeg ou soundfile."""
     audio_path = Path(audio_path)
     if not audio_path.exists():
         raise FileNotFoundError(f"Arquivo de áudio não encontrado: {audio_path}")
+
+    # Tentativa direta com soundfile (evita dependência de ffmpeg para WAV/FLAC/OGG)
+    try:
+        import soundfile as sf
+        data, sr = sf.read(str(audio_path), dtype="float32")
+        if data.ndim > 1:
+            data = np.mean(data, axis=1)
+        if sr != target_sr:
+            gcd = np.gcd(sr, target_sr)
+            up = target_sr // gcd
+            down = sr // gcd
+            data = signal.resample_poly(data, up, down)
+            sr = target_sr
+        return data.astype(np.float32), sr
+    except Exception:
+        pass
 
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp_file:
         tmp_wav_path = tmp_file.name

@@ -18,3 +18,7 @@ literature/*
 tmp/
 /arduino-cli
 .arduino-tools/
+data/external_datasets/
+humbug_sample.wav
+humbug_sample.aac
+humbug_ann.txt
