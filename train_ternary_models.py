@@ -111,6 +111,38 @@ def load_and_filter_data():
     return df_clean, X_clean, y, stats
 
 
+def compute_sample_weights(df, y, gamma=0.75):
+    """
+    Renormalização de Classe após Amortecimento por Duração:
+      1. u_i = (clip(N_janelas(rec_i), 1, 60))^(-gamma)
+      2. S_c = sum_{i in c} u_i para c in {0, 1, 2}
+      3. w_i = u_i * (N_total / (3.0 * S_c[y_i]))
+    Garante rigorosamente que sum_{i in c} w_i = N_total / 3 para cada classe.
+    """
+    n_total = len(y)
+    rec_window_counts = df["group"].map(df["group"].value_counts()).to_numpy(dtype=np.float64)
+    clipped_windows = np.clip(rec_window_counts, 1.0, 60.0)
+    u = clipped_windows ** (-gamma)
+
+    # S_c = soma dos amortecimentos u_i por classe
+    s_c = np.zeros(3, dtype=np.float64)
+    for c in range(3):
+        s_c[c] = np.sum(u[y == c])
+
+    class_scales = n_total / (3.0 * s_c)
+    sample_weights = u * class_scales[y]
+
+    # Validação estrita de garantia de massa por classe
+    for c in range(3):
+        sum_c = float(np.sum(sample_weights[y == c]))
+        expected_c = n_total / 3.0
+        assert np.isclose(sum_c, expected_c, rtol=1e-5), (
+            f"Renormalização falhou na classe {c}: {sum_c} != {expected_c}"
+        )
+
+    return sample_weights.astype(np.float64)
+
+
 def compute_metrics(y_true, prob, name):
     pred = np.argmax(prob, axis=1)
     acc = float(accuracy_score(y_true, pred))
@@ -155,6 +187,9 @@ def main():
     print("=== CORPUS TERNÁRIO DEPOIS DO EXPURGO ===")
     print(json.dumps(data_stats, indent=2))
 
+    # Cálculo dos pesos compostos com renormalização de classe
+    sample_weights = compute_sample_weights(df, y, gamma=0.75)
+
     sgkf = StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=SEED)
 
     oof_lr = np.zeros((len(df), 3), dtype=np.float64)
@@ -169,6 +204,7 @@ def main():
         fold_assignments[val_idx] = fold
         X_train, y_train = X[train_idx], y[train_idx]
         X_val, y_val = X[val_idx], y[val_idx]
+        sw_train = sample_weights[train_idx]
 
         # 1. Logistic Regression com StandardScaler ajustado exclusivamente na dobra de treino
         scaler = StandardScaler()
@@ -176,12 +212,12 @@ def main():
         X_val_scaled = scaler.transform(X_val)
 
         lr = LogisticRegression(
-            class_weight="balanced",
+            class_weight=None,
             max_iter=2000,
             C=0.1,
             random_state=SEED
         )
-        lr.fit(X_train_scaled, y_train)
+        lr.fit(X_train_scaled, y_train, sample_weight=sw_train)
         oof_lr[val_idx] = lr.predict_proba(X_val_scaled)
 
         # 2. HistGradientBoostingClassifier multiclasse
@@ -191,13 +227,18 @@ def main():
             learning_rate=0.05,
             random_state=SEED
         )
-        hgb.fit(X_train, y_train)
+        hgb.fit(X_train, y_train, sample_weight=sw_train)
         oof_hgb[val_idx] = hgb.predict_proba(X_val)
 
         print(f"Fold {fold + 1}/5 concluído.")
 
     # 3. Soft Voting Ensemble
     oof_ens = (oof_lr + oof_hgb) / 2.0
+
+    # Normalização estrita para garantir soma exatamente 1.0 por linha
+    oof_lr = oof_lr / oof_lr.sum(axis=1, keepdims=True)
+    oof_hgb = oof_hgb / oof_hgb.sum(axis=1, keepdims=True)
+    oof_ens = oof_ens / oof_ens.sum(axis=1, keepdims=True)
 
     # Validação estrita de probabilidades
     for p, name in [(oof_lr, "LogisticRegression"), (oof_hgb, "HistGradientBoosting"), (oof_ens, "Ensemble")]:
@@ -215,7 +256,14 @@ def main():
             "n_splits": 5,
             "seed": SEED,
             "validation": "StratifiedGroupKFold",
-            "group_leakage": 0
+            "group_leakage": 0,
+            "sample_weight": {
+                "method": "duration_damping_with_class_renormalization",
+                "formula": "w_i = u_i * (N_total / (3 * S_c)), u_i = clip(N_janelas(rec_i), 1, 60)^(-0.75)",
+                "gamma": 0.75,
+                "clip_min": 1,
+                "clip_max": 60
+            }
         },
         "dataset_statistics": data_stats,
         "models": {
@@ -241,7 +289,6 @@ def main():
         }
     }
 
-    # Salvar artefatos
     (OUT_DIR / "metrics.json").write_text(json.dumps(metrics_bundle, indent=2, ensure_ascii=False))
     (OUT_DIR / "confusion_matrix.json").write_text(json.dumps(confusion_matrices, indent=2, ensure_ascii=False))
 
