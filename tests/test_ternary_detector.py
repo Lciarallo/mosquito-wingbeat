@@ -108,3 +108,18 @@ def test_saved_artifacts_consistency(artifacts):
         # FPR de ruído para Aedes deve coincidir com norm_cm[0, 2]
         expected_noise_fpr = float(norm_cm[0, 2])
         assert abs(model_metrics["noise_to_aedes_fpr"] - expected_noise_fpr) < 1e-4
+
+
+def test_event_level_metrics_consistency():
+    event_json_path = RESULTS_DIR / "event_level_metrics.json"
+    assert event_json_path.exists(), f"{event_json_path} não existe."
+    data = json.loads(event_json_path.read_text(encoding="utf-8"))
+
+    assert data["event_summary"]["total_recordings"] == 1504
+    for mname in ["logistic_regression_event", "hist_gradient_boosting_event", "ensemble_event", "balanced_blend_event"]:
+        m = data["models"][mname]
+        assert 0.0 <= m["accuracy"] <= 1.0
+        assert 0.0 <= m["balanced_accuracy"] <= 1.0
+        assert 0.0 <= m["aedes_recall"] <= 1.0
+        assert 0.0 <= m["noise_to_aedes_fpr"] <= 0.05
+
