@@ -1,0 +1,1298 @@
+{
+  "received_28_species_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.32142857142857145,
+          "high": 0.5357142857142857,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.29444444444444445,
+          "high": 0.5277777777777778,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.17482517482517482,
+          "high": 0.3726713237742649,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.32142857142857145,
+          "high": 0.5357142857142857,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.8214285714285714,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.888888888888889,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.7414529914529915,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8214285714285714,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.3571428571428571,
+          "high": 0.6428571428571428,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.42222222222222217,
+          "high": 0.6666666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.4116910866910866,
+          "high": 0.7644238836498898,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.3571428571428571,
+          "high": 0.6428571428571428,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 28,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "received_28_species_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.32142857142857145,
+          "high": 0.5357142857142857,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.29444444444444445,
+          "high": 0.5277777777777778,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.17612209481694777,
+          "high": 0.36374458874458815,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8571428571428571,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.34615384615384615,
+          "high": 0.5769230769230769,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.7142857142857143,
+          "high": 0.9285714285714286,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.711111111111111,
+          "high": 0.9055555555555556,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.5068027210884354,
+          "high": 0.7777777777777777,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8571428571428571,
+          "high": 0.9642857142857143,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.25,
+          "high": 0.5357142857142858,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.27222222222222225,
+          "high": 0.5111111111111111,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2202252112966399,
+          "high": 0.5102170978040339,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": -0.1071428571428572,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.31499537037037034,
+          "high": 0.6122211538461536,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 28,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "received_28_genus_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.6071428571428571,
+          "high": 0.8214285714285714,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.4576719576719577,
+          "high": 0.6666666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.418859649122807,
+          "high": 0.6161616161616162,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.6071428571428571,
+          "high": 0.8214285714285714,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.8214285714285714,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.8148148148148149,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.8212898212898213,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8214285714285714,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.1785714285714285,
+          "high": 0.2857142857142858,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.33333333333333326,
+          "high": 0.40476190476190477,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.3727477477477478,
+          "high": 0.4656720975375689,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.1785714285714285,
+          "high": 0.2857142857142858,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 28,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "received_28_genus_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.5357142857142857,
+          "high": 0.7857142857142857,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.41005291005291006,
+          "high": 0.6296296296296297,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2910602910602911,
+          "high": 0.5882352941176471,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8928571428571429,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.5769230769230769,
+          "high": 0.8148148148148148,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.7857142857142857,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.7777777777777777,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.59375,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8928571428571429,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8214285714285714,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.1785714285714285,
+          "high": 0.2857142857142858,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.33333333333333326,
+          "high": 0.40476190476190477,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2813620071684588,
+          "high": 0.44525512477718276,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.1785714285714286,
+          "high": 0.3076923076923077,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 28,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "paired_17_species_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.15,
+          "high": 0.45,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.1,
+          "high": 0.34920634920634913,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5882352941176471,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.15,
+          "high": 0.5,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.1142857142857143,
+          "high": 0.4166666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5882352941176471,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": -0.17647058823529413,
+          "high": 0.1764705882352941,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": -0.15000000000000002,
+          "high": 0.15000000000000002,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": -0.08889455782312927,
+          "high": 0.13393166357452063,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": -0.17647058823529413,
+          "high": 0.1764705882352941,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 17,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "paired_17_species_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.15,
+          "high": 0.45,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.1,
+          "high": 0.3446712018140589,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.6470588235294118,
+          "high": 0.9411764705882353,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.23076923076923078,
+          "high": 0.6153846153846154,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.17647058823529413,
+          "high": 0.5882352941176471,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.15,
+          "high": 0.5,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.12244897959183673,
+          "high": 0.41768707482993195,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.5882352941176471,
+          "high": 0.8823529411764706,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.23076923076923078,
+          "high": 0.7692307692307693,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": -0.17647058823529413,
+          "high": 0.1764705882352941,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": -0.15000000000000002,
+          "high": 0.15000000000000002,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": -0.06985544217687072,
+          "high": 0.14258580705009272,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": -0.2941176470588235,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": -0.15478896103896098,
+          "high": 0.30257211538461537,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 17,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "paired_17_genus_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.29411764705882354,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.3333333333333333,
+          "high": 0.5,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.125,
+          "high": 0.358974358974359,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.29411764705882354,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.4117647058823529,
+          "high": 0.7647058823529411,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.4166666666666667,
+          "high": 0.8333333333333334,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.25625,
+          "high": 0.7301587301587301,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.4117647058823529,
+          "high": 0.7647058823529411,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": -0.05882352941176472,
+          "high": 0.41176470588235287,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.0,
+          "high": 0.4166666666666667,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.0,
+          "high": 0.4482600732600732,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": -0.05882352941176472,
+          "high": 0.41176470588235287,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 17,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "paired_17_genus_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.29411764705882354,
+          "high": 0.5294117647058824,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.3333333333333333,
+          "high": 0.5,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.13157894736842105,
+          "high": 0.3485576923076923,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.6470588235294118,
+          "high": 0.9411764705882353,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.35714285714285715,
+          "high": 0.6428571428571429,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.35294117647058826,
+          "high": 0.7058823529411765,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.4166666666666667,
+          "high": 0.7916666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2388888888888889,
+          "high": 0.6082251082251082,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.5882352941176471,
+          "high": 0.9411764705882353,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.5,
+          "high": 0.9166666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": -0.05882352941176472,
+          "high": 0.2941176470588236,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": -0.04166666666666663,
+          "high": 0.37499999999999994,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": -0.015262644830659537,
+          "high": 0.3677045177045177,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": -0.17647058823529416,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.0,
+          "high": 0.41666666666666663,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 17,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "public_27_species_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.2962962962962963,
+          "high": 0.5185185185185185,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.275,
+          "high": 0.525,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.16324529811924768,
+          "high": 0.3650793650793651,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.2962962962962963,
+          "high": 0.5185185185185185,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.8518518518518519,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.9,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.7393162393162394,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8518518518518519,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.37037037037037035,
+          "high": 0.6666666666666667,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.42499999999999993,
+          "high": 0.675,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.41615735455021174,
+          "high": 0.7793956043956044,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.37037037037037035,
+          "high": 0.6666666666666667,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 27,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "public_27_species_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.2962962962962963,
+          "high": 0.5185185185185185,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.275,
+          "high": 0.525,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.16299019607843138,
+          "high": 0.351213023088023,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8518518518518519,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.32,
+          "high": 0.56,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.7037037037037037,
+          "high": 0.9259259259259259,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.7,
+          "high": 0.9,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.5,
+          "high": 0.7777777777777777,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8518518518518519,
+          "high": 0.9629629629629629,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8260869565217391,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.25925925925925924,
+          "high": 0.5555555555555556,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.27499999999999997,
+          "high": 0.5249999999999999,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.21873249299719888,
+          "high": 0.5196120010504199,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": -0.11111111111111105,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.31499999999999995,
+          "high": 0.625,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 27,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "public_27_genus_candidates": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.5925925925925926,
+          "high": 0.8148148148148148,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.45584045584045585,
+          "high": 0.6666666666666666,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.41904761904761906,
+          "high": 0.6129032258064516,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.5925925925925926,
+          "high": 0.8148148148148148,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.8148148148148148,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.8148148148148149,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.8180314309346568,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 1.0,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8148148148148148,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.18518518518518512,
+          "high": 0.2962962962962963,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.33333333333333326,
+          "high": 0.41025641025641024,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.3746031746031746,
+          "high": 0.47149475371246835,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.18518518518518512,
+          "high": 0.2962962962962963,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 27,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  },
+  "public_27_genus_emissions": {
+    "intervals": {
+      "previous": {
+        "accuracy": {
+          "low": 0.5185185185185185,
+          "high": 0.7777777777777778,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.40740740740740744,
+          "high": 0.6296296296296297,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2888636363636363,
+          "high": 0.5845588235294118,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8888888888888888,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.56,
+          "high": 0.8,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      },
+      "current": {
+        "accuracy": {
+          "low": 0.7777777777777778,
+          "high": 0.9629629629629629,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.7777777777777777,
+          "high": 0.9629629629629629,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.5916666666666667,
+          "high": 0.9680464778503994,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.8888888888888888,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.8148148148148148,
+          "high": 1.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "paired_deltas": {
+      "current": {
+        "accuracy": {
+          "low": 0.18518518518518512,
+          "high": 0.2962962962962963,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "balanced_accuracy": {
+          "low": 0.33333333333333326,
+          "high": 0.41025641025641024,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "macro_f1_strict_union": {
+          "low": 0.2829614604462475,
+          "high": 0.449508590581882,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "coverage": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        },
+        "accepted_accuracy": {
+          "low": 0.18518518518518512,
+          "high": 0.31999999999999995,
+          "valid_replicates": 2000,
+          "total_replicates": 2000
+        }
+      }
+    },
+    "reference_model": "previous",
+    "seed": 20261014,
+    "repetitions": 2000,
+    "unit": "recording/collision group",
+    "collision_blocks": 27,
+    "scheme": "paired collision-block percentile bootstrap, stratified by observed label-set of each block; union recomputed per replicate"
+  }
+}

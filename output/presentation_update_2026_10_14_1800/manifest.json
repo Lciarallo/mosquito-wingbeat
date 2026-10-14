@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-10-14T18:09:06.272396+00:00",
+  "source_pdf_sha256": "477c585930c0e52de9c15fbde29e18d221ec676ae168dbb102b97534f7569bb4",
+  "source": "user-provided PDF",
+  "files_sha256": {
+    "output/pdf/Apresentacao_Ensemble_v4_Auditoria_Atualizada_2026_10_14.pdf": "6d367178226d0128fe4fe82f8cf07f9318f80a6130372220f563dc7d8e3b3ce8",
+    "reports/atualizacao_apresentacao_ensemble_2026_10_14_1800.md": "a203eac2939cc6bd7ea7466d9346b56216ae43feb66c26f223d730b1b52a845e",
+    "output/presentation_update_2026_10_14_1800/build_presentation.py": "bdff55c8b2f50eec42cdf621da4dbf0bf8444fdbf806dfdf93d3857b47aaaafa",
+    "output/presentation_update_2026_10_14_1800/source_sha256.json": "afac25fbf3e6c52dd0868f54ae4338c05f7ed27a546f5f75406b0396929766c5",
+    "output/presentation_update_2026_10_14_1800/validation.json": "2ccf09f7d3dd33d2788ae0951dcf2e93a67c11498e2dfed9eaff7c851291addc",
+    "output/presentation_update_2026_10_14_1800/assets/p1_0.jpeg": "caa8aa929ca3cd81e9699f42fd775390028e69770db26cc6b8e6ef2dc3dfbadb",
+    "output/presentation_update_2026_10_14_1800/assets/p1_1.jpeg": "27ce86dae79a272009e32b170e625b7f403209247645d09f5ca7971b93cd182e",
+    "output/presentation_update_2026_10_14_1800/assets/p1_2.jpeg": "f9f9eda41b5ef3c36ee7454c71bf96646036cc982f634db6ab391f4599fb4523",
+    "output/presentation_update_2026_10_14_1800/assets/p1_3.jpeg": "4eb7c32b36a8da8460672da6574e113f23079e5d7c0d8ab9e092a98d0c97dea8",
+    "output/presentation_update_2026_10_14_1800/assets/p1_4.jpeg": "16870c86bdfc9cff690c3402fd1a6a4fab4464583e10f8070e979cb5fbdd482e",
+    "output/presentation_update_2026_10_14_1800/assets/p1_5.jpeg": "7db1dd2deb93d9399cd684066d6d567e5f00d01946f4358edb01bc4fc0c597bf",
+    "output/presentation_update_2026_10_14_1800/assets/p1_6.jpeg": "1ed384c8af80045f857cc0b0f2b058e8d3c23dd1542665db057baef9e6ba36ff",
+    "output/presentation_update_2026_10_14_1800/assets/p1_7.jpeg": "d0b36a8e02a13266b0689e35b74ba355c3e9469b61ab27752f45e057f4fd26e6",
+    "output/presentation_update_2026_10_14_1800/assets/frozen_comparison.png": "91625cec5c4369049e3cc70da9318697ea6a7625aa44de4501f7a36ddf9e4db1",
+    "output/presentation_update_2026_10_14_1800/assets/timeline.png": "a00e53dd40a905fb2d01eccf0436c6ad267487cd9bf66c78afddc5fa050a8478",
+    "results/species_nested_v4_2026_10_14/comparison_metrics.csv": "6000c318603beab4e4ad229af72d5daba67a1ad0215db99972ed0aa4427a3d17",
+    "reports/ensemble_especies_v4_2026_10_14.md": "12d6ebf27d2847d24ba6a6812bfe0cc30c736eae8a2d62525577d17585e9ff6d",
+    "reports/revisao_resultados_drive_2026_10_14_161041.md": "74d898941382d52d8bc932e38a6140298cefe9ae611f6628c3b0a023987c8091",
+    "results/drive_review_2026_10_14_161041/metrics.json": "952c3cda5a09021aab189ad03ed4b40de0081b7b9b75825fc0674582227e3d16",
+    "results/drive_review_2026_10_14_161041/bootstrap_intervals.json": "29b436deeaf2f157e03c1095dada0414d94ab0e6adff3d49be4db8d83124e737",
+    "results/drive_review_2026_10_14_161041/batch_inductivity_counterexample.json": "e8b4f9fc7b070286e787b275b34a49a47cdb4f2750032faaadb47327373f728f"
+  },
+  "scientific_snapshot": "2026-10-14T16:20:49Z",
+  "frozen_ensemble": "v4"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1_GH8G1o0BzASRxrMZuxETZ0_XrXoJ1SW",
+    "name": "__pycache__",
+    "trashed": true,
+    "parents": [
+      "10oUy0jGS8npQ0GbZo4UO4UMwGntTdS14"
+    ]
+  },
+  {
+    "id": "1V06LYZ7LnrS3q_CeFCvjfVpkhXj-z6dU",
+    "name": "__pycache__",
+    "trashed": true,
+    "parents": [
+      "1vITj5ALWSs2LaQTHvDT41Z0GIJdGl8YF"
+    ]
+  },
+  {
+    "id": "1Ns2OckLzKxLpatgbNE8AP18mnlMVDaak",
+    "name": ".pytest_cache",
+    "trashed": true,
+    "parents": [
+      "10oUy0jGS8npQ0GbZo4UO4UMwGntTdS14"
+    ]
+  },
+  {
+    "id": "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS",
+    "name": ".venv",
+    "trashed": true,
+    "parents": [
+      "10oUy0jGS8npQ0GbZo4UO4UMwGntTdS14"
+    ]
+  }
+]
