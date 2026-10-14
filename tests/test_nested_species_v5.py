@@ -61,12 +61,22 @@ def test_log_floor_ratio_is_finite_and_signed():
 def test_cepstrum_is_scale_normalized_and_retains_shape():
     rng = np.random.default_rng(8)
     p = np.exp(rng.normal(size=(801, 91)))
+    p[[49, 99, 149, 199, 249], :] *= 100.0  # harmonic-like structure, 20 dB
     floor, _ = local_noise_floor(p, 10)
     a = centred_cepstrum(p, floor)
     b = centred_cepstrum(p * 100, floor * 100)
     for x, y in zip(a, b):
         np.testing.assert_allclose(x, y, rtol=1e-11, atol=1e-11)
     assert a[0][0] == 0 and np.isclose(np.sqrt(np.mean(a[0][1:] ** 2)), 2.5, atol=1e-5)
+
+
+def test_cepstrum_floor_does_not_amplify_noise_only_windows():
+    rng = np.random.default_rng(8)
+    p = np.exp(rng.normal(size=(801, 91)))
+    floor, _ = local_noise_floor(p, 10)
+    means = centred_cepstrum(p, floor)[0]
+    rms = float(np.sqrt(np.mean(means[1:] ** 2)))
+    assert means[0] == 0 and 0 < rms < 1.0
 
 
 def test_frontend_is_bit_exact_inductive_and_finite_on_silence():

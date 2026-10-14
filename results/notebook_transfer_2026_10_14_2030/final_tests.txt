@@ -1,0 +1,44 @@
+........................................................................ [ 30%]
+........................................................................ [ 61%]
+........F............................................................... [ 92%]
+.................                                                        [100%]
+=================================== FAILURES ===================================
+_____________ test_cepstrum_is_scale_normalized_and_retains_shape ______________
+
+    def test_cepstrum_is_scale_normalized_and_retains_shape():
+        rng = np.random.default_rng(8)
+        p = np.exp(rng.normal(size=(801, 91)))
+        floor, _ = local_noise_floor(p, 10)
+        a = centred_cepstrum(p, floor)
+        b = centred_cepstrum(p * 100, floor * 100)
+        for x, y in zip(a, b):
+            np.testing.assert_allclose(x, y, rtol=1e-11, atol=1e-11)
+>       assert a[0][0] == 0 and np.isclose(np.sqrt(np.mean(a[0][1:] ** 2)), 2.5, atol=1e-5)
+E       AssertionError: assert (np.float64(0.0) == 0 and np.False_)
+E        +  where np.False_ = <function isclose at 0x7fd62b739470>(np.float64(0.2895001905324099), 2.5, atol=1e-05)
+E        +    where <function isclose at 0x7fd62b739470> = np.isclose
+E        +    and   np.float64(0.2895001905324099) = <ufunc 'sqrt'>(np.float64(0.08381036031830164))
+E        +      where <ufunc 'sqrt'> = np.sqrt
+E        +      and   np.float64(0.08381036031830164) = <function mean at 0x7fd62b7268f0>((array([-0.04763368, -0.0128026 ,  0.56676818,  0.2522713 , -0.42106866,\n       -0.04393659,  0.20228878,  0.44435051, -0.27779018, -0.16784621,\n        0.30038108,  0.072516  ]) ** 2))
+E        +        where <function mean at 0x7fd62b7268f0> = np.mean
+
+tests/test_nested_species_v5.py:69: AssertionError
+=============================== warnings summary ===============================
+tests/test_nested_species.py: 38 warnings
+tests/test_nested_species_v2.py: 76 warnings
+tests/test_nested_species_v3.py: 9092 warnings
+tests/test_nested_species_v4.py: 36064 warnings
+tests/test_notebook_transfer.py: 10660 warnings
+tests/test_reproduction.py: 4002 warnings
+  /home/lciarallo/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+  As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+    array.shape = self.shape
+
+tests/test_nested_species_v2.py::test_completed_v2_artifacts_and_scalers_respect_fit_only
+  /home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/tests/test_nested_species_v2.py:130: DtypeWarning: Columns (0: fold) have mixed types. Specify dtype option on import or set low_memory=False.
+    parts=pd.read_csv(OUT/'partitions.csv')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_nested_species_v5.py::test_cepstrum_is_scale_normalized_and_retains_shape
+1 failed, 232 passed, 59933 warnings in 41.54s

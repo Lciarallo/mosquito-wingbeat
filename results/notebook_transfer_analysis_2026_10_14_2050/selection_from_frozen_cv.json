@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-14T20:54:01.263424+00:00",
+  "choices": [
+    {
+      "task": "binary",
+      "fold": "0",
+      "variant": "v4_308",
+      "family": "lr",
+      "cv_macro_f1": 0.8236278869803945
+    },
+    {
+      "task": "binary",
+      "fold": "1",
+      "variant": "notebook61",
+      "family": "knn",
+      "cv_macro_f1": 0.8003830183276058
+    },
+    {
+      "task": "binary",
+      "fold": "2",
+      "variant": "notebook61",
+      "family": "knn",
+      "cv_macro_f1": 0.8232239349309912
+    },
+    {
+      "task": "species",
+      "fold": "0",
+      "variant": "v4_lfcc334",
+      "family": "rf",
+      "cv_macro_f1": 0.6275435350168378
+    },
+    {
+      "task": "species",
+      "fold": "1",
+      "variant": "v4_lfcc334",
+      "family": "rf",
+      "cv_macro_f1": 0.5607434142225164
+    },
+    {
+      "task": "species",
+      "fold": "2",
+      "variant": "v4_lfcc334",
+      "family": "rf",
+      "cv_macro_f1": 0.6165846930199468
+    }
+  ],
+  "outer_metrics_used": false,
+  "source_calibration_sha256": "af39a67f8d668ea5ab9dc0e9b648d7e7ccbb7e69fba84e4872c0a12ac2806692"
+}

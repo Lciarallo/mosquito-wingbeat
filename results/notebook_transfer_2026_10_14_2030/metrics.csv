@@ -1,0 +1,73 @@
+n,correct,accuracy,balanced_accuracy,macro_f1_support_only,macro_f1_strict_union,macro_f1_support_minus_strict,predicted_taxa_outside_support,coverage,emitted,accepted_accuracy,correct_emissions_over_all,scope,task,variant,family,aegypti_n,aegypti_correct,selected_from_fit_cv,detection_sensitivity,detection_specificity,detection_precision,mosquito_only_accuracy
+613,584,0.9526916802610114,0.9513912310286678,0.7710713043926185,0.7710713043926185,0.0,[],0.9918433931484503,608,0.9555921052631579,0.9477977161500816,dryad,binary,notebook61,lr,20,19,False,0.85,0.96964586846543,0.4857142857142857,0.9578207381370826
+613,586,0.9559543230016313,0.8081365935919056,0.7337740674612749,0.7337740674612749,0.0,[],1.0,613,0.9559543230016313,0.9559543230016313,dryad,binary,notebook61,tree,20,13,False,0.65,0.9662731871838112,0.3939393939393939,0.9525483304042179
+613,601,0.9804241435562806,0.7,0.7807059384688767,0.7807059384688767,0.0,[],0.9804241435562806,601,0.9833610648918469,0.964110929853181,dryad,binary,notebook61,rf,20,8,False,0.4,1.0,1.0,0.9789103690685413
+613,604,0.9853181076672104,0.8474704890387859,0.8745936853590344,0.8745936853590344,0.0,[],0.9787928221859706,600,0.9883333333333333,0.967373572593801,dryad,binary,notebook61,knn,20,14,True,0.7,0.9949409780775716,0.8235294117647058,0.984182776801406
+613,593,0.967373572593801,0.9831365935919056,0.824757004002287,0.824757004002287,0.0,[],0.99836867862969,612,0.9673202614379085,0.965742251223491,dryad,binary,v4_308,lr,20,20,False,0.5,0.9881956155143339,0.5882352941176471,0.9648506151142355
+613,593,0.967373572593801,0.9831365935919056,0.824757004002287,0.824757004002287,0.0,[],0.99836867862969,612,0.9673202614379085,0.965742251223491,dryad,binary,v4_lfcc334,lr,20,20,False,0.55,0.9881956155143339,0.6111111111111112,0.9648506151142355
+569,313,0.5500878734622144,0.6695613921099403,0.6357646920566846,0.6357646920566846,0.0,[],0.0,0,,0.0,dryad,species,notebook61,lr,20,13,False,,,,
+569,303,0.5325131810193322,0.5670708600699329,0.5871003126723864,0.5871003126723864,0.0,[],0.27240773286467485,155,0.7612903225806451,0.20738137082601055,dryad,species,notebook61,rf,20,16,False,,,,
+569,322,0.5659050966608085,0.6151016640671024,0.5817051342358176,0.5817051342358176,0.0,[],0.0,0,,0.0,dryad,species,v4_308,lr,20,17,False,,,,
+569,357,0.6274165202108963,0.5865657409405142,0.6066526687979016,0.6066526687979016,0.0,[],0.4130052724077329,235,0.8680851063829788,0.3585237258347979,dryad,species,v4_308,rf,20,18,False,,,,
+569,318,0.5588752196836555,0.6070722759833664,0.575831973981519,0.575831973981519,0.0,[],0.0,0,,0.0,dryad,species,v4_lfcc334,lr,20,18,False,,,,
+569,371,0.6520210896309314,0.6235842976444255,0.6334545253550106,0.6334545253550106,0.0,[],0.3989455184534271,227,0.8722466960352423,0.34797891036906853,dryad,species,v4_lfcc334,rf,20,20,True,,,,
+17,11,0.6470588235294118,0.6826923076923077,0.6136363636363636,0.6136363636363636,0.0,[],1.0,17,0.6470588235294118,0.6470588235294118,external17,binary,notebook61,lr,4,3,False,0.75,0.6153846153846154,0.375,0.6470588235294118
+17,13,0.7647058823529411,0.5,0.43333333333333335,0.43333333333333335,0.0,[],1.0,17,0.7647058823529411,0.7647058823529411,external17,binary,notebook61,tree,4,0,False,0.0,1.0,,0.7647058823529411
+17,13,0.7647058823529411,0.5,0.43333333333333335,0.43333333333333335,0.0,[],1.0,17,0.7647058823529411,0.7647058823529411,external17,binary,notebook61,rf,4,0,False,0.0,1.0,,0.7647058823529411
+17,12,0.7058823529411765,0.46153846153846156,0.41379310344827586,0.41379310344827586,0.0,[],1.0,17,0.7058823529411765,0.7058823529411765,external17,binary,notebook61,knn,4,0,True,0.0,1.0,,0.7058823529411765
+17,11,0.6470588235294118,0.4230769230769231,0.39285714285714285,0.39285714285714285,0.0,[],1.0,17,0.6470588235294118,0.6470588235294118,external17,binary,v4_308,lr,4,0,False,0.0,0.8461538461538461,0.0,0.6470588235294118
+17,11,0.6470588235294118,0.4230769230769231,0.39285714285714285,0.39285714285714285,0.0,[],1.0,17,0.6470588235294118,0.6470588235294118,external17,binary,v4_lfcc334,lr,4,0,False,0.0,0.8461538461538461,0.0,0.6470588235294118
+17,2,0.11764705882352941,0.1,0.13714285714285715,0.0761904761904762,0.06095238095238095,"[np.str_('Anopheles albimanus'), np.str_('Anopheles arabiensis'), np.str_('Anopheles freeborni'), np.str_('Anopheles gambiae')]",0.7058823529411765,12,0.08333333333333333,0.058823529411764705,external17,species,notebook61,lr,4,0,False,,,,
+17,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles arabiensis'), np.str_('Anopheles farauti'), np.str_('Anopheles gambiae'), np.str_('Anopheles quadriannulatus'), np.str_('Culex tarsalis')]",0.058823529411764705,1,0.0,0.0,external17,species,notebook61,rf,4,0,False,,,,
+17,1,0.058823529411764705,0.05,0.04444444444444444,0.02222222222222222,0.02222222222222222,"[np.str_('Aedes sierrensis'), np.str_('Anopheles albimanus'), np.str_('Anopheles dirus'), np.str_('Anopheles farauti'), np.str_('Anopheles merus')]",0.0,0,,0.0,external17,species,v4_308,lr,4,0,False,,,,
+17,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Aedes sierrensis'), np.str_('Anopheles dirus'), np.str_('Anopheles gambiae'), np.str_('Culiseta incidens')]",0.5882352941176471,10,0.0,0.0,external17,species,v4_308,rf,4,0,False,,,,
+17,2,0.11764705882352941,0.1,0.11111111111111112,0.050505050505050504,0.060606060606060615,"[np.str_('Aedes sierrensis'), np.str_('Anopheles albimanus'), np.str_('Anopheles arabiensis'), np.str_('Anopheles dirus'), np.str_('Anopheles farauti'), np.str_('Anopheles merus')]",0.0,0,,0.0,external17,species,v4_lfcc334,lr,4,0,False,,,,
+17,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Aedes sierrensis'), np.str_('Anopheles albimanus'), np.str_('Anopheles gambiae'), np.str_('Culiseta incidens')]",0.29411764705882354,5,0.0,0.0,external17,species,v4_lfcc334,rf,4,0,True,,,,
+2,1,0.5,0.5,0.6666666666666666,0.3333333333333333,0.3333333333333333,[np.str_('other_species_or_noise')],1.0,2,0.5,0.5,fresh2,binary,notebook61,lr,2,1,False,0.0,,,0.5
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,fresh2,binary,notebook61,tree,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,fresh2,binary,notebook61,rf,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,fresh2,binary,notebook61,knn,2,0,True,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,fresh2,binary,v4_308,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,fresh2,binary,v4_lfcc334,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles gambiae'), np.str_('Anopheles stephensi')]",0.5,1,0.0,0.0,fresh2,species,notebook61,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles albimanus'), np.str_('Anopheles gambiae')]",0.0,0,,0.0,fresh2,species,notebook61,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles dirus'), np.str_('Anopheles merus')]",0.0,0,,0.0,fresh2,species,v4_308,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles gambiae')],0.0,0,,0.0,fresh2,species,v4_308,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles dirus'), np.str_('Anopheles merus')]",0.0,0,,0.0,fresh2,species,v4_lfcc334,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles gambiae')],0.0,0,,0.0,fresh2,species,v4_lfcc334,rf,2,0,True,,,,
+2,1,0.5,0.5,0.6666666666666666,0.3333333333333333,0.3333333333333333,[np.str_('other_species_or_noise')],1.0,2,0.5,0.5,postfreeze2,binary,notebook61,lr,2,1,False,0.0,,,0.5
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze2,binary,notebook61,tree,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze2,binary,notebook61,rf,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze2,binary,notebook61,knn,2,0,True,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze2,binary,v4_308,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze2,binary,v4_lfcc334,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles gambiae'), np.str_('Anopheles minimus')]",0.5,1,0.0,0.0,postfreeze2,species,notebook61,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles gambiae')],0.0,0,,0.0,postfreeze2,species,notebook61,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles farauti'), np.str_('Culex pipiens')]",0.0,0,,0.0,postfreeze2,species,v4_308,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Aedes sierrensis')],0.5,1,0.0,0.0,postfreeze2,species,v4_308,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles farauti'), np.str_('Culex pipiens')]",0.0,0,,0.0,postfreeze2,species,v4_lfcc334,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Aedes sierrensis'), np.str_('Anopheles gambiae')]",0.0,0,,0.0,postfreeze2,species,v4_lfcc334,rf,2,0,True,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,notebook61,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,notebook61,tree,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,notebook61,rf,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,notebook61,knn,2,0,True,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,v4_308,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,2,0.0,0.0,postfreeze_v4_2,binary,v4_lfcc334,lr,2,0,False,0.0,,,0.0
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles minimus'), np.str_('Anopheles stephensi')]",0.0,0,,0.0,postfreeze_v4_2,species,notebook61,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Aedes sierrensis'), np.str_('Anopheles gambiae')]",0.0,0,,0.0,postfreeze_v4_2,species,notebook61,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles dirus')],0.0,0,,0.0,postfreeze_v4_2,species,v4_308,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Aedes sierrensis')],0.0,0,,0.0,postfreeze_v4_2,species,v4_308,rf,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles dirus')],0.0,0,,0.0,postfreeze_v4_2,species,v4_lfcc334,lr,2,0,False,,,,
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Aedes sierrensis')],0.0,0,,0.0,postfreeze_v4_2,species,v4_lfcc334,rf,2,0,True,,,,
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,notebook61,lr,1,0,False,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,notebook61,tree,1,0,False,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,notebook61,rf,1,0,False,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,notebook61,knn,1,0,True,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,v4_308,lr,1,0,False,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('other_species_or_noise')],1.0,1,0.0,0.0,drive,binary,v4_lfcc334,lr,1,0,False,0.0,,,0.0
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles albimanus')],1.0,1,0.0,0.0,drive,species,notebook61,lr,1,0,False,,,,
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Aedes sierrensis')],0.0,0,,0.0,drive,species,notebook61,rf,1,0,False,,,,
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Aedes albopictus')],0.0,0,,0.0,drive,species,v4_308,lr,1,0,False,,,,
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles gambiae')],0.0,0,,0.0,drive,species,v4_308,rf,1,0,False,,,,
+1,1,1.0,1.0,1.0,1.0,0.0,[],0.0,0,,0.0,drive,species,v4_lfcc334,lr,1,1,False,,,,
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles gambiae')],0.0,0,,0.0,drive,species,v4_lfcc334,rf,1,0,True,,,,

@@ -1,0 +1,37 @@
+n,correct,accuracy,balanced_accuracy,macro_f1_support_only,macro_f1_strict_union,macro_f1_support_minus_strict,predicted_taxa_outside_support,coverage,emitted,accepted_accuracy,correct_emissions_over_all,scope,variant,family,task,separate_genus_rejection_calibrated
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,1,0.0,0.0,drive,notebook61,lr,genus_posthoc,False
+1,1,1.0,1.0,1.0,1.0,0.0,[],1.0,1,1.0,1.0,drive,notebook61,rf,genus_posthoc,False
+1,1,1.0,1.0,1.0,1.0,0.0,[],1.0,1,1.0,1.0,drive,v4_308,lr,genus_posthoc,False
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,1,0.0,0.0,drive,v4_308,rf,genus_posthoc,False
+1,1,1.0,1.0,1.0,1.0,0.0,[],1.0,1,1.0,1.0,drive,v4_lfcc334,lr,genus_posthoc,False
+1,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,1,0.0,0.0,drive,v4_lfcc334,rf,genus_posthoc,False
+569,511,0.8980667838312829,0.8328799460431654,0.8308815485663543,0.8308815485663543,0.0,[],1.0,569,0.8980667838312829,0.8980667838312829,dryad,notebook61,lr,genus_posthoc,False
+569,527,0.9261862917398945,0.8986485811350919,0.8813241180339324,0.8813241180339324,0.0,[],1.0,569,0.9261862917398945,0.9261862917398945,dryad,notebook61,rf,genus_posthoc,False
+569,509,0.8945518453427065,0.8209469924060752,0.8383477054888442,0.8383477054888442,0.0,[],1.0,569,0.8945518453427065,0.8945518453427065,dryad,v4_308,lr,genus_posthoc,False
+569,536,0.9420035149384886,0.902386840527578,0.905765241456031,0.905765241456031,0.0,[],1.0,569,0.9420035149384886,0.9420035149384886,dryad,v4_308,rf,genus_posthoc,False
+569,505,0.8875219683655536,0.8041229516386891,0.8240910194392099,0.8240910194392099,0.0,[],1.0,569,0.8875219683655536,0.8875219683655536,dryad,v4_lfcc334,lr,genus_posthoc,False
+569,541,0.9507908611599297,0.9018497701838529,0.9011516743355864,0.9011516743355864,0.0,[],1.0,569,0.9507908611599297,0.9507908611599297,dryad,v4_lfcc334,rf,genus_posthoc,False
+17,6,0.35294117647058826,0.25,0.19047619047619047,0.19047619047619047,0.0,[],1.0,17,0.35294117647058826,0.35294117647058826,external17,notebook61,lr,genus_posthoc,False
+17,5,0.29411764705882354,0.20833333333333334,0.19607843137254902,0.19607843137254902,0.0,[],1.0,17,0.29411764705882354,0.29411764705882354,external17,notebook61,rf,genus_posthoc,False
+17,6,0.35294117647058826,0.25,0.19999999999999998,0.19999999999999998,0.0,[],1.0,17,0.35294117647058826,0.35294117647058826,external17,v4_308,lr,genus_posthoc,False
+17,5,0.29411764705882354,0.2333333333333333,0.21794871794871795,0.16346153846153846,0.05448717948717949,[np.str_('Culiseta')],1.0,17,0.29411764705882354,0.29411764705882354,external17,v4_308,rf,genus_posthoc,False
+17,7,0.4117647058823529,0.2916666666666667,0.21212121212121213,0.21212121212121213,0.0,[],1.0,17,0.4117647058823529,0.4117647058823529,external17,v4_lfcc334,lr,genus_posthoc,False
+17,5,0.29411764705882354,0.25833333333333336,0.23174603174603173,0.1738095238095238,0.057936507936507925,[np.str_('Culiseta')],1.0,17,0.29411764705882354,0.29411764705882354,external17,v4_lfcc334,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,notebook61,lr,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,notebook61,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,v4_308,lr,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,v4_308,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,v4_lfcc334,lr,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,fresh2,v4_lfcc334,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,postfreeze2,notebook61,lr,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,postfreeze2,notebook61,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles'), np.str_('Culex')]",1.0,2,0.0,0.0,postfreeze2,v4_308,lr,genus_posthoc,False
+2,2,1.0,1.0,1.0,1.0,0.0,[],1.0,2,1.0,1.0,postfreeze2,v4_308,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,"[np.str_('Anopheles'), np.str_('Culex')]",1.0,2,0.0,0.0,postfreeze2,v4_lfcc334,lr,genus_posthoc,False
+2,1,0.5,0.5,0.6666666666666666,0.3333333333333333,0.3333333333333333,[np.str_('Anopheles')],1.0,2,0.5,0.5,postfreeze2,v4_lfcc334,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,postfreeze_v4_2,notebook61,lr,genus_posthoc,False
+2,1,0.5,0.5,0.6666666666666666,0.3333333333333333,0.3333333333333333,[np.str_('Anopheles')],1.0,2,0.5,0.5,postfreeze_v4_2,notebook61,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,postfreeze_v4_2,v4_308,lr,genus_posthoc,False
+2,2,1.0,1.0,1.0,1.0,0.0,[],1.0,2,1.0,1.0,postfreeze_v4_2,v4_308,rf,genus_posthoc,False
+2,0,0.0,0.0,0.0,0.0,0.0,[np.str_('Anopheles')],1.0,2,0.0,0.0,postfreeze_v4_2,v4_lfcc334,lr,genus_posthoc,False
+2,2,1.0,1.0,1.0,1.0,0.0,[],1.0,2,1.0,1.0,postfreeze_v4_2,v4_lfcc334,rf,genus_posthoc,False

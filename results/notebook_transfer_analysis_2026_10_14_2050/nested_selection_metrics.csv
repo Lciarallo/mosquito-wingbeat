@@ -1,0 +1,3 @@
+n,correct,accuracy,balanced_accuracy,macro_f1_support_only,macro_f1_strict_union,macro_f1_support_minus_strict,predicted_taxa_outside_support,coverage,emitted,accepted_accuracy,correct_emissions_over_all,scope,task,variant,family
+613,600,0.9787928221859706,0.8682546374367622,0.8433427038078201,0.8433427038078201,0.0,[],0.9771615008156607,599,0.9816360601001669,0.9592169657422512,dryad,binary,nested_fit_cv_choice,per_fold
+569,371,0.6520210896309314,0.6235842976444255,0.6334545253550106,0.6334545253550106,0.0,[],0.3989455184534271,227,0.8722466960352423,0.34797891036906853,dryad,species,nested_fit_cv_choice,per_fold

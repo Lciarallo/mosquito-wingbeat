@@ -1,0 +1,21 @@
+........................................................................ [ 30%]
+........................................................................ [ 61%]
+........................................................................ [ 92%]
+..................                                                       [100%]
+=============================== warnings summary ===============================
+tests/test_nested_species.py: 38 warnings
+tests/test_nested_species_v2.py: 76 warnings
+tests/test_nested_species_v3.py: 9092 warnings
+tests/test_nested_species_v4.py: 36064 warnings
+tests/test_notebook_transfer.py: 10660 warnings
+tests/test_reproduction.py: 4002 warnings
+  /home/lciarallo/.local/lib/python3.14/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+  As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+    array.shape = self.shape
+
+tests/test_nested_species_v2.py::test_completed_v2_artifacts_and_scalers_respect_fit_only
+  /home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/tests/test_nested_species_v2.py:130: DtypeWarning: Columns (0: fold) have mixed types. Specify dtype option on import or set low_memory=False.
+    parts=pd.read_csv(OUT/'partitions.csv')
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+234 passed, 59933 warnings in 39.74s
