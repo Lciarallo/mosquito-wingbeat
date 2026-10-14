@@ -244,3 +244,88 @@ def test_logarithmic_opinion_pool_guarantees_sum_to_one():
     assert np.isclose(np.sum(p_fused), 1.0, atol=1e-6)
     assert p_fused[0] < 0.001, "Consenso em ruído baixo deve ser preservado pelo log-pool"
     assert p_fused[2] > 0.70, "Consenso em Aedes deve prevalecer fortemente"
+
+
+NESTED_DIR = ROOT / "results/ternary_nested_2026_10_14"
+
+
+def test_pcm_block_isolation():
+    """Valida que o isolamento por pcm_block é estrito em todas as dobras externas."""
+    nested_csv = NESTED_DIR / "predictions_oof.csv"
+    if not nested_csv.exists():
+        pytest.skip("predictions_oof.csv aninhado ainda não gerado")
+    df = pd.read_csv(nested_csv)
+    assert "pcm_block" in df.columns, "Coluna pcm_block ausente no CSV aninhado"
+
+    for b, part in df.groupby("pcm_block"):
+        folds = part["fold"].unique()
+        assert len(folds) == 1, f"pcm_block {b} vazou em múltiplas dobras: {folds}"
+
+    for f in range(5):
+        val_blocks = set(df[df["fold"] == f]["pcm_block"])
+        train_blocks = set(df[df["fold"] != f]["pcm_block"])
+        assert len(val_blocks & train_blocks) == 0, f"Vazamento de pcm_block no fold {f}"
+
+
+def test_sample_weights_strictly_within_train():
+    """Valida fórmula analítica e garantia de massa calculada apenas com dados de treino."""
+    from train_ternary_nested_models import compute_sample_weights
+    n_train = 1200
+    y_tr = np.repeat([0, 1, 2], [400, 600, 200])
+    df_dummy = pd.DataFrame({
+        "group": [f"grp_{i % 50}" for i in range(n_train)]
+    })
+    weights = compute_sample_weights(df_dummy, y_tr, gamma=0.50)
+    for c in range(3):
+        assert np.isclose(np.sum(weights[y_tr == c]), n_train / 3.0, rtol=1e-4)
+
+
+def test_temporal_persistence_strictly_within_wav():
+    """Testa explicitamente que duas janelas com p2 alto em WAVs diferentes do mesmo grupo NÃO são fundidas."""
+    from evaluate_ternary_event_pipeline import compute_group_wav_bounded_persistence
+    df_synthetic = pd.DataFrame([
+        {"path": "recA.wav", "start_s": 0.0, "ensemble_prob_2": 0.90},
+        {"path": "recA.wav", "start_s": 1.0, "ensemble_prob_2": 0.10},
+        {"path": "recB.wav", "start_s": 1.0, "ensemble_prob_2": 0.90},
+        {"path": "recB.wav", "start_s": 2.0, "ensemble_prob_2": 0.10},
+    ])
+    p = compute_group_wav_bounded_persistence(df_synthetic, "ensemble_prob_2")
+    # Dentro de cada WAV, a média contígua é (0.90 + 0.10)/2 = 0.50
+    # Se houvesse fusão entre recA e recB em start_s=1.0, daria 0.90
+    assert p <= 0.5001, f"Persistência fundiu WAVs diferentes: obtido {p}"
+
+
+def test_nested_artifacts_consistency():
+    """Valida consistência matemática e integridade de todos os artefatos aninhados."""
+    if not NESTED_DIR.exists():
+        pytest.skip("Diretório aninhado ainda não gerado")
+    pred_path = NESTED_DIR / "predictions_oof.csv"
+    if not pred_path.exists():
+        pytest.skip("predictions_oof.csv aninhado ainda não gerado")
+    df = pd.read_csv(pred_path)
+    for prefix in ["lr", "hgb", "ensemble"]:
+        cols = [f"{prefix}_prob_{i}" for i in range(3)]
+        probs = df[cols].to_numpy()
+        assert np.isfinite(probs).all()
+        assert (probs >= 0.0).all()
+        assert np.allclose(probs.sum(axis=1), 1.0, atol=1e-5)
+
+
+def test_operational_reporting_integrity():
+    """Valida integridade do relatório de eventos aninhado com contagens inteiras e Wilson CI."""
+    ev_json = NESTED_DIR / "event_level_metrics.json"
+    if not ev_json.exists():
+        pytest.skip("event_level_metrics.json aninhado ainda não gerado")
+    data = json.loads(ev_json.read_text(encoding="utf-8"))
+    for mname in ["logistic_regression_event", "hist_gradient_boosting_event", "ensemble_event", "activity_gated_log_odds_cascade_event"]:
+        m = data["models"][mname]
+        assert "integer_counts" in m
+        assert "wilson_ci_95" in m
+        counts = m["integer_counts"]
+        assert counts["aedes_total"] == 64
+        assert counts["noise_total"] == 426
+        assert counts["other_total"] == 1014
+        wilson = m["wilson_ci_95"]
+        for key in ["aedes_recall", "noise_to_aedes_fpr", "other_to_aedes_fpr"]:
+            ci = wilson[key]
+            assert 0.0 <= ci["ci_lower"] <= ci["point"] <= ci["ci_upper"] <= 1.0

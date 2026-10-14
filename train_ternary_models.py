@@ -111,10 +111,10 @@ def load_and_filter_data():
     return df_clean, X_clean, y, stats
 
 
-def compute_sample_weights(df, y, gamma=0.75):
+def compute_sample_weights(df, y, gamma=0.50):
     """
     Renormalização de Classe após Amortecimento por Duração:
-      1. u_i = (clip(N_janelas(rec_i), 1, 60))^(-gamma)
+      1. u_i = 1.0 / (clip(N_janelas(rec_i), 1, 60) ** 0.50)
       2. S_c = sum_{i in c} u_i para c in {0, 1, 2}
       3. w_i = u_i * (N_total / (3.0 * S_c[y_i]))
     Garante rigorosamente que sum_{i in c} w_i = N_total / 3 para cada classe.
@@ -122,7 +122,7 @@ def compute_sample_weights(df, y, gamma=0.75):
     n_total = len(y)
     rec_window_counts = df["group"].map(df["group"].value_counts()).to_numpy(dtype=np.float64)
     clipped_windows = np.clip(rec_window_counts, 1.0, 60.0)
-    u = clipped_windows ** (-gamma)
+    u = 1.0 / (clipped_windows ** gamma)
 
     # S_c = soma dos amortecimentos u_i por classe
     s_c = np.zeros(3, dtype=np.float64)
@@ -187,8 +187,8 @@ def main():
     print("=== CORPUS TERNÁRIO DEPOIS DO EXPURGO ===")
     print(json.dumps(data_stats, indent=2))
 
-    # Cálculo dos pesos compostos com renormalização de classe
-    sample_weights = compute_sample_weights(df, y, gamma=0.75)
+    # Cálculo dos pesos compostos com renormalização de classe (gamma = 0.50)
+    sample_weights = compute_sample_weights(df, y, gamma=0.50)
 
     sgkf = StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=SEED)
 
@@ -220,7 +220,7 @@ def main():
         lr.fit(X_train_scaled, y_train, sample_weight=sw_train)
         oof_lr[val_idx] = lr.predict_proba(X_val_scaled)
 
-        # 2. HistGradientBoostingClassifier multiclasse
+        # 2. HistGradientBoostingClassifier multiclasse treinado com sample_weight
         hgb = HistGradientBoostingClassifier(
             max_iter=200,
             l2_regularization=3.0,
@@ -259,8 +259,8 @@ def main():
             "group_leakage": 0,
             "sample_weight": {
                 "method": "duration_damping_with_class_renormalization",
-                "formula": "w_i = u_i * (N_total / (3 * S_c)), u_i = clip(N_janelas(rec_i), 1, 60)^(-0.75)",
-                "gamma": 0.75,
+                "formula": "w_i = u_i * (N_total / (3 * S_c)), u_i = clip(N_janelas(rec_i), 1, 60)^(-0.50)",
+                "gamma": 0.50,
                 "clip_min": 1,
                 "clip_max": 60
             }
@@ -325,4 +325,9 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--nested" in sys.argv:
+        from train_ternary_nested_models import run_nested_training
+        run_nested_training()
+    else:
+        main()
