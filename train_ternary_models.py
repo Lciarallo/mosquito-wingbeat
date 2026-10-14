@@ -62,18 +62,25 @@ def load_and_filter_data():
         df["path"].astype(str).str.contains("figshare", case=False, na=False)
     )
 
-    # 3. Filtro de unknown_mosquito
+    # 3. Filtro de MosquitoSong
+    mask_mosquitosong = (
+        df["domain"].astype(str).str.lower().eq("mosquitosong") |
+        df["path"].astype(str).str.contains("mosquitosong", case=False, na=False) |
+        df["group"].astype(str).str.contains("mosquitosong", case=False, na=False)
+    )
+
+    # 4. Filtro de unknown_mosquito
     mask_unknown = df["label"].astype(str).str.lower().isin(["unknown_mosquito", "unknown", "mosquito"])
 
-    # 4. Qualidade técnica do áudio
+    # 5. Qualidade técnica do áudio
     mask_quality = df["quality_ok"].isin([True, "True", "true", 1, "1"])
 
-    # 5. Validação de features finitas
+    # 6. Validação de features finitas
     X_mat = np.array(X_raw, dtype="float32", copy=True)
     mask_finite = np.isfinite(X_mat).all(axis=1)
 
     # Combinação de filtros
-    valid_idx = (~mask_ufrgs) & (~mask_figshare) & (~mask_unknown) & mask_quality & mask_finite
+    valid_idx = (~mask_ufrgs) & (~mask_figshare) & (~mask_mosquitosong) & (~mask_unknown) & mask_quality & mask_finite
     df_clean = df.loc[valid_idx].copy().reset_index(drop=True)
     X_clean = X_mat[valid_idx.to_numpy()]
 
@@ -101,6 +108,7 @@ def load_and_filter_data():
         "total_original": len(df),
         "excluded_ufrgs": int(mask_ufrgs.sum()),
         "excluded_figshare": int(mask_figshare.sum()),
+        "excluded_mosquitosong": int(mask_mosquitosong.sum()),
         "excluded_unknown": int(mask_unknown.sum()),
         "excluded_quality": int((~mask_quality).sum()),
         "excluded_non_finite": int((~mask_finite).sum()),
@@ -180,6 +188,8 @@ def compute_metrics(y_true, prob, name):
 
 
 def main():
+    if OUT_DIR.exists():
+        raise FileExistsError("Historical run is immutable. Use the audited nested trainer with a new --out.")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     df, X, y, data_stats = load_and_filter_data()
     groups = df["group"].to_numpy()
@@ -326,8 +336,9 @@ def main():
 
 if __name__ == "__main__":
     import sys
+    if "--legacy" in sys.argv:
+        raise SystemExit("Historical training outputs are immutable; use the nested trainer and a new --out.")
     if "--nested" in sys.argv:
-        from train_ternary_nested_models import run_nested_training
-        run_nested_training()
-    else:
-        main()
+        sys.argv.remove("--nested")
+    from train_ternary_nested_models import main as audited_main
+    audited_main()

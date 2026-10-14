@@ -284,12 +284,12 @@ def test_temporal_persistence_strictly_within_wav():
     """Testa explicitamente que duas janelas com p2 alto em WAVs diferentes do mesmo grupo NÃO são fundidas."""
     from evaluate_ternary_event_pipeline import compute_group_wav_bounded_persistence
     df_synthetic = pd.DataFrame([
-        {"path": "recA.wav", "start_s": 0.0, "ensemble_prob_2": 0.90},
-        {"path": "recA.wav", "start_s": 1.0, "ensemble_prob_2": 0.10},
-        {"path": "recB.wav", "start_s": 1.0, "ensemble_prob_2": 0.90},
-        {"path": "recB.wav", "start_s": 2.0, "ensemble_prob_2": 0.10},
+        {"path": "recA.wav", "start_s": 0.0, "duration_s": 1.0, "ensemble_prob_2": 0.90},
+        {"path": "recA.wav", "start_s": 1.0, "duration_s": 1.0, "ensemble_prob_2": 0.10},
+        {"path": "recB.wav", "start_s": 1.0, "duration_s": 1.0, "ensemble_prob_2": 0.90},
+        {"path": "recB.wav", "start_s": 2.0, "duration_s": 1.0, "ensemble_prob_2": 0.10},
     ])
-    p = compute_group_wav_bounded_persistence(df_synthetic, "ensemble_prob_2")
+    p = compute_group_wav_bounded_persistence(df_synthetic, "ensemble_prob_2", horizon_s=2.0)
     # Dentro de cada WAV, a média contígua é (0.90 + 0.10)/2 = 0.50
     # Se houvesse fusão entre recA e recB em start_s=1.0, daria 0.90
     assert p <= 0.5001, f"Persistência fundiu WAVs diferentes: obtido {p}"
@@ -322,9 +322,12 @@ def test_operational_reporting_integrity():
         assert "integer_counts" in m
         assert "wilson_ci_95" in m
         counts = m["integer_counts"]
-        assert counts["aedes_total"] == 64
-        assert counts["noise_total"] == 426
-        assert counts["other_total"] == 1014
+        # Derive the contract from this experiment's own unit and population.
+        # Never whitelist denominators merely to make a different corpus pass.
+        groups = pd.read_csv(NESTED_DIR / "predictions_oof.csv").groupby("group").true_label.max()
+        assert counts["noise_total"] == int(groups.eq(0).sum())
+        assert counts["aedes_total"] == int(groups.eq(2).sum())
+        assert counts["other_total"] == int(groups.eq(1).sum())
         wilson = m["wilson_ci_95"]
         for key in ["aedes_recall", "noise_to_aedes_fpr", "other_to_aedes_fpr"]:
             ci = wilson[key]

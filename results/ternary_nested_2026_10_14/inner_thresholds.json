@@ -1,9 +1,9 @@
 {
   "fold_0": {
     "tau_noise": 0.4,
-    "tau_aedes": 0.5700000000000001,
+    "tau_aedes": 0.54,
     "blend_weight_lr": 0.2,
-    "train_aedes_recall": 0.72,
+    "train_aedes_recall": 0.6666666666666666,
     "selected_gamma": 0.5,
     "train_folds": [
       1,
@@ -14,9 +14,9 @@
   },
   "fold_1": {
     "tau_noise": 0.4,
-    "tau_aedes": 0.54,
-    "blend_weight_lr": 0.2,
-    "train_aedes_recall": 0.7115384615384616,
+    "tau_aedes": 0.48,
+    "blend_weight_lr": 0.0,
+    "train_aedes_recall": 0.6875,
     "selected_gamma": 0.5,
     "train_folds": [
       0,
@@ -27,9 +27,9 @@
   },
   "fold_2": {
     "tau_noise": 0.4,
-    "tau_aedes": 0.52,
+    "tau_aedes": 0.5,
     "blend_weight_lr": 0.15,
-    "train_aedes_recall": 0.6346153846153846,
+    "train_aedes_recall": 0.7916666666666666,
     "selected_gamma": 0.5,
     "train_folds": [
       0,
@@ -40,9 +40,9 @@
   },
   "fold_3": {
     "tau_noise": 0.4,
-    "tau_aedes": 0.47,
+    "tau_aedes": 0.48,
     "blend_weight_lr": 0.0,
-    "train_aedes_recall": 0.7647058823529411,
+    "train_aedes_recall": 0.7916666666666666,
     "selected_gamma": 0.5,
     "train_folds": [
       0,
@@ -53,9 +53,9 @@
   },
   "fold_4": {
     "tau_noise": 0.4,
-    "tau_aedes": 0.51,
-    "blend_weight_lr": 0.05,
-    "train_aedes_recall": 0.6470588235294118,
+    "tau_aedes": 0.5900000000000001,
+    "blend_weight_lr": 0.1,
+    "train_aedes_recall": 0.7291666666666666,
     "selected_gamma": 0.5,
     "train_folds": [
       0,

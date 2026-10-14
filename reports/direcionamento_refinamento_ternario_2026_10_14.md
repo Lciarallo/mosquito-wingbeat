@@ -4,6 +4,8 @@ Data: 14/10/2026
 Repositório: `mosquito-wingbeat`  
 Referência da revisão: commit `20d6fe9`
 
+> **Atualização:** a implementação posterior em `b562b35` foi conferida na [revisão atualizada da implementação](revisao_implementacao_ternaria_b562b35_2026_10_14.md). O texto abaixo preserva o diagnóstico e o direcionamento relativos a `20d6fe9`; as expressões “atual” e “atualmente” devem ser lidas nesse contexto histórico.
+
 ## Parecer
 
 **Primeiro corrigir o isolamento da avaliação; depois buscar os 50/64 Aedes.** A proposta de melhorar a decisão por gravação faz sentido, mas o diagnóstico causal e a garantia estatística do plano original ainda não se sustentam.
