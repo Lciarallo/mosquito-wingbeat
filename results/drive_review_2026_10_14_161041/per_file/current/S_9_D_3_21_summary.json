@@ -1,0 +1,64 @@
+{
+  "audio_file": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav",
+  "duration_seconds": 2.0,
+  "emulate_arduino_mic": false,
+  "region_prior": "global",
+  "total_windows": 3,
+  "detected_windows": 0,
+  "aedes_swarm_windows": 0,
+  "active_ratio_pct": 0.0,
+  "swarm_ratio_pct": 0.0,
+  "mosquito_present": false,
+  "aedes_swarm_detected": false,
+  "median_flight_f0_hz": 0.0,
+  "iqr_flight_f0_hz": 0.0,
+  "primary_genus": null,
+  "confirmed_genus": null,
+  "primary_species": null,
+  "confirmed_species": null,
+  "genus_distribution": {},
+  "species_distribution": {},
+  "temporal_intervals": [
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 0.0,
+      "end_s": 1.99,
+      "duration_s": 1.99,
+      "windows_count": 3,
+      "median_f0_hz": 515.0,
+      "median_aedes_snr_db": -2.07,
+      "mean_presence_score": 0.45,
+      "dominant_species": null
+    }
+  ],
+  "swarm_timeline": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.992,
+      "duration_s": 1.992,
+      "swarm_present": false,
+      "median_f0_hz": 515.0,
+      "mean_aedes_snr_db": -2.0066666666666664,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    }
+  ],
+  "swarm_active_intervals": [],
+  "causal_swarm_timeline": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.992,
+      "duration_s": 1.992,
+      "swarm_present": false,
+      "median_f0_hz": 515.0,
+      "mean_aedes_snr_db": -2.0066666666666664,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    }
+  ],
+  "causal_swarm_active_intervals": [],
+  "timeline_resolution_s": 0.5,
+  "analysis_window_s": 0.992,
+  "unanalysed_tail_s": 0.008,
+  "timeline_interpretation": "Estimated classifier decisions; swarm_timeline uses offline 1-step smoothing, whereas causal_swarm_timeline uses strictly causal past-only persistence."
+}

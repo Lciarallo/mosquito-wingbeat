@@ -1,0 +1,18 @@
+{
+  "lightgbm": {
+    "val_auc": 0.9139597436904181,
+    "fit_time_sec": 1.16
+  },
+  "hist_gradient_boosting": {
+    "val_auc": 0.9150238596653344,
+    "fit_time_sec": 1.31
+  },
+  "extra_trees": {
+    "val_auc": 0.9049595054395645,
+    "fit_time_sec": 4.54
+  },
+  "random_forest": {
+    "val_auc": 0.8850066638539155,
+    "fit_time_sec": 7.74
+  }
+}

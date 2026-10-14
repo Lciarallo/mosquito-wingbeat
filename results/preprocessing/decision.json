@@ -1,0 +1,10 @@
+{
+  "status": "NO_DEFAULT_PREPROCESSING_CHANGE",
+  "private_swarm_Aedes_identified": false,
+  "model_weights_and_thresholds_unchanged": true,
+  "no_retraining": true,
+  "spectral_mild_improves_some_tests_but_regresses_others": true,
+  "band_filters_increase_some_noise_species_outputs": true,
+  "all_tests_previously_examined_exploratory": true,
+  "arduino_compile_allowed": false
+}

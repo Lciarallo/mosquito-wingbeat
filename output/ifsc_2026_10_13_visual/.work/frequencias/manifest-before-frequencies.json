@@ -1,0 +1,359 @@
+{
+  "presentation_id": "1n48d31ukSs-jxyxYAOrLTg8wtTj0B-YNSTBzyE425b4",
+  "date": "2026-10-13",
+  "seconds": 1060,
+  "slides": [
+    {
+      "slide_id": "p1",
+      "title": "Mosquitos pelo som",
+      "seconds": 25,
+      "visible_text": [
+        "Mosquitos pelo som\nLuiz Eduardo do Nascimento Ciarallo",
+        "Classificação acústica com redes neurais"
+      ],
+      "speaker_notes": "Apresento a investigação sobre classificação acústica de mosquitos. O trabalho implementa redes neurais profundas e compara o resultado com um modelo linear. A pergunta central é se um padrão aprendido em uma coleção continua útil em outra gravação. Os resultados internos melhoraram, mas a transferência ainda é a principal limitação.",
+      "sources": [
+        "https://github.com/Lciarallo/mosquito-wingbeat"
+      ],
+      "template_exemplar": "p1",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_02",
+      "title": "O voo deixa uma assinatura sonora",
+      "seconds": 65,
+      "visible_text": [
+        "O voo deixa uma assinatura sonora",
+        "02",
+        "As asas produzem\npadrões de frequência.\n\nObjetivo: reconhecer\nmosquitos em áudio.",
+        "Aedes aegypti · fotografia CDC",
+        "O padrão se mantém em outra gravação?"
+      ],
+      "speaker_notes": "O movimento das asas produz padrões acústicos que podem ajudar no monitoramento. A foto é uma referência visual de Aedes aegypti, e não um mosquito capturado pelo meu experimento. O classificador recebe áudio; a fotografia não é uma entrada da rede. O objetivo é investigar reconhecimento acústico e generalização entre gravações. Frequências semelhantes, microfones, distância e ambiente impedem tratar o som como uma identidade infalível. Não estamos diagnosticando doenças nem estimando risco epidemiológico.",
+      "sources": [
+        "https://doi.org/10.7554/eLife.27854",
+        "https://doi.org/10.1371/journal.pone.0310121",
+        "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html"
+      ],
+      "template_exemplar": "ifsc_slide_02",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_03",
+      "title": "Detectar e identificar são tarefas distintas",
+      "seconds": 75,
+      "visible_text": [
+        "Detectar e identificar são tarefas distintas",
+        "03",
+        "Presença",
+        "Mosquito ou ruído?",
+        "Gênero",
+        "Aedes, Anopheles, Culex…",
+        "Espécie",
+        "Por exemplo, Aedes aegypti",
+        "Aedes aegypti",
+        "Anopheles quadrimaculatus",
+        "Culex tarsalis",
+        "Fotografias: CDC · exemplos de espécies de três gêneros"
+      ],
+      "speaker_notes": "Presença pergunta se há mosquito ou apenas ruído. Gênero agrupa espécies; espécie é a identificação mais específica. As três fotos mostram exemplos de Aedes aegypti, Anopheles quadrimaculatus e Culex tarsalis; não representam todas as classes do estudo. O projeto também considera Culiseta. Uma rede treinada somente com espécies de mosquito sempre escolhe uma classe, mesmo quando recebe ruído. Por isso acurácia de espécie não mede detecção nem falsos alarmes. O desempenho precisa ser avaliado separadamente em cada tarefa.",
+      "sources": [
+        "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+        "https://github.com/Lciarallo/mosquito-wingbeat/blob/main/reports/tres_niveis_2026_10_09.md"
+      ],
+      "template_exemplar": "ifsc_slide_03",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_04",
+      "title": "O áudio vira um espectrograma",
+      "seconds": 70,
+      "visible_text": [
+        "O áudio vira um espectrograma",
+        "04",
+        "Aedes aegypti · áudio real do Dryad · janela de 0,992 s"
+      ],
+      "speaker_notes": "O gráfico superior é o sinal no tempo; o inferior mostra como a energia se distribui nas frequências. O exemplo é um trecho real rotulado Aedes aegypti no Dryad, com 0,992 segundo. Cores claras indicam energia relativa maior. O exemplo foi selecionado por classe, partição e ordem original, sem procurar uma imagem bonita. Este gráfico explicativo usa STFT; a entrada da CNN usa log-mel e contraste espectral, com dois canais. A fotografia do slide anterior apenas apresenta o inseto. Não confundimos a identificação informada pelo corpus com confirmação independente.",
+      "sources": [
+        "https://doi.org/10.5061/dryad.98d7s",
+        "trabalho_ifsc/preparar_material.py",
+        "results/ifsc_cnn_2026_10_11/protocol.json"
+      ],
+      "template_exemplar": "ifsc_slide_04",
+      "media_mapping": [
+        {
+          "object_id": "ifsc_chart_04",
+          "action": "keep"
+        }
+      ]
+    },
+    {
+      "slide_id": "ifsc_slide_05",
+      "title": "Três estudos orientaram o experimento",
+      "seconds": 85,
+      "visible_text": [
+        "Três estudos orientaram o experimento",
+        "05",
+        "2017",
+        "Mukundarajan et al.",
+        "Celulares capturam o som do voo.",
+        "2018",
+        "Fanioudakis et al.",
+        "Sensores ópticos e redes profundas.",
+        "2024",
+        "MosquitoSong+ · Supratak et al.",
+        "CNN 1D com ruído e variação de volume.",
+        "Bases, sensores e protocolos diferentes; resultados não são equivalentes."
+      ],
+      "speaker_notes": "Mukundarajan e colegas investigaram aquisição acústica com celulares. Fanioudakis e colegas trabalharam com sinais de batimento de asas obtidos por sensores ópticos e redes profundas, incluindo representações de espectrograma. Essa aquisição não é a mesma coisa que o áudio de celular usado aqui. MosquitoSong+ usa CNN 1D em áudio e amplia o treino com ruído e variação de volume. Os estudos sugerem caminhos, mas suas porcentagens não são diretamente comparáveis: bases, classes, sensores e protocolos diferem. Meu experimento é uma implementação própria e não uma reprodução integral dos treinamentos dos artigos.",
+      "sources": [
+        "https://doi.org/10.7554/eLife.27854",
+        "https://doi.org/10.23919/EUSIPCO.2018.8553542",
+        "https://doi.org/10.1371/journal.pone.0310121"
+      ],
+      "template_exemplar": "ifsc_slide_05",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_09",
+      "title": "Separar as gravações antes de treinar",
+      "seconds": 80,
+      "visible_text": [
+        "Separar as gravações antes de treinar",
+        "06",
+        "Calibração reservada; separar arquivos não prova independência."
+      ],
+      "speaker_notes": "As partições têm 233 gravações de treino, 63 de validação, 83 de calibração reservada e 190 de teste. A calibração não foi usada: não ajustei rejeição nem limiar de presença nesta rodada. Janelas da mesma gravação ficam na mesma partição. A validação escolhe o modelo e a época; o teste só mede o modelo congelado. Existem 20 espécies, mas a validação contém 19. A separação disponível por arquivo, grupo e hash não prova independência de indivíduos ou sessões. O teste interno é histórico e já tinha sido examinado no projeto; sua interpretação é retrospectiva.",
+      "sources": [
+        "results/ifsc_cnn_2026_10_11/protocol.json",
+        "results/ifsc_cnn_2026_10_11/freeze.json"
+      ],
+      "template_exemplar": "ifsc_slide_09",
+      "media_mapping": [
+        {
+          "object_id": "ifsc_partition_table",
+          "action": "keep"
+        }
+      ]
+    },
+    {
+      "slide_id": "ifsc_slide_08",
+      "title": "A primeira CNN aprende no espectrograma",
+      "seconds": 90,
+      "visible_text": [
+        "A primeira CNN aprende no espectrograma",
+        "07",
+        "130.900 parâmetros",
+        "Entrada: 2 canais · 64 bandas · 55 quadros de tempo",
+        "Log-mel\n+ contraste",
+        "4 convoluções\n16/32/64/96",
+        "Densa\n128 unidades",
+        "Saída\n20 espécies",
+        "Também comparei uma CNN revista e uma MLP profunda.",
+        "A saída sempre escolhe uma espécie; presença é outra tarefa."
+      ],
+      "speaker_notes": "A primeira CNN tem 130.900 parâmetros. Cada janela entra com dois canais, 64 bandas e 55 quadros: log-mel e contraste. Quatro convoluções usam 16, 32, 64 e 96 canais, com normalização, ativação e redução de resolução; depois há uma camada de 128 unidades e a saída de 20 espécies. O treinamento é supervisionado com rótulos do corpus. A CNN revista preserva mais posições de frequência e tem 224.036 parâmetros. A MLP compara média e desvio temporal dos mesmos canais, com camadas ocultas de 256, 128 e 64 unidades. São modelos computacionais; estas redes novas não foram incorporadas ao firmware.",
+      "sources": [
+        "trabalho_ifsc/experimento_cnn.py",
+        "trabalho_ifsc/comparar_melhorias.py",
+        "results/ifsc_cnn_2026_10_11/protocol.json",
+        "results/ifsc_melhorias_2026_10_11/protocol.json"
+      ],
+      "template_exemplar": "ifsc_slide_08",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_10",
+      "title": "Aprender o treino não basta",
+      "seconds": 70,
+      "visible_text": [
+        "Aprender o treino não basta",
+        "08",
+        "Primeira CNN · época 6 selecionada pela validação"
+      ],
+      "speaker_notes": "A curva verde mostra a perda de treino da primeira CNN; a amarela mostra a validação. Menor perda é melhor. A rede continua melhorando no treino, mas isso não se repete de forma sustentada na validação: há sinais de sobreajuste. A época 6 foi escolhida pela validação entre 12 épocas executadas, e não pelo teste. Isso motivou mudanças na arquitetura e na regularização. Esta curva descreve a primeira CNN; não é o histórico da CNN revista nem da MLP.",
+      "sources": [
+        "results/ifsc_cnn_2026_10_11/history.json",
+        "results/ifsc_cnn_2026_10_11/freeze.json",
+        "trabalho_ifsc/assets/graficos/aprendizado.png"
+      ],
+      "template_exemplar": "ifsc_slide_10",
+      "media_mapping": [
+        {
+          "object_id": "ifsc_chart_10",
+          "action": "keep"
+        }
+      ]
+    },
+    {
+      "slide_id": "ifsc_slide_12",
+      "title": "As redes chegaram a 69,5% de acerto",
+      "seconds": 105,
+      "visible_text": [
+        "As redes chegaram a 69,5% de acerto",
+        "09",
+        "+27 acertos nas mesmas 190 gravações; referência linear: 136/190."
+      ],
+      "speaker_notes": "Nas mesmas 190 gravações, a CNN inicial acertou 105, e tanto a CNN revista quanto a MLP acertaram 132. Foram 27 acertos adicionais, ou 14,21 pontos percentuais. A referência linear acertou 136, portanto manteve a maior acurácia global. A CNN revista preserva frequência; a MLP usa descritores temporais e três camadas ocultas. Foram reforçadas regularização e dropout e alterados aprendizado e seleção. A MLP foi selecionada pela validação antes da inferência no teste. Ela obteve F1 macro de 77,06%, mas isso não demonstra superioridade estatística. Este gráfico avalia escolha forçada de espécie por gravação, não presença em ruído.",
+      "sources": [
+        "results/ifsc_cnn_2026_10_11/metrics.json",
+        "results/ifsc_melhorias_2026_10_11/metrics.json",
+        "results/ifsc_melhorias_2026_10_11/selection.json"
+      ],
+      "template_exemplar": "ifsc_slide_12",
+      "media_mapping": [
+        {
+          "object_id": "ifsc_chart_12",
+          "action": "keep"
+        }
+      ]
+    },
+    {
+      "slide_id": "ifsc_slide_13",
+      "title": "Em outra origem, só 3 de 17 acertos",
+      "seconds": 95,
+      "visible_text": [
+        "Em outra origem, só 3 de 17 acertos",
+        "10",
+        "Teste interno",
+        "69,5%",
+        "132/190 gravações",
+        "Outra origem",
+        "17,6%",
+        "3/17 arquivos",
+        "Trocar a origem derrubou o desempenho.",
+        "MLP selecionada · amostra retrospectiva de 17 arquivos; sem coleta cega."
+      ],
+      "speaker_notes": "A MLP selecionada e a CNN revista acertaram três dos 17 arquivos externos, ou 17,65%. Esses três acertos correspondem a dois arquivos de Anopheles minimus e um de Anopheles stephensi. Não acertaram Aedes ou Culex nessa amostra. A primeira CNN acertou zero dos 17. As porcentagens comparam dois conjuntos distintos, não o mesmo teste antes e depois. A amostra externa é pequena, contém cinco espécies e já tinha sido examinada no projeto; portanto a análise é retrospectiva e não uma validação independente. Não há controles de ausência ou ruído neste conjunto. O resultado indica dificuldade de transferência, sem provar confiabilidade em campo.",
+      "sources": [
+        "results/ifsc_melhorias_2026_10_11/external_metrics.json",
+        "results/ifsc_cnn_2026_10_11/transfer_metrics.json",
+        "trabalho_ifsc/LEIA-ME.md"
+      ],
+      "template_exemplar": "ifsc_slide_13",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_16",
+      "title": "Até o gênero perde acerto fora da base",
+      "seconds": 70,
+      "visible_text": [
+        "Até o gênero perde acerto fora da base",
+        "11",
+        "Ensemble clássico histórico · escolha forçada, sem detectar presença."
+      ],
+      "speaker_notes": "Este gráfico é de outro experimento, histórico, com ensemble clássico; não é da CNN ou da MLP anteriores. No corpus conhecido, gênero acertou 549 de 569 e espécie 408 de 569. Nos 17 arquivos externos, gênero acertou 7 e espécie 4. Agrupar em gênero facilita a escolha nessa amostra, mas também sofre perda importante fora da base. Os dois modelos sempre escolhem uma classe de mosquito: isso não testa se há mosquito. Não somar esses números aos resultados das redes novas nem atribuir todos os gráficos a um único protocolo.",
+      "sources": [
+        "reports/tres_niveis_2026_10_09.md",
+        "results/three_levels_2026_10_09/",
+        "trabalho_ifsc/assets/graficos/genero_especie.png"
+      ],
+      "template_exemplar": "ifsc_slide_16",
+      "media_mapping": [
+        {
+          "object_id": "ifsc_chart_16",
+          "action": "keep"
+        }
+      ]
+    },
+    {
+      "slide_id": "ifsc_slide_18",
+      "title": "Arduino: aplicação em investigação",
+      "seconds": 75,
+      "visible_text": [
+        "Arduino: aplicação em investigação",
+        "12",
+        "Nano 33 BLE\nSense / Sense Rev2",
+        "Microfone PDM integrado.\n\nObjetivo: analisar o áudio\nna própria placa.",
+        "Nano 33 BLE Sense Rev2 · foto oficial Arduino",
+        "Ainda falta validar o sistema na placa física."
+      ],
+      "speaker_notes": "A placa alvo do projeto é o Arduino Nano 33 BLE Sense ou Sense Rev2; a imagem é uma fotografia oficial do Rev2, não uma montagem física realizada por mim. O microfone digital PDM integrado permite capturar áudio. O projeto tem protótipos históricos de firmware; a compilação por software não equivale a teste físico. As novas CNNs e a MLP desta apresentação foram avaliadas no computador e não foram incorporadas ao Arduino. Ainda faltam validar microfone, distância, memória e tempo de processamento na placa. O detector histórico marcou 29,17% das janelas de ruído como candidatas, reforçando a necessidade de medir falsos alarmes. Nenhuma compilação ou instalação foi feita nesta revisão de slides.",
+      "sources": [
+        "https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/",
+        "https://store.arduino.cc/products/nano-33-ble-sense-rev2",
+        "firmware/README.md",
+        "trabalho_ifsc/LEIA-ME.md"
+      ],
+      "template_exemplar": "ifsc_slide_18",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_06",
+      "title": "O próximo avanço depende de novos dados",
+      "seconds": 80,
+      "visible_text": [
+        "O próximo avanço depende de novos dados",
+        "13",
+        "1",
+        "Coletar",
+        "Espécie confirmada, aparelhos e ambientes variados.",
+        "2",
+        "Controlar",
+        "Anotar ruído e períodos sem mosquito.",
+        "3",
+        "Validar",
+        "Reservar indivíduos e sessões; depois testar a placa.",
+        "Microfone, ruído e sons sobrepostos continuam sendo desafios."
+      ],
+      "speaker_notes": "Primeiro é preciso coletar gravações com espécie confirmada e variar dispositivos, distância e ambiente. Depois devem ser anotados períodos sem mosquito e ruídos reais, para medir falsos alarmes. A avaliação deve reservar indivíduos, sessões, aparelhos e locais inteiros antes de decidir a arquitetura. O teste final precisa permanecer independente dos ajustes. Somente após esse protocolo faz sentido avaliar presença, identificação e rejeição como um sistema completo, medir alarmes por hora quando houver anotação e testar o processamento na placa. Os desafios não se resolvem apenas aumentando o número de camadas.",
+      "sources": [
+        "MODEL_VALIDATION.md",
+        "reports/tres_niveis_2026_10_09.md",
+        "firmware/README.md"
+      ],
+      "template_exemplar": "ifsc_slide_06",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_19",
+      "title": "A rede melhorou; a generalização falta",
+      "seconds": 50,
+      "visible_text": [
+        "A rede melhorou; a generalização falta",
+        "14",
+        "55,3% → 69,5%",
+        "Melhora interna nas mesmas 190 gravações.",
+        "Em outra origem: 3/17 acertos.",
+        "Próximo passo: coleta e avaliação independentes.",
+        "Referência linear: 71,6% de acerto interno."
+      ],
+      "speaker_notes": "O trabalho implementou redes neurais profundas em áudio real e comparou alternativas nas mesmas partições. As redes passaram de 55,26% a 69,47% de acerto interno por gravação; a referência linear manteve 71,58%. Em outra origem, as redes revistas ficaram em três de 17 arquivos. O principal resultado é aprender a separar melhora interna de generalização. O próximo passo é uma coleta independente com controles de ruído, seguida de avaliação integrada e teste na placa. Código, pesos, métricas e notas permitem discutir os resultados sem apresentar o sistema como pronto para uso em campo.",
+      "sources": [
+        "results/ifsc_cnn_2026_10_11/metrics.json",
+        "results/ifsc_melhorias_2026_10_11/metrics.json",
+        "results/ifsc_melhorias_2026_10_11/external_metrics.json"
+      ],
+      "template_exemplar": "ifsc_slide_19",
+      "media_mapping": []
+    },
+    {
+      "slide_id": "ifsc_slide_20",
+      "title": "Fontes e material do projeto",
+      "seconds": 25,
+      "visible_text": [
+        "Fontes e material do projeto",
+        "15",
+        "Mukundarajan et al. (2017) · celulares e áudio",
+        "Fanioudakis et al. (2018) · batimentos de asas e CNNs",
+        "Supratak et al. (2024) · MosquitoSong+",
+        "Dados: Dryad · código e resultados: mosquito-wingbeat",
+        "Fotografias: CDC e Arduino · modelo: IFSC",
+        "Links completos e créditos nas notas de cada slide."
+      ],
+      "speaker_notes": "Os artigos completos, o conjunto Dryad, a documentação da placa e os créditos das fotografias estão nos links abaixo. As fotografias dos mosquitos vêm do CDC; a placa vem da loja oficial Arduino. Os gráficos usam resultados e áudio já presentes no repositório. O modelo oficial IFSC, seu mestre e seus 11 layouts foram mantidos. Este slide oferece referências; a conclusão científica está no slide anterior.",
+      "sources": [
+        "https://doi.org/10.7554/eLife.27854",
+        "https://doi.org/10.23919/EUSIPCO.2018.8553542",
+        "https://doi.org/10.1371/journal.pone.0310121",
+        "https://doi.org/10.5061/dryad.98d7s",
+        "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+        "https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/",
+        "https://github.com/Lciarallo/mosquito-wingbeat",
+        "https://ifsc.edu.br/documents/d/guest/slides?download=true"
+      ],
+      "template_exemplar": "ifsc_slide_20",
+      "media_mapping": []
+    }
+  ]
+}

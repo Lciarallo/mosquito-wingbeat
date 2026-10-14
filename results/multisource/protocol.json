@@ -1,0 +1,34 @@
+{
+  "version": "large-residual-logmel-contrast-multitask-1",
+  "seed": 20261002,
+  "parameters": 3325397,
+  "architecture": "Residual spectrogram CNN, 2 channels, 32/64/128/256, dense512, species20+presence1",
+  "fft": 2048,
+  "hop": 256,
+  "mel_bands": 128,
+  "min_frequency": 80,
+  "max_frequency": 4000,
+  "samples": 15872,
+  "max_epochs": 30,
+  "patience": 8,
+  "batch_size": 96,
+  "selection": "weighted validation cross-entropy + 0.4 presence BCE",
+  "source_splits_sha256": "511f65e4ed8b94829197d53ef452af802ffe34aee5620d8e355145ea87bfdff3",
+  "initial_checkpoint_sha256": "05905636b9b9ae729b87ec365e4812cea44f9834c0e4c258d198ac1871777a9e",
+  "short_samples": 4800,
+  "mixed_duration_training": true,
+  "ufrgs_entirely_held_out": true,
+  "augmentations": [
+    "training noise mixture, SNR 5..30dB",
+    "same-species synthetic mixture, never test samples",
+    "small time/frequency masks",
+    "spectral tilt, no pitch shift"
+  ],
+  "sampling_mass": {
+    "known": 0.75,
+    "noise": 0.15,
+    "unresolved_positive": 0.1
+  },
+  "physical_board_tested": false,
+  "arduino_compiled": false
+}

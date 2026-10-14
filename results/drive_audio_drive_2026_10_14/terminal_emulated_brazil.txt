@@ -1,0 +1,53 @@
+
+==================================================================================
+ RELATÓRIO HIERÁRQUICO E SEGMENTAÇÃO TEMPORAL DE ENXAME DE AEDES (ML + SHS) 
+==================================================================================
+Arquivo:               data/raw/drive_test/drive_audio.wav
+Duração Total:         106.24 s
+Emulação Mic Arduino:  ATIVADA (ST MP34DT05)
+Prior Epidemiológico:  BRAZIL
+Janelas de Voo Ativo:  139/211 (65.88%)
+Janelas de Enxame:     125/211 (59.24%)
+Diagnóstico Tier 1:    ENXAME DE AEDES DETECTADO
+Fundamental Mediana:   F0 = 600.0 Hz (IQR = 43.8 Hz)
+
+--- TIER 2: VETOR EPIDEMIOLÓGICO (GÊNERO COM CORREÇÃO DE CARDINALIDADE) ---
+Gênero Identificado:   Aedes (Confirmação Causal: True)
+  * Aedes         : 138 janelas ( 99.3%)
+  * Culex         :   1 janelas (  0.7%)
+
+--- TIER 3: ESPÉCIE ESPECÍFICA (FUSÃO HARMÔNICA + NEURAL) ---
+Espécie Confirmada:    Aedes aegypti
+  * Aedes aegypti             : 139 janelas (100.0%)
+
+--- MAPA DE INTERVALOS TEMPORAIS (QUANDO O ENXAME APARECE vs QUANDO NÃO APARECE) ---
+Intervalo (s)    | Duração  | Status / Regime              | F0 Med   | SNR Aedes  | Espécie Dominante
+--------------------------------------------------------------------------------------------------
+  0.0 -  23.5s   |  23.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -2.3 dB   | ---
+ 23.0 -  25.0s   |   2.0s   | PASSAGEM_CURTA_ISOLADA       | 640.0Hz  |  -0.3 dB   | Aedes aegypti
+ 24.5 -  26.0s   |   1.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -1.0 dB   | ---
+ 25.5 -  26.5s   |   1.0s   | ENXAME_AEDES_PRESENTE        | 595.0Hz  |  +1.6 dB   | Aedes aegypti
+ 26.0 -  27.0s   |   1.0s   | PASSAGEM_CURTA_ISOLADA       | 525.0Hz  |  +0.4 dB   | Aedes aegypti
+ 26.5 -  34.0s   |   7.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -2.6 dB   | ---
+ 33.5 -  35.5s   |   2.0s   | PASSAGEM_CURTA_ISOLADA       | 575.0Hz  |  -0.3 dB   | Aedes aegypti
+ 35.0 -  36.0s   |   1.0s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -0.7 dB   | ---
+ 35.5 -  37.5s   |   2.0s   | ENXAME_AEDES_PRESENTE        | 590.0Hz  |  +2.5 dB   | Aedes aegypti
+ 37.0 -  38.5s   |   1.5s   | PASSAGEM_CURTA_ISOLADA       | 622.5Hz  |  +0.7 dB   | Aedes aegypti
+ 38.0 -  39.5s   |   1.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -0.7 dB   | ---
+ 39.0 -  40.0s   |   1.0s   | ENXAME_AEDES_PRESENTE        | 625.0Hz  |  +1.1 dB   | Aedes aegypti
+ 39.5 -  40.5s   |   1.0s   | PASSAGEM_CURTA_ISOLADA       | 600.0Hz  |  -0.1 dB   | Aedes aegypti
+ 40.0 -  41.5s   |   1.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -1.5 dB   | ---
+ 41.0 -  47.5s   |   6.5s   | ENXAME_AEDES_PRESENTE        | 611.2Hz  |  +6.1 dB   | Aedes aegypti
+ 47.0 -  48.5s   |   1.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -1.8 dB   | ---
+ 48.0 -  91.5s   |  43.5s   | ENXAME_AEDES_PRESENTE        | 602.5Hz  | +10.9 dB   | Aedes aegypti
+ 91.0 -  92.0s   |   1.0s   | PASSAGEM_CURTA_ISOLADA       | 547.5Hz  |  +0.2 dB   | Aedes aegypti
+ 91.5 -  92.5s   |   1.0s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -0.6 dB   | ---
+ 92.0 -  95.0s   |   3.0s   | ENXAME_AEDES_PRESENTE        | 590.0Hz  |  +3.6 dB   | Aedes aegypti
+ 94.5 -  96.0s   |   1.5s   | AUSENTE_RUIDO_FUNDO          |   ---    |  -9.8 dB   | ---
+ 95.5 -  99.5s   |   4.0s   | ENXAME_AEDES_PRESENTE        | 572.5Hz  |  +4.5 dB   | Aedes aegypti
+ 99.0 - 100.5s   |   1.5s   | PASSAGEM_CURTA_ISOLADA       | 590.0Hz  |  +0.7 dB   | Aedes aegypti
+100.0 - 106.0s   |   6.0s   | ENXAME_AEDES_PRESENTE        | 597.5Hz  |  +3.0 dB   | Aedes aegypti
+==================================================================================
+
+-> Relatório detalhado salvo em CSV: results/drive_audio_drive_2026_10_14/drive_audio_predictions.csv
+-> Resumo analítico salvo em JSON: results/drive_audio_drive_2026_10_14/drive_audio_summary.json

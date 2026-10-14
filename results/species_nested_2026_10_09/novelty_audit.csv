@@ -1,0 +1,18 @@
+path,reference_species,byte_duplicate,known_pcm_matches,fresh_pcm_matches,excluded
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,Aedes aegypti,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,Aedes aegypti,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,Aedes aegypti,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,Aedes aegypti,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,Aedes albopictus,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,Culex pipiens,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,Culex pipiens,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,Culex pipiens,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,Culex pipiens,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,Anopheles minimus,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,Anopheles minimus,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,Anopheles minimus,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,Anopheles minimus,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,Anopheles stephensi,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,Anopheles stephensi,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,Anopheles stephensi,False,0,0,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,Anopheles stephensi,False,0,0,False

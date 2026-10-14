@@ -1,0 +1,13 @@
+path,start_s,step_s,quality_ok,state,forced_species,identified_species,presence_score,species_score
+tmp/multisource_fresh/220324.wav,0.0,0.992,True,INCERTO,Aedes aegypti,-,0.956509,0.9481188
+tmp/multisource_fresh/220324.wav,0.992,0.992,True,INCERTO,Aedes aegypti,-,0.9120886,0.89670825
+tmp/multisource_fresh/220324.wav,1.984,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.93870443,0.927178
+tmp/multisource_fresh/220324.wav,2.976,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.6003783,0.9391729
+tmp/multisource_fresh/220324.wav,3.968,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.99349385,0.94545805
+tmp/multisource_fresh/220324.wav,4.96,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.9796882,0.92517215
+tmp/multisource_fresh/220324.wav,5.952,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.92078626,0.97461253
+tmp/multisource_fresh/220324.wav,6.944,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.9876866,0.9539828
+tmp/multisource_fresh/220324.wav,7.936,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.90178615,0.95072675
+tmp/multisource_fresh/220324.wav,8.928,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.9732549,0.9557931
+tmp/multisource_fresh/220324.wav,9.92,0.992,True,IDENTIFICACAO_PROVISORIA,Aedes aegypti,Aedes aegypti,0.9779821,0.95725757
+tmp/multisource_fresh/220324.wav,10.912,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.46466467,0.9799928

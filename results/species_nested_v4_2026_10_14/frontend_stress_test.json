@@ -1,0 +1,41 @@
+{
+  "cases": [
+    {
+      "fundamental_hz": 400,
+      "snr_high_db": 25,
+      "snr_low_db": 12,
+      "salience_high": 2.5343740403542734,
+      "salience_low": 2.53014871163901,
+      "psd": {
+        "cosine": 0.9922378063201904,
+        "rms_difference": 1.956265926361084,
+        "relative_amplitude_difference": 0.22439903020858765
+      },
+      "mfcc_mean": {
+        "cosine": 0.9965112805366516,
+        "rms_difference": 7.693968772888184,
+        "relative_amplitude_difference": 0.39668408036231995
+      }
+    },
+    {
+      "fundamental_hz": 625,
+      "snr_high_db": 25,
+      "snr_low_db": 12,
+      "salience_high": 2.507447642040669,
+      "salience_low": 2.5032203416923995,
+      "psd": {
+        "cosine": 0.9984205961227417,
+        "rms_difference": 1.0990862846374512,
+        "relative_amplitude_difference": 0.20936532318592072
+      },
+      "mfcc_mean": {
+        "cosine": 0.9776442646980286,
+        "rms_difference": 5.654463291168213,
+        "relative_amplitude_difference": 0.37378183007240295
+      }
+    }
+  ],
+  "exact_additive_noise_invariance": false,
+  "minimum_cosine": 0.97,
+  "limitation": "Relative floor normalization preserves approximate shape, not exact amplitude/SNR invariance; initial >.98 MFCC criterion failed at 625 Hz and remains explicitly disclosed."
+}

@@ -1,0 +1,66 @@
+{
+  "audio_file": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav",
+  "duration_seconds": 2.0,
+  "emulate_arduino_mic": false,
+  "region_prior": "global",
+  "total_windows": 3,
+  "detected_windows": 3,
+  "aedes_swarm_windows": 3,
+  "active_ratio_pct": 100.0,
+  "swarm_ratio_pct": 100.0,
+  "mosquito_present": true,
+  "aedes_swarm_detected": true,
+  "median_flight_f0_hz": 655.0,
+  "iqr_flight_f0_hz": 1.2,
+  "primary_genus": "Aedes",
+  "confirmed_genus": "Aedes",
+  "primary_species": "Aedes sierrensis",
+  "confirmed_species": "Aedes sierrensis",
+  "genus_distribution": {
+    "Aedes": 3
+  },
+  "species_distribution": {
+    "Aedes sierrensis": 3
+  },
+  "temporal_intervals": [
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 0.0,
+      "end_s": 1.99,
+      "duration_s": 1.99,
+      "windows_count": 3,
+      "median_f0_hz": 655.0,
+      "median_aedes_snr_db": 24.39,
+      "mean_presence_score": 0.8955,
+      "dominant_species": "Aedes sierrensis"
+    }
+  ],
+  "swarm_timeline": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.992,
+      "duration_s": 1.992,
+      "swarm_present": true,
+      "median_f0_hz": 655.0,
+      "mean_aedes_snr_db": 24.33,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    }
+  ],
+  "swarm_active_intervals": [
+    {
+      "start_s": 0.0,
+      "end_s": 1.992,
+      "duration_s": 1.992,
+      "swarm_present": true,
+      "median_f0_hz": 655.0,
+      "mean_aedes_snr_db": 24.33,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    }
+  ],
+  "timeline_resolution_s": 0.5,
+  "analysis_window_s": 0.992,
+  "unanalysed_tail_s": 0.008,
+  "timeline_interpretation": "Estimated offline classifier decisions, not entomological ground truth; interval smoothing uses the next window."
+}

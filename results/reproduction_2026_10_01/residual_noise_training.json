@@ -1,0 +1,13 @@
+{
+  "name": "residual_noise",
+  "epoch": 15,
+  "loss": 0.0622823905911954,
+  "validation_weighted_ba": 0.9067991189486222,
+  "validation_weighted_auc": 0.950161938933973,
+  "validation_loss": 0.35056143343984353,
+  "elapsed_s": 224.1248197555542,
+  "parameters": 2791873,
+  "calibration_cut": 0.2761689391633947,
+  "calibration_weighted_ba": 0.9519133651813545,
+  "checkpoint_sha256": "4e726b64ccb4372b77eb81bdd85b8c786deabf1fedebd8455504b4ef07a4620d"
+}

@@ -1,0 +1,4 @@
+model,task,precision,recall,specificity
+DR_BioL_CNN,"derived Ae aegypti vs 7 species, original argmax",0.9270197611279446,0.9617309390638799,0.9625018224230939
+DAT_CNN,"derived Ae aegypti vs 7 species, original argmax",0.9079597674202997,0.8979099205181044,0.9549205423531125
+MosquitoSong+ original notebook,derived Ae aegypti F or M vs remaining 6 labels,0.9206608199061799,0.8850980392156863,0.96984496124031

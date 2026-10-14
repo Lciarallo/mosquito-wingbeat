@@ -1,0 +1,13 @@
+{
+  "name": "residual_domain_swarm",
+  "epoch": 4,
+  "loss": 0.4083195876549272,
+  "validation_weighted_ba": 0.8670978234843274,
+  "validation_weighted_auc": 0.9410577613522255,
+  "validation_loss": 0.39668907856482843,
+  "elapsed_s": 47.30913186073303,
+  "parameters": 2791873,
+  "calibration_cut": 0.5824893844753694,
+  "calibration_weighted_ba": 0.9473585975309986,
+  "checkpoint_sha256": "7902f9a2fbeac6ce4d21654efb627e9a2374df6293c18dc98f10846e8b0eaaa9"
+}

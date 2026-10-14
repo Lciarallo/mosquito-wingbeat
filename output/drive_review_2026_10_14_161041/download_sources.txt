@@ -1,0 +1,6 @@
+acoustic_features_v5.py
+nested_species_ensemble_v5.py
+fetch_species_v5_fresh.py
+compare_species_v5.py
+scripts/predict_audio.py
+scripts/robust_audio_features.py

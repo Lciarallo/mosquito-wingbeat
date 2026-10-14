@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-10-01T21:21:16.564791+00:00",
+  "base_freeze_sha256": "bfcce802d3b53aaff8bb9b557a9d7876c455e98d3dd8764ac93e4ec511392384",
+  "strategy": "Soft voting: 7 singles, 63 weighted pairs, 35 equal triplets.",
+  "criterion": "Maximize minimum validation source/class recording-balanced recall + 0.01 globally balanced validation accuracy.",
+  "cut": "Choose calibration quantile threshold maximizing minimum source/class recall + 0.01 globally balanced calibration accuracy.",
+  "model_selection_partition": "validation",
+  "threshold_partition": "calibration",
+  "test_and_private_used_for_fitting": false,
+  "prior_evaluations_now_development_diagnostics": true,
+  "negative_only_fresh_test_cannot_estimate_positive_sensitivity": true,
+  "arduino_compiled": false
+}

@@ -1,0 +1,11 @@
+id,model,windows,forced_correct,correct_identifications,wrong_identifications,presence_candidate_windows
+220301,large_cnn,5,5,3,0,5
+220301,multisource_cnn,5,5,3,0,5
+220314,large_cnn,15,15,13,0,15
+220314,multisource_cnn,15,15,10,0,13
+220324,large_cnn,12,12,10,0,12
+220324,multisource_cnn,12,12,8,0,10
+220391,large_cnn,5,5,0,0,0
+220391,multisource_cnn,5,5,0,0,1
+220403,large_cnn,48,47,39,0,43
+220403,multisource_cnn,48,47,20,0,32

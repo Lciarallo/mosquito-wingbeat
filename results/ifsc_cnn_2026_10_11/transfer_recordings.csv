@@ -1,0 +1,18 @@
+path,group,truth,prediction,windows,correct
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles gambiae,29,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles minimus,40,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles minimus,30,False
+data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles minimus,31,False
+data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles minimus,34,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Aedes sierrensis,2,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Anopheles minimus,2,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Aedes sierrensis,2,False
+data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Aedes sierrensis,2,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,2,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles gambiae,2,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles albimanus,2,False
+data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles gambiae,2,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles gambiae,2,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Aedes aegypti,2,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles albimanus,2,False
+data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles gambiae,2,False

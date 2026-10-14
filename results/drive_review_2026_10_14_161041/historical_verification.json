@@ -1,0 +1,41 @@
+{
+  "checked_utc": "2026-10-14T16:26:21.545565+00:00",
+  "verification": {
+    "v1_freeze": {
+      "ok": true,
+      "files": null
+    },
+    "v2_freeze": {
+      "ok": true,
+      "files": null
+    },
+    "v3_freeze": {
+      "ok": true,
+      "files": null
+    },
+    "v4_freeze": {
+      "ok": true,
+      "files": null
+    },
+    "v2_history": {
+      "ok": true,
+      "files": 940
+    },
+    "v3_history": {
+      "ok": true,
+      "files": 1210
+    },
+    "v4_history": {
+      "ok": true,
+      "files": 1239
+    }
+  },
+  "baseline_files": 1633,
+  "unchanged_baseline_files": 1631,
+  "authorized_active_source_updates": [
+    "scripts/predict_audio.py",
+    "scripts/robust_audio_features.py"
+  ],
+  "historical_completion_manifests_unchanged": true,
+  "snapshots_rewritten": false
+}

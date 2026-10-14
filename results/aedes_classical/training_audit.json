@@ -1,0 +1,143 @@
+{
+  "frozen_utc": "2026-10-01T00:18:50.822335+00:00",
+  "models": [
+    {
+      "model": "logistic",
+      "validation_weighted_auc": 0.8613071839096139,
+      "config": {
+        "C": 1
+      },
+      "low": 0.277,
+      "high": 0.8009999999999999,
+      "frozen_utc": "2026-10-01T00:18:14.227872+00:00",
+      "sha256": "98e44c8ab00a4aa7ef2eb8445f19854f83684a01cb78c9fe6250f5d4b7811a1c",
+      "calibration": {
+        "windows": 4551,
+        "positive_windows": 329,
+        "negative_windows": 4222,
+        "unknown_windows": 0,
+        "forced_accuracy": 0.8222368710173589,
+        "forced_aedes_recall": 0.8601823708206687,
+        "forced_false_positive_rate": 0.1807200378967314,
+        "balanced_accuracy": 0.8397311664619687,
+        "auc": 0.9146963581989838,
+        "positive_emissions": 450,
+        "true_positive_emissions": 193,
+        "false_positive_emissions": 257,
+        "emitted_aedes_precision": 0.4288888888888889,
+        "emitted_aedes_recall": 0.5866261398176292,
+        "emitted_false_positive_rate": 0.06087162482235907,
+        "known_coverage": 0.7389584706657878,
+        "accepted_accuracy": 0.9188224799286352,
+        "false_negative_emissions": 16,
+        "unresolved_positive_emissions": 0
+      }
+    },
+    {
+      "model": "svm_rbf",
+      "validation_weighted_auc": 0.9033268655814022,
+      "config": {
+        "C": 10,
+        "gamma": "scale"
+      },
+      "low": 0.241,
+      "high": 0.722,
+      "frozen_utc": "2026-10-01T00:18:15.244259+00:00",
+      "sha256": "e8bda408122737969890b77e023e529ff3902049c7817ccb85b13600b6fd46b1",
+      "calibration": {
+        "windows": 4551,
+        "positive_windows": 329,
+        "negative_windows": 4222,
+        "unknown_windows": 0,
+        "forced_accuracy": 0.914963744232037,
+        "forced_aedes_recall": 0.9209726443768997,
+        "forced_false_positive_rate": 0.08550450023685457,
+        "balanced_accuracy": 0.9177340720700227,
+        "auc": 0.9714061098400475,
+        "positive_emissions": 470,
+        "true_positive_emissions": 283,
+        "false_positive_emissions": 187,
+        "emitted_aedes_precision": 0.6021276595744681,
+        "emitted_aedes_recall": 0.8601823708206687,
+        "emitted_false_positive_rate": 0.04429180483183325,
+        "known_coverage": 0.8778290485607558,
+        "accepted_accuracy": 0.9491864831038799,
+        "false_negative_emissions": 16,
+        "unresolved_positive_emissions": 0
+      }
+    },
+    {
+      "model": "extra_trees",
+      "validation_weighted_auc": 0.9030164695299403,
+      "config": {
+        "min_samples_leaf": 8
+      },
+      "low": 0.386,
+      "high": 0.761,
+      "frozen_utc": "2026-10-01T00:18:38.619238+00:00",
+      "sha256": "2686a629ab7934e320181f3530ec4959a81b51f4780f0c1d62bb379418bd6744",
+      "calibration": {
+        "windows": 4551,
+        "positive_windows": 329,
+        "negative_windows": 4222,
+        "unknown_windows": 0,
+        "forced_accuracy": 0.9070533948582729,
+        "forced_aedes_recall": 0.9331306990881459,
+        "forced_false_positive_rate": 0.09497868308858361,
+        "balanced_accuracy": 0.9190760079997812,
+        "auc": 0.9768984001877559,
+        "positive_emissions": 437,
+        "true_positive_emissions": 274,
+        "false_positive_emissions": 163,
+        "emitted_aedes_precision": 0.6270022883295194,
+        "emitted_aedes_recall": 0.8328267477203647,
+        "emitted_false_positive_rate": 0.03860729512079583,
+        "known_coverage": 0.914963744232037,
+        "accepted_accuracy": 0.9582132564841499,
+        "false_negative_emissions": 11,
+        "unresolved_positive_emissions": 0
+      }
+    },
+    {
+      "model": "gradient_boosting",
+      "validation_weighted_auc": 0.9181760394792675,
+      "config": {
+        "max_leaf_nodes": 31
+      },
+      "low": 0.243,
+      "high": 0.721,
+      "frozen_utc": "2026-10-01T00:18:50.096723+00:00",
+      "sha256": "b34cfa51e20242632e09ff3c1fc13cb1a751c0113a1476ce8e429bf02c5c9554",
+      "calibration": {
+        "windows": 4551,
+        "positive_windows": 329,
+        "negative_windows": 4222,
+        "unknown_windows": 0,
+        "forced_accuracy": 0.9230938255328499,
+        "forced_aedes_recall": 0.9361702127659575,
+        "forced_false_positive_rate": 0.07792515395547134,
+        "balanced_accuracy": 0.929122529405243,
+        "auc": 0.9809918807116869,
+        "positive_emissions": 470,
+        "true_positive_emissions": 290,
+        "false_positive_emissions": 180,
+        "emitted_aedes_precision": 0.6170212765957447,
+        "emitted_aedes_recall": 0.8814589665653495,
+        "emitted_false_positive_rate": 0.04263382283278067,
+        "known_coverage": 0.8874972533509119,
+        "accepted_accuracy": 0.9539489972765536,
+        "false_negative_emissions": 6,
+        "unresolved_positive_emissions": 0
+      }
+    }
+  ],
+  "selected_by_validation": "gradient_boosting",
+  "train_windows": 17391,
+  "validation_windows": 4901,
+  "calibration_windows": 4551,
+  "arduino_compiled": false,
+  "input_provenance": {
+    "segments_sha256": "511f65e4ed8b94829197d53ef452af802ffe34aee5620d8e355145ea87bfdff3",
+    "feature_code_sha256": "666d07394aec11508eb67d8b5fabef1c707ee6848f0725eab5541b793b148f99"
+  }
+}

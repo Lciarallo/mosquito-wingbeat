@@ -1,0 +1,13 @@
+{
+  "completed_utc": "2026-10-01T21:47:52.516042+00:00",
+  "original_windows": 39247,
+  "added_windows": 10466,
+  "added_files": 700,
+  "source_sha256": "07ba11a2dc20d01d34755a2effed11eccba2387b4ec2be10d9455e1ffe130079",
+  "segments_sha256": "a9749e25ebabf55523e18e699e8224eafd6f7282e9db119cdfd0186f246b701a",
+  "group_and_byte_partition_overlap": 0,
+  "feedback_training_only": true,
+  "private_in_training": false,
+  "all_cdmsc_aedes_excluded_from_training": true,
+  "arduino_compiled": false
+}

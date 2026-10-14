@@ -1,0 +1,29 @@
+--- Drive/robust_audio_features.py
++++ scripts/robust_audio_features.py
+@@ -114,10 +114,9 @@
+         )
+     )
+ 
+-    for h_freq in (60.0, 120.0, 180.0, 240.0, 300.0, 360.0):
+-        b_n, a_n = signal.iirnotch(h_freq, Q=30.0, fs=sr)
+-        y = signal.filtfilt(b_n, a_n, y)
+-
++    # Conditioning is confined to the harmonic diagnostic. The neural frontend
++    # receives original PCM, matching the frozen neural training representation.
++    y = precondition_bioacoustic_wave(w_norm, sr=sr).astype(np.float64)
+     f, t, Zxx = signal.stft(y, fs=sr, nperseg=2048, noverlap=1536, boundary=None, padded=False)
+     P = np.abs(Zxx) ** 2
+     band_all = (f >= 200.0) & (f <= 3500.0)
+@@ -285,10 +284,9 @@
+ 
+ 
+ def extract_robust_features(waves: np.ndarray, apply_cmvn: bool = True) -> np.ndarray:
+-    """Extrai características robustas combinando streaming FFT pré-condicionado e métricas de enxame."""
++    """Combine original-PCM neural features with an independently conditioned harmonic diagnostic."""
+     waves = np.atleast_2d(np.asarray(waves, dtype="float32"))
+-    clean_waves = np.stack([precondition_bioacoustic_wave(w, sr=SAMPLE_RATE) for w in waves])
+-    base_feats = arduino_frontend.features(clean_waves, replay_pcm=True)
++    base_feats = arduino_frontend.features(waves, replay_pcm=True)
+ 
+     extra_feats = []
+     for wave in waves:

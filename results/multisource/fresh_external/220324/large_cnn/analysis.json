@@ -1,0 +1,33 @@
+{
+  "evaluated_utc": "2026-09-30T22:37:12.428310+00:00",
+  "source": "https://zenodo.org/records/4904800",
+  "reference_species": "Aedes aegypti",
+  "label_source": "dataset_authors",
+  "model_sha256": "05905636b9b9ae729b87ec365e4812cea44f9834c0e4c258d198ac1871777a9e",
+  "model_unchanged": true,
+  "original_audio_sha256": "694b13294fb8da34d4a3ad47f3a7dc5fcbee7d296a49429a681e6f98955c907a",
+  "original_sample_rate": 44100,
+  "original_channels": 1,
+  "duration_s": 12.8,
+  "complete_windows": 12,
+  "analyzed_duration_s": 11.904,
+  "unprocessed_tail_s": 0.896,
+  "state_counts": {
+    "IDENTIFICACAO_PROVISORIA": 10,
+    "INCERTO": 2
+  },
+  "emitted_species_counts": {
+    "Aedes aegypti": 10
+  },
+  "correctly_identified_windows": 10,
+  "incorrectly_identified_windows": 0,
+  "forced_correct_windows": 12,
+  "presence_candidate_windows": 12,
+  "resampling_applied": true,
+  "external_volume_normalization": false,
+  "internal_per_window_rms_normalization": true,
+  "no_padding_or_repetition": true,
+  "noise_filtering": false,
+  "arduino_compiled": false,
+  "physical_board_tested": false
+}

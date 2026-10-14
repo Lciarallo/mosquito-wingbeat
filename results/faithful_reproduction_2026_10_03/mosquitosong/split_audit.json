@@ -1,0 +1,238 @@
+{
+  "source_notebook_sha256": "55684d682f37077a81709d82523fcac2dfdb72f62200844b9f28fe3946af63e0",
+  "source_functions_unchanged": true,
+  "method": "Original split_data; librosa load traced without changing its return; numpy views mapped by memory address.",
+  "individual_mosquito_ids_available": false,
+  "folds": [
+    {
+      "fold": 1,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1080,
+        "val": 154,
+        "test": 64
+      },
+      "shared_recordings": {
+        "train_val": 2,
+        "train_test": 12,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 0,
+        "train_test": 16,
+        "val_test": 22
+      }
+    },
+    {
+      "fold": 2,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1140,
+        "val": 145,
+        "test": 56
+      },
+      "shared_recordings": {
+        "train_val": 29,
+        "train_test": 12,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 55,
+        "train_test": 14,
+        "val_test": 22
+      }
+    },
+    {
+      "fold": 3,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1119,
+        "val": 121,
+        "test": 76
+      },
+      "shared_recordings": {
+        "train_val": 28,
+        "train_test": 13,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 51,
+        "train_test": 15,
+        "val_test": 20
+      }
+    },
+    {
+      "fold": 4,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1082,
+        "val": 168,
+        "test": 65
+      },
+      "shared_recordings": {
+        "train_val": 28,
+        "train_test": 11,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 54,
+        "train_test": 15,
+        "val_test": 22
+      }
+    },
+    {
+      "fold": 5,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1088,
+        "val": 157,
+        "test": 66
+      },
+      "shared_recordings": {
+        "train_val": 28,
+        "train_test": 10,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 49,
+        "train_test": 13,
+        "val_test": 21
+      }
+    },
+    {
+      "fold": 6,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1079,
+        "val": 159,
+        "test": 66
+      },
+      "shared_recordings": {
+        "train_val": 28,
+        "train_test": 10,
+        "val_test": 11
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 46,
+        "train_test": 14,
+        "val_test": 18
+      }
+    },
+    {
+      "fold": 7,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1078,
+        "val": 162,
+        "test": 67
+      },
+      "shared_recordings": {
+        "train_val": 27,
+        "train_test": 11,
+        "val_test": 10
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 47,
+        "train_test": 16,
+        "val_test": 22
+      }
+    },
+    {
+      "fold": 8,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1075,
+        "val": 160,
+        "test": 70
+      },
+      "shared_recordings": {
+        "train_val": 24,
+        "train_test": 10,
+        "val_test": 12
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 52,
+        "train_test": 13,
+        "val_test": 21
+      }
+    },
+    {
+      "fold": 9,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1069,
+        "val": 162,
+        "test": 63
+      },
+      "shared_recordings": {
+        "train_val": 28,
+        "train_test": 9,
+        "val_test": 9
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 47,
+        "train_test": 12,
+        "val_test": 17
+      }
+    },
+    {
+      "fold": 10,
+      "windows": {
+        "train": 12359,
+        "val": 1531,
+        "test": 600
+      },
+      "recordings": {
+        "train": 1076,
+        "val": 163,
+        "test": 71
+      },
+      "shared_recordings": {
+        "train_val": 42,
+        "train_test": 11,
+        "val_test": 0
+      },
+      "cross_split_overlapping_window_pairs": {
+        "train_val": 78,
+        "train_test": 14,
+        "val_test": 0
+      }
+    }
+  ]
+}

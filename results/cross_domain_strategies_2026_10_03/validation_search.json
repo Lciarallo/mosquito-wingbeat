@@ -1,0 +1,103 @@
+[
+  {
+    "name": "ridge_control",
+    "best_epoch": 4,
+    "cut": -0.18858760446309897,
+    "parameters": 5652134,
+    "sha256": "eca75e1c2f5c0b37d15ca87c34ce2fee415596b4193a2bd5480109a056badbfc",
+    "validation_precision": 0.1963470319634703,
+    "validation_recall": 0.7136929460580913,
+    "validation_macro_f1": 0.6133894100371069,
+    "validation_cells": {
+      "dryad:0": 0.934470055492326,
+      "dryad:1": 0.5416666666666667,
+      "humbug:0": 0.7773220172753162,
+      "humbug:1": 0.8879114452798664
+    },
+    "validation_auc": {
+      "dryad": 0.8842193274678731,
+      "humbug": 0.9126710562000948
+    },
+    "selection_score": 0.580933793975594
+  },
+  {
+    "name": "ridge_contrast",
+    "best_epoch": 9,
+    "cut": -0.8289868795871725,
+    "parameters": 5652134,
+    "sha256": "54107f36801d91a551019d8e157ad232a112af6cfe16102a95350f82f343a1e4",
+    "validation_precision": 0.19021739130434784,
+    "validation_recall": 0.8713692946058091,
+    "validation_macro_f1": 0.6063651859316102,
+    "validation_cells": {
+      "dryad:0": 0.8796710379382716,
+      "dryad:1": 0.7833333333333333,
+      "humbug:0": 0.7240014928180959,
+      "humbug:1": 0.9631495405179616
+    },
+    "validation_auc": {
+      "dryad": 0.9188510837761256,
+      "humbug": 0.9311890292148343
+    },
+    "selection_score": 0.7658784353756917
+  },
+  {
+    "name": "ridge_contrast_swarm",
+    "best_epoch": 10,
+    "cut": -0.5486393296718594,
+    "parameters": 5652134,
+    "sha256": "8e255401ac0416a3889974c05e235e79111d423bb751503dd70166c22e166d23",
+    "validation_precision": 0.21019771071800208,
+    "validation_recall": 0.8381742738589212,
+    "validation_macro_f1": 0.6257683781235034,
+    "validation_cells": {
+      "dryad:0": 0.9199655814348764,
+      "dryad:1": 0.7583333333333334,
+      "humbug:0": 0.7676054295687317,
+      "humbug:1": 0.9248955722639935
+    },
+    "validation_auc": {
+      "dryad": 0.9161610201966495,
+      "humbug": 0.9166761203777402
+    },
+    "selection_score": 0.8004683322908451
+  },
+  {
+    "name": "svm_multipitch",
+    "cut": -0.18639284012759597,
+    "sha256": "a40e26f52743b24bbb53169b459e1ad65f323daf9cbf70ee4a3f97d5f7b87aad",
+    "validation_precision": 0.07612293144208038,
+    "validation_recall": 0.6680497925311203,
+    "validation_macro_f1": 0.44553973700405364,
+    "validation_cells": {
+      "dryad:0": 0.6590149491233994,
+      "dryad:1": 0.6333333333333334,
+      "humbug:0": 0.6301879325236828,
+      "humbug:1": 0.7455221386800336
+    },
+    "validation_auc": {
+      "dryad": 0.6979717818845566,
+      "humbug": 0.7549103437185101
+    },
+    "selection_score": 0.6635386619444383
+  },
+  {
+    "name": "trees_multipitch",
+    "cut": 0.3852094961345404,
+    "sha256": "cc48aa55b821c27e1d32ddf2965a44c8043a04209446dc58868c422225440da1",
+    "validation_precision": 0.08468872686483454,
+    "validation_recall": 0.6265560165975104,
+    "validation_macro_f1": 0.47465117911736665,
+    "validation_cells": {
+      "dryad:0": 0.68964246271861,
+      "dryad:1": 0.65,
+      "humbug:0": 0.696293064061867,
+      "humbug:1": 0.6850208855472013
+    },
+    "validation_auc": {
+      "dryad": 0.7210170616051428,
+      "humbug": 0.7661289200824206
+    },
+    "selection_score": 0.684011955154096
+  }
+]

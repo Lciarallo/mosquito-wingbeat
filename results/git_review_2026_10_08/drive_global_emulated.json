@@ -1,0 +1,31 @@
+{
+  "audio_file": "drive_audio.wav",
+  "duration_seconds": 106.24,
+  "emulate_arduino_mic": true,
+  "region_prior": "global",
+  "total_windows": 211,
+  "detected_windows": 62,
+  "active_ratio_pct": 29.38,
+  "mosquito_present": true,
+  "median_flight_f0_hz": 609.4,
+  "primary_genus": "Anopheles",
+  "confirmed_genus": "Anopheles",
+  "primary_species": "Culex tarsalis",
+  "confirmed_species": null,
+  "genus_distribution": {
+    "Anopheles": 60,
+    "Culex": 2
+  },
+  "species_distribution": {
+    "Culex tarsalis": 27,
+    "Anopheles arabiensis": 13,
+    "Anopheles gambiae": 11,
+    "Anopheles minimus": 3,
+    "Aedes sierrensis": 3,
+    "Aedes albopictus": 3,
+    "Anopheles stephensi": 1,
+    "Aedes aegypti": 1
+  },
+  "confirmed_distribution": {},
+  "reference": "User-reported Aedes aegypti; no independent species or temporal annotations established in this audit."
+}

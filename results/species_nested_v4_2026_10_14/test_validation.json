@@ -1,0 +1,7 @@
+{
+  "exit_code": 0,
+  "summary": "202 passed, 49273 warnings in 37.52s",
+  "command": "PYTHONPATH=. python -m pytest tests/",
+  "old_tests_unchanged": true,
+  "passed": 202
+}

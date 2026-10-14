@@ -1,0 +1,68 @@
+[
+  {
+    "model": "logistic",
+    "config": {
+      "C": 0.1
+    },
+    "validation_weighted_auc": 0.8603511724157378,
+    "seconds": 0.09696364402770996
+  },
+  {
+    "model": "logistic",
+    "config": {
+      "C": 1
+    },
+    "validation_weighted_auc": 0.8613071839096139,
+    "seconds": 0.13638567924499512
+  },
+  {
+    "model": "svm_rbf",
+    "config": {
+      "C": 1,
+      "gamma": "scale"
+    },
+    "validation_weighted_auc": 0.8978850004387066,
+    "seconds": 6.1188623905181885
+  },
+  {
+    "model": "svm_rbf",
+    "config": {
+      "C": 10,
+      "gamma": "scale"
+    },
+    "validation_weighted_auc": 0.9033268655814022,
+    "seconds": 4.04321551322937
+  },
+  {
+    "model": "extra_trees",
+    "config": {
+      "min_samples_leaf": 2
+    },
+    "validation_weighted_auc": 0.8979594889762781,
+    "seconds": 5.950480222702026
+  },
+  {
+    "model": "extra_trees",
+    "config": {
+      "min_samples_leaf": 8
+    },
+    "validation_weighted_auc": 0.9030164695299403,
+    "seconds": 5.011965274810791
+  },
+  {
+    "model": "gradient_boosting",
+    "config": {
+      "max_leaf_nodes": 15
+    },
+    "validation_weighted_auc": 0.9150186605473959,
+    "seconds": 0.6289300918579102
+  },
+  {
+    "model": "gradient_boosting",
+    "config": {
+      "max_leaf_nodes": 31
+    },
+    "validation_weighted_auc": 0.9181760394792675,
+    "seconds": 1.0310454368591309
+  }
+]

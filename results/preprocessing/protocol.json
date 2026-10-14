@@ -1,0 +1,34 @@
+{
+  "started_utc": "2026-09-30T22:51:46.830208+00:00",
+  "model_sha256": "c754c0d48e5ceb43946bc6e3b1b4c3ff44ade2c693becc75be785ee540b43acf",
+  "methods": {
+    "original": {
+      "description": "Existing model frontend only"
+    },
+    "highpass_120": {
+      "description": "Butterworth highpass 120Hz, order4, forward/backward without padding"
+    },
+    "bandpass_150_3500": {
+      "description": "Butterworth bandpass 150..3500Hz, order4, forward/backward without padding"
+    },
+    "bandpass_250_2500": {
+      "description": "Butterworth bandpass 250..2500Hz, order4, forward/backward without padding"
+    },
+    "spectral_mild": {
+      "description": "Within-window spectral power subtraction, noise q20%, alpha0.75, gain floor0.5"
+    },
+    "bandpass_spectral": {
+      "description": "150..3500Hz bandpass followed by mild spectral subtraction"
+    }
+  },
+  "methods_defined_before_results": true,
+  "weights_and_thresholds_fixed": true,
+  "original_quality_guards_preserved": true,
+  "model_already_removes_dc_and_normalizes_rms": true,
+  "no_retraining": true,
+  "no_Arduino_compilation": true,
+  "exploratory_previously_examined_tests": true,
+  "no_filtered_audio_published": true,
+  "noncausal_offline_filters": true,
+  "no_waveform_padding_repetition_duration_extension": true
+}

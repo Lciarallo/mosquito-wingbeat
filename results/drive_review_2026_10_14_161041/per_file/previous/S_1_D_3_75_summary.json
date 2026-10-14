@@ -1,0 +1,73 @@
+{
+  "audio_file": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/cross_domain_strategy_test_2026_10_03/S_1_D_3_75.wav",
+  "duration_seconds": 29.72,
+  "emulate_arduino_mic": false,
+  "region_prior": "global",
+  "total_windows": 58,
+  "detected_windows": 58,
+  "aedes_swarm_windows": 58,
+  "active_ratio_pct": 100.0,
+  "swarm_ratio_pct": 100.0,
+  "mosquito_present": true,
+  "aedes_swarm_detected": true,
+  "median_flight_f0_hz": 530.0,
+  "iqr_flight_f0_hz": 21.9,
+  "primary_genus": "Aedes",
+  "confirmed_genus": "Aedes",
+  "primary_species": "Aedes aegypti",
+  "confirmed_species": "Aedes aegypti",
+  "genus_distribution": {
+    "Aedes": 37,
+    "Anopheles": 21
+  },
+  "species_distribution": {
+    "Aedes aegypti": 34,
+    "Anopheles arabiensis": 10,
+    "Anopheles farauti": 6,
+    "Anopheles gambiae": 5,
+    "Anopheles dirus": 1,
+    "Anopheles albimanus": 1,
+    "Anopheles merus": 1
+  },
+  "temporal_intervals": [
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": true,
+      "start_s": 0.0,
+      "end_s": 29.49,
+      "duration_s": 29.49,
+      "windows_count": 58,
+      "median_f0_hz": 530.0,
+      "median_aedes_snr_db": 8.61,
+      "mean_presence_score": 0.9409,
+      "dominant_species": "Aedes aegypti"
+    }
+  ],
+  "swarm_timeline": [
+    {
+      "start_s": 0.0,
+      "end_s": 29.492,
+      "duration_s": 29.492,
+      "swarm_present": true,
+      "median_f0_hz": 530.0,
+      "mean_aedes_snr_db": 8.42155172413793,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    }
+  ],
+  "swarm_active_intervals": [
+    {
+      "start_s": 0.0,
+      "end_s": 29.492,
+      "duration_s": 29.492,
+      "swarm_present": true,
+      "median_f0_hz": 530.0,
+      "mean_aedes_snr_db": 8.42155172413793,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    }
+  ],
+  "timeline_resolution_s": 0.5,
+  "analysis_window_s": 0.992,
+  "unanalysed_tail_s": 0.229625,
+  "timeline_interpretation": "Estimated offline classifier decisions, not entomological ground truth; interval smoothing uses the next window."
+}

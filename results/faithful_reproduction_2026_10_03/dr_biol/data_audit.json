@@ -1,0 +1,87 @@
+{
+  "train": {
+    "shape": [
+      42216,
+      1,
+      200,
+      64
+    ],
+    "dtype": "float32",
+    "species_counts": {
+      "3": 5129,
+      "4": 1381,
+      "0": 12670,
+      "6": 1023,
+      "5": 595,
+      "1": 5732,
+      "2": 13242,
+      "7": 2444
+    },
+    "domain_counts": {
+      "0": 26103,
+      "1": 467,
+      "2": 12046,
+      "3": 3600
+    },
+    "duplicate_feature_rows": 0
+  },
+  "val": {
+    "shape": [
+      7652,
+      1,
+      200,
+      64
+    ],
+    "dtype": "float32",
+    "species_counts": {
+      "3": 633,
+      "4": 213,
+      "0": 3232,
+      "6": 233,
+      "5": 191,
+      "1": 898,
+      "2": 1939,
+      "7": 313
+    },
+    "domain_counts": {
+      "0": 5487,
+      "1": 73,
+      "2": 1684,
+      "3": 408
+    },
+    "duplicate_feature_rows": 0
+  },
+  "test": {
+    "shape": [
+      10256,
+      1,
+      200,
+      64
+    ],
+    "dtype": "float32",
+    "species_counts": {
+      "3": 1092,
+      "4": 289,
+      "0": 3057,
+      "6": 205,
+      "5": 218,
+      "1": 1432,
+      "2": 3397,
+      "7": 566
+    },
+    "domain_counts": {
+      "0": 6098,
+      "1": 115,
+      "2": 2997,
+      "3": 1046
+    },
+    "duplicate_feature_rows": 0
+  },
+  "identical_feature_overlap": {
+    "train_val": 0,
+    "train_test": 0,
+    "val_test": 0
+  },
+  "recording_ids_available": false,
+  "limitation": "Identical feature hashes do not establish recording-level independence."
+}

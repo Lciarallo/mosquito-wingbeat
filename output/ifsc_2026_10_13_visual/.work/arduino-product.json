@@ -1,0 +1,162 @@
+{
+  "id": 7861187575959,
+  "title": "Arduino Nano 33 BLE Sense Rev2",
+  "handle": "nano-33-ble-sense-rev2",
+  "description": "<p style=\"text-align: justify;\">The Arduino Nano 33 BLE Sense Rev2 is Arduino’s 3.3V AI enabled board in the smallest available form factor with a set of sensors that will allow you without any external hardware to start programming your next project, right away.</p>\n\n<p style=\"text-align: justify;\">With the Arduino Nano 33 BLE Sense Rev2, you can:</p>\n\n<ul>\n\t<li style=\"text-align: justify;\">Build wearable devices that using AI can recognize movements.</li>\n\t<li style=\"text-align: justify;\">Build a room temperature monitoring device that can suggest or modify changes in the thermostat.</li>\n\t<li style=\"text-align: justify;\">Build a gesture or voice recognition device using the microphone or the gesture sensor together with the AI capabilities of the board.</li>\n</ul>\n\n<p style=\"text-align: justify;\">The main feature of this board, besides the complete selection of sensors, is the possibility of running Edge Computing applications (AI) on it using TinyML. Learn how to use the Tensor Flow Lite library <a data-tabindex-counter=\"15\" data-tabindex-value=\"none\" href=\"https://docs.arduino.cc/tutorials/nano-33-ble-sense/get-started-with-machine-learning\" tabindex=\"-1\">following this instructions</a> or learn how to train your board using <a data-tabindex-counter=\"15\" data-tabindex-value=\"none\" href=\"https://docs.arduino.cc/tutorials/nano-33-ble-sense/edge-impulse\" tabindex=\"-1\">Edge Impulse</a>. </p>\n",
+  "published_at": "2022-12-21T15:22:04+01:00",
+  "created_at": "2022-11-29T09:20:03+01:00",
+  "vendor": "Arduino",
+  "type": "Board",
+  "tags": [
+    "Artificial Intelligence",
+    "brands_Arduino",
+    "bu_mkr",
+    "Environment monitoring",
+    "Nano",
+    "Sensors&Environment",
+    "Wearable"
+  ],
+  "price": 4340,
+  "price_min": 4340,
+  "price_max": 4340,
+  "available": true,
+  "price_varies": false,
+  "compare_at_price": 0,
+  "compare_at_price_min": 0,
+  "compare_at_price_max": 0,
+  "compare_at_price_varies": false,
+  "variants": [
+    {
+      "id": 42739678150807,
+      "title": "Default Title",
+      "option1": "Default Title",
+      "option2": null,
+      "option3": null,
+      "sku": "ABX00069",
+      "requires_shipping": true,
+      "taxable": true,
+      "featured_image": null,
+      "available": true,
+      "name": "Arduino Nano 33 BLE Sense Rev2",
+      "public_title": null,
+      "options": [
+        "Default Title"
+      ],
+      "price": 4340,
+      "weight": 20,
+      "compare_at_price": 0,
+      "inventory_management": "shopify",
+      "barcode": "7630049203488",
+      "quantity_rule": {
+        "min": 1,
+        "max": null,
+        "increment": 1
+      },
+      "quantity_price_breaks": [],
+      "requires_selling_plan": false,
+      "selling_plan_allocations": []
+    }
+  ],
+  "images": [
+    "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_02.front.jpg?v=1727100949",
+    "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_01.iso.jpg?v=1727100949",
+    "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_03.back.jpg?v=1727100949",
+    "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_04.unbox.jpg?v=1727100949",
+    "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_05.box.jpg?v=1727100949"
+  ],
+  "featured_image": "//cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_02.front.jpg?v=1727100949",
+  "options": [
+    {
+      "name": "Title",
+      "position": 1,
+      "values": [
+        "Default Title"
+      ]
+    }
+  ],
+  "url": "/products/nano-33-ble-sense-rev2",
+  "media": [
+    {
+      "alt": "Front view of the Arduino Nano 33 BLE Sense Rev2, showing the bare board's u-blox NINA-B306 module and micro-USB connector without pin headers.",
+      "id": 55106514747729,
+      "position": 1,
+      "preview_image": {
+        "aspect_ratio": 1.333,
+        "height": 750,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_02.front.jpg?v=1727100949"
+      },
+      "aspect_ratio": 1.333,
+      "height": 750,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_02.front.jpg?v=1727100949",
+      "width": 1000
+    },
+    {
+      "alt": "Angled view of the Arduino Nano 33 BLE Sense Rev2, showing the unpopulated through-hole pads, onboard sensors, and u-blox radio module.",
+      "id": 55106514780497,
+      "position": 2,
+      "preview_image": {
+        "aspect_ratio": 1.333,
+        "height": 750,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_01.iso.jpg?v=1727100949"
+      },
+      "aspect_ratio": 1.333,
+      "height": 750,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_01.iso.jpg?v=1727100949",
+      "width": 1000
+    },
+    {
+      "alt": "Back view of the Arduino Nano 33 BLE Sense Rev2, showing the pin labels, Arduino logo, and FCC/IC certification markings on the PCB.",
+      "id": 55106514813265,
+      "position": 3,
+      "preview_image": {
+        "aspect_ratio": 1.333,
+        "height": 750,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_03.back.jpg?v=1727100949"
+      },
+      "aspect_ratio": 1.333,
+      "height": 750,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_03.back.jpg?v=1727100949",
+      "width": 1000
+    },
+    {
+      "alt": "Unboxed view of the Arduino Nano 33 BLE Sense Rev2, showing the board beside two loose pin header strips ready for soldering.",
+      "id": 55106514846033,
+      "position": 4,
+      "preview_image": {
+        "aspect_ratio": 1.333,
+        "height": 750,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_04.unbox.jpg?v=1727100949"
+      },
+      "aspect_ratio": 1.333,
+      "height": 750,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_04.unbox.jpg?v=1727100949",
+      "width": 1000
+    },
+    {
+      "alt": "Retail box view of the Arduino Nano 33 BLE Sense Rev2, showing the front and back of the packaging with board specifications listed.",
+      "id": 55106514878801,
+      "position": 5,
+      "preview_image": {
+        "aspect_ratio": 1.333,
+        "height": 750,
+        "width": 1000,
+        "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_05.box.jpg?v=1727100949"
+      },
+      "aspect_ratio": 1.333,
+      "height": 750,
+      "media_type": "image",
+      "src": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_05.box.jpg?v=1727100949",
+      "width": 1000
+    }
+  ],
+  "requires_selling_plan": false,
+  "selling_plan_groups": []
+}

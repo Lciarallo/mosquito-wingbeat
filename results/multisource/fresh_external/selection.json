@@ -1,0 +1,74 @@
+{
+  "selection_utc": "2026-09-30T22:36:15.437151+00:00",
+  "frozen_utc": "2026-09-30T22:33:01.763392+00:00",
+  "model_sha256": "c754c0d48e5ceb43946bc6e3b1b4c3ff44ade2c693becc75be785ee540b43acf",
+  "source": "https://zenodo.org/records/4904800",
+  "rule": "First five distinct Aedes aegypti source groups ordered by excerpt ID, >=2.976s, recorded >=2018, excluding all previously selected 307 excerpts and their original source groups. Chosen by metadata before inference.",
+  "files": [
+    {
+      "id": 220301,
+      "group": "Tanzania|13-03-20 00:00|IFA_40_22_1582.wav",
+      "reference_species": "Aedes aegypti",
+      "length_s": 5.12,
+      "gender": "Female",
+      "method": "LC",
+      "mic_type": "telinga",
+      "path": "tmp/multisource_fresh/220301.wav",
+      "sha256": "8850163c45d510fbc9a0de7f5b7a609a15f4018dea6a8dbd46284b72d55a26de",
+      "archive": "humbugdb_neurips_2021_3.zip",
+      "crc32": 358554004
+    },
+    {
+      "id": 220314,
+      "group": "Tanzania|13-03-20 00:00|IFA_40_13_1573.wav",
+      "reference_species": "Aedes aegypti",
+      "length_s": 15.36,
+      "gender": "Female",
+      "method": "LC",
+      "mic_type": "telinga",
+      "path": "tmp/multisource_fresh/220314.wav",
+      "sha256": "3a1454468640df9f8e963e057b49c293cc393974b3f95188c08a60ca4d051eab",
+      "archive": "humbugdb_neurips_2021_3.zip",
+      "crc32": 1053830887
+    },
+    {
+      "id": 220324,
+      "group": "Tanzania|13-03-20 00:00|IFA_40_14_1574.wav",
+      "reference_species": "Aedes aegypti",
+      "length_s": 12.8,
+      "gender": "Female",
+      "method": "LC",
+      "mic_type": "telinga",
+      "path": "tmp/multisource_fresh/220324.wav",
+      "sha256": "694b13294fb8da34d4a3ad47f3a7dc5fcbee7d296a49429a681e6f98955c907a",
+      "archive": "humbugdb_neurips_2021_3.zip",
+      "crc32": 2322324479
+    },
+    {
+      "id": 220391,
+      "group": "Tanzania|21-03-20 00:00|IFA_42_26_1666.wav",
+      "reference_species": "Aedes aegypti",
+      "length_s": 5.12,
+      "gender": "Female",
+      "method": "LC",
+      "mic_type": "telinga",
+      "path": "tmp/multisource_fresh/220391.wav",
+      "sha256": "e7a1e8371abc7227f2ecdb6543c93528a6c41f56f6d975b2baf1e6f90d2aa18a",
+      "archive": "humbugdb_neurips_2021_3.zip",
+      "crc32": 541288821
+    },
+    {
+      "id": 220403,
+      "group": "Tanzania|21-03-20 00:00|IFA_42_36_1676.wav",
+      "reference_species": "Aedes aegypti",
+      "length_s": 48.58,
+      "gender": "Female",
+      "method": "LC",
+      "mic_type": "telinga",
+      "path": "tmp/multisource_fresh/220403.wav",
+      "sha256": "cda806c31fe1c887e7526a8ceca10cc43efd1f306c1640167f39813eedeb6740",
+      "archive": "humbugdb_neurips_2021_3.zip",
+      "crc32": 3671143468
+    }
+  ]
+}

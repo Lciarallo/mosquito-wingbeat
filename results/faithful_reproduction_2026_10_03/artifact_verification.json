@@ -1,0 +1,29 @@
+{
+  "author_repositories_unmodified": true,
+  "author_weights_unmodified": true,
+  "training_rerun": false,
+  "arduino_compiled": false,
+  "private_raw_audio_exported": false,
+  "notebook_code_cells": 3,
+  "notebook_errors": 0,
+  "source_sha256": {
+    "fetch_faithful_dr_biol.py": "4e6ea567d800138d4d65848d988f7d09f30c648e18f95a26ca6a64e499c40c8f",
+    "run_author_dr_biol.py": "ce0a5d30ea7047a01ff85405fc6d45118b082192166ace3a565cc60979baf3da",
+    "run_author_mosquitosong.py": "a94a642717bd0279f609c36741c69b3246984d6540dc0daa11086755200a7a8d",
+    "audit_author_mosquitosong.py": "f1f88579aaa4f33df4632e7a3105194d137fe0150454395c344864fd9bc8c916",
+    "evaluate_author_mosquitosong_external.py": "f2318fe376b84651b452107de63f2ba762f42c56203426e26b8c982ba68ab7b0",
+    "build_faithful_reproduction_artifacts.py": "a247b75bae7ebdaa289e05edc7d4b48fd62ace1574449be15bb4da6cbeaebf52"
+  },
+  "artifact_sha256": {
+    "reports/reproducao_estudos_originais_2026_10_03.md": "a787bc59e02234034e7beab5cb0deab88b667258f5fbe6dca016f8e8e740f38b",
+    "reproducao_estudos_originais_2026_10_03.ipynb": "197a256a1cd6a46f7997633a182a1799321529f572d6a9bcf5e73025013e35f6",
+    "reproducao_estudos_originais_2026_10_03.html": "3851d04a90373358f4b345d17e5247eccd5da50a0fa4440f2e4bd3b974ee4562"
+  },
+  "device_files_and_previous_models_sha256_match": true,
+  "validation": {
+    "provenance_tests_passed": 8,
+    "notebook_code_cells_executed": 3,
+    "notebook_errors": 0,
+    "figures_visually_verified": true
+  }
+}

@@ -1,0 +1,7 @@
+method,windows,forced_Aedes,emitted_Aedes
+original,146,14,0
+highpass_120,146,0,0
+bandpass_150_3500,146,0,0
+bandpass_250_2500,146,6,0
+spectral_mild,146,14,0
+bandpass_spectral,146,0,0

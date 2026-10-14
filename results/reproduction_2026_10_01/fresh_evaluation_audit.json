@@ -1,0 +1,10 @@
+{
+  "completed_utc": "2026-10-01T21:13:59.550156+00:00",
+  "selection_sha256": "81d94ccba48ec5595c6200ca56c4128ccd22f82365ff0b01374b81ea5b16c7dd",
+  "source_group_novelty_checked": true,
+  "duplicate_sha256_excluded": true,
+  "files": 19,
+  "selected_model": "residual_noise",
+  "no_refit": true,
+  "pnas_limit": "Positive pair presence; not independently annotated per-window flight."
+}

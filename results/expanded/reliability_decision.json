@@ -1,0 +1,17 @@
+{
+  "status": "NOT_RELIABLE_FOR_DEPLOYMENT",
+  "arduino_compile_allowed": false,
+  "model_sha256": "475a978d597c62690dc9bba3f6fb4196804dc23084ec62721a529f87e3246a40",
+  "fresh_search_after_model_freeze": true,
+  "fresh_source": "MosquitoSong+",
+  "fresh_reference_species": "Aedes aegypti",
+  "fresh_correct_identifications": 0,
+  "private_swarm_correct_identifications": 0,
+  "private_label_source": "user_reported_Aedes_aegypti",
+  "reasons": [
+    "No species identification in newly obtained MosquitoSong recording",
+    "No species identification in user-reported Aedes swarm",
+    "Accepted identification accuracy decreased on original Dryad test",
+    "External holdout covers only four of the twenty classes"
+  ]
+}

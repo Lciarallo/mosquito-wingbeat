@@ -1,0 +1,18 @@
+{
+  "created": "2026-10-02T16:50:29.337814+00:00",
+  "training_sources": [
+    "dryad",
+    "humbug",
+    "dryad+humbug"
+  ],
+  "methods": [
+    "logistic",
+    "svm_rbf",
+    "extra_trees"
+  ],
+  "selection": "validation balanced accuracy; thresholds calibration balanced accuracy only",
+  "historical_tests": true,
+  "private_audio_training": false,
+  "arduino_compiled": false,
+  "limitation": "Previously inspected tests and Drive are retrospective. Group identities depend on source metadata; no biological independence guarantee."
+}

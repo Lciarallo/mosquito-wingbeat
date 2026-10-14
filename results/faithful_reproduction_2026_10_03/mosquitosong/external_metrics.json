@@ -1,0 +1,1304 @@
+[
+  {
+    "fold": 1,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        684,
+        23,
+        0
+      ]
+    ],
+    "tp": 23,
+    "tn": 0,
+    "fp": 0,
+    "fn": 684,
+    "recall": 0.03253182461103253,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 1,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        964,
+        2,
+        0
+      ],
+      [
+        3262,
+        21,
+        0
+      ]
+    ],
+    "tp": 21,
+    "tn": 964,
+    "fp": 2,
+    "fn": 3262,
+    "recall": 0.006396588486140725,
+    "specificity": 0.9979296066252588,
+    "precision": 0.9130434782608695,
+    "balanced_accuracy": 0.5021630975556998,
+    "roc_auc": 0.6944602630150047,
+    "positive_only": false
+  },
+  {
+    "fold": 1,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        102,
+        3,
+        2
+      ]
+    ],
+    "tp": 3,
+    "tn": 0,
+    "fp": 0,
+    "fn": 102,
+    "recall": 0.028037383177570093,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 1,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        488,
+        5,
+        0
+      ]
+    ],
+    "tp": 5,
+    "tn": 148,
+    "fp": 0,
+    "fn": 488,
+    "recall": 0.010141987829614604,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 0.5050709939148073,
+    "roc_auc": 0.7262074447672824,
+    "positive_only": false
+  },
+  {
+    "fold": 2,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        653,
+        54,
+        0
+      ]
+    ],
+    "tp": 54,
+    "tn": 0,
+    "fp": 0,
+    "fn": 653,
+    "recall": 0.07637906647807638,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 2,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        963,
+        3,
+        0
+      ],
+      [
+        3264,
+        19,
+        0
+      ]
+    ],
+    "tp": 19,
+    "tn": 963,
+    "fp": 3,
+    "fn": 3264,
+    "recall": 0.005787389582698751,
+    "specificity": 0.9968944099378882,
+    "precision": 0.8636363636363636,
+    "balanced_accuracy": 0.5013408997602935,
+    "roc_auc": 0.5656282537117934,
+    "positive_only": false
+  },
+  {
+    "fold": 2,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        97,
+        8,
+        2
+      ]
+    ],
+    "tp": 8,
+    "tn": 0,
+    "fp": 0,
+    "fn": 97,
+    "recall": 0.07476635514018691,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 2,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5241488953456499,
+    "positive_only": false
+  },
+  {
+    "fold": 3,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        681,
+        26,
+        0
+      ]
+    ],
+    "tp": 26,
+    "tn": 0,
+    "fp": 0,
+    "fn": 681,
+    "recall": 0.036775106082036775,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 3,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        963,
+        3,
+        0
+      ],
+      [
+        3258,
+        25,
+        0
+      ]
+    ],
+    "tp": 25,
+    "tn": 963,
+    "fp": 3,
+    "fn": 3258,
+    "recall": 0.007614986293024673,
+    "specificity": 0.9968944099378882,
+    "precision": 0.8928571428571429,
+    "balanced_accuracy": 0.5022546981154564,
+    "roc_auc": 0.6112294087932754,
+    "positive_only": false
+  },
+  {
+    "fold": 3,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        101,
+        4,
+        2
+      ]
+    ],
+    "tp": 4,
+    "tn": 0,
+    "fp": 0,
+    "fn": 101,
+    "recall": 0.037383177570093455,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 3,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5724603914259087,
+    "positive_only": false
+  },
+  {
+    "fold": 4,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        703,
+        4,
+        0
+      ]
+    ],
+    "tp": 4,
+    "tn": 0,
+    "fp": 0,
+    "fn": 703,
+    "recall": 0.005657708628005658,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 4,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        962,
+        4,
+        0
+      ],
+      [
+        3276,
+        7,
+        0
+      ]
+    ],
+    "tp": 7,
+    "tn": 962,
+    "fp": 4,
+    "fn": 3276,
+    "recall": 0.0021321961620469083,
+    "specificity": 0.9958592132505176,
+    "precision": 0.6363636363636364,
+    "balanced_accuracy": 0.4989957047062823,
+    "roc_auc": 0.5948171425796609,
+    "positive_only": false
+  },
+  {
+    "fold": 4,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        105,
+        0,
+        2
+      ]
+    ],
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 105,
+    "recall": 0.0,
+    "specificity": null,
+    "precision": null,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 4,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5439805931692342,
+    "positive_only": false
+  },
+  {
+    "fold": 5,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        705,
+        2,
+        0
+      ]
+    ],
+    "tp": 2,
+    "tn": 0,
+    "fp": 0,
+    "fn": 705,
+    "recall": 0.002828854314002829,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 5,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        965,
+        1,
+        0
+      ],
+      [
+        3274,
+        9,
+        0
+      ]
+    ],
+    "tp": 9,
+    "tn": 965,
+    "fp": 1,
+    "fn": 3274,
+    "recall": 0.0027413950654888823,
+    "specificity": 0.9989648033126294,
+    "precision": 0.9,
+    "balanced_accuracy": 0.5008530991890592,
+    "roc_auc": 0.631187452268383,
+    "positive_only": false
+  },
+  {
+    "fold": 5,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        105,
+        0,
+        2
+      ]
+    ],
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 105,
+    "recall": 0.0,
+    "specificity": null,
+    "precision": null,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 5,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5561372731758127,
+    "positive_only": false
+  },
+  {
+    "fold": 6,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        696,
+        11,
+        0
+      ]
+    ],
+    "tp": 11,
+    "tn": 0,
+    "fp": 0,
+    "fn": 696,
+    "recall": 0.015558698727015558,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 6,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        962,
+        4,
+        0
+      ],
+      [
+        3254,
+        29,
+        0
+      ]
+    ],
+    "tp": 29,
+    "tn": 962,
+    "fp": 4,
+    "fn": 3254,
+    "recall": 0.008833384099908621,
+    "specificity": 0.9958592132505176,
+    "precision": 0.8787878787878788,
+    "balanced_accuracy": 0.5023462986752131,
+    "roc_auc": 0.6979237416668717,
+    "positive_only": false
+  },
+  {
+    "fold": 6,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        105,
+        0,
+        2
+      ]
+    ],
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 105,
+    "recall": 0.0,
+    "specificity": null,
+    "precision": null,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 6,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.6309824022805766,
+    "positive_only": false
+  },
+  {
+    "fold": 7,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        698,
+        9,
+        0
+      ]
+    ],
+    "tp": 9,
+    "tn": 0,
+    "fp": 0,
+    "fn": 698,
+    "recall": 0.01272984441301273,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 7,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        963,
+        3,
+        0
+      ],
+      [
+        3271,
+        12,
+        0
+      ]
+    ],
+    "tp": 12,
+    "tn": 963,
+    "fp": 3,
+    "fn": 3271,
+    "recall": 0.003655193420651843,
+    "specificity": 0.9968944099378882,
+    "precision": 0.8,
+    "balanced_accuracy": 0.5002748016792701,
+    "roc_auc": 0.7075047503009733,
+    "positive_only": false
+  },
+  {
+    "fold": 7,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        104,
+        1,
+        2
+      ]
+    ],
+    "tp": 1,
+    "tn": 0,
+    "fp": 0,
+    "fn": 104,
+    "recall": 0.009345794392523364,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 7,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.613713612192314,
+    "positive_only": false
+  },
+  {
+    "fold": 8,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        693,
+        14,
+        0
+      ]
+    ],
+    "tp": 14,
+    "tn": 0,
+    "fp": 0,
+    "fn": 693,
+    "recall": 0.019801980198019802,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 8,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        964,
+        2,
+        0
+      ],
+      [
+        3261,
+        22,
+        0
+      ]
+    ],
+    "tp": 22,
+    "tn": 964,
+    "fp": 2,
+    "fn": 3261,
+    "recall": 0.006701187937861712,
+    "specificity": 0.9979296066252588,
+    "precision": 0.9166666666666666,
+    "balanced_accuracy": 0.5023153972815603,
+    "roc_auc": 0.6394266151811611,
+    "positive_only": false
+  },
+  {
+    "fold": 8,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        105,
+        0,
+        2
+      ]
+    ],
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 105,
+    "recall": 0.0,
+    "specificity": null,
+    "precision": null,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 8,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5975138424428484,
+    "positive_only": false
+  },
+  {
+    "fold": 9,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        691,
+        16,
+        0
+      ]
+    ],
+    "tp": 16,
+    "tn": 0,
+    "fp": 0,
+    "fn": 691,
+    "recall": 0.02263083451202263,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 9,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        959,
+        7,
+        0
+      ],
+      [
+        3256,
+        27,
+        0
+      ]
+    ],
+    "tp": 27,
+    "tn": 959,
+    "fp": 7,
+    "fn": 3256,
+    "recall": 0.008224185196466647,
+    "specificity": 0.9927536231884058,
+    "precision": 0.7941176470588235,
+    "balanced_accuracy": 0.5004889041924362,
+    "roc_auc": 0.6093521491288645,
+    "positive_only": false
+  },
+  {
+    "fold": 9,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        103,
+        2,
+        2
+      ]
+    ],
+    "tp": 2,
+    "tn": 0,
+    "fp": 0,
+    "fn": 103,
+    "recall": 0.018691588785046728,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 9,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        492,
+        1,
+        0
+      ]
+    ],
+    "tp": 1,
+    "tn": 148,
+    "fp": 0,
+    "fn": 492,
+    "recall": 0.002028397565922921,
+    "specificity": 1.0,
+    "precision": 1.0,
+    "balanced_accuracy": 0.5010141987829615,
+    "roc_auc": 0.5389781261992215,
+    "positive_only": false
+  },
+  {
+    "fold": 10,
+    "scope": "drive_positive_only",
+    "protocol": "native_300ms",
+    "n": 707,
+    "positive_windows": 707,
+    "negative_windows": 0,
+    "invalid": 0,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        690,
+        17,
+        0
+      ]
+    ],
+    "tp": 17,
+    "tn": 0,
+    "fp": 0,
+    "fn": 690,
+    "recall": 0.024045261669024046,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 10,
+    "scope": "external32_retrospective",
+    "protocol": "native_300ms",
+    "n": 4249,
+    "positive_windows": 3283,
+    "negative_windows": 966,
+    "invalid": 0,
+    "confusion": [
+      [
+        961,
+        5,
+        0
+      ],
+      [
+        3264,
+        19,
+        0
+      ]
+    ],
+    "tp": 19,
+    "tn": 961,
+    "fp": 5,
+    "fn": 3264,
+    "recall": 0.005787389582698751,
+    "specificity": 0.994824016563147,
+    "precision": 0.7916666666666666,
+    "balanced_accuracy": 0.5003057030729229,
+    "roc_auc": 0.6042989829657645,
+    "positive_only": false
+  },
+  {
+    "fold": 10,
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        103,
+        2,
+        2
+      ]
+    ],
+    "tp": 2,
+    "tn": 0,
+    "fp": 0,
+    "fn": 103,
+    "recall": 0.018691588785046728,
+    "specificity": null,
+    "precision": 1.0,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": 10,
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5483252014692176,
+    "positive_only": false
+  },
+  {
+    "fold": "all_folds_mean_derived",
+    "scope": "drive_positive_only",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 107,
+    "positive_windows": 107,
+    "negative_windows": 0,
+    "invalid": 2,
+    "confusion": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        105,
+        0,
+        2
+      ]
+    ],
+    "tp": 0,
+    "tn": 0,
+    "fp": 0,
+    "fn": 105,
+    "recall": 0.0,
+    "specificity": null,
+    "precision": null,
+    "balanced_accuracy": null,
+    "roc_auc": null,
+    "positive_only": true
+  },
+  {
+    "fold": "all_folds_mean_derived",
+    "scope": "external32_retrospective",
+    "protocol": "common_992ms_three_subwindows",
+    "n": 641,
+    "positive_windows": 493,
+    "negative_windows": 148,
+    "invalid": 0,
+    "confusion": [
+      [
+        148,
+        0,
+        0
+      ],
+      [
+        493,
+        0,
+        0
+      ]
+    ],
+    "tp": 0,
+    "tn": 148,
+    "fp": 0,
+    "fn": 493,
+    "recall": 0.0,
+    "specificity": 1.0,
+    "precision": null,
+    "balanced_accuracy": 0.5,
+    "roc_auc": 0.5713502549202347,
+    "positive_only": false
+  }
+]

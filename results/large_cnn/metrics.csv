@@ -1,0 +1,3 @@
+model,domain,known_windows,known_groups,forced_window_accuracy,forced_balanced_accuracy,forced_recording_accuracy,accepted_known_windows,known_coverage,accepted_known_accuracy,correct_known_fraction,noise_windows,noise_false_species_rate,presence_known_recall,presence_noise_false_positive_rate,unknown_windows,unresolved_species_emission_rate
+large_cnn,dryad,7845,190,0.6265137029955385,0.6681296374904268,0.8105263157894737,2431,0.3098789037603569,0.9107363225010284,0.28221797323135756,56,0.0,0.9644359464627151,0.16071428571428573,0,
+large_cnn,humbug,383,23,0.8903394255874674,0.6867029038377354,0.9130434782608695,255,0.6657963446475196,0.9568627450980393,0.6370757180156658,915,0.0,0.9242819843342036,0.002185792349726776,212,0.3490566037735849

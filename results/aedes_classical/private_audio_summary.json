@@ -1,0 +1,62 @@
+[
+  {
+    "model": "logistic",
+    "windows": 107,
+    "states": {
+      "NAO_AEDES_AEGYPTI": 54,
+      "INCERTO": 36,
+      "AEDES_AEGYPTI": 15,
+      "AUDIO_INVALIDO": 2
+    },
+    "reference_source": "user, swarm species not independently confirmed; no event annotations",
+    "training_used": false
+  },
+  {
+    "model": "svm_rbf",
+    "windows": 107,
+    "states": {
+      "NAO_AEDES_AEGYPTI": 41,
+      "INCERTO": 39,
+      "AEDES_AEGYPTI": 25,
+      "AUDIO_INVALIDO": 2
+    },
+    "reference_source": "user, swarm species not independently confirmed; no event annotations",
+    "training_used": false
+  },
+  {
+    "model": "extra_trees",
+    "windows": 107,
+    "states": {
+      "AEDES_AEGYPTI": 66,
+      "NAO_AEDES_AEGYPTI": 26,
+      "INCERTO": 13,
+      "AUDIO_INVALIDO": 2
+    },
+    "reference_source": "user, swarm species not independently confirmed; no event annotations",
+    "training_used": false
+  },
+  {
+    "model": "gradient_boosting",
+    "windows": 107,
+    "states": {
+      "AEDES_AEGYPTI": 55,
+      "INCERTO": 27,
+      "NAO_AEDES_AEGYPTI": 23,
+      "AUDIO_INVALIDO": 2
+    },
+    "reference_source": "user, swarm species not independently confirmed; no event annotations",
+    "training_used": false
+  },
+  {
+    "model": "cnn_binary",
+    "windows": 107,
+    "states": {
+      "NAO_AEDES_AEGYPTI": 72,
+      "AEDES_AEGYPTI": 20,
+      "INCERTO": 13,
+      "AUDIO_INVALIDO": 2
+    },
+    "reference_source": "user, swarm species not independently confirmed; no event annotations",
+    "training_used": false
+  }
+]

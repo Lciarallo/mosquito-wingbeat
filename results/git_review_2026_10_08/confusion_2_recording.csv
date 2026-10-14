@@ -1,0 +1,21 @@
+,Aedes aegypti,Aedes albopictus,Aedes mediovittatus,Aedes sierrensis,Anopheles albimanus,Anopheles arabiensis,Anopheles atroparvus,Anopheles dirus,Anopheles farauti,Anopheles freeborni,Anopheles gambiae,Anopheles merus,Anopheles minimus,Anopheles quadriannulatus,Anopheles quadrimaculatus,Anopheles stephensi,Culex pipiens,Culex quinquefasciatus,Culex tarsalis,Culiseta incidens
+Aedes aegypti,19,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Aedes albopictus,1,5,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Aedes mediovittatus,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Aedes sierrensis,0,0,0,37,1,1,0,1,2,3,3,0,1,1,1,1,1,4,0,3
+Anopheles albimanus,0,0,0,0,33,1,0,2,0,2,0,0,1,0,0,1,0,0,0,0
+Anopheles arabiensis,0,0,0,0,2,7,0,0,1,0,2,1,0,0,0,0,0,0,0,0
+Anopheles atroparvus,0,0,0,0,0,0,5,0,0,0,0,0,0,2,0,0,0,0,0,0
+Anopheles dirus,0,1,0,0,2,0,0,35,4,0,0,0,6,0,0,7,0,0,0,0
+Anopheles farauti,0,0,0,0,3,0,0,3,35,0,0,0,3,0,0,2,0,0,0,0
+Anopheles freeborni,0,0,0,0,4,0,0,2,1,44,0,0,1,0,0,2,0,0,0,0
+Anopheles gambiae,2,5,0,0,1,1,0,7,4,2,43,1,6,0,0,3,0,0,1,0
+Anopheles merus,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,0,0,0
+Anopheles minimus,0,0,0,0,0,0,0,2,7,7,2,0,31,0,0,1,0,0,0,0
+Anopheles quadriannulatus,0,0,0,0,1,0,1,0,0,0,0,0,0,5,0,0,0,0,0,0
+Anopheles quadrimaculatus,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,1,0,0
+Anopheles stephensi,0,0,0,0,0,0,0,3,2,0,5,0,2,0,0,46,0,0,0,0
+Culex pipiens,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,1,0,0
+Culex quinquefasciatus,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,11,0,0
+Culex tarsalis,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,12,0
+Culiseta incidens,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30

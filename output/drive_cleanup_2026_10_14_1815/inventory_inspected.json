@@ -1,0 +1,3251 @@
+[
+  {
+    "key": "root",
+    "files": [
+      {
+        "id": "1KBlNhRgEaDzGly79rPQs0hZjOhi_zqup",
+        "name": "acoustic_features_v5.py",
+        "size": "10595",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1KBlNhRgEaDzGly79rPQs0hZjOhi_zqup/view?usp=drivesdk"
+      },
+      {
+        "id": "1BMKu5o_D7Gr6Jgvh3bJROSn8vJxGhoHB",
+        "name": "output",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1BMKu5o_D7Gr6Jgvh3bJROSn8vJxGhoHB"
+      },
+      {
+        "id": "1Uivv1ra0pjMX4QfkNdmlUzsPdkjE_QL_",
+        "name": "reports",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1Uivv1ra0pjMX4QfkNdmlUzsPdkjE_QL_"
+      },
+      {
+        "id": "1bIbt4xiP42_Td8o1B9qhaPo65Nd9V7jF",
+        "name": "results",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1bIbt4xiP42_Td8o1B9qhaPo65Nd9V7jF"
+      },
+      {
+        "id": "1FmC3zP3Xh3oVS0Irjx32XTIh2z-IjbcD",
+        "name": "scripts",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1FmC3zP3Xh3oVS0Irjx32XTIh2z-IjbcD"
+      },
+      {
+        "id": "1EH-MCLptdjb77nke9Xzb4PpGrFq-3Twx",
+        "name": "DRIVE_REVIEW_2026_10_14.md",
+        "size": "1999",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1EH-MCLptdjb77nke9Xzb4PpGrFq-3Twx/view?usp=drivesdk"
+      },
+      {
+        "id": "1lUqcvzJtND01dU-zAuHtGReHQSozzmIM",
+        "name": "compare_species_v5.py",
+        "size": "7503",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1lUqcvzJtND01dU-zAuHtGReHQSozzmIM/view?usp=drivesdk"
+      },
+      {
+        "id": "1-kS9IMRz_outQ-HvWggnog6dlDuPb7IJ",
+        "name": "fetch_species_v5_fresh.py",
+        "size": "5803",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-kS9IMRz_outQ-HvWggnog6dlDuPb7IJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1mpoVIzdX4P6Mf1AVPLnodDQaj48Vaf-0",
+        "name": "nested_species_ensemble_v5.py",
+        "size": "41535",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1mpoVIzdX4P6Mf1AVPLnodDQaj48Vaf-0/view?usp=drivesdk"
+      },
+      {
+        "id": "1vITj5ALWSs2LaQTHvDT41Z0GIJdGl8YF",
+        "name": "tests",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1vITj5ALWSs2LaQTHvDT41Z0GIJdGl8YF"
+      },
+      {
+        "id": "1jt1OX6qf2WI9Ksbgpy3PRx9Di92JOklD",
+        "name": "DRIVE_EXECUTION.md",
+        "size": "2246",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jt1OX6qf2WI9Ksbgpy3PRx9Di92JOklD/view?usp=drivesdk"
+      },
+      {
+        "id": "1wPce63U9TR-9vPfdEnoJ7fryZ0dTEPFF",
+        "name": "MODEL_VALIDATION_v4.md",
+        "size": "7601",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wPce63U9TR-9vPfdEnoJ7fryZ0dTEPFF/view?usp=drivesdk"
+      },
+      {
+        "id": "119hWSRE5l_8BwXt4iyr5hA8zBAfVmziL",
+        "name": "README_v4.md",
+        "size": "7605",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/119hWSRE5l_8BwXt4iyr5hA8zBAfVmziL/view?usp=drivesdk"
+      },
+      {
+        "id": "1R236l53HnPilgu5o16qKhUcncTY1hTHb",
+        "name": "robust_audio_features.py",
+        "size": "4541",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1R236l53HnPilgu5o16qKhUcncTY1hTHb/view?usp=drivesdk"
+      },
+      {
+        "id": "1QO38krkvxTORxfffrrcGBU110CEDhcII",
+        "name": "predict_audio.py",
+        "size": "24793",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1QO38krkvxTORxfffrrcGBU110CEDhcII/view?usp=drivesdk"
+      },
+      {
+        "id": "1A7ZTbwPQAlznYcBKmFquF8Qb1KcPJVvZ",
+        "name": "HANDOFF_AGENTE.md",
+        "size": "7649",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1A7ZTbwPQAlznYcBKmFquF8Qb1KcPJVvZ/view?usp=drivesdk"
+      },
+      {
+        "id": "1YhtN6kt_j8xu7E94ii65tS-UdxQB99pP",
+        "name": "predict_audio_v2_prev.py",
+        "size": "32344",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1YhtN6kt_j8xu7E94ii65tS-UdxQB99pP/view?usp=drivesdk"
+      },
+      {
+        "id": "10sYvDQDY4PfSBJw_AO_r6AhU1ncJ1VD1",
+        "name": "predict_audio_v1_backup.py",
+        "size": "24793",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/10sYvDQDY4PfSBJw_AO_r6AhU1ncJ1VD1/view?usp=drivesdk"
+      },
+      {
+        "id": "11pvInuucO_snux5MllK62yJeEvUsl7n-",
+        "name": "robust_audio_features_v1_backup.py",
+        "size": "4541",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11pvInuucO_snux5MllK62yJeEvUsl7n-/view?usp=drivesdk"
+      },
+      {
+        "id": "1iXW9VPYQuFSDno4F5AkXJG-QQP2h9xav",
+        "name": ".git",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1iXW9VPYQuFSDno4F5AkXJG-QQP2h9xav"
+      },
+      {
+        "id": "1_GH8G1o0BzASRxrMZuxETZ0_XrXoJ1SW",
+        "name": "__pycache__",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1_GH8G1o0BzASRxrMZuxETZ0_XrXoJ1SW"
+      },
+      {
+        "id": "1mXUKojOJIwmGkLa3CIZD4JyOw7g3BOww",
+        "name": "nested_species_ensemble_v4.py",
+        "size": "36694",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1mXUKojOJIwmGkLa3CIZD4JyOw7g3BOww/view?usp=drivesdk"
+      },
+      {
+        "id": "1AupwdZCmaWcTOoO6OEWvmkuyhHyqMDxw",
+        "name": "compare_species_v4.py",
+        "size": "25165",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AupwdZCmaWcTOoO6OEWvmkuyhHyqMDxw/view?usp=drivesdk"
+      },
+      {
+        "id": "1Agdy4o4ZJWvmJ1joKXd7yoo6olTlHaSP",
+        "name": "fetch_species_v4_fresh.py",
+        "size": "5101",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Agdy4o4ZJWvmJ1joKXd7yoo6olTlHaSP/view?usp=drivesdk"
+      },
+      {
+        "id": "1WqbvEUH6xjDO7qsiEl0uQjIV0-CWVL9g",
+        "name": "acoustic_features_v4.py",
+        "size": "7613",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WqbvEUH6xjDO7qsiEl0uQjIV0-CWVL9g/view?usp=drivesdk"
+      },
+      {
+        "id": "1XX6yh6hAOJliCTHc7_JT592tERiVFMX2",
+        "name": "nested_species_ensemble_v3.py",
+        "size": "23158",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1XX6yh6hAOJliCTHc7_JT592tERiVFMX2/view?usp=drivesdk"
+      },
+      {
+        "id": "1cBP0BmNVlrP1SoJ-hiNdPz3ujs1tDHvH",
+        "name": "compare_species_v3.py",
+        "size": "26348",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1cBP0BmNVlrP1SoJ-hiNdPz3ujs1tDHvH/view?usp=drivesdk"
+      },
+      {
+        "id": "1ij2-fuUv4D4Wgt5JUmJ0oH3Q_9kNZvQM",
+        "name": "fetch_species_v3_fresh.py",
+        "size": "5091",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ij2-fuUv4D4Wgt5JUmJ0oH3Q_9kNZvQM/view?usp=drivesdk"
+      },
+      {
+        "id": "1YJCU5KTciv37p4eNEoEVuwqMbd61ova5",
+        "name": "acoustic_features_v3.py",
+        "size": "7436",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1YJCU5KTciv37p4eNEoEVuwqMbd61ova5/view?usp=drivesdk"
+      },
+      {
+        "id": "1UJCyePUM_gEAhBUgTy9b-bwYGBNX3iCs",
+        "name": "tmp",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1UJCyePUM_gEAhBUgTy9b-bwYGBNX3iCs"
+      },
+      {
+        "id": "1AKTd27RHwwBsd9BafA88Lk6KpQCNthru",
+        "name": "summarize_species_v2.py",
+        "size": "25086",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AKTd27RHwwBsd9BafA88Lk6KpQCNthru/view?usp=drivesdk"
+      },
+      {
+        "id": "102bPOyQExuuajzsESFFTEkIZC1SsZCgD",
+        "name": "MODEL_VALIDATION.md",
+        "size": "13408",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/102bPOyQExuuajzsESFFTEkIZC1SsZCgD/view?usp=drivesdk"
+      },
+      {
+        "id": "1vc2YnSufX1O32gUkf3OSFTbv8bbPZSdA",
+        "name": "README.md",
+        "size": "30453",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vc2YnSufX1O32gUkf3OSFTbv8bbPZSdA/view?usp=drivesdk"
+      },
+      {
+        "id": "17TRphTK0zGONGd_LhLRnsD5LG2vTQ0lI",
+        "name": "fetch_species_v2_fresh_checked.py",
+        "size": "5803",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/17TRphTK0zGONGd_LhLRnsD5LG2vTQ0lI/view?usp=drivesdk"
+      },
+      {
+        "id": "16Evz7T1-zOV7H4W9ZIDs5kpfaLbBs6BP",
+        "name": "nested_species_ensemble_v2.py",
+        "size": "34966",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16Evz7T1-zOV7H4W9ZIDs5kpfaLbBs6BP/view?usp=drivesdk"
+      },
+      {
+        "id": "1ScpM8VYVunddTtrNpUVV697f02eDg6dp",
+        "name": "compare_detection_levels_v2.py",
+        "size": "9485",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ScpM8VYVunddTtrNpUVV697f02eDg6dp/view?usp=drivesdk"
+      },
+      {
+        "id": "1w32gEirjGsPOpUuFb_Fgw0ManpCZ4lyA",
+        "name": "research_metrics_v2.py",
+        "size": "4600",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1w32gEirjGsPOpUuFb_Fgw0ManpCZ4lyA/view?usp=drivesdk"
+      },
+      {
+        "id": "1DHnweXvBZoP9-pJwrHznrkzh8hGr3kV5",
+        "name": "fetch_species_v2_fresh.py",
+        "size": "5077",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1DHnweXvBZoP9-pJwrHznrkzh8hGr3kV5/view?usp=drivesdk"
+      },
+      {
+        "id": "1tZIaa3B2JDljo_xB2IMkVuFf0jBf_NOV",
+        "name": "compare_detection_levels.py",
+        "size": "6128",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tZIaa3B2JDljo_xB2IMkVuFf0jBf_NOV/view?usp=drivesdk"
+      },
+      {
+        "id": "1XeUeYGqBqREjygzudnbvuMq2js6Qs8QD",
+        "name": "evaluate_nested_species.py",
+        "size": "13620",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1XeUeYGqBqREjygzudnbvuMq2js6Qs8QD/view?usp=drivesdk"
+      },
+      {
+        "id": "1GdXi2XpgdyamBZA1WH__Yi11FY7VOvC3",
+        "name": "acoustic_features_v2.py",
+        "size": "6236",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GdXi2XpgdyamBZA1WH__Yi11FY7VOvC3/view?usp=drivesdk"
+      },
+      {
+        "id": "19IIh_ocVYBPSxjKYqQ8gOENNwTXXoZzp",
+        "name": "trabalho_ifsc",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/19IIh_ocVYBPSxjKYqQ8gOENNwTXXoZzp"
+      },
+      {
+        "id": "1C4yJ3g-W2vxGMDtdRs07eu3ZxpNXcFJE",
+        "name": "literature",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1C4yJ3g-W2vxGMDtdRs07eu3ZxpNXcFJE"
+      },
+      {
+        "id": "1p_BFoMtxEF3zUdjHWGfZs69jrcpdCir_",
+        "name": "evaluate_nested_genus.py",
+        "size": "5052",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1p_BFoMtxEF3zUdjHWGfZs69jrcpdCir_/view?usp=drivesdk"
+      },
+      {
+        "id": "1BMjvApF1QgNLO7vj1pwIRXsNqaY7wRLT",
+        "name": "summarize_nested_species.py",
+        "size": "13426",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BMjvApF1QgNLO7vj1pwIRXsNqaY7wRLT/view?usp=drivesdk"
+      },
+      {
+        "id": "1swZcBjj5TDeszog2KZGcOIB7JkkZW5-R",
+        "name": "leakage_auditor.py",
+        "size": "5236",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1swZcBjj5TDeszog2KZGcOIB7JkkZW5-R/view?usp=drivesdk"
+      },
+      {
+        "id": "1ICuqxp5aIgW31IaUuKbDh1nJivceOCtW",
+        "name": "train_hierarchical_models.py",
+        "size": "13883",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ICuqxp5aIgW31IaUuKbDh1nJivceOCtW/view?usp=drivesdk"
+      },
+      {
+        "id": "1mSP4kZ58CtQi9iuRRPK_EM4UjtF-laYz",
+        "name": "optimize_ensemble_oof.py",
+        "size": "563",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1mSP4kZ58CtQi9iuRRPK_EM4UjtF-laYz/view?usp=drivesdk"
+      },
+      {
+        "id": "1V-MLuO8ATW-sgDYTlxjDzX8d1Z_IBc-Y",
+        "name": ".gitignore",
+        "size": "894",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1V-MLuO8ATW-sgDYTlxjDzX8d1Z_IBc-Y/view?usp=drivesdk"
+      },
+      {
+        "id": "1An1HwB-RPPDsZeKKufdLGSdQ8X2T0WL_",
+        "name": "nested_species_ensemble.py",
+        "size": "18244",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1An1HwB-RPPDsZeKKufdLGSdQ8X2T0WL_/view?usp=drivesdk"
+      },
+      {
+        "id": "1010IFe0pALVEh6zSBY0WeNsQbCU5Egbc",
+        "name": "audit_git_species.py",
+        "size": "6205",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1010IFe0pALVEh6zSBY0WeNsQbCU5Egbc/view?usp=drivesdk"
+      },
+      {
+        "id": "1o_vqzcpW-0X-Xo3UBf4c26vkg4xuGSzc",
+        "name": "mosquito_wingbeat_estudo.ipynb",
+        "size": "2385671",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1o_vqzcpW-0X-Xo3UBf4c26vkg4xuGSzc/view?usp=drivesdk"
+      },
+      {
+        "id": "1WI1fgeMiC5Nq5acNmPW7JoobaVYWfYIv",
+        "name": "mosquito_wingbeat_estudo.html",
+        "size": "2750676",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WI1fgeMiC5Nq5acNmPW7JoobaVYWfYIv/view?usp=drivesdk"
+      },
+      {
+        "id": "1CMEBnZCn8A5O2COertUsqIrvjS6VJ9AX",
+        "name": "build_notebook.py",
+        "size": "36969",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CMEBnZCn8A5O2COertUsqIrvjS6VJ9AX/view?usp=drivesdk"
+      },
+      {
+        "id": "1Y1PVcO7b5QzXMjLqStmQWBAMJVdb6XBq",
+        "name": "drive_audio.wav",
+        "size": "3399724",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Y1PVcO7b5QzXMjLqStmQWBAMJVdb6XBq/view?usp=drivesdk"
+      },
+      {
+        "id": "1tNg87qisJZYw3KncGzDj32c2P3nI9lxx",
+        "name": "experiment_mixed_datasets.py",
+        "size": "16404",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tNg87qisJZYw3KncGzDj32c2P3nI9lxx/view?usp=drivesdk"
+      },
+      {
+        "id": "1GGlDUz8ixTak13BL-si2w_LZCggb7X6j",
+        "name": "arduino_mic_emulator.py",
+        "size": "8442",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GGlDUz8ixTak13BL-si2w_LZCggb7X6j/view?usp=drivesdk"
+      },
+      {
+        "id": "1pAvnbcoK4x2Bovt9IlgYQV7OUMVdWeog",
+        "name": "cross_validate_drive_audio.py",
+        "size": "7480",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1pAvnbcoK4x2Bovt9IlgYQV7OUMVdWeog/view?usp=drivesdk"
+      },
+      {
+        "id": "1MFU_AyRiOczIHfm8bpiwFR_s9XKrffgF",
+        "name": "loso_generalization.py",
+        "size": "7555",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MFU_AyRiOczIHfm8bpiwFR_s9XKrffgF/view?usp=drivesdk"
+      },
+      {
+        "id": "1f0qHoTz9cFu0dRpr5FUNY9C_ldKe1EKP",
+        "name": "audit_research.py",
+        "size": "4083",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1f0qHoTz9cFu0dRpr5FUNY9C_ldKe1EKP/view?usp=drivesdk"
+      },
+      {
+        "id": "1vKuPXV1oN5lQRDQPvKGvPxTQmOsHLcBw",
+        "name": "research_metrics.py",
+        "size": "5453",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vKuPXV1oN5lQRDQPvKGvPxTQmOsHLcBw/view?usp=drivesdk"
+      },
+      {
+        "id": "1LDICKbT0kUFBdprtwUgFaH0OwSIfamny",
+        "name": "external",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1LDICKbT0kUFBdprtwUgFaH0OwSIfamny"
+      },
+      {
+        "id": "1r_xb2VmJFoUhk4uXMticWMvn9heqYeL_",
+        "name": "reproducao_estudos_originais_2026_10_03.html",
+        "size": "553390",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1r_xb2VmJFoUhk4uXMticWMvn9heqYeL_/view?usp=drivesdk"
+      },
+      {
+        "id": "1ZoujbnXaYu-153P2vv7gbCK-w6rxdVER",
+        "name": "reproducao_estudos_originais_2026_10_03.ipynb",
+        "size": "281057",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ZoujbnXaYu-153P2vv7gbCK-w6rxdVER/view?usp=drivesdk"
+      },
+      {
+        "id": "1T2OcRGPE5TblHgfzcjO5ax2mNHf145pY",
+        "name": "build_faithful_reproduction_artifacts.py",
+        "size": "27912",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1T2OcRGPE5TblHgfzcjO5ax2mNHf145pY/view?usp=drivesdk"
+      },
+      {
+        "id": "1Ns2OckLzKxLpatgbNE8AP18mnlMVDaak",
+        "name": ".pytest_cache",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1Ns2OckLzKxLpatgbNE8AP18mnlMVDaak"
+      },
+      {
+        "id": "1nV3-iub8nKmVMalZGNiqTLTrzQy6acnQ",
+        "name": "evaluate_author_mosquitosong_external.py",
+        "size": "6808",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1nV3-iub8nKmVMalZGNiqTLTrzQy6acnQ/view?usp=drivesdk"
+      },
+      {
+        "id": "1Ow8kCHyDCoHBLwsSp4ULOhCci9-kk4Mn",
+        "name": "audit_author_mosquitosong.py",
+        "size": "3160",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Ow8kCHyDCoHBLwsSp4ULOhCci9-kk4Mn/view?usp=drivesdk"
+      },
+      {
+        "id": "15swTccJTOZQ-ScAvFrnK6h8z_evT8V_C",
+        "name": "fetch_faithful_dr_biol.py",
+        "size": "3864",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/15swTccJTOZQ-ScAvFrnK6h8z_evT8V_C/view?usp=drivesdk"
+      },
+      {
+        "id": "1iBIhPHpe9HtV4w0Gltin8c8V6N0U4l0q",
+        "name": "run_author_mosquitosong.py",
+        "size": "6816",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1iBIhPHpe9HtV4w0Gltin8c8V6N0U4l0q/view?usp=drivesdk"
+      },
+      {
+        "id": "1wOCqx2HtrsnAKzaPUa3Oos3-NFENs-Zs",
+        "name": "run_author_dr_biol.py",
+        "size": "8769",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wOCqx2HtrsnAKzaPUa3Oos3-NFENs-Zs/view?usp=drivesdk"
+      },
+      {
+        "id": "1F2fhNG7imWIs50RBXdAL4LCqVWOQcFAF",
+        "name": "estrategias_contrastivas_enxames_2026_10_03.html",
+        "size": "669975",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1F2fhNG7imWIs50RBXdAL4LCqVWOQcFAF/view?usp=drivesdk"
+      },
+      {
+        "id": "1aPUmc0dZY52j4x7Gyr50yQwqf859JWI9",
+        "name": "estrategias_contrastivas_enxames_2026_10_03.ipynb",
+        "size": "426425",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aPUmc0dZY52j4x7Gyr50yQwqf859JWI9/view?usp=drivesdk"
+      },
+      {
+        "id": "1ZSye8uSiqv242X0oHIsE9f_R9hvWQCzr",
+        "name": "summarize_cross_domain_strategies.py",
+        "size": "15849",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ZSye8uSiqv242X0oHIsE9f_R9hvWQCzr/view?usp=drivesdk"
+      },
+      {
+        "id": "1kzE2TjE2HRwYRNXX6Eo0cpMhdGNOsTX9",
+        "name": "evaluate_cross_domain_strategies.py",
+        "size": "12214",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1kzE2TjE2HRwYRNXX6Eo0cpMhdGNOsTX9/view?usp=drivesdk"
+      },
+      {
+        "id": "1BmyyQuloGqZVo6ZFWINwB25M9tDtguRG",
+        "name": "fetch_cross_domain_strategy_test.py",
+        "size": "4117",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BmyyQuloGqZVo6ZFWINwB25M9tDtguRG/view?usp=drivesdk"
+      },
+      {
+        "id": "1if0ua1vFmxYBG7mnJBIMEeTSF8VagiDX",
+        "name": "train_cross_domain_strategies.py",
+        "size": "15168",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1if0ua1vFmxYBG7mnJBIMEeTSF8VagiDX/view?usp=drivesdk"
+      },
+      {
+        "id": "16EJyxuXLBj47Pwq6ZWQ-3H6KU0jt2nCY",
+        "name": "cross_domain_strategy_models.py",
+        "size": "8102",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16EJyxuXLBj47Pwq6ZWQ-3H6KU0jt2nCY/view?usp=drivesdk"
+      },
+      {
+        "id": "10Oz2LwJwdwzinm-xMF4fBmbszpDJKSks",
+        "name": "comparacao_frequencias_2026_10_03.html",
+        "size": "1678383",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/10Oz2LwJwdwzinm-xMF4fBmbszpDJKSks/view?usp=drivesdk"
+      },
+      {
+        "id": "16HJt8gc_Ru-jeBnfGd8SALH2kx9sEAXY",
+        "name": "comparacao_frequencias_2026_10_03.ipynb",
+        "size": "1402050",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16HJt8gc_Ru-jeBnfGd8SALH2kx9sEAXY/view?usp=drivesdk"
+      },
+      {
+        "id": "1j1BN_V2a45MgNgH2NvnpgFwgomey3e10",
+        "name": "summarize_frequency_shift.py",
+        "size": "7367",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1j1BN_V2a45MgNgH2NvnpgFwgomey3e10/view?usp=drivesdk"
+      },
+      {
+        "id": "1PN7tEP1jDKAhTGOBOR1wZ7Cfjxs5edJl",
+        "name": "analyze_frequency_shift.py",
+        "size": "5094",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1PN7tEP1jDKAhTGOBOR1wZ7Cfjxs5edJl/view?usp=drivesdk"
+      },
+      {
+        "id": "1FlapmWiISe7Wbx_rcuuEfTG76cTA-LFj",
+        "name": "comparacao_bases_reduzidas_2026_10_02.html",
+        "size": "311477",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1FlapmWiISe7Wbx_rcuuEfTG76cTA-LFj/view?usp=drivesdk"
+      },
+      {
+        "id": "12xCPW3GoySFui7Qq8REhY3n22vkhmKI9",
+        "name": "comparacao_bases_reduzidas_2026_10_02.ipynb",
+        "size": "48352",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12xCPW3GoySFui7Qq8REhY3n22vkhmKI9/view?usp=drivesdk"
+      },
+      {
+        "id": "1FIuK5BA0gUx_X2l4RVGFiGSJ56HV7g9E",
+        "name": "summarize_reduced_databases.py",
+        "size": "5934",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1FIuK5BA0gUx_X2l4RVGFiGSJ56HV7g9E/view?usp=drivesdk"
+      },
+      {
+        "id": "1N3XO-Esnh-JM5PAxk-Xqh0pzdmy4fcAd",
+        "name": "test_reduced_databases_unseen.py",
+        "size": "3330",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1N3XO-Esnh-JM5PAxk-Xqh0pzdmy4fcAd/view?usp=drivesdk"
+      },
+      {
+        "id": "17AH4te_aEZ0_9VdQpuQq3_WNBzD0XEz1",
+        "name": "compare_reduced_databases.py",
+        "size": "5802",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/17AH4te_aEZ0_9VdQpuQq3_WNBzD0XEz1/view?usp=drivesdk"
+      },
+      {
+        "id": "1Ri5bB36jBvgTpPLdxod_hBDGVeQo1HuM",
+        "name": "confiabilidade_binaria_aedes_adaptacao_2026_10_01.html",
+        "size": "484382",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Ri5bB36jBvgTpPLdxod_hBDGVeQo1HuM/view?usp=drivesdk"
+      },
+      {
+        "id": "1E6EteAA9lJDmyNA2c1CSkfoLL6z8j292",
+        "name": "confiabilidade_binaria_aedes_adaptacao_2026_10_01.ipynb",
+        "size": "214057",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1E6EteAA9lJDmyNA2c1CSkfoLL6z8j292/view?usp=drivesdk"
+      },
+      {
+        "id": "11aPZc4pdSbA68EQw_l3YCQ8tyYisyg7W",
+        "name": "confiabilidade_binaria_aedes_2026_10_01.html",
+        "size": "525241",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11aPZc4pdSbA68EQw_l3YCQ8tyYisyg7W/view?usp=drivesdk"
+      },
+      {
+        "id": "1aQdVCAoBFdkTOWaximX805O5O-P0Z99A",
+        "name": "confiabilidade_binaria_aedes_2026_10_01.ipynb",
+        "size": "293969",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aQdVCAoBFdkTOWaximX805O5O-P0Z99A/view?usp=drivesdk"
+      },
+      {
+        "id": "1YzlnqTgKjrj7Bz9yEEEusO5Sw9m1okHN",
+        "name": "build_reliability_artifacts.py",
+        "size": "1245",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1YzlnqTgKjrj7Bz9yEEEusO5Sw9m1okHN/view?usp=drivesdk"
+      },
+      {
+        "id": "1hM-G6AMgaGN9jzvNcVnBHH9wumSQ4rgJ",
+        "name": "summarize_reliability.py",
+        "size": "25768",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hM-G6AMgaGN9jzvNcVnBHH9wumSQ4rgJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1F_Dgd6aNknl1dna87N5gazvSrORTS2QR",
+        "name": "summarize_sex_balanced_reliability.py",
+        "size": "19627",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1F_Dgd6aNknl1dna87N5gazvSrORTS2QR/view?usp=drivesdk"
+      },
+      {
+        "id": "1g-hwBvc3og5z0Hw7muUXzvN0Gn5h_fuP",
+        "name": "fetch_sex_balanced_reliability_fresh.py",
+        "size": "7962",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1g-hwBvc3og5z0Hw7muUXzvN0Gn5h_fuP/view?usp=drivesdk"
+      },
+      {
+        "id": "1z9K5WPqybLKPMygxOOoH_1KXKNgOMZ-R",
+        "name": "evaluate_sex_balanced_reliability.py",
+        "size": "16083",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1z9K5WPqybLKPMygxOOoH_1KXKNgOMZ-R/view?usp=drivesdk"
+      },
+      {
+        "id": "1rzxmNMw_ADkONXnh_NeAohS-IkZXfM_r",
+        "name": "train_sex_balanced_reliability.py",
+        "size": "8920",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rzxmNMw_ADkONXnh_NeAohS-IkZXfM_r/view?usp=drivesdk"
+      },
+      {
+        "id": "1WUqXpXdOnik2oYRKR5Ll5JWxqMMa9m_F",
+        "name": "evaluate_reliability.py",
+        "size": "15753",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WUqXpXdOnik2oYRKR5Ll5JWxqMMa9m_F/view?usp=drivesdk"
+      },
+      {
+        "id": "1tuHqjTvcdR7P3HkSQCq_bHxPi4UJNwsS",
+        "name": "fetch_reliability_fresh.py",
+        "size": "7789",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tuHqjTvcdR7P3HkSQCq_bHxPi4UJNwsS/view?usp=drivesdk"
+      },
+      {
+        "id": "14xToI_QcIwXYH2qUssWyhUt0a4pylpk4",
+        "name": "reliability_metrics.py",
+        "size": "2416",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/14xToI_QcIwXYH2qUssWyhUt0a4pylpk4/view?usp=drivesdk"
+      },
+      {
+        "id": "1dGhGvQmrV0pvB91j2FXBsErH_M1diYZh",
+        "name": "train_reliability.py",
+        "size": "14215",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dGhGvQmrV0pvB91j2FXBsErH_M1diYZh/view?usp=drivesdk"
+      },
+      {
+        "id": "1r53XscyZ_g26yeiyc8RLhz3Cm02SM8Gt",
+        "name": "reliability_models.py",
+        "size": "3647",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1r53XscyZ_g26yeiyc8RLhz3Cm02SM8Gt/view?usp=drivesdk"
+      },
+      {
+        "id": "1ff2IzIYNcOz8OMn6hrlc6evYfDpCrMEq",
+        "name": "prepare_reliability_data.py",
+        "size": "3928",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ff2IzIYNcOz8OMn6hrlc6evYfDpCrMEq/view?usp=drivesdk"
+      },
+      {
+        "id": "1hcOWfyVw5h4KaMraouEz_KpcHgd5Zhtr",
+        "name": "fetch_reliability_data.py",
+        "size": "6650",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hcOWfyVw5h4KaMraouEz_KpcHgd5Zhtr/view?usp=drivesdk"
+      },
+      {
+        "id": "1J_YZjvDDgQnclUN8gsW2d6VwZHuX1K2L",
+        "name": "evaluate_hard_negative_reproduction.py",
+        "size": "5498",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1J_YZjvDDgQnclUN8gsW2d6VwZHuX1K2L/view?usp=drivesdk"
+      },
+      {
+        "id": "1O0GruMmjbZjJPx3KmfGYjd4ZpFFK4ba2",
+        "name": "fetch_hard_negative_final_test.py",
+        "size": "7106",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1O0GruMmjbZjJPx3KmfGYjd4ZpFFK4ba2/view?usp=drivesdk"
+      },
+      {
+        "id": "16W-kWacCsWpr2xeMkiraome5WzDMUQCe",
+        "name": "train_hard_negative_reproduction.py",
+        "size": "4685",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16W-kWacCsWpr2xeMkiraome5WzDMUQCe/view?usp=drivesdk"
+      },
+      {
+        "id": "1x35Uzj01FTrhJ5z6tw9Iav_MCPetWGE0",
+        "name": "robust_reproduction_ensemble.py",
+        "size": "6334",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1x35Uzj01FTrhJ5z6tw9Iav_MCPetWGE0/view?usp=drivesdk"
+      },
+      {
+        "id": "1lh0IKUii-nLYYvLafPXWcTooKEJjPpY2",
+        "name": "fetch_reproduction_fresh.py",
+        "size": "7445",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1lh0IKUii-nLYYvLafPXWcTooKEJjPpY2/view?usp=drivesdk"
+      },
+      {
+        "id": "11pWUTmlDEN_nMr9ZovwLuHWy-at7qm3_",
+        "name": "train_reproduction.py",
+        "size": "13997",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11pWUTmlDEN_nMr9ZovwLuHWy-at7qm3_/view?usp=drivesdk"
+      },
+      {
+        "id": "1KZhlG34ImcvYS0y3dyUrKl0bzpbj2rsA",
+        "name": "evaluate_reproduction.py",
+        "size": "8742",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1KZhlG34ImcvYS0y3dyUrKl0bzpbj2rsA/view?usp=drivesdk"
+      },
+      {
+        "id": "1aQkr_eh4RRpC49bYm1ajHgDASkCN9oUo",
+        "name": "reproduction_models.py",
+        "size": "6405",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aQkr_eh4RRpC49bYm1ajHgDASkCN9oUo/view?usp=drivesdk"
+      },
+      {
+        "id": "1LMJiT4tKJhkRpFh9Z3QfzVRcwX-HV0sR",
+        "name": "models_committee.py",
+        "size": "6766",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1LMJiT4tKJhkRpFh9Z3QfzVRcwX-HV0sR/view?usp=drivesdk"
+      },
+      {
+        "id": "1zvaUPdZVLCKKKCDv9C4F69z_kiiWbtbS",
+        "name": "swarm_adapted_ensemble.py",
+        "size": "6359",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1zvaUPdZVLCKKKCDv9C4F69z_kiiWbtbS/view?usp=drivesdk"
+      },
+      {
+        "id": "1I7pjf6BM1Acbrbk2AySsmTjbruTxzGam",
+        "name": "validacao_corrigida_2026_10_01.html",
+        "size": "322430",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1I7pjf6BM1Acbrbk2AySsmTjbruTxzGam/view?usp=drivesdk"
+      },
+      {
+        "id": "1vRslCFe1iHdsvFy-8FmxJpaVgRXpbRcF",
+        "name": "validacao_corrigida_2026_10_01.ipynb",
+        "size": "87880",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vRslCFe1iHdsvFy-8FmxJpaVgRXpbRcF/view?usp=drivesdk"
+      },
+      {
+        "id": "10AkmLO-OBTXPo55mYCyDdrgH1f4nE85-",
+        "name": "summarize_corrected_validation.py",
+        "size": "21250",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/10AkmLO-OBTXPo55mYCyDdrgH1f4nE85-/view?usp=drivesdk"
+      },
+      {
+        "id": "1yTvy2dzTjsl6GaAGM6HhsWQDCtC0l1Wf",
+        "name": "evaluate_biodcase_d5.py",
+        "size": "7499",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1yTvy2dzTjsl6GaAGM6HhsWQDCtC0l1Wf/view?usp=drivesdk"
+      },
+      {
+        "id": "1k0T68odeodYPgNa9mJGQwkC8eutlkEH4",
+        "name": "benchmark_all_methods.py",
+        "size": "2043",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1k0T68odeodYPgNa9mJGQwkC8eutlkEH4/view?usp=drivesdk"
+      },
+      {
+        "id": "16IQHGG_HV-i46edyKwsI2N_hXqM4tELI",
+        "name": "evaluate_new_database.py",
+        "size": "13732",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16IQHGG_HV-i46edyKwsI2N_hXqM4tELI/view?usp=drivesdk"
+      },
+      {
+        "id": "1oisHcDB4Fm9dc28bgnT0SlwW_ctYv0Is",
+        "name": "corrected_validation.py",
+        "size": "19865",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1oisHcDB4Fm9dc28bgnT0SlwW_ctYv0Is/view?usp=drivesdk"
+      },
+      {
+        "id": "1BM0W8wqQkNag4jwnaJakS2lH-rU3J8b_",
+        "name": "models_trees.py",
+        "size": "8049",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BM0W8wqQkNag4jwnaJakS2lH-rU3J8b_/view?usp=drivesdk"
+      },
+      {
+        "id": "14hvIGy-Q8hJqZqV_KBXqsGrkIKmwFI21",
+        "name": "evaluate_corrected_fresh.py",
+        "size": "2259",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/14hvIGy-Q8hJqZqV_KBXqsGrkIKmwFI21/view?usp=drivesdk"
+      },
+      {
+        "id": "19GM5uYxEwz5r7ChPZaB42aYrJLQHrtE4",
+        "name": "fetch_corrected_fresh.py",
+        "size": "5822",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/19GM5uYxEwz5r7ChPZaB42aYrJLQHrtE4/view?usp=drivesdk"
+      },
+      {
+        "id": "1J1pROOqG23UsUFI4OdHjKllgLSMTfWDz",
+        "name": "models_deep.py",
+        "size": "17198",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1J1pROOqG23UsUFI4OdHjKllgLSMTfWDz/view?usp=drivesdk"
+      },
+      {
+        "id": "1m3j4t0hew2KrDhBQvX05Y1ye-1TpBEMs",
+        "name": "evaluate_new_approaches.py",
+        "size": "11309",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1m3j4t0hew2KrDhBQvX05Y1ye-1TpBEMs/view?usp=drivesdk"
+      },
+      {
+        "id": "16Kac_HWE5b2_RV53PpsmmHHqxhr2VKFh",
+        "name": "tinyml_decimated_frontend.py",
+        "size": "6375",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16Kac_HWE5b2_RV53PpsmmHHqxhr2VKFh/view?usp=drivesdk"
+      },
+      {
+        "id": "1aLaBDWUNR6ueGzdeTXbZXVCFRZwbMRDv",
+        "name": "bioacoustic_invariance.py",
+        "size": "9771",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aLaBDWUNR6ueGzdeTXbZXVCFRZwbMRDv/view?usp=drivesdk"
+      },
+      {
+        "id": "1MM3GLLV3niFt6ShFF2KwAzpolt0EJ1Pj",
+        "name": "summarize_aedes_classical.py",
+        "size": "11019",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MM3GLLV3niFt6ShFF2KwAzpolt0EJ1Pj/view?usp=drivesdk"
+      },
+      {
+        "id": "1d7i8B-U5Wg_PQCQ9Gd_rRwTt_YkaPIhu",
+        "name": "train_aedes_classical.py",
+        "size": "8070",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1d7i8B-U5Wg_PQCQ9Gd_rRwTt_YkaPIhu/view?usp=drivesdk"
+      },
+      {
+        "id": "1CYkEzOoSblWrLFW2s972mk4WQdAfnXsH",
+        "name": "aedes_classical_notebook.py",
+        "size": "1635",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CYkEzOoSblWrLFW2s972mk4WQdAfnXsH/view?usp=drivesdk"
+      },
+      {
+        "id": "11H21jwORqT0TQk_e8hZ3sfKvA5I5x_F7",
+        "name": "explain_aedes_classical.py",
+        "size": "1896",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11H21jwORqT0TQk_e8hZ3sfKvA5I5x_F7/view?usp=drivesdk"
+      },
+      {
+        "id": "1885rAsKLDsZXv_zL-IUFHzzm-pGLzGnQ",
+        "name": "evaluate_aedes_classical.py",
+        "size": "4085",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1885rAsKLDsZXv_zL-IUFHzzm-pGLzGnQ/view?usp=drivesdk"
+      },
+      {
+        "id": "1vsBZSLuzplv-kCU2qBYW_AQIFfwCEXXt",
+        "name": "fetch_fresh_aedes_classical.py",
+        "size": "4082",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vsBZSLuzplv-kCU2qBYW_AQIFfwCEXXt/view?usp=drivesdk"
+      },
+      {
+        "id": "1jwac6_2GsnjAPhGVyEvw4ZqgPiIFy5_s",
+        "name": "aedes_classical.py",
+        "size": "4490",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jwac6_2GsnjAPhGVyEvw4ZqgPiIFy5_s/view?usp=drivesdk"
+      },
+      {
+        "id": "1_Awu4cHt0br4w8zXvUhpEEc9wY6A5hxW",
+        "name": "aedes_binary_notebook.py",
+        "size": "1301",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1_Awu4cHt0br4w8zXvUhpEEc9wY6A5hxW/view?usp=drivesdk"
+      },
+      {
+        "id": "17HcTmEn6ZGdz4_Ufsrxpf0rXaOE-Uotg",
+        "name": "evaluate_aedes_binary.py",
+        "size": "1915",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/17HcTmEn6ZGdz4_Ufsrxpf0rXaOE-Uotg/view?usp=drivesdk"
+      },
+      {
+        "id": "1JzQpj4GEKm65sqYlsNe7Ab1xwZBCY4W0",
+        "name": "fetch_fresh_aedes_binary.py",
+        "size": "4076",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1JzQpj4GEKm65sqYlsNe7Ab1xwZBCY4W0/view?usp=drivesdk"
+      },
+      {
+        "id": "1AM7NFrrst8qhRZX6Qwk1i8jK-jcc7SYo",
+        "name": "train_aedes_binary.py",
+        "size": "9257",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AM7NFrrst8qhRZX6Qwk1i8jK-jcc7SYo/view?usp=drivesdk"
+      },
+      {
+        "id": "11PkmnlDp8_BULEsEf4gouhdndlj_FgTd",
+        "name": "aedes_binary.py",
+        "size": "4435",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11PkmnlDp8_BULEsEf4gouhdndlj_FgTd/view?usp=drivesdk"
+      },
+      {
+        "id": "1-50d0-MPXar7-US3Ci-W9AMV8sy0Jtzd",
+        "name": "preprocessing_notebook.py",
+        "size": "2228",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-50d0-MPXar7-US3Ci-W9AMV8sy0Jtzd/view?usp=drivesdk"
+      },
+      {
+        "id": "1LMnX88S1SV9wfhtLNIxReV0qhQnYNpsU",
+        "name": "evaluate_preprocessing.py",
+        "size": "5923",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1LMnX88S1SV9wfhtLNIxReV0qhQnYNpsU/view?usp=drivesdk"
+      },
+      {
+        "id": "1rBKo-w94N7n-SWqCbQdcMG33S9BO7Gsz",
+        "name": "audio_preprocessing.py",
+        "size": "2409",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rBKo-w94N7n-SWqCbQdcMG33S9BO7Gsz/view?usp=drivesdk"
+      },
+      {
+        "id": "11Ob8Fz44NZXD9wLHdSF-WpnYCLGlHSaj",
+        "name": "multisource_notebook.py",
+        "size": "2999",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11Ob8Fz44NZXD9wLHdSF-WpnYCLGlHSaj/view?usp=drivesdk"
+      },
+      {
+        "id": "1NvxS3Ik6iA4J7yvXjZj0Q2k797MhPcyH",
+        "name": "summarize_multisource.py",
+        "size": "15621",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1NvxS3Ik6iA4J7yvXjZj0Q2k797MhPcyH/view?usp=drivesdk"
+      },
+      {
+        "id": "1SgeL3oao4i7MNP87GrhEuSATjL_7OB99",
+        "name": "fetch_biodcase.py",
+        "size": "2172",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SgeL3oao4i7MNP87GrhEuSATjL_7OB99/view?usp=drivesdk"
+      },
+      {
+        "id": "1YlkLRTjvlqdrG60l7lGblluOlH3N7tQ0",
+        "name": "fetch_fresh_multisource_test.py",
+        "size": "2966",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1YlkLRTjvlqdrG60l7lGblluOlH3N7tQ0/view?usp=drivesdk"
+      },
+      {
+        "id": "1Wghu1ocbwFkFJ-PLqw9R6cb1-uwtv4bx",
+        "name": "evaluate_multisource.py",
+        "size": "2799",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Wghu1ocbwFkFJ-PLqw9R6cb1-uwtv4bx/view?usp=drivesdk"
+      },
+      {
+        "id": "101jQZJWCwwt36pNTdJCopw3bfXtvpRYw",
+        "name": "test_large_audio.py",
+        "size": "4129",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/101jQZJWCwwt36pNTdJCopw3bfXtvpRYw/view?usp=drivesdk"
+      },
+      {
+        "id": "1CgtWKvQ_kMlHd70KVfsb4LZ5SBCKQgV1",
+        "name": "prepare_biodcase_benchmark.py",
+        "size": "3052",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CgtWKvQ_kMlHd70KVfsb4LZ5SBCKQgV1/view?usp=drivesdk"
+      },
+      {
+        "id": "1hTcdEb6brTlmpK7Xl9cpFbdacXrmu_eZ",
+        "name": "prepare_multisource.py",
+        "size": "5711",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hTcdEb6brTlmpK7Xl9cpFbdacXrmu_eZ/view?usp=drivesdk"
+      },
+      {
+        "id": "16pXwStKNnEr41GTJEEnJfyXoqe3Hi6-X",
+        "name": "train_multisource.py",
+        "size": "15167",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16pXwStKNnEr41GTJEEnJfyXoqe3Hi6-X/view?usp=drivesdk"
+      },
+      {
+        "id": "1XdXKaTG1MoJ2W72pwAOyjF2oQZYigEnk",
+        "name": "fetch_additional_audio.py",
+        "size": "3457",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1XdXKaTG1MoJ2W72pwAOyjF2oQZYigEnk/view?usp=drivesdk"
+      },
+      {
+        "id": "1fntl1rMJRttet3VuxOakz92B0L1H6lrk",
+        "name": "large_cnn_notebook.py",
+        "size": "2767",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fntl1rMJRttet3VuxOakz92B0L1H6lrk/view?usp=drivesdk"
+      },
+      {
+        "id": "1INjT-brXDEgs7LhCJ3fu5JwhraXaJkno",
+        "name": "train_large_cnn.py",
+        "size": "14635",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1INjT-brXDEgs7LhCJ3fu5JwhraXaJkno/view?usp=drivesdk"
+      },
+      {
+        "id": "1cNqnqT1bMLY3WqAGdbLUVTW71YFn_lxu",
+        "name": "large_audio_model.py",
+        "size": "4828",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1cNqnqT1bMLY3WqAGdbLUVTW71YFn_lxu/view?usp=drivesdk"
+      },
+      {
+        "id": "1rLegksOd1BurLFMv3T7iXHpKxPAPKoA6",
+        "name": "expanded_notebook.py",
+        "size": "4657",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rLegksOd1BurLFMv3T7iXHpKxPAPKoA6/view?usp=drivesdk"
+      },
+      {
+        "id": "1lbQVgdkfSwOuMGonIBepcWpq4Lqh_0AO",
+        "name": "fetch_humbug.py",
+        "size": "9510",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1lbQVgdkfSwOuMGonIBepcWpq4Lqh_0AO/view?usp=drivesdk"
+      },
+      {
+        "id": "1SUEuG_sfc6Hum8nTvdjuhE8TzX5Anoml",
+        "name": "train_expanded.py",
+        "size": "21397",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SUEuG_sfc6Hum8nTvdjuhE8TzX5Anoml/view?usp=drivesdk"
+      },
+      {
+        "id": "1E3OEe3mmqZS2hk9Usraz8wMMXeKW0oTB",
+        "name": "test_expanded_audio.py",
+        "size": "4140",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1E3OEe3mmqZS2hk9Usraz8wMMXeKW0oTB/view?usp=drivesdk"
+      },
+      {
+        "id": "1rmNg46uRv7t0eMP0RxWaDknwQYpUBZk1",
+        "name": "data",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1rmNg46uRv7t0eMP0RxWaDknwQYpUBZk1"
+      },
+      {
+        "id": "1fvKTO_r5JsLBlY9Iy0aBIqzhKb-CY6zg",
+        "name": "delivery_manifest.json",
+        "size": "19606",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fvKTO_r5JsLBlY9Iy0aBIqzhKb-CY6zg/view?usp=drivesdk"
+      },
+      {
+        "id": "12MuGpexmjNsR2g1wo2CIQT_KB7iz1crV",
+        "name": "build_report.py",
+        "size": "70908",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12MuGpexmjNsR2g1wo2CIQT_KB7iz1crV/view?usp=drivesdk"
+      },
+      {
+        "id": "11QevW2DiVzONqaXCIROqFmovnUhj-3Ns",
+        "name": "prepare_delivery.py",
+        "size": "21468",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11QevW2DiVzONqaXCIROqFmovnUhj-3Ns/view?usp=drivesdk"
+      },
+      {
+        "id": "1uXkQgASBZqiYVVDGIMfY7KmuRKKezaHl",
+        "name": "docs",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1uXkQgASBZqiYVVDGIMfY7KmuRKKezaHl"
+      },
+      {
+        "id": "1VlnZAlPnS3BlpOreBWgdzCto2vjQhCKu",
+        "name": "WINDOWS.md",
+        "size": "4315",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1VlnZAlPnS3BlpOreBWgdzCto2vjQhCKu/view?usp=drivesdk"
+      },
+      {
+        "id": "1-GQGrgmG_0IrDhggjN71Z_BFnbiAEGGi",
+        "name": "Instalar_no_Windows.cmd",
+        "size": "941",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-GQGrgmG_0IrDhggjN71Z_BFnbiAEGGi/view?usp=drivesdk"
+      },
+      {
+        "id": "11n88SA-bGR3pP5oVFZEakX7qiF5ra97T",
+        "name": ".gitattributes",
+        "size": "149",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11n88SA-bGR3pP5oVFZEakX7qiF5ra97T/view?usp=drivesdk"
+      },
+      {
+        "id": "1cC6RPHQpB4svcEtwlvWiOGn8_zkeo2jS",
+        "name": "windows_installer.py",
+        "size": "23943",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1cC6RPHQpB4svcEtwlvWiOGn8_zkeo2jS/view?usp=drivesdk"
+      },
+      {
+        "id": "1AzJDnp-9DYGlgMtWv1h2GsJYlyXG0ns9",
+        "name": "install_arduino.py",
+        "size": "20563",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AzJDnp-9DYGlgMtWv1h2GsJYlyXG0ns9/view?usp=drivesdk"
+      },
+      {
+        "id": "1DTaYOZavNA0DwBCz1h3rqRF05dr4kOGL",
+        "name": ".github",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1DTaYOZavNA0DwBCz1h3rqRF05dr4kOGL"
+      },
+      {
+        "id": "147tlmELbv2_9gB_D5BhyAn3xZzxEy-Js",
+        "name": "requirements-windows.txt",
+        "size": "125",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/147tlmELbv2_9gB_D5BhyAn3xZzxEy-Js/view?usp=drivesdk"
+      },
+      {
+        "id": "1uz2dJICmyXc9ZUH2H0Tj-k1l5VFk9A4M",
+        "name": ".arduino-tools",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1uz2dJICmyXc9ZUH2H0Tj-k1l5VFk9A4M"
+      },
+      {
+        "id": "1YEIe9hXNCcDCH1vHuXB9VJYbpwIVveub",
+        "name": "firmware",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1YEIe9hXNCcDCH1vHuXB9VJYbpwIVveub"
+      },
+      {
+        "id": "1U1voFu9lmBLfW-jIH0IbUOiIjJ9O5yTN",
+        "name": "flash_arduino.sh",
+        "size": "595",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U1voFu9lmBLfW-jIH0IbUOiIjJ9O5yTN/view?usp=drivesdk"
+      },
+      {
+        "id": "1vSAK6ExcF1M5m1eGjEWeMQmRgTNWmIU9",
+        "name": "delivery_species_build.log",
+        "size": "125",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vSAK6ExcF1M5m1eGjEWeMQmRgTNWmIU9/view?usp=drivesdk"
+      },
+      {
+        "id": "19iITgRK59PMdLuIYrgF7N88FaxqxZC_E",
+        "name": "report_species_build.log",
+        "size": "322",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/19iITgRK59PMdLuIYrgF7N88FaxqxZC_E/view?usp=drivesdk"
+      },
+      {
+        "id": "1MFwbouOJzTwe-8uGfXh5eOPFcMSzoirk",
+        "name": "arduino_native.log",
+        "size": "3317",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MFwbouOJzTwe-8uGfXh5eOPFcMSzoirk/view?usp=drivesdk"
+      },
+      {
+        "id": "1qxRdssSUstwIFXTqqHdCBc5mr9qVnnAS",
+        "name": "serve.py",
+        "size": "1423",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1qxRdssSUstwIFXTqqHdCBc5mr9qVnnAS/view?usp=drivesdk"
+      },
+      {
+        "id": "1Bq5Rx2n87Ek6twsxdY2Q47G9awQmgesc",
+        "name": "arduino_species_package_compile.log",
+        "size": "207",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Bq5Rx2n87Ek6twsxdY2Q47G9awQmgesc/view?usp=drivesdk"
+      },
+      {
+        "id": "1_a4ehJkgcbmghombRsH0oEGKLJFwpaUg",
+        "name": "arduino_species_native.log",
+        "size": "2634",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1_a4ehJkgcbmghombRsH0oEGKLJFwpaUg/view?usp=drivesdk"
+      },
+      {
+        "id": "1oj4P270bKmrp9xeH665cteNh5wLtmfPn",
+        "name": "notebook_species_execution.log",
+        "size": "3566",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1oj4P270bKmrp9xeH665cteNh5wLtmfPn/view?usp=drivesdk"
+      },
+      {
+        "id": "1U-Ue-7fDbrJ_O-Xtc5WzBjNvz4yz4qx2",
+        "name": "arduino_species_training.log",
+        "size": "2300",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U-Ue-7fDbrJ_O-Xtc5WzBjNvz4yz4qx2/view?usp=drivesdk"
+      },
+      {
+        "id": "1RLdqyJSEuONQEKd1r3sxPDTAd34gtjKN",
+        "name": "train_arduino_species.py",
+        "size": "23335",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1RLdqyJSEuONQEKd1r3sxPDTAd34gtjKN/view?usp=drivesdk"
+      },
+      {
+        "id": "1JLitAdX-Y4Rd2aRPbAQFTKKA01hlTCfK",
+        "name": "arduino_species_compile.log",
+        "size": "207",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1JLitAdX-Y4Rd2aRPbAQFTKKA01hlTCfK/view?usp=drivesdk"
+      },
+      {
+        "id": "11fTdJiIDWnKTlnRQB6EMagt4BrbdUA3Q",
+        "name": "verify_arduino_species.py",
+        "size": "8091",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11fTdJiIDWnKTlnRQB6EMagt4BrbdUA3Q/view?usp=drivesdk"
+      },
+      {
+        "id": "1qtt6-JeUuIvV85yD3419jXnW54dtlMFj",
+        "name": "arduino_species_models.py",
+        "size": "5549",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1qtt6-JeUuIvV85yD3419jXnW54dtlMFj/view?usp=drivesdk"
+      },
+      {
+        "id": "1dtgWayTt0mJxb9EjDFct66p9Hpa3AvJe",
+        "name": "arduino_models.py",
+        "size": "2989",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dtgWayTt0mJxb9EjDFct66p9Hpa3AvJe/view?usp=drivesdk"
+      },
+      {
+        "id": "1D38jWENaqCEnvAK9YTzeyGeyPP9bD__U",
+        "name": "notebook_improvements.log",
+        "size": "3194",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1D38jWENaqCEnvAK9YTzeyGeyPP9bD__U/view?usp=drivesdk"
+      },
+      {
+        "id": "1hvYp5hhbgvO50-J2okI15HfjbTvW1zkd",
+        "name": "arduino_compile.log",
+        "size": "207",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hvYp5hhbgvO50-J2okI15HfjbTvW1zkd/view?usp=drivesdk"
+      },
+      {
+        "id": "1RS-KVmQsJP_ANkHQ_jsWC3c33miiN7Zx",
+        "name": "verify_arduino.py",
+        "size": "4865",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1RS-KVmQsJP_ANkHQ_jsWC3c33miiN7Zx/view?usp=drivesdk"
+      },
+      {
+        "id": "1v63ypK4HaMtClm3l5TIGKvTEkfboqHuF",
+        "name": "arduino_training.log",
+        "size": "1450",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1v63ypK4HaMtClm3l5TIGKvTEkfboqHuF/view?usp=drivesdk"
+      },
+      {
+        "id": "1L_JQsbj-Kzbk5MaQZvP4JUSmmOH0b9pg",
+        "name": "train_arduino.py",
+        "size": "19334",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1L_JQsbj-Kzbk5MaQZvP4JUSmmOH0b9pg/view?usp=drivesdk"
+      },
+      {
+        "id": "11Hm8UFaiiFOTaohrLYSI6EQ9Cc3hQM1z",
+        "name": "probe_arduino_noise.py",
+        "size": "3107",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11Hm8UFaiiFOTaohrLYSI6EQ9Cc3hQM1z/view?usp=drivesdk"
+      },
+      {
+        "id": "1wg3t217lil1Jjz4Xep5TBmGzBh7E-6_f",
+        "name": "arduino_frontend.py",
+        "size": "3923",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wg3t217lil1Jjz4Xep5TBmGzBh7E-6_f/view?usp=drivesdk"
+      },
+      {
+        "id": "1HnJNup-E4yLCuqgLT25Xd9KwWioIzdGt",
+        "name": "improvements_training.log",
+        "size": "4041",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HnJNup-E4yLCuqgLT25Xd9KwWioIzdGt/view?usp=drivesdk"
+      },
+      {
+        "id": "12iSFIZH03InFFT6GjbOtkDxkd1R2Aqkz",
+        "name": "improve_device.py",
+        "size": "29717",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12iSFIZH03InFFT6GjbOtkDxkd1R2Aqkz/view?usp=drivesdk"
+      },
+      {
+        "id": "16a0mkvm9_QlLjQY3Pag7Ji3WBx3RsIUl",
+        "name": "report_render.log",
+        "size": "0",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16a0mkvm9_QlLjQY3Pag7Ji3WBx3RsIUl/view?usp=drivesdk"
+      },
+      {
+        "id": "1jikV9UPg2aw92I-MmnLZwDnzOvD2QbVI",
+        "name": "report_build.log",
+        "size": "322",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jikV9UPg2aw92I-MmnLZwDnzOvD2QbVI/view?usp=drivesdk"
+      },
+      {
+        "id": "1vZGKBVKUqDNu_StuSN2C7bIcWUWKRwNG",
+        "name": "requirements-report.txt",
+        "size": "114",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vZGKBVKUqDNu_StuSN2C7bIcWUWKRwNG/view?usp=drivesdk"
+      },
+      {
+        "id": "1tH_DOLIJUYlOLnmJfEyy5nzxLqAvF4mr",
+        "name": "relocation_execution.log",
+        "size": "2517",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tH_DOLIJUYlOLnmJfEyy5nzxLqAvF4mr/view?usp=drivesdk"
+      },
+      {
+        "id": "18f4FwrJcLJ7Ia8MnugLfZH9NqiTODdlO",
+        "name": "execute_notebook.py",
+        "size": "2293",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18f4FwrJcLJ7Ia8MnugLfZH9NqiTODdlO/view?usp=drivesdk"
+      },
+      {
+        "id": "1HmkhN7VWuNx3dMIdld53kYV8NZnM9nNQ",
+        "name": "notebook_code.py",
+        "size": "60176",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HmkhN7VWuNx3dMIdld53kYV8NZnM9nNQ/view?usp=drivesdk"
+      },
+      {
+        "id": "16MXbKL85bzYwJgeRWYjaP380z4xQ8JU2",
+        "name": "dist",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/16MXbKL85bzYwJgeRWYjaP380z4xQ8JU2"
+      },
+      {
+        "id": "1tyCllN8SPb3XSPZwAeo86uYq3Mp739Qg",
+        "name": "notebook_execution.log",
+        "size": "2603",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tyCllN8SPb3XSPZwAeo86uYq3Mp739Qg/view?usp=drivesdk"
+      },
+      {
+        "id": "1VQx6mmXGdgV2IUu_-tRFpMMhqjsKU1gc",
+        "name": "requirements.txt",
+        "size": "276",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1VQx6mmXGdgV2IUu_-tRFpMMhqjsKU1gc/view?usp=drivesdk"
+      },
+      {
+        "id": "1q3B8gHbUVnOTwq5M4gc2FpGM7WdJk_nh",
+        "name": "fetch_data.py",
+        "size": "10117",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1q3B8gHbUVnOTwq5M4gc2FpGM7WdJk_nh/view?usp=drivesdk"
+      },
+      {
+        "id": "1VwxRv10rLpeQMsNXq-rFwNt3ShIANeA4",
+        "name": "benchmark.log",
+        "size": "52939",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1VwxRv10rLpeQMsNXq-rFwNt3ShIANeA4/view?usp=drivesdk"
+      },
+      {
+        "id": "13ahPDkQafgW4R-Uj2C6TZopnQfTxf2p_",
+        "name": "preparation.log",
+        "size": "7211",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/13ahPDkQafgW4R-Uj2C6TZopnQfTxf2p_/view?usp=drivesdk"
+      },
+      {
+        "id": "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS",
+        "name": ".venv",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+      }
+    ]
+  },
+  {
+    "key": "cache_root",
+    "files": [
+      {
+        "id": "1fVwLSouutpKuS55uupWunQHo479Qjjs9",
+        "name": "nested_species_ensemble_v4.cpython-314.pyc",
+        "size": "68407",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fVwLSouutpKuS55uupWunQHo479Qjjs9/view?usp=drivesdk"
+      },
+      {
+        "id": "1OljTIIrXZOptP9wTEY-IJ5heda7jT-Ak",
+        "name": "fetch_species_v4_fresh.cpython-314.pyc",
+        "size": "9657",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1OljTIIrXZOptP9wTEY-IJ5heda7jT-Ak/view?usp=drivesdk"
+      },
+      {
+        "id": "1AOUDkwo0m50KZ2u8tkYRlwkIFjkhWv6T",
+        "name": "compare_species_v4.cpython-314.pyc",
+        "size": "38654",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AOUDkwo0m50KZ2u8tkYRlwkIFjkhWv6T/view?usp=drivesdk"
+      },
+      {
+        "id": "14V-FKq8kx9SmS_WbuOPEF4eMFfGNfKqZ",
+        "name": "acoustic_features_v4.cpython-314.pyc",
+        "size": "16708",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/14V-FKq8kx9SmS_WbuOPEF4eMFfGNfKqZ/view?usp=drivesdk"
+      },
+      {
+        "id": "1DfeYQ_CnhfFCSiPc_DJp2rc_7PnCwIP4",
+        "name": "compare_species_v3.cpython-314.pyc",
+        "size": "41149",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1DfeYQ_CnhfFCSiPc_DJp2rc_7PnCwIP4/view?usp=drivesdk"
+      },
+      {
+        "id": "1fEyfsfJw6yquyOdbpfXJaBiFOmcQbetC",
+        "name": "fetch_species_v3_fresh.cpython-314.pyc",
+        "size": "9697",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fEyfsfJw6yquyOdbpfXJaBiFOmcQbetC/view?usp=drivesdk"
+      },
+      {
+        "id": "1MUQ-K7_q9D9G-7EFghOvILg6y17vxm6Q",
+        "name": "nested_species_ensemble_v3.cpython-314.pyc",
+        "size": "42007",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MUQ-K7_q9D9G-7EFghOvILg6y17vxm6Q/view?usp=drivesdk"
+      },
+      {
+        "id": "1DVbMQaWtRnzyZXuj_RCyPMXyvv9j65qL",
+        "name": "acoustic_features_v3.cpython-314.pyc",
+        "size": "16614",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1DVbMQaWtRnzyZXuj_RCyPMXyvv9j65qL/view?usp=drivesdk"
+      },
+      {
+        "id": "1uviaSf0693LMFQO8HPY-4z7DKpJY9gOA",
+        "name": "compare_detection_levels_v2.cpython-314.pyc",
+        "size": "16534",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1uviaSf0693LMFQO8HPY-4z7DKpJY9gOA/view?usp=drivesdk"
+      },
+      {
+        "id": "1PK8zxulVz2S18-3PIvX2Z8QTD5Qusp7F",
+        "name": "nested_species_ensemble_v2.cpython-314.pyc",
+        "size": "62468",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1PK8zxulVz2S18-3PIvX2Z8QTD5Qusp7F/view?usp=drivesdk"
+      },
+      {
+        "id": "1BYByxpLccSonVrBR6kxtSitO1amBLOvH",
+        "name": "research_metrics_v2.cpython-314.pyc",
+        "size": "9191",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BYByxpLccSonVrBR6kxtSitO1amBLOvH/view?usp=drivesdk"
+      },
+      {
+        "id": "1asi1CZaPPvxT0Mr3kOrNUlFfc2_-oyI7",
+        "name": "fetch_species_v2_fresh.cpython-314.pyc",
+        "size": "8855",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1asi1CZaPPvxT0Mr3kOrNUlFfc2_-oyI7/view?usp=drivesdk"
+      },
+      {
+        "id": "1d6tvU_qOVFxZkGqH93EyK1tuQIcNaq-U",
+        "name": "evaluate_nested_species.cpython-314.pyc",
+        "size": "24714",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1d6tvU_qOVFxZkGqH93EyK1tuQIcNaq-U/view?usp=drivesdk"
+      },
+      {
+        "id": "1QAm5Ze9c6r-ZqgAkQbVqN5TaSr38r5_X",
+        "name": "acoustic_features_v2.cpython-314.pyc",
+        "size": "13713",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1QAm5Ze9c6r-ZqgAkQbVqN5TaSr38r5_X/view?usp=drivesdk"
+      },
+      {
+        "id": "12-VHIU6hZxrEBnMyy9Lp1W6XZSZfU-Zm",
+        "name": "compare_detection_levels.cpython-314.pyc",
+        "size": "10876",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12-VHIU6hZxrEBnMyy9Lp1W6XZSZfU-Zm/view?usp=drivesdk"
+      },
+      {
+        "id": "1OM7JyRhPLDWbn9EBxHHcM5KAkp5VjUmE",
+        "name": "evaluate_nested_genus.cpython-314.pyc",
+        "size": "10808",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1OM7JyRhPLDWbn9EBxHHcM5KAkp5VjUmE/view?usp=drivesdk"
+      },
+      {
+        "id": "12g9J6oBjb4-myWRkFc5wRFYv8qLvAIZs",
+        "name": "train_hierarchical_models.cpython-314.pyc",
+        "size": "18663",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12g9J6oBjb4-myWRkFc5wRFYv8qLvAIZs/view?usp=drivesdk"
+      },
+      {
+        "id": "1_ZKKAPppgy4X71pu8y_LtZctMHkpm25Q",
+        "name": "leakage_auditor.cpython-314.pyc",
+        "size": "7137",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1_ZKKAPppgy4X71pu8y_LtZctMHkpm25Q/view?usp=drivesdk"
+      },
+      {
+        "id": "1HEeNWSi8Bk_aUl6jUTDRPJPlMAGUVG8n",
+        "name": "optimize_ensemble_oof.cpython-314.pyc",
+        "size": "745",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HEeNWSi8Bk_aUl6jUTDRPJPlMAGUVG8n/view?usp=drivesdk"
+      },
+      {
+        "id": "1We4oQehOrkgnr2kjfC8TOhRfjozM-90o",
+        "name": "summarize_nested_species.cpython-314.pyc",
+        "size": "20477",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1We4oQehOrkgnr2kjfC8TOhRfjozM-90o/view?usp=drivesdk"
+      },
+      {
+        "id": "1wiahkKHgky3dU9Cuq_HNPGqonFaO-4UF",
+        "name": "nested_species_ensemble.cpython-314.pyc",
+        "size": "32861",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wiahkKHgky3dU9Cuq_HNPGqonFaO-4UF/view?usp=drivesdk"
+      },
+      {
+        "id": "12w0hp0-qaXm2-IjsWaihZmlx0A_QVY83",
+        "name": "audit_git_species.cpython-314.pyc",
+        "size": "9741",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12w0hp0-qaXm2-IjsWaihZmlx0A_QVY83/view?usp=drivesdk"
+      },
+      {
+        "id": "1owKHD3BVfAZQjp5IGoBQ64-Paxr_YIyv",
+        "name": "robust_audio_features.cpython-314.pyc",
+        "size": "6292",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1owKHD3BVfAZQjp5IGoBQ64-Paxr_YIyv/view?usp=drivesdk"
+      },
+      {
+        "id": "1avnqPznP5xp0N2Ov8F8lhY8GC8Nmk32Z",
+        "name": "arduino_mic_emulator.cpython-314.pyc",
+        "size": "12336",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1avnqPznP5xp0N2Ov8F8lhY8GC8Nmk32Z/view?usp=drivesdk"
+      },
+      {
+        "id": "1HvA4xxgpBWRYqxchVNf62LK7NRxsLLo2",
+        "name": "predict_audio.cpython-314.pyc",
+        "size": "34217",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HvA4xxgpBWRYqxchVNf62LK7NRxsLLo2/view?usp=drivesdk"
+      },
+      {
+        "id": "1GqieLc2hk08saaUQaV2rEW0MiIgoRMMF",
+        "name": "loso_generalization.cpython-314.pyc",
+        "size": "15925",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GqieLc2hk08saaUQaV2rEW0MiIgoRMMF/view?usp=drivesdk"
+      },
+      {
+        "id": "1J4e-GO6gpE9a0YBJThWOkX_gMvxs1Xv_",
+        "name": "audit_research.cpython-314.pyc",
+        "size": "7566",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1J4e-GO6gpE9a0YBJThWOkX_gMvxs1Xv_/view?usp=drivesdk"
+      },
+      {
+        "id": "11lQojB7NLJpnjFcVb3EPwrLaeZMdG85b",
+        "name": "research_metrics.cpython-314.pyc",
+        "size": "10037",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11lQojB7NLJpnjFcVb3EPwrLaeZMdG85b/view?usp=drivesdk"
+      },
+      {
+        "id": "1-Jpm2g5F5WbD4nHAS8akaSsuFZTI5ymA",
+        "name": "build_faithful_reproduction_artifacts.cpython-314.pyc",
+        "size": "40361",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-Jpm2g5F5WbD4nHAS8akaSsuFZTI5ymA/view?usp=drivesdk"
+      },
+      {
+        "id": "15RaUMK_XU3AMdrKKj4osQB_zDenMFTWS",
+        "name": "evaluate_author_mosquitosong_external.cpython-314.pyc",
+        "size": "10822",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/15RaUMK_XU3AMdrKKj4osQB_zDenMFTWS/view?usp=drivesdk"
+      },
+      {
+        "id": "1GIcNvVSiI70EnqnRxUfStGv_IpWftgBl",
+        "name": "audit_author_mosquitosong.cpython-314.pyc",
+        "size": "6160",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GIcNvVSiI70EnqnRxUfStGv_IpWftgBl/view?usp=drivesdk"
+      },
+      {
+        "id": "1kimsVtWVmjZ_4nFC3EKryTJeEcdwkyxU",
+        "name": "run_author_mosquitosong.cpython-314.pyc",
+        "size": "12074",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1kimsVtWVmjZ_4nFC3EKryTJeEcdwkyxU/view?usp=drivesdk"
+      },
+      {
+        "id": "1HrzM2Mr-cLVO7sQoylQmk0Xkr7SUtTTJ",
+        "name": "run_author_dr_biol.cpython-314.pyc",
+        "size": "14294",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HrzM2Mr-cLVO7sQoylQmk0Xkr7SUtTTJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1SH2I-dSPFrErn3m35ZnPSKBNk_XmL3r4",
+        "name": "fetch_faithful_dr_biol.cpython-314.pyc",
+        "size": "8410",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SH2I-dSPFrErn3m35ZnPSKBNk_XmL3r4/view?usp=drivesdk"
+      },
+      {
+        "id": "1XepKOi0j-wHuILhelhVJ6GbpmO7Tc9TO",
+        "name": "evaluate_cross_domain_strategies.cpython-314.pyc",
+        "size": "22915",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1XepKOi0j-wHuILhelhVJ6GbpmO7Tc9TO/view?usp=drivesdk"
+      },
+      {
+        "id": "1BiWA57dqbNYXMXIPh0sdXzTfz6GPB8UH",
+        "name": "summarize_cross_domain_strategies.cpython-314.pyc",
+        "size": "24023",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BiWA57dqbNYXMXIPh0sdXzTfz6GPB8UH/view?usp=drivesdk"
+      },
+      {
+        "id": "1i6_hDPYrNXyIR8ufKv0IffSxcqNgGzBO",
+        "name": "fetch_cross_domain_strategy_test.cpython-314.pyc",
+        "size": "8264",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1i6_hDPYrNXyIR8ufKv0IffSxcqNgGzBO/view?usp=drivesdk"
+      },
+      {
+        "id": "1MkaoN6B5VQk8g8OaGB3DNnizWPceigmt",
+        "name": "train_cross_domain_strategies.cpython-314.pyc",
+        "size": "29408",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MkaoN6B5VQk8g8OaGB3DNnizWPceigmt/view?usp=drivesdk"
+      },
+      {
+        "id": "1j5zakno08j6mlcEm4gWFUpE7-c4X6_fn",
+        "name": "cross_domain_strategy_models.cpython-314.pyc",
+        "size": "16488",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1j5zakno08j6mlcEm4gWFUpE7-c4X6_fn/view?usp=drivesdk"
+      },
+      {
+        "id": "1gngCPvY1K3O_J1pEOQTXgTwejfQeXWsV",
+        "name": "compare_reduced_databases.cpython-314.pyc",
+        "size": "13278",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1gngCPvY1K3O_J1pEOQTXgTwejfQeXWsV/view?usp=drivesdk"
+      },
+      {
+        "id": "1M4LGQhuOeYK4z0jtWdpY2P7A2BWvCo-k",
+        "name": "summarize_reliability.cpython-314.pyc",
+        "size": "37885",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1M4LGQhuOeYK4z0jtWdpY2P7A2BWvCo-k/view?usp=drivesdk"
+      },
+      {
+        "id": "1pPe3dObM6kqvRFRXk0-E3cy9mzrLzWwr",
+        "name": "fetch_sex_balanced_reliability_fresh.cpython-314.pyc",
+        "size": "16745",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1pPe3dObM6kqvRFRXk0-E3cy9mzrLzWwr/view?usp=drivesdk"
+      },
+      {
+        "id": "1GeqaJGsJ5l0KQUH_jlSNiQBCaMwPJvyH",
+        "name": "evaluate_sex_balanced_reliability.cpython-314.pyc",
+        "size": "35127",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GeqaJGsJ5l0KQUH_jlSNiQBCaMwPJvyH/view?usp=drivesdk"
+      },
+      {
+        "id": "1UOkpLrmShxAZp1SuZFsOD1RCXxvqYkIP",
+        "name": "train_sex_balanced_reliability.cpython-314.pyc",
+        "size": "18350",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UOkpLrmShxAZp1SuZFsOD1RCXxvqYkIP/view?usp=drivesdk"
+      },
+      {
+        "id": "1uXDDnJ5rvRgERUS9eoF9fRmokcf10jjZ",
+        "name": "evaluate_reliability.cpython-314.pyc",
+        "size": "34548",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1uXDDnJ5rvRgERUS9eoF9fRmokcf10jjZ/view?usp=drivesdk"
+      },
+      {
+        "id": "1SjWMjO-xHZ-glyAMCCpQ45ftkUJvTKK8",
+        "name": "fetch_reliability_fresh.cpython-314.pyc",
+        "size": "16258",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SjWMjO-xHZ-glyAMCCpQ45ftkUJvTKK8/view?usp=drivesdk"
+      },
+      {
+        "id": "14sPKwVvW6RNYAzffAjMlzPF_tzyW_Vi0",
+        "name": "reliability_metrics.cpython-314.pyc",
+        "size": "5247",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/14sPKwVvW6RNYAzffAjMlzPF_tzyW_Vi0/view?usp=drivesdk"
+      },
+      {
+        "id": "1EWJKPe6WhjxkB38BgGBcHxVGnySx6m4e",
+        "name": "train_reliability.cpython-314.pyc",
+        "size": "29701",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1EWJKPe6WhjxkB38BgGBcHxVGnySx6m4e/view?usp=drivesdk"
+      },
+      {
+        "id": "1gI2QWLkletMik4UJOvAH39W0c86lNaqv",
+        "name": "prepare_reliability_data.cpython-314.pyc",
+        "size": "7786",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1gI2QWLkletMik4UJOvAH39W0c86lNaqv/view?usp=drivesdk"
+      },
+      {
+        "id": "17vGTSqBvsvGcDGMwz92omeNTF5TJBKiC",
+        "name": "reliability_models.cpython-314.pyc",
+        "size": "8910",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/17vGTSqBvsvGcDGMwz92omeNTF5TJBKiC/view?usp=drivesdk"
+      },
+      {
+        "id": "1mmi5uGMBmNX8WXTtdKoGU2KAEqdY3QCd",
+        "name": "fetch_reliability_data.cpython-314.pyc",
+        "size": "13518",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1mmi5uGMBmNX8WXTtdKoGU2KAEqdY3QCd/view?usp=drivesdk"
+      },
+      {
+        "id": "1xxIhpGqFzL6Rh0zO2zluug9I4jCKHp8f",
+        "name": "evaluate_hard_negative_reproduction.cpython-314.pyc",
+        "size": "11539",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1xxIhpGqFzL6Rh0zO2zluug9I4jCKHp8f/view?usp=drivesdk"
+      },
+      {
+        "id": "1fHl7veftLx9bFk5RPLt24B1itM7sCUFX",
+        "name": "robust_reproduction_ensemble.cpython-314.pyc",
+        "size": "13576",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fHl7veftLx9bFk5RPLt24B1itM7sCUFX/view?usp=drivesdk"
+      },
+      {
+        "id": "1gXSntRVHJfsjDYMfzSyrGufyHdHfDiUE",
+        "name": "evaluate_reproduction.cpython-314.pyc",
+        "size": "19085",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1gXSntRVHJfsjDYMfzSyrGufyHdHfDiUE/view?usp=drivesdk"
+      },
+      {
+        "id": "1cg3Lu9EStd3bFtKGKHeXOFuJ19QKusve",
+        "name": "train_reproduction.cpython-314.pyc",
+        "size": "27668",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1cg3Lu9EStd3bFtKGKHeXOFuJ19QKusve/view?usp=drivesdk"
+      },
+      {
+        "id": "14k46Hc5BDtLUFq6biTLsTiuacjDQ0wE7",
+        "name": "reproduction_models.cpython-314.pyc",
+        "size": "16024",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/14k46Hc5BDtLUFq6biTLsTiuacjDQ0wE7/view?usp=drivesdk"
+      },
+      {
+        "id": "1U8wMlyg829uo7lzkeXbKS0tCONdI_KAZ",
+        "name": "benchmark_all_methods.cpython-314.pyc",
+        "size": "2826",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U8wMlyg829uo7lzkeXbKS0tCONdI_KAZ/view?usp=drivesdk"
+      },
+      {
+        "id": "1UZKjotMaWiC5btzWM0848lTfu1qpJz_C",
+        "name": "models_committee.cpython-314.pyc",
+        "size": "11382",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UZKjotMaWiC5btzWM0848lTfu1qpJz_C/view?usp=drivesdk"
+      },
+      {
+        "id": "1TsjwVQv9HF8KKfEHzvDXQa-mlY60gm46",
+        "name": "swarm_adapted_ensemble.cpython-314.pyc",
+        "size": "10298",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1TsjwVQv9HF8KKfEHzvDXQa-mlY60gm46/view?usp=drivesdk"
+      },
+      {
+        "id": "17BhTlB2Vr0TquL-sZmuVJ-gg3osBfcWf",
+        "name": "corrected_validation.cpython-314.pyc",
+        "size": "40823",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/17BhTlB2Vr0TquL-sZmuVJ-gg3osBfcWf/view?usp=drivesdk"
+      },
+      {
+        "id": "1JFFJnujc9UoD3STwSAf2zV3Ory3Wzl3C",
+        "name": "evaluate_new_database.cpython-314.pyc",
+        "size": "18468",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1JFFJnujc9UoD3STwSAf2zV3Ory3Wzl3C/view?usp=drivesdk"
+      },
+      {
+        "id": "1Inu4c0pMFJlxPc8-jPi9GUmGElPNnBol",
+        "name": "evaluate_biodcase_d5.cpython-314.pyc",
+        "size": "12035",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Inu4c0pMFJlxPc8-jPi9GUmGElPNnBol/view?usp=drivesdk"
+      },
+      {
+        "id": "1kAVp2JX-kmmX7lmArrH_0dCnd6VkFaKi",
+        "name": "models_deep.cpython-314.pyc",
+        "size": "31036",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1kAVp2JX-kmmX7lmArrH_0dCnd6VkFaKi/view?usp=drivesdk"
+      },
+      {
+        "id": "1G6dLys3sJlCHzPu5wuDjjN6GYJk1ClRt",
+        "name": "tinyml_decimated_frontend.cpython-314.pyc",
+        "size": "8343",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1G6dLys3sJlCHzPu5wuDjjN6GYJk1ClRt/view?usp=drivesdk"
+      },
+      {
+        "id": "1absQaOASqk9vmGWdVD9Hk8I_t6nenvff",
+        "name": "bioacoustic_invariance.cpython-314.pyc",
+        "size": "13063",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1absQaOASqk9vmGWdVD9Hk8I_t6nenvff/view?usp=drivesdk"
+      },
+      {
+        "id": "1BwTdoYoScDexLLuJ-zdTsPcp6OrjtmwD",
+        "name": "aedes_classical_notebook.cpython-314.pyc",
+        "size": "1997",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1BwTdoYoScDexLLuJ-zdTsPcp6OrjtmwD/view?usp=drivesdk"
+      },
+      {
+        "id": "1vtWNue0lnFMNyJdHAh2UxUx-TvItP-f8",
+        "name": "train_aedes_classical.cpython-314.pyc",
+        "size": "16887",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vtWNue0lnFMNyJdHAh2UxUx-TvItP-f8/view?usp=drivesdk"
+      },
+      {
+        "id": "1XdV1LCTV0t4yQnOIeSadBuNyNGf_KxrH",
+        "name": "summarize_aedes_classical.cpython-314.pyc",
+        "size": "14901",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1XdV1LCTV0t4yQnOIeSadBuNyNGf_KxrH/view?usp=drivesdk"
+      },
+      {
+        "id": "1JttnS8vzhICUvusYpywJw0BiGVKxOmQo",
+        "name": "evaluate_aedes_classical.cpython-314.pyc",
+        "size": "8768",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1JttnS8vzhICUvusYpywJw0BiGVKxOmQo/view?usp=drivesdk"
+      },
+      {
+        "id": "11wwb1YUIXV0hF2r-rjkH1XNlJtJ1NU7x",
+        "name": "explain_aedes_classical.cpython-314.pyc",
+        "size": "4619",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11wwb1YUIXV0hF2r-rjkH1XNlJtJ1NU7x/view?usp=drivesdk"
+      },
+      {
+        "id": "1L6r8Xe387h7cgzUTTIMU4WqOFsD5R1Ch",
+        "name": "fetch_fresh_aedes_classical.cpython-314.pyc",
+        "size": "9325",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1L6r8Xe387h7cgzUTTIMU4WqOFsD5R1Ch/view?usp=drivesdk"
+      },
+      {
+        "id": "1YaoqAFK8ysopyltzkXTP8sYHvCxbGhkv",
+        "name": "aedes_classical.cpython-314.pyc",
+        "size": "11591",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1YaoqAFK8ysopyltzkXTP8sYHvCxbGhkv/view?usp=drivesdk"
+      },
+      {
+        "id": "16DXLFJYKy8qTwDg0_fzi_5p6kNZYtxvI",
+        "name": "aedes_binary_notebook.cpython-314.pyc",
+        "size": "1696",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16DXLFJYKy8qTwDg0_fzi_5p6kNZYtxvI/view?usp=drivesdk"
+      },
+      {
+        "id": "1ZfPjzIfAM5WCqzCs_5Mq7Q3O0vFLpnu-",
+        "name": "evaluate_aedes_binary.cpython-314.pyc",
+        "size": "4328",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ZfPjzIfAM5WCqzCs_5Mq7Q3O0vFLpnu-/view?usp=drivesdk"
+      },
+      {
+        "id": "1h-Njakh1UH05tExavtfOQdu6sOm_GJAw",
+        "name": "fetch_fresh_aedes_binary.cpython-314.pyc",
+        "size": "9166",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1h-Njakh1UH05tExavtfOQdu6sOm_GJAw/view?usp=drivesdk"
+      },
+      {
+        "id": "10XLtqkcIWFp73DMtpGAgmPXYjmfFU7R-",
+        "name": "train_aedes_binary.cpython-314.pyc",
+        "size": "21700",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/10XLtqkcIWFp73DMtpGAgmPXYjmfFU7R-/view?usp=drivesdk"
+      },
+      {
+        "id": "1rNjq_hRhYIQPehqs9kh8mmraEV574Bjo",
+        "name": "aedes_binary.cpython-314.pyc",
+        "size": "9891",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rNjq_hRhYIQPehqs9kh8mmraEV574Bjo/view?usp=drivesdk"
+      },
+      {
+        "id": "12LrbfVdt9G9SGqbP8uAgEXuiTtEEDn0Z",
+        "name": "build_notebook.cpython-314.pyc",
+        "size": "40046",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12LrbfVdt9G9SGqbP8uAgEXuiTtEEDn0Z/view?usp=drivesdk"
+      },
+      {
+        "id": "1GaRL5am5xTyUwCcqEngjn4Rc-iuCMdpG",
+        "name": "evaluate_preprocessing.cpython-314.pyc",
+        "size": "12838",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GaRL5am5xTyUwCcqEngjn4Rc-iuCMdpG/view?usp=drivesdk"
+      },
+      {
+        "id": "11JXikohhTNl6yfAsRdlyuFwm2TdcSC7G",
+        "name": "preprocessing_notebook.cpython-314.pyc",
+        "size": "2660",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11JXikohhTNl6yfAsRdlyuFwm2TdcSC7G/view?usp=drivesdk"
+      },
+      {
+        "id": "1P6cl1SStm5C1pWArnTacWD2hshFhQ7mj",
+        "name": "audio_preprocessing.cpython-314.pyc",
+        "size": "4274",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1P6cl1SStm5C1pWArnTacWD2hshFhQ7mj/view?usp=drivesdk"
+      },
+      {
+        "id": "12QnUGINu3zA4knO8cgKyzSGCQczitWEN",
+        "name": "test_large_audio.cpython-314.pyc",
+        "size": "8132",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12QnUGINu3zA4knO8cgKyzSGCQczitWEN/view?usp=drivesdk"
+      },
+      {
+        "id": "1Tfm3xcybkERWEi4Wwkz6uQd6tX2-sVED",
+        "name": "multisource_notebook.cpython-314.pyc",
+        "size": "3491",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Tfm3xcybkERWEi4Wwkz6uQd6tX2-sVED/view?usp=drivesdk"
+      },
+      {
+        "id": "1MhUGAb9x2UIYSQT7S_xqDJEyQBH9ufG9",
+        "name": "summarize_multisource.cpython-314.pyc",
+        "size": "21692",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MhUGAb9x2UIYSQT7S_xqDJEyQBH9ufG9/view?usp=drivesdk"
+      },
+      {
+        "id": "11smZmRUYzQyQH_eIoKYOSg947Mdnymz_",
+        "name": "fetch_fresh_multisource_test.cpython-314.pyc",
+        "size": "7656",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11smZmRUYzQyQH_eIoKYOSg947Mdnymz_/view?usp=drivesdk"
+      },
+      {
+        "id": "1Z5zmv1bXuRfDA_OLiRp_mOojhyR_Bnsx",
+        "name": "evaluate_multisource.cpython-314.pyc",
+        "size": "5669",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Z5zmv1bXuRfDA_OLiRp_mOojhyR_Bnsx/view?usp=drivesdk"
+      },
+      {
+        "id": "1Ck-MrX07X2GOkmPvkeC_h08REViTUv9T",
+        "name": "prepare_biodcase_benchmark.cpython-314.pyc",
+        "size": "6843",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Ck-MrX07X2GOkmPvkeC_h08REViTUv9T/view?usp=drivesdk"
+      },
+      {
+        "id": "1qxFNCZLQ2xJF3DCpNj9k3nFffNUV7y_-",
+        "name": "train_multisource.cpython-314.pyc",
+        "size": "30653",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1qxFNCZLQ2xJF3DCpNj9k3nFffNUV7y_-/view?usp=drivesdk"
+      },
+      {
+        "id": "1tP9fXy4FO94Qna3lM4legJQbkkME5_Af",
+        "name": "prepare_multisource.cpython-314.pyc",
+        "size": "11033",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tP9fXy4FO94Qna3lM4legJQbkkME5_Af/view?usp=drivesdk"
+      },
+      {
+        "id": "1pvOJRrLK_MarQn-vjQptBUV3hWiqM1t9",
+        "name": "fetch_additional_audio.cpython-314.pyc",
+        "size": "8651",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1pvOJRrLK_MarQn-vjQptBUV3hWiqM1t9/view?usp=drivesdk"
+      },
+      {
+        "id": "1wqVKil81UZa0P49BBRjF9pB-S37oVpPy",
+        "name": "fetch_biodcase.cpython-314.pyc",
+        "size": "5794",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wqVKil81UZa0P49BBRjF9pB-S37oVpPy/view?usp=drivesdk"
+      },
+      {
+        "id": "1dGY1vdEOqpHG_CiJbfR9d1M_6gRsC0Nt",
+        "name": "large_cnn_notebook.cpython-314.pyc",
+        "size": "3269",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dGY1vdEOqpHG_CiJbfR9d1M_6gRsC0Nt/view?usp=drivesdk"
+      },
+      {
+        "id": "18qXMmMcf-s4M4Q8ECpEYeaf7CF717gLc",
+        "name": "train_large_cnn.cpython-314.pyc",
+        "size": "29645",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18qXMmMcf-s4M4Q8ECpEYeaf7CF717gLc/view?usp=drivesdk"
+      },
+      {
+        "id": "1_n4DMar-q15bnroAy7T09O6_GyruhMsZ",
+        "name": "large_audio_model.cpython-314.pyc",
+        "size": "11398",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1_n4DMar-q15bnroAy7T09O6_GyruhMsZ/view?usp=drivesdk"
+      },
+      {
+        "id": "1MJFMd0M3Vyfy3_WdAxoP1aSrzXgL-Ck-",
+        "name": "expanded_notebook.cpython-314.pyc",
+        "size": "5203",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MJFMd0M3Vyfy3_WdAxoP1aSrzXgL-Ck-/view?usp=drivesdk"
+      },
+      {
+        "id": "1dmXi14-kQ2-GdCYEo8OR_EzF3TxZIs2N",
+        "name": "test_expanded_audio.cpython-314.pyc",
+        "size": "8105",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dmXi14-kQ2-GdCYEo8OR_EzF3TxZIs2N/view?usp=drivesdk"
+      },
+      {
+        "id": "1Tk4JYEOU2CjeX-8INi1HIU_PkyTtRLmg",
+        "name": "train_expanded.cpython-314.pyc",
+        "size": "38580",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Tk4JYEOU2CjeX-8INi1HIU_PkyTtRLmg/view?usp=drivesdk"
+      },
+      {
+        "id": "16ak2SsXUoriA8nBlzDTGM0Oc6FtrMWXp",
+        "name": "fetch_humbug.cpython-314.pyc",
+        "size": "17248",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16ak2SsXUoriA8nBlzDTGM0Oc6FtrMWXp/view?usp=drivesdk"
+      },
+      {
+        "id": "1CwMisly5Cz-UsxziDQ_yZJxYdvSvY0MP",
+        "name": "windows_installer.cpython-314.pyc",
+        "size": "43077",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CwMisly5Cz-UsxziDQ_yZJxYdvSvY0MP/view?usp=drivesdk"
+      },
+      {
+        "id": "13ieRfDHt09tvSOEGHMH6nczEsvCRWOJb",
+        "name": "install_arduino.cpython-314.pyc",
+        "size": "34001",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/13ieRfDHt09tvSOEGHMH6nczEsvCRWOJb/view?usp=drivesdk"
+      },
+      {
+        "id": "1UNtwe5xi-evy0NpG8fDV1SciCrQolGGw",
+        "name": "prepare_delivery.cpython-314.pyc",
+        "size": "27143",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UNtwe5xi-evy0NpG8fDV1SciCrQolGGw/view?usp=drivesdk"
+      },
+      {
+        "id": "1ITMkV3g8oH5NLz6H8tDSVwlOy6ZXZJcP",
+        "name": "serve.cpython-314.pyc",
+        "size": "2507",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ITMkV3g8oH5NLz6H8tDSVwlOy6ZXZJcP/view?usp=drivesdk"
+      },
+      {
+        "id": "1rfLX6l_A_kMbnL2L5yRGeU6ft0EPkm1l",
+        "name": "train_arduino_species.cpython-314.pyc",
+        "size": "38277",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rfLX6l_A_kMbnL2L5yRGeU6ft0EPkm1l/view?usp=drivesdk"
+      },
+      {
+        "id": "1wPBZhX_swDUxYIwv-sTcpkBzUdfdcmMJ",
+        "name": "build_report.cpython-314.pyc",
+        "size": "94456",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wPBZhX_swDUxYIwv-sTcpkBzUdfdcmMJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1bm5XTvqbLzDqF-N4jTAhgsdS1Y5T8CBy",
+        "name": "verify_arduino_species.cpython-314.pyc",
+        "size": "16019",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1bm5XTvqbLzDqF-N4jTAhgsdS1Y5T8CBy/view?usp=drivesdk"
+      },
+      {
+        "id": "1U9bC5KKD21eUkcmq8PhUkeU4yRlFpKQ7",
+        "name": "arduino_species_models.cpython-314.pyc",
+        "size": "11131",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U9bC5KKD21eUkcmq8PhUkeU4yRlFpKQ7/view?usp=drivesdk"
+      },
+      {
+        "id": "1Uej2CNMWCy4_3j89FsGxnrmDUrHTUIKF",
+        "name": "arduino_models.cpython-314.pyc",
+        "size": "7052",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Uej2CNMWCy4_3j89FsGxnrmDUrHTUIKF/view?usp=drivesdk"
+      },
+      {
+        "id": "1b3A0tUb0I7fR10OPna6ID2njZaLkOTkD",
+        "name": "verify_arduino.cpython-314.pyc",
+        "size": "9597",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1b3A0tUb0I7fR10OPna6ID2njZaLkOTkD/view?usp=drivesdk"
+      },
+      {
+        "id": "1c15DuCNRE5BX8bqdimHIaY7yZBuArdT5",
+        "name": "train_arduino.cpython-314.pyc",
+        "size": "31989",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1c15DuCNRE5BX8bqdimHIaY7yZBuArdT5/view?usp=drivesdk"
+      },
+      {
+        "id": "1pwofe2eiPw7uWsGP0DBI2UHEhxZuTvTe",
+        "name": "probe_arduino_noise.cpython-314.pyc",
+        "size": "6242",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1pwofe2eiPw7uWsGP0DBI2UHEhxZuTvTe/view?usp=drivesdk"
+      },
+      {
+        "id": "1l2BqhVqHlwLMqJYCST8bhHIfnqHPDwmW",
+        "name": "improve_device.cpython-314.pyc",
+        "size": "53165",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1l2BqhVqHlwLMqJYCST8bhHIfnqHPDwmW/view?usp=drivesdk"
+      },
+      {
+        "id": "1CQO00Xbr8yiHJQK_LyaIiA6sUqsncACt",
+        "name": "arduino_frontend.cpython-314.pyc",
+        "size": "6775",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CQO00Xbr8yiHJQK_LyaIiA6sUqsncACt/view?usp=drivesdk"
+      },
+      {
+        "id": "12MBUiB2OWxaURRlBqN-PvFSzGxZCIX9S",
+        "name": "notebook_code.cpython-314.pyc",
+        "size": "103636",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12MBUiB2OWxaURRlBqN-PvFSzGxZCIX9S/view?usp=drivesdk"
+      },
+      {
+        "id": "1UbTgEkCudTFzrOIsUVqMjgsMBeV58YPG",
+        "name": "fetch_data.cpython-314.pyc",
+        "size": "18782",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UbTgEkCudTFzrOIsUVqMjgsMBeV58YPG/view?usp=drivesdk"
+      },
+      {
+        "id": "1EVVUCTRl7HO8fejITGZcIt2Gpmfrgi9i",
+        "name": "execute_notebook.cpython-314.pyc",
+        "size": "4699",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1EVVUCTRl7HO8fejITGZcIt2Gpmfrgi9i/view?usp=drivesdk"
+      }
+    ]
+  },
+  {
+    "key": "tests_cache",
+    "files": [
+      {
+        "id": "1aXobdYjY1lxJA4G3in5ABF5zFf48zhEQ",
+        "name": "test_nested_species_v2.cpython-314-pytest-9.1.1.pyc",
+        "size": "40500",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aXobdYjY1lxJA4G3in5ABF5zFf48zhEQ/view?usp=drivesdk"
+      },
+      {
+        "id": "1sJwBWB6ZcmsdSTkH3gBSg5-VPeJnEFw1",
+        "name": "test_nested_species.cpython-314-pytest-9.1.1.pyc",
+        "size": "18024",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1sJwBWB6ZcmsdSTkH3gBSg5-VPeJnEFw1/view?usp=drivesdk"
+      },
+      {
+        "id": "1IoI-ADwXD3UiBblXHwiOVqJzsTBih-H2",
+        "name": "test_windows_installer.cpython-314-pytest-9.1.1.pyc",
+        "size": "14172",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1IoI-ADwXD3UiBblXHwiOVqJzsTBih-H2/view?usp=drivesdk"
+      },
+      {
+        "id": "151bSsW6KhH_ZsWKocUX50u1wU7owvWyH",
+        "name": "test_sex_balanced_reliability.cpython-314-pytest-9.1.1.pyc",
+        "size": "7085",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/151bSsW6KhH_ZsWKocUX50u1wU7owvWyH/view?usp=drivesdk"
+      },
+      {
+        "id": "1s9V-fKg3AlNaj5oR_Sh8V0YzMA0lHKI9",
+        "name": "test_reproduction.cpython-314-pytest-9.1.1.pyc",
+        "size": "13009",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1s9V-fKg3AlNaj5oR_Sh8V0YzMA0lHKI9/view?usp=drivesdk"
+      },
+      {
+        "id": "1shUHDVVn4ZvDX7SOZg0QIakjfSND3UfR",
+        "name": "test_multisource_protocol.cpython-314-pytest-9.1.1.pyc",
+        "size": "6170",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1shUHDVVn4ZvDX7SOZg0QIakjfSND3UfR/view?usp=drivesdk"
+      },
+      {
+        "id": "1GRgSVsMAkj5DSXr0AzzLuQemL6-wWgAS",
+        "name": "test_large_audio_model.cpython-314-pytest-9.1.1.pyc",
+        "size": "5325",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GRgSVsMAkj5DSXr0AzzLuQemL6-wWgAS/view?usp=drivesdk"
+      },
+      {
+        "id": "18G4Hy1r0rFRmzS8UAC-9zsoeX25LSYW1",
+        "name": "test_install_arduino.cpython-314-pytest-9.1.1.pyc",
+        "size": "29876",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18G4Hy1r0rFRmzS8UAC-9zsoeX25LSYW1/view?usp=drivesdk"
+      },
+      {
+        "id": "1yK6mQj4AP5IoJycqQeTH3uRIXU43-gXJ",
+        "name": "test_expanded_protocol.cpython-314-pytest-9.1.1.pyc",
+        "size": "3993",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1yK6mQj4AP5IoJycqQeTH3uRIXU43-gXJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1Op7NkXereJloTltfM0BVhQFvRFFEQBgn",
+        "name": "test_cross_domain_strategies.cpython-314-pytest-9.1.1.pyc",
+        "size": "16397",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Op7NkXereJloTltfM0BVhQFvRFFEQBgn/view?usp=drivesdk"
+      },
+      {
+        "id": "1hmwlt767CP9RZG-kUUSCgnuYWligBSZn",
+        "name": "test_corrected_validation.cpython-314-pytest-9.1.1.pyc",
+        "size": "9489",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hmwlt767CP9RZG-kUUSCgnuYWligBSZn/view?usp=drivesdk"
+      },
+      {
+        "id": "1N5HgS57LEpMCEARNw_0B5UScNmRDM6pM",
+        "name": "test_audio_preprocessing.cpython-314-pytest-9.1.1.pyc",
+        "size": "5138",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1N5HgS57LEpMCEARNw_0B5UScNmRDM6pM/view?usp=drivesdk"
+      },
+      {
+        "id": "135ZsnQ87cPWMVbrKEXEPQAAdcCrWjIWn",
+        "name": "test_aedes_classical.cpython-314-pytest-9.1.1.pyc",
+        "size": "3828",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/135ZsnQ87cPWMVbrKEXEPQAAdcCrWjIWn/view?usp=drivesdk"
+      },
+      {
+        "id": "1jwDZswD1KWIOOJQm1g_rGTK5RE2802Pv",
+        "name": "test_aedes_binary.cpython-314-pytest-9.1.1.pyc",
+        "size": "2979",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jwDZswD1KWIOOJQm1g_rGTK5RE2802Pv/view?usp=drivesdk"
+      },
+      {
+        "id": "1vS9ZpAEFWUhFi6wobFLNHmgHae02WgOd",
+        "name": "test_reliability.cpython-314-pytest-9.1.1.pyc",
+        "size": "11304",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1vS9ZpAEFWUhFi6wobFLNHmgHae02WgOd/view?usp=drivesdk"
+      },
+      {
+        "id": "1-GAcTgfbmQ3H8wzyi-_pUpUUbSmd7Bcf",
+        "name": "test_research_audit.cpython-314-pytest-9.1.1.pyc",
+        "size": "17808",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-GAcTgfbmQ3H8wzyi-_pUpUUbSmd7Bcf/view?usp=drivesdk"
+      },
+      {
+        "id": "1DgXkn_OXp9arnM8kMykHQZdpRC4Vg2N2",
+        "name": "test_faithful_reproduction.cpython-314-pytest-9.1.1.pyc",
+        "size": "57775",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1DgXkn_OXp9arnM8kMykHQZdpRC4Vg2N2/view?usp=drivesdk"
+      },
+      {
+        "id": "1SMarX3kzsdan1uTFtCZehbn3RWlTK0eW",
+        "name": "test_cross_domain_strategies.cpython-314.pyc",
+        "size": "16284",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SMarX3kzsdan1uTFtCZehbn3RWlTK0eW/view?usp=drivesdk"
+      },
+      {
+        "id": "1U_aPhfV0p2_-WWV3PIESG6CGcz7A4teX",
+        "name": "test_sex_balanced_reliability.cpython-314.pyc",
+        "size": "6971",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U_aPhfV0p2_-WWV3PIESG6CGcz7A4teX/view?usp=drivesdk"
+      },
+      {
+        "id": "1HfivGBzH652S_XmcxjjcgCtyTwG8vjbX",
+        "name": "test_reliability.cpython-314.pyc",
+        "size": "11190",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1HfivGBzH652S_XmcxjjcgCtyTwG8vjbX/view?usp=drivesdk"
+      },
+      {
+        "id": "1OwCHX5gdgA7EQIE-A65WKVRxXX42nrEy",
+        "name": "test_reproduction.cpython-314.pyc",
+        "size": "12895",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1OwCHX5gdgA7EQIE-A65WKVRxXX42nrEy/view?usp=drivesdk"
+      },
+      {
+        "id": "1f2klx7Y8XD7Cw_bP1QoLOnhBnhES8ZLy",
+        "name": "test_corrected_validation.cpython-314.pyc",
+        "size": "9375",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1f2klx7Y8XD7Cw_bP1QoLOnhBnhES8ZLy/view?usp=drivesdk"
+      },
+      {
+        "id": "1dOmGfyz-3Riy5O-A89svWsQcnBt10_pp",
+        "name": "test_aedes_classical.cpython-314.pyc",
+        "size": "3715",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dOmGfyz-3Riy5O-A89svWsQcnBt10_pp/view?usp=drivesdk"
+      },
+      {
+        "id": "1F4YB8cgoBuvntus_Lj-McoRV044gE_vR",
+        "name": "test_aedes_binary.cpython-314.pyc",
+        "size": "2866",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1F4YB8cgoBuvntus_Lj-McoRV044gE_vR/view?usp=drivesdk"
+      },
+      {
+        "id": "1r0A4FbMaTwYS1PuyfvQK09zQO6vuc3Tt",
+        "name": "test_audio_preprocessing.cpython-314.pyc",
+        "size": "5025",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1r0A4FbMaTwYS1PuyfvQK09zQO6vuc3Tt/view?usp=drivesdk"
+      },
+      {
+        "id": "1pRs4faynSD5_bGzpdSgJGRbi69jZrhRk",
+        "name": "test_multisource_protocol.cpython-314.pyc",
+        "size": "6056",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1pRs4faynSD5_bGzpdSgJGRbi69jZrhRk/view?usp=drivesdk"
+      },
+      {
+        "id": "10SQ2KYkp7xg9RS9CQQpKnV5TJKS5N3X_",
+        "name": "test_large_audio_model.cpython-314.pyc",
+        "size": "5212",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/10SQ2KYkp7xg9RS9CQQpKnV5TJKS5N3X_/view?usp=drivesdk"
+      },
+      {
+        "id": "1bhddQxqJcaJT5qqbfEXSZjTDmLLS8RZy",
+        "name": "test_expanded_protocol.cpython-314.pyc",
+        "size": "3880",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1bhddQxqJcaJT5qqbfEXSZjTDmLLS8RZy/view?usp=drivesdk"
+      },
+      {
+        "id": "1CsBNcuDK1sw7P5DrAd2dO0k5J-BfZCa9",
+        "name": "test_windows_installer.cpython-314.pyc",
+        "size": "14000",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CsBNcuDK1sw7P5DrAd2dO0k5J-BfZCa9/view?usp=drivesdk"
+      },
+      {
+        "id": "18aJA3A9bphpfAhA5nnTzWaNoW2Lch9jE",
+        "name": "test_install_arduino.cpython-314.pyc",
+        "size": "29762",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18aJA3A9bphpfAhA5nnTzWaNoW2Lch9jE/view?usp=drivesdk"
+      }
+    ]
+  },
+  {
+    "key": "pytest",
+    "files": [
+      {
+        "id": "18QCt1YyT2kfleqnsPHqolzH7t0XQJAYl",
+        "name": ".gitignore",
+        "size": "37",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18QCt1YyT2kfleqnsPHqolzH7t0XQJAYl/view?usp=drivesdk"
+      },
+      {
+        "id": "1sQoF318R4WraHAhtrVhQ9oXmZytkQDRe",
+        "name": "CACHEDIR.TAG",
+        "size": "191",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1sQoF318R4WraHAhtrVhQ9oXmZytkQDRe/view?usp=drivesdk"
+      },
+      {
+        "id": "1UBL5vh6zPj-xIViekhtPYSizetrm8Cp0",
+        "name": "README.md",
+        "size": "302",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UBL5vh6zPj-xIViekhtPYSizetrm8Cp0/view?usp=drivesdk"
+      },
+      {
+        "id": "14CUE_vYkzBUtM9sV2YO1FE0hUAOdi2ji",
+        "name": "v",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/14CUE_vYkzBUtM9sV2YO1FE0hUAOdi2ji"
+      }
+    ]
+  },
+  {
+    "key": "pytest_v",
+    "files": [
+      {
+        "id": "1030BtOCEvuuzEja_m_0Tenh3hl5_c-Rh",
+        "name": "cache",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1030BtOCEvuuzEja_m_0Tenh3hl5_c-Rh"
+      }
+    ]
+  },
+  {
+    "key": "pytest_cache",
+    "files": [
+      {
+        "id": "1SU5kPuexAD_I-lLdMUGvYoXoXEMtPLYi",
+        "name": "lastfailed",
+        "size": "2",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1SU5kPuexAD_I-lLdMUGvYoXoXEMtPLYi/view?usp=drivesdk"
+      },
+      {
+        "id": "1LR8E-_cBEFdjoo4UB_TiNvFP9NfbQ4wt",
+        "name": "nodeids",
+        "size": "20482",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1LR8E-_cBEFdjoo4UB_TiNvFP9NfbQ4wt/view?usp=drivesdk"
+      }
+    ]
+  },
+  {
+    "key": "tmp",
+    "files": [
+      {
+        "id": "13rteRrxq3AhmY4VnEwKwfYHVQXS7tq5C",
+        "name": "predict_audio_v5_prev.py",
+        "size": "38544",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/13rteRrxq3AhmY4VnEwKwfYHVQXS7tq5C/view?usp=drivesdk"
+      },
+      {
+        "id": "1ROJdDzsQo-voAdYaiyci35KHXtp2CVdH",
+        "name": "acoustic_features_v5_prev.py",
+        "size": "10548",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1ROJdDzsQo-voAdYaiyci35KHXtp2CVdH/view?usp=drivesdk"
+      },
+      {
+        "id": "1U9I-q-6vbsHJP6-tRTQWeqZRtp15Fpgd",
+        "name": "robust_audio_features_v4_prev.py",
+        "size": "12274",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1U9I-q-6vbsHJP6-tRTQWeqZRtp15Fpgd/view?usp=drivesdk"
+      },
+      {
+        "id": "1rcN5K7Y2HBx6DmkNolEB3Omzfsyx48-J",
+        "name": "predict_audio_v4_prev.py",
+        "size": "34210",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rcN5K7Y2HBx6DmkNolEB3Omzfsyx48-J/view?usp=drivesdk"
+      },
+      {
+        "id": "1sCVMlfSuAxj9pMD2-lMSy8qXWFf_tAu2",
+        "name": "v2_2026_10_13",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1sCVMlfSuAxj9pMD2-lMSy8qXWFf_tAu2"
+      },
+      {
+        "id": "1LcO_J7twEqDvRFJQOBSKc1OBF71TzZTa",
+        "name": "arduino-species-verify",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1LcO_J7twEqDvRFJQOBSKc1OBF71TzZTa"
+      },
+      {
+        "id": "19_9BrARXTPkGCg-NpDcEiD7SbCG_Za71",
+        "name": "caixa_de_vidro.audio",
+        "size": "3399724",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/19_9BrARXTPkGCg-NpDcEiD7SbCG_Za71/view?usp=drivesdk"
+      },
+      {
+        "id": "1bkRvEi6YWUHqRhv8YEViXD6hw9M8EFw7",
+        "name": "aedes_classical_notebook_export.log",
+        "size": "213",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1bkRvEi6YWUHqRhv8YEViXD6hw9M8EFw7/view?usp=drivesdk"
+      },
+      {
+        "id": "1eKTe6pjLmFx_IdbwvEB2ZKsIuIiVhBza",
+        "name": "aedes_classical_explanations.log",
+        "size": "87",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1eKTe6pjLmFx_IdbwvEB2ZKsIuIiVhBza/view?usp=drivesdk"
+      },
+      {
+        "id": "1WMBEYofTBgF-T24XIINIq06Dtxki1nUk",
+        "name": "aedes_classical_evaluation.log",
+        "size": "4024",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WMBEYofTBgF-T24XIINIq06Dtxki1nUk/view?usp=drivesdk"
+      },
+      {
+        "id": "1jMUMULML4eFqkthNItSgCLXraOdSUdBM",
+        "name": "aedes_classical_fresh.log",
+        "size": "2763",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jMUMULML4eFqkthNItSgCLXraOdSUdBM/view?usp=drivesdk"
+      },
+      {
+        "id": "1coypZrloTYaFd3vuHNubmg2hJXJgva_5",
+        "name": "aedes_classical_fresh",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1coypZrloTYaFd3vuHNubmg2hJXJgva_5"
+      },
+      {
+        "id": "11hdYop4GvGP0Vp48qheOfEmD2Mb0cjRT",
+        "name": "aedes_classical_training_resumed.log",
+        "size": "619",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11hdYop4GvGP0Vp48qheOfEmD2Mb0cjRT/view?usp=drivesdk"
+      },
+      {
+        "id": "1cHCzf-y-ojdZDCuT0zgxpWteuoC4wtyE",
+        "name": "aedes_classical_training.log",
+        "size": "4743",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1cHCzf-y-ojdZDCuT0zgxpWteuoC4wtyE/view?usp=drivesdk"
+      },
+      {
+        "id": "12J3yKzVYKxt6vgRos85_qD61Ox6DQfBu",
+        "name": "aedes_binary_notebook_export.log",
+        "size": "213",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12J3yKzVYKxt6vgRos85_qD61Ox6DQfBu/view?usp=drivesdk"
+      },
+      {
+        "id": "1FJLjxy2O2gM8MIv3TUlGsJwnc4cQsfmU",
+        "name": "aedes_binary_fresh.log",
+        "size": "2888",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1FJLjxy2O2gM8MIv3TUlGsJwnc4cQsfmU/view?usp=drivesdk"
+      },
+      {
+        "id": "1fnBkSfZpO-jV7QzwlXr4O6HPFq6gVESQ",
+        "name": "aedes_binary_fresh",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1fnBkSfZpO-jV7QzwlXr4O6HPFq6gVESQ"
+      },
+      {
+        "id": "1O6i8-gdwJNbrkM2CJWjuHdEZ_56LVsPs",
+        "name": "aedes_binary_training.log",
+        "size": "3174",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1O6i8-gdwJNbrkM2CJWjuHdEZ_56LVsPs/view?usp=drivesdk"
+      },
+      {
+        "id": "1yL4rQs7TqJxIGBxb-TXED_ylY6wBecVS",
+        "name": "preprocessing_evaluation.log",
+        "size": "1987",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1yL4rQs7TqJxIGBxb-TXED_ylY6wBecVS/view?usp=drivesdk"
+      },
+      {
+        "id": "11TtN4nhOERSDKfMlWDMDvDfesdtj-May",
+        "name": "check_fresh_biodcase_pcm.py",
+        "size": "1539",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/11TtN4nhOERSDKfMlWDMDvDfesdtj-May/view?usp=drivesdk"
+      },
+      {
+        "id": "1hDMuEqZzqC9D3vDv4ZYNSEPa6hfl4I97",
+        "name": "multisource_fresh_inference.log",
+        "size": "10907",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1hDMuEqZzqC9D3vDv4ZYNSEPa6hfl4I97/view?usp=drivesdk"
+      },
+      {
+        "id": "18htTqtqMCCvD1p38bd2hcpwLK-mQOcu_",
+        "name": "run_fresh_multisource.py",
+        "size": "533",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/18htTqtqMCCvD1p38bd2hcpwLK-mQOcu_/view?usp=drivesdk"
+      },
+      {
+        "id": "1WQD5IBIv1b5bVIUt-LxDap2vYrz09jtg",
+        "name": "multisource_evaluation.log",
+        "size": "1853",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WQD5IBIv1b5bVIUt-LxDap2vYrz09jtg/view?usp=drivesdk"
+      },
+      {
+        "id": "1wOchjuvxde0fLTZaaCqaan_uYV9OM0uX",
+        "name": "multisource_fresh_download.log",
+        "size": "2727",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1wOchjuvxde0fLTZaaCqaan_uYV9OM0uX/view?usp=drivesdk"
+      },
+      {
+        "id": "1aT0SLc-5mwMJoJTFPt3lNz1wtlAyesjs",
+        "name": "multisource_training.log",
+        "size": "3627",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1aT0SLc-5mwMJoJTFPt3lNz1wtlAyesjs/view?usp=drivesdk"
+      },
+      {
+        "id": "1668tkjR_eLfP3i9gBFBHh04bZAONqoAS",
+        "name": "biodcase_prepare.log",
+        "size": "180",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1668tkjR_eLfP3i9gBFBHh04bZAONqoAS/view?usp=drivesdk"
+      },
+      {
+        "id": "1kYvP5-pqiG07ZpoT-bjLnKcsoTiFLZyo",
+        "name": "multisource_prepare.log",
+        "size": "259",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1kYvP5-pqiG07ZpoT-bjLnKcsoTiFLZyo/view?usp=drivesdk"
+      },
+      {
+        "id": "1Xw_MCMq1U1pRT5hrnfpg4FF6cqW-DHPs",
+        "name": "inspect_biodcase.py",
+        "size": "647",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Xw_MCMq1U1pRT5hrnfpg4FF6cqW-DHPs/view?usp=drivesdk"
+      },
+      {
+        "id": "1NY5_pF43-EIWmNHl6UmhNkoRJbMkldrt",
+        "name": "biodcase_download.log",
+        "size": "2064",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1NY5_pF43-EIWmNHl6UmhNkoRJbMkldrt/view?usp=drivesdk"
+      },
+      {
+        "id": "1n1i1dprnSNJmct9tgqHdW8gR3Dl2FDT3",
+        "name": "additional_download.log",
+        "size": "472",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1n1i1dprnSNJmct9tgqHdW8gR3Dl2FDT3/view?usp=drivesdk"
+      },
+      {
+        "id": "1C5q5f4rXkRcm_usg0ZtmoKXMIONOmgOn",
+        "name": "make_multisource_trainer.py",
+        "size": "5108",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1C5q5f4rXkRcm_usg0ZtmoKXMIONOmgOn/view?usp=drivesdk"
+      },
+      {
+        "id": "12_pEVqXFjElOAs5kQ9txT1JYJ70po16c",
+        "name": "download_biodcase.py",
+        "size": "2146",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/12_pEVqXFjElOAs5kQ9txT1JYJ70po16c/view?usp=drivesdk"
+      },
+      {
+        "id": "1uhlSqQRMbeaHHI2XLg5pNv_bpqRUGNQ_",
+        "name": "finalize_large_results.py",
+        "size": "16368",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1uhlSqQRMbeaHHI2XLg5pNv_bpqRUGNQ_/view?usp=drivesdk"
+      },
+      {
+        "id": "1WZISyDGdmAXNM84FotZdQlRvSznkS7b-",
+        "name": "large_cnn_training.log",
+        "size": "5785",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WZISyDGdmAXNM84FotZdQlRvSznkS7b-/view?usp=drivesdk"
+      },
+      {
+        "id": "1Y4n3EQiuhsFnSAAvIPg-tsMZpJB-r1LK",
+        "name": "expanded_training.log",
+        "size": "2566",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Y4n3EQiuhsFnSAAvIPg-tsMZpJB-r1LK/view?usp=drivesdk"
+      },
+      {
+        "id": "1q1dLxQ1mfjiXTQ1knfFswaj83keSkYPv",
+        "name": "humbug_download.log",
+        "size": "11336",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1q1dLxQ1mfjiXTQ1knfFswaj83keSkYPv/view?usp=drivesdk"
+      },
+      {
+        "id": "1RYiQ3JMHDnNMsTcD3hEJ3PPtC3b2ZQxr",
+        "name": "windows-public-download.exe",
+        "size": "18725474",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1RYiQ3JMHDnNMsTcD3hEJ3PPtC3b2ZQxr/view?usp=drivesdk"
+      },
+      {
+        "id": "1rQmm2pAuz78rlV-xjOQVPasC7d-baVso",
+        "name": "windows-public-guide.md",
+        "size": "4315",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rQmm2pAuz78rlV-xjOQVPasC7d-baVso/view?usp=drivesdk"
+      },
+      {
+        "id": "1j5WavUOI3SxtMWvUEtlGg1ee0WPDmyi-",
+        "name": "windows-report-build.log",
+        "size": "322",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1j5WavUOI3SxtMWvUEtlGg1ee0WPDmyi-/view?usp=drivesdk"
+      },
+      {
+        "id": "1TviAWy1DFHZCu9wer5SplQLGoETUXhH4",
+        "name": "install-package-compile-final.log",
+        "size": "562",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1TviAWy1DFHZCu9wer5SplQLGoETUXhH4/view?usp=drivesdk"
+      },
+      {
+        "id": "1xQOr1LkLKd6R_dSC0w5OrFG-sQXYlE6J",
+        "name": "windows-release-notes.md",
+        "size": "2047",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1xQOr1LkLKd6R_dSC0w5OrFG-sQXYlE6J/view?usp=drivesdk"
+      },
+      {
+        "id": "16IrbwXyFgf5MFk76r8YTFFv1b1LJKI23",
+        "name": "windows-species-verification.log",
+        "size": "2634",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16IrbwXyFgf5MFk76r8YTFFv1b1LJKI23/view?usp=drivesdk"
+      },
+      {
+        "id": "1WVej1c2ylH8Wpl6bRhXrdhEq8ExL549b",
+        "name": "windows-presence-verification.log",
+        "size": "3418",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WVej1c2ylH8Wpl6bRhXrdhEq8ExL549b/view?usp=drivesdk"
+      },
+      {
+        "id": "1AqIrQoQme9BktvT7rHJDb_NVc8qjiC46",
+        "name": "install-project-compile-final.log",
+        "size": "652",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1AqIrQoQme9BktvT7rHJDb_NVc8qjiC46/view?usp=drivesdk"
+      },
+      {
+        "id": "1CuGyJlUeFU4WwnLIl5LD5otgNSUh5Bhj",
+        "name": "install-cli-tests-final.log",
+        "size": "3441",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1CuGyJlUeFU4WwnLIl5LD5otgNSUh5Bhj/view?usp=drivesdk"
+      },
+      {
+        "id": "1jpSJkQhTCL41CmUYUyWnvtnc7K89UB4w",
+        "name": "windows-native-final.log",
+        "size": "61845",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jpSJkQhTCL41CmUYUyWnvtnc7K89UB4w/view?usp=drivesdk"
+      },
+      {
+        "id": "1VMteBgoG9irMuLJfvtpXYOLsiqrMst5o",
+        "name": "windows-gui-preview-final.png",
+        "size": "96665",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1VMteBgoG9irMuLJfvtpXYOLsiqrMst5o/view?usp=drivesdk"
+      },
+      {
+        "id": "1GQ1oB0eMChBIBfQ6EhlL8MDPsRk2q2QZ",
+        "name": "windows-tests-final.log",
+        "size": "5393",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1GQ1oB0eMChBIBfQ6EhlL8MDPsRk2q2QZ/view?usp=drivesdk"
+      },
+      {
+        "id": "16FVnC5KGsgpI48eG7lpVDOUg-ZqBHOG2",
+        "name": "windows-gui-preview.png",
+        "size": "64482",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/16FVnC5KGsgpI48eG7lpVDOUg-ZqBHOG2/view?usp=drivesdk"
+      },
+      {
+        "id": "1VY1cexgu9M7zD5vzk_fnRbJ4MrD0mvqb",
+        "name": "gui-local-smoke-2.json",
+        "size": "879",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1VY1cexgu9M7zD5vzk_fnRbJ4MrD0mvqb/view?usp=drivesdk"
+      },
+      {
+        "id": "1gn6nR_aP5idoX4yEa09NgPdv2r0ippOq",
+        "name": "gui-local-smoke.json",
+        "size": "931",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1gn6nR_aP5idoX4yEa09NgPdv2r0ippOq/view?usp=drivesdk"
+      },
+      {
+        "id": "1jarU_JcbVwtbkxVfbgkPZjpZKOoW8WCx",
+        "name": "windows_tests.log",
+        "size": "5393",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jarU_JcbVwtbkxVfbgkPZjpZKOoW8WCx/view?usp=drivesdk"
+      },
+      {
+        "id": "1IvQYz7cq9eufihdaJL5hMrJfME6hf8uL",
+        "name": "installer_tests.log",
+        "size": "3441",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1IvQYz7cq9eufihdaJL5hMrJfME6hf8uL/view?usp=drivesdk"
+      },
+      {
+        "id": "17DMT1XPl9qXD05l_VDiAzIjENG1Qh14Y",
+        "name": "arduino-portable-installer-check",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/17DMT1XPl9qXD05l_VDiAzIjENG1Qh14Y"
+      },
+      {
+        "id": "1K7pwsbhgF_cHVDATVySPDSdAxElgY0km",
+        "name": "arduino-species-package-build",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1K7pwsbhgF_cHVDATVySPDSdAxElgY0km"
+      },
+      {
+        "id": "1wtcu7JbLcnwr0DSgHC44D-BQUdm0Hzb0",
+        "name": "arduino-package-check",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1wtcu7JbLcnwr0DSgHC44D-BQUdm0Hzb0"
+      },
+      {
+        "id": "1vtZtA__psgIEV0XKd_I1ApKc2yj_uLXn",
+        "name": "arduino-species-build",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1vtZtA__psgIEV0XKd_I1ApKc2yj_uLXn"
+      },
+      {
+        "id": "10ay5pWmTXFaUSK7kJ2N79p3RKNgIEr1e",
+        "name": "arduino-build",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/10ay5pWmTXFaUSK7kJ2N79p3RKNgIEr1e"
+      }
+    ]
+  },
+  {
+    "key": "venv",
+    "files": [
+      {
+        "id": "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui",
+        "name": "bin",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+      },
+      {
+        "id": "1oSfNs2uH3YJGfQr9_SdFmTK7gnKr3AbB",
+        "name": "share",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1oSfNs2uH3YJGfQr9_SdFmTK7gnKr3AbB"
+      },
+      {
+        "id": "1WZiTABfuOs2sS2RNKKCPlc5Qr6TERKaX",
+        "name": ".lock",
+        "size": "0",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1WZiTABfuOs2sS2RNKKCPlc5Qr6TERKaX/view?usp=drivesdk"
+      },
+      {
+        "id": "1rzJPcmD4eOhqDjh8CP8X1-mB2hKXdZYP",
+        "name": ".gitignore",
+        "size": "1",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1rzJPcmD4eOhqDjh8CP8X1-mB2hKXdZYP/view?usp=drivesdk"
+      },
+      {
+        "id": "1dmUMJ86YuJ8hKtHAemA6SEn7MecQgOCd",
+        "name": "CACHEDIR.TAG",
+        "size": "43",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1dmUMJ86YuJ8hKtHAemA6SEn7MecQgOCd/view?usp=drivesdk"
+      },
+      {
+        "id": "1SNWPaQzmfs_8m2s20KxNoqLKpEFEqMQA",
+        "name": "lib",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1SNWPaQzmfs_8m2s20KxNoqLKpEFEqMQA"
+      },
+      {
+        "id": "1UP0p4eARJHe9Vmd_EmK0Zb5HNvUcXK7X",
+        "name": "pyvenv.cfg",
+        "size": "112",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1UP0p4eARJHe9Vmd_EmK0Zb5HNvUcXK7X/view?usp=drivesdk"
+      }
+    ]
+  },
+  {
+    "key": "output",
+    "files": [
+      {
+        "id": "1Ev4Qp_2RY2s2j0rSnMTwaLc7PaZlDbd7",
+        "name": "Apresentacao_Ensemble_v4_Fontes_2026_10_14.zip",
+        "size": "10346513",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Ev4Qp_2RY2s2j0rSnMTwaLc7PaZlDbd7/view?usp=drivesdk"
+      },
+      {
+        "id": "1gR8WYOwTbWrypyqtoA5O7bOv9SpXDI8c",
+        "name": "Apresentacao_Ensemble_v4_Auditoria_Atualizada_2026_10_14.pdf",
+        "size": "8769504",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1gR8WYOwTbWrypyqtoA5O7bOv9SpXDI8c/view?usp=drivesdk"
+      },
+      {
+        "id": "1erOQDf8KPs3C7iMcuaTHc7OxfwTkCK4Z",
+        "name": "drive_review_2026_10_14_161041",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1erOQDf8KPs3C7iMcuaTHc7OxfwTkCK4Z"
+      },
+      {
+        "id": "1M0aI32qcdg7ES8BV0o4iKXNZcMgY3VPS",
+        "name": "drive_reference_2026_10_14",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1M0aI32qcdg7ES8BV0o4iKXNZcMgY3VPS"
+      },
+      {
+        "id": "1_IMpGZ0JxcCHPP5cVqXZoqPBFmu4jqpb",
+        "name": "drive_update_2026_10_14",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1_IMpGZ0JxcCHPP5cVqXZoqPBFmu4jqpb"
+      },
+      {
+        "id": "1cXEVZoGM_IK88cp1i4mCaM1STnu7PEbI",
+        "name": "ifsc_2026_10_13_visual",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1cXEVZoGM_IK88cp1i4mCaM1STnu7PEbI"
+      },
+      {
+        "id": "1qp723kmv0L0XC8WJd6bL9nDljfgwX6-S",
+        "name": "ifsc_2026_10_11",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1qp723kmv0L0XC8WJd6bL9nDljfgwX6-S"
+      },
+      {
+        "id": "10_DHBhPi65uQDthlJEesYXnldzyMPyQY",
+        "name": "pdf",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/10_DHBhPi65uQDthlJEesYXnldzyMPyQY"
+      },
+      {
+        "id": "1yyzQbBvEKiFTWkiYGSKDs7I4h4QlO29C",
+        "name": "arduino",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1yyzQbBvEKiFTWkiYGSKDs7I4h4QlO29C"
+      }
+    ]
+  },
+  {
+    "key": "tests",
+    "files": [
+      {
+        "id": "1LJp1PoklgHaQ0dtPrkkjFfHHY0OYzeqb",
+        "name": "test_nested_species_v5.py",
+        "size": "5721",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1LJp1PoklgHaQ0dtPrkkjFfHHY0OYzeqb/view?usp=drivesdk"
+      },
+      {
+        "id": "1V06LYZ7LnrS3q_CeFCvjfVpkhXj-z6dU",
+        "name": "__pycache__",
+        "size": null,
+        "type": "folder",
+        "url": "https://drive.google.com/drive/folders/1V06LYZ7LnrS3q_CeFCvjfVpkhXj-z6dU"
+      },
+      {
+        "id": "1bFbaM0HTsPOyFKlPYulPrAwhHl3bzais",
+        "name": "test_nested_species_v4.py",
+        "size": "11076",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1bFbaM0HTsPOyFKlPYulPrAwhHl3bzais/view?usp=drivesdk"
+      },
+      {
+        "id": "1u8CBHu6IPGqPjd0IT9LLIIfqfz1A6h2j",
+        "name": "test_nested_species_v3.py",
+        "size": "7369",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1u8CBHu6IPGqPjd0IT9LLIIfqfz1A6h2j/view?usp=drivesdk"
+      },
+      {
+        "id": "1iZlePLa7oDpKVgqF67OIma5ikqX4Z0Jp",
+        "name": "test_nested_species_v2.py",
+        "size": "8000",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1iZlePLa7oDpKVgqF67OIma5ikqX4Z0Jp/view?usp=drivesdk"
+      },
+      {
+        "id": "1jKbS9fMsAqwBFO6MGHuHHC--A63XlH16",
+        "name": "test_nested_species.py",
+        "size": "4385",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1jKbS9fMsAqwBFO6MGHuHHC--A63XlH16/view?usp=drivesdk"
+      },
+      {
+        "id": "1tR6V7wN4N2bmXbIm30Q1MnMMSxLsEPDx",
+        "name": "test_research_audit.py",
+        "size": "2806",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1tR6V7wN4N2bmXbIm30Q1MnMMSxLsEPDx/view?usp=drivesdk"
+      },
+      {
+        "id": "1-Jcws6c-k46WZ9fTD3b5ZsIhVVhyK8tg",
+        "name": "test_faithful_reproduction.py",
+        "size": "6251",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1-Jcws6c-k46WZ9fTD3b5ZsIhVVhyK8tg/view?usp=drivesdk"
+      },
+      {
+        "id": "1MzqzPmxHWaWlPJvNyQfHh79Bp1bSvYso",
+        "name": "test_cross_domain_strategies.py",
+        "size": "6798",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1MzqzPmxHWaWlPJvNyQfHh79Bp1bSvYso/view?usp=drivesdk"
+      },
+      {
+        "id": "1bhumJprx35QTM4Km4ne2Kh3EgGA5brsb",
+        "name": "test_sex_balanced_reliability.py",
+        "size": "2644",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1bhumJprx35QTM4Km4ne2Kh3EgGA5brsb/view?usp=drivesdk"
+      },
+      {
+        "id": "1LYSXQJvQR34FjcRhRL9irjl0hGA2D4qY",
+        "name": "test_reliability.py",
+        "size": "4564",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1LYSXQJvQR34FjcRhRL9irjl0hGA2D4qY/view?usp=drivesdk"
+      },
+      {
+        "id": "1fnPNGjBD_pKot02a2CnAgc9qV4HUBCyJ",
+        "name": "test_reproduction.py",
+        "size": "4805",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1fnPNGjBD_pKot02a2CnAgc9qV4HUBCyJ/view?usp=drivesdk"
+      },
+      {
+        "id": "1Nra3iwY2dbWBj-7kEpplwk6JfEqZekvq",
+        "name": "test_corrected_validation.py",
+        "size": "3757",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Nra3iwY2dbWBj-7kEpplwk6JfEqZekvq/view?usp=drivesdk"
+      },
+      {
+        "id": "1sFY6Stav7TPIpOhLVZ7yuHUs_2QDm2U3",
+        "name": "test_aedes_classical.py",
+        "size": "1107",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1sFY6Stav7TPIpOhLVZ7yuHUs_2QDm2U3/view?usp=drivesdk"
+      },
+      {
+        "id": "1zc4ZHlEgbUJy46f5FxVVx2rjd9DHlEa4",
+        "name": "test_aedes_binary.py",
+        "size": "1117",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1zc4ZHlEgbUJy46f5FxVVx2rjd9DHlEa4/view?usp=drivesdk"
+      },
+      {
+        "id": "1brFt_mO6kuo-nfnyq4TSLJ6TMNuHWL7c",
+        "name": "test_audio_preprocessing.py",
+        "size": "1511",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1brFt_mO6kuo-nfnyq4TSLJ6TMNuHWL7c/view?usp=drivesdk"
+      },
+      {
+        "id": "1W11jlR8uSD_7tLoo52OSLZlsMslv8Zjt",
+        "name": "test_multisource_protocol.py",
+        "size": "2108",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1W11jlR8uSD_7tLoo52OSLZlsMslv8Zjt/view?usp=drivesdk"
+      },
+      {
+        "id": "1Lyt0zPaNzO9OwIMWXFdM2zXR5YQ0QHMi",
+        "name": "test_large_audio_model.py",
+        "size": "1717",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1Lyt0zPaNzO9OwIMWXFdM2zXR5YQ0QHMi/view?usp=drivesdk"
+      },
+      {
+        "id": "1yDbIGC_n5Zza4uPD_SZ595gDosy5-YK-",
+        "name": "test_expanded_protocol.py",
+        "size": "1671",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1yDbIGC_n5Zza4uPD_SZ595gDosy5-YK-/view?usp=drivesdk"
+      },
+      {
+        "id": "1lZGLquhmdDgY_bR8aZxogWVvaj3rkZyG",
+        "name": "test_windows_installer.py",
+        "size": "5542",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1lZGLquhmdDgY_bR8aZxogWVvaj3rkZyG/view?usp=drivesdk"
+      },
+      {
+        "id": "1nMiuYNyoLF1pNsVbLIlPkO-WI0AQZ7hq",
+        "name": "test_install_arduino.py",
+        "size": "14073",
+        "type": "file",
+        "url": "https://drive.google.com/file/d/1nMiuYNyoLF1pNsVbLIlPkO-WI0AQZ7hq/view?usp=drivesdk"
+      }
+    ]
+  }
+]

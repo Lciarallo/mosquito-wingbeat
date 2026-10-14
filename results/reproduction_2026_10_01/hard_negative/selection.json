@@ -1,0 +1,20 @@
+{
+  "selected_model": "extra_trees_regularized",
+  "selected_before_new_test": true,
+  "records": [
+    {
+      "name": "extra_trees_regularized",
+      "validation_weighted_ba": 0.7714038734779242,
+      "validation_weighted_auc": 0.8965694657017619,
+      "cut": 0.2947863530657719,
+      "sha256": "a2502e38b0b581e77dd461cc83113deffdf0226d51e65158025d9381edf097a3"
+    },
+    {
+      "name": "extra_trees_deep",
+      "validation_weighted_ba": 0.6968920729217121,
+      "validation_weighted_auc": 0.8971808316125602,
+      "cut": 0.15274365781154622,
+      "sha256": "a9a54314064d415647ba143bbeda9594a83045130a3efcf3e13fe269b2cab0e4"
+    }
+  ]
+}

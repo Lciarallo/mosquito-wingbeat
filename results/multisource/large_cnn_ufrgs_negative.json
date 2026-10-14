@@ -1,0 +1,8 @@
+{
+  "windows": 146,
+  "files": 5,
+  "reference": "not_Aedes_aegypti_only",
+  "forced_Aedes_windows": 18,
+  "emitted_Aedes_windows": 0,
+  "other_species_outputs_not_evaluated_as_correct_or_wrong": true
+}

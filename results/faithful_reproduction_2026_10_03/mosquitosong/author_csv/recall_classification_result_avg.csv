@@ -1,0 +1,5 @@
+Test dataset,Ae.Aegypti_F,Ae.Aegypti_M,Ae.Albopictus_F,Ae.Albopictus_M,An.Dirus_F,An.Dirus_M,Cx.Quin_F,Cx.Quin_M,accuracy,macro avg,weighted avg
+Denoised Wingbeats (F=1) + Denoised Clean Wingbeats (F=1) ,0.9116,0.8369,0.9314,0.9538,0.9353999999999999,0.9315,0.9733,0.9138,0.9237,0.9235,0.9237
+"Denoised Wingbeats (F=1,1.5,2) + Denoised Clean Wingbeats (F=1,1.5,2)",0.9199999999999999,0.8481,0.9216,0.9577,0.9396000000000001,0.9271,0.9762000000000001,0.9279999999999999,0.9277,0.9273,0.9277
+Denoised Wingbeats (F=1.5) + Denoised Clean Wingbeats (F=1.5),0.923,0.849,0.9225,0.9606,0.9442,0.9249,0.9768000000000001,0.9299,0.9295,0.9289,0.9295
+Denoised Wingbeats (F=2) + Denoised Clean Wingbeats (F=2),0.9254,0.8581,0.9118,0.9586,0.9397,0.9249,0.9784,0.9396000000000001,0.9301999999999999,0.9296,0.9301999999999999

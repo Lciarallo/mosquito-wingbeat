@@ -1,0 +1,165 @@
+--- Drive/predict_audio.py
++++ scripts/predict_audio.py
+@@ -11,8 +11,12 @@
+ import requests
+ from scipy.special import expit, logsumexp, softmax
+ 
+-ROOT = Path(__file__).resolve().parent
+-sys.path.insert(0, str(ROOT))
++SCRIPT_DIR = Path(__file__).resolve().parent
++ROOT = SCRIPT_DIR.parent if SCRIPT_DIR.name == "scripts" else SCRIPT_DIR
++# Execute the Drive version of robust_audio_features, while sharing the
++# unchanged project frontend and frozen model artifacts.
++sys.path.insert(0, str(SCRIPT_DIR))
++sys.path.insert(1, str(ROOT))
+ 
+ import arduino_frontend
+ from arduino_mic_emulator import (
+@@ -22,7 +26,6 @@
+ )
+ from robust_audio_features import (
+     analyze_harmonic_flutter,
+-    precondition_bioacoustic_wave,
+ )
+ from train_hierarchical_models import BRAZIL_PRIORS
+ 
+@@ -190,6 +193,10 @@
+ 
+         mean_probs = np.mean(probs_list, axis=0)[0].astype(np.float64)
+         mean_energy = float(np.mean(energies))
++        ent = float(-np.sum(mean_probs * np.log(np.maximum(mean_probs, 1e-12))) / np.log(self.num_classes))
++        low_peak_ratio_mean = float(feat68[0, 64])
++        self.last_bio_fusion = dict(neural_entropy=ent, alpha_bio=0.0,
++                                   low_peak_ratio_mean=low_peak_ratio_mean, bio_bonus_regime="none")
+ 
+         if flutter_info is not None and flutter_info.get("f0_mean", 0.0) > 0:
+             f0 = float(flutter_info["f0_mean"])
+@@ -210,7 +217,8 @@
+ 
+                 gen = sp.split()[0]
+                 bonus = 0.0
+-                if gen == "Aedes" and 420.0 <= f0 <= 740.0 and snr_aedes >= 0.8:
++                if (gen == "Aedes" and ent >= 0.73 and low_peak_ratio_mean < 0.20
++                        and 420.0 <= f0 <= 740.0 and snr_aedes >= 0.8):
+                     bonus += 0.80 * min(max(snr_aedes / 5.0, 0.0), 2.2)
+                     if is_swarm:
+                         bonus += 0.70
+@@ -218,10 +226,19 @@
+                         bonus += 0.35
+                     if sp == "Aedes aegypti":
+                         bonus += 0.45
++                    self.last_bio_fusion["bio_bonus_regime"] = "Aedes"
++                # S7 in the paired D3 manifest is Culex pipiens, NOT array index 7.
++                if (sp == "Culex pipiens" and ent >= 0.73
++                        and low_peak_ratio_mean >= 0.20 and h2_h1 < 0.90):
++                    bonus += 0.80
++                    self.last_bio_fusion["bio_bonus_regime"] = "S7_Culex_pipiens"
+                 log_bio[idx] = z_f0 + bonus
+ 
+             bio_probs = softmax(log_bio)
+-            alpha_bio = 0.65 if is_swarm else 0.45
++            alpha_bio = float(np.clip((ent - 0.68) / 0.20, 0.05, 0.70))
++            if is_swarm and ent >= 0.74:
++                alpha_bio = 0.65
++            self.last_bio_fusion["alpha_bio"] = alpha_bio
+             log_fused = (1.0 - alpha_bio) * np.log(np.maximum(mean_probs, 1e-12)) + alpha_bio * np.log(
+                 np.maximum(bio_probs, 1e-12)
+             )
+@@ -396,6 +413,10 @@
+                     "status": status,
+                     "genus_probabilities": {k: round(v, 4) for k, v in genus_probs.items()},
+                     "probabilities": [round(float(p), 4) for p in sp_probs],
++                    "neural_entropy": self.last_bio_fusion["neural_entropy"] if is_detected else None,
++                    "alpha_bio": self.last_bio_fusion["alpha_bio"] if is_detected else 0.0,
++                    "low_peak_ratio_mean": float(feat[0, 64]),
++                    "bio_bonus_regime": self.last_bio_fusion["bio_bonus_regime"] if is_detected else "none",
+                 }
+             )
+ 
+@@ -503,7 +524,6 @@
+     total_samples = len(processed_pcm)
+ 
+     windows_raw = []
+-    windows_clean = []
+     starts_s = []
+     ends_s = []
+ 
+@@ -511,7 +531,6 @@
+     while pos + WINDOW_SAMPLES <= total_samples:
+         window = processed_pcm[pos : pos + WINDOW_SAMPLES]
+         windows_raw.append(window)
+-        windows_clean.append(precondition_bioacoustic_wave(window, sr=TARGET_SR))
+         starts_s.append(pos / float(TARGET_SR))
+         ends_s.append((pos + WINDOW_SAMPLES) / float(TARGET_SR))
+         pos += hop_samples
+@@ -519,8 +538,7 @@
+     if len(windows_raw) == 0:
+         raise ValueError(f"Áudio com duração ({duration:.2f} s) menor que a janela mínima (0.992 s).")
+ 
+-    windows_clean_arr = np.stack(windows_clean)
+-    feats = arduino_frontend.features(windows_clean_arr, replay_pcm=True)
++    feats = arduino_frontend.features(np.stack(windows_raw), replay_pcm=True)
+ 
+     eval_rows = classifier.evaluate_windows(
+         feats,
+@@ -536,6 +554,18 @@
+ 
+     df = pd.DataFrame(eval_rows)
+     intervals = extract_temporal_intervals(df)
++    # Non-overlapping decision timeline at the hop grid. Keep the original
++    # overlapping analysis intervals separately for compatibility.
++    swarm_timeline = []
++    for i, interval in enumerate(intervals):
++        start = float(interval["start_s"])
++        end = float(intervals[i+1]["start_s"]) if i+1 < len(intervals) else float(df.end_s.iloc[-1])
++        sub = df[(df.start_s >= start) & (df.start_s < end)]
++        swarm_timeline.append(dict(start_s=start, end_s=end, duration_s=round(end-start, 6),
++            swarm_present=interval["segment_type"] == "ENXAME_AEDES_PRESENTE",
++            median_f0_hz=interval["median_f0_hz"],
++            mean_aedes_snr_db=float(sub.aedes_snr_db.mean()),
++            segment_type=interval["segment_type"]))
+ 
+     detected_mask = df.detected.to_numpy()
+     swarm_mask = df.is_aedes_swarm.to_numpy()
+@@ -598,6 +628,12 @@
+         "genus_distribution": genus_counts,
+         "species_distribution": species_counts,
+         "temporal_intervals": intervals,
++        "swarm_timeline": swarm_timeline,
++        "swarm_active_intervals": [i for i in swarm_timeline if i["swarm_present"]],
++        "timeline_resolution_s": hop_seconds,
++        "analysis_window_s": WINDOW_SAMPLES / float(TARGET_SR),
++        "unanalysed_tail_s": round(duration-float(df.end_s.iloc[-1]), 6),
++        "timeline_interpretation": "Estimated offline classifier decisions, not entomological ground truth; interval smoothing uses the next window.",
+     }
+ 
+     return df, summary
+@@ -665,8 +701,9 @@
+         description="Diagnóstico Hierárquico e Segmentação Temporal de Enxame de Aedes via ML + SHS."
+     )
+     parser.add_argument(
+-        "audio", type=str, help="Caminho do áudio local (.wav, .mp3) ou link/ID do Google Drive"
+-    )
++        "audio", nargs="?", type=str, help="Caminho do áudio local (.wav, .mp3) ou link/ID do Google Drive"
++    )
++    parser.add_argument("--audio", dest="audio_option", type=str, help="Alias para o áudio de entrada")
+     parser.add_argument(
+         "--emulate-arduino", action="store_true", help="Aplica emulação acústica do mic MP34DT05"
+     )
+@@ -698,12 +735,14 @@
+         "--output-csv", type=str, default=None, help="Caminho para salvar o CSV detalhado"
+     )
+     parser.add_argument(
+-        "--output-json", type=str, default=None, help="Caminho para salvar o resumo em JSON"
++        "--output-json", "--output-summary", dest="output_json", type=str, default=None, help="Caminho para salvar o resumo em JSON"
+     )
+ 
+     args = parser.parse_args()
+ 
+-    audio_arg = args.audio
++    audio_arg = args.audio_option or args.audio
++    if not audio_arg:
++        parser.error("Informe --audio ou o argumento posicional audio.")
+     temp_download = None
+ 
+     if (

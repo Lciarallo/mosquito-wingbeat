@@ -1,0 +1,9 @@
+{
+  "source_groups_disjoint": true,
+  "humbug_files_hash_checked": 307,
+  "new_audio_absent_from_selected_training_hashes": true,
+  "new_audio_selected_after_freeze": true,
+  "checkpoint_unchanged": true,
+  "private_audio_not_in_training": true,
+  "arduino_compiled": false
+}

@@ -1,0 +1,19 @@
+{
+  "name": "svm_multipitch",
+  "cut": -0.18639284012759597,
+  "sha256": "a40e26f52743b24bbb53169b459e1ad65f323daf9cbf70ee4a3f97d5f7b87aad",
+  "validation_precision": 0.07612293144208038,
+  "validation_recall": 0.6680497925311203,
+  "validation_macro_f1": 0.44553973700405364,
+  "validation_cells": {
+    "dryad:0": 0.6590149491233994,
+    "dryad:1": 0.6333333333333334,
+    "humbug:0": 0.6301879325236828,
+    "humbug:1": 0.7455221386800336
+  },
+  "validation_auc": {
+    "dryad": 0.6979717818845566,
+    "humbug": 0.7549103437185101
+  },
+  "selection_score": 0.6635386619444383
+}

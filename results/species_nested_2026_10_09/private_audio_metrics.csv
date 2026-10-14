@@ -1,0 +1,6 @@
+model,windows,forced_correct_windows,invalid_windows,recording_candidate,recording_identification,reference,duration_s,complete_windows,original_sample_rate,unanalysed_tail_s,no_padding_or_repetition
+svm,106,2,2,Anopheles gambiae,UNCERTAIN,User-reported species throughout recording; not independently annotated events.,106.24,106,16000,0.24,True
+extra_trees,106,31,2,Aedes aegypti,UNCERTAIN,User-reported species throughout recording; not independently annotated events.,106.24,106,16000,0.24,True
+hist_gradient_boosting,106,15,2,Anopheles gambiae,UNCERTAIN,User-reported species throughout recording; not independently annotated events.,106.24,106,16000,0.24,True
+fixed,106,7,2,Anopheles gambiae,UNCERTAIN,User-reported species throughout recording; not independently annotated events.,106.24,106,16000,0.24,True
+calibrated,106,5,2,Anopheles gambiae,UNCERTAIN,User-reported species throughout recording; not independently annotated events.,106.24,106,16000,0.24,True

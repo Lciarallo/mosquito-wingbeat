@@ -569,6 +569,27 @@ verify_arduino_species.main()
 display(pd.Series(json.loads((species_board / "native_audit.json").read_text())).to_frame("Auditoria de espécies"))
 display(pd.Series(json.loads((species_board / "compile_audit.json").read_text())).to_frame("Compilação de espécies"))
 """.strip()))
+from expanded_notebook import cells as expanded_cells
+if (ROOT / "results/expanded/training_audit.json").exists():
+    cells.extend(expanded_cells())
+from large_cnn_notebook import cells as large_cnn_cells
+if (ROOT / "results/large_cnn/training_audit.json").exists():
+    cells.extend(large_cnn_cells())
+from multisource_notebook import cells as multisource_cells
+if (ROOT / "results/multisource/training_audit.json").exists():
+    cells.extend(multisource_cells())
+from preprocessing_notebook import cells as preprocessing_cells
+if (ROOT / "results/preprocessing/audit.json").exists():
+    cells.extend(preprocessing_cells())
+if (ROOT / "results/preprocessing/per_species.csv").exists():
+    md("## 24. Taxas por espécie\n\nModelo multifonte atual com processamento original. Acerto sem rejeição força uma espécie; identificação correta conta rejeições no denominador. Janelas não são indivíduos independentes. [Relatório completo](reports/acerto_por_especie.md).")
+    cells.append(nbf.v4.new_code_cell("import pandas as pd\nper_species = pd.read_csv('results/preprocessing/per_species.csv')\ndisplay(per_species[per_species.method.eq('original')].round(4))"))
+from aedes_binary_notebook import cells as aedes_binary_cells
+if (ROOT / "results/aedes_binary/training_audit.json").exists():
+    cells.extend(aedes_binary_cells())
+from aedes_classical_notebook import cells as aedes_classical_cells
+if (ROOT / "results/aedes_classical/evaluation_audit.json").exists():
+    cells.extend(aedes_classical_cells())
 md("""
 ## Referências e fontes
 

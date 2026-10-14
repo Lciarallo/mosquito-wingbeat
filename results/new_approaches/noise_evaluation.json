@@ -1,0 +1,8 @@
+{
+  "total_noise_windows": 436,
+  "fp_rate": 0.0,
+  "states": {
+    "NAO_AEDES_AEGYPTI": 435,
+    "INCERTO": 1
+  }
+}

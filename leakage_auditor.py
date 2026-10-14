@@ -1,12 +1,8 @@
-"""Auditor Criptográfico Anti-Vazamento e Verificador de Integridade Metodológica.
+"""Check declared recording groups, paths and hashes across dataset folds.
 
-Verifica com rigor matemático e criptográfico se há QUALQUER contaminação entre
-treino e teste no particionamento do corpus e na calibração de modelos:
-1. Interseção nula de gravações (group): Train_Groups ∩ Test_Groups = ∅
-2. Interseção nula de hashes de áudio (content_sha256): Train_Hashes ∩ Test_Hashes = ∅
-3. Interseção nula de caminhos de arquivos (path): Train_Paths ∩ Test_Paths = ∅
-4. Verificação de isolamento de pré-processamento (scalers ajustados apenas no treino)
-5. Verificação de seleção de limiares (thresholds escolhidos sem espiar o teste)
+This bounded check does not inspect calibration prediction lineage, biological
+ancestry, threshold selection or recompute hashes from audio. Scaler means can
+be checked separately; run_full_audit does not perform that check.
 """
 from __future__ import annotations
 
@@ -114,7 +110,10 @@ def run_full_audit():
 
     certificate = {
         "audit_version": "1.0",
-        "overall_status": "ZERO_LEAKAGE_VERIFIED",
+        "overall_status": "PARTITION_DISJOINTNESS_VERIFIED",
+        "checked": ["declared_groups", "declared_content_hashes", "paths"],
+        "not_checked": ["ensemble_calibration_lineage", "threshold_selection",
+                        "scaler_isolation", "biological_independence", "audio_hash_recalculation"],
         "species_task_audit": species_audit,
         "tinyml_task_audit": tinyml_audit,
     }

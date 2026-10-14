@@ -1,0 +1,114 @@
+scope,task,version,taxon,support,predicted,correct,recall,precision
+dryad,species,09/10/2026,Aedes aegypti,20,22,19,0.95,0.8636363636363636
+dryad,species,09/10/2026,Aedes albopictus,7,16,6,0.8571428571428571,0.375
+dryad,species,09/10/2026,Aedes mediovittatus,3,3,3,1.0,1.0
+dryad,species,09/10/2026,Aedes sierrensis,60,50,48,0.8,0.96
+dryad,species,09/10/2026,Anopheles albimanus,40,39,29,0.725,0.7435897435897436
+dryad,species,09/10/2026,Anopheles arabiensis,13,10,6,0.46153846153846156,0.6
+dryad,species,09/10/2026,Anopheles atroparvus,7,7,5,0.7142857142857143,0.7142857142857143
+dryad,species,09/10/2026,Anopheles dirus,55,48,32,0.5818181818181818,0.6666666666666666
+dryad,species,09/10/2026,Anopheles farauti,46,45,30,0.6521739130434783,0.6666666666666666
+dryad,species,09/10/2026,Anopheles freeborni,54,53,40,0.7407407407407407,0.7547169811320755
+dryad,species,09/10/2026,Anopheles gambiae,76,73,50,0.6578947368421053,0.684931506849315
+dryad,species,09/10/2026,Anopheles merus,5,8,5,1.0,0.625
+dryad,species,09/10/2026,Anopheles minimus,50,36,24,0.48,0.6666666666666666
+dryad,species,09/10/2026,Anopheles quadriannulatus,7,9,5,0.7142857142857143,0.5555555555555556
+dryad,species,09/10/2026,Anopheles quadrimaculatus,6,6,5,0.8333333333333334,0.8333333333333334
+dryad,species,09/10/2026,Anopheles stephensi,58,76,45,0.7758620689655172,0.5921052631578947
+dryad,species,09/10/2026,Culex pipiens,8,8,5,0.625,0.625
+dryad,species,09/10/2026,Culex quinquefasciatus,12,16,9,0.75,0.5625
+dryad,species,09/10/2026,Culex tarsalis,12,13,12,1.0,0.9230769230769231
+dryad,species,09/10/2026,Culiseta incidens,30,31,30,1.0,0.967741935483871
+dryad,species,13/10/2026 v2,Aedes aegypti,20,22,16,0.8,0.7272727272727273
+dryad,species,13/10/2026 v2,Aedes albopictus,7,27,6,0.8571428571428571,0.2222222222222222
+dryad,species,13/10/2026 v2,Aedes mediovittatus,3,6,3,1.0,0.5
+dryad,species,13/10/2026 v2,Aedes sierrensis,60,59,48,0.8,0.8135593220338984
+dryad,species,13/10/2026 v2,Anopheles albimanus,40,27,21,0.525,0.7777777777777778
+dryad,species,13/10/2026 v2,Anopheles arabiensis,13,24,9,0.6923076923076923,0.375
+dryad,species,13/10/2026 v2,Anopheles atroparvus,7,16,2,0.2857142857142857,0.125
+dryad,species,13/10/2026 v2,Anopheles dirus,55,47,23,0.41818181818181815,0.48936170212765956
+dryad,species,13/10/2026 v2,Anopheles farauti,46,59,32,0.6956521739130435,0.5423728813559322
+dryad,species,13/10/2026 v2,Anopheles freeborni,54,42,27,0.5,0.6428571428571429
+dryad,species,13/10/2026 v2,Anopheles gambiae,76,32,22,0.2894736842105263,0.6875
+dryad,species,13/10/2026 v2,Anopheles merus,5,11,5,1.0,0.45454545454545453
+dryad,species,13/10/2026 v2,Anopheles minimus,50,42,24,0.48,0.5714285714285714
+dryad,species,13/10/2026 v2,Anopheles quadriannulatus,7,22,3,0.42857142857142855,0.13636363636363635
+dryad,species,13/10/2026 v2,Anopheles quadrimaculatus,6,13,5,0.8333333333333334,0.38461538461538464
+dryad,species,13/10/2026 v2,Anopheles stephensi,58,42,34,0.5862068965517241,0.8095238095238095
+dryad,species,13/10/2026 v2,Culex pipiens,8,15,6,0.75,0.4
+dryad,species,13/10/2026 v2,Culex quinquefasciatus,12,14,10,0.8333333333333334,0.7142857142857143
+dryad,species,13/10/2026 v2,Culex tarsalis,12,18,12,1.0,0.6666666666666666
+dryad,species,13/10/2026 v2,Culiseta incidens,30,31,28,0.9333333333333333,0.9032258064516129
+dryad,genus_marginalized,09/10/2026,Aedes,90,74,73,0.8111111111111111,0.9864864864864865
+dryad,genus_marginalized,09/10/2026,Anopheles,417,431,416,0.9976019184652278,0.9651972157772621
+dryad,genus_marginalized,09/10/2026,Culex,32,33,30,0.9375,0.9090909090909091
+dryad,genus_marginalized,09/10/2026,Culiseta,30,31,30,1.0,0.967741935483871
+dryad,genus_marginalized,13/10/2026 v2,Aedes,90,87,70,0.7777777777777778,0.8045977011494253
+dryad,genus_marginalized,13/10/2026 v2,Anopheles,417,413,397,0.9520383693045563,0.9612590799031477
+dryad,genus_marginalized,13/10/2026 v2,Culex,32,41,32,1.0,0.7804878048780488
+dryad,genus_marginalized,13/10/2026 v2,Culiseta,30,28,27,0.9,0.9642857142857143
+dryad,genus_posthoc,09/10/2026,Aedes,90,91,77,0.8555555555555555,0.8461538461538461
+dryad,genus_posthoc,09/10/2026,Anopheles,417,410,401,0.9616306954436451,0.9780487804878049
+dryad,genus_posthoc,09/10/2026,Culex,32,37,31,0.96875,0.8378378378378378
+dryad,genus_posthoc,09/10/2026,Culiseta,30,31,30,1.0,0.967741935483871
+dryad,genus_posthoc,13/10/2026 v2,Aedes,90,114,79,0.8777777777777778,0.6929824561403509
+dryad,genus_posthoc,13/10/2026 v2,Anopheles,417,377,369,0.8848920863309353,0.9787798408488063
+dryad,genus_posthoc,13/10/2026 v2,Culex,32,47,32,1.0,0.6808510638297872
+dryad,genus_posthoc,13/10/2026 v2,Culiseta,30,31,28,0.9333333333333333,0.9032258064516129
+drive,species,09/10/2026,Aedes aegypti,1,0,0,0.0,
+drive,species,09/10/2026,INVALID,0,1,0,,0.0
+drive,species,13/10/2026 v2,Aedes aegypti,1,0,0,0.0,
+drive,species,13/10/2026 v2,Anopheles stephensi,0,1,0,,0.0
+drive,genus_marginalized,09/10/2026,Aedes,1,0,0,0.0,
+drive,genus_marginalized,09/10/2026,INVALID,0,1,0,,0.0
+drive,genus_marginalized,13/10/2026 v2,Aedes,1,0,0,0.0,
+drive,genus_marginalized,13/10/2026 v2,Anopheles,0,1,0,,0.0
+drive,genus_posthoc,09/10/2026,Aedes,1,0,0,0.0,
+drive,genus_posthoc,09/10/2026,INVALID,0,1,0,,0.0
+drive,genus_posthoc,13/10/2026 v2,Aedes,1,0,0,0.0,
+drive,genus_posthoc,13/10/2026 v2,Anopheles,0,1,0,,0.0
+external,species,09/10/2026,Aedes aegypti,4,1,0,0.0,0.0
+external,species,09/10/2026,Aedes albopictus,1,0,0,0.0,
+external,species,09/10/2026,Aedes sierrensis,0,4,0,,0.0
+external,species,09/10/2026,Anopheles albimanus,0,2,0,,0.0
+external,species,09/10/2026,Anopheles dirus,0,1,0,,0.0
+external,species,09/10/2026,Anopheles farauti,0,1,0,,0.0
+external,species,09/10/2026,Anopheles freeborni,0,1,0,,0.0
+external,species,09/10/2026,Anopheles gambiae,0,1,0,,0.0
+external,species,09/10/2026,Anopheles minimus,4,1,1,0.25,1.0
+external,species,09/10/2026,Anopheles stephensi,4,5,3,0.75,0.6
+external,species,09/10/2026,Culex pipiens,4,0,0,0.0,
+external,species,13/10/2026 v2,Aedes aegypti,4,0,0,0.0,
+external,species,13/10/2026 v2,Aedes albopictus,1,1,0,0.0,0.0
+external,species,13/10/2026 v2,Aedes sierrensis,0,5,0,,0.0
+external,species,13/10/2026 v2,Anopheles albimanus,0,1,0,,0.0
+external,species,13/10/2026 v2,Anopheles dirus,0,2,0,,0.0
+external,species,13/10/2026 v2,Anopheles freeborni,0,1,0,,0.0
+external,species,13/10/2026 v2,Anopheles gambiae,0,1,0,,0.0
+external,species,13/10/2026 v2,Anopheles minimus,4,4,3,0.75,0.75
+external,species,13/10/2026 v2,Anopheles stephensi,4,2,1,0.25,0.5
+external,species,13/10/2026 v2,Culex pipiens,4,0,0,0.0,
+external,genus_marginalized,09/10/2026,Aedes,5,5,0,0.0,0.0
+external,genus_marginalized,09/10/2026,Anopheles,8,12,7,0.875,0.5833333333333334
+external,genus_marginalized,09/10/2026,Culex,4,0,0,0.0,
+external,genus_marginalized,13/10/2026 v2,Aedes,5,4,0,0.0,0.0
+external,genus_marginalized,13/10/2026 v2,Anopheles,8,13,8,1.0,0.6153846153846154
+external,genus_marginalized,13/10/2026 v2,Culex,4,0,0,0.0,
+external,genus_posthoc,09/10/2026,Aedes,5,5,0,0.0,0.0
+external,genus_posthoc,09/10/2026,Anopheles,8,12,7,0.875,0.5833333333333334
+external,genus_posthoc,09/10/2026,Culex,4,0,0,0.0,
+external,genus_posthoc,13/10/2026 v2,Aedes,5,6,1,0.2,0.16666666666666666
+external,genus_posthoc,13/10/2026 v2,Anopheles,8,11,7,0.875,0.6363636363636364
+external,genus_posthoc,13/10/2026 v2,Culex,4,0,0,0.0,
+fresh,species,09/10/2026,Aedes aegypti,2,0,0,0.0,
+fresh,species,09/10/2026,Anopheles stephensi,0,2,0,,0.0
+fresh,species,13/10/2026 v2,Aedes aegypti,2,0,0,0.0,
+fresh,species,13/10/2026 v2,Anopheles dirus,0,2,0,,0.0
+fresh,genus_marginalized,09/10/2026,Aedes,2,0,0,0.0,
+fresh,genus_marginalized,09/10/2026,Anopheles,0,2,0,,0.0
+fresh,genus_marginalized,13/10/2026 v2,Aedes,2,0,0,0.0,
+fresh,genus_marginalized,13/10/2026 v2,Anopheles,0,2,0,,0.0
+fresh,genus_posthoc,09/10/2026,Aedes,2,0,0,0.0,
+fresh,genus_posthoc,09/10/2026,Anopheles,0,2,0,,0.0
+fresh,genus_posthoc,13/10/2026 v2,Aedes,2,0,0,0.0,
+fresh,genus_posthoc,13/10/2026 v2,Anopheles,0,2,0,,0.0

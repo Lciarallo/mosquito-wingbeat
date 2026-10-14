@@ -1,0 +1,21 @@
+,Aedes aegypti,Aedes albopictus,Aedes mediovittatus,Aedes sierrensis,Anopheles albimanus,Anopheles arabiensis,Anopheles atroparvus,Anopheles dirus,Anopheles farauti,Anopheles freeborni,Anopheles gambiae,Anopheles merus,Anopheles minimus,Anopheles quadriannulatus,Anopheles quadrimaculatus,Anopheles stephensi,Culex pipiens,Culex quinquefasciatus,Culex tarsalis,Culiseta incidens
+Aedes aegypti,896,53,86,3,0,30,1,3,7,6,51,12,10,3,9,7,18,0,5,0
+Aedes albopictus,35,259,0,14,11,29,0,3,12,12,29,2,7,1,2,3,1,0,0,0
+Aedes mediovittatus,21,0,152,0,0,0,1,0,0,0,0,0,0,0,5,1,0,0,0,0
+Aedes sierrensis,0,3,0,162,2,2,4,1,1,3,4,0,0,3,6,1,8,12,2,13
+Anopheles albimanus,3,9,0,22,1063,70,30,220,102,207,70,1,127,97,13,79,3,2,7,6
+Anopheles arabiensis,30,51,0,7,65,284,11,29,35,14,79,121,10,21,1,9,3,0,10,0
+Anopheles atroparvus,1,1,0,2,11,8,248,2,1,4,1,0,3,133,3,1,0,1,0,0
+Anopheles dirus,17,43,0,12,253,41,8,848,218,161,145,10,265,23,33,280,3,8,26,20
+Anopheles farauti,15,24,2,8,138,52,3,272,890,101,88,7,168,15,21,249,5,5,12,12
+Anopheles freeborni,6,29,0,14,258,27,23,242,108,1268,100,1,254,29,60,162,10,14,5,13
+Anopheles gambiae,173,202,0,13,55,184,3,168,83,78,704,53,138,9,22,163,13,34,30,7
+Anopheles merus,5,1,0,0,0,64,0,1,2,0,4,221,1,1,0,0,0,0,0,0
+Anopheles minimus,29,49,0,35,127,35,0,278,236,283,161,2,971,12,6,174,6,4,25,4
+Anopheles quadriannulatus,1,5,0,4,48,16,137,1,7,10,3,4,1,179,3,0,0,0,1,0
+Anopheles quadrimaculatus,2,0,0,13,1,0,1,0,4,7,4,0,0,0,286,1,3,37,1,0
+Anopheles stephensi,29,31,1,2,94,38,1,246,233,99,236,2,127,7,21,1481,2,3,17,7
+Culex pipiens,5,0,0,3,2,1,0,2,2,2,7,0,2,0,0,2,339,86,0,0
+Culex quinquefasciatus,1,0,0,10,1,2,0,4,2,7,19,0,2,2,4,4,78,470,3,27
+Culex tarsalis,2,0,0,3,2,10,1,1,1,1,10,1,4,3,3,3,0,0,511,29
+Culiseta incidens,0,0,3,18,5,0,0,6,6,8,4,1,1,1,0,1,1,18,21,1301

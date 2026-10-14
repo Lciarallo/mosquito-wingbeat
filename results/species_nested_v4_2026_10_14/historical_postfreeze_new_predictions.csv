@@ -1,0 +1,5 @@
+group,version,species,genus,posthoc,accepted_species,accepted_genus
+BioDCASE_D3|S_1_D_3_87,v1,Anopheles stephensi,Anopheles,Anopheles,True,True
+BioDCASE_D3|S_1_D_3_87,v2,Anopheles dirus,Anopheles,Anopheles,False,True
+BioDCASE_D3|S_1_D_3_88,v1,Anopheles farauti,Anopheles,Anopheles,False,True
+BioDCASE_D3|S_1_D_3_88,v2,Anopheles dirus,Anopheles,Anopheles,False,True

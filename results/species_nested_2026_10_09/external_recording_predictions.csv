@@ -1,0 +1,86 @@
+model,path,group,label,forced_species,quality_ok,accepted,score,identification,duration_s,complete_windows,original_sample_rate,unanalysed_tail_s,no_padding_or_repetition
+svm,data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles dirus,True,False,0.3294718563556671,UNCERTAIN,29.257125,29,8000,0.257125,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles freeborni,True,False,0.11464813351631165,UNCERTAIN,29.257125,29,8000,0.257125,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles albimanus,True,False,0.21185103058815002,UNCERTAIN,29.257125,29,8000,0.257125,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles dirus,True,False,0.2076457440853119,UNCERTAIN,29.257125,29,8000,0.257125,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav,BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles dirus,True,False,0.17755969954397602,UNCERTAIN,29.257125,29,8000,0.257125,True
+svm,data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles minimus,True,False,0.3790549337863922,UNCERTAIN,40.40275,40,8000,0.40275,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles stephensi,True,False,0.1310574859380722,UNCERTAIN,40.40275,40,8000,0.40275,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles albimanus,True,False,0.16246935725212097,UNCERTAIN,40.40275,40,8000,0.40275,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles minimus,True,False,0.20313867926597595,UNCERTAIN,40.40275,40,8000,0.40275,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_1_D_3_80.wav,BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles stephensi,True,False,0.14779632392131095,UNCERTAIN,40.40275,40,8000,0.40275,True
+svm,data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles farauti,True,False,0.2973412871360779,UNCERTAIN,30.74325,30,8000,0.74325,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles stephensi,True,False,0.13727694749832153,UNCERTAIN,30.74325,30,8000,0.74325,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles farauti,True,False,0.2412506490945816,UNCERTAIN,30.74325,30,8000,0.74325,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles farauti,True,False,0.22032849490642548,UNCERTAIN,30.74325,30,8000,0.74325,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_1_D_3_81.wav,BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles farauti,True,False,0.22694137289074862,UNCERTAIN,30.74325,30,8000,0.74325,True
+svm,data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles dirus,True,False,0.34876498579978943,UNCERTAIN,30.882625,30,8000,0.882625,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles stephensi,True,False,0.12669137120246887,UNCERTAIN,30.882625,30,8000,0.882625,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles dirus,True,False,0.23354335129261017,UNCERTAIN,30.882625,30,8000,0.882625,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles dirus,True,False,0.22647567093372345,UNCERTAIN,30.882625,30,8000,0.882625,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_1_D_3_82.wav,BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles gambiae,True,False,0.2038917325772838,UNCERTAIN,30.882625,30,8000,0.882625,True
+svm,data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles freeborni,True,False,0.2013521045446396,UNCERTAIN,34.64425,34,8000,0.64425,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles freeborni,True,False,0.1551986038684845,UNCERTAIN,34.64425,34,8000,0.64425,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles freeborni,True,False,0.2867608666419983,UNCERTAIN,34.64425,34,8000,0.64425,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles freeborni,True,False,0.21443717181682587,UNCERTAIN,34.64425,34,8000,0.64425,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_2_D_3_19.wav,BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Anopheles freeborni,True,False,0.20418515411438323,UNCERTAIN,34.64425,34,8000,0.64425,True
+svm,data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Anopheles albimanus,True,True,0.6336347460746765,Anopheles albimanus,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Anopheles minimus,True,False,0.15557774901390076,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Anopheles minimus,True,False,0.2700776755809784,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Anopheles albimanus,True,False,0.27872368693351746,UNCERTAIN,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_7_D_3_19.wav,BioDCASE_D3|S_7_D_3_19,Culex pipiens,Aedes sierrensis,True,True,0.5876229190352434,Aedes sierrensis,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,True,True,0.6440915465354919,Aedes sierrensis,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,True,True,0.3023923337459564,Aedes sierrensis,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,True,True,0.9789965152740479,Aedes sierrensis,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,True,True,0.6418267488479614,Aedes sierrensis,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_7_D_3_20.wav,BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,True,True,0.9840448239325549,Aedes sierrensis,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Anopheles albimanus,True,True,0.6688723564147949,Anopheles albimanus,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Aedes sierrensis,True,False,0.1842915117740631,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Aedes sierrensis,True,False,0.2948748469352722,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Anopheles albimanus,True,True,0.3294070363044739,Anopheles albimanus,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_7_D_3_21.wav,BioDCASE_D3|S_7_D_3_21,Culex pipiens,Aedes sierrensis,True,True,0.6799597251427301,Aedes sierrensis,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Anopheles albimanus,True,True,0.6340510845184326,Anopheles albimanus,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Aedes sierrensis,True,False,0.17847728729248047,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Aedes sierrensis,True,False,0.2535190284252167,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Anopheles albimanus,True,True,0.32271823287010193,Anopheles albimanus,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_7_D_3_22.wav,BioDCASE_D3|S_7_D_3_22,Culex pipiens,Aedes sierrensis,True,True,0.5627520242176389,Aedes sierrensis,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,True,True,0.4725339412689209,Aedes aegypti,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,True,True,0.3238164782524109,Aedes aegypti,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,True,True,0.6561734676361084,Aedes aegypti,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,True,True,0.48417460918426514,Aedes aegypti,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_8_D_3_19.wav,BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,True,True,0.5622220385020454,Aedes aegypti,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,True,True,0.4327525198459625,Anopheles minimus,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,True,True,0.464301735162735,Anopheles minimus,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,True,True,0.46903979778289795,Anopheles minimus,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,True,True,0.4553646743297577,Anopheles minimus,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_8_D_3_20.wav,BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,True,True,0.38064194256397005,Anopheles minimus,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles albimanus,True,False,0.3593996465206146,UNCERTAIN,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles minimus,True,True,0.31535589694976807,Anopheles minimus,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles albimanus,True,False,0.26520195603370667,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles albimanus,True,False,0.23670247197151184,UNCERTAIN,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_8_D_3_21.wav,BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles albimanus,True,False,0.21877421517430118,UNCERTAIN,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles stephensi,True,True,0.7076667547225952,Anopheles stephensi,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles stephensi,True,False,0.20489099621772766,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles stephensi,True,True,0.5211123824119568,Anopheles stephensi,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles stephensi,True,True,0.4778900146484375,Anopheles stephensi,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_8_D_3_22.wav,BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles stephensi,True,True,0.5504729512131299,Anopheles stephensi,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles albimanus,True,False,0.37704136967658997,UNCERTAIN,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles stephensi,True,False,0.24447913467884064,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles albimanus,True,False,0.3186795711517334,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles albimanus,True,False,0.2563442885875702,UNCERTAIN,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_9_D_3_19.wav,BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles albimanus,True,False,0.2502817556378292,UNCERTAIN,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,True,True,0.4344320297241211,Anopheles stephensi,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,True,True,0.41732263565063477,Anopheles stephensi,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,True,False,0.2269706428050995,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,True,True,0.359575092792511,Anopheles stephensi,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_9_D_3_20.wav,BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,True,False,0.2525064259288409,UNCERTAIN,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles albimanus,True,True,0.6670088171958923,Anopheles albimanus,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Culiseta incidens,True,False,0.20934434235095978,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles stephensi,True,False,0.20902115106582642,UNCERTAIN,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles albimanus,True,False,0.263449490070343,UNCERTAIN,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_9_D_3_21.wav,BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles stephensi,True,False,0.18959962854982937,UNCERTAIN,2.0,2,8000,0.0,True
+svm,data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles stephensi,True,True,0.43393009901046753,Anopheles stephensi,2.0,2,8000,0.0,True
+extra_trees,data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles freeborni,True,False,0.1389743983745575,UNCERTAIN,2.0,2,8000,0.0,True
+hist_gradient_boosting,data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles stephensi,True,True,0.3893110752105713,Anopheles stephensi,2.0,2,8000,0.0,True
+fixed,data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles stephensi,True,False,0.3133927881717682,UNCERTAIN,2.0,2,8000,0.0,True
+calibrated,data/external/species_nested_fresh_2026_10_09/S_9_D_3_22.wav,BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles stephensi,True,True,0.38957551364826687,Anopheles stephensi,2.0,2,8000,0.0,True

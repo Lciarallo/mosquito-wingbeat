@@ -1,0 +1,8 @@
+{
+  "model_unchanged": true,
+  "thresholds_unchanged": true,
+  "all_methods_evaluated": true,
+  "raw_private_audio_unchanged_sha256": "138fce9b9780f22013011849d793938282695a06647eb3467491cf95b6838eca",
+  "no_retraining": true,
+  "no_Arduino_compilation": true
+}

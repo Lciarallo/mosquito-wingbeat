@@ -1,0 +1,11 @@
+{
+  "completed_utc": "2026-10-01T19:26:36.350654+00:00",
+  "frozen_utc": "2026-10-01T19:22:43.947457+00:00",
+  "main_test_windows": 10180,
+  "heldout_noise_windows": 971,
+  "private_windows": 107,
+  "synthetic_files": 315,
+  "d5_test_files": 400,
+  "d5_calibration_test_exact_byte_and_pcm_overlap": 0,
+  "refit_after_test": false
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "index": 1,
+    "title": "Mosquitos\npelo som",
+    "role": "cover",
+    "exemplar": "p1",
+    "method": "edit copied original",
+    "media": "keep official native page background",
+    "slideId": "p1",
+    "textId": "p1_i54"
+  },
+  {
+    "index": 2,
+    "title": "Por que analisar esse som?",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_02",
+    "textId": "ifsc_text_02"
+  },
+  {
+    "index": 3,
+    "title": "Três perguntas diferentes",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_03",
+    "textId": "ifsc_text_03"
+  },
+  {
+    "index": 4,
+    "title": "O som vira uma imagem",
+    "role": "chart",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background; add actual result chart",
+    "slideId": "ifsc_slide_04",
+    "textId": "ifsc_text_04"
+  },
+  {
+    "index": 5,
+    "title": "Abordagens e trabalhos correlatos",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_05",
+    "textId": "ifsc_text_05"
+  },
+  {
+    "index": 6,
+    "title": "Os dados não são todos iguais",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_06",
+    "textId": "ifsc_text_06"
+  },
+  {
+    "index": 7,
+    "title": "O programa que implementei",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_07",
+    "textId": "ifsc_text_07"
+  },
+  {
+    "index": 8,
+    "title": "A arquitetura da primeira CNN",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_08",
+    "textId": "ifsc_text_08"
+  },
+  {
+    "index": 9,
+    "title": "Separar dados antes de treinar",
+    "role": "partition_table",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_09",
+    "textId": "ifsc_text_09"
+  },
+  {
+    "index": 10,
+    "title": "Primeira CNN: sinais de sobreajuste",
+    "role": "chart",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background; add actual result chart",
+    "slideId": "ifsc_slide_10",
+    "textId": "ifsc_text_10"
+  },
+  {
+    "index": 11,
+    "title": "Resultado da primeira rodada",
+    "role": "chart",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background; add actual result chart",
+    "slideId": "ifsc_slide_11",
+    "textId": "ifsc_text_11"
+  },
+  {
+    "index": 12,
+    "title": "Alterações melhoraram as redes",
+    "role": "chart",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background; add actual result chart",
+    "slideId": "ifsc_slide_12",
+    "textId": "ifsc_text_12"
+  },
+  {
+    "index": 13,
+    "title": "Transferência ainda é difícil",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_13",
+    "textId": "ifsc_text_13"
+  },
+  {
+    "index": 14,
+    "title": "O projeto também tem uma CNN maior",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_14",
+    "textId": "ifsc_text_14"
+  },
+  {
+    "index": 15,
+    "title": "Uma rede maior ainda falhou",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_15",
+    "textId": "ifsc_text_15"
+  },
+  {
+    "index": 16,
+    "title": "Gênero é mais fácil que espécie?",
+    "role": "chart",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background; add actual result chart",
+    "slideId": "ifsc_slide_16",
+    "textId": "ifsc_text_16"
+  },
+  {
+    "index": 17,
+    "title": "Desafios que estou enfrentando",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_17",
+    "textId": "ifsc_text_17"
+  },
+  {
+    "index": 18,
+    "title": "Próximos passos do projeto",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_18",
+    "textId": "ifsc_text_18"
+  },
+  {
+    "index": 19,
+    "title": "Conclusão do trabalho",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_19",
+    "textId": "ifsc_text_19"
+  },
+  {
+    "index": 20,
+    "title": "Referências e materiais",
+    "role": "content",
+    "exemplar": "p4",
+    "method": "duplicate native exemplar",
+    "media": "keep official native page background",
+    "slideId": "ifsc_slide_20",
+    "textId": "ifsc_text_20"
+  }
+]

@@ -1,0 +1,73 @@
+{
+  "created_utc": "2026-10-14T05:33:51.419715+00:00",
+  "audits": [
+    {
+      "fold": "0",
+      "fit": {
+        "rows": 12661,
+        "groups": 300
+      },
+      "calibration": {
+        "rows": 3590,
+        "groups": 83
+      },
+      "test": {
+        "rows": 8154,
+        "groups": 230
+      },
+      "pcm_block_overlap": 0
+    },
+    {
+      "fold": "1",
+      "fit": {
+        "rows": 11302,
+        "groups": 298
+      },
+      "calibration": {
+        "rows": 5033,
+        "groups": 137
+      },
+      "test": {
+        "rows": 8070,
+        "groups": 178
+      },
+      "pcm_block_overlap": 0
+    },
+    {
+      "fold": "2",
+      "fit": {
+        "rows": 11634,
+        "groups": 282
+      },
+      "calibration": {
+        "rows": 4590,
+        "groups": 126
+      },
+      "test": {
+        "rows": 8181,
+        "groups": 205
+      },
+      "pcm_block_overlap": 0
+    },
+    {
+      "fold": "final",
+      "fit": {
+        "rows": 19493,
+        "groups": 489
+      },
+      "calibration": {
+        "rows": 4912,
+        "groups": 124
+      },
+      "test": {
+        "rows": 0,
+        "groups": 0
+      },
+      "pcm_block_overlap": 0
+    }
+  ],
+  "pcm_blocks": 560,
+  "exact_v2_partition_reuse": true,
+  "source_sha256": "bae436c249ae19478ebbc2eedd26ec7843d10d8ced13fa7cad25d582c74df496",
+  "limits": "Existing whole/aligned 1/.992/.3-second PCM graph; byte identity reverified. Not biological or session independence."
+}

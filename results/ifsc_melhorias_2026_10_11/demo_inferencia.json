@@ -1,0 +1,21 @@
+{
+  "model": "deep_mlp",
+  "audio": "data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav",
+  "windows": 29,
+  "forced_choice": true,
+  "presence_not_validated": true,
+  "top3": [
+    {
+      "species": "Anopheles freeborni",
+      "score": 0.22665056586265564
+    },
+    {
+      "species": "Anopheles minimus",
+      "score": 0.224040225148201
+    },
+    {
+      "species": "Anopheles farauti",
+      "score": 0.15632759034633636
+    }
+  ]
+}

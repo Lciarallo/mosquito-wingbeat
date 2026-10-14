@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-14T01:40:03.677669+00:00",
+  "code_sha256": "970a2a9484958863197b0c02a97688e7486a07cad69c9cd35c12ebd3d892138b",
+  "inference_freeze_sha256": "eb546e1235332056668fb48254d64c2e3b0dad2b6128c3511145a9a8af5482c1",
+  "selection_rule_unchanged": true,
+  "purpose": "Explicit decoding-error bookkeeping for known Apple resource forks and unsupported fixtures; all known bytes remain indexed."
+}

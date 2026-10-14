@@ -1,0 +1,9 @@
+{
+  "completed_utc": "2026-10-01T19:30:08.341064+00:00",
+  "files": 15,
+  "original_group_exclusion": true,
+  "byte_duplicate_exclusion": true,
+  "positive_groups": 0,
+  "inference_only": true,
+  "limitations": "No unused HumBug Aedes recording groups satisfying the duration rule remain; this fresh acoustic set cannot estimate Aedes sensitivity."
+}

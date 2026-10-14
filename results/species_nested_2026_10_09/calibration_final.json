@@ -1,0 +1,92 @@
+{
+  "parameters": {
+    "weights": [
+      0.1216791364489933,
+      0.04255154847154174,
+      0.8357693150794651
+    ],
+    "log_prior": [
+      -0.5333568774654688,
+      0.09424602278879377,
+      1.6165890516406731,
+      1.2281121121810894,
+      -0.847173749392349,
+      -0.5759838767208659,
+      0.8830308169143917,
+      -0.6150804111554257,
+      -0.4927800763622536,
+      -0.6847947578291519,
+      -0.2620948323675093,
+      -0.10868064022168168,
+      -0.7969072554837476,
+      0.9757809686071559,
+      0.46074058155493447,
+      -0.4536133049236767,
+      0.690860956566415,
+      -0.48170122603584814,
+      0.2451510368525054,
+      -0.3423445391479803
+    ],
+    "loss": 1.1519295029564958,
+    "iterations": 19,
+    "converged": true,
+    "partition": "calibration",
+    "geographic_prior": false
+  },
+  "thresholds": {
+    "svm": {
+      "threshold": 0.43153342604637146,
+      "calibration_emitted": 53,
+      "calibration_accuracy": 0.9056603773584906,
+      "calibration_groups": 121,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "extra_trees": {
+      "threshold": 0.27842026948928833,
+      "calibration_emitted": 38,
+      "calibration_accuracy": 0.9210526315789473,
+      "calibration_groups": 121,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "hist_gradient_boosting": {
+      "threshold": 0.3276507556438446,
+      "calibration_emitted": 85,
+      "calibration_accuracy": 0.9058823529411765,
+      "calibration_groups": 121,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "fixed": {
+      "threshold": 0.32067957520484924,
+      "calibration_emitted": 73,
+      "calibration_accuracy": 0.9041095890410958,
+      "calibration_groups": 121,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "calibrated": {
+      "threshold": 0.28604182278176626,
+      "calibration_emitted": 92,
+      "calibration_accuracy": 0.9021739130434783,
+      "calibration_groups": 121,
+      "target": 0.9,
+      "minimum_emissions": 20
+    }
+  },
+  "partitions": {
+    "fit": {
+      "rows": 18635,
+      "groups": 448
+    },
+    "calibration": {
+      "rows": 5242,
+      "groups": 121
+    },
+    "test": {
+      "rows": 0,
+      "groups": 0
+    }
+  }
+}

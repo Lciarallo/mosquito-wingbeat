@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-10-14T01:15:49.026105+00:00",
+  "files_sha256": {
+    "windows_installer.py": "04c27f723d6080b0ac35fd0f610121b739a50cb1e7afc19473bc2da954eafbd3",
+    "install_arduino.py": "cee5df831981fd1580bf22e13fe34da8edc1f067d38d8029c4b6e0d8231d4a79"
+  }
+}

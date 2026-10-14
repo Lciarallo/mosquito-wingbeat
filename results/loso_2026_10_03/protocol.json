@@ -1,0 +1,59 @@
+{
+  "candidates": {
+    "et_baseline": {},
+    "hgb_baseline": {},
+    "lr_baseline": {
+      "scale": true
+    },
+    "et_no_positive_only_source": {
+      "drop": [
+        "figshare"
+      ]
+    },
+    "hgb_acoustic_only": {
+      "drop": [
+        "figshare"
+      ],
+      "acoustic_only": true
+    },
+    "et_consistent40": {
+      "consistent": 40,
+      "drop": [
+        "figshare"
+      ]
+    },
+    "lr_consistent40": {
+      "consistent": 40,
+      "drop": [
+        "figshare"
+      ],
+      "scale": true
+    },
+    "et_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ]
+    },
+    "lr_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ],
+      "scale": true
+    },
+    "hgb_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ]
+    }
+  },
+  "held_out": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+  ],
+  "seed": 20261003,
+  "note": "Candidates declared before running; no tuning on held-out source; ufrgs/private audio excluded."
+}

@@ -1,0 +1,3802 @@
+[
+  {
+    "fold": 0,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round1.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8783333333333333,
+    "macro_f1": 0.8568516488956786,
+    "species_accuracy": 0.8816666666666667,
+    "binary_confusion": [
+      [
+        816,
+        44
+      ],
+      [
+        79,
+        261
+      ]
+    ],
+    "binary_recall": 0.7676470588235295,
+    "binary_specificity": 0.9488372093023256,
+    "binary_precision": 0.8557377049180328,
+    "report": {
+      "0": {
+        "precision": 0.8118279569892473,
+        "recall": 0.9096385542168675,
+        "f1-score": 0.8579545454545454,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.907563025210084,
+        "recall": 0.6206896551724138,
+        "f1-score": 0.7372013651877133,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9864864864864865,
+        "recall": 0.776595744680851,
+        "f1-score": 0.8690476190476191,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9441860465116279,
+        "recall": 0.9854368932038835,
+        "f1-score": 0.9643705463182898,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.7701149425287356,
+        "recall": 0.9852941176470589,
+        "f1-score": 0.8645161290322582,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.5047619047619047,
+        "recall": 0.8833333333333333,
+        "f1-score": 0.6424242424242425,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9791666666666666,
+        "recall": 0.9690721649484536,
+        "f1-score": 0.9740932642487047,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9324324324324325,
+        "recall": 0.9583333333333334,
+        "f1-score": 0.9452054794520548,
+        "support": 144
+      },
+      "accuracy": 0.8783333333333333,
+      "macro avg": {
+        "precision": 0.8545674326983981,
+        "recall": 0.8860492245670244,
+        "f1-score": 0.8568516488956786,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.8996027718907468,
+        "recall": 0.8783333333333333,
+        "f1-score": 0.8792925088630246,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 0,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round1.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8841666666666667,
+    "macro_f1": 0.8666468369199356,
+    "species_accuracy": 0.8891666666666667,
+    "binary_confusion": [
+      [
+        812,
+        48
+      ],
+      [
+        71,
+        269
+      ]
+    ],
+    "binary_recall": 0.7911764705882353,
+    "binary_specificity": 0.9441860465116279,
+    "binary_precision": 0.8485804416403786,
+    "report": {
+      "0": {
+        "precision": 0.7916666666666666,
+        "recall": 0.9156626506024096,
+        "f1-score": 0.8491620111731844,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.92,
+        "recall": 0.6609195402298851,
+        "f1-score": 0.7692307692307694,
+        "support": 174
+      },
+      "2": {
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1-score": 0.8571428571428571,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9624413145539906,
+        "recall": 0.9951456310679612,
+        "f1-score": 0.9785202863961814,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8095238095238095,
+        "recall": 1.0,
+        "f1-score": 0.8947368421052632,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.5510204081632653,
+        "recall": 0.9,
+        "f1-score": 0.6835443037974683,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9637305699481865,
+        "recall": 0.9587628865979382,
+        "f1-score": 0.9612403100775193,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9090909090909091,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9395973154362416,
+        "support": 144
+      },
+      "accuracy": 0.8841666666666667,
+      "macro avg": {
+        "precision": 0.8634342097433534,
+        "recall": 0.894089116340052,
+        "f1-score": 0.8666468369199356,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9031177020677024,
+        "recall": 0.8841666666666667,
+        "f1-score": 0.884302067425197,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 0,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round1.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8758333333333334,
+    "macro_f1": 0.8591630264463066,
+    "species_accuracy": 0.8841666666666667,
+    "binary_confusion": [
+      [
+        800,
+        60
+      ],
+      [
+        66,
+        274
+      ]
+    ],
+    "binary_recall": 0.8058823529411765,
+    "binary_specificity": 0.9302325581395349,
+    "binary_precision": 0.8203592814371258,
+    "report": {
+      "0": {
+        "precision": 0.74,
+        "recall": 0.891566265060241,
+        "f1-score": 0.8087431693989071,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9104477611940298,
+        "recall": 0.7011494252873564,
+        "f1-score": 0.7922077922077922,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9848484848484849,
+        "recall": 0.6914893617021277,
+        "f1-score": 0.8125000000000001,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9761904761904762,
+        "recall": 0.9951456310679612,
+        "f1-score": 0.9855769230769231,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.7831325301204819,
+        "recall": 0.9558823529411765,
+        "f1-score": 0.8609271523178808,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.5934065934065934,
+        "recall": 0.9,
+        "f1-score": 0.7152317880794702,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9637305699481865,
+        "recall": 0.9587628865979382,
+        "f1-score": 0.9612403100775193,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8980891719745223,
+        "recall": 0.9791666666666666,
+        "f1-score": 0.9368770764119602,
+        "support": 144
+      },
+      "accuracy": 0.8758333333333334,
+      "macro avg": {
+        "precision": 0.8562306984603469,
+        "recall": 0.8841453236654335,
+        "f1-score": 0.8591630264463066,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.8938755355678184,
+        "recall": 0.8758333333333334,
+        "f1-score": 0.8756018674324715,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 0,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round1.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8794444444444445,
+    "macro_f1": 0.8608115802432775,
+    "species_accuracy": 0.885,
+    "binary_confusion": [
+      [
+        2428,
+        152
+      ],
+      [
+        216,
+        804
+      ]
+    ],
+    "binary_recall": 0.788235294117647,
+    "binary_specificity": 0.9410852713178295,
+    "binary_precision": 0.8410041841004184,
+    "report": {
+      "0": {
+        "precision": 0.7802768166089965,
+        "recall": 0.9056224899598394,
+        "f1-score": 0.8382899628252788,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.9126984126984127,
+        "recall": 0.6609195402298851,
+        "f1-score": 0.7666666666666667,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9904988123515439,
+        "recall": 0.7393617021276596,
+        "f1-score": 0.8467005076142132,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9608150470219435,
+        "recall": 0.9919093851132686,
+        "f1-score": 0.9761146496815287,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.7874015748031497,
+        "recall": 0.9803921568627451,
+        "f1-score": 0.8733624454148472,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.5476190476190477,
+        "recall": 0.8944444444444445,
+        "f1-score": 0.679324894514768,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9688581314878892,
+        "recall": 0.9621993127147767,
+        "f1-score": 0.9655172413793104,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9128540305010894,
+        "recall": 0.9699074074074074,
+        "f1-score": 0.9405162738496072,
+        "support": 432
+      },
+      "accuracy": 0.8794444444444445,
+      "macro avg": {
+        "precision": 0.8576277341365091,
+        "recall": 0.8880945548575033,
+        "f1-score": 0.8608115802432775,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.8985725496831604,
+        "recall": 0.8794444444444445,
+        "f1-score": 0.8797568960965738,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 1,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round2.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9358333333333333,
+    "macro_f1": 0.9298803472715451,
+    "species_accuracy": 0.9458333333333333,
+    "binary_confusion": [
+      [
+        834,
+        26
+      ],
+      [
+        19,
+        321
+      ]
+    ],
+    "binary_recall": 0.9441176470588235,
+    "binary_specificity": 0.9697674418604652,
+    "binary_precision": 0.9250720461095101,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9457831325301205,
+        "f1-score": 0.9721362229102167,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8631578947368421,
+        "recall": 0.9425287356321839,
+        "f1-score": 0.901098901098901,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9253731343283582,
+        "recall": 0.9893617021276596,
+        "f1-score": 0.9562982005141388,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9487179487179487,
+        "recall": 0.8980582524271845,
+        "f1-score": 0.9226932668329177,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8955223880597015,
+        "recall": 0.8823529411764706,
+        "f1-score": 0.888888888888889,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.8194444444444444,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.893939393939394,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9943181818181818,
+        "recall": 0.9020618556701031,
+        "f1-score": 0.9459459459459459,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9647887323943662,
+        "recall": 0.9513888888888888,
+        "f1-score": 0.9580419580419581,
+        "support": 144
+      },
+      "accuracy": 0.9358333333333333,
+      "macro avg": {
+        "precision": 0.9264153405624804,
+        "recall": 0.936858605223243,
+        "f1-score": 0.9298803472715451,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9395708451384013,
+        "recall": 0.9358333333333333,
+        "f1-score": 0.9363142166757563,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 1,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round2.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9458333333333333,
+    "macro_f1": 0.9429087198096268,
+    "species_accuracy": 0.9566666666666667,
+    "binary_confusion": [
+      [
+        836,
+        24
+      ],
+      [
+        12,
+        328
+      ]
+    ],
+    "binary_recall": 0.9647058823529412,
+    "binary_specificity": 0.9720930232558139,
+    "binary_precision": 0.9318181818181818,
+    "report": {
+      "0": {
+        "precision": 0.9876543209876543,
+        "recall": 0.963855421686747,
+        "f1-score": 0.975609756097561,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8842105263157894,
+        "recall": 0.9655172413793104,
+        "f1-score": 0.9230769230769231,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9435897435897436,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9608355091383811,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9536082474226805,
+        "recall": 0.8980582524271845,
+        "f1-score": 0.9250000000000002,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8985507246376812,
+        "recall": 0.9117647058823529,
+        "f1-score": 0.9051094890510949,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.8939393939393939,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9365079365079364,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9943820224719101,
+        "recall": 0.9123711340206185,
+        "f1-score": 0.9516129032258065,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.958904109589041,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9655172413793104,
+        "support": 144
+      },
+      "accuracy": 0.9458333333333333,
+      "macro avg": {
+        "precision": 0.9393548861192367,
+        "recall": 0.948230714400886,
+        "f1-score": 0.9429087198096268,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9478096138991168,
+        "recall": 0.9458333333333333,
+        "f1-score": 0.9459491560633111,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 1,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round2.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9533333333333334,
+    "macro_f1": 0.9508089089807119,
+    "species_accuracy": 0.9658333333333333,
+    "binary_confusion": [
+      [
+        837,
+        23
+      ],
+      [
+        5,
+        335
+      ]
+    ],
+    "binary_recall": 0.9852941176470589,
+    "binary_specificity": 0.9732558139534884,
+    "binary_precision": 0.9357541899441341,
+    "report": {
+      "0": {
+        "precision": 0.9761904761904762,
+        "recall": 0.9879518072289156,
+        "f1-score": 0.9820359281437125,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9,
+        "recall": 0.9827586206896551,
+        "f1-score": 0.9395604395604396,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.968421052631579,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9735449735449735,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9635416666666666,
+        "recall": 0.8980582524271845,
+        "f1-score": 0.9296482412060302,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8970588235294118,
+        "recall": 0.8970588235294118,
+        "f1-score": 0.8970588235294118,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1-score": 0.967741935483871,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.994413407821229,
+        "recall": 0.9175257731958762,
+        "f1-score": 0.9544235924932976,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9463087248322147,
+        "recall": 0.9791666666666666,
+        "f1-score": 0.962457337883959,
+        "support": 144
+      },
+      "accuracy": 0.9533333333333334,
+      "macro avg": {
+        "precision": 0.9479292689589471,
+        "recall": 0.9551554184991287,
+        "f1-score": 0.9508089089807119,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9546958481407055,
+        "recall": 0.9533333333333334,
+        "f1-score": 0.9532100191652434,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 1,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round2.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.945,
+    "macro_f1": 0.9411048578797448,
+    "species_accuracy": 0.9561111111111111,
+    "binary_confusion": [
+      [
+        2507,
+        73
+      ],
+      [
+        36,
+        984
+      ]
+    ],
+    "binary_recall": 0.9647058823529412,
+    "binary_specificity": 0.9717054263565892,
+    "binary_precision": 0.9309366130558183,
+    "report": {
+      "0": {
+        "precision": 0.9876796714579056,
+        "recall": 0.9658634538152611,
+        "f1-score": 0.9766497461928934,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.8824561403508772,
+        "recall": 0.9636015325670498,
+        "f1-score": 0.9212454212454213,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9453924914675768,
+        "recall": 0.9822695035460993,
+        "f1-score": 0.9634782608695652,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.955249569707401,
+        "recall": 0.8980582524271845,
+        "f1-score": 0.9257714762301918,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8970588235294118,
+        "recall": 0.8970588235294118,
+        "f1-score": 0.8970588235294118,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.8811881188118812,
+        "recall": 0.9888888888888889,
+        "f1-score": 0.9319371727748692,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9943714821763602,
+        "recall": 0.9106529209621993,
+        "f1-score": 0.9506726457399103,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9565217391304348,
+        "recall": 0.9675925925925926,
+        "f1-score": 0.9620253164556962,
+        "support": 432
+      },
+      "accuracy": 0.945,
+      "macro avg": {
+        "precision": 0.9374897545789811,
+        "recall": 0.9467482460410859,
+        "f1-score": 0.9411048578797448,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9471132322870028,
+        "recall": 0.945,
+        "f1-score": 0.9451181396010636,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 2,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round3.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9125,
+    "macro_f1": 0.8975908539648478,
+    "species_accuracy": 0.9166666666666666,
+    "binary_confusion": [
+      [
+        842,
+        18
+      ],
+      [
+        64,
+        276
+      ]
+    ],
+    "binary_recall": 0.8117647058823529,
+    "binary_specificity": 0.9790697674418605,
+    "binary_precision": 0.9387755102040817,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.8614457831325302,
+        "f1-score": 0.9255663430420712,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8741721854304636,
+        "recall": 0.7586206896551724,
+        "f1-score": 0.8123076923076923,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9518716577540107,
+        "recall": 0.9468085106382979,
+        "f1-score": 0.9493333333333333,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9476190476190476,
+        "recall": 0.9660194174757282,
+        "f1-score": 0.9567307692307693,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.7951807228915663,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8741721854304635,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.691358024691358,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.7943262411347518,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9371980676328503,
+        "recall": 1.0,
+        "f1-score": 0.9675810473815462,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9202898550724637,
+        "recall": 0.8819444444444444,
+        "f1-score": 0.900709219858156,
+        "support": 144
+      },
+      "accuracy": 0.9125,
+      "macro avg": {
+        "precision": 0.88971119513647,
+        "recall": 0.9148450517467029,
+        "f1-score": 0.8975908539648478,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9184660755179118,
+        "recall": 0.9125,
+        "f1-score": 0.9125524087197319,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 2,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round3.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9208333333333333,
+    "macro_f1": 0.9068885721174464,
+    "species_accuracy": 0.9225,
+    "binary_confusion": [
+      [
+        848,
+        12
+      ],
+      [
+        62,
+        278
+      ]
+    ],
+    "binary_recall": 0.8176470588235294,
+    "binary_specificity": 0.986046511627907,
+    "binary_precision": 0.9586206896551724,
+    "report": {
+      "0": {
+        "precision": 0.9863013698630136,
+        "recall": 0.8674698795180723,
+        "f1-score": 0.923076923076923,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9305555555555556,
+        "recall": 0.7701149425287356,
+        "f1-score": 0.8427672955974842,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.946236559139785,
+        "recall": 0.9361702127659575,
+        "f1-score": 0.9411764705882354,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9523809523809523,
+        "recall": 0.970873786407767,
+        "f1-score": 0.9615384615384616,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.825,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8918918918918919,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.7,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.8,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.941747572815534,
+        "recall": 1.0,
+        "f1-score": 0.97,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9121621621621622,
+        "recall": 0.9375,
+        "f1-score": 0.9246575342465754,
+        "support": 144
+      },
+      "accuracy": 0.9208333333333333,
+      "macro avg": {
+        "precision": 0.8992980214896253,
+        "recall": 0.9232562987309979,
+        "f1-score": 0.9068885721174464,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9265633532085398,
+        "recall": 0.9208333333333333,
+        "f1-score": 0.9207247598269988,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 2,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round3.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9266666666666666,
+    "macro_f1": 0.9131168622422218,
+    "species_accuracy": 0.9283333333333333,
+    "binary_confusion": [
+      [
+        850,
+        10
+      ],
+      [
+        57,
+        283
+      ]
+    ],
+    "binary_recall": 0.8323529411764706,
+    "binary_specificity": 0.9883720930232558,
+    "binary_precision": 0.9658703071672355,
+    "report": {
+      "0": {
+        "precision": 0.9863013698630136,
+        "recall": 0.8674698795180723,
+        "f1-score": 0.923076923076923,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9455782312925171,
+        "recall": 0.7988505747126436,
+        "f1-score": 0.8660436137071651,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9468085106382979,
+        "recall": 0.9468085106382979,
+        "f1-score": 0.9468085106382979,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9658536585365853,
+        "recall": 0.9611650485436893,
+        "f1-score": 0.9635036496350365,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8048780487804879,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8800000000000001,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.7368421052631579,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.8235294117647058,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.941747572815534,
+        "recall": 1.0,
+        "f1-score": 0.97,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9133333333333333,
+        "recall": 0.9513888888888888,
+        "f1-score": 0.9319727891156462,
+        "support": 144
+      },
+      "accuracy": 0.9266666666666666,
+      "macro avg": {
+        "precision": 0.9051678538153658,
+        "recall": 0.9287005588661303,
+        "f1-score": 0.9131168622422218,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9319864633831427,
+        "recall": 0.9266666666666666,
+        "f1-score": 0.9266999634826408,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 2,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round3.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.92,
+    "macro_f1": 0.9058462328220509,
+    "species_accuracy": 0.9225,
+    "binary_confusion": [
+      [
+        2540,
+        40
+      ],
+      [
+        183,
+        837
+      ]
+    ],
+    "binary_recall": 0.8205882352941176,
+    "binary_specificity": 0.9844961240310077,
+    "binary_precision": 0.9543899657924744,
+    "report": {
+      "0": {
+        "precision": 0.9908045977011494,
+        "recall": 0.8654618473895582,
+        "f1-score": 0.9239013933547696,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.916289592760181,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.8402489626556016,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.948306595365419,
+        "recall": 0.9432624113475178,
+        "f1-score": 0.9457777777777777,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9552,
+        "recall": 0.9660194174757282,
+        "f1-score": 0.9605792437650845,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8081632653061225,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8819599109131403,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.7088607594936709,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.8057553956834533,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9402261712439418,
+        "recall": 1.0,
+        "f1-score": 0.9691923397169027,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9151376146788991,
+        "recall": 0.9236111111111112,
+        "f1-score": 0.9193548387096776,
+        "support": 432
+      },
+      "accuracy": 0.92,
+      "macro avg": {
+        "precision": 0.897873574568673,
+        "recall": 0.9222673031146105,
+        "f1-score": 0.9058462328220509,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9255260280274031,
+        "recall": 0.92,
+        "f1-score": 0.9199879213326412,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 3,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round4.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9416666666666667,
+    "macro_f1": 0.9406481452130038,
+    "species_accuracy": 0.9475,
+    "binary_confusion": [
+      [
+        821,
+        39
+      ],
+      [
+        13,
+        327
+      ]
+    ],
+    "binary_recall": 0.961764705882353,
+    "binary_specificity": 0.9546511627906977,
+    "binary_precision": 0.8934426229508197,
+    "report": {
+      "0": {
+        "precision": 0.8804347826086957,
+        "recall": 0.9759036144578314,
+        "f1-score": 0.9257142857142858,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9065934065934066,
+        "recall": 0.9482758620689655,
+        "f1-score": 0.9269662921348315,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9508196721311475,
+        "recall": 0.925531914893617,
+        "f1-score": 0.9380053908355795,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9660194174757282,
+        "recall": 0.9660194174757282,
+        "f1-score": 0.9660194174757282,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9838709677419355,
+        "recall": 0.8970588235294118,
+        "f1-score": 0.9384615384615386,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9076923076923077,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.944,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.989010989010989,
+        "recall": 0.9278350515463918,
+        "f1-score": 0.9574468085106383,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9558823529411765,
+        "recall": 0.9027777777777778,
+        "f1-score": 0.9285714285714286,
+        "support": 144
+      },
+      "accuracy": 0.9416666666666667,
+      "macro avg": {
+        "precision": 0.9425404870244234,
+        "recall": 0.9408419743853821,
+        "f1-score": 0.9406481452130038,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9437778999838361,
+        "recall": 0.9416666666666667,
+        "f1-score": 0.9418500590982127,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 3,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round4.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9458333333333333,
+    "macro_f1": 0.9450298342078051,
+    "species_accuracy": 0.9516666666666667,
+    "binary_confusion": [
+      [
+        827,
+        33
+      ],
+      [
+        16,
+        324
+      ]
+    ],
+    "binary_recall": 0.9529411764705882,
+    "binary_specificity": 0.9616279069767442,
+    "binary_precision": 0.907563025210084,
+    "report": {
+      "0": {
+        "precision": 0.898876404494382,
+        "recall": 0.963855421686747,
+        "f1-score": 0.9302325581395349,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9162011173184358,
+        "recall": 0.9425287356321839,
+        "f1-score": 0.9291784702549574,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9560439560439561,
+        "recall": 0.925531914893617,
+        "f1-score": 0.9405405405405406,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9711538461538461,
+        "recall": 0.9805825242718447,
+        "f1-score": 0.9758454106280192,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9838709677419355,
+        "recall": 0.8970588235294118,
+        "f1-score": 0.9384615384615386,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9365079365079365,
+        "recall": 0.9833333333333333,
+        "f1-score": 0.9593495934959351,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9735449735449735,
+        "recall": 0.9484536082474226,
+        "f1-score": 0.9608355091383811,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9424460431654677,
+        "recall": 0.9097222222222222,
+        "f1-score": 0.9257950530035336,
+        "support": 144
+      },
+      "accuracy": 0.9458333333333333,
+      "macro avg": {
+        "precision": 0.9473306556213666,
+        "recall": 0.9438833229770978,
+        "f1-score": 0.9450298342078051,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9467500755699261,
+        "recall": 0.9458333333333333,
+        "f1-score": 0.9458619760975121,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 3,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round4.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9483333333333334,
+    "macro_f1": 0.9512003730236543,
+    "species_accuracy": 0.9533333333333334,
+    "binary_confusion": [
+      [
+        830,
+        30
+      ],
+      [
+        18,
+        322
+      ]
+    ],
+    "binary_recall": 0.9470588235294117,
+    "binary_specificity": 0.9651162790697675,
+    "binary_precision": 0.9147727272727273,
+    "report": {
+      "0": {
+        "precision": 0.8888888888888888,
+        "recall": 0.963855421686747,
+        "f1-score": 0.9248554913294798,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9418604651162791,
+        "recall": 0.9310344827586207,
+        "f1-score": 0.9364161849710984,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9555555555555556,
+        "recall": 0.9148936170212766,
+        "f1-score": 0.9347826086956522,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9712918660287081,
+        "recall": 0.9854368932038835,
+        "f1-score": 0.9783132530120482,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9841269841269841,
+        "recall": 0.9117647058823529,
+        "f1-score": 0.9465648854961831,
+        "support": 68
+      },
+      "5": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9735449735449735,
+        "recall": 0.9484536082474226,
+        "f1-score": 0.9608355091383811,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9183673469387755,
+        "recall": 0.9375,
+        "f1-score": 0.9278350515463918,
+        "support": 144
+      },
+      "accuracy": 0.9483333333333334,
+      "macro avg": {
+        "precision": 0.9542045100250205,
+        "recall": 0.9491173411000379,
+        "f1-score": 0.9512003730236543,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9493359192330748,
+        "recall": 0.9483333333333334,
+        "f1-score": 0.9484256972584967,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 3,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round4.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9452777777777778,
+    "macro_f1": 0.9455758905225529,
+    "species_accuracy": 0.9508333333333333,
+    "binary_confusion": [
+      [
+        2478,
+        102
+      ],
+      [
+        47,
+        973
+      ]
+    ],
+    "binary_recall": 0.953921568627451,
+    "binary_specificity": 0.9604651162790697,
+    "binary_precision": 0.9051162790697674,
+    "report": {
+      "0": {
+        "precision": 0.8892988929889298,
+        "recall": 0.9678714859437751,
+        "f1-score": 0.926923076923077,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.9212007504690432,
+        "recall": 0.9406130268199234,
+        "f1-score": 0.9308056872037915,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9541284403669725,
+        "recall": 0.9219858156028369,
+        "f1-score": 0.9377817853922452,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9695024077046549,
+        "recall": 0.9773462783171522,
+        "f1-score": 0.9734085414987913,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.983957219251337,
+        "recall": 0.9019607843137255,
+        "f1-score": 0.9411764705882353,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.9468085106382979,
+        "recall": 0.9888888888888889,
+        "f1-score": 0.9673913043478262,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9785714285714285,
+        "recall": 0.9415807560137457,
+        "f1-score": 0.9597197898423818,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9383886255924171,
+        "recall": 0.9166666666666666,
+        "f1-score": 0.9274004683840749,
+        "support": 432
+      },
+      "accuracy": 0.9452777777777778,
+      "macro avg": {
+        "precision": 0.9477320344478851,
+        "recall": 0.9446142128208392,
+        "f1-score": 0.9455758905225529,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9464121753078996,
+        "recall": 0.9452777777777778,
+        "f1-score": 0.9453577837356517,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 4,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round5.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9275,
+    "macro_f1": 0.9164808641806158,
+    "species_accuracy": 0.9383333333333334,
+    "binary_confusion": [
+      [
+        858,
+        2
+      ],
+      [
+        58,
+        282
+      ]
+    ],
+    "binary_recall": 0.8294117647058824,
+    "binary_specificity": 0.9976744186046511,
+    "binary_precision": 0.9929577464788732,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9036144578313253,
+        "f1-score": 0.9493670886075949,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9850746268656716,
+        "recall": 0.7586206896551724,
+        "f1-score": 0.8571428571428571,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.967741935483871,
+        "recall": 0.9574468085106383,
+        "f1-score": 0.9625668449197862,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9278846153846154,
+        "recall": 0.9368932038834952,
+        "f1-score": 0.9323671497584541,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.7951807228915663,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8741721854304635,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.7407407407407407,
+        "recall": 1.0,
+        "f1-score": 0.851063829787234,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9365853658536586,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.962406015037594,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9150326797385621,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9427609427609427,
+        "support": 144
+      },
+      "accuracy": 0.9275,
+      "macro avg": {
+        "precision": 0.9085300858698357,
+        "recall": 0.936134542380807,
+        "f1-score": 0.9164808641806158,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9353847501448825,
+        "recall": 0.9275,
+        "f1-score": 0.927283228848545,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 4,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round5.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9341666666666667,
+    "macro_f1": 0.9239763606921328,
+    "species_accuracy": 0.9441666666666667,
+    "binary_confusion": [
+      [
+        859,
+        1
+      ],
+      [
+        56,
+        284
+      ]
+    ],
+    "binary_recall": 0.8352941176470589,
+    "binary_specificity": 0.9988372093023256,
+    "binary_precision": 0.9964912280701754,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9216867469879518,
+        "f1-score": 0.9592476489028214,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9924242424242424,
+        "recall": 0.7528735632183908,
+        "f1-score": 0.8562091503267973,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9836956521739131,
+        "recall": 0.9627659574468085,
+        "f1-score": 0.9731182795698924,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9471153846153846,
+        "recall": 0.9563106796116505,
+        "f1-score": 0.9516908212560385,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8481012658227848,
+        "recall": 0.9852941176470589,
+        "f1-score": 0.91156462585034,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.7407407407407407,
+        "recall": 1.0,
+        "f1-score": 0.851063829787234,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9411764705882353,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.964824120603015,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8805031446540881,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9240924092409241,
+        "support": 144
+      },
+      "accuracy": 0.9341666666666667,
+      "macro avg": {
+        "precision": 0.9167196126274236,
+        "recall": 0.9426055010979459,
+        "f1-score": 0.9239763606921328,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9418486572216527,
+        "recall": 0.9341666666666667,
+        "f1-score": 0.9337545485711249,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 4,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round5.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9316666666666666,
+    "macro_f1": 0.9226670030623854,
+    "species_accuracy": 0.9416666666666667,
+    "binary_confusion": [
+      [
+        859,
+        1
+      ],
+      [
+        60,
+        280
+      ]
+    ],
+    "binary_recall": 0.8235294117647058,
+    "binary_specificity": 0.9988372093023256,
+    "binary_precision": 0.99644128113879,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9036144578313253,
+        "f1-score": 0.9493670886075949,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9923664122137404,
+        "recall": 0.7471264367816092,
+        "f1-score": 0.8524590163934426,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.983957219251337,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9813333333333334,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9563106796116505,
+        "recall": 0.9563106796116505,
+        "f1-score": 0.9563106796116505,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8589743589743589,
+        "recall": 0.9852941176470589,
+        "f1-score": 0.9178082191780821,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.759493670886076,
+        "recall": 1.0,
+        "f1-score": 0.8633093525179857,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9186602870813397,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9528535980148884,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8625,
+        "recall": 0.9583333333333334,
+        "f1-score": 0.9078947368421054,
+        "support": 144
+      },
+      "accuracy": 0.9316666666666666,
+      "macro avg": {
+        "precision": 0.9165328285023129,
+        "recall": 0.9398866438887226,
+        "f1-score": 0.9226670030623854,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9392130710847025,
+        "recall": 0.9316666666666666,
+        "f1-score": 0.931011193669439,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 4,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round5.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9311111111111111,
+    "macro_f1": 0.9209832158672365,
+    "species_accuracy": 0.9413888888888889,
+    "binary_confusion": [
+      [
+        2576,
+        4
+      ],
+      [
+        174,
+        846
+      ]
+    ],
+    "binary_recall": 0.8294117647058824,
+    "binary_specificity": 0.9984496124031008,
+    "binary_precision": 0.9952941176470588,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9096385542168675,
+        "f1-score": 0.9526813880126183,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.9899244332493703,
+        "recall": 0.7528735632183908,
+        "f1-score": 0.8552774755168662,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9784560143626571,
+        "recall": 0.9663120567375887,
+        "f1-score": 0.9723461195361284,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9437299035369775,
+        "recall": 0.9498381877022654,
+        "f1-score": 0.946774193548387,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8333333333333334,
+        "recall": 0.9803921568627451,
+        "f1-score": 0.9009009009009009,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.7468879668049793,
+        "recall": 1.0,
+        "f1-score": 0.8551068883610451,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9320388349514563,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9600000000000001,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.885593220338983,
+        "recall": 0.9675925925925926,
+        "f1-score": 0.9247787610619468,
+        "support": 432
+      },
+      "accuracy": 0.9311111111111111,
+      "macro avg": {
+        "precision": 0.9137454633222197,
+        "recall": 0.9395422291224919,
+        "f1-score": 0.9209832158672365,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.938688203832124,
+        "recall": 0.9311111111111111,
+        "f1-score": 0.9306464680413613,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 5,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round6.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9558333333333333,
+    "macro_f1": 0.9497565327995234,
+    "species_accuracy": 0.9591666666666666,
+    "binary_confusion": [
+      [
+        854,
+        6
+      ],
+      [
+        32,
+        308
+      ]
+    ],
+    "binary_recall": 0.9058823529411765,
+    "binary_specificity": 0.9930232558139535,
+    "binary_precision": 0.9808917197452229,
+    "report": {
+      "0": {
+        "precision": 0.9867549668874173,
+        "recall": 0.8975903614457831,
+        "f1-score": 0.9400630914826498,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9693251533742331,
+        "recall": 0.9080459770114943,
+        "f1-score": 0.9376854599406529,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9587628865979382,
+        "recall": 0.9893617021276596,
+        "f1-score": 0.9738219895287958,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9571428571428572,
+        "recall": 0.9757281553398058,
+        "f1-score": 0.966346153846154,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9696969696969697,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.955223880597015,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1-score": 0.888888888888889,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.96,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9746192893401014,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9716312056737588,
+        "recall": 0.9513888888888888,
+        "f1-score": 0.9614035087719298,
+        "support": 144
+      },
+      "accuracy": 0.9558333333333333,
+      "macro avg": {
+        "precision": 0.9466642549216469,
+        "recall": 0.9566227846314189,
+        "f1-score": 0.9497565327995234,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9583141999989033,
+        "recall": 0.9558333333333333,
+        "f1-score": 0.9559669912904857,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 5,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round6.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.96,
+    "macro_f1": 0.9537407195922136,
+    "species_accuracy": 0.9625,
+    "binary_confusion": [
+      [
+        854,
+        6
+      ],
+      [
+        30,
+        310
+      ]
+    ],
+    "binary_recall": 0.9117647058823529,
+    "binary_specificity": 0.9930232558139535,
+    "binary_precision": 0.9810126582278481,
+    "report": {
+      "0": {
+        "precision": 0.9743589743589743,
+        "recall": 0.9156626506024096,
+        "f1-score": 0.9440993788819876,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9875,
+        "recall": 0.9080459770114943,
+        "f1-score": 0.9461077844311377,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9633507853403142,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.970976253298153,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9666666666666667,
+        "recall": 0.9854368932038835,
+        "f1-score": 0.9759615384615385,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9552238805970149,
+        "recall": 0.9411764705882353,
+        "f1-score": 0.9481481481481482,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.821917808219178,
+        "recall": 1.0,
+        "f1-score": 0.9022556390977443,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.964824120603015,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9770992366412214,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9652777777777778,
+        "recall": 0.9652777777777778,
+        "f1-score": 0.9652777777777778,
+        "support": 144
+      },
+      "accuracy": 0.96,
+      "macro avg": {
+        "precision": 0.9498900016953675,
+        "recall": 0.9605017368860755,
+        "f1-score": 0.9537407195922136,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9618817020763621,
+        "recall": 0.96,
+        "f1-score": 0.9600846068807444,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 5,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round6.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.965,
+    "macro_f1": 0.961562938558223,
+    "species_accuracy": 0.9675,
+    "binary_confusion": [
+      [
+        854,
+        6
+      ],
+      [
+        26,
+        314
+      ]
+    ],
+    "binary_recall": 0.9235294117647059,
+    "binary_specificity": 0.9930232558139535,
+    "binary_precision": 0.98125,
+    "report": {
+      "0": {
+        "precision": 0.9746835443037974,
+        "recall": 0.927710843373494,
+        "f1-score": 0.9506172839506173,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9876543209876543,
+        "recall": 0.9195402298850575,
+        "f1-score": 0.9523809523809523,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9533678756476683,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9658792650918635,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9711538461538461,
+        "recall": 0.9805825242718447,
+        "f1-score": 0.9758454106280192,
+        "support": 206
+      },
+      "4": {
+        "precision": 1.0,
+        "recall": 0.9558823529411765,
+        "f1-score": 0.9774436090225563,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.8450704225352113,
+        "recall": 1.0,
+        "f1-score": 0.916030534351145,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9651741293532339,
+        "recall": 1.0,
+        "f1-score": 0.9822784810126582,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9788732394366197,
+        "recall": 0.9652777777777778,
+        "f1-score": 0.972027972027972,
+        "support": 144
+      },
+      "accuracy": 0.965,
+      "macro avg": {
+        "precision": 0.9594971723022538,
+        "recall": 0.9659646415630837,
+        "f1-score": 0.961562938558223,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9665382717177079,
+        "recall": 0.965,
+        "f1-score": 0.9650735516998473,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 5,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round6.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9602777777777778,
+    "macro_f1": 0.9549980215266665,
+    "species_accuracy": 0.9630555555555556,
+    "binary_confusion": [
+      [
+        2562,
+        18
+      ],
+      [
+        88,
+        932
+      ]
+    ],
+    "binary_recall": 0.9137254901960784,
+    "binary_specificity": 0.9930232558139535,
+    "binary_precision": 0.9810526315789474,
+    "report": {
+      "0": {
+        "precision": 0.978494623655914,
+        "recall": 0.9136546184738956,
+        "f1-score": 0.944963655244029,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.9814432989690721,
+        "recall": 0.9118773946360154,
+        "f1-score": 0.9453823237338629,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9584775086505191,
+        "recall": 0.9822695035460993,
+        "f1-score": 0.9702276707530648,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.964968152866242,
+        "recall": 0.9805825242718447,
+        "f1-score": 0.972712680577849,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.9747474747474747,
+        "recall": 0.946078431372549,
+        "f1-score": 0.9601990049751243,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.821917808219178,
+        "recall": 1.0,
+        "f1-score": 0.9022556390977443,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9633333333333334,
+        "recall": 0.993127147766323,
+        "f1-score": 0.9780033840947546,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9718969555035128,
+        "recall": 0.9606481481481481,
+        "f1-score": 0.9662398137369034,
+        "support": 432
+      },
+      "accuracy": 0.9602777777777778,
+      "macro avg": {
+        "precision": 0.9519098944931558,
+        "recall": 0.9610297210268594,
+        "f1-score": 0.9549980215266665,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9621801480828293,
+        "recall": 0.9602777777777778,
+        "f1-score": 0.9603684714812365,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 6,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round7.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9408333333333333,
+    "macro_f1": 0.9338204849061825,
+    "species_accuracy": 0.9483333333333334,
+    "binary_confusion": [
+      [
+        842,
+        18
+      ],
+      [
+        25,
+        315
+      ]
+    ],
+    "binary_recall": 0.9264705882352942,
+    "binary_specificity": 0.9790697674418605,
+    "binary_precision": 0.9459459459459459,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.927710843373494,
+        "f1-score": 0.9625,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.88268156424581,
+        "recall": 0.9080459770114943,
+        "f1-score": 0.8951841359773371,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9627659574468085,
+        "recall": 0.9627659574468085,
+        "f1-score": 0.9627659574468085,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9744897959183674,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9502487562189055,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8571428571428571,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.9103448275862068,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9,
+        "recall": 0.9,
+        "f1-score": 0.9,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9603960396039604,
+        "recall": 1.0,
+        "f1-score": 0.9797979797979798,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9097222222222222,
+        "recall": 0.9097222222222222,
+        "f1-score": 0.9097222222222222,
+        "support": 144
+      },
+      "accuracy": 0.9408333333333333,
+      "macro avg": {
+        "precision": 0.9308998045725032,
+        "recall": 0.9382522126709443,
+        "f1-score": 0.9338204849061825,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9424450300890311,
+        "recall": 0.9408333333333333,
+        "f1-score": 0.9410604498315177,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 6,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round7.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9516666666666667,
+    "macro_f1": 0.944685900299006,
+    "species_accuracy": 0.9575,
+    "binary_confusion": [
+      [
+        843,
+        17
+      ],
+      [
+        20,
+        320
+      ]
+    ],
+    "binary_recall": 0.9411764705882353,
+    "binary_specificity": 0.9802325581395349,
+    "binary_precision": 0.9495548961424333,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9518072289156626,
+        "f1-score": 0.9753086419753086,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8938547486033519,
+        "recall": 0.9195402298850575,
+        "f1-score": 0.9065155807365438,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9735449735449735,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9761273209549072,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9896907216494846,
+        "recall": 0.9320388349514563,
+        "f1-score": 0.9600000000000001,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8607594936708861,
+        "recall": 1.0,
+        "f1-score": 0.9251700680272108,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9298245614035088,
+        "recall": 0.8833333333333333,
+        "f1-score": 0.905982905982906,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.97,
+        "recall": 1.0,
+        "f1-score": 0.9847715736040609,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9236111111111112,
+        "recall": 0.9236111111111112,
+        "f1-score": 0.9236111111111112,
+        "support": 144
+      },
+      "accuracy": 0.9516666666666667,
+      "macro avg": {
+        "precision": 0.9426607012479145,
+        "recall": 0.9486317678064925,
+        "f1-score": 0.944685900299006,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9532788243308857,
+        "recall": 0.9516666666666667,
+        "f1-score": 0.9518525885163291,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 6,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round7.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9541666666666667,
+    "macro_f1": 0.9486315841777455,
+    "species_accuracy": 0.9625,
+    "binary_confusion": [
+      [
+        845,
+        15
+      ],
+      [
+        17,
+        323
+      ]
+    ],
+    "binary_recall": 0.95,
+    "binary_specificity": 0.9825581395348837,
+    "binary_precision": 0.9556213017751479,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.963855421686747,
+        "f1-score": 0.9815950920245399,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9044943820224719,
+        "recall": 0.9252873563218391,
+        "f1-score": 0.9147727272727272,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9583333333333334,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.968421052631579,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9947643979057592,
+        "recall": 0.9223300970873787,
+        "f1-score": 0.9571788413098237,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1-score": 0.9189189189189189,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9642857142857143,
+        "recall": 0.9,
+        "f1-score": 0.9310344827586207,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9797979797979798,
+        "recall": 1.0,
+        "f1-score": 0.989795918367347,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9241379310344827,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.9273356401384083,
+        "support": 144
+      },
+      "accuracy": 0.9541666666666667,
+      "macro avg": {
+        "precision": 0.9469767172974677,
+        "recall": 0.9525939793633549,
+        "f1-score": 0.9486315841777455,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9560699734283997,
+        "recall": 0.9541666666666667,
+        "f1-score": 0.9543854456844071,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 6,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round7.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9488888888888889,
+    "macro_f1": 0.9423686106342365,
+    "species_accuracy": 0.9561111111111111,
+    "binary_confusion": [
+      [
+        2530,
+        50
+      ],
+      [
+        62,
+        958
+      ]
+    ],
+    "binary_recall": 0.9392156862745098,
+    "binary_specificity": 0.9806201550387597,
+    "binary_precision": 0.9503968253968254,
+    "report": {
+      "0": {
+        "precision": 1.0,
+        "recall": 0.9477911646586346,
+        "f1-score": 0.9731958762886598,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.8936567164179104,
+        "recall": 0.9176245210727969,
+        "f1-score": 0.9054820415879018,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9648506151142355,
+        "recall": 0.973404255319149,
+        "f1-score": 0.9691085613415711,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9862306368330465,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9557964970809008,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8559322033898306,
+        "recall": 0.9901960784313726,
+        "f1-score": 0.9181818181818182,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.930635838150289,
+        "recall": 0.8944444444444445,
+        "f1-score": 0.9121813031161473,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.97,
+        "recall": 1.0,
+        "f1-score": 0.9847715736040609,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9191685912240185,
+        "recall": 0.9212962962962963,
+        "f1-score": 0.9202312138728324,
+        "support": 432
+      },
+      "accuracy": 0.9488888888888889,
+      "macro avg": {
+        "precision": 0.9400593251411663,
+        "recall": 0.9464926532802639,
+        "f1-score": 0.9423686106342365,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.950527927284654,
+        "recall": 0.9488888888888889,
+        "f1-score": 0.9490975837760844,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 7,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round8.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.945,
+    "macro_f1": 0.9298423117597903,
+    "species_accuracy": 0.9483333333333334,
+    "binary_confusion": [
+      [
+        839,
+        21
+      ],
+      [
+        31,
+        309
+      ]
+    ],
+    "binary_recall": 0.9088235294117647,
+    "binary_specificity": 0.9755813953488373,
+    "binary_precision": 0.9363636363636364,
+    "report": {
+      "0": {
+        "precision": 0.9815950920245399,
+        "recall": 0.963855421686747,
+        "f1-score": 0.972644376899696,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8802395209580839,
+        "recall": 0.8448275862068966,
+        "f1-score": 0.8621700879765396,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.968421052631579,
+        "recall": 0.9787234042553191,
+        "f1-score": 0.9735449735449735,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9579439252336449,
+        "recall": 0.9951456310679612,
+        "f1-score": 0.9761904761904763,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9041095890410958,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.9361702127659575,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.88,
+        "recall": 0.7333333333333333,
+        "f1-score": 0.8,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9896907216494846,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9896907216494846,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.912751677852349,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9283276450511946,
+        "support": 144
+      },
+      "accuracy": 0.945,
+      "macro avg": {
+        "precision": 0.9343439474238471,
+        "recall": 0.927576097242288,
+        "f1-score": 0.9298423117597903,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9443514684009839,
+        "recall": 0.945,
+        "f1-score": 0.9441141752920148,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 7,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round8.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.945,
+    "macro_f1": 0.9285046395505635,
+    "species_accuracy": 0.9483333333333334,
+    "binary_confusion": [
+      [
+        835,
+        25
+      ],
+      [
+        30,
+        310
+      ]
+    ],
+    "binary_recall": 0.9117647058823529,
+    "binary_specificity": 0.9709302325581395,
+    "binary_precision": 0.9253731343283582,
+    "report": {
+      "0": {
+        "precision": 0.9877300613496932,
+        "recall": 0.9698795180722891,
+        "f1-score": 0.9787234042553191,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8662790697674418,
+        "recall": 0.8563218390804598,
+        "f1-score": 0.861271676300578,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.978494623655914,
+        "recall": 0.9680851063829787,
+        "f1-score": 0.9732620320855615,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.958139534883721,
+        "recall": 1.0,
+        "f1-score": 0.9786223277909739,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.918918918918919,
+        "recall": 1.0,
+        "f1-score": 0.9577464788732395,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9090909090909091,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.7692307692307692,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9846153846153847,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9871465295629821,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9006622516556292,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.9220338983050849,
+        "support": 144
+      },
+      "accuracy": 0.945,
+      "macro avg": {
+        "precision": 0.9379913442422014,
+        "recall": 0.9243860370370404,
+        "f1-score": 0.9285046395505635,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9448101430355655,
+        "recall": 0.945,
+        "f1-score": 0.9437156109567392,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 7,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round8.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.945,
+    "macro_f1": 0.9275132496662464,
+    "species_accuracy": 0.9483333333333334,
+    "binary_confusion": [
+      [
+        837,
+        23
+      ],
+      [
+        32,
+        308
+      ]
+    ],
+    "binary_recall": 0.9058823529411765,
+    "binary_specificity": 0.9732558139534884,
+    "binary_precision": 0.9305135951661632,
+    "report": {
+      "0": {
+        "precision": 0.9876543209876543,
+        "recall": 0.963855421686747,
+        "f1-score": 0.975609756097561,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.8757396449704142,
+        "recall": 0.8505747126436781,
+        "f1-score": 0.8629737609329445,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.978494623655914,
+        "recall": 0.9680851063829787,
+        "f1-score": 0.9732620320855615,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9537037037037037,
+        "recall": 1.0,
+        "f1-score": 0.976303317535545,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.9444444444444444,
+        "recall": 1.0,
+        "f1-score": 0.9714285714285714,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9047619047619048,
+        "recall": 0.6333333333333333,
+        "f1-score": 0.7450980392156863,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9746192893401016,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9820971867007673,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8974358974358975,
+        "recall": 0.9722222222222222,
+        "f1-score": 0.9333333333333333,
+        "support": 144
+      },
+      "accuracy": 0.945,
+      "macro avg": {
+        "precision": 0.9396067286625043,
+        "recall": 0.9222201897398055,
+        "f1-score": 0.9275132496662464,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.944636762991469,
+        "recall": 0.945,
+        "f1-score": 0.9432418989908069,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 7,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round8.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.945,
+    "macro_f1": 0.9287068628603684,
+    "species_accuracy": 0.9483333333333334,
+    "binary_confusion": [
+      [
+        2511,
+        69
+      ],
+      [
+        93,
+        927
+      ]
+    ],
+    "binary_recall": 0.9088235294117647,
+    "binary_specificity": 0.9732558139534884,
+    "binary_precision": 0.9307228915662651,
+    "report": {
+      "0": {
+        "precision": 0.985655737704918,
+        "recall": 0.9658634538152611,
+        "f1-score": 0.9756592292089249,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.8740157480314961,
+        "recall": 0.8505747126436781,
+        "f1-score": 0.8621359223300972,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9750889679715302,
+        "recall": 0.9716312056737588,
+        "f1-score": 0.9733570159857903,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9565891472868217,
+        "recall": 0.9983818770226537,
+        "f1-score": 0.9770387965162312,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.9223744292237442,
+        "recall": 0.9901960784313726,
+        "f1-score": 0.9550827423167849,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.8970588235294118,
+        "recall": 0.6777777777777778,
+        "f1-score": 0.7721518987341772,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9829351535836177,
+        "recall": 0.9896907216494846,
+        "f1-score": 0.9863013698630136,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9035087719298246,
+        "recall": 0.9537037037037037,
+        "f1-score": 0.927927927927928,
+        "support": 432
+      },
+      "accuracy": 0.945,
+      "macro avg": {
+        "precision": 0.9371533474076705,
+        "recall": 0.9247274413397113,
+        "f1-score": 0.9287068628603684,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9445094637402713,
+        "recall": 0.945,
+        "f1-score": 0.9437258511653575,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 8,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round9.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8941666666666667,
+    "macro_f1": 0.8860209757712789,
+    "species_accuracy": 0.8983333333333333,
+    "binary_confusion": [
+      [
+        802,
+        58
+      ],
+      [
+        48,
+        292
+      ]
+    ],
+    "binary_recall": 0.8588235294117647,
+    "binary_specificity": 0.9325581395348838,
+    "binary_precision": 0.8342857142857143,
+    "report": {
+      "0": {
+        "precision": 0.9127906976744186,
+        "recall": 0.9457831325301205,
+        "f1-score": 0.9289940828402367,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.7584269662921348,
+        "recall": 0.7758620689655172,
+        "f1-score": 0.7670454545454546,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9707602339181286,
+        "recall": 0.8829787234042553,
+        "f1-score": 0.924791086350975,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9896373056994818,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9573934837092731,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8354430379746836,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.8979591836734694,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.7808219178082192,
+        "recall": 0.95,
+        "f1-score": 0.8571428571428571,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9651741293532339,
+        "recall": 1.0,
+        "f1-score": 0.9822784810126582,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8045112781954887,
+        "recall": 0.7430555555555556,
+        "f1-score": 0.7725631768953068,
+        "support": 144
+      },
+      "accuracy": 0.8941666666666667,
+      "macro avg": {
+        "precision": 0.8771956958644737,
+        "recall": 0.8994315227211229,
+        "f1-score": 0.8860209757712789,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.8971755030874465,
+        "recall": 0.8941666666666667,
+        "f1-score": 0.8942196895235244,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 8,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round9.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8966666666666666,
+    "macro_f1": 0.8932018881288222,
+    "species_accuracy": 0.9016666666666666,
+    "binary_confusion": [
+      [
+        794,
+        66
+      ],
+      [
+        42,
+        298
+      ]
+    ],
+    "binary_recall": 0.8764705882352941,
+    "binary_specificity": 0.9232558139534883,
+    "binary_precision": 0.8186813186813187,
+    "report": {
+      "0": {
+        "precision": 0.8586956521739131,
+        "recall": 0.9518072289156626,
+        "f1-score": 0.9028571428571429,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.7777777777777778,
+        "recall": 0.8045977011494253,
+        "f1-score": 0.7909604519774011,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9578313253012049,
+        "recall": 0.8457446808510638,
+        "f1-score": 0.8983050847457628,
+        "support": 188
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9622166246851386,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8918918918918919,
+        "recall": 0.9705882352941176,
+        "f1-score": 0.9295774647887325,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.8260869565217391,
+        "recall": 0.95,
+        "f1-score": 0.8837209302325583,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.9651741293532339,
+        "recall": 1.0,
+        "f1-score": 0.9822784810126582,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8222222222222222,
+        "recall": 0.7708333333333334,
+        "f1-score": 0.7956989247311829,
+        "support": 144
+      },
+      "accuracy": 0.8966666666666666,
+      "macro avg": {
+        "precision": 0.8874599944052478,
+        "recall": 0.9025944556953776,
+        "f1-score": 0.8932018881288222,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.8998389565710915,
+        "recall": 0.8966666666666666,
+        "f1-score": 0.8966471490608573,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 8,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round9.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8933333333333333,
+    "macro_f1": 0.891171943879279,
+    "species_accuracy": 0.8975,
+    "binary_confusion": [
+      [
+        785,
+        75
+      ],
+      [
+        39,
+        301
+      ]
+    ],
+    "binary_recall": 0.8852941176470588,
+    "binary_specificity": 0.9127906976744186,
+    "binary_precision": 0.800531914893617,
+    "report": {
+      "0": {
+        "precision": 0.8247422680412371,
+        "recall": 0.963855421686747,
+        "f1-score": 0.8888888888888888,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.7747252747252747,
+        "recall": 0.8103448275862069,
+        "f1-score": 0.7921348314606742,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.9738562091503268,
+        "recall": 0.7925531914893617,
+        "f1-score": 0.873900293255132,
+        "support": 188
+      },
+      "3": {
+        "precision": 1.0,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9622166246851386,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8933333333333333,
+        "recall": 0.9852941176470589,
+        "f1-score": 0.9370629370629371,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.835820895522388,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.8818897637795275,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.97,
+        "recall": 1.0,
+        "f1-score": 0.9847715736040609,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.8260869565217391,
+        "recall": 0.7916666666666666,
+        "f1-score": 0.8085106382978724,
+        "support": 144
+      },
+      "accuracy": 0.8933333333333333,
+      "macro avg": {
+        "precision": 0.8873206171617873,
+        "recall": 0.900529003053599,
+        "f1-score": 0.891171943879279,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.899022353128704,
+        "recall": 0.8933333333333333,
+        "f1-score": 0.8933348156566242,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 8,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round9.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.8947222222222222,
+    "macro_f1": 0.8900941835128355,
+    "species_accuracy": 0.8991666666666667,
+    "binary_confusion": [
+      [
+        2381,
+        199
+      ],
+      [
+        129,
+        891
+      ]
+    ],
+    "binary_recall": 0.8735294117647059,
+    "binary_specificity": 0.9228682170542636,
+    "binary_precision": 0.8174311926605504,
+    "report": {
+      "0": {
+        "precision": 0.8636363636363636,
+        "recall": 0.9538152610441767,
+        "f1-score": 0.9064885496183206,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.7703703703703704,
+        "recall": 0.7969348659003831,
+        "f1-score": 0.783427495291902,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.9673469387755103,
+        "recall": 0.8404255319148937,
+        "f1-score": 0.8994307400379506,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9965217391304347,
+        "recall": 0.9271844660194175,
+        "f1-score": 0.9606035205364627,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8728070175438597,
+        "recall": 0.9754901960784313,
+        "f1-score": 0.9212962962962964,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.8133971291866029,
+        "recall": 0.9444444444444444,
+        "f1-score": 0.8740359897172236,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.9667774086378738,
+        "recall": 1.0,
+        "f1-score": 0.9831081081081081,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.8177339901477833,
+        "recall": 0.7685185185185185,
+        "f1-score": 0.7923627684964201,
+        "support": 432
+      },
+      "accuracy": 0.8947222222222222,
+      "macro avg": {
+        "precision": 0.8835738696785997,
+        "recall": 0.9008516604900332,
+        "f1-score": 0.8900941835128355,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.8983466669666276,
+        "recall": 0.8947222222222222,
+        "f1-score": 0.8947369224522644,
+        "support": 3600
+      }
+    }
+  },
+  {
+    "fold": 9,
+    "gain_index": 0,
+    "model_filename": "cnn_model_min_val_round10.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.905,
+    "macro_f1": 0.8997750191314442,
+    "species_accuracy": 0.9075,
+    "binary_confusion": [
+      [
+        839,
+        21
+      ],
+      [
+        51,
+        289
+      ]
+    ],
+    "binary_recall": 0.85,
+    "binary_specificity": 0.9755813953488373,
+    "binary_precision": 0.932258064516129,
+    "report": {
+      "0": {
+        "precision": 0.9420289855072463,
+        "recall": 0.7831325301204819,
+        "f1-score": 0.8552631578947367,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9127906976744186,
+        "recall": 0.9022988505747126,
+        "f1-score": 0.907514450867052,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.8762886597938144,
+        "recall": 0.9042553191489362,
+        "f1-score": 0.8900523560209425,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9252336448598131,
+        "recall": 0.9611650485436893,
+        "f1-score": 0.9428571428571428,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.84375,
+        "recall": 0.7941176470588235,
+        "f1-score": 0.8181818181818182,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9193548387096774,
+        "recall": 0.95,
+        "f1-score": 0.9344262295081968,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.8617511520737328,
+        "recall": 0.9639175257731959,
+        "f1-score": 0.9099756690997567,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9568345323741008,
+        "recall": 0.9236111111111112,
+        "f1-score": 0.9399293286219081,
+        "support": 144
+      },
+      "accuracy": 0.905,
+      "macro avg": {
+        "precision": 0.9047540638741005,
+        "recall": 0.8978122540413689,
+        "f1-score": 0.8997750191314442,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9067024819655546,
+        "recall": 0.905,
+        "f1-score": 0.9041888779630541,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 9,
+    "gain_index": 1,
+    "model_filename": "cnn_model_min_val_round10.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.91,
+    "macro_f1": 0.9012486083599526,
+    "species_accuracy": 0.91,
+    "binary_confusion": [
+      [
+        838,
+        22
+      ],
+      [
+        48,
+        292
+      ]
+    ],
+    "binary_recall": 0.8588235294117647,
+    "binary_specificity": 0.9744186046511628,
+    "binary_precision": 0.9299363057324841,
+    "report": {
+      "0": {
+        "precision": 0.9305555555555556,
+        "recall": 0.8072289156626506,
+        "f1-score": 0.864516129032258,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9294117647058824,
+        "recall": 0.9080459770114943,
+        "f1-score": 0.9186046511627908,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.8756476683937824,
+        "recall": 0.898936170212766,
+        "f1-score": 0.8871391076115485,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9565217391304348,
+        "recall": 0.9611650485436893,
+        "f1-score": 0.9588377723970944,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8387096774193549,
+        "recall": 0.7647058823529411,
+        "f1-score": 0.7999999999999999,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.890625,
+        "recall": 0.95,
+        "f1-score": 0.9193548387096774,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.8636363636363636,
+        "recall": 0.979381443298969,
+        "f1-score": 0.9178743961352657,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9571428571428572,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.943661971830986,
+        "support": 144
+      },
+      "accuracy": 0.91,
+      "macro avg": {
+        "precision": 0.9052813282480289,
+        "recall": 0.9000023740797582,
+        "f1-score": 0.9012486083599526,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.911415744365407,
+        "recall": 0.91,
+        "f1-score": 0.9093048893191145,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 9,
+    "gain_index": 2,
+    "model_filename": "cnn_model_min_val_round10.h5",
+    "n": 1200,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9091666666666667,
+    "macro_f1": 0.9001881621524572,
+    "species_accuracy": 0.9091666666666667,
+    "binary_confusion": [
+      [
+        832,
+        28
+      ],
+      [
+        45,
+        295
+      ]
+    ],
+    "binary_recall": 0.8676470588235294,
+    "binary_specificity": 0.9674418604651163,
+    "binary_precision": 0.913312693498452,
+    "report": {
+      "0": {
+        "precision": 0.9066666666666666,
+        "recall": 0.8192771084337349,
+        "f1-score": 0.8607594936708859,
+        "support": 166
+      },
+      "1": {
+        "precision": 0.9190751445086706,
+        "recall": 0.9137931034482759,
+        "f1-score": 0.9164265129682997,
+        "support": 174
+      },
+      "2": {
+        "precision": 0.8835978835978836,
+        "recall": 0.8882978723404256,
+        "f1-score": 0.8859416445623343,
+        "support": 188
+      },
+      "3": {
+        "precision": 0.9611650485436893,
+        "recall": 0.9611650485436893,
+        "f1-score": 0.9611650485436893,
+        "support": 206
+      },
+      "4": {
+        "precision": 0.8333333333333334,
+        "recall": 0.7352941176470589,
+        "f1-score": 0.78125,
+        "support": 68
+      },
+      "5": {
+        "precision": 0.9193548387096774,
+        "recall": 0.95,
+        "f1-score": 0.9344262295081968,
+        "support": 60
+      },
+      "6": {
+        "precision": 0.8636363636363636,
+        "recall": 0.979381443298969,
+        "f1-score": 0.9178743961352657,
+        "support": 194
+      },
+      "7": {
+        "precision": 0.9571428571428572,
+        "recall": 0.9305555555555556,
+        "f1-score": 0.943661971830986,
+        "support": 144
+      },
+      "accuracy": 0.9091666666666667,
+      "macro avg": {
+        "precision": 0.9054965170173928,
+        "recall": 0.8972205311584637,
+        "f1-score": 0.9001881621524572,
+        "support": 1200
+      },
+      "weighted avg": {
+        "precision": 0.9097867724090422,
+        "recall": 0.9091666666666667,
+        "f1-score": 0.9083723741233045,
+        "support": 1200
+      }
+    }
+  },
+  {
+    "fold": 9,
+    "gain_index": 3,
+    "model_filename": "cnn_model_min_val_round10.h5",
+    "n": 3600,
+    "labels": {
+      "Ae.Aegypti_F": 0,
+      "Ae.Aegypti_M": 1,
+      "Ae.Albopictus_F": 2,
+      "Ae.Albopictus_M": 3,
+      "An.Dirus_F": 4,
+      "An.Dirus_M": 5,
+      "Cx.Quin_F": 6,
+      "Cx.Quin_M": 7
+    },
+    "accuracy": 0.9080555555555555,
+    "macro_f1": 0.900418683834153,
+    "species_accuracy": 0.9088888888888889,
+    "binary_confusion": [
+      [
+        2509,
+        71
+      ],
+      [
+        144,
+        876
+      ]
+    ],
+    "binary_recall": 0.8588235294117647,
+    "binary_specificity": 0.9724806201550388,
+    "binary_precision": 0.925026399155227,
+    "report": {
+      "0": {
+        "precision": 0.9259259259259259,
+        "recall": 0.8032128514056225,
+        "f1-score": 0.8602150537634409,
+        "support": 498
+      },
+      "1": {
+        "precision": 0.920388349514563,
+        "recall": 0.9080459770114943,
+        "f1-score": 0.9141755062680809,
+        "support": 522
+      },
+      "2": {
+        "precision": 0.8784722222222222,
+        "recall": 0.8971631205673759,
+        "f1-score": 0.887719298245614,
+        "support": 564
+      },
+      "3": {
+        "precision": 0.9473684210526315,
+        "recall": 0.9611650485436893,
+        "f1-score": 0.9542168674698795,
+        "support": 618
+      },
+      "4": {
+        "precision": 0.8387096774193549,
+        "recall": 0.7647058823529411,
+        "f1-score": 0.7999999999999999,
+        "support": 204
+      },
+      "5": {
+        "precision": 0.9095744680851063,
+        "recall": 0.95,
+        "f1-score": 0.9293478260869564,
+        "support": 180
+      },
+      "6": {
+        "precision": 0.863013698630137,
+        "recall": 0.9742268041237113,
+        "f1-score": 0.9152542372881356,
+        "support": 582
+      },
+      "7": {
+        "precision": 0.9570405727923628,
+        "recall": 0.9282407407407407,
+        "f1-score": 0.9424206815511164,
+        "support": 432
+      },
+      "accuracy": 0.9080555555555555,
+      "macro avg": {
+        "precision": 0.905061666955288,
+        "recall": 0.8983450530931969,
+        "f1-score": 0.900418683834153,
+        "support": 3600
+      },
+      "weighted avg": {
+        "precision": 0.9091726459998558,
+        "recall": 0.9080555555555555,
+        "f1-score": 0.9072924246056868,
+        "support": 3600
+      }
+    }
+  }
+]

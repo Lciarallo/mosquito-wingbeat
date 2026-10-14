@@ -1,0 +1,37 @@
+[
+  {
+    "fold": 0,
+    "train_windows": 12688,
+    "validation_windows": 4703,
+    "overlapping_groups": 0,
+    "validation_groups": 68
+  },
+  {
+    "fold": 1,
+    "train_windows": 14220,
+    "validation_windows": 3171,
+    "overlapping_groups": 0,
+    "validation_groups": 70
+  },
+  {
+    "fold": 2,
+    "train_windows": 14221,
+    "validation_windows": 3170,
+    "overlapping_groups": 0,
+    "validation_groups": 72
+  },
+  {
+    "fold": 3,
+    "train_windows": 14218,
+    "validation_windows": 3173,
+    "overlapping_groups": 0,
+    "validation_groups": 72
+  },
+  {
+    "fold": 4,
+    "train_windows": 14217,
+    "validation_windows": 3174,
+    "overlapping_groups": 0,
+    "validation_groups": 73
+  }
+]

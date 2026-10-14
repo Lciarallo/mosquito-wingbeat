@@ -1,5 +1,111 @@
 # Estudo de classificação acústica de mosquitos
 
+Rodada v2 de 13/10/2026: [relatório técnico](reports/ensemble_especies_v2_2026_10_13.md). Auditoria PCM uniu 613 grupos em 560 blocos, corrigindo colisões que atravessavam as partições históricas. Treinamento aninhado offline com normalização por janela, pesos espécie/aparelho, saliência, SHS multi-pico, MIL e rejeição própria de gênero. Nos mesmos 17 arquivos externos retrospectivos: espécie 4/17 (23.53%), gênero 8/17 (47.06%). Intervalos pareados, F1 por suporte e pela união, emissões e regressões estão no relatório. **Confiabilidade externa não atingida; sem liberação para Arduino.** Novos arquivos foram adquiridos somente depois do congelamento. Histórico e instalador preservados; 156 passed, 4117 warnings in 17.10s.
+
+## Presença, gênero e espécie — comparação de 09/10/2026
+
+[Comparação dos três níveis](reports/tres_niveis_2026_10_09.md): o gênero acerta 96,49% das gravações internas, mas 41,18% das 17 externas; espécie, 71,70% e 23,53%. O detector histórico separado de presença tem sensibilidade de 72,63% e falsos positivos em 29,17% das janelas de ruído no modo padrão. Os modelos/testes de presença e identificação são diferentes. Ainda não há demonstração de confiabilidade em campo.
+
+## Ensemble com calibração separada — 09/10/2026
+
+**Correção implementada e treinamento concluído; identificação por espécie continua experimental.** SVM, ExtraTrees e HistGradientBoosting foram treinados com grupos de ajuste, calibração e teste separados. O ensemble corrigido tem **71,70% de acerto por gravação** no Dryad conhecido; com rejeição, **88,89% de acerto nas emissões e 61,69% de cobertura**. A vantagem sobre HistGradientBoosting no mesmo protocolo é pequena e seu intervalo pareado inclui zero.
+
+Depois do congelamento, adquirimos 17 arquivos ainda não usados de cinco espécies, com auditoria de bytes/PCM. O ensemble acertou **4/17** na escolha forçada e **2/8 identificações emitidas**; não acertou os quatro *Ae. aegypti*. A separação metodológica foi corrigida, mas a transferência acústica continua falhando. Esses arquivos pertencem a um corpus conhecido e não equivalem a uma nova campanha independente. **136 testes passaram.**
+
+[Relatório, comparação e resultados por espécie](reports/ensemble_especies_calibracao_separada_2026_10_09.md) · [Partições, pesos congelados e avaliações](results/species_nested_2026_10_09/) · [Treinamento corrigido](nested_species_ensemble.py). `optimize_ensemble_oof.py` agora encaminha para esse experimento, em pasta separada; os resultados do otimizador anterior continuam históricos.
+
+## Atualização do Git e avaliação por espécie — 08/10/2026
+
+Atualizado para `1ab88b8`, preservando o trabalho local. **Promissor no corpus conhecido; classificação confiável em novas gravações ainda não demonstrada.** Recalculamos os seis métodos: HistGradientBoosting tem 73,46% de acerto por gravação e 52,69% por janela nas 20 espécies. O ensemble calibrado registra 74,34% por gravação, mas sua calibração requer validação aninhada para eliminar dependência da dobra externa. A auditoria de separação de arquivos não verifica esse caminho.
+
+No áudio conhecido do usuário, repetimos o pipeline atual com prior global/Brasil e entrada bruta/emulada: **nenhuma espécie confirmada nas quatro combinações**. O prior Brasil muda a candidata dominante para *Aedes aegypti*; sem ele, a candidata dominante é *Culex tarsalis*. Isso não comprova reconhecimento acústico da espécie. Também corrigimos a interpretação do experimento TinyML + score Dryad, que mede presença e não comprova melhoria por espécie.
+
+[Revisão completa e resultados por espécie](reports/revisao_git_classificacao_especies_2026_10_08.md) · [Métricas e quatro reexecuções](results/git_review_2026_10_08/) · [Relatório corrigido do experimento](reports/relatorio_experimento_mistura_datasets.md). **123 testes existentes passaram**. Os resultados são retrospectivos; não houve novo treinamento ou validação em placa física.
+
+## Revisão crítica da pesquisa — 07/10/2026
+
+**A pesquisa permite análise experimental; a confiabilidade no cenário real ainda não foi demonstrada.** Corrigimos a classificação do Dryad, que é áudio de celulares, e repetimos a variante afetada do LOSO. Recalculamos precisão, sensibilidade, F1 e intervalos por gravação dos 30 resultados históricos. Também distinguimos normalização com acesso ao lote de teste de inferência em gravações novas. A melhoria é metodológica; não há aprovação do detector.
+
+[Auditoria, resultados e próximos experimentos](reports/auditoria_pesquisa_2026_10_07.md) · [Métricas recalculadas](results/research_audit_2026_10_07/metrics.csv) · [Repetição corrigida](results/loso_corrected_2026_10_07/loso_metrics.csv).
+
+Os resultados anteriores foram preservados. Os novos cálculos usam `research_metrics.py`; os módulos das avaliações congeladas continuam com seus hashes originais. Para conferir o código: `.venv/bin/python -m pytest -q tests`. A reanálise é retrospectiva e não substitui uma coleta independente.
+
+## Reexecução dos estudos com pesos originais — 03/10/2026
+
+Foram executados o `Evaluation.py` original DR-BioL/DAT com o pickle oficial e todas as células do notebook oficial MosquitoSong+ com seus dez H5, WAVs e ruídos. Acurácia reproduzida: **85,26% DR-BioL, 79,39% DAT e 92,78% MosquitoSong+**. São avaliações de pesos dos autores; os treinamentos completos dos artigos não foram refeitos. A auditoria do notebook MosquitoSong+ encontrou gravações e amostras sobrepostas nas partições chamadas treino/teste. A comparação externa separada não comprovou confiabilidade no cenário do usuário. Nenhuma compilação ou alteração de firmware.
+
+[Relatório](reports/reproducao_estudos_originais_2026_10_03.md) · [Notebook executado](reproducao_estudos_originais_2026_10_03.ipynb) · [HTML](reproducao_estudos_originais_2026_10_03.html) · [Reexecução e versões](results/faithful_reproduction_2026_10_03/REPRODUCING.md).
+
+## Contraste entre bases e enxames simulados — 03/10/2026
+
+**Experimental; não incorporado ao Arduino.** Cinco candidatos novos: três redes de 5,65M parâmetros, SVM e ExtraTrees com descritores de múltiplos picos. Escolhido pela validação: `ridge_contrast_swarm`. Teste acústico adquirido depois do congelamento: precisão 72.9%, sensibilidade 10.3%, especificidade 87.2%; Drive 30/107. Consulte os intervalos e as limitações antes de interpretar confiabilidade.
+
+[Relatório](reports/estrategias_contrastivas_enxames_2026_10_03.md) · [Notebook executado](estrategias_contrastivas_enxames_2026_10_03.ipynb) · [HTML](estrategias_contrastivas_enxames_2026_10_03.html) · [Decisão](results/cross_domain_strategies_2026_10_03/reliability_decision.json).
+
+## Confiabilidade binária — nova avaliação de 01/10/2026
+
+**Ainda experimental: o detector não atingiu os critérios de confiabilidade.**
+Incorporamos a avaliação por precisão, sensibilidade, F1, especificidade,
+matriz de confusão e intervalos por gravação, conforme o artigo indicado pelo
+usuário. Acurácia geral acima de 60% não basta para aprovação.
+
+Foram adquiridas 670 gravações para ampliar treino/validação/calibração,
+comparadas redes com até 9,65 milhões de parâmetros e modelos clássicos,
+e executada uma adaptação com fêmeas de outras espécies e representações PCEN.
+Cada rodada foi congelada antes de baixar novos arquivos para teste.
+Na última, foram selecionados 168 arquivos, com 151 mantidos pela auditoria:
+**precisão 17,5%, sensibilidade 2,8% e F1 Aedes 4,8%** no modelo escolhido
+pela validação. No áudio privado, essa adaptação detectou 0/107 janelas;
+o modelo anterior de árvores detecta 77/107, mas também erra outros mosquitos.
+Uma gravação só de Aedes não mede precisão ou especificidade binária.
+
+[Relatório final da adaptação](reports/confiabilidade_binaria_aedes_adaptacao_2026_10_01.md) ·
+[Notebook](confiabilidade_binaria_aedes_adaptacao_2026_10_01.ipynb) ·
+[Leitura em HTML](confiabilidade_binaria_aedes_adaptacao_2026_10_01.html) ·
+[Decisão e motivos de reprovação](results/sex_balanced_reliability_2026_10_01/reliability_decision.json).
+
+[Reproduções científicas e rodada ampliada](reports/confiabilidade_binaria_aedes_2026_10_01.md) ·
+[Notebook ampliado](confiabilidade_binaria_aedes_2026_10_01.ipynb).
+Os notebooks apenas leem resultados. Pesos anteriores, firmware e instalador
+foram preservados; os downloads históricos abaixo não incorporam estes modelos.
+
+```bash
+.venv/bin/python -m unittest tests.test_sex_balanced_reliability tests.test_reliability tests.test_reproduction tests.test_corrected_validation
+.venv/bin/python evaluate_sex_balanced_reliability.py
+.venv/bin/python summarize_sex_balanced_reliability.py
+```
+
+## Validação corrigida — 01/10/2026
+
+**Os modelos para computador continuam experimentais.** Corrigimos o vazamento
+entre dobras do stacking, a diferença de escala entre treino e inferência, a
+normalização dependente do lote e a escolha de limiares no próprio teste.
+Também excluímos os controles de ruído que repetiam o treino e preservamos
+espécies desconhecidas como não rotuladas.
+
+O stacking caiu de 90,6% para 69,5% de acurácia balanceada no Dryad; o ensemble
+ficou em 49,9% nas misturas sintéticas. O teste óptico novo, com calibração
+separada, ficou entre 54,5% e 61,25%. Novos áudios acústicos foram selecionados
+após o congelamento, mas são apenas negativos: a sensibilidade em Aedes
+acústico inédito ainda não foi medida nesta rodada.
+
+[Relatório corrigido](reports/validacao_corrigida_2026_10_01.md) ·
+[Notebook de resultados](validacao_corrigida_2026_10_01.ipynb) ·
+[Leitura no navegador](validacao_corrigida_2026_10_01.html) ·
+[Decisão de confiabilidade](results/corrected_2026_10_01/reliability_decision.json).
+
+O notebook corrigido apenas lê resultados; não treina nem compila. Para
+reavaliar os modelos congelados, execute na raiz do projeto:
+
+```bash
+.venv/bin/python corrected_validation.py --phase evaluate
+.venv/bin/python evaluate_corrected_fresh.py
+.venv/bin/python summarize_corrected_validation.py
+```
+
+Os checkpoints anteriores foram preservados. As distribuições Arduino abaixo
+são históricas; esta rodada não atualizou firmware ou instalador.
+
 **[⬇ Baixar instalador para Windows](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe)**
 — [passo a passo com imagens](WINDOWS.md) · [página de downloads](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest)
 
@@ -19,6 +125,53 @@ de quatro classes, aparelhos reservados, ruído, abstenção, INT8 e exportaçã
 O código do downloader também está incorporado ao notebook, que não depende dos scripts
 auxiliares para definir os experimentos iniciais. A extensão executa os scripts incluídos
 para contraste/dinâmica, novos classificadores e detecção binária com firmware Arduino.
+
+## Pré-processamento adicional — análise exploratória
+
+Testamos cinco filtros adicionais com pesos e limiares fixos. Nenhum identificou
+o enxame privado como Aedes. A redução espectral leve ajudou modestamente em
+HumBug, mas piorou outros corpora; filtros de frequência causaram regressões.
+O processamento padrão foi mantido.
+[Comparação completa](reports/preprocessamento_adicional.md).
+
+## Nova rodada com múltiplos datasets — avaliação offline
+
+Baixamos Figshare, MosquitoSong, UFRGS, BioDCASE Development e Synthetic Swarm.
+A CNN foi ajustada com **4.344 janelas adicionais de treino**, incluindo sons
+reais de 0,3 s, sem repetir ou preencher o áudio. UFRGS inteira permanece fora
+do treino. Há ganhos parciais, mas **a identificação na UFRGS ainda falha**.
+Após congelar o modelo, testamos cinco novos Aedes: ambos os modelos identificam
+quatro arquivos; a nova versão rejeita mais janelas. No enxame privado, as dez
+emissões erradas desapareceram, mas Aedes continua sem identificação.
+[Relatório e todos os resultados](reports/retreinamento_multifonte.md) ·
+[Decisão de confiabilidade](results/multisource/reliability_decision.json).
+Nenhuma atualização de Arduino ou instalador nesta rodada.
+
+## CNN grande para computador — avaliação offline
+
+Treinamos uma CNN residual de **3,33 milhões de parâmetros**, mantendo os dados
+anteriores e a ampliação HumBugDB. O acerto sem rejeição subiu de 33,5% para 62,7%
+no Dryad e de 74,2% para 89,0% no HumBug (quatro classes nesse teste).
+**O novo áudio externo de Aedes não foi reconhecido**; no enxame privado,
+foram emitidas identificações incorretas. Ainda não há confiabilidade em campo.
+[Relatório completo](reports/modelo_grande_cnn.md) ·
+[Decisão e limitações](results/large_cnn/reliability_decision.json).
+A adaptação desta CNN ao Arduino aguarda autorização posterior explícita.
+O instalador Windows e o firmware publicados permanecem da versão anterior.
+
+## Retreinamento com HumBugDB — ainda não liberado
+
+Treinamos uma nova versão com os dados anteriores e **307 trechos adicionais**.
+Ela melhorou no teste HumBug, mas piorou no corpus antigo e não identificou uma
+nova gravação de Aedes aegypti do MosquitoSong+, pesquisada após congelar os pesos.
+Também não identificou o áudio de enxame fornecido pelo usuário.
+**A versão ampliada não foi compilada nem liberada para Arduino.**
+[Relatório e comparação](reports/treinamento_ampliado.md) ·
+[Protocolo de validação](MODEL_VALIDATION.md) ·
+[Decisão de confiabilidade](results/expanded/reliability_decision.json).
+
+As informações de instalação e métricas abaixo são da **versão anterior**,
+já publicada; o retreinamento não atualizou o instalador Windows.
 
 ## Arduino Nano 33 BLE Sense: identificar espécies
 
@@ -237,22 +390,13 @@ o notebook os regenera. Modelos numéricos compactos e headers C++ estão public
 - SHA-256 e configuração dos arquivos/resultados nos manifests.
 - Figuras revisadas visualmente.
 
-## Arquitetura Hierárquica ML e Validação em Campo (Zero Data Leakage)
+## Pipeline hierárquico experimental
 
-A partir da análise da literatura científica recente (BioDCASE 2026, SEMISH 2025, SBCAS 2023, HumBugDB 2021, eLife 2017), o repositório foi expandido com uma abordagem hierárquica em três níveis:
+`train_hierarchical_models.py` calcula métricas de espécie e gênero agregando probabilidades já salvas; não treina uma nova hierarquia. Os 95,43% por gravação são de quatro gêneros e vêm do ensemble calibrado com a dependência metodológica descrita na [revisão de 08/10](reports/revisao_git_classificacao_especies_2026_10_08.md). Os 85,15% com prior regional se restringem às janelas de três espécies selecionadas pelo rótulo verdadeiro.
 
-1. **Auditoria Criptográfica Anti-Vazamento (`leakage_auditor.py`)**:
-   - Garante matematicamente $0$ grupos, $0$ hashes SHA-256 e $0$ arquivos compartilhados entre treino e teste.
-   - Certificado gerado em `results/leakage_audit_certificate.json`.
-2. **Benchmark Hierárquico Multi-Abordagem (`train_hierarchical_models.py`)**:
-   - **Tier 1 (Presença)**: Detecção binária combinando densidade harmônica bioacústica e modelo neural.
-   - **Tier 2 (Gênero / Vetor Epidemiológico)**: Separação de *Aedes*, *Anopheles*, *Culex* e *Culiseta* com **95,43% de acurácia por gravação** e **93,48% por janela** em dados 100% disjuntos Out-of-Fold.
-   - **Tier 3 (Espécie Fina com Priors)**: Suporte a priors biogeográficos regionais (85,15% de acurácia em espécies brasileiras endêmicas).
-3. **Diagnóstico e Classificação de Áudios de Campo (`predict_audio.py`)**:
-   - Filtro anti-falso-alarme de harmônicos de $60\text{ Hz}$ de rede elétrica / ventoinhas ($\sigma < 5\text{ Hz}$).
-   - Emulação acústica do microfone MEMS ST MP34DT05 do Arduino Nano 33 BLE Sense (`--compare`).
-   - Suporte a priors epidemiológicos regionais (`--region brazil`).
-   - **Validação em Campo**: Testado no áudio externo de celular `drive_audio.wav`, suprimindo o ruído elétrico inicial e classificando o trecho de voo real (49,5s a 77,4s, $F_0 \approx 610\text{ Hz}$) como **`Aedes aegypti`**, confirmado empiricamente como ground truth.
+`leakage_auditor.py` verifica interseções de grupos, caminhos e hashes declarados. Seu certificado não estabelece isolamento da calibração, dos limiares, dos indivíduos ou da linhagem das previsões. Portanto, o status histórico `ZERO_LEAKAGE_VERIFIED` não autoriza uma garantia geral de ausência de vazamento.
+
+`predict_audio.py` usa as MLPs Arduino históricas, filtros harmônicos, persistência temporal e priors opcionais. Esse pipeline tem pesos diferentes do ensemble calibrado do benchmark. `--compare` é uma simulação acústica por software; não substitui medição física. `--region brazil` altera o resultado, mas os pesos regionais não têm calibração externa demonstrada. A reexecução no áudio conhecido não confirmou espécie; sua referência de *Ae. aegypti* é informada pelo usuário, sem confirmação independente estabelecida nesta revisão.
 
 ## Fontes
 
@@ -274,3 +418,23 @@ O dataset Dryad/Zenodo declara CC0. Os ruídos TinyML são obtidos do repositór
 autores no commit registrado em **data/noise_manifest.json**, respeitando os termos
 da fonte. Artigos e outros materiais de terceiros mantêm seus próprios direitos;
 o repositório publica a análise e as citações, sem redistribuir os PDFs ou textos integrais.
+
+### Detector binário de Aedes aegypti (experimental, computador)
+
+Nova CNN dedicada a **Aedes aegypti versus não-Aedes**, com estados de rejeição. Não identifica as outras espécies e ainda não é confiável para uso no aparelho: houve falsos positivos relevantes no HumBug e baixa sensibilidade na UFRGS. [Resultados e protocolo](reports/detector_binario_aedes.md), também na seção 25 do notebook.
+
+```bash
+.venv/bin/python aedes_binary.py caminho/gravacao.wav --output tmp/teste_aedes
+```
+
+O checkpoint local está em `results/aedes_binary/models/aedes_binary.pt` (ignorado pelo Git). Os scripts `train_aedes_binary.py`, `fetch_fresh_aedes_binary.py` e `evaluate_aedes_binary.py` registram treinamento, seleção externa após congelamento e avaliação. Nenhuma compilação/adaptação para Arduino nesta rodada.
+
+### Outras técnicas de ML para o detector binário
+
+Regressão logística, SVM RBF, Extra Trees e gradient boosting foram treinados com características acústicas e comparados à CNN binária. [Resultados, explicabilidade e limites](reports/comparacao_ml_binario_aedes.md), seção 26 do notebook. Ganhos de sensibilidade podem aumentar falsos positivos; todos permanecem experimentais, sem liberação para Arduino.
+
+```bash
+.venv/bin/python aedes_classical.py caminho/gravacao.wav --model svm_rbf --output tmp/teste_svm
+```
+
+Modelos locais em `results/aedes_classical/models/` (ignorados pelo Git). Sem `--model`, usa a família escolhida somente pela validação, `gradient_boosting`.

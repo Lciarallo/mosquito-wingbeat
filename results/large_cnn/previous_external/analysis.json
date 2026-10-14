@@ -1,0 +1,30 @@
+{
+  "evaluated_utc": "2026-09-30T21:58:25.908383+00:00",
+  "source": "https://github.com/akaraspt/mosquitosongp",
+  "reference_species": "Aedes aegypti",
+  "label_source": "dataset_authors",
+  "model_sha256": "05905636b9b9ae729b87ec365e4812cea44f9834c0e4c258d198ac1871777a9e",
+  "model_unchanged": true,
+  "original_audio_sha256": "6308063ef206a3b4ffd4fd11b175acc3c9cc9ea4787b43a7f554d1ade48a30ee",
+  "original_sample_rate": 8000,
+  "original_channels": 1,
+  "duration_s": 5.622,
+  "complete_windows": 5,
+  "analyzed_duration_s": 4.96,
+  "unprocessed_tail_s": 0.662,
+  "state_counts": {
+    "INCERTO": 5
+  },
+  "emitted_species_counts": {},
+  "correctly_identified_windows": 0,
+  "incorrectly_identified_windows": 0,
+  "forced_correct_windows": 0,
+  "presence_candidate_windows": 5,
+  "resampling_applied": true,
+  "external_volume_normalization": false,
+  "internal_per_window_rms_normalization": true,
+  "no_padding_or_repetition": true,
+  "noise_filtering": false,
+  "arduino_compiled": false,
+  "physical_board_tested": false
+}

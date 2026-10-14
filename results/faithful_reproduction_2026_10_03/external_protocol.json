@@ -1,0 +1,22 @@
+{
+  "model_weights_sha256": {
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round1.h5": "6a9434e9a6949c3ca8d12439dcaadfc2dff4d81c6850d8fa29d5b669e3b6e3e0",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round10.h5": "1e6c36565735d557ac140ff54a36fb707b069785aa40aea7c44dc66e60006e02",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round2.h5": "1bc77a48de67f373bf1b723be990ab1de98d00e4c138b77e89fe580db482705e",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round3.h5": "0c4b2d5cabd562c16f2cfc1bf5185fc65c2a7f3c6e8735945d843cebf2620faf",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round4.h5": "1a3538db306ee7f7618fc3c60f91bc7863911b371db433137cedc6bb62c51787",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round5.h5": "d8cfc09712c2233786225413b0be5b673d7cbf29dfcbedfe422897010512d7c2",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round6.h5": "421f2bcabeb413ce1bd023bf1d7baea836abf15ba83987bd349f6a2a49598969",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round7.h5": "9e2dfcfc9b1a28eee4bf044a6bcfb807645ab520ec855d9130c34e9cea58d557",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round8.h5": "1460f12734749390366b3c18fb76b4bb3ada3883033df2e122af3f902b0a34a7",
+    "data/external/faithful_2026_10_03/mosquitosong_models/cnn_model_min_val_round9.h5": "a6b10245f88d031f63c8c7fbbe96ac32af2b800f454431a3ef3896a43c10e8db"
+  },
+  "native_protocol": "librosa 0.8.1 8kHz; 2400 real samples; stride 1200; original deterministic jitter randint(120) seeded by start; argmax original eight labels; no gain/cancellation applied to real mono recordings.",
+  "comparison_protocol": "Same nonoverlapping .992s intervals as previous models, using three real 300ms windows at offsets 0,.3,.6s, jitter from original procedure; average eight-class softmax then argmax; separate aggregation extension, not the original paper protocol.",
+  "aggregation_tuning": false,
+  "models": "all ten author folds; no best-fold selection",
+  "threshold_tuning": false,
+  "test_scope": "fixed previous 32 external files, retrospective comparison; private Drive positive-only control",
+  "training_rerun": false,
+  "arduino_compiled": false
+}

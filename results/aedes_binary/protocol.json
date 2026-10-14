@@ -1,0 +1,15 @@
+{
+  "target": "Aedes aegypti versus other labelled species, grouped non-Aedes and noise",
+  "unknown_mosquito_excluded_from_binary_loss": true,
+  "initial_checkpoint_sha256": "c754c0d48e5ceb43946bc6e3b1b4c3ff44ade2c693becc75be785ee540b43acf",
+  "split_sha256": "511f65e4ed8b94829197d53ef452af802ffe34aee5620d8e355145ea87bfdff3",
+  "max_epochs": 15,
+  "patience": 4,
+  "selection": "source-balanced validation binary cross entropy",
+  "sampling": "50% Aedes; 50% non-Aedes equally divided among labels, domains and source groups",
+  "heldout_ufrgs": true,
+  "calibration_target_false_positive_rate": 0.05,
+  "short_windows_no_padding": true,
+  "private_audio_used_in_training": false,
+  "arduino_compiled": false
+}

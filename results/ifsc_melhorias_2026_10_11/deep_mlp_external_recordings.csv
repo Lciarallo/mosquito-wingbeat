@@ -1,0 +1,18 @@
+group,truth,prediction,confidence
+BioDCASE_D3|S_1_D_3_79,Aedes aegypti,Anopheles freeborni,0.22665061
+BioDCASE_D3|S_1_D_3_80,Aedes aegypti,Anopheles minimus,0.25754514
+BioDCASE_D3|S_1_D_3_81,Aedes aegypti,Anopheles farauti,0.35755625
+BioDCASE_D3|S_1_D_3_82,Aedes aegypti,Anopheles minimus,0.3090038
+BioDCASE_D3|S_2_D_3_19,Aedes albopictus,Aedes sierrensis,0.3156534
+BioDCASE_D3|S_7_D_3_19,Culex pipiens,Anopheles freeborni,0.384506
+BioDCASE_D3|S_7_D_3_20,Culex pipiens,Aedes sierrensis,0.43144912
+BioDCASE_D3|S_7_D_3_21,Culex pipiens,Anopheles albimanus,0.3339921
+BioDCASE_D3|S_7_D_3_22,Culex pipiens,Anopheles freeborni,0.27598888
+BioDCASE_D3|S_8_D_3_19,Anopheles minimus,Aedes aegypti,0.784031
+BioDCASE_D3|S_8_D_3_20,Anopheles minimus,Anopheles minimus,0.3695451
+BioDCASE_D3|S_8_D_3_21,Anopheles minimus,Anopheles farauti,0.19563259
+BioDCASE_D3|S_8_D_3_22,Anopheles minimus,Anopheles minimus,0.27747476
+BioDCASE_D3|S_9_D_3_19,Anopheles stephensi,Anopheles freeborni,0.3547129
+BioDCASE_D3|S_9_D_3_20,Anopheles stephensi,Anopheles stephensi,0.4433337
+BioDCASE_D3|S_9_D_3_21,Anopheles stephensi,Anopheles minimus,0.27836943
+BioDCASE_D3|S_9_D_3_22,Anopheles stephensi,Anopheles dirus,0.22883105

@@ -1,0 +1,26 @@
+{
+  "frozen_utc": "2026-10-09T03:49:54.277191+00:00",
+  "artifacts_sha256": {
+    "results/species_nested_2026_10_09/models/0_extra_trees.joblib": "5c8f3fef31c732a672a0e05ed4261e31bcf741e097797818012b8ba05fce0422",
+    "results/species_nested_2026_10_09/models/0_hist_gradient_boosting.joblib": "2ceb711795ec9c1a399bcbb0d3e917f6338e0390e4a91c7a7bf47f91da870bc9",
+    "results/species_nested_2026_10_09/models/0_svm.joblib": "f22eb9f1e4f734aef337d0457e7b1b2d4fae65a074d53a637734c0600e2215c4",
+    "results/species_nested_2026_10_09/models/1_extra_trees.joblib": "81704ce257243f1d8a412e652a4f1bbea541cc63c3183830180dbbf33162910c",
+    "results/species_nested_2026_10_09/models/1_hist_gradient_boosting.joblib": "66629b8aaaf50ca19a0a7f04c4b8a2926adeecf1fe2107aac7fac58df34ada5f",
+    "results/species_nested_2026_10_09/models/1_svm.joblib": "273973beb53239296a30d00f687bcd9cb0e0eaf68b87a065c1efdd606c566e4f",
+    "results/species_nested_2026_10_09/models/2_extra_trees.joblib": "cdf83eef463d396c3f1ba819cdbf69c11a338fd451214f26756e1fc9f56c55f2",
+    "results/species_nested_2026_10_09/models/2_hist_gradient_boosting.joblib": "13208a00cceb73a04c322afac242868d98bf209b0307e0eae854feabf389922e",
+    "results/species_nested_2026_10_09/models/2_svm.joblib": "72a1d8d0b95a1ad0cbf982ffaa4acee488a6d689775f725c32ff5b099969f2df",
+    "results/species_nested_2026_10_09/models/final_bundle.joblib": "ce1a1698297c1947b9cd280e83a8506827b6aac661c82c0c33c3d7e7d246e34d",
+    "results/species_nested_2026_10_09/models/final_extra_trees.joblib": "f0c0d7b43ce6dbac1db6e1d444ca332b0c6772468fc30827195a02301df80165",
+    "results/species_nested_2026_10_09/models/final_hist_gradient_boosting.joblib": "7099e0110a3746b6b2deda078f25624be740ed7a764dac76895b6e9a374e23d1",
+    "results/species_nested_2026_10_09/models/final_svm.joblib": "4464532fb24935202ecba2765d8961d802a3dde4d7ce80620a0e88565ca055b4",
+    "results/species_nested_2026_10_09/calibration_0.json": "8399003d388a3d06043ab3ae69967e40d4de2137b811f550ee574a270bc93724",
+    "results/species_nested_2026_10_09/calibration_1.json": "770296902aa99579e00927dbcea5c4e844718833c4b09fc4c7473423e1389e8f",
+    "results/species_nested_2026_10_09/calibration_2.json": "719657d5fc7a3ebecfe3ed9225f89a36a81754cf0df30c15aad2d3050e7e24b1",
+    "results/species_nested_2026_10_09/calibration_final.json": "c5e6207866d4553a57cee4b422e7d753a01f1128071520f8fe1141efb7deece7"
+  },
+  "inference_code_sha256": "339f8db32b8035a24fa570c987b10c0306fc0a675b63ab31cbeee2dae710877a",
+  "primary_model": "calibrated",
+  "no_external_selection_yet": true,
+  "release_allowed": false
+}

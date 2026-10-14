@@ -1,0 +1,205 @@
+# Generated Slides Design Catalog
+
+- Presentation: Mosquitos pelo som — Luiz Eduardo do Nascimento Ciarallo — IFSC
+- Presentation ID: `1n48d31ukSs-jxyxYAOrLTg8wtTj0B-YNSTBzyE425b4`
+- Snapshot SHA-256: `417e3ebb2e8e6a717349cafa5b508b8491dd122ec956c57bf236253883380dd4`
+- Masters: 1
+- Layouts: 11
+- Slides available as exemplars: 20
+
+This is derived evidence, not a model-authored contract. Confirm semantic roles from rendered exemplars.
+
+## Masters
+
+| Master ID | Name | Layouts | Theme colors | Protected regions |
+| --- | --- | ---: | ---: | ---: |
+| `p7` | Simple Light | 11 | 16 | 1 |
+
+## Layouts
+
+### Title slide
+
+- Layout ID: `p8`
+- Master ID: `p7`
+- Preview slides: `p1`, `ifsc_slide_02`, `ifsc_slide_03`, `ifsc_slide_04`, `ifsc_slide_05`, `ifsc_slide_06`, `ifsc_slide_07`, `ifsc_slide_08`, `ifsc_slide_09`, `ifsc_slide_10`, `ifsc_slide_11`, `ifsc_slide_12`, `ifsc_slide_13`, `ifsc_slide_14`, `ifsc_slide_15`, `ifsc_slide_16`, `ifsc_slide_17`, `ifsc_slide_18`, `ifsc_slide_19`, `ifsc_slide_20`
+- Text capacity signals: 3 slots covering 52% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p8_i10` | CENTERED_TITLE | 0 | 37% | 4.15 | horizontal-band | title (high) |
+| `p8_i11` | SUBTITLE | 0 | 14% | 10.75 | horizontal-band | subtitle (high) |
+| `p8_i12` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Section header
+
+- Layout ID: `p9`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 2 slots covering 16% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p9_i14` | TITLE | 0 | 15% | 10.12 | horizontal-band | title (high) |
+| `p9_i15` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Title and body
+
+- Layout ID: `p10`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 3 slots covering 73% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p10_i17` | TITLE | 0 | 10% | 14.88 | horizontal-band | title (high) |
+| `p10_i18` | BODY | 0 | 62% | 2.49 | horizontal-band | body (high) |
+| `p10_i19` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Title and two columns
+
+- Layout ID: `p11`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 4 slots covering 69% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p11_i21` | TITLE | 0 | 10% | 14.88 | horizontal-band | title (high) |
+| `p11_i22` | BODY | 0 | 29% | 1.17 | left-middle | body (high) |
+| `p11_i23` | BODY | 1 | 29% | 1.17 | right-middle | body (high) |
+| `p11_i24` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Title only
+
+- Layout ID: `p12`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 2 slots covering 11% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p12_i26` | TITLE | 0 | 10% | 14.88 | horizontal-band | title (high) |
+| `p12_i27` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### One column text
+
+- Layout ID: `p13`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 3 slots covering 24% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p13_i29` | TITLE | 0 | 5% | 3.72 | left-top | title (high) |
+| `p13_i30` | BODY | 0 | 19% | 0.88 | left-middle | body (high) |
+| `p13_i31` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Main point
+
+- Layout ID: `p14`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 2 slots covering 56% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p14_i33` | TITLE | 0 | 55% | 1.56 | center-middle | title (high) |
+| `p14_i34` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Section title and description
+
+- Layout ID: `p15`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 4 slots covering 54% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p15_i37` | TITLE | 0 | 13% | 2.73 | left-top | title (high) |
+| `p15_i38` | SUBTITLE | 0 | 11% | 3.28 | left-bottom | subtitle (high) |
+| `p15_i39` | BODY | 0 | 30% | 1.04 | right-middle | body (high) |
+| `p15_i40` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Caption
+
+- Layout ID: `p16`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 2 slots covering 8% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p16_i42` | BODY | 0 | 8% | 9.91 | left-bottom | body (high) |
+| `p16_i43` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Big number
+
+- Layout ID: `p17`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 3 slots covering 60% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p17_i45` | TITLE | 0 | 36% | 4.34 | horizontal-band | title (high) |
+| `p17_i46` | BODY | 0 | 24% | 6.55 | horizontal-band | body (high) |
+| `p17_i47` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+### Blank
+
+- Layout ID: `p18`
+- Master ID: `p7`
+- Preview slides: none
+- Text capacity signals: 1 slots covering 0% of the canvas
+- Media/evidence signals: 0 slots covering 0% of the canvas
+- Inherited protected regions: 2
+
+| Placeholder ID | Type | Index | Area | Ratio | Panel | Suggested semantic roles |
+| --- | --- | ---: | ---: | ---: | --- | --- |
+| `p18_i49` | SLIDE_NUMBER | 0 | 0% | 1.39 | right-bottom | slide-number (high) |
+
+## Exemplar Slides
+
+| # | Slide ID | Layout | Title/content preview | Local content objects | Dominant media | Attention |
+| ---: | --- | --- | --- | ---: | --- | --- |
+| 1 | `p1` | `p8` | Mosquitos pelo som | 0 | none | none |
+| 2 | `ifsc_slide_02` | `p8` | Por que analisar esse som? O voo produz padrões acústicos que podem ser analisados. Objetivo: apoiar o monitoramento e a identificação de mo | 0 | none | none |
+| 3 | `ifsc_slide_03` | `p8` | Três perguntas diferentes Presença: há mosquito ou apenas ruído? Gênero: Aedes, Anopheles, Culex ou Culiseta? Espécie: por exemplo, Aedes ae | 0 | none | none |
+| 4 | `ifsc_slide_04` | `p8` | O som vira uma imagem | 2 | 1.98 ratio; 41% area; center-middle | MEDIA_OR_EVIDENCE |
+| 5 | `ifsc_slide_05` | `p8` | Abordagens e trabalhos correlatos FFT e descritores: resumir frequências e padrões do sinal. CNN em espectrograma: aprender padrões de tempo | 0 | none | none |
+| 6 | `ifsc_slide_06` | `p8` | Os dados não são todos iguais Dryad: áudio de celulares; 20 espécies no estudo. HumBug: outra coleção e diferentes condições de captura. Áud | 0 | none | none |
+| 7 | `ifsc_slide_07` | `p8` | O programa que implementei 1. Converter cada janela em log-mel e contraste espectral. 2. Treinar a CNN usando rótulos das espécies. 3. Selec | 0 | none | none |
+| 8 | `ifsc_slide_08` | `p8` | A arquitetura da primeira CNN Entrada: 2 canais, 64 bandas e 55 quadros de tempo. 4 convoluções: 16, 32, 64 e 96 canais. Camada de 128 unida | 0 | none | none |
+| 9 | `ifsc_slide_09` | `p8` | Separar dados antes de treinar | 2 | 1.00 ratio; 19% area; left-middle | MEDIA_OR_EVIDENCE |
+| 10 | `ifsc_slide_10` | `p8` | Primeira CNN: sinais de sobreajuste | 2 | 2.27 ratio; 46% area; center-middle | MEDIA_OR_EVIDENCE |
+| 11 | `ifsc_slide_11` | `p8` | Resultado da primeira rodada | 2 | 2.45 ratio; 43% area; center-middle | MEDIA_OR_EVIDENCE |
+| 12 | `ifsc_slide_12` | `p8` | Alterações melhoraram as redes | 2 | 2.45 ratio; 43% area; center-middle | MEDIA_OR_EVIDENCE |
+| 13 | `ifsc_slide_13` | `p8` | Transferência ainda é difícil Redes revistas: 3/17 arquivos corretos (17,6%). Primeira CNN: 0/17 arquivos corretos. Cinco espécies; outra or | 0 | none | none |
+| 14 | `ifsc_slide_14` | `p8` | O projeto também tem uma CNN maior CNN residual: 3,33 milhões de parâmetros. Dryad: 62,7% de acerto por janela, 20 classes. HumBug: 89,0% de | 0 | none | none |
+| 15 | `ifsc_slide_15` | `p8` | Uma rede maior ainda falhou Aedes externo: 0/4 janelas com a espécie correta no topo. Enxame informado como Aedes: 10 emissões de Anopheles. | 0 | none | none |
+| 16 | `ifsc_slide_16` | `p8` | Gênero é mais fácil que espécie? | 2 | 2.45 ratio; 43% area; center-middle | MEDIA_OR_EVIDENCE |
+| 17 | `ifsc_slide_17` | `p8` | Desafios que estou enfrentando Generalização: trocar o microfone muda o padrão observado. Ambiguidade: espécies podem ter frequências pareci | 0 | none | none |
+| 18 | `ifsc_slide_18` | `p8` | Próximos passos do projeto Coletar gravações com espécie confirmada e diferentes aparelhos. Anotar também períodos sem mosquito e ruídos rea | 0 | none | none |
+| 19 | `ifsc_slide_19` | `p8` | Conclusão do trabalho Implementei e comparei redes neurais profundas em áudio real. Alterações: de 55,3% para 69,5% de acerto por gravação. | 0 | none | none |
+| 20 | `ifsc_slide_20` | `p8` | Referências e materiais Mukundarajan et al. (2017): sensores acústicos em celulares. Fanioudakis et al. (2018): classificação com deep learn | 0 | none | none |
+

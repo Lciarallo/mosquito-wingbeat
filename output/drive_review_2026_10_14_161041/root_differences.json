@@ -1,0 +1,42 @@
+[
+  {
+    "path": "acoustic_features_v5.py",
+    "size": 10548,
+    "modified": "2026-10-14T15:53:42.817Z",
+    "id": "1ROJdDzsQo-voAdYaiyci35KHXtp2CVdH",
+    "local_exists": false,
+    "md5": "27158b7c6159f1db39900339c874db7d"
+  },
+  {
+    "path": "compare_species_v5.py",
+    "size": 7503,
+    "modified": "2026-10-14T15:53:55.411Z",
+    "id": "1lUqcvzJtND01dU-zAuHtGReHQSozzmIM",
+    "local_exists": false,
+    "md5": "5199f50ef6e0be3203e2548ba9b3a96b"
+  },
+  {
+    "path": "fetch_species_v5_fresh.py",
+    "size": 5803,
+    "modified": "2026-10-14T15:53:50.734Z",
+    "id": "1-kS9IMRz_outQ-HvWggnog6dlDuPb7IJ",
+    "local_exists": false,
+    "md5": "298b38f60c8fb7094ac3c68a1b211157"
+  },
+  {
+    "path": "nested_species_ensemble_v5.py",
+    "size": 41535,
+    "modified": "2026-10-14T15:53:46.483Z",
+    "id": "1mpoVIzdX4P6Mf1AVPLnodDQaj48Vaf-0",
+    "local_exists": false,
+    "md5": "90336e620f96c720e0e5cf902b2e29af"
+  },
+  {
+    "path": "predict_audio_v2_prev.py",
+    "size": 32344,
+    "modified": "2026-10-14T07:28:43.231Z",
+    "id": "1YhtN6kt_j8xu7E94ii65tS-UdxQB99pP",
+    "local_exists": false,
+    "md5": "db78587cbebbea3c4c54ed4127735292"
+  }
+]

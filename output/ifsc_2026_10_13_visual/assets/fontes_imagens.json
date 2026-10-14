@@ -1,0 +1,52 @@
+[
+  {
+    "name": "aedes_repouso.png",
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_2026_10_13_visual/assets/aedes_repouso.png",
+    "url": "https://www.cdc.gov/mosquitoes/media/images/Aedesaegyptiadultmosquito.png",
+    "credit": "CDC: fêmea de Aedes aegypti em repouso",
+    "source_page": "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+    "width": 1200,
+    "height": 675,
+    "sha256": "6b3134be56368ca5cd8be90cdb98c2a55f11a1aa86df9460b94a654d212ab410"
+  },
+  {
+    "name": "aedes_aegypti.jpg",
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_2026_10_13_visual/assets/aedes_aegypti.jpg",
+    "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Aedes-aegypti-female-after-feeding-16-9.jpg",
+    "credit": "CDC: fêmea de Aedes aegypti",
+    "source_page": "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+    "width": 1200,
+    "height": 675,
+    "sha256": "2c2fef6847f16ed303e0dc78788fb0970e3bd4c8c2fc58e57006ee21bd759c83"
+  },
+  {
+    "name": "culex_tarsalis.jpg",
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_2026_10_13_visual/assets/culex_tarsalis.jpg",
+    "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Culex-tarsalis-female-16-9.jpg",
+    "credit": "CDC: fêmea de Culex tarsalis",
+    "source_page": "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+    "width": 1200,
+    "height": 675,
+    "sha256": "0c405d3101d75c5c0e515c827f35a186b66408e049e49048d993f87090ae23aa"
+  },
+  {
+    "name": "anopheles_quadrimaculatus.jpg",
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_2026_10_13_visual/assets/anopheles_quadrimaculatus.jpg",
+    "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Anopheles-quadrimaculatus-female-before-feeding-16-9.jpg",
+    "credit": "CDC: fêmea de Anopheles quadrimaculatus",
+    "source_page": "https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html",
+    "width": 1200,
+    "height": 675,
+    "sha256": "999a035123d059dbd307810f3ea7553120cbf89c0840b7a7df2b0d04ba417001"
+  },
+  {
+    "name": "arduino_nano_sense_rev2.jpg",
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_2026_10_13_visual/assets/arduino_nano_sense_rev2.jpg",
+    "url": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_01.iso.jpg?v=1727100949",
+    "credit": "Arduino: fotografia oficial do Nano 33 BLE Sense Rev2",
+    "source_page": "https://store.arduino.cc/products/nano-33-ble-sense-rev2",
+    "width": 1000,
+    "height": 750,
+    "sha256": "64f6a3f870788d6108f37f9c4e282e4bb97236b04a9bce5507dbbc480b1b4586"
+  }
+]

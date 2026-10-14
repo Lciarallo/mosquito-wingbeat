@@ -1,0 +1,13 @@
+{
+  "name": "fernandes_noise",
+  "epoch": 31,
+  "loss": 0.25940470298861756,
+  "validation_weighted_ba": 0.8303069213496349,
+  "validation_weighted_auc": 0.9131705990625294,
+  "validation_loss": 0.4028441219586099,
+  "elapsed_s": 34.27896976470947,
+  "parameters": 1137601,
+  "calibration_cut": 0.4705629393484185,
+  "calibration_weighted_ba": 0.8905869400689814,
+  "checkpoint_sha256": "f49f19692e4b2bac4f9f0070e68fa392214544146fb253858cfed9254b389a22"
+}

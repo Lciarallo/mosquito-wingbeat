@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-10-14T16:39:28.246034+00:00",
+  "archive_path": "results/drive_review_2026_10_14_161041/drive_review_complete.zip",
+  "archive_sha256": "dc4c5bed8cb6305f09036722ea17f13ee65c2fa56d5fbd3416ef92f85b30e5fd",
+  "archive_bytes": 852325,
+  "payload_files_sha256_verified": 240,
+  "archive_manifest_entries": 240,
+  "extra_internal_manifest": 1,
+  "private_raw_audio_included": false
+}

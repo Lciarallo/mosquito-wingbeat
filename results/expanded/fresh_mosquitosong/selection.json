@@ -1,0 +1,24 @@
+{
+  "model_sha256": "475a978d597c62690dc9bba3f6fb4196804dc23084ec62721a529f87e3246a40",
+  "selection_utc": "2026-09-30T21:31:09.822078+00:00",
+  "source": "https://github.com/akaraspt/mosquitosongp",
+  "selection": "First natural cut number of Ae.Aegypti_1F_5D_25C_SmallCylinder with duration >=2.976s; length only, before inference. No padding or repetition.",
+  "inspected": [
+    {
+      "id": "128vI81VPQTnUIlhzQpLepA-XFhOD--sk",
+      "name": "Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav",
+      "duration_s": 5.622,
+      "sr": 8000,
+      "channels": 1,
+      "sha256": "6308063ef206a3b4ffd4fd11b175acc3c9cc9ea4787b43a7f554d1ade48a30ee"
+    }
+  ],
+  "selected": {
+    "id": "128vI81VPQTnUIlhzQpLepA-XFhOD--sk",
+    "name": "Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav",
+    "duration_s": 5.622,
+    "sr": 8000,
+    "channels": 1,
+    "sha256": "6308063ef206a3b4ffd4fd11b175acc3c9cc9ea4787b43a7f554d1ade48a30ee"
+  }
+}

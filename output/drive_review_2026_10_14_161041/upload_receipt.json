@@ -1,0 +1,211 @@
+{
+  "completed_utc": "2026-10-14T16:46:31.090631+00:00",
+  "destination_folder_url": "https://drive.google.com/drive/folders/10oUy0jGS8npQ0GbZo4UO4UMwGntTdS14",
+  "delivery": "Complete archive and 24 standalone principal files; not a claim of a complete uncompressed mirror",
+  "complete_archive_remote_sha256_verified": true,
+  "archive_sha256": "dc4c5bed8cb6305f09036722ea17f13ee65c2fa56d5fbd3416ef92f85b30e5fd",
+  "archive_drive_id": "1SGImHIb1JJa3jkM7Skh_HDN3G_XFsfzV",
+  "archive_payload_files_sha256_verified_from_remote_bytes": 240,
+  "standalone_files_checked": 24,
+  "standalone_sha256_matches": 24,
+  "missing_or_differing_standalone_files": 0,
+  "standalone_upload_exit_code": 0,
+  "initial_bulk_copy_voluntarily_interrupted_exit_code": 130,
+  "archive_download_rclone_failed_due_to_shared_client_api_quota": true,
+  "archive_download_succeeded_through_authenticated_drive_connector": true,
+  "files_deleted": false,
+  "sources_received_from_drive": 7,
+  "historical_freezes_and_snapshots_passed": true,
+  "historical_verification": {
+    "checked_utc": "2026-10-14T16:26:21.545565+00:00",
+    "verification": {
+      "v1_freeze": {
+        "ok": true,
+        "files": null
+      },
+      "v2_freeze": {
+        "ok": true,
+        "files": null
+      },
+      "v3_freeze": {
+        "ok": true,
+        "files": null
+      },
+      "v4_freeze": {
+        "ok": true,
+        "files": null
+      },
+      "v2_history": {
+        "ok": true,
+        "files": 940
+      },
+      "v3_history": {
+        "ok": true,
+        "files": 1210
+      },
+      "v4_history": {
+        "ok": true,
+        "files": 1239
+      }
+    },
+    "baseline_files": 1633,
+    "unchanged_baseline_files": 1631,
+    "authorized_active_source_updates": [
+      "scripts/predict_audio.py",
+      "scripts/robust_audio_features.py"
+    ],
+    "historical_completion_manifests_unchanged": true,
+    "snapshots_rewritten": false
+  },
+  "pytest_passed": 215,
+  "pytest_failed": 1,
+  "historical_202_tests_passed": true,
+  "parameters_retuned": false,
+  "private_raw_audio_uploaded": false,
+  "file_checks": [
+    {
+      "path": "DRIVE_REVIEW_2026_10_14.md",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1EH-MCLptdjb77nke9Xzb4PpGrFq-3Twx"
+    },
+    {
+      "path": "reports/revisao_resultados_drive_2026_10_14_161041.md",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1wg0jV9N1Zmvjg1ZYm776Ky_kn3VvUpnQ"
+    },
+    {
+      "path": "scripts/review_drive_results_2026_10_14.py",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1dTgbbuKn0x3sRgIqgXQhq-74WJgg7veP"
+    },
+    {
+      "path": "output/drive_review_2026_10_14_161041/upload_manifest_sha256.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1JMd2iAGrpiMAjPMVZ4TNJdEdg_2phi2s"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/drive_review_complete.zip",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1SGImHIb1JJa3jkM7Skh_HDN3G_XFsfzV"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/archive_verification.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1yEesEbFfeKcRaeKrBPJY4WLqiaEF2k99"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/metrics.csv",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1f6__p80LgmgbbRF_ngyIr_QxR9J1Td1R"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/metrics.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1JJVDHFQgUnmZijqX_o11k130lT3LS-7P"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/recording_predictions.csv",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1UI0_7bN_Stql4f0jrM5_AEvSWzJogyYI"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/bootstrap_intervals.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1CdrIXAbwsGNOCZRETfvVru7HuQ02Jv0j"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/source_provenance.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1RVMuc3Zn4EgprK6ODgEUq2ouCvVsaXvC"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/review_protocol.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1HiIR1gXu-18XtU_b_Q7tWkUfnXSRbLI7"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/replay_verification.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1P6tvbHI1Tq52Z-8QeKNxMrAb2nEAhBpE"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/historical_verification.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1BdFlWBujDRael3C2DJrQd0QDPeeZECOr"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/batch_inductivity_counterexample.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1R6CGKC3Uznq1cWkWrWxRgq2A6AM2_zIE"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/received_multiclass_28files_v5_audit.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1j8OTOHpAe6NfMZ64ITcUEFge5D7fK0gX"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/terminal_e_jsons_completos.md",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1ZMBFxYXNW0ZlPYjW8Dar0yr5RGg70P-D"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/pytest_complete.txt",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1SflMYUqrBTt4TDydcjct6JYsm2rGyWrU"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/emulated_brazil_summary.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1-P_qJOcfYHUfbXjQ5lVWH96UExwKKZRB"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/raw_brazil_summary.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1bZwKXkH88X3kQS3PNDRd4vT_fruFXiG_"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/raw_global_summary.json",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "1Amus7ACA4uKOCsflML_ebniWO6E4aEc8"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/emulated_brazil_predictions.csv",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "10bMTkGZgMsR3zLMj-XPRXnZQ1YBiNYBW"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/raw_brazil_predictions.csv",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "14qH7J2bgQK-6VXjEUokQbc_ImgfcOG_1"
+    },
+    {
+      "path": "results/drive_review_2026_10_14_161041/raw_global_predictions.csv",
+      "algorithm": "sha256",
+      "matched": true,
+      "drive_id": "11qlEkz6kpyrGJ9nzcuPRgL96-V0f8Q8A"
+    }
+  ]
+}

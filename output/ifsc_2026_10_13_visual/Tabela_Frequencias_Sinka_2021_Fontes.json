@@ -1,0 +1,235 @@
+{
+  "article": "Sinka et al. (2021), HumBug – An Acoustic Mosquito Monitoring Tool for use on budget smartphones",
+  "doi": "https://doi.org/10.1111/2041-210X.13663",
+  "table": 1,
+  "printed_page": 1853,
+  "pdf_page": 6,
+  "pdf_url": "https://ora.ox.ac.uk/objects/uuid%3A2ba708eb-dad2-4474-be29-4891431009c5/files/rmg74qm63c",
+  "pdf_sha256": "6288da64fd1d09e15fec782ffebba98f99ac71b0de7a354097595b9a19dda1ef",
+  "records": [
+    {
+      "species": "Aedes aegypti",
+      "age_days": "2–5",
+      "temperature_c": "23",
+      "male_hz": "557–600",
+      "female_hz": "414–453",
+      "original_reference": "Clements (1999); Tischener and Schief (1955)"
+    },
+    {
+      "species": "Aedes aegypti",
+      "age_days": "1–10",
+      "temperature_c": "22",
+      "male_hz": "750 ± 47",
+      "female_hz": "508 ± 66",
+      "original_reference": "Clements (1999); Moore et al. (1986)"
+    },
+    {
+      "species": "Aedes aegypti",
+      "age_days": "4",
+      "temperature_c": "25",
+      "male_hz": "715",
+      "female_hz": "458",
+      "original_reference": "Clements (1999); Brogdon (1994)"
+    },
+    {
+      "species": "Aedes aegypti",
+      "age_days": "—",
+      "temperature_c": "32.6 ± 0.5",
+      "male_hz": "975.08 ± 8.09",
+      "female_hz": "—",
+      "original_reference": "Cator et al. (2011)"
+    },
+    {
+      "species": "Aedes aegypti",
+      "age_days": "4",
+      "temperature_c": "25",
+      "male_hz": "—",
+      "female_hz": "460",
+      "original_reference": "Brogdon (1994)"
+    },
+    {
+      "species": "Aedes aegypti",
+      "age_days": "7–28",
+      "temperature_c": "23",
+      "male_hz": "711 ± 78",
+      "female_hz": "511 ± 46",
+      "original_reference": "Arthur et al. (2014)"
+    },
+    {
+      "species": "Aedes albopictus",
+      "age_days": "4",
+      "temperature_c": "25",
+      "male_hz": "724",
+      "female_hz": "544",
+      "original_reference": "Clements (1999); Brogdon (1994)"
+    },
+    {
+      "species": "Aedes albopictus",
+      "age_days": "4",
+      "temperature_c": "25",
+      "male_hz": "",
+      "female_hz": "536",
+      "original_reference": "Brogdon (1994)"
+    },
+    {
+      "species": "Aedes diantaeus",
+      "age_days": "—",
+      "temperature_c": "24",
+      "male_hz": "538 ± 20",
+      "female_hz": "330 ± 13",
+      "original_reference": "Clements (1999); Tamarina et al. (1980)"
+    },
+    {
+      "species": "Aedes diantaeus",
+      "age_days": "—",
+      "temperature_c": "28",
+      "male_hz": "—",
+      "female_hz": "380 ± 22",
+      "original_reference": "Clements (1999); Tamarina et al. (1980)"
+    },
+    {
+      "species": "Aedes diantaeus",
+      "age_days": "—",
+      "temperature_c": "32",
+      "male_hz": "—",
+      "female_hz": "412 ± 22",
+      "original_reference": "Clements (1999); Tamarina et al. (1980)"
+    },
+    {
+      "species": "Aedes communis",
+      "age_days": "—",
+      "temperature_c": "24",
+      "male_hz": "555 ± 14",
+      "female_hz": "350 ± 9",
+      "original_reference": "Clements (1999); Tamarina et al. (1980)"
+    },
+    {
+      "species": "Aedes punctor",
+      "age_days": "—",
+      "temperature_c": "24",
+      "male_hz": "503 ± 17",
+      "female_hz": "308 ± 10",
+      "original_reference": "Clements (1999); Tamarina et al. (1980)"
+    },
+    {
+      "species": "Aedes triseriatus",
+      "age_days": "—",
+      "temperature_c": "22",
+      "male_hz": "592 ± 47",
+      "female_hz": "388 ± 33",
+      "original_reference": "Clements (1999); Moore et al. (1986)"
+    },
+    {
+      "species": "Aedes vexans",
+      "age_days": "—",
+      "temperature_c": "21",
+      "male_hz": "—",
+      "female_hz": "300–350",
+      "original_reference": "Clements (1999); Belton and Costello (1979)"
+    },
+    {
+      "species": "Culex pipiens",
+      "age_days": "5",
+      "temperature_c": "21",
+      "male_hz": "—",
+      "female_hz": "329–370",
+      "original_reference": "Clements (1999); Belton and Costello (1979)"
+    },
+    {
+      "species": "Culiseta inornata",
+      "age_days": "—",
+      "temperature_c": "21",
+      "male_hz": "—",
+      "female_hz": "180–250",
+      "original_reference": "Clements (1999); Belton and Costello (1979)"
+    },
+    {
+      "species": "Anopheles earlei",
+      "age_days": "",
+      "temperature_c": "21",
+      "male_hz": "—",
+      "female_hz": "190–250",
+      "original_reference": "Clements (1999); Belton and Costello (1979)"
+    },
+    {
+      "species": "Anopheles subpictus",
+      "age_days": "",
+      "temperature_c": "28",
+      "male_hz": "520–580",
+      "female_hz": "330–385",
+      "original_reference": "Clements (1999); Tischner (1953)"
+    },
+    {
+      "species": "Anopheles arabiensis",
+      "age_days": "2 to >2",
+      "temperature_c": "24–26",
+      "male_hz": "580–820",
+      "female_hz": "360–520",
+      "original_reference": "Clements (1999); Wekesa et al. (1998)"
+    },
+    {
+      "species": "Anopheles arabiensis",
+      "age_days": "1–2",
+      "temperature_c": "25",
+      "male_hz": "703 ± 8.72",
+      "female_hz": "435 ± 4.88",
+      "original_reference": "Brogdon (1998)"
+    },
+    {
+      "species": "Anopheles gambiae",
+      "age_days": "2->2",
+      "temperature_c": "24–26",
+      "male_hz": "660–900",
+      "female_hz": "420–600",
+      "original_reference": "Clements (1999); Wekesa et al. (1998)"
+    },
+    {
+      "species": "Anopheles gambiae",
+      "age_days": "1–2",
+      "temperature_c": "25",
+      "male_hz": "789 ± 4.43",
+      "female_hz": "533 ± 6.99",
+      "original_reference": "Brogdon (1998)"
+    },
+    {
+      "species": "Anopheles melas",
+      "age_days": "1–2",
+      "temperature_c": "25",
+      "male_hz": "571 ± 8",
+      "female_hz": "372 ± 4.62",
+      "original_reference": "Brogdon (1998)"
+    },
+    {
+      "species": "Anopheles merus",
+      "age_days": "1–2",
+      "temperature_c": "25",
+      "male_hz": "586 ± 7.06",
+      "female_hz": "380 ± 7.15",
+      "original_reference": "Brogdon (1998)"
+    }
+  ],
+  "selected_zero_based_record_indices": [
+    [
+      2,
+      6,
+      8,
+      11,
+      12
+    ],
+    [
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    [
+      18,
+      20,
+      22,
+      23,
+      24
+    ]
+  ],
+  "normalization": "repeat species names for originally blank cells; original number notation retained in CSV; decimal comma used on slides; blank age shown as dash on slides"
+}

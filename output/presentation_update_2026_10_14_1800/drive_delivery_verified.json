@@ -1,0 +1,83 @@
+{
+  "checked_utc": "2026-10-14T18:10:35.555892+00:00",
+  "files": [
+    {
+      "path": "output/pdf/Apresentacao_Ensemble_v4_Auditoria_Atualizada_2026_10_14.pdf",
+      "bytes": 8769504,
+      "sha256": "6d367178226d0128fe4fe82f8cf07f9318f80a6130372220f563dc7d8e3b3ce8",
+      "drive": {
+        "id": "1gR8WYOwTbWrypyqtoA5O7bOv9SpXDI8c",
+        "title": "Apresentacao_Ensemble_v4_Auditoria_Atualizada_2026_10_14.pdf",
+        "mime_type": "application/pdf",
+        "size": "8769504",
+        "url": "https://drive.google.com/file/d/1gR8WYOwTbWrypyqtoA5O7bOv9SpXDI8c/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1gR8WYOwTbWrypyqtoA5O7bOv9SpXDI8c/view?usp=drivesdk",
+        "file_or_folder": "file",
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1BMKu5o_D7Gr6Jgvh3bJROSn8vJxGhoHB"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "remote_bytes_verified": true
+    },
+    {
+      "path": "output/presentation_update_2026_10_14_1800/Apresentacao_Ensemble_v4_Fontes_2026_10_14.zip",
+      "bytes": 10346513,
+      "sha256": "d670e8d0caee330779c43e7ce6a60734b49deff365c438fb9b15c6ae5cd14c81",
+      "drive": {
+        "id": "1Ev4Qp_2RY2s2j0rSnMTwaLc7PaZlDbd7",
+        "title": "Apresentacao_Ensemble_v4_Fontes_2026_10_14.zip",
+        "mime_type": "application/zip",
+        "size": "10346513",
+        "url": "https://drive.google.com/file/d/1Ev4Qp_2RY2s2j0rSnMTwaLc7PaZlDbd7/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1Ev4Qp_2RY2s2j0rSnMTwaLc7PaZlDbd7/view?usp=drivesdk",
+        "file_or_folder": "file",
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1BMKu5o_D7Gr6Jgvh3bJROSn8vJxGhoHB"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "remote_bytes_verified": true
+    },
+    {
+      "path": "reports/atualizacao_apresentacao_ensemble_2026_10_14_1800.md",
+      "bytes": 2552,
+      "sha256": "a203eac2939cc6bd7ea7466d9346b56216ae43feb66c26f223d730b1b52a845e",
+      "drive": {
+        "id": "1yQ5hgekV-cCQXG_D0dPF2aKcEfHl0hRf",
+        "title": "atualizacao_apresentacao_ensemble_2026_10_14_1800.md",
+        "mime_type": "text/markdown",
+        "size": "2552",
+        "url": "https://drive.google.com/file/d/1yQ5hgekV-cCQXG_D0dPF2aKcEfHl0hRf/view?usp=drivesdk",
+        "display_url": "https://drive.google.com/file/d/1yQ5hgekV-cCQXG_D0dPF2aKcEfHl0hRf/view?usp=drivesdk",
+        "file_or_folder": "file",
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1Uivv1ra0pjMX4QfkNdmlUzsPdkjE_QL_"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": null,
+        "source_visibility_status": "access_not_verified"
+      },
+      "remote_bytes_verified": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+,Aedes aegypti,Aedes albopictus,Aedes sierrensis,Anopheles albimanus,Anopheles dirus,Anopheles farauti,Anopheles freeborni,Anopheles gambiae,Anopheles minimus,Anopheles stephensi,Culex pipiens
+Aedes aegypti,0,0,0,0,1,1,0,1,0,1,0
+Aedes albopictus,0,0,0,0,0,0,1,0,0,0,0
+Aedes sierrensis,0,0,0,0,0,0,0,0,0,0,0
+Anopheles albimanus,0,0,0,0,0,0,0,0,0,0,0
+Anopheles dirus,0,0,0,0,0,0,0,0,0,0,0
+Anopheles farauti,0,0,0,0,0,0,0,0,0,0,0
+Anopheles freeborni,0,0,0,0,0,0,0,0,0,0,0
+Anopheles gambiae,0,0,0,0,0,0,0,0,0,0,0
+Anopheles minimus,1,0,0,1,0,0,0,0,1,1,0
+Anopheles stephensi,0,0,0,1,0,0,0,0,0,3,0
+Culex pipiens,0,0,4,0,0,0,0,0,0,0,0

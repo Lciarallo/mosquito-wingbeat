@@ -1,0 +1,21 @@
+domain,label,split,bucket,windows,files,groups
+figshare,Aedes aegypti,train,short,1867,1867,1
+figshare,unknown_mosquito,train,short,1077,1077,2
+mosquitosong,Aedes aegypti,challenge,long,294,172,2
+mosquitosong,Aedes aegypti,challenge,short,58,28,2
+mosquitosong,Aedes aegypti,train,long,122,98,2
+mosquitosong,Aedes aegypti,train,short,138,64,2
+mosquitosong,Aedes albopictus,train,long,267,169,1
+mosquitosong,Aedes albopictus,train,short,106,49,1
+mosquitosong,Aedes albopictus,validation,long,242,136,1
+mosquitosong,Aedes albopictus,validation,short,91,46,1
+mosquitosong,Anopheles dirus,train,long,95,85,1
+mosquitosong,Anopheles dirus,train,short,161,91,1
+mosquitosong,Anopheles dirus,validation,long,157,91,1
+mosquitosong,Anopheles dirus,validation,short,128,61,1
+mosquitosong,Culex quinquefasciatus,train,long,461,84,1
+mosquitosong,Culex quinquefasciatus,train,short,50,28,1
+mosquitosong,Culex quinquefasciatus,validation,long,318,90,1
+mosquitosong,Culex quinquefasciatus,validation,short,51,30,1
+ufrgs,Aedes aegypti,test,long,271,10,2
+ufrgs,not_aedes,test,long,146,5,1

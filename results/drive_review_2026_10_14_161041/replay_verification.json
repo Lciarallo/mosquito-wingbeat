@@ -1,0 +1,390 @@
+{
+  "completed_utc": "2026-10-14T16:20:49.829995+00:00",
+  "read_only_frozen_inputs_unchanged": true,
+  "changed_paths": [],
+  "received_audit_prediction_or_f0_mismatches": [
+    {
+      "file": "drive_audio.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes aegypti",
+      "received_f0": 588.8,
+      "replay_f0": 600.0
+    },
+    {
+      "file": "S_1_D_3_75.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes albopictus",
+      "received_f0": 530.0,
+      "replay_f0": 530.0
+    },
+    {
+      "file": "S_1_D_3_76.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes aegypti",
+      "received_f0": 503.8,
+      "replay_f0": 505.0
+    },
+    {
+      "file": "S_1_D_3_77.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes aegypti",
+      "received_f0": 487.5,
+      "replay_f0": 477.5
+    },
+    {
+      "file": "S_1_D_3_78.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes aegypti",
+      "received_f0": 615.0,
+      "replay_f0": 613.8
+    },
+    {
+      "file": "S_1_D_3_85.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes sierrensis",
+      "received_f0": 430.0,
+      "replay_f0": 430.0
+    },
+    {
+      "file": "S_1_D_3_87.wav",
+      "received_prediction": "Aedes aegypti",
+      "replay_prediction": "Aedes aegypti",
+      "received_f0": 497.5,
+      "replay_f0": 493.8
+    },
+    {
+      "file": "S_2_D_3_16.wav",
+      "received_prediction": "Aedes albopictus",
+      "replay_prediction": "Aedes albopictus",
+      "received_f0": 445.0,
+      "replay_f0": 442.5
+    },
+    {
+      "file": "S_2_D_3_17.wav",
+      "received_prediction": "Aedes albopictus",
+      "replay_prediction": "Aedes albopictus",
+      "received_f0": 518.8,
+      "replay_f0": 517.5
+    },
+    {
+      "file": "S_2_D_3_18.wav",
+      "received_prediction": "Aedes albopictus",
+      "replay_prediction": "Aedes albopictus",
+      "received_f0": 462.5,
+      "replay_f0": 460.0
+    },
+    {
+      "file": "S_7_D_3_15.wav",
+      "received_prediction": "Culex pipiens",
+      "replay_prediction": "Culex pipiens",
+      "received_f0": 612.5,
+      "replay_f0": 615.0
+    },
+    {
+      "file": "S_7_D_3_18.wav",
+      "received_prediction": "Culex pipiens",
+      "replay_prediction": "Culex pipiens",
+      "received_f0": 641.2,
+      "replay_f0": 640.0
+    },
+    {
+      "file": "S_8_D_3_14.wav",
+      "received_prediction": "Anopheles minimus",
+      "replay_prediction": "Anopheles minimus",
+      "received_f0": 631.2,
+      "replay_f0": 630.0
+    },
+    {
+      "file": "S_8_D_3_15.wav",
+      "received_prediction": "Anopheles minimus",
+      "replay_prediction": "Anopheles minimus",
+      "received_f0": 562.5,
+      "replay_f0": 555.0
+    },
+    {
+      "file": "S_8_D_3_16.wav",
+      "received_prediction": "Anopheles minimus",
+      "replay_prediction": "Anopheles minimus",
+      "received_f0": 556.2,
+      "replay_f0": 610.0
+    },
+    {
+      "file": "S_8_D_3_17.wav",
+      "received_prediction": "Anopheles minimus",
+      "replay_prediction": "Anopheles minimus",
+      "received_f0": 588.8,
+      "replay_f0": 592.5
+    },
+    {
+      "file": "S_8_D_3_18.wav",
+      "received_prediction": "Anopheles minimus",
+      "replay_prediction": "Anopheles minimus",
+      "received_f0": 585.0,
+      "replay_f0": 580.0
+    },
+    {
+      "file": "S_9_D_3_16.wav",
+      "received_prediction": "Anopheles stephensi",
+      "replay_prediction": "Anopheles stephensi",
+      "received_f0": 510.0,
+      "replay_f0": 480.0
+    },
+    {
+      "file": "S_9_D_3_17.wav",
+      "received_prediction": "Anopheles stephensi",
+      "replay_prediction": "Anopheles stephensi",
+      "received_f0": 560.0,
+      "replay_f0": 585.0
+    },
+    {
+      "file": "S_9_D_3_18.wav",
+      "received_prediction": "Anopheles stephensi",
+      "replay_prediction": "Anopheles stephensi",
+      "received_f0": 618.8,
+      "replay_f0": 620.0
+    }
+  ],
+  "scope_metrics": [
+    {
+      "n": 28,
+      "correct": 12,
+      "accuracy": 0.42857142857142855,
+      "balanced_accuracy": 0.4111111111111111,
+      "macro_f1_support_only": 0.39244264507422405,
+      "macro_f1_strict_union": 0.28031617505301715,
+      "macro_f1_support_minus_strict": 0.1121264700212069,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis",
+        "Anopheles farauti"
+      ],
+      "coverage": 0.9285714285714286,
+      "emitted": 26,
+      "accepted_accuracy": 0.46153846153846156,
+      "correct_emissions_over_all": 0.42857142857142855,
+      "accepted_output_is_candidate_mode": false,
+      "scope": "received_28",
+      "task": "species",
+      "version": "previous"
+    },
+    {
+      "n": 28,
+      "correct": 26,
+      "accuracy": 0.9285714285714286,
+      "balanced_accuracy": 0.9555555555555555,
+      "macro_f1_support_only": 0.9568181818181818,
+      "macro_f1_strict_union": 0.7973484848484849,
+      "macro_f1_support_minus_strict": 0.15946969696969693,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis"
+      ],
+      "coverage": 0.8928571428571429,
+      "emitted": 25,
+      "accepted_accuracy": 0.92,
+      "correct_emissions_over_all": 0.8214285714285714,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "received_28",
+      "task": "species",
+      "version": "current"
+    },
+    {
+      "n": 28,
+      "correct": 20,
+      "accuracy": 0.7142857142857143,
+      "balanced_accuracy": 0.5687830687830688,
+      "macro_f1_support_only": 0.5294117647058824,
+      "macro_f1_strict_union": 0.5294117647058824,
+      "macro_f1_support_minus_strict": 0.0,
+      "predicted_taxa_outside_support": [],
+      "coverage": 0.9642857142857143,
+      "emitted": 27,
+      "accepted_accuracy": 0.7037037037037037,
+      "correct_emissions_over_all": 0.6785714285714286,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "received_28",
+      "task": "genus",
+      "version": "previous"
+    },
+    {
+      "n": 28,
+      "correct": 26,
+      "accuracy": 0.9285714285714286,
+      "balanced_accuracy": 0.9259259259259259,
+      "macro_f1_support_only": 0.9361111111111112,
+      "macro_f1_strict_union": 0.9361111111111112,
+      "macro_f1_support_minus_strict": 0.0,
+      "predicted_taxa_outside_support": [],
+      "coverage": 0.9642857142857143,
+      "emitted": 27,
+      "accepted_accuracy": 0.9259259259259259,
+      "correct_emissions_over_all": 0.8928571428571429,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "received_28",
+      "task": "genus",
+      "version": "current"
+    },
+    {
+      "n": 17,
+      "correct": 6,
+      "accuracy": 0.35294117647058826,
+      "balanced_accuracy": 0.3,
+      "macro_f1_support_only": 0.3633333333333333,
+      "macro_f1_strict_union": 0.22708333333333333,
+      "macro_f1_support_minus_strict": 0.13624999999999995,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis",
+        "Anopheles dirus",
+        "NO_CANDIDATE"
+      ],
+      "coverage": 0.8235294117647058,
+      "emitted": 14,
+      "accepted_accuracy": 0.42857142857142855,
+      "correct_emissions_over_all": 0.35294117647058826,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "paired_17",
+      "task": "species",
+      "version": "previous"
+    },
+    {
+      "n": 17,
+      "correct": 6,
+      "accuracy": 0.35294117647058826,
+      "balanced_accuracy": 0.3,
+      "macro_f1_support_only": 0.3822222222222222,
+      "macro_f1_strict_union": 0.273015873015873,
+      "macro_f1_support_minus_strict": 0.1092063492063492,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis",
+        "NO_CANDIDATE"
+      ],
+      "coverage": 0.7058823529411765,
+      "emitted": 12,
+      "accepted_accuracy": 0.5,
+      "correct_emissions_over_all": 0.35294117647058826,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "paired_17",
+      "task": "species",
+      "version": "current"
+    },
+    {
+      "n": 17,
+      "correct": 7,
+      "accuracy": 0.4117647058823529,
+      "balanced_accuracy": 0.4166666666666667,
+      "macro_f1_support_only": 0.31851851851851853,
+      "macro_f1_strict_union": 0.2388888888888889,
+      "macro_f1_support_minus_strict": 0.07962962962962963,
+      "predicted_taxa_outside_support": [
+        "NO_CANDIDATE"
+      ],
+      "coverage": 0.8235294117647058,
+      "emitted": 14,
+      "accepted_accuracy": 0.5,
+      "correct_emissions_over_all": 0.4117647058823529,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "paired_17",
+      "task": "genus",
+      "version": "previous"
+    },
+    {
+      "n": 17,
+      "correct": 10,
+      "accuracy": 0.5882352941176471,
+      "balanced_accuracy": 0.625,
+      "macro_f1_support_only": 0.6262626262626262,
+      "macro_f1_strict_union": 0.4696969696969696,
+      "macro_f1_support_minus_strict": 0.15656565656565657,
+      "predicted_taxa_outside_support": [
+        "NO_CANDIDATE"
+      ],
+      "coverage": 0.7647058823529411,
+      "emitted": 13,
+      "accepted_accuracy": 0.6923076923076923,
+      "correct_emissions_over_all": 0.5294117647058824,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "paired_17",
+      "task": "genus",
+      "version": "current"
+    },
+    {
+      "n": 27,
+      "correct": 11,
+      "accuracy": 0.4074074074074074,
+      "balanced_accuracy": 0.4,
+      "macro_f1_support_only": 0.3812971342383107,
+      "macro_f1_strict_union": 0.2723550958845076,
+      "macro_f1_support_minus_strict": 0.10894203835380306,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis",
+        "Anopheles farauti"
+      ],
+      "coverage": 0.9259259259259259,
+      "emitted": 25,
+      "accepted_accuracy": 0.44,
+      "correct_emissions_over_all": 0.4074074074074074,
+      "accepted_output_is_candidate_mode": false,
+      "scope": "public_27",
+      "task": "species",
+      "version": "previous"
+    },
+    {
+      "n": 27,
+      "correct": 25,
+      "accuracy": 0.9259259259259259,
+      "balanced_accuracy": 0.95,
+      "macro_f1_support_only": 0.9532467532467532,
+      "macro_f1_strict_union": 0.7943722943722943,
+      "macro_f1_support_minus_strict": 0.15887445887445895,
+      "predicted_taxa_outside_support": [
+        "Aedes sierrensis"
+      ],
+      "coverage": 0.8888888888888888,
+      "emitted": 24,
+      "accepted_accuracy": 0.9166666666666666,
+      "correct_emissions_over_all": 0.8148148148148148,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "public_27",
+      "task": "species",
+      "version": "current"
+    },
+    {
+      "n": 27,
+      "correct": 19,
+      "accuracy": 0.7037037037037037,
+      "balanced_accuracy": 0.566951566951567,
+      "macro_f1_support_only": 0.5245098039215687,
+      "macro_f1_strict_union": 0.5245098039215687,
+      "macro_f1_support_minus_strict": 0.0,
+      "predicted_taxa_outside_support": [],
+      "coverage": 0.9629629629629629,
+      "emitted": 26,
+      "accepted_accuracy": 0.6923076923076923,
+      "correct_emissions_over_all": 0.6666666666666666,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "public_27",
+      "task": "genus",
+      "version": "previous"
+    },
+    {
+      "n": 27,
+      "correct": 25,
+      "accuracy": 0.9259259259259259,
+      "balanced_accuracy": 0.9259259259259259,
+      "macro_f1_support_only": 0.9345238095238096,
+      "macro_f1_strict_union": 0.9345238095238096,
+      "macro_f1_support_minus_strict": 0.0,
+      "predicted_taxa_outside_support": [],
+      "coverage": 0.9629629629629629,
+      "emitted": 26,
+      "accepted_accuracy": 0.9230769230769231,
+      "correct_emissions_over_all": 0.8888888888888888,
+      "accepted_output_is_candidate_mode": true,
+      "scope": "public_27",
+      "task": "genus",
+      "version": "current"
+    }
+  ],
+  "nested_v5_trained_artifacts_available": false,
+  "received_dryad_63_62_claim": "Not reproduced: no received v5 OOF predictions or trained/frozen v5 artifacts.",
+  "private_raw_audio_uploaded": false,
+  "parameters_retuned": false
+}

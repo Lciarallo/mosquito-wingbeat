@@ -3,6 +3,9 @@ data/archives/
 data/raw/
 data/noise/
 data/cache/
+data/external/
+results/expanded/models/*.joblib
+results/large_cnn/models/*.pt
 results/models/*.joblib
 results/improvements/models/*.joblib
 results/arduino/models/*.joblib
@@ -22,3 +25,14 @@ data/external_datasets/
 humbug_sample.wav
 humbug_sample.aac
 humbug_ann.txt
+
+results/multisource/models/*.pt
+results/aedes_binary/models/*.pt
+results/aedes_classical/models/*.joblib
+results/corrected_2026_10_01/**/*.joblib
+results/reproduction_2026_10_01/models/
+results/reproduction_2026_10_01/hard_negative/*.joblib
+results/reliability_2026_10_01/models/
+results/sex_balanced_reliability_2026_10_01/models/
+results/cross_domain_strategies_2026_10_03/models/
+results/species_nested_2026_10_09/models/

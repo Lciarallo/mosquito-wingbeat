@@ -1,0 +1,7 @@
+id,reference_species,windows,positive_windows,negative_windows,unknown_windows,forced_accuracy,forced_aedes_recall,forced_false_positive_rate,balanced_accuracy,auc,positive_emissions,true_positive_emissions,false_positive_emissions,emitted_aedes_precision,emitted_aedes_recall,emitted_false_positive_rate,known_coverage,accepted_accuracy,false_negative_emissions,unresolved_positive_emissions
+220428,Aedes aegypti,5,5,0,0,0.8,0.8,,,,4,4,0,1.0,0.8,,1.0,0.8,1,0
+220451,Aedes aegypti,7,7,0,0,1.0,1.0,,,,7,7,0,1.0,1.0,,1.0,1.0,0,0
+220482,Aedes aegypti,30,30,0,0,1.0,1.0,,,,30,30,0,1.0,1.0,,1.0,1.0,0,0
+206578,Anopheles arabiensis,5,0,5,0,1.0,,0.0,,,0,0,0,,,0.0,1.0,1.0,0,0
+2958,Anopheles dirus,3,0,3,0,1.0,,0.0,,,0,0,0,,,0.0,1.0,1.0,0,0
+2330,Anopheles gambiae,5,0,5,0,0.6,,0.4,,,1,0,1,0.0,,0.2,0.8,0.75,0,0

@@ -1,0 +1,92 @@
+{
+  "parameters": {
+    "weights": [
+      0.13288565956089854,
+      0.1919312950130657,
+      0.6751830454260358
+    ],
+    "log_prior": [
+      -0.34898882804706893,
+      0.5185777804197526,
+      1.7394847497334247,
+      1.5454342191200368,
+      -0.7582154256496347,
+      0.0954238392034853,
+      0.06272181832007598,
+      -0.8079779687488797,
+      -0.880091556708582,
+      -0.7267866089245992,
+      -0.41979755945571884,
+      1.228577721855903,
+      -0.7254318013777546,
+      0.15340682731108202,
+      0.1412397994910405,
+      -0.7184660449638827,
+      -1.1023246332473127,
+      0.5179420867164604,
+      0.3585876024396687,
+      0.12668398251250326
+    ],
+    "loss": 1.427000922301206,
+    "iterations": 14,
+    "converged": true,
+    "partition": "calibration",
+    "geographic_prior": false
+  },
+  "thresholds": {
+    "svm": {
+      "threshold": 0.38392913341522217,
+      "calibration_emitted": 40,
+      "calibration_accuracy": 0.9,
+      "calibration_groups": 82,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "extra_trees": {
+      "threshold": 1.000001,
+      "calibration_emitted": 0,
+      "calibration_accuracy": null,
+      "calibration_groups": 82,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "hist_gradient_boosting": {
+      "threshold": 0.3358026146888733,
+      "calibration_emitted": 56,
+      "calibration_accuracy": 0.9107142857142857,
+      "calibration_groups": 82,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "fixed": {
+      "threshold": 0.2913866639137268,
+      "calibration_emitted": 52,
+      "calibration_accuracy": 0.9038461538461539,
+      "calibration_groups": 82,
+      "target": 0.9,
+      "minimum_emissions": 20
+    },
+    "calibrated": {
+      "threshold": 0.2620666097164914,
+      "calibration_emitted": 60,
+      "calibration_accuracy": 0.9,
+      "calibration_groups": 82,
+      "target": 0.9,
+      "minimum_emissions": 20
+    }
+  },
+  "partitions": {
+    "fit": {
+      "rows": 12571,
+      "groups": 297
+    },
+    "calibration": {
+      "rows": 3291,
+      "groups": 82
+    },
+    "test": {
+      "rows": 8015,
+      "groups": 190
+    }
+  }
+}

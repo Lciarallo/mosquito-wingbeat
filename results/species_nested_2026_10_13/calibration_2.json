@@ -1,0 +1,188 @@
+{
+  "pooling": {
+    "top_fraction": 0.25,
+    "candidates": [
+      {
+        "top_fraction": 0.25,
+        "n": 120,
+        "correct": 51,
+        "accuracy": 0.425,
+        "balanced_accuracy": 0.6753176171654433,
+        "macro_f1_support_only": 0.5757705603206452,
+        "macro_f1_strict_union": 0.5757705603206452,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 120,
+        "accepted_accuracy": 0.425,
+        "correct_emissions_over_all": 0.425
+      },
+      {
+        "top_fraction": 0.5,
+        "n": 120,
+        "correct": 53,
+        "accuracy": 0.44166666666666665,
+        "balanced_accuracy": 0.6195438076416337,
+        "macro_f1_support_only": 0.5436285009606244,
+        "macro_f1_strict_union": 0.5436285009606244,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 120,
+        "accepted_accuracy": 0.44166666666666665,
+        "correct_emissions_over_all": 0.44166666666666665
+      },
+      {
+        "top_fraction": 1.0,
+        "n": 120,
+        "correct": 57,
+        "accuracy": 0.475,
+        "balanced_accuracy": 0.6461138559508125,
+        "macro_f1_support_only": 0.5911561222251395,
+        "macro_f1_strict_union": 0.5911561222251395,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 120,
+        "accepted_accuracy": 0.475,
+        "correct_emissions_over_all": 0.475
+      }
+    ],
+    "partition": "calibration",
+    "objective": "recording balanced accuracy, strict F1, larger fraction as tie-break"
+  },
+  "presence_pooling": {
+    "top_fraction": 0.25,
+    "candidates": [
+      {
+        "top_fraction": 0.25,
+        "n": 126,
+        "correct": 124,
+        "accuracy": 0.9841269841269841,
+        "balanced_accuracy": 0.9125000000000001,
+        "macro_f1_support_only": 0.9125000000000001,
+        "macro_f1_strict_union": 0.9125000000000001,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 126,
+        "accepted_accuracy": 0.9841269841269841,
+        "correct_emissions_over_all": 0.9841269841269841
+      },
+      {
+        "top_fraction": 0.5,
+        "n": 126,
+        "correct": 122,
+        "accuracy": 0.9682539682539683,
+        "balanced_accuracy": 0.825,
+        "macro_f1_support_only": 0.825,
+        "macro_f1_strict_union": 0.825,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 126,
+        "accepted_accuracy": 0.9682539682539683,
+        "correct_emissions_over_all": 0.9682539682539683
+      },
+      {
+        "top_fraction": 1.0,
+        "n": 126,
+        "correct": 124,
+        "accuracy": 0.9841269841269841,
+        "balanced_accuracy": 0.8333333333333333,
+        "macro_f1_support_only": 0.8958677685950414,
+        "macro_f1_strict_union": 0.8958677685950414,
+        "macro_f1_support_minus_strict": 0.0,
+        "predicted_taxa_outside_support": [],
+        "coverage": 1.0,
+        "emitted": 126,
+        "accepted_accuracy": 0.9841269841269841,
+        "correct_emissions_over_all": 0.9841269841269841
+      }
+    ],
+    "partition": "calibration",
+    "objective": "recording balanced accuracy, strict F1, larger fraction as tie-break"
+  },
+  "threshold_presence": {
+    "threshold": 0.8152065615349432,
+    "calibration_balanced_accuracy": 0.9291666666666667,
+    "calibration_fpr": 0.0,
+    "positive_groups": 120,
+    "negative_groups": 6,
+    "fpr_target": 0.05
+  },
+  "temperatures": [
+    2.3651506215304128,
+    0.5882614542629636,
+    1.3580132859999514
+  ],
+  "parameters": {
+    "weights": [
+      0.00015051286862895953,
+      0.2752515946813767,
+      0.7245978924499943
+    ],
+    "log_prior": [
+      -0.2579617213531341,
+      1.9073808485250334,
+      0.4762216178959926,
+      1.2168617379463629,
+      -0.847097774292703,
+      0.47242267535384636,
+      1.3433679999203119,
+      -1.0173670237359207,
+      -0.8808778139145688,
+      -1.2730451439759911,
+      -0.7568185992614909,
+      1.1855746548072574,
+      -1.0182615154261991,
+      0.16425027727679162,
+      0.5325415678000317,
+      -1.022212060030842,
+      0.21011374474319683,
+      0.29595433298584656,
+      -0.10535570721774604,
+      -0.6256920980460768
+    ],
+    "loss": 1.2232335814755317,
+    "iterations": 22,
+    "converged": true,
+    "partition": "calibration",
+    "geographic_prior": false
+  },
+  "timings": [
+    {
+      "member": "svm",
+      "seconds": 44.58535736599879,
+      "temperature": 2.3651506215304128
+    },
+    {
+      "member": "extra_trees",
+      "seconds": 75.39447444400867,
+      "temperature": 0.5882614542629636
+    },
+    {
+      "member": "hist_gradient_boosting",
+      "seconds": 114.78217922800104,
+      "temperature": 1.3580132859999514
+    }
+  ],
+  "threshold_species": {
+    "threshold": 0.5903517539348011,
+    "calibration_groups": 120,
+    "calibration_emitted": 20,
+    "calibration_accuracy": 0.9,
+    "target": 0.9,
+    "minimum_emissions": 20,
+    "calibration_emitted_collision_blocks": 20
+  },
+  "threshold_genus": {
+    "threshold": 0.0,
+    "calibration_groups": 120,
+    "calibration_emitted": 120,
+    "calibration_accuracy": 0.9166666666666666,
+    "target": 0.9,
+    "minimum_emissions": 20,
+    "calibration_emitted_collision_blocks": 68
+  }
+}

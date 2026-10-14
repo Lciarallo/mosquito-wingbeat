@@ -1,0 +1,27 @@
+[
+  {
+    "deleteObject": {
+      "objectId": "ifsc_slide_07"
+    }
+  },
+  {
+    "deleteObject": {
+      "objectId": "ifsc_slide_11"
+    }
+  },
+  {
+    "deleteObject": {
+      "objectId": "ifsc_slide_14"
+    }
+  },
+  {
+    "deleteObject": {
+      "objectId": "ifsc_slide_15"
+    }
+  },
+  {
+    "deleteObject": {
+      "objectId": "ifsc_slide_17"
+    }
+  }
+]

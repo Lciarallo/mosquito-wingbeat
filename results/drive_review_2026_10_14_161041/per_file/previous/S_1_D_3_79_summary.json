@@ -1,0 +1,395 @@
+{
+  "audio_file": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/species_nested_fresh_2026_10_09/S_1_D_3_79.wav",
+  "duration_seconds": 29.26,
+  "emulate_arduino_mic": false,
+  "region_prior": "global",
+  "total_windows": 57,
+  "detected_windows": 31,
+  "aedes_swarm_windows": 26,
+  "active_ratio_pct": 54.39,
+  "swarm_ratio_pct": 45.61,
+  "mosquito_present": true,
+  "aedes_swarm_detected": true,
+  "median_flight_f0_hz": 675.0,
+  "iqr_flight_f0_hz": 45.0,
+  "primary_genus": "Aedes",
+  "confirmed_genus": "Aedes",
+  "primary_species": "Aedes aegypti",
+  "confirmed_species": "Aedes aegypti",
+  "genus_distribution": {
+    "Aedes": 23,
+    "Anopheles": 8
+  },
+  "species_distribution": {
+    "Aedes aegypti": 13,
+    "Aedes sierrensis": 6,
+    "Anopheles dirus": 3,
+    "Aedes albopictus": 3,
+    "Anopheles albimanus": 2,
+    "Anopheles minimus": 2,
+    "Anopheles farauti": 2
+  },
+  "temporal_intervals": [
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": true,
+      "start_s": 0.0,
+      "end_s": 9.49,
+      "duration_s": 9.49,
+      "windows_count": 18,
+      "median_f0_hz": 692.5,
+      "median_aedes_snr_db": 5.55,
+      "mean_presence_score": 0.7941,
+      "dominant_species": "Aedes aegypti"
+    },
+    {
+      "segment_type": "PASSAGEM_CURTA_ISOLADA",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 9.0,
+      "end_s": 9.99,
+      "duration_s": 0.99,
+      "windows_count": 1,
+      "median_f0_hz": 702.5,
+      "median_aedes_snr_db": 0.23,
+      "mean_presence_score": 0.74,
+      "dominant_species": "Anopheles minimus"
+    },
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 9.5,
+      "end_s": 13.99,
+      "duration_s": 4.49,
+      "windows_count": 8,
+      "median_f0_hz": 640.0,
+      "median_aedes_snr_db": -13.68,
+      "mean_presence_score": 0.0866,
+      "dominant_species": null
+    },
+    {
+      "segment_type": "PASSAGEM_CURTA_ISOLADA",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 13.5,
+      "end_s": 14.99,
+      "duration_s": 1.49,
+      "windows_count": 2,
+      "median_f0_hz": 630.0,
+      "median_aedes_snr_db": 0.2,
+      "mean_presence_score": 0.8293,
+      "dominant_species": "Anopheles farauti"
+    },
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": true,
+      "start_s": 14.5,
+      "end_s": 16.99,
+      "duration_s": 2.49,
+      "windows_count": 4,
+      "median_f0_hz": 652.5,
+      "median_aedes_snr_db": 3.63,
+      "mean_presence_score": 0.8467,
+      "dominant_species": "Aedes albopictus"
+    },
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 16.5,
+      "end_s": 20.99,
+      "duration_s": 4.49,
+      "windows_count": 8,
+      "median_f0_hz": 675.0,
+      "median_aedes_snr_db": -15.14,
+      "mean_presence_score": 0.0296,
+      "dominant_species": null
+    },
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 20.5,
+      "end_s": 21.49,
+      "duration_s": 0.99,
+      "windows_count": 1,
+      "median_f0_hz": 685.0,
+      "median_aedes_snr_db": 5.08,
+      "mean_presence_score": 0.7783,
+      "dominant_species": "Aedes sierrensis"
+    },
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 21.0,
+      "end_s": 22.99,
+      "duration_s": 1.99,
+      "windows_count": 3,
+      "median_f0_hz": 562.5,
+      "median_aedes_snr_db": -13.59,
+      "mean_presence_score": 0.1616,
+      "dominant_species": null
+    },
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 22.5,
+      "end_s": 23.49,
+      "duration_s": 0.99,
+      "windows_count": 1,
+      "median_f0_hz": 520.0,
+      "median_aedes_snr_db": 2.63,
+      "mean_presence_score": 0.7958,
+      "dominant_species": "Aedes aegypti"
+    },
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 23.0,
+      "end_s": 24.49,
+      "duration_s": 1.49,
+      "windows_count": 2,
+      "median_f0_hz": 650.0,
+      "median_aedes_snr_db": -13.14,
+      "mean_presence_score": 0.0045,
+      "dominant_species": null
+    },
+    {
+      "segment_type": "PASSAGEM_CURTA_ISOLADA",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 24.0,
+      "end_s": 24.99,
+      "duration_s": 0.99,
+      "windows_count": 1,
+      "median_f0_hz": 525.0,
+      "median_aedes_snr_db": -0.05,
+      "mean_presence_score": 0.7705,
+      "dominant_species": "Anopheles dirus"
+    },
+    {
+      "segment_type": "ENXAME_AEDES_PRESENTE",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 24.5,
+      "end_s": 26.49,
+      "duration_s": 1.99,
+      "windows_count": 3,
+      "median_f0_hz": 655.0,
+      "median_aedes_snr_db": 5.09,
+      "mean_presence_score": 0.8079,
+      "dominant_species": "Aedes aegypti"
+    },
+    {
+      "segment_type": "PASSAGEM_CURTA_ISOLADA",
+      "aedes_present": true,
+      "is_sustained_swarm": false,
+      "start_s": 26.0,
+      "end_s": 26.99,
+      "duration_s": 0.99,
+      "windows_count": 1,
+      "median_f0_hz": 400.0,
+      "median_aedes_snr_db": 8.39,
+      "mean_presence_score": 0.9247,
+      "dominant_species": "Anopheles minimus"
+    },
+    {
+      "segment_type": "AUSENTE_RUIDO_FUNDO",
+      "aedes_present": false,
+      "is_sustained_swarm": false,
+      "start_s": 26.5,
+      "end_s": 28.99,
+      "duration_s": 2.49,
+      "windows_count": 4,
+      "median_f0_hz": 566.2,
+      "median_aedes_snr_db": -14.46,
+      "mean_presence_score": 0.2323,
+      "dominant_species": null
+    }
+  ],
+  "swarm_timeline": [
+    {
+      "start_s": 0.0,
+      "end_s": 9.0,
+      "duration_s": 9.0,
+      "swarm_present": true,
+      "median_f0_hz": 692.5,
+      "mean_aedes_snr_db": 6.008888888888888,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 9.0,
+      "end_s": 9.5,
+      "duration_s": 0.5,
+      "swarm_present": false,
+      "median_f0_hz": 702.5,
+      "mean_aedes_snr_db": 0.23,
+      "segment_type": "PASSAGEM_CURTA_ISOLADA"
+    },
+    {
+      "start_s": 9.5,
+      "end_s": 13.5,
+      "duration_s": 4.0,
+      "swarm_present": false,
+      "median_f0_hz": 640.0,
+      "mean_aedes_snr_db": -13.22625,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    },
+    {
+      "start_s": 13.5,
+      "end_s": 14.5,
+      "duration_s": 1.0,
+      "swarm_present": false,
+      "median_f0_hz": 630.0,
+      "mean_aedes_snr_db": 0.2,
+      "segment_type": "PASSAGEM_CURTA_ISOLADA"
+    },
+    {
+      "start_s": 14.5,
+      "end_s": 16.5,
+      "duration_s": 2.0,
+      "swarm_present": true,
+      "median_f0_hz": 652.5,
+      "mean_aedes_snr_db": 3.7399999999999993,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 16.5,
+      "end_s": 20.5,
+      "duration_s": 4.0,
+      "swarm_present": false,
+      "median_f0_hz": 675.0,
+      "mean_aedes_snr_db": -13.838750000000001,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    },
+    {
+      "start_s": 20.5,
+      "end_s": 21.0,
+      "duration_s": 0.5,
+      "swarm_present": true,
+      "median_f0_hz": 685.0,
+      "mean_aedes_snr_db": 5.08,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 21.0,
+      "end_s": 22.5,
+      "duration_s": 1.5,
+      "swarm_present": false,
+      "median_f0_hz": 562.5,
+      "mean_aedes_snr_db": -10.163333333333334,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    },
+    {
+      "start_s": 22.5,
+      "end_s": 23.0,
+      "duration_s": 0.5,
+      "swarm_present": true,
+      "median_f0_hz": 520.0,
+      "mean_aedes_snr_db": 2.63,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 23.0,
+      "end_s": 24.0,
+      "duration_s": 1.0,
+      "swarm_present": false,
+      "median_f0_hz": 650.0,
+      "mean_aedes_snr_db": -13.14,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    },
+    {
+      "start_s": 24.0,
+      "end_s": 24.5,
+      "duration_s": 0.5,
+      "swarm_present": false,
+      "median_f0_hz": 525.0,
+      "mean_aedes_snr_db": -0.05,
+      "segment_type": "PASSAGEM_CURTA_ISOLADA"
+    },
+    {
+      "start_s": 24.5,
+      "end_s": 26.0,
+      "duration_s": 1.5,
+      "swarm_present": true,
+      "median_f0_hz": 655.0,
+      "mean_aedes_snr_db": 4.833333333333333,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 26.0,
+      "end_s": 26.5,
+      "duration_s": 0.5,
+      "swarm_present": false,
+      "median_f0_hz": 400.0,
+      "mean_aedes_snr_db": 8.39,
+      "segment_type": "PASSAGEM_CURTA_ISOLADA"
+    },
+    {
+      "start_s": 26.5,
+      "end_s": 28.992,
+      "duration_s": 2.492,
+      "swarm_present": false,
+      "median_f0_hz": 566.2,
+      "mean_aedes_snr_db": -14.3925,
+      "segment_type": "AUSENTE_RUIDO_FUNDO"
+    }
+  ],
+  "swarm_active_intervals": [
+    {
+      "start_s": 0.0,
+      "end_s": 9.0,
+      "duration_s": 9.0,
+      "swarm_present": true,
+      "median_f0_hz": 692.5,
+      "mean_aedes_snr_db": 6.008888888888888,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 14.5,
+      "end_s": 16.5,
+      "duration_s": 2.0,
+      "swarm_present": true,
+      "median_f0_hz": 652.5,
+      "mean_aedes_snr_db": 3.7399999999999993,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 20.5,
+      "end_s": 21.0,
+      "duration_s": 0.5,
+      "swarm_present": true,
+      "median_f0_hz": 685.0,
+      "mean_aedes_snr_db": 5.08,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 22.5,
+      "end_s": 23.0,
+      "duration_s": 0.5,
+      "swarm_present": true,
+      "median_f0_hz": 520.0,
+      "mean_aedes_snr_db": 2.63,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    },
+    {
+      "start_s": 24.5,
+      "end_s": 26.0,
+      "duration_s": 1.5,
+      "swarm_present": true,
+      "median_f0_hz": 655.0,
+      "mean_aedes_snr_db": 4.833333333333333,
+      "segment_type": "ENXAME_AEDES_PRESENTE"
+    }
+  ],
+  "timeline_resolution_s": 0.5,
+  "analysis_window_s": 0.992,
+  "unanalysed_tail_s": 0.265125,
+  "timeline_interpretation": "Estimated offline classifier decisions, not entomological ground truth; interval smoothing uses the next window."
+}

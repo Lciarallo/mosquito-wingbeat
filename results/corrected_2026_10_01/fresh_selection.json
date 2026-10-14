@@ -1,0 +1,239 @@
+{
+  "selection_utc": "2026-10-01T19:26:16.617590+00:00",
+  "frozen_utc": "2026-10-01T19:22:43.947457+00:00",
+  "model_hashes": {
+    "results/corrected_2026_10_01/models_trees/lightgbm.joblib": "3c4710d71b011e2c33ffb14b08e66cded5bf4d0147f104782138bf2a811bcee7",
+    "results/corrected_2026_10_01/models_trees/hist_gradient_boosting.joblib": "6dcfa3fac4e7c2a8b5d29f93340022a6c7a75bff18824a8bad517b68a26aea8e",
+    "results/corrected_2026_10_01/models_trees/extra_trees.joblib": "1aca2d0f67475e7f54671dbb054eccfb134ff15512eb66bec6c49cd30f8dfa10",
+    "results/corrected_2026_10_01/models_trees/random_forest.joblib": "3ad15ffe6b7348a3a365620089d63d26743a8ea4bdeca2fb9fa62a87ef508420",
+    "results/corrected_2026_10_01/models_committee/committees_bundle.joblib": "42a5d9dffe2e4809d1165fd42e861f98e97897c6603a537249cf20361a121b2f",
+    "results/corrected_2026_10_01/models_committee/corrected_bundle.joblib": "b313cb36a025ceb69824f86767d7683f278a5cecefd60c51ae8b9d77f22c3f8c",
+    "results/models_deep/deep_hybrid_net.pt": "376934c58916177fc741e036024d377eb6ac0c0eea5f296165c8e443d1d7d6d3",
+    "results/aedes_classical/models/logistic.joblib": "98e44c8ab00a4aa7ef2eb8445f19854f83684a01cb78c9fe6250f5d4b7811a1c",
+    "results/aedes_classical/models/svm_rbf.joblib": "e8bda408122737969890b77e023e529ff3902049c7817ccb85b13600b6fd46b1",
+    "results/aedes_classical/models/extra_trees.joblib": "2686a629ab7934e320181f3530ec4959a81b51f4780f0c1d62bb379418bd6744",
+    "results/aedes_classical/models/gradient_boosting.joblib": "b34cfa51e20242632e09ff3c1fc13cb1a751c0113a1476ce8e429bf02c5c9554"
+  },
+  "rule": "All 12 previously unused MosquitoSong environmental/fan controls; first three unused HumBug negative recording groups ordered by species/id, year>=2018. Up to three unused positive groups by same rule; report lack of candidates without relabelling or reusing a recording.",
+  "positive_groups_available": 0,
+  "negative_groups": 3,
+  "positive_limitation": "No unused HumBug Aedes recording groups satisfying the duration rule remain; this fresh acoustic set cannot estimate Aedes sensitivity.",
+  "sources": [
+    "https://github.com/akaraspt/mosquitosongp",
+    "https://zenodo.org/records/4904800"
+  ],
+  "planned_noise_files": [
+    {
+      "id": "1-kw-YIT-ja5ev2APhvu8kZ1RCxQrXKtt",
+      "name": "30cm_GrassCutterFrontBroom_normalized_16bit.wav"
+    },
+    {
+      "id": "1YjiPqo1cH78eRWUNC_PVitJF1oYx1NlS",
+      "name": "30cm_GrassCutter_normalized_16bit.wav"
+    },
+    {
+      "id": "1XLOFoWelOjlJr2kieHK4sgasV2WhCGcz",
+      "name": "30cm_animals_normalized_16bit.wav"
+    },
+    {
+      "id": "1s9C7m4iZn9NArG97vYxpGBwNWpsPBKUS",
+      "name": "30cm_broom_normalized_16bit.wav"
+    },
+    {
+      "id": "19eiZ04Xz1-FtUUhsTo5D2kLaZMT2rexW",
+      "name": "30cm_grasscutting_normalized_16bit.wav"
+    },
+    {
+      "id": "1aM4jVWYSQwzuCRLkHhgIo1E5DIGahR6p",
+      "name": "30cm_motorcycle_normalized_16bit.wav"
+    },
+    {
+      "id": "1USzO-14JlEz18UaHs1wwf1Dkkz0Nkw9W",
+      "name": "30cm_watering2_normalized_16bit.wav"
+    },
+    {
+      "id": "1cMJv4OiTk8y3GHOEUANbFqhN8RWEjI29",
+      "name": "30cm_watering_normalized_16bit.wav"
+    },
+    {
+      "id": "14sSMK1isXd84S3sOA_V01LHuz07lhLjk",
+      "name": "BioQuip CDC 30cm low_normalized_16bit.wav"
+    },
+    {
+      "id": "1k5HS2LmnX3hdgwhNpNe6ahkZBHf6Sa9R",
+      "name": "BioQuip CDC 30cm top_normalized_16bit.wav"
+    },
+    {
+      "id": "1CKg9fjRjqbkBbhJxVF-dZNUNoknOX9my",
+      "name": "JW CDC 30cm low_normalized_16bit.wav"
+    },
+    {
+      "id": "1gVLg0ZHGNSf2nz-DVBtli67tOvDta4Py",
+      "name": "JW CDC 30cm top_normalized_16bit.wav"
+    }
+  ],
+  "planned_humbug_ids": [
+    206579,
+    206590,
+    206597
+  ],
+  "files": [
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_GrassCutterFrontBroom_normalized_16bit.wav",
+      "sha256": "5adce694a06c4da0596c17d21ba2f563e3c2b535093fe00d9885c9d0131bcefa",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|GrassCutterFrontBroom",
+      "source_id": "1-kw-YIT-ja5ev2APhvu8kZ1RCxQrXKtt",
+      "seconds": 26.212875,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_GrassCutter_normalized_16bit.wav",
+      "sha256": "d3a0038d39da08470d3a64902e85e0b00d6e06cc2cbdd522750de9453cac6b42",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|GrassCutter",
+      "source_id": "1YjiPqo1cH78eRWUNC_PVitJF1oYx1NlS",
+      "seconds": 11.889875,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_animals_normalized_16bit.wav",
+      "sha256": "bc1cbdd5adb855c0381b819231b60b036f8e6c898cbdec2e44a9d4ffa9a79f53",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|animals",
+      "source_id": "1XLOFoWelOjlJr2kieHK4sgasV2WhCGcz",
+      "seconds": 14.5915,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_broom_normalized_16bit.wav",
+      "sha256": "05908b36e9ebd18a58d24d07522400a72923241ff9e55331efe7b4226d571fde",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|broom",
+      "source_id": "1s9C7m4iZn9NArG97vYxpGBwNWpsPBKUS",
+      "seconds": 19.401875,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_grasscutting_normalized_16bit.wav",
+      "sha256": "9046fe2236526e76216a915d348a6c7cad1daa5e240f3874c088cead95466ec8",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|grasscutting",
+      "source_id": "19eiZ04Xz1-FtUUhsTo5D2kLaZMT2rexW",
+      "seconds": 22.89075,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_motorcycle_normalized_16bit.wav",
+      "sha256": "296a3b000afba255c38971276f0f238064a25a7be12eebbbfd4b16251e92e144",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|motorcycle",
+      "source_id": "1aM4jVWYSQwzuCRLkHhgIo1E5DIGahR6p",
+      "seconds": 19.067375,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_watering2_normalized_16bit.wav",
+      "sha256": "db4ad27e706a786a72906c5f3331d6a2930d774694fa28e375723a46ab509ab3",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|watering2",
+      "source_id": "1USzO-14JlEz18UaHs1wwf1Dkkz0Nkw9W",
+      "seconds": 33.40325,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/30cm_watering_normalized_16bit.wav",
+      "sha256": "497b8800d1ca92ed714ac4420406c752bc4054867b663359803eaa3f0db7db3f",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|watering",
+      "source_id": "1cMJv4OiTk8y3GHOEUANbFqhN8RWEjI29",
+      "seconds": 10.58075,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/BioQuip CDC 30cm low_normalized_16bit.wav",
+      "sha256": "ad7f3babddd0bc4c8428cadfe8307bfb77ff536a6a8cd4626b1db349cf4c2cd2",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|BioQuip CDC 30cm low",
+      "source_id": "14sSMK1isXd84S3sOA_V01LHuz07lhLjk",
+      "seconds": 0.4,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/BioQuip CDC 30cm top_normalized_16bit.wav",
+      "sha256": "fcc872193cc191bdc2ad90ae835616018f7d17f809e365110c9fa989b2eca644",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|BioQuip CDC 30cm top",
+      "source_id": "1k5HS2LmnX3hdgwhNpNe6ahkZBHf6Sa9R",
+      "seconds": 1.3,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/JW CDC 30cm low_normalized_16bit.wav",
+      "sha256": "4937474c1bfe08325051752df8e165abbb1f9d4fcd48ea4142f79404c91ae162",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|JW CDC 30cm low",
+      "source_id": "1CKg9fjRjqbkBbhJxVF-dZNUNoknOX9my",
+      "seconds": 3.2,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/JW CDC 30cm top_normalized_16bit.wav",
+      "sha256": "ce6b34fcd31e11f3c8542d1329a729de609b4ff4f4ece7fb12b253172834bf36",
+      "reference_aedes": false,
+      "reference_species": "environmental_noise",
+      "group": "mosquitosong_noise|JW CDC 30cm top",
+      "source_id": "1gVLg0ZHGNSf2nz-DVBtli67tOvDta4Py",
+      "seconds": 1.1,
+      "source": "MosquitoSong environmental/fan recording"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/206579.wav",
+      "sha256": "5f8bffcdac15886d849ee5ad899f45b24aaade5fb816b302985fa162db11863d",
+      "reference_aedes": false,
+      "reference_species": "Anopheles arabiensis",
+      "group": "Tanzania|16-11-20 19:55|2020-11-16_19.55.07.518.wav",
+      "id": 206579,
+      "seconds": 2.56,
+      "source": "HumBug",
+      "mic_type": "phone",
+      "country": "Tanzania"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/206590.wav",
+      "sha256": "7b53e34c2b408543bc7f7f2a68afc7827fea3792a306c50e56ba797fe8839ab6",
+      "reference_aedes": false,
+      "reference_species": "Anopheles arabiensis",
+      "group": "Tanzania|16-11-20 19:24|2020-11-16_19.24.31.280.wav",
+      "id": 206590,
+      "seconds": 2.559875,
+      "source": "HumBug",
+      "mic_type": "phone",
+      "country": "Tanzania"
+    },
+    {
+      "path": "data/external/corrected_fresh_2026_10_01/206597.wav",
+      "sha256": "78ba3c7818b6fa1beb867dc7ad3481f8eb67408e3a26e60da8ed2d86cbbcde3a",
+      "reference_aedes": false,
+      "reference_species": "Anopheles arabiensis",
+      "group": "Tanzania|17-11-20 19:32|2020-11-17_19.32.46.734.wav",
+      "id": 206597,
+      "seconds": 2.56,
+      "source": "HumBug",
+      "mic_type": "phone",
+      "country": "Tanzania"
+    }
+  ],
+  "download_complete_utc": "2026-10-01T19:26:33.861930+00:00"
+}

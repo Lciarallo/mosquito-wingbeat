@@ -1,0 +1,11 @@
+path,start_s,step_s,quality_ok,model,state,forced_species,identified_species,presence_score,class_score
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.0,0.992,True,baseline,INCERTO,Anopheles albimanus,-,0.7479134,0.21090505
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.992,0.992,True,baseline,INCERTO,Anopheles albimanus,-,0.87387305,0.2959214
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,1.984,0.992,True,baseline,INCERTO,Anopheles albimanus,-,0.91895497,0.33121422
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,2.976,0.992,True,baseline,INCERTO,Anopheles albimanus,-,0.75903493,0.2299026
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,3.968,0.992,True,baseline,INCERTO,Anopheles albimanus,-,0.8284705,0.30327442
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.0,0.992,True,expanded,SEM_EVIDENCIA,Anopheles albimanus,-,0.4794378,0.17916697
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.992,0.992,True,expanded,INCERTO,Anopheles arabiensis,-,0.8370145,0.17838556
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,1.984,0.992,True,expanded,INCERTO,Anopheles arabiensis,-,0.85491496,0.29310104
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,2.976,0.992,True,expanded,INCERTO,Anopheles albimanus,-,0.7984703,0.16149841
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,3.968,0.992,True,expanded,INCERTO,Anopheles albimanus,-,0.750565,0.15850666

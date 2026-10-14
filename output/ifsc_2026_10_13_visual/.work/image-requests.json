@@ -1,0 +1,167 @@
+[
+  {
+    "createImage": {
+      "objectId": "visual_photo_aedes_repouso_png",
+      "url": "https://www.cdc.gov/mosquitoes/media/images/Aedesaegyptiadultmosquito.png",
+      "elementProperties": {
+        "pageObjectId": "ifsc_slide_02",
+        "size": {
+          "width": {
+            "magnitude": 298,
+            "unit": "PT"
+          },
+          "height": {
+            "magnitude": 167.625,
+            "unit": "PT"
+          }
+        },
+        "transform": {
+          "scaleX": 1,
+          "scaleY": 1,
+          "translateX": 280,
+          "translateY": 97,
+          "unit": "PT"
+        }
+      }
+    }
+  },
+  {
+    "updatePageElementAltText": {
+      "objectId": "visual_photo_aedes_repouso_png",
+      "title": "CDC: fêmea de Aedes aegypti em repouso",
+      "description": "CDC: fêmea de Aedes aegypti em repouso. Fonte: https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html"
+    }
+  },
+  {
+    "createImage": {
+      "objectId": "visual_photo_aedes_aegypti_jpg",
+      "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Aedes-aegypti-female-after-feeding-16-9.jpg",
+      "elementProperties": {
+        "pageObjectId": "ifsc_slide_03",
+        "size": {
+          "width": {
+            "magnitude": 173,
+            "unit": "PT"
+          },
+          "height": {
+            "magnitude": 97.3125,
+            "unit": "PT"
+          }
+        },
+        "transform": {
+          "scaleX": 1,
+          "scaleY": 1,
+          "translateX": 31,
+          "translateY": 213,
+          "unit": "PT"
+        }
+      }
+    }
+  },
+  {
+    "updatePageElementAltText": {
+      "objectId": "visual_photo_aedes_aegypti_jpg",
+      "title": "CDC: fêmea de Aedes aegypti",
+      "description": "CDC: fêmea de Aedes aegypti. Fonte: https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html"
+    }
+  },
+  {
+    "createImage": {
+      "objectId": "visual_photo_anopheles_quadrimaculatus_jpg",
+      "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Anopheles-quadrimaculatus-female-before-feeding-16-9.jpg",
+      "elementProperties": {
+        "pageObjectId": "ifsc_slide_03",
+        "size": {
+          "width": {
+            "magnitude": 173,
+            "unit": "PT"
+          },
+          "height": {
+            "magnitude": 97.3125,
+            "unit": "PT"
+          }
+        },
+        "transform": {
+          "scaleX": 1,
+          "scaleY": 1,
+          "translateX": 218,
+          "translateY": 213,
+          "unit": "PT"
+        }
+      }
+    }
+  },
+  {
+    "updatePageElementAltText": {
+      "objectId": "visual_photo_anopheles_quadrimaculatus_jpg",
+      "title": "CDC: fêmea de Anopheles quadrimaculatus",
+      "description": "CDC: fêmea de Anopheles quadrimaculatus. Fonte: https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html"
+    }
+  },
+  {
+    "createImage": {
+      "objectId": "visual_photo_culex_tarsalis_jpg",
+      "url": "https://www.cdc.gov/mosquitoes/media/images/2024/04/Culex-tarsalis-female-16-9.jpg",
+      "elementProperties": {
+        "pageObjectId": "ifsc_slide_03",
+        "size": {
+          "width": {
+            "magnitude": 173,
+            "unit": "PT"
+          },
+          "height": {
+            "magnitude": 97.3125,
+            "unit": "PT"
+          }
+        },
+        "transform": {
+          "scaleX": 1,
+          "scaleY": 1,
+          "translateX": 405,
+          "translateY": 213,
+          "unit": "PT"
+        }
+      }
+    }
+  },
+  {
+    "updatePageElementAltText": {
+      "objectId": "visual_photo_culex_tarsalis_jpg",
+      "title": "CDC: fêmea de Culex tarsalis",
+      "description": "CDC: fêmea de Culex tarsalis. Fonte: https://www.cdc.gov/mosquitoes/about/about-mosquitoes-in-the-united-states.html"
+    }
+  },
+  {
+    "createImage": {
+      "objectId": "visual_photo_arduino_nano_sense_rev2_jpg",
+      "url": "https://cdn.shopify.com/s/files/1/0438/4735/2471/files/ABX00069_01.iso.jpg?v=1727100949",
+      "elementProperties": {
+        "pageObjectId": "ifsc_slide_18",
+        "size": {
+          "width": {
+            "magnitude": 302,
+            "unit": "PT"
+          },
+          "height": {
+            "magnitude": 226.5,
+            "unit": "PT"
+          }
+        },
+        "transform": {
+          "scaleX": 1,
+          "scaleY": 1,
+          "translateX": 287,
+          "translateY": 95,
+          "unit": "PT"
+        }
+      }
+    }
+  },
+  {
+    "updatePageElementAltText": {
+      "objectId": "visual_photo_arduino_nano_sense_rev2_jpg",
+      "title": "Arduino: fotografia oficial do Nano 33 BLE Sense Rev2",
+      "description": "Arduino: fotografia oficial do Nano 33 BLE Sense Rev2. Fonte: https://store.arduino.cc/products/nano-33-ble-sense-rev2"
+    }
+  }
+]

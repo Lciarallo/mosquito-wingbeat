@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "drive_robust_module_path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/scripts/robust_audio_features.py",
+  "original_pcm_frontend_verified": true,
+  "entropy_and_bonus_cases": [
+    {
+      "label": "confident_neural",
+      "neural_entropy": 0.20680315019376394,
+      "alpha_bio": 0.05,
+      "low_peak_ratio_mean": 0.10000000149011612,
+      "bio_bonus_regime": "none"
+    },
+    {
+      "label": "uncertain_aedes",
+      "neural_entropy": 1.0,
+      "alpha_bio": 0.7,
+      "low_peak_ratio_mean": 0.10000000149011612,
+      "bio_bonus_regime": "Aedes"
+    },
+    {
+      "label": "uncertain_swarm",
+      "neural_entropy": 1.0,
+      "alpha_bio": 0.65,
+      "low_peak_ratio_mean": 0.10000000149011612,
+      "bio_bonus_regime": "Aedes"
+    },
+    {
+      "label": "uncertain_s7",
+      "neural_entropy": 1.0,
+      "alpha_bio": 0.7,
+      "low_peak_ratio_mean": 0.25,
+      "bio_bonus_regime": "S7_Culex_pipiens"
+    },
+    {
+      "label": "no_bonus_h2",
+      "neural_entropy": 1.0,
+      "alpha_bio": 0.7,
+      "low_peak_ratio_mean": 0.25,
+      "bio_bonus_regime": "none"
+    }
+  ]
+}

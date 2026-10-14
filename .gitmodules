@@ -1,0 +1,3 @@
+[submodule "cdmsc_code"]
+	path = external/cdmsc_code
+	url = https://github.com/aptemvs/Cross-Domain-Mosquito-Species-Classification

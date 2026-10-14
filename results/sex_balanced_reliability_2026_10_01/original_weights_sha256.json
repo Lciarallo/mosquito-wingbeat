@@ -1,0 +1,14 @@
+{
+  "results/models_trees/lightgbm.joblib": "3c4710d71b011e2c33ffb14b08e66cded5bf4d0147f104782138bf2a811bcee7",
+  "results/models_trees/hist_gradient_boosting.joblib": "1b1f4d0971ca243f841e0e88a7cfd3b8e7937077c4cdb9c2363ae84bbb4727b7",
+  "results/models_trees/extra_trees.joblib": "1aca2d0f67475e7f54671dbb054eccfb134ff15512eb66bec6c49cd30f8dfa10",
+  "results/models_trees/random_forest.joblib": "0dfc66a84a07af9493f2e85c8db0199e20cef704d9be7608cba50a6421202cee",
+  "results/models_deep/deep_hybrid_net.pt": "376934c58916177fc741e036024d377eb6ac0c0eea5f296165c8e443d1d7d6d3",
+  "results/models_committee/committees_bundle.joblib": "4c3601a3722c48f2013588e0d411a74d18eef543e939c910fe9194be55618b01",
+  "results/models_committee/swarm_adapted_ensemble_bundle.joblib": "ad32265b740d536c3eb9eb91421925ce7d55ebaa79869180d71aa6b46eb16e82",
+  "results/aedes_classical/models/logistic.joblib": "98e44c8ab00a4aa7ef2eb8445f19854f83684a01cb78c9fe6250f5d4b7811a1c",
+  "results/aedes_classical/models/svm_rbf.joblib": "e8bda408122737969890b77e023e529ff3902049c7817ccb85b13600b6fd46b1",
+  "results/aedes_classical/models/extra_trees.joblib": "2686a629ab7934e320181f3530ec4959a81b51f4780f0c1d62bb379418bd6744",
+  "results/aedes_classical/models/gradient_boosting.joblib": "b34cfa51e20242632e09ff3c1fc13cb1a751c0113a1476ce8e429bf02c5c9554",
+  "results/new_approaches/enhanced_hgb.joblib": "0929b3a9be7f5583b4dded773d2251af29ff76625f6bf2f3ed1f2dbc469ddfbe"
+}

@@ -1,0 +1,19 @@
+{
+  "verification": "models and thresholds frozen; original checkpoints unchanged; 8 read-only notebook cells executed with zero errors",
+  "artifacts_sha256": {
+    "corrected_validation.py": "d715be1e3bb812b661807265752066a3b559699ede7225331ba468e7a9c9126b",
+    "models_trees.py": "3214e096f42f3ac9423d9b9873b5e667438337610430971dee9fe54da54f17ba",
+    "models_committee.py": "f030b5b4f61cc6b7da38c3c790efc9dce630bca34fa7660dd7dd4191f6ad3271",
+    "swarm_adapted_ensemble.py": "d49e2bc19858afab8004305d88e829d4bab8b3fc043968d65dc994b7d7bfcc9d",
+    "benchmark_all_methods.py": "88d723a844814855f17ad1ac987f1a33228a3c24193b655c270b17ef33e224c9",
+    "evaluate_new_database.py": "31abd2059aacbc2bb11ed69a7d3a5261081b8017499e4a34e29ccbedad286e6a",
+    "evaluate_biodcase_d5.py": "4589ede0d63ed8a9cccc07cff36c8ece14fb9424de9262684c58e207c006a4ce",
+    "fetch_corrected_fresh.py": "9c51c51e32ea2b1285959ca9c81fdc65ce6471a2084b4f662234a3f4a9328c5c",
+    "evaluate_corrected_fresh.py": "529e03e634d43cdf823bc2025b170d19cd454ad55068b76415b4f5747f442459",
+    "summarize_corrected_validation.py": "0e6f47df74672fd9b16f14d4be29e1d3578f0441a2b9e5f5289fed6b271087f1",
+    "tests/test_corrected_validation.py": "9f5f0fc951c8d4616161f65c98b7a4ceb599b2f365c2ae1b27e9082f47e6e957",
+    "reports/validacao_corrigida_2026_10_01.md": "b473dbeeddd0e8387424ef834ef5eced76f49b554ea027987b1ab6317d1d5621",
+    "validacao_corrigida_2026_10_01.ipynb": "59910f5d3fa008f6b37db7cc67451c22b8f5be033b219c0bd77f31c20c2b6efd",
+    "validacao_corrigida_2026_10_01.html": "33bb1737da9663c3c2544b93c45da2079c9c43c3e450ae1e427b3c72f0b67429"
+  }
+}

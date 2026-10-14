@@ -1,0 +1,49 @@
+window,start_s,end_s,state,presence_score,species_score,forced_species,candidate_species,identified_species,quality_ok,peak_pcm,clipped_samples,top3
+0,0.0,0.992,SEM_EVIDENCIA,0.3909379839897156,0.21423909068107605,Anopheles minimus,-,-,True,1244,0,Anopheles minimus: 0.21424; Anopheles freeborni: 0.11698; Anopheles albimanus: 0.09188
+1,0.992,1.984,SEM_EVIDENCIA,0.00823817029595375,0.2557966411113739,Aedes sierrensis,-,-,True,2473,0,Aedes sierrensis: 0.25580; Culex quinquefasciatus: 0.17719; Culex pipiens: 0.17495
+2,1.984,2.976,SEM_EVIDENCIA,0.11709760129451752,0.43390530347824097,Culex pipiens,-,-,True,273,0,Culex pipiens: 0.43391; Culex quinquefasciatus: 0.14102; Anopheles gambiae: 0.11085
+3,2.976,3.968,SEM_EVIDENCIA,0.09697827696800232,0.28979915380477905,Culex pipiens,-,-,True,325,0,Culex pipiens: 0.28980; Culex quinquefasciatus: 0.19208; Culex tarsalis: 0.11964
+4,3.968,4.96,SEM_EVIDENCIA,0.07735060155391693,0.25665363669395447,Culex quinquefasciatus,-,-,True,1588,0,Culex quinquefasciatus: 0.25665; Culex pipiens: 0.23860; Culex tarsalis: 0.19873
+5,4.96,5.952,SEM_EVIDENCIA,0.17954020202159882,0.5074684619903564,Culex pipiens,-,-,True,411,0,Culex pipiens: 0.50747; Culex quinquefasciatus: 0.18599; Aedes sierrensis: 0.08243
+6,5.952,6.944,SEM_EVIDENCIA,0.13476219773292542,0.3474051058292389,Aedes sierrensis,-,-,True,2566,0,Aedes sierrensis: 0.34741; Culex quinquefasciatus: 0.16184; Anopheles minimus: 0.10054
+7,6.944,7.936,SEM_EVIDENCIA,0.10605549812316895,0.13842375576496124,Anopheles minimus,-,-,True,1267,0,Anopheles minimus: 0.13842; Anopheles gambiae: 0.13195; Culex pipiens: 0.11962
+8,7.936,8.928,SEM_EVIDENCIA,0.04790927469730377,0.1727527230978012,Anopheles minimus,-,-,True,855,0,Anopheles minimus: 0.17275; Culex pipiens: 0.10251; Anopheles gambiae: 0.10030
+9,8.928,9.92,SEM_EVIDENCIA,0.13042014837265015,0.23938392102718353,Culex pipiens,-,-,True,1611,0,Culex pipiens: 0.23938; Culex quinquefasciatus: 0.17350; Aedes sierrensis: 0.17247
+10,9.92,10.912,SEM_EVIDENCIA,0.21986201405525208,0.5877042412757874,Culex pipiens,-,-,True,532,0,Culex pipiens: 0.58770; Culex quinquefasciatus: 0.10233; Aedes aegypti: 0.09650
+11,10.912,11.904,SEM_EVIDENCIA,0.47133052349090576,0.550754964351654,Culex pipiens,-,-,True,576,0,Culex pipiens: 0.55075; Culex quinquefasciatus: 0.12020; Aedes aegypti: 0.08910
+12,11.904,12.896,SEM_EVIDENCIA,0.269762247800827,0.44913676381111145,Culex pipiens,-,-,True,822,0,Culex pipiens: 0.44914; Culex quinquefasciatus: 0.27517; Aedes sierrensis: 0.07499
+13,12.896,13.888,SEM_EVIDENCIA,0.05455709248781204,0.29595646262168884,Aedes sierrensis,-,-,True,2046,0,Aedes sierrensis: 0.29596; Anopheles minimus: 0.16039; Culex quinquefasciatus: 0.11966
+14,13.888,14.88,SEM_EVIDENCIA,0.05067617818713188,0.33008816838264465,Culex pipiens,-,-,True,1270,0,Culex pipiens: 0.33009; Culex quinquefasciatus: 0.20597; Aedes sierrensis: 0.17553
+15,14.88,15.872,SEM_EVIDENCIA,0.005283759441226721,0.2116529494524002,Anopheles minimus,-,-,True,392,0,Anopheles minimus: 0.21165; Culex quinquefasciatus: 0.10841; Culex pipiens: 0.10022
+16,15.872,16.864,SEM_EVIDENCIA,0.33716607093811035,0.4414411783218384,Culex pipiens,-,-,True,356,0,Culex pipiens: 0.44144; Aedes aegypti: 0.12825; Culex quinquefasciatus: 0.12119
+17,16.864,17.856,SEM_EVIDENCIA,0.26515212655067444,0.19835758209228516,Anopheles minimus,-,-,True,1423,0,Anopheles minimus: 0.19836; Culex quinquefasciatus: 0.18122; Culex pipiens: 0.16824
+18,17.856,18.848,SEM_EVIDENCIA,0.11944413930177689,0.2601735293865204,Aedes sierrensis,-,-,True,2511,0,Aedes sierrensis: 0.26017; Culex quinquefasciatus: 0.16714; Anopheles minimus: 0.14056
+19,18.848,19.84,SEM_EVIDENCIA,0.03117535635828972,0.22443871200084686,Culex quinquefasciatus,-,-,True,632,0,Culex quinquefasciatus: 0.22444; Anopheles minimus: 0.19739; Culex pipiens: 0.11472
+20,19.84,20.832,SEM_EVIDENCIA,0.22624091804027557,0.4800140857696533,Culex pipiens,-,-,True,861,0,Culex pipiens: 0.48001; Aedes aegypti: 0.12849; Culex quinquefasciatus: 0.12330
+21,20.832,21.824,INCERTO,0.684469997882843,0.45903709530830383,Culex pipiens,Culex pipiens,-,True,2229,0,Culex pipiens: 0.45904; Aedes aegypti: 0.19659; Anopheles gambiae: 0.10873
+22,21.824,22.816,SEM_EVIDENCIA,0.3441782593727112,0.4207787811756134,Culex pipiens,-,-,True,1530,0,Culex pipiens: 0.42078; Culex quinquefasciatus: 0.22293; Aedes sierrensis: 0.09603
+23,22.816,23.808,SEM_EVIDENCIA,0.16606642305850983,0.19147658348083496,Culex pipiens,-,-,True,2269,0,Culex pipiens: 0.19148; Anopheles minimus: 0.18938; Anopheles farauti: 0.10690
+24,23.808,24.8,SEM_EVIDENCIA,0.35733136534690857,0.21652446687221527,Anopheles minimus,-,-,True,2564,0,Anopheles minimus: 0.21652; Culex quinquefasciatus: 0.21387; Culex pipiens: 0.10970
+25,24.8,25.792,SEM_EVIDENCIA,0.016754575073719025,0.31562089920043945,Aedes sierrensis,-,-,True,1452,0,Aedes sierrensis: 0.31562; Culex quinquefasciatus: 0.14996; Anopheles minimus: 0.11311
+26,25.792,26.784,SEM_EVIDENCIA,0.2457083761692047,0.42791783809661865,Aedes sierrensis,-,-,True,2503,0,Aedes sierrensis: 0.42792; Culex quinquefasciatus: 0.11357; Culex pipiens: 0.09330
+27,26.784,27.776,SEM_EVIDENCIA,0.6483668684959412,0.2805638313293457,Culex pipiens,-,-,True,913,0,Culex pipiens: 0.28056; Culex quinquefasciatus: 0.12452; Aedes aegypti: 0.11481
+28,27.776,28.768,SEM_EVIDENCIA,0.2451186627149582,0.48955151438713074,Culex pipiens,-,-,True,1616,0,Culex pipiens: 0.48955; Culex quinquefasciatus: 0.22378; Anopheles minimus: 0.07074
+29,28.768,29.76,SEM_EVIDENCIA,0.36713409423828125,0.21123038232326508,Anopheles minimus,-,-,True,1702,0,Anopheles minimus: 0.21123; Culex quinquefasciatus: 0.17698; Culex pipiens: 0.15467
+30,29.76,30.752,SEM_EVIDENCIA,0.36798155307769775,0.5483245849609375,Culex pipiens,-,-,True,413,0,Culex pipiens: 0.54832; Culex quinquefasciatus: 0.18424; Anopheles minimus: 0.05923
+31,30.752,31.744,SEM_EVIDENCIA,0.4917202591896057,0.1947169005870819,Culex quinquefasciatus,-,-,True,774,0,Culex quinquefasciatus: 0.19472; Culex pipiens: 0.19082; Anopheles minimus: 0.17066
+32,31.744,32.736,SEM_EVIDENCIA,0.342378169298172,0.2031119167804718,Anopheles minimus,-,-,True,351,0,Anopheles minimus: 0.20311; Anopheles freeborni: 0.17563; Culex pipiens: 0.16319
+33,32.736,33.728,SEM_EVIDENCIA,0.47113481163978577,0.20833571255207062,Anopheles freeborni,-,-,True,1190,0,Anopheles freeborni: 0.20834; Anopheles minimus: 0.16852; Aedes sierrensis: 0.15633
+34,33.728,34.72,SEM_EVIDENCIA,0.44855138659477234,0.19720414280891418,Aedes sierrensis,-,-,True,1065,0,Aedes sierrensis: 0.19720; Culex quinquefasciatus: 0.16594; Anopheles freeborni: 0.16364
+35,34.72,35.712,SEM_EVIDENCIA,0.6461832523345947,0.15518324077129364,Anopheles minimus,-,-,True,297,0,Anopheles minimus: 0.15518; Aedes aegypti: 0.15279; Culex pipiens: 0.15218
+36,35.712,36.704,SEM_EVIDENCIA,0.23809552192687988,0.2274709939956665,Culex quinquefasciatus,-,-,True,362,0,Culex quinquefasciatus: 0.22747; Culex pipiens: 0.18903; Aedes sierrensis: 0.14344
+37,36.704,37.696,SEM_EVIDENCIA,0.2016557902097702,0.15953046083450317,Anopheles minimus,-,-,True,290,0,Anopheles minimus: 0.15953; Culex pipiens: 0.15210; Aedes sierrensis: 0.10895
+38,37.696,38.688,SEM_EVIDENCIA,0.35261574387550354,0.2807208001613617,Culex pipiens,-,-,True,1110,0,Culex pipiens: 0.28072; Culex quinquefasciatus: 0.18598; Anopheles minimus: 0.15756
+39,38.688,39.68,INCERTO,0.7216553092002869,0.3364464342594147,Culex pipiens,Culex pipiens,-,True,1078,0,Culex pipiens: 0.33645; Aedes aegypti: 0.12170; Anopheles minimus: 0.10255
+40,39.68,40.672,SEM_EVIDENCIA,0.4576016962528229,0.2565319836139679,Anopheles freeborni,-,-,True,1666,0,Anopheles freeborni: 0.25653; Anopheles minimus: 0.15619; Anopheles farauti: 0.10021
+41,40.672,41.664,SEM_EVIDENCIA,0.44230416417121887,0.24981488287448883,Culex pipiens,-,-,True,1508,0,Culex pipiens: 0.24981; Anopheles minimus: 0.18894; Culex quinquefasciatus: 0.16785
+42,41.664,42.656,SEM_EVIDENCIA,0.533673107624054,0.37574177980422974,Aedes sierrensis,-,-,True,3426,0,Aedes sierrensis: 0.37574; Culex quinquefasciatus: 0.15465; Anopheles freeborni: 0.13452
+43,42.656,43.648,SEM_EVIDENCIA,0.48683398962020874,0.26545894145965576,Culex pipiens,-,-,True,2902,0,Culex pipiens: 0.26546; Culex quinquefasciatus: 0.24789; Aedes sierrensis: 0.18770
+44,43.648,44.64,INCERTO,0.727709174156189,0.4956139326095581,Culex pipiens,Culex pipiens,-,True,349,0,Culex pipiens: 0.49561; Aedes aegypti: 0.19017; Culex quinquefasciatus: 0.09082
+45,44.64,45.632,SEM_EVIDENCIA,0.12913115322589874,0.6449065804481506,Culex pipiens,-,-,True,400,0,Culex pipiens: 0.64491; Aedes aegypti: 0.14628; Culex quinquefasciatus: 0.07833
+46,45.632,46.624,SEM_EVIDENCIA,0.3208543062210083,0.2786177694797516,Aedes aegypti,-,-,True,433,0,Aedes aegypti: 0.27862; Anopheles minimus: 0.14209; Anopheles gambiae: 0.11150
+47,46.624,47.616,SEM_EVIDENCIA,0.07028286159038544,0.15569078922271729,Anopheles minimus,-,-,True,438,0,Anopheles minimus: 0.15569; Culex quinquefasciatus: 0.13331; Aedes aegypti: 0.12901

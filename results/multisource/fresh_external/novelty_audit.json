@@ -1,0 +1,14 @@
+{
+  "byte_identical_matches": [],
+  "amplitude_normalized_waveform_matches": [],
+  "max_cosine_per_fresh_id": {
+    "220301": 0.035827546773861435,
+    "220314": 0.0,
+    "220324": 0.039421708709657576,
+    "220391": 0.021638999645257426,
+    "220403": 0.0
+  },
+  "checked_previous_BioDCASE_Aedes_clips": 201,
+  "resampling_to_8kHz_for_comparison": true,
+  "absence_of_arbitrary_shifted_excerpt_overlap_not_proven": true
+}

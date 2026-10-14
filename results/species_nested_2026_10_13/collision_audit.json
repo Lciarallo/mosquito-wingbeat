@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-14T01:11:15.846397+00:00",
+  "source_files": 818,
+  "original_groups": 613,
+  "collision_groups": 560,
+  "additional_collisions": 53,
+  "outer_folds_reassigned": true,
+  "conflicting_label_blocks": [
+    {
+      "collision_group": "noise|background_unresolved",
+      "labels": [
+        "Anopheles albimanus",
+        "Anopheles dirus",
+        "Anopheles farauti",
+        "Anopheles freeborni",
+        "Anopheles gambiae",
+        "Anopheles minimus",
+        "Anopheles stephensi",
+        "noise"
+      ],
+      "original_groups": 54
+    }
+  ],
+  "limits": "Whole decoded PCM and aligned 1.0/.992/.3 s fragments at 8 kHz, raw/gain-normalised, nonconstant. Not arbitrary edits or biological/session independence."
+}

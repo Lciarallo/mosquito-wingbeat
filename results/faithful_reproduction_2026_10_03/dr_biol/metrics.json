@@ -1,0 +1,1362 @@
+[
+  {
+    "model": "DR_BioL_CNN",
+    "seed": 0,
+    "seconds": 26.007007122039795,
+    "n": 10256,
+    "accuracy": 0.8528666146645866,
+    "macro_f1": 0.7085805630925534,
+    "roc_auc_micro": 0.973413503762125,
+    "average_precision_micro": 0.8999784790931405,
+    "binary": {
+      "tp": 3266,
+      "tn": 6601,
+      "fp": 258,
+      "fn": 131,
+      "recall": 0.9614365616720636,
+      "specificity": 0.962385187345094,
+      "precision": 0.9267877412031782
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.8107576254509675,
+        "binary": {
+          "tp": 114,
+          "tn": 5923,
+          "fp": 35,
+          "fn": 26,
+          "recall": 0.8142857142857143,
+          "specificity": 0.9941255454850622,
+          "precision": 0.7651006711409396
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9336002669336003,
+        "binary": {
+          "tp": 2782,
+          "tn": 16,
+          "fp": 193,
+          "fn": 6,
+          "recall": 0.9978479196556671,
+          "specificity": 0.07655502392344497,
+          "precision": 0.935126050420168
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.8508604206500956,
+        "binary": {
+          "tp": 370,
+          "tn": 547,
+          "fp": 30,
+          "fn": 99,
+          "recall": 0.7889125799573561,
+          "specificity": 0.9480069324090121,
+          "precision": 0.925
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.8160783150400475,
+        "recall": 0.8999018645731109,
+        "f1-score": 0.8559427504667082,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.8258741258741259,
+        "recall": 0.8247206703910615,
+        "f1-score": 0.8252969951083159,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9267877412031782,
+        "recall": 0.9614365616720636,
+        "f1-score": 0.9437942493859269,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8342391304347826,
+        "recall": 0.8434065934065934,
+        "f1-score": 0.8387978142076503,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.6857142857142857,
+        "recall": 0.41522491349480967,
+        "f1-score": 0.5172413793103449,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.6962025316455697,
+        "recall": 0.25229357798165136,
+        "f1-score": 0.37037037037037035,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7125,
+        "recall": 0.5560975609756098,
+        "f1-score": 0.6246575342465753,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.8208232445520581,
+        "recall": 0.598939929328622,
+        "f1-score": 0.6925434116445353,
+        "support": 566.0
+      },
+      "accuracy": 0.8528666146645866,
+      "macro avg": {
+        "precision": 0.789777421808006,
+        "recall": 0.6690027089779402,
+        "f1-score": 0.7085805630925534,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.8480189432057118,
+        "recall": 0.8528666146645866,
+        "f1-score": 0.8454306189862879,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DR_BioL_CNN",
+    "seed": 1,
+    "seconds": 4.7989983558654785,
+    "n": 10256,
+    "accuracy": 0.8528666146645866,
+    "macro_f1": 0.7122912359428666,
+    "roc_auc_micro": 0.973083701491864,
+    "average_precision_micro": 0.900560999709997,
+    "binary": {
+      "tp": 3266,
+      "tn": 6605,
+      "fp": 254,
+      "fn": 131,
+      "recall": 0.9614365616720636,
+      "specificity": 0.9629683627350926,
+      "precision": 0.9278409090909091
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.8109216136438177,
+        "binary": {
+          "tp": 115,
+          "tn": 5926,
+          "fp": 32,
+          "fn": 25,
+          "recall": 0.8214285714285714,
+          "specificity": 0.994629070157771,
+          "precision": 0.782312925170068
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9332665999332665,
+        "binary": {
+          "tp": 2780,
+          "tn": 17,
+          "fp": 192,
+          "fn": 8,
+          "recall": 0.9971305595408895,
+          "specificity": 0.08133971291866028,
+          "precision": 0.9353970390309556
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.8508604206500956,
+        "binary": {
+          "tp": 371,
+          "tn": 547,
+          "fp": 30,
+          "fn": 98,
+          "recall": 0.7910447761194029,
+          "specificity": 0.9480069324090121,
+          "precision": 0.9251870324189526
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.8161328588374852,
+        "recall": 0.9002289826627412,
+        "f1-score": 0.8561207030642402,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.8255977496483825,
+        "recall": 0.8198324022346368,
+        "f1-score": 0.8227049754730204,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9278409090909091,
+        "recall": 0.9614365616720636,
+        "f1-score": 0.9443400318056961,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8304623753399819,
+        "recall": 0.8388278388278388,
+        "f1-score": 0.834624145785877,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.6910112359550562,
+        "recall": 0.42560553633217996,
+        "f1-score": 0.5267665952890792,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.7333333333333333,
+        "recall": 0.25229357798165136,
+        "f1-score": 0.37542662116040953,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7300613496932515,
+        "recall": 0.5804878048780487,
+        "f1-score": 0.6467391304347826,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.8085106382978723,
+        "recall": 0.6042402826855123,
+        "f1-score": 0.6916076845298281,
+        "support": 566.0
+      },
+      "accuracy": 0.8528666146645866,
+      "macro avg": {
+        "precision": 0.795368806274534,
+        "recall": 0.672869123409334,
+        "f1-score": 0.7122912359428666,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.8485533464154782,
+        "recall": 0.8528666146645866,
+        "f1-score": 0.8456237509771257,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DR_BioL_CNN",
+    "seed": 2,
+    "seconds": 4.806014537811279,
+    "n": 10256,
+    "accuracy": 0.8527691107644306,
+    "macro_f1": 0.7112545007085654,
+    "roc_auc_micro": 0.9731027046478002,
+    "average_precision_micro": 0.8999759223390646,
+    "binary": {
+      "tp": 3265,
+      "tn": 6597,
+      "fp": 262,
+      "fn": 132,
+      "recall": 0.9611421842802472,
+      "specificity": 0.9618020119550955,
+      "precision": 0.9257159058690105
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.8102656608724171,
+        "binary": {
+          "tp": 113,
+          "tn": 5921,
+          "fp": 37,
+          "fn": 27,
+          "recall": 0.8071428571428572,
+          "specificity": 0.9937898623699228,
+          "precision": 0.7533333333333333
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9332665999332665,
+        "binary": {
+          "tp": 2780,
+          "tn": 17,
+          "fp": 192,
+          "fn": 8,
+          "recall": 0.9971305595408895,
+          "specificity": 0.08133971291866028,
+          "precision": 0.9353970390309556
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.8537284894837476,
+        "binary": {
+          "tp": 372,
+          "tn": 544,
+          "fp": 33,
+          "fn": 97,
+          "recall": 0.7931769722814499,
+          "specificity": 0.9428076256499134,
+          "precision": 0.9185185185185185
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.8136591109802768,
+        "recall": 0.9041543997383056,
+        "f1-score": 0.8565230864580106,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.8282685512367491,
+        "recall": 0.8184357541899442,
+        "f1-score": 0.8233227959255357,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9257159058690105,
+        "recall": 0.9611421842802472,
+        "f1-score": 0.9430964760254188,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8316651501364877,
+        "recall": 0.836996336996337,
+        "f1-score": 0.8343222272934733,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.6918604651162791,
+        "recall": 0.4117647058823529,
+        "f1-score": 0.5162689804772235,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.7307692307692307,
+        "recall": 0.26146788990825687,
+        "f1-score": 0.38513513513513514,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.732484076433121,
+        "recall": 0.5609756097560976,
+        "f1-score": 0.6353591160220995,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.8272506082725061,
+        "recall": 0.6007067137809188,
+        "f1-score": 0.6960081883316275,
+        "support": 566.0
+      },
+      "accuracy": 0.8527691107644306,
+      "macro avg": {
+        "precision": 0.7977091373517076,
+        "recall": 0.6694554493165575,
+        "f1-score": 0.7112545007085654,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.8486651901814675,
+        "recall": 0.8527691107644306,
+        "f1-score": 0.8453118534056098,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DR_BioL_CNN",
+    "seed": 3,
+    "seconds": 4.7856011390686035,
+    "n": 10256,
+    "accuracy": 0.8518915756630265,
+    "macro_f1": 0.7089910392330048,
+    "roc_auc_micro": 0.9730300690500153,
+    "average_precision_micro": 0.8988738597679653,
+    "binary": {
+      "tp": 3266,
+      "tn": 6606,
+      "fp": 253,
+      "fn": 131,
+      "recall": 0.9614365616720636,
+      "specificity": 0.9631141565825923,
+      "precision": 0.9281045751633987
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.8073138734011152,
+        "binary": {
+          "tp": 115,
+          "tn": 5923,
+          "fp": 35,
+          "fn": 25,
+          "recall": 0.8214285714285714,
+          "specificity": 0.9941255454850622,
+          "precision": 0.7666666666666667
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 0.991304347826087,
+        "binary": {
+          "tp": 0,
+          "tn": 114,
+          "fp": 1,
+          "fn": 0,
+          "recall": null,
+          "specificity": 0.991304347826087,
+          "precision": 0.0
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9329329329329329,
+        "binary": {
+          "tp": 2778,
+          "tn": 18,
+          "fp": 191,
+          "fn": 10,
+          "recall": 0.996413199426112,
+          "specificity": 0.0861244019138756,
+          "precision": 0.9356685752778713
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.864244741873805,
+        "binary": {
+          "tp": 373,
+          "tn": 551,
+          "fp": 26,
+          "fn": 96,
+          "recall": 0.7953091684434968,
+          "specificity": 0.9549393414211439,
+          "precision": 0.9348370927318296
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.8150887573964497,
+        "recall": 0.9012103369316323,
+        "f1-score": 0.8559888146652167,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.8224101479915433,
+        "recall": 0.8149441340782123,
+        "f1-score": 0.8186601192564013,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9281045751633987,
+        "recall": 0.9614365616720636,
+        "f1-score": 0.9444765760555234,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8280542986425339,
+        "recall": 0.8379120879120879,
+        "f1-score": 0.8329540282203004,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.6797752808988764,
+        "recall": 0.4186851211072664,
+        "f1-score": 0.5182012847965739,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.72,
+        "recall": 0.24770642201834864,
+        "f1-score": 0.36860068259385664,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7151515151515152,
+        "recall": 0.5756097560975609,
+        "f1-score": 0.6378378378378379,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.8216867469879519,
+        "recall": 0.6024734982332155,
+        "f1-score": 0.6952089704383282,
+        "support": 566.0
+      },
+      "accuracy": 0.8518915756630265,
+      "macro avg": {
+        "precision": 0.7912839152790336,
+        "recall": 0.6699972397562984,
+        "f1-score": 0.7089910392330048,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.8474570997283118,
+        "recall": 0.8518915756630265,
+        "f1-score": 0.8445214488124451,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DR_BioL_CNN",
+    "seed": 4,
+    "seconds": 4.921400308609009,
+    "n": 10256,
+    "accuracy": 0.8527691107644306,
+    "macro_f1": 0.7103079665640186,
+    "roc_auc_micro": 0.9729950194184221,
+    "average_precision_micro": 0.8984330247241045,
+    "binary": {
+      "tp": 3272,
+      "tn": 6600,
+      "fp": 259,
+      "fn": 125,
+      "recall": 0.9632028260229615,
+      "specificity": 0.9622393934975944,
+      "precision": 0.9266496743132258
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.8079698261725156,
+        "binary": {
+          "tp": 113,
+          "tn": 5921,
+          "fp": 37,
+          "fn": 27,
+          "recall": 0.8071428571428572,
+          "specificity": 0.9937898623699228,
+          "precision": 0.7533333333333333
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.933933933933934,
+        "binary": {
+          "tp": 2781,
+          "tn": 18,
+          "fp": 191,
+          "fn": 7,
+          "recall": 0.9974892395982783,
+          "specificity": 0.0861244019138756,
+          "precision": 0.9357335127860027
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.8652007648183556,
+        "binary": {
+          "tp": 378,
+          "tn": 546,
+          "fp": 31,
+          "fn": 91,
+          "recall": 0.8059701492537313,
+          "specificity": 0.9462738301559792,
+          "precision": 0.9242053789731052
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.8175595238095238,
+        "recall": 0.8985933922145894,
+        "f1-score": 0.8561633161913667,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.8169798190675017,
+        "recall": 0.8198324022346368,
+        "f1-score": 0.8184036249564308,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9266496743132258,
+        "recall": 0.9632028260229615,
+        "f1-score": 0.9445727482678984,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8368277119416591,
+        "recall": 0.8406593406593407,
+        "f1-score": 0.8387391502969392,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4083044982698962,
+        "f1-score": 0.5064377682403434,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.7368421052631579,
+        "recall": 0.25688073394495414,
+        "f1-score": 0.38095238095238093,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7177914110429447,
+        "recall": 0.5707317073170731,
+        "f1-score": 0.6358695652173914,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.8289156626506025,
+        "recall": 0.607773851590106,
+        "f1-score": 0.7013251783893986,
+        "support": 566.0
+      },
+      "accuracy": 0.8527691107644306,
+      "macro avg": {
+        "precision": 0.7935290718444103,
+        "recall": 0.6707473440316948,
+        "f1-score": 0.7103079665640186,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.8483279173372441,
+        "recall": 0.8527691107644306,
+        "f1-score": 0.845414730151323,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DAT_CNN",
+    "seed": 0,
+    "seconds": 4.821835994720459,
+    "n": 10256,
+    "accuracy": 0.7941692667706708,
+    "macro_f1": 0.6609970490938073,
+    "roc_auc_micro": 0.9603355880739017,
+    "average_precision_micro": 0.8477798954255702,
+    "binary": {
+      "tp": 3051,
+      "tn": 6549,
+      "fp": 310,
+      "fn": 346,
+      "recall": 0.8981454224315573,
+      "specificity": 0.954803907275113,
+      "precision": 0.9077655459684618
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.7504099704821253,
+        "binary": {
+          "tp": 111,
+          "tn": 5908,
+          "fp": 50,
+          "fn": 29,
+          "recall": 0.7928571428571428,
+          "specificity": 0.9916079221215173,
+          "precision": 0.6894409937888198
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9285952619285953,
+        "binary": {
+          "tp": 2763,
+          "tn": 23,
+          "fp": 186,
+          "fn": 25,
+          "recall": 0.9910329985652798,
+          "specificity": 0.11004784688995216,
+          "precision": 0.9369277721261444
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.641491395793499,
+        "binary": {
+          "tp": 177,
+          "tn": 503,
+          "fp": 74,
+          "fn": 292,
+          "recall": 0.3773987206823028,
+          "specificity": 0.8717504332755632,
+          "precision": 0.7051792828685259
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.7726597325408618,
+        "recall": 0.850507033038927,
+        "f1-score": 0.8097165991902834,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.7518628912071535,
+        "recall": 0.7046089385474861,
+        "f1-score": 0.7274693583273252,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9077655459684618,
+        "recall": 0.8981454224315573,
+        "f1-score": 0.9029298609055934,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8057354301572618,
+        "recall": 0.7976190476190477,
+        "f1-score": 0.8016566958122412,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.5048076923076923,
+        "recall": 0.3633217993079585,
+        "f1-score": 0.4225352112676056,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.5432098765432098,
+        "recall": 0.4036697247706422,
+        "f1-score": 0.4631578947368421,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7302631578947368,
+        "recall": 0.5414634146341464,
+        "f1-score": 0.6218487394957983,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.5299145299145299,
+        "recall": 0.5477031802120141,
+        "f1-score": 0.5386620330147698,
+        "support": 566.0
+      },
+      "accuracy": 0.7941692667706708,
+      "macro avg": {
+        "precision": 0.6932773570667385,
+        "recall": 0.6383798200702224,
+        "f1-score": 0.6609970490938073,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.7913588006470399,
+        "recall": 0.7941692667706708,
+        "f1-score": 0.7912582306517807,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DAT_CNN",
+    "seed": 1,
+    "seconds": 4.751072883605957,
+    "n": 10256,
+    "accuracy": 0.7947542901716068,
+    "macro_f1": 0.6619609765019988,
+    "roc_auc_micro": 0.9609466620418773,
+    "average_precision_micro": 0.8498080764935753,
+    "binary": {
+      "tp": 3052,
+      "tn": 6555,
+      "fp": 304,
+      "fn": 345,
+      "recall": 0.8984397998233735,
+      "specificity": 0.9556786703601108,
+      "precision": 0.9094159713945172
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.7504099704821253,
+        "binary": {
+          "tp": 111,
+          "tn": 5911,
+          "fp": 47,
+          "fn": 29,
+          "recall": 0.7928571428571428,
+          "specificity": 0.9921114467942262,
+          "precision": 0.7025316455696202
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 0.991304347826087,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9292625959292626,
+        "binary": {
+          "tp": 2764,
+          "tn": 24,
+          "fp": 185,
+          "fn": 24,
+          "recall": 0.9913916786226685,
+          "specificity": 0.11483253588516747,
+          "precision": 0.9372668701254663
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.6462715105162524,
+        "binary": {
+          "tp": 177,
+          "tn": 505,
+          "fp": 72,
+          "fn": 292,
+          "recall": 0.3773987206823028,
+          "specificity": 0.8752166377816292,
+          "precision": 0.7108433734939759
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.7711058263971462,
+        "recall": 0.8485443245011449,
+        "f1-score": 0.8079738358511135,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.7586206896551724,
+        "recall": 0.7067039106145251,
+        "f1-score": 0.7317425885755604,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9094159713945172,
+        "recall": 0.8984397998233735,
+        "f1-score": 0.9038945653783503,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.8077634011090573,
+        "recall": 0.8003663003663004,
+        "f1-score": 0.8040478380864765,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.4883720930232558,
+        "recall": 0.3633217993079585,
+        "f1-score": 0.4166666666666667,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.5389221556886228,
+        "recall": 0.41284403669724773,
+        "f1-score": 0.4675324675324675,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7414965986394558,
+        "recall": 0.5317073170731708,
+        "f1-score": 0.6193181818181818,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.5329949238578681,
+        "recall": 0.5565371024734982,
+        "f1-score": 0.5445116681071738,
+        "support": 566.0
+      },
+      "accuracy": 0.7947542901716068,
+      "macro avg": {
+        "precision": 0.693586457470637,
+        "recall": 0.6398080738571523,
+        "f1-score": 0.6619609765019988,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.7924420360929242,
+        "recall": 0.7947542901716068,
+        "f1-score": 0.7921094049169147,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DAT_CNN",
+    "seed": 2,
+    "seconds": 4.757307291030884,
+    "n": 10256,
+    "accuracy": 0.7939742589703588,
+    "macro_f1": 0.6584458661864068,
+    "roc_auc_micro": 0.9608439537325197,
+    "average_precision_micro": 0.8484018558623934,
+    "binary": {
+      "tp": 3056,
+      "tn": 6550,
+      "fp": 309,
+      "fn": 341,
+      "recall": 0.8996173093906388,
+      "specificity": 0.9549497011226126,
+      "precision": 0.9081723625557206
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.7492620531321745,
+        "binary": {
+          "tp": 112,
+          "tn": 5910,
+          "fp": 48,
+          "fn": 28,
+          "recall": 0.8,
+          "specificity": 0.9919436052366566,
+          "precision": 0.7
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9295962629295963,
+        "binary": {
+          "tp": 2767,
+          "tn": 21,
+          "fp": 188,
+          "fn": 21,
+          "recall": 0.992467718794835,
+          "specificity": 0.10047846889952153,
+          "precision": 0.9363790186125212
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.6434034416826003,
+        "binary": {
+          "tp": 177,
+          "tn": 504,
+          "fp": 73,
+          "fn": 292,
+          "recall": 0.3773987206823028,
+          "specificity": 0.8734835355285961,
+          "precision": 0.708
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.7736244019138756,
+        "recall": 0.8462544978737324,
+        "f1-score": 0.8083112013747852,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.7527839643652561,
+        "recall": 0.7081005586592178,
+        "f1-score": 0.7297589060813242,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9081723625557206,
+        "recall": 0.8996173093906388,
+        "f1-score": 0.9038745933155871,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.7972727272727272,
+        "recall": 0.8031135531135531,
+        "f1-score": 0.8001824817518248,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.49528301886792453,
+        "recall": 0.3633217993079585,
+        "f1-score": 0.41916167664670656,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.5301204819277109,
+        "recall": 0.4036697247706422,
+        "f1-score": 0.4583333333333333,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7394366197183099,
+        "recall": 0.5121951219512195,
+        "f1-score": 0.6051873198847262,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.5362068965517242,
+        "recall": 0.549469964664311,
+        "f1-score": 0.5427574171029669,
+        "support": 566.0
+      },
+      "accuracy": 0.7939742589703588,
+      "macro avg": {
+        "precision": 0.6916125591466561,
+        "recall": 0.6357178162164092,
+        "f1-score": 0.6584458661864068,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.7909926321576606,
+        "recall": 0.7939742589703588,
+        "f1-score": 0.791010320744094,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DAT_CNN",
+    "seed": 3,
+    "seconds": 4.7792956829071045,
+    "n": 10256,
+    "accuracy": 0.7935842433697348,
+    "macro_f1": 0.660345934208423,
+    "roc_auc_micro": 0.9605579651994304,
+    "average_precision_micro": 0.8482512409793679,
+    "binary": {
+      "tp": 3042,
+      "tn": 6544,
+      "fp": 315,
+      "fn": 355,
+      "recall": 0.8954960259052105,
+      "specificity": 0.9540749380376148,
+      "precision": 0.9061662198391421
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.7500819940964251,
+        "binary": {
+          "tp": 107,
+          "tn": 5907,
+          "fp": 51,
+          "fn": 33,
+          "recall": 0.7642857142857142,
+          "specificity": 0.9914400805639476,
+          "precision": 0.6772151898734177
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9265932599265932,
+        "binary": {
+          "tp": 2758,
+          "tn": 21,
+          "fp": 188,
+          "fn": 30,
+          "recall": 0.9892395982783357,
+          "specificity": 0.10047846889952153,
+          "precision": 0.9361846571622539
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.6434034416826003,
+        "binary": {
+          "tp": 177,
+          "tn": 501,
+          "fp": 76,
+          "fn": 292,
+          "recall": 0.3773987206823028,
+          "specificity": 0.8682842287694974,
+          "precision": 0.6996047430830039
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.7725653206650831,
+        "recall": 0.8511612692181878,
+        "f1-score": 0.8099610894941635,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.7618688771665411,
+        "recall": 0.7060055865921788,
+        "f1-score": 0.7328742297934034,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9061662198391421,
+        "recall": 0.8954960259052105,
+        "f1-score": 0.9007995262066923,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.7932604735883424,
+        "recall": 0.7976190476190477,
+        "f1-score": 0.7954337899543379,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.5024630541871922,
+        "recall": 0.35294117647058826,
+        "f1-score": 0.4146341463414634,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.5384615384615384,
+        "recall": 0.41743119266055045,
+        "f1-score": 0.4702842377260982,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7414965986394558,
+        "recall": 0.5317073170731708,
+        "f1-score": 0.6193181818181818,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.5298126064735945,
+        "recall": 0.549469964664311,
+        "f1-score": 0.5394622723330442,
+        "support": 566.0
+      },
+      "accuracy": 0.7935842433697348,
+      "macro avg": {
+        "precision": 0.6932618361276113,
+        "recall": 0.6377289475254055,
+        "f1-score": 0.660345934208423,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.7909216731042842,
+        "recall": 0.7935842433697348,
+        "f1-score": 0.7906399904770168,
+        "support": 10256.0
+      }
+    }
+  },
+  {
+    "model": "DAT_CNN",
+    "seed": 4,
+    "seconds": 4.783902406692505,
+    "n": 10256,
+    "accuracy": 0.7931942277691107,
+    "macro_f1": 0.6592336329120612,
+    "roc_auc_micro": 0.9605803562464821,
+    "average_precision_micro": 0.8471188910718989,
+    "binary": {
+      "tp": 3050,
+      "tn": 6551,
+      "fp": 308,
+      "fn": 347,
+      "recall": 0.897851045039741,
+      "specificity": 0.9550954949701123,
+      "precision": 0.9082787373436569
+    },
+    "domains": {
+      "0": {
+        "n": 6098,
+        "accuracy": 0.7489340767464743,
+        "binary": {
+          "tp": 110,
+          "tn": 5911,
+          "fp": 47,
+          "fn": 30,
+          "recall": 0.7857142857142857,
+          "specificity": 0.9921114467942262,
+          "precision": 0.7006369426751592
+        }
+      },
+      "1": {
+        "n": 115,
+        "accuracy": 1.0,
+        "binary": {
+          "tp": 0,
+          "tn": 115,
+          "fp": 0,
+          "fn": 0,
+          "recall": null,
+          "specificity": 1.0,
+          "precision": null
+        }
+      },
+      "2": {
+        "n": 2997,
+        "accuracy": 0.9285952619285953,
+        "binary": {
+          "tp": 2763,
+          "tn": 22,
+          "fp": 187,
+          "fn": 25,
+          "recall": 0.9910329985652798,
+          "specificity": 0.10526315789473684,
+          "precision": 0.9366101694915254
+        }
+      },
+      "3": {
+        "n": 1046,
+        "accuracy": 0.6405353728489483,
+        "binary": {
+          "tp": 177,
+          "tn": 503,
+          "fp": 74,
+          "fn": 292,
+          "recall": 0.3773987206823028,
+          "specificity": 0.8717504332755632,
+          "precision": 0.7051792828685259
+        }
+      }
+    },
+    "classification_report": {
+      "an arabiensis": {
+        "precision": 0.7708581644815257,
+        "recall": 0.8462544978737324,
+        "f1-score": 0.8067986901606112,
+        "support": 3057.0
+      },
+      "culex pipiens complex": {
+        "precision": 0.7544642857142857,
+        "recall": 0.7081005586592178,
+        "f1-score": 0.7305475504322767,
+        "support": 1432.0
+      },
+      "ae aegypti": {
+        "precision": 0.9082787373436569,
+        "recall": 0.897851045039741,
+        "f1-score": 0.9030347890451518,
+        "support": 3397.0
+      },
+      "an funestus ss": {
+        "precision": 0.7992667277726856,
+        "recall": 0.7985347985347986,
+        "f1-score": 0.798900595510765,
+        "support": 1092.0
+      },
+      "an squamosus": {
+        "precision": 0.49029126213592233,
+        "recall": 0.3494809688581315,
+        "f1-score": 0.4080808080808081,
+        "support": 289.0
+      },
+      "an coustani": {
+        "precision": 0.5297619047619048,
+        "recall": 0.40825688073394495,
+        "f1-score": 0.46113989637305697,
+        "support": 218.0
+      },
+      "ma uniformis": {
+        "precision": 0.7432432432432432,
+        "recall": 0.5365853658536586,
+        "f1-score": 0.623229461756374,
+        "support": 205.0
+      },
+      "aedes albopictus": {
+        "precision": 0.5333333333333333,
+        "recall": 0.5512367491166078,
+        "f1-score": 0.5421372719374457,
+        "support": 566.0
+      },
+      "accuracy": 0.7931942277691107,
+      "macro avg": {
+        "precision": 0.6911872073483196,
+        "recall": 0.637037608083729,
+        "f1-score": 0.6592336329120612,
+        "support": 10256.0
+      },
+      "weighted avg": {
+        "precision": 0.790419481764232,
+        "recall": 0.7931942277691107,
+        "f1-score": 0.7903287737173825,
+        "support": 10256.0
+      }
+    }
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "path": "results/arduino_species/models/candidate0_fold0.joblib",
+    "drive_id": "1V4_ImQXringhSBXurk8WwEMGda-BNy-3",
+    "drive_md5": "123087f09690b90c7084601ad2fb7ea4",
+    "local_md5": "123087f09690b90c7084601ad2fb7ea4",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate0_fold1.joblib",
+    "drive_id": "1CopCrs_VeDMlxB3MJQNDaMHROHeLlBCU",
+    "drive_md5": "7a3a9e597676329327c867456f7d485d",
+    "local_md5": "7a3a9e597676329327c867456f7d485d",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate0_fold2.joblib",
+    "drive_id": "1MTnCwA7Q4tZ0alppSsFKyHUMNNPU9DWz",
+    "drive_md5": "63bfeeb7c302630e5ad22513a32a8d96",
+    "local_md5": "63bfeeb7c302630e5ad22513a32a8d96",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate1_fold0.joblib",
+    "drive_id": "1sLROoiuEfdGue4YgBTB0gbLNp_Q_oku0",
+    "drive_md5": "f95b5362ab7e334cc4bbf73bcb779875",
+    "local_md5": "f95b5362ab7e334cc4bbf73bcb779875",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate1_fold1.joblib",
+    "drive_id": "12x_xxFMGKkTV3h-Eav_J6UqTZyhG1AXT",
+    "drive_md5": "5af4e3ac6759b5b607e11e3c207f540d",
+    "local_md5": "5af4e3ac6759b5b607e11e3c207f540d",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate1_fold2.joblib",
+    "drive_id": "1E-p4DqBMq8xqyIxv85a0e68NydzA9TYD",
+    "drive_md5": "336d742c74274f55310cf34e8d3bc383",
+    "local_md5": "336d742c74274f55310cf34e8d3bc383",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate2_fold0.joblib",
+    "drive_id": "1_0FA_3mZnaOIoQOduaGSlka7_BKK5b27",
+    "drive_md5": "a75cd0296f10d715c92ecf5588ff7083",
+    "local_md5": "a75cd0296f10d715c92ecf5588ff7083",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate2_fold1.joblib",
+    "drive_id": "1hTaZd_r3khzECOyOjQ3LXVeO7m11VDxR",
+    "drive_md5": "3a161ab656db96188a483a53415fa129",
+    "local_md5": "3a161ab656db96188a483a53415fa129",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/candidate2_fold2.joblib",
+    "drive_id": "1G7t8_2AhxGF1Z_29VkxvVZxXP9QK46MX",
+    "drive_md5": "6f8442a44007c9fb21bab435217a5713",
+    "local_md5": "6f8442a44007c9fb21bab435217a5713",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/species_fold0.npz",
+    "drive_id": "1GMNGlxzxjLA41CF17FauF-yiE-QcswwH",
+    "drive_md5": "f63ae4c0e8fe84027f6c52e5f311f686",
+    "local_md5": "f63ae4c0e8fe84027f6c52e5f311f686",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/species_fold1.npz",
+    "drive_id": "19hHvuec7pfB2OYzQa7NpIHjDJ5t9hoWs",
+    "drive_md5": "2ec26b37ed81a8cd8add2a13b03d7cfa",
+    "local_md5": "2ec26b37ed81a8cd8add2a13b03d7cfa",
+    "matches": true
+  },
+  {
+    "path": "results/arduino_species/models/species_fold2.npz",
+    "drive_id": "1JKryoo0L-0m5rZhY2r6af9sIp_jlRRUy",
+    "drive_md5": "bddffabcd1d6b130b440b161720ea2b3",
+    "local_md5": "bddffabcd1d6b130b440b161720ea2b3",
+    "matches": true
+  }
+]

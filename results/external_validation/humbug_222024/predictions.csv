@@ -1,0 +1,24 @@
+window,start_s,end_s,state,presence_score,species_score,forced_species,candidate_species,identified_species,quality_ok,peak_pcm,clipped_samples,top3
+0,0.0,0.992,SEM_EVIDENCIA,0.05596979707479477,0.23991772532463074,Anopheles albimanus,-,-,True,430,0,Anopheles albimanus: 0.23992; Anopheles freeborni: 0.16424; Anopheles dirus: 0.07240
+1,0.992,1.984,SEM_EVIDENCIA,0.30553993582725525,0.4862380921840668,Aedes sierrensis,-,-,True,468,0,Aedes sierrensis: 0.48624; Anopheles freeborni: 0.13721; Anopheles albimanus: 0.11755
+2,1.984,2.976,SEM_EVIDENCIA,0.10146397352218628,0.4191925823688507,Aedes sierrensis,-,-,True,469,0,Aedes sierrensis: 0.41919; Culex quinquefasciatus: 0.16096; Culex pipiens: 0.10975
+3,2.976,3.968,SEM_EVIDENCIA,0.01172669418156147,0.20593129098415375,Aedes sierrensis,-,-,True,576,0,Aedes sierrensis: 0.20593; Anopheles freeborni: 0.13760; Culex quinquefasciatus: 0.11740
+4,3.968,4.96,INCERTO,0.7463244795799255,0.7405515909194946,Aedes sierrensis,Aedes sierrensis,-,True,369,0,Aedes sierrensis: 0.74055; Culiseta incidens: 0.09521; Anopheles freeborni: 0.05776
+5,4.96,5.952,IDENTIFICACAO_PROVISORIA,0.9921948909759521,0.83823561668396,Aedes sierrensis,Aedes sierrensis,Aedes sierrensis,True,150,0,Aedes sierrensis: 0.83824; Culiseta incidens: 0.06050; Anopheles freeborni: 0.04145
+6,5.952,6.944,SEM_EVIDENCIA,0.24027220904827118,0.5795121788978577,Aedes sierrensis,-,-,True,217,0,Aedes sierrensis: 0.57951; Culex quinquefasciatus: 0.13150; Culex tarsalis: 0.05449
+7,6.944,7.936,SEM_EVIDENCIA,0.03890542685985565,0.1883416473865509,Culex quinquefasciatus,-,-,True,391,0,Culex quinquefasciatus: 0.18834; Anopheles freeborni: 0.10974; Culiseta incidens: 0.10041
+8,7.936,8.928,SEM_EVIDENCIA,0.07113070785999298,0.388077974319458,Aedes sierrensis,-,-,True,461,0,Aedes sierrensis: 0.38808; Culex quinquefasciatus: 0.12506; Anopheles freeborni: 0.09498
+9,8.928,9.92,SEM_EVIDENCIA,0.06573809683322906,0.6577095985412598,Aedes sierrensis,-,-,True,256,0,Aedes sierrensis: 0.65771; Culex quinquefasciatus: 0.11302; Anopheles freeborni: 0.06762
+10,9.92,10.912,SEM_EVIDENCIA,0.00861863512545824,0.522149920463562,Aedes sierrensis,-,-,True,186,0,Aedes sierrensis: 0.52215; Culiseta incidens: 0.18833; Culex quinquefasciatus: 0.05635
+11,10.912,11.904,SEM_EVIDENCIA,0.011654669418931007,0.6356434226036072,Culiseta incidens,-,-,True,292,0,Culiseta incidens: 0.63564; Culex quinquefasciatus: 0.17443; Aedes sierrensis: 0.04978
+12,11.904,12.896,SEM_EVIDENCIA,0.008328257128596306,0.2895687222480774,Aedes sierrensis,-,-,True,612,0,Aedes sierrensis: 0.28957; Culex tarsalis: 0.15408; Culiseta incidens: 0.15015
+13,12.896,13.888,SEM_EVIDENCIA,0.005386000499129295,0.5960195660591125,Aedes sierrensis,-,-,True,267,0,Aedes sierrensis: 0.59602; Culex quinquefasciatus: 0.08797; Anopheles freeborni: 0.06875
+14,13.888,14.88,SEM_EVIDENCIA,0.05606687441468239,0.4020366072654724,Aedes sierrensis,-,-,True,823,0,Aedes sierrensis: 0.40204; Culiseta incidens: 0.27198; Culex tarsalis: 0.14473
+15,14.88,15.872,SEM_EVIDENCIA,0.06103311479091644,0.16042758524417877,Culex quinquefasciatus,-,-,True,741,0,Culex quinquefasciatus: 0.16043; Anopheles freeborni: 0.12022; Culex pipiens: 0.11686
+16,15.872,16.864,SEM_EVIDENCIA,0.036187876015901566,0.32850560545921326,Anopheles albimanus,-,-,True,1242,0,Anopheles albimanus: 0.32851; Anopheles freeborni: 0.13140; Aedes sierrensis: 0.11926
+17,16.864,17.856,SEM_EVIDENCIA,0.02076730690896511,0.5253471732139587,Culex quinquefasciatus,-,-,True,877,0,Culex quinquefasciatus: 0.52535; Aedes sierrensis: 0.18645; Culex pipiens: 0.06098
+18,17.856,18.848,SEM_EVIDENCIA,0.2831249237060547,0.6153467893600464,Aedes sierrensis,-,-,True,325,0,Aedes sierrensis: 0.61535; Culex quinquefasciatus: 0.10579; Culiseta incidens: 0.07145
+19,18.848,19.84,SEM_EVIDENCIA,0.10386954993009567,0.564564049243927,Aedes sierrensis,-,-,True,1025,0,Aedes sierrensis: 0.56456; Culex quinquefasciatus: 0.13287; Anopheles freeborni: 0.07793
+20,19.84,20.832,INCERTO,0.9998575448989868,0.9755564332008362,Aedes sierrensis,Aedes sierrensis,-,True,397,0,Aedes sierrensis: 0.97556; Culex quinquefasciatus: 0.02069; Culiseta incidens: 0.00122
+21,20.832,21.824,IDENTIFICACAO_PROVISORIA,0.9999579191207886,0.9591398239135742,Aedes sierrensis,Aedes sierrensis,Aedes sierrensis,True,170,0,Aedes sierrensis: 0.95914; Culex quinquefasciatus: 0.03566; Culiseta incidens: 0.00425
+22,21.824,22.816,IDENTIFICACAO_PROVISORIA,0.9674438834190369,0.8809424638748169,Aedes sierrensis,Aedes sierrensis,Aedes sierrensis,True,136,0,Aedes sierrensis: 0.88094; Culex quinquefasciatus: 0.03991; Anopheles freeborni: 0.03030

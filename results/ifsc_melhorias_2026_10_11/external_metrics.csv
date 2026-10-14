@@ -1,0 +1,3 @@
+model,windows,recordings,classes_observed,correct_recordings,window_accuracy,recording_accuracy,recording_balanced_accuracy,recording_macro_f1
+cnn_frequency_external,188,17,5,3,0.031914893617021274,0.17647058823529413,0.15,0.09166666666666667
+deep_mlp_external,188,17,5,3,0.031914893617021274,0.17647058823529413,0.15,0.08444444444444445

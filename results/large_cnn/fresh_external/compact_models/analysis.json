@@ -1,0 +1,48 @@
+{
+  "evaluated_utc": "2026-09-30T21:58:37.426930+00:00",
+  "source": "https://github.com/akaraspt/mosquitosongp",
+  "reference_species": "Aedes aegypti",
+  "label_source": "dataset_authors",
+  "original_audio_sha256": "24a5b5f19f1784cc18b7e4bf0e4c9a15a1a3084b52450283a0c318e21ec39295",
+  "original_sample_rate": 8000,
+  "original_channels": 1,
+  "duration_s": 4.193,
+  "input_pcm_bits": 16,
+  "complete_windows": 4,
+  "resampling_applied": true,
+  "volume_normalization": false,
+  "noise_filtering": false,
+  "no_padding_or_repetition": true,
+  "physical_board_tested": false,
+  "arduino_compiled": false,
+  "model_results": [
+    {
+      "model": "baseline",
+      "checkpoint_sha256": "bef203704b8f732d54b1f5065fa764d62447c15a068e5bb4e215931fbe017d38",
+      "model_unchanged": true,
+      "state_counts": {
+        "SEM_EVIDENCIA": 4
+      },
+      "emitted_species_counts": {},
+      "correctly_identified_windows": 0,
+      "incorrectly_identified_windows": 0,
+      "forced_correct_windows": 0,
+      "complete_windows": 4,
+      "reference_species_in_model": true
+    },
+    {
+      "model": "expanded",
+      "checkpoint_sha256": "475a978d597c62690dc9bba3f6fb4196804dc23084ec62721a529f87e3246a40",
+      "model_unchanged": true,
+      "state_counts": {
+        "SEM_EVIDENCIA": 4
+      },
+      "emitted_species_counts": {},
+      "correctly_identified_windows": 0,
+      "incorrectly_identified_windows": 0,
+      "forced_correct_windows": 0,
+      "complete_windows": 4,
+      "reference_species_in_model": true
+    }
+  ]
+}

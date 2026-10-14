@@ -1,0 +1,26 @@
+{
+  "name": "trees_deep",
+  "selection_score": 0.12671100642291896,
+  "validation_source_class_recalls": {
+    "dryad|0": 0.9893153021442495,
+    "dryad|1": 0.33333333333333337,
+    "humbug|0": 0.9832874091665651,
+    "humbug|1": 0.10071010860484546,
+    "mosquitosong|0": 0.36528029955501073,
+    "esc50|0": 1.0
+  },
+  "validation_minimum_recall": 0.10071010860484546,
+  "validation_precision": 0.07053941908713693,
+  "validation_recall": 0.21161825726141079,
+  "validation_macro_f1": 0.5184411067749721,
+  "validation_ap": 0.0788424793249183,
+  "cut": 0.40753365976959716,
+  "calibration": {
+    "calibration_target_feasible": false,
+    "minimum_source_class_recall": 0.682222222222222,
+    "precision": 0.2557741659538067,
+    "recall": 0.9088145896656535,
+    "f1": 0.3991989319092123
+  },
+  "sha256": "6c5d1e8837c741ae890bcde28c98e0efdd64b27b3c96d0212fd862df4e4c3d2e"
+}

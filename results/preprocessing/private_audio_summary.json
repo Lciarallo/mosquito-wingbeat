@@ -1,0 +1,91 @@
+[
+  {
+    "method": "original",
+    "windows": 107,
+    "forced_Aedes": 46,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 6,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 99,
+      "INCERTO": 6,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  },
+  {
+    "method": "highpass_120",
+    "windows": 107,
+    "forced_Aedes": 21,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 6,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 99,
+      "INCERTO": 6,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  },
+  {
+    "method": "bandpass_150_3500",
+    "windows": 107,
+    "forced_Aedes": 4,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 5,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 100,
+      "INCERTO": 5,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  },
+  {
+    "method": "bandpass_250_2500",
+    "windows": 107,
+    "forced_Aedes": 11,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 0,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 105,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  },
+  {
+    "method": "spectral_mild",
+    "windows": 107,
+    "forced_Aedes": 42,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 6,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 99,
+      "INCERTO": 6,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  },
+  {
+    "method": "bandpass_spectral",
+    "windows": 107,
+    "forced_Aedes": 3,
+    "correct_identifications": 0,
+    "wrong_identifications": 0,
+    "presence_candidate_windows": 6,
+    "emitted_species_counts": {},
+    "state_counts": {
+      "SEM_EVIDENCIA": 99,
+      "INCERTO": 6,
+      "AUDIO_INVALIDO": 2
+    },
+    "label_source": "user_reported_species_not_independently_verified"
+  }
+]

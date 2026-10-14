@@ -1,0 +1,24 @@
+[
+  {
+    "model": "cnn_frequency_external",
+    "windows": 188,
+    "recordings": 17,
+    "classes_observed": 5,
+    "correct_recordings": 3,
+    "window_accuracy": 0.031914893617021274,
+    "recording_accuracy": 0.17647058823529413,
+    "recording_balanced_accuracy": 0.15,
+    "recording_macro_f1": 0.09166666666666667
+  },
+  {
+    "model": "deep_mlp_external",
+    "windows": 188,
+    "recordings": 17,
+    "classes_observed": 5,
+    "correct_recordings": 3,
+    "window_accuracy": 0.031914893617021274,
+    "recording_accuracy": 0.17647058823529413,
+    "recording_balanced_accuracy": 0.15,
+    "recording_macro_f1": 0.08444444444444445
+  }
+]

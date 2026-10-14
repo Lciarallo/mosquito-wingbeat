@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-01T21:24:19.536262+00:00",
+  "strategy": "Hard-negative retraining of ExtraTrees; new negative species and real background recordings.",
+  "original_training_windows": 17391,
+  "additional_training_windows": 544,
+  "additional_training_recording_groups": 19,
+  "additional_source_selection_sha256": "81d94ccba48ec5595c6200ca56c4128ccd22f82365ff0b01374b81ea5b16c7dd",
+  "original_group_partitions_still_disjoint": true,
+  "unknowns_excluded": true,
+  "private_in_training": false,
+  "configurations": [
+    {
+      "max_depth": 12,
+      "min_samples_leaf": 3
+    },
+    {
+      "max_depth": null,
+      "min_samples_leaf": 3
+    }
+  ],
+  "selection": "Weighted validation BA at probability .5 + 0.001 validation AUC.",
+  "threshold_selection": "Weighted calibration Youden threshold, requiring calibration sensitivity and specificity >=.6 if feasible.",
+  "earlier_evaluations_status": "Exploratory development diagnostics; 19 round-one negatives are now training.",
+  "arduino_compiled": false
+}

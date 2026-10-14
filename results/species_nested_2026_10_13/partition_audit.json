@@ -1,0 +1,70 @@
+{
+  "audits": [
+    {
+      "fold": 0,
+      "fit": {
+        "rows": 12661,
+        "groups": 300
+      },
+      "calibration": {
+        "rows": 3590,
+        "groups": 83
+      },
+      "test": {
+        "rows": 8154,
+        "groups": 230
+      },
+      "overlap_groups_paths_pcm": 0
+    },
+    {
+      "fold": 1,
+      "fit": {
+        "rows": 11302,
+        "groups": 298
+      },
+      "calibration": {
+        "rows": 5033,
+        "groups": 137
+      },
+      "test": {
+        "rows": 8070,
+        "groups": 178
+      },
+      "overlap_groups_paths_pcm": 0
+    },
+    {
+      "fold": 2,
+      "fit": {
+        "rows": 11634,
+        "groups": 282
+      },
+      "calibration": {
+        "rows": 4590,
+        "groups": 126
+      },
+      "test": {
+        "rows": 8181,
+        "groups": 205
+      },
+      "overlap_groups_paths_pcm": 0
+    },
+    {
+      "fold": "final",
+      "fit": {
+        "rows": 19493,
+        "groups": 489
+      },
+      "calibration": {
+        "rows": 4912,
+        "groups": 124
+      },
+      "test": {
+        "rows": 0,
+        "groups": 0
+      },
+      "overlap_groups_paths_pcm": 0
+    }
+  ],
+  "created_utc": "2026-10-14T01:37:41.114965+00:00",
+  "no_refit_on_calibration": true
+}

@@ -1,0 +1,8 @@
+task,scope,unit,model,n,groups,correct,accuracy,balanced_accuracy,recall,false_positive_rate,positive_windows,negative_windows,true_positive,false_negative,true_negative,false_positive,macro_f1,coverage,emitted,correct_emissions,accepted_accuracy
+presence,historical_corpus,window,"Balanceado 0,5",24405,613,20084,0.8229461175988527,0.7372740313043743,0.8268207898814759,0.3522727272727273,23877.0,528.0,19742.0,4135.0,342.0,186.0,,,,,
+presence,historical_corpus,window,Calibração FPR 10%,24405,613,17715,0.7258758451137062,0.7172985509067303,0.7262637684801273,0.2916666666666667,23877.0,528.0,17341.0,6536.0,374.0,154.0,,,,,
+presence,historical_corpus,window,Calibração FPR 5%,24405,613,12093,0.49551321450522434,0.6430935580836636,0.4888386313188424,0.20265151515151514,23877.0,528.0,11672.0,12205.0,421.0,107.0,,,,,
+genus,dryad,recording,calibrated,569,569,549,0.9648506151142355,0.9365532573940847,,,,,,,,,0.9445148645911738,,,,
+species,dryad,recording,calibrated,569,569,408,0.7170474516695958,0.7659537860998051,,,,,,,,,,0.616871704745167,351.0,312.0,0.8888888888888888
+genus,external,recording,calibrated,17,17,7,0.4117647058823529,0.2916666666666667,,,,,,,,,0.2333333333333333,,,,
+species,external,recording,calibrated,17,17,4,0.23529411764705882,0.2,,,,,,,,,,0.47058823529411764,8.0,2.0,0.25

@@ -1,0 +1,2972 @@
+[
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "id": "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui",
+    "name": "bin",
+    "path": ".venv/bin"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "id": "1oSfNs2uH3YJGfQr9_SdFmTK7gnKr3AbB",
+    "name": "share",
+    "path": ".venv/share"
+  },
+  {
+    "md5Checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "size": "0",
+    "id": "1WZiTABfuOs2sS2RNKKCPlc5Qr6TERKaX",
+    "name": ".lock",
+    "path": ".venv/.lock"
+  },
+  {
+    "md5Checksum": "4b50dc490ca121c935cec9c15273aa95",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "size": "43",
+    "id": "1dmUMJ86YuJ8hKtHAemA6SEn7MecQgOCd",
+    "name": "CACHEDIR.TAG",
+    "path": ".venv/CACHEDIR.TAG"
+  },
+  {
+    "md5Checksum": "3389dae361af79b04c9c8e7057f60cc6",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "size": "1",
+    "id": "1rzJPcmD4eOhqDjh8CP8X1-mB2hKXdZYP",
+    "name": ".gitignore",
+    "path": ".venv/.gitignore"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "id": "1SNWPaQzmfs_8m2s20KxNoqLKpEFEqMQA",
+    "name": "lib",
+    "path": ".venv/lib"
+  },
+  {
+    "md5Checksum": "4684d291aa0ef2848012889e7e9b799d",
+    "mimeType": "text/plain",
+    "parents": [
+      "17W8UC0L0kSdw1vnPnAyOtv7CCWDUM3fS"
+    ],
+    "size": "112",
+    "id": "1UP0p4eARJHe9Vmd_EmK0Zb5HNvUcXK7X",
+    "name": "pyvenv.cfg",
+    "path": ".venv/pyvenv.cfg"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1SNWPaQzmfs_8m2s20KxNoqLKpEFEqMQA"
+    ],
+    "id": "1i1NWpHSlysS0GLd0t-VEmHtAd2aEFCTH",
+    "name": "python3.14",
+    "path": ".venv/lib/python3.14"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1i1NWpHSlysS0GLd0t-VEmHtAd2aEFCTH"
+    ],
+    "id": "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC",
+    "name": "site-packages",
+    "path": ".venv/lib/python3.14/site-packages"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "id": "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN",
+    "name": "PIL",
+    "path": ".venv/lib/python3.14/site-packages/PIL"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "id": "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR",
+    "name": "__pycache__",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "id": "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv",
+    "name": "attr",
+    "path": ".venv/lib/python3.14/site-packages/attr"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "id": "135P6pT2Lv4WZ4f17Quq__qy-y1fdP5rs",
+    "name": "_soundfile_data",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "id": "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY",
+    "name": "attrs-26.1.0.dist-info",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info"
+  },
+  {
+    "md5Checksum": "f9117d55f14f31836b9ffa50dd844630",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "156",
+    "id": "1_bEaK28ZO3CEyrjWPm-htLSWJrpCpReS",
+    "name": "jupyter.py",
+    "path": ".venv/lib/python3.14/site-packages/jupyter.py"
+  },
+  {
+    "md5Checksum": "fb884ba6c81fba2f1b9e5b80aa3ab035",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "344680",
+    "id": "1y0j6GPZaRjwHuHc13tAQMMghlG1Z9M1y",
+    "name": "_cffi_backend.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/_cffi_backend.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "53845f7aaac9244c6c98fd1ecdc17e91",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "165012",
+    "id": "185OktEJJ_9e-vCCXpVHtGHwMiTo47sbR",
+    "name": "typing_extensions.py",
+    "path": ".venv/lib/python3.14/site-packages/typing_extensions.py"
+  },
+  {
+    "md5Checksum": "66830158fa181a46921bb6633f009b2e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "67278",
+    "id": "1DJDvLJQAC685BFLx9dsF16lQr4arYNrL",
+    "name": "soundfile.py",
+    "path": ".venv/lib/python3.14/site-packages/soundfile.py"
+  },
+  {
+    "md5Checksum": "71e8581c332473a17735159487901fb5",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "34703",
+    "id": "1StiXpqNoRosmgVwimqZw-UZzdFUOUDlJ",
+    "name": "six.py",
+    "path": ".venv/lib/python3.14/site-packages/six.py"
+  },
+  {
+    "md5Checksum": "39901bce133db4d24ef7c34e6b8ee8a2",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "5783",
+    "id": "11dnP-rFF_B5V_dyy7nCRg5GAtNQycpjR",
+    "name": "_soundfile.py",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile.py"
+  },
+  {
+    "md5Checksum": "abdd2f23a92efdb67cc051932a172d30",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "9070",
+    "id": "16uITpM2ezn7wkMZFpPeJCHG1DSqExYDu",
+    "name": "pandocfilters.py",
+    "path": ".venv/lib/python3.14/site-packages/pandocfilters.py"
+  },
+  {
+    "md5Checksum": "ff1cfe473cce269c57cce86047c91591",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "108639",
+    "id": "1xoVZQRTW1t9dkSJV67odbqENsCsSWWHM",
+    "name": "rarfile.py",
+    "path": ".venv/lib/python3.14/site-packages/rarfile.py"
+  },
+  {
+    "md5Checksum": "66d104a7dc09e718d630dcebdf50ffe0",
+    "mimeType": "text/x-python",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "4342",
+    "id": "1E__mqoPeemSq0OlSuYic1YQB1yFQKAyU",
+    "name": "_virtualenv.py",
+    "path": ".venv/lib/python3.14/site-packages/_virtualenv.py"
+  },
+  {
+    "md5Checksum": "a47a5925858b447ef52e3461fd6543e8",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "17-FcCmxtH7JOTSXNX2iwk1WLqReQy9qC"
+    ],
+    "size": "18",
+    "id": "1pwywQV5CeXI9L2kB4BhJqKzxcN76HXtg",
+    "name": "_virtualenv.pth",
+    "path": ".venv/lib/python3.14/site-packages/_virtualenv.pth"
+  },
+  {
+    "md5Checksum": "94109a16ac12957c437ae81568b702c9",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY"
+    ],
+    "size": "2742",
+    "id": "1mdyZrzAUCShvn3NAsBKMEEGO-_DQ_gKv",
+    "name": "RECORD",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info/RECORD"
+  },
+  {
+    "md5Checksum": "45210da832f9626829457a65e9e7c4d0",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY"
+    ],
+    "size": "2",
+    "id": "1w5RE7i_o6zBfQTZm66TtjPj0vDzcmeZz",
+    "name": "INSTALLER",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info/INSTALLER"
+  },
+  {
+    "md5Checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY"
+    ],
+    "size": "0",
+    "id": "1J2ReYo6_iwF4Sxav0WL3Knws0UWMIDsE",
+    "name": "REQUESTED",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info/REQUESTED"
+  },
+  {
+    "md5Checksum": "7412a649a466b9dd567141f836b1e222",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY"
+    ],
+    "size": "87",
+    "id": "1CpzEIpkwaHJh24vrXAh-TN55uhsL8gwi",
+    "name": "WHEEL",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info/WHEEL"
+  },
+  {
+    "md5Checksum": "c8f558f8ced0739c71881c9dfa366fe8",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1Q_NnGpG1L-OvyTygoZ1cIJpyODn8OmrY"
+    ],
+    "size": "8754",
+    "id": "1SNBxaoJZYNWL_p8iNG_lqwebNZw_yEIy",
+    "name": "METADATA",
+    "path": ".venv/lib/python3.14/site-packages/attrs-26.1.0.dist-info/METADATA"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "135P6pT2Lv4WZ4f17Quq__qy-y1fdP5rs"
+    ],
+    "id": "19pOexl-nVdiIIs_5IUXHvr2sOxOBilO6",
+    "name": "__pycache__",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data/__pycache__"
+  },
+  {
+    "md5Checksum": "38c4a8cccf157e583580e307de4b2c36",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "135P6pT2Lv4WZ4f17Quq__qy-y1fdP5rs"
+    ],
+    "size": "3639184",
+    "id": "1Mb3FRDTuCBgjuyWqHQSKnOhGV_mx-O3t",
+    "name": "libsndfile_x86_64.so",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data/libsndfile_x86_64.so"
+  },
+  {
+    "md5Checksum": "36125439f73cd0a564ff8c34ce512979",
+    "mimeType": "text/x-python",
+    "parents": [
+      "135P6pT2Lv4WZ4f17Quq__qy-y1fdP5rs"
+    ],
+    "size": "125",
+    "id": "1EemRSpuq4f5fa13nayyhWi9LUHndy8p0",
+    "name": "__init__.py",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data/__init__.py"
+  },
+  {
+    "md5Checksum": "e77fe93202736b47c07035910f47974a",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "135P6pT2Lv4WZ4f17Quq__qy-y1fdP5rs"
+    ],
+    "size": "26518",
+    "id": "1fWCa1YHfQlgfwwKTpVQ3YHEpdN3_TPyJ",
+    "name": "COPYING",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data/COPYING"
+  },
+  {
+    "md5Checksum": "7755742d9e6fd7b1c72a9cc8e261bcb2",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "19pOexl-nVdiIIs_5IUXHvr2sOxOBilO6"
+    ],
+    "size": "253",
+    "id": "17TwK084ehQFcYqLnDrbpdZSXhtI-DXZq",
+    "name": "__init__.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/_soundfile_data/__pycache__/__init__.cpython-314.pyc"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "id": "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a",
+    "name": "__pycache__",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__"
+  },
+  {
+    "md5Checksum": "8cfe169b118a5754648f07f0ffbc9eb1",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "21553",
+    "id": "1hyduI_rdr2lXg4EpiwkVonqGivK_EtJJ",
+    "name": "validators.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/validators.py"
+  },
+  {
+    "md5Checksum": "b00fe6079c27de8a7c8d98c3183d3415",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "584",
+    "id": "1xR-w8BxvjUwEFA0bcyHF4EQMA2IXaJUJ",
+    "name": "setters.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/setters.pyi"
+  },
+  {
+    "md5Checksum": "e80b38d7a60402b6e2f60970e6779440",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "4087",
+    "id": "1TGqqzG0WnR8WNDc_bEN7X8iGTkcu5nc7",
+    "name": "validators.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/validators.pyi"
+  },
+  {
+    "md5Checksum": "fc2cf92f3047af94fde462c7ce3de1bd",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "1617",
+    "id": "1bkVmJx5NdHQc_aBRXD52VA3gVkw0WlfH",
+    "name": "setters.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/setters.py"
+  },
+  {
+    "md5Checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "0",
+    "id": "1EDjJLgxJ4iG_EiuZvnzbbi0Av3IaTkam",
+    "name": "py.typed",
+    "path": ".venv/lib/python3.14/site-packages/attr/py.typed"
+  },
+  {
+    "md5Checksum": "d89860a07215ba78015e70399d70a6ff",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "208",
+    "id": "1lAXUlXE2AZmm6MlWyB2XoIAu6CKAXn_X",
+    "name": "filters.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/filters.pyi"
+  },
+  {
+    "md5Checksum": "eb85ac22144f1b1eedbbf5e83f5df7d6",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "1795",
+    "id": "1Iqeh0iQ1rT02LdVOcL5L1JbcMfKN1nuH",
+    "name": "filters.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/filters.py"
+  },
+  {
+    "md5Checksum": "6cbe49e6589682f720aa0413a26d8f20",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "539",
+    "id": "1eFcZz00tzLQWG-HZIE3Ixnb1hZefeQrb",
+    "name": "exceptions.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/exceptions.pyi"
+  },
+  {
+    "md5Checksum": "f613321a550d2e0d75845db330e3757a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "1990",
+    "id": "1IizClIp2icrbM79wa2Wwlp_rrxIkr_OM",
+    "name": "exceptions.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/exceptions.py"
+  },
+  {
+    "md5Checksum": "ff5a13df24fda60644b7cee50ae8d498",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "643",
+    "id": "1Q78EJF9DlBozi8VrXbaxdo4fG9NUYpDJ",
+    "name": "converters.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/converters.pyi"
+  },
+  {
+    "md5Checksum": "cd26e53682c318df8111f97c47bed6fe",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "3861",
+    "id": "13Kbu2IqVN2NVXQdqxgsIQtbS23vHCSAe",
+    "name": "converters.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/converters.py"
+  },
+  {
+    "md5Checksum": "ea38221124a8a90c1fa60b3e4940cdf4",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "209",
+    "id": "1mmnmOLo6yg9ebtq2bnrizbDz0YYcbq2N",
+    "name": "_version_info.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/_version_info.pyi"
+  },
+  {
+    "md5Checksum": "1609c0d189153a5870ddf0ec2a2e6dbc",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "2222",
+    "id": "1CNICk78d3a0yLqW1R8invji-dM7ruLeD",
+    "name": "_version_info.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_version_info.py"
+  },
+  {
+    "md5Checksum": "791b89d930d90287b61e8492b2bb3c14",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "106129",
+    "id": "1NOv4XGdX4Z1YxLP1SH_Q0LB5BgKU8mKf",
+    "name": "_make.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_make.py"
+  },
+  {
+    "md5Checksum": "1a8f6270a94c9380a44abd5300bf8c1a",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "469",
+    "id": "15pKyo_zgiODBi1O_7LbVA6ERbQdd_W0R",
+    "name": "_typing_compat.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/_typing_compat.pyi"
+  },
+  {
+    "md5Checksum": "0c5a682e3042c0bd3d0d63540e20926d",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "26274",
+    "id": "1lX6hHCF1D9n3tYwxdyL4DkTYuIDSkYsM",
+    "name": "_next_gen.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_next_gen.py"
+  },
+  {
+    "md5Checksum": "f540ec7e47f1f542a927e89d757b9f84",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "2829",
+    "id": "1gALKhctL_atb-njWlOmRy4DNRlq3XjOO",
+    "name": "_compat.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_compat.py"
+  },
+  {
+    "md5Checksum": "a347db3f8385933391f762b16f7d14f4",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "16479",
+    "id": "1JBa0cWTSB4_ZRpYdogFojuJ-revXOGAP",
+    "name": "_funcs.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_funcs.py"
+  },
+  {
+    "md5Checksum": "3fee3666004f884067200cb52519f03a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "843",
+    "id": "1qYiohjv84h9YswzHFfJfcRkdvEh1mRza",
+    "name": "_config.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_config.py"
+  },
+  {
+    "md5Checksum": "46c5ff288089741e90ec6f6e6637f9d1",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "368",
+    "id": "1SJPdIG6XUcWJkUAoUK17Wwx7Wq0pzXUn",
+    "name": "_cmp.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/_cmp.pyi"
+  },
+  {
+    "md5Checksum": "3173757576b9856ad3cebc67dca6b649",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "11325",
+    "id": "161Tafx7CllKs8o9X4d8nD9bh3jxeScIG",
+    "name": "__init__.pyi",
+    "path": ".venv/lib/python3.14/site-packages/attr/__init__.pyi"
+  },
+  {
+    "md5Checksum": "6292fe7ca0a97e6511e2f7308b3795ac",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "2057",
+    "id": "1AKKhhWuUmqXdAx--d0V3P5F5amZci_gC",
+    "name": "__init__.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/__init__.py"
+  },
+  {
+    "md5Checksum": "d4e1bc61ef1278a6b7848ec382db27d2",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1dlToM6HfUylTrs3niXoEORL9k1b5nQXv"
+    ],
+    "size": "4117",
+    "id": "15npY99Dgk0YO8Ej3Z7EX9e6TTDQy7rto",
+    "name": "_cmp.py",
+    "path": ".venv/lib/python3.14/site-packages/attr/_cmp.py"
+  },
+  {
+    "md5Checksum": "d0ba7ce0e256751323b141378dde4ed3",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "25310",
+    "id": "1f2qE8mMRdZznbQDv2FIZzKhqImTFoKAW",
+    "name": "_next_gen.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_next_gen.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "afd5674d62f64d51dc88ca2b857c59b0",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "3495",
+    "id": "1qLnhhxLkxUAZXkLLJsOxRvM9tVK42vW6",
+    "name": "_version_info.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_version_info.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "1ca58aa3589a956f9e12e7c6c02a85f3",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "13953",
+    "id": "1u4-0oxF8nMOEyWRaK2MX2jldQ8XuoaLi",
+    "name": "_funcs.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_funcs.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "f1840c8826008bb269d8ba6c2397a78e",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "5214",
+    "id": "1lC_dsa70i8CwWMdA1LbLH5rvYYaCKQon",
+    "name": "_cmp.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_cmp.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "140a7f77d637425e97b606da587278c2",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "27912",
+    "id": "14ivNmHllBdpz6sWgLf0a_eEysKfWnFBF",
+    "name": "validators.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/validators.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "96773397b9d2e44b4c76b7315c0bc3c8",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "3066",
+    "id": "1Pw9Zi1tD-xi2DkU9srMvqT4FYkqpC2UQ",
+    "name": "filters.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/filters.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "118435bf63b1246db1cf8fae64be4c59",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "3807",
+    "id": "1_a9_XTQDtLXIK-Vg6HfntRgIGXnaYcc_",
+    "name": "exceptions.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/exceptions.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "899c2fe8758eaae675b77690fe1762af",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "1941",
+    "id": "1s7IZzlBJIrenqPazQavexyLnamMeNOEq",
+    "name": "setters.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/setters.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "558ce5232eca9fda9d989b0de8731604",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "1147",
+    "id": "195394-VDlmRQpummiOVY9m4JPfZwxDnq",
+    "name": "_config.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_config.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "6a4fabc83efd2251a2f35ac034abcee2",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "114769",
+    "id": "1cFa_ETzFXPpAEzhGm8qOZBdS-AI0q0_A",
+    "name": "_make.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_make.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "8c29aa83d300f5dd400bf2271ba22eb4",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "4589",
+    "id": "1piIE5k-sGKF4UPICtwHs8GlpB6VDNOBD",
+    "name": "converters.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/converters.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "7151c59015326f611dc8059c08f14503",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "3865",
+    "id": "1xvSCfsJB7pdRKvktrCtZdwARptIIj2_B",
+    "name": "_compat.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/_compat.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "51ff13398f01cefe57cfef884764475c",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1CfgMSQSE_wCFZfoeG1pEd08JRACQKy8a"
+    ],
+    "size": "3518",
+    "id": "1stfIo3ijCny3--0AH-4J3FNPTJMZRA7O",
+    "name": "__init__.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/attr/__pycache__/__init__.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "8f17c554a26ff4f2ffa485d1b01b9c22",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "12287",
+    "id": "1jflT-r9doeSdl6DXh9vzVXn7McZbVI2l",
+    "name": "pandocfilters.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/pandocfilters.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "54d5808982d8243a4a2f1ce96305f42d",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "151446",
+    "id": "1bFL4Q5i_pJYREPFcAGIEPn87RjcEctAU",
+    "name": "rarfile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/rarfile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "6d112143ff482e6a2a0380c3dfa7bc39",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "84624",
+    "id": "136A8jPCEtkbpDOcpKjBWGosVbc_pX7Mv",
+    "name": "soundfile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/soundfile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "48ac3fe6269a1692d839ee1e0dfe84a9",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "3662",
+    "id": "1vZpgiAAQdfzqpvogifFRioEhJ8nJ6nJZ",
+    "name": "_soundfile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/_soundfile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "a0167953d8f676cb6ec16c59b0cbc7e6",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "43014",
+    "id": "1ndZvf3NAupAi_iGAk5ZNoKfeCH_qIlFn",
+    "name": "six.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/six.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "7a29f47a5fc7ae9ac89d264aebec8e56",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "179473",
+    "id": "1WNxytKGPpP6Fz_yNZNZV5Icv1g_t_4EU",
+    "name": "typing_extensions.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/typing_extensions.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "99febb004966ec3a3009e94a2a451ae2",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1hfVCxo8uPByO2srmTjSMQAVUgiwiROjR"
+    ],
+    "size": "4360",
+    "id": "13eIv2QI0cChRZ-b7An76EwgH5HCsVag9",
+    "name": "_virtualenv.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/__pycache__/_virtualenv.cpython-314.pyc"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "id": "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T",
+    "name": "__pycache__",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__"
+  },
+  {
+    "md5Checksum": "dd306a05dc1866fa6c6d4dab0b05d446",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4433",
+    "id": "1DQ2QSPryoI99LZM8FcpuRMXEOm54P3Yv",
+    "name": "_imagingcms.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingcms.pyi"
+  },
+  {
+    "md5Checksum": "84a27291937d76e46b277653002601f2",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63",
+    "id": "1X0NIEO5nAwoFLWmaGhDK_vKgW1k00mtP",
+    "name": "_imagingtk.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingtk.pyi"
+  },
+  {
+    "md5Checksum": "4ce83da7bddca32f500a89868510220f",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "142464",
+    "id": "1AgiWoIKSEw4Ecg0uF7gkP3_u2E4pbfhM",
+    "name": "_imagingmath.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingmath.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "0bccc1083d34bf711200396efa5aacea",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "39448",
+    "id": "15suPfphE3t6-HbDR8CelHc4f6sI2RjJ_",
+    "name": "_imagingmorph.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingmorph.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "9b9d444e893f7e238c4ebfdebe67ab2a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "10775",
+    "id": "138DaUQK9n6eN4nGFcHlLG83hfAAdmd8H",
+    "name": "features.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/features.py"
+  },
+  {
+    "md5Checksum": "84a27291937d76e46b277653002601f2",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63",
+    "id": "1tXcJn1bGfOz0PUTe4H0JLoPpdDHb0jrR",
+    "name": "_imagingmath.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingmath.pyi"
+  },
+  {
+    "md5Checksum": "d4afafb7584312a738365d7c8b04fde3",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "157825",
+    "id": "1VYDVn6PIGeJHRJcpl7A7clN_Z_BKBm7J",
+    "name": "_imagingcms.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingcms.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "2290e3c261de890070bbf85d1986b20f",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "893",
+    "id": "1WzTmzzHtFKmnSfi0eBlDRUoS9vJAajWY",
+    "name": "_imaging.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imaging.pyi"
+  },
+  {
+    "md5Checksum": "e62e5c1c115079f0bebbb3c766308f70",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "327049",
+    "id": "1aqRdQO-HjS1BhKVh6Ymky6PJ2bAjc2dU",
+    "name": "_imagingft.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingft.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "84a27291937d76e46b277653002601f2",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63",
+    "id": "1U2nN_a6c2zPePzM1pcJs9ThKgLL0ahvV",
+    "name": "_imagingmorph.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingmorph.pyi"
+  },
+  {
+    "md5Checksum": "f0a16faa8727bda6fa3d7e3e6609561f",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "538",
+    "id": "1mjNcaUTngX3TmxUj3V3emq8JWA1UXVZ-",
+    "name": "_tkinter_finder.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_tkinter_finder.py"
+  },
+  {
+    "md5Checksum": "d41d8cd98f00b204e9800998ecf8427e",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "0",
+    "id": "1fLHJf1QVM42vTDgilAo46A42EhTqIvKz",
+    "name": "py.typed",
+    "path": ".venv/lib/python3.14/site-packages/PIL/py.typed"
+  },
+  {
+    "md5Checksum": "c66eba5c2f28f1b31b666afcbec0f216",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "47456",
+    "id": "1vwXxuv9fz5AKHPwlkXugmyr6LTJXeUbJ",
+    "name": "_imagingtk.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingtk.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "964b0f01832543beabe56a59348bd037",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1833",
+    "id": "1q7Bivg320_RnAzVKx8wwMwN9nD4nWYS5",
+    "name": "_imagingft.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imagingft.pyi"
+  },
+  {
+    "md5Checksum": "e7595d56b4298b56772177e671d565f5",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "87",
+    "id": "1RzYpH0i1Z1egaRO85N9L07BVL1BXH7u3",
+    "name": "_version.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_version.py"
+  },
+  {
+    "md5Checksum": "f849b002282fb35025e49572246101ac",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "684",
+    "id": "1tHCxQmBa9jMUMuJaU7QkxXzwrZ_l3lQ0",
+    "name": "_util.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_util.py"
+  },
+  {
+    "md5Checksum": "d9d64ce22df3a34aa8b4dcca38ed5752",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "100",
+    "id": "1H-nr2sIJ0WzrIMYto3plVq-Hgr-BRh8G",
+    "name": "report.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/report.py"
+  },
+  {
+    "md5Checksum": "d1f68375d51b1cd32b2c79b8f0846aa4",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "108841",
+    "id": "1lyJPMDix1VY0pBD_mm6ZLpyL9QuERez5",
+    "name": "_webp.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_webp.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "84a27291937d76e46b277653002601f2",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63",
+    "id": "1MgHgRRC7hSsIGWPmF9dyrEp730Yuejjm",
+    "name": "_webp.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_webp.pyi"
+  },
+  {
+    "md5Checksum": "9d04ec4b9d3f3d1467fe2b238183b882",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "919",
+    "id": "1x1q8VKHFpO5tEAd9fU-_LHd25hbtnTk8",
+    "name": "_typing.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_typing.py"
+  },
+  {
+    "md5Checksum": "23520a17ff749b976bd9a6fa70d80f20",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "7733",
+    "id": "1o_MRsnOoB7a4BShVEta2z8Kaw_AO8TxM",
+    "name": "TgaImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/TgaImagePlugin.py"
+  },
+  {
+    "md5Checksum": "4de7da659cad8751ec6e8043ca55f466",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "5762",
+    "id": "1N6fJk4UoProdcfDuJAmd75JwFGXnY4zi",
+    "name": "WalImageFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/WalImageFile.py"
+  },
+  {
+    "md5Checksum": "70586d9aff3d735d1d193bd2ca9fe18c",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "17206",
+    "id": "1r-ji9737e2vph361zu4GPcFCGBcWrqrn",
+    "name": "TiffTags.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/TiffTags.py"
+  },
+  {
+    "md5Checksum": "6b403534c462160b72d1eda937cc7549",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9967",
+    "id": "1OXpu4V9cpN1KG4o3iHZA4IyNC2thuGrs",
+    "name": "WebPImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/WebPImagePlugin.py"
+  },
+  {
+    "md5Checksum": "739efdd20e7983795012e0ceeb32d4dd",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1442",
+    "id": "1QzLJnDTGJD5herfykl3aiT9wly1DSosE",
+    "name": "TarIO.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/TarIO.py"
+  },
+  {
+    "md5Checksum": "81a3fd4ff1766aa8824fb81e14491351",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "5207",
+    "id": "1quaI6rHY2QcqXubqBDxrF2Jg3Edc9UZy",
+    "name": "WmfImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/WmfImagePlugin.py"
+  },
+  {
+    "md5Checksum": "8c42da11f4b1923754e70e430e46cf07",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "91969",
+    "id": "1zAn0-aI_rTzZuYLfmmJY9zfOeuLSYZpI",
+    "name": "_avif.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_avif.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "f366ee571296292c91cf6e88fea14401",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2035",
+    "id": "14QUh2KxYu5hoQDmSxtjNQlDVnBuQKynH",
+    "name": "__init__.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__init__.py"
+  },
+  {
+    "md5Checksum": "46dc8bb5c9a7b42fd7bcf8889bda1193",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2126",
+    "id": "1nqXeldZOHwbZy6fpGl1fsvgnhtCBq0CK",
+    "name": "XVThumbImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/XVThumbImagePlugin.py"
+  },
+  {
+    "md5Checksum": "8a16f31210f1e7e294ab11cb9aa2d09e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4589",
+    "id": "1CQ7AP1LZ-ykYNUSRLl2IxEYmvrVk2goS",
+    "name": "SunImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/SunImagePlugin.py"
+  },
+  {
+    "md5Checksum": "c3cd2029e043b722556313edbf447a2a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2551",
+    "id": "1khqCwR-dkzAhVWVX8l3OCia-NlGYEMRq",
+    "name": "_binary.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_binary.py"
+  },
+  {
+    "md5Checksum": "492191c62a673547f60f73c75b3e21d9",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "85947",
+    "id": "1jWKodBQ0mAuCyUL4IGlBbLB6kKcrN8Z_",
+    "name": "TiffImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/TiffImagePlugin.py"
+  },
+  {
+    "md5Checksum": "edaf137bfd9a43d4230a020254ca1675",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "133",
+    "id": "1-bjbmJNzjeorJjFanoKqcmtApOMV1MEx",
+    "name": "__main__.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__main__.py"
+  },
+  {
+    "md5Checksum": "84a27291937d76e46b277653002601f2",
+    "mimeType": "text/x-python3",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63",
+    "id": "1erp_n5NNmRX6B_NVIkzqBC55j4kksA1w",
+    "name": "_avif.pyi",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_avif.pyi"
+  },
+  {
+    "md5Checksum": "fd6a4817e4d2cb059fb82940e7e17b86",
+    "mimeType": "application/x-sharedlib",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3402273",
+    "id": "1hh0DzT5S3A4Rjyzw9q0ua87dNVt5kCML",
+    "name": "_imaging.cpython-314-x86_64-linux-gnu.so",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_imaging.cpython-314-x86_64-linux-gnu.so"
+  },
+  {
+    "md5Checksum": "3f65e78c97fae39f837022a2e0e5724e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "10294",
+    "id": "1LtZJEI3ElStLSKEWXMhQ_1FOHoYg_88L",
+    "name": "SpiderImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/SpiderImagePlugin.py"
+  },
+  {
+    "md5Checksum": "42ef469d3beeabc4db6207ff6c09df01",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2669",
+    "id": "1-70_4OPS7ie8i22f2rUNVBtkKJ20al1a",
+    "name": "XbmImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/XbmImagePlugin.py"
+  },
+  {
+    "md5Checksum": "795ef5c1239455d7086befb1b634ffd3",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2034",
+    "id": "1XN9fukKW9rjf-Z5lrYs5qFua9zQGaM6X",
+    "name": "_deprecate.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/_deprecate.py"
+  },
+  {
+    "md5Checksum": "22a79db3b9632f5b625998b47d655f75",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4382",
+    "id": "1o_I772mAYiHFuBX_NFy27alFtCetioMr",
+    "name": "XpmImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/XpmImagePlugin.py"
+  },
+  {
+    "md5Checksum": "5d5044a41408b4a2c38e7705e76d4bb6",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6684",
+    "id": "1gUTV8C5RcGTKGHRqnyegnLELro4Avbav",
+    "name": "ImageQt.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageQt.py"
+  },
+  {
+    "md5Checksum": "895c5a3ea1ff931297a36d7edbbf4267",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9208",
+    "id": "1oXjNjoWbG_QnM7fsEmtZWylUk-bpVk5y",
+    "name": "ImagePalette.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImagePalette.py"
+  },
+  {
+    "md5Checksum": "86f33ef9ba067de96b7dd946df735c9e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3916",
+    "id": "1nYiG-YGDv-RK2zAn0Dpkd4OCIKkNplcC",
+    "name": "ImageTransform.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageTransform.py"
+  },
+  {
+    "md5Checksum": "007844ff8519a90edf90a0f000dc0598",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6437",
+    "id": "1cOe9iVa8Ymw71LLqckRTqjZTtpapwABJ",
+    "name": "IptcImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/IptcImagePlugin.py"
+  },
+  {
+    "md5Checksum": "63e9f0d736b89d0d8efa78250bf7e914",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "18578",
+    "id": "1jCtaGd4Xc4CU8QdDlIf_Gt1oGyReqTXE",
+    "name": "ImageText.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageText.py"
+  },
+  {
+    "md5Checksum": "5189442c71cce3a611a3b8b8aa28771e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2253",
+    "id": "17MmVxNyeb4AiZfx3gAHDMUljzii8udPB",
+    "name": "ImageSequence.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageSequence.py"
+  },
+  {
+    "md5Checksum": "da0909c50e52db38a4705a2ec8825ec8",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8748",
+    "id": "1Tf0QPHpN1UkSbaFqdT9iyqH0PaB4HwHD",
+    "name": "PalmImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PalmImagePlugin.py"
+  },
+  {
+    "md5Checksum": "af1e406dbefcae8fd38ee4329fb40e64",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "38661",
+    "id": "1mSy4itlbykM5yaEmG59anANtz_A30Mli",
+    "name": "PdfParser.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PdfParser.py"
+  },
+  {
+    "md5Checksum": "28c36864da1569ff3bab71b90bb6ea51",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8098",
+    "id": "1g-jnV7BPSKNoxvj0dOc8njs0KSRT7NNW",
+    "name": "ImageWin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageWin.py"
+  },
+  {
+    "md5Checksum": "595b18799162dc66590474d8aa73d03e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1774",
+    "id": "18ngNJEjYhagHZT2tnvlcl6LpD1lImvwz",
+    "name": "PcdImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PcdImagePlugin.py"
+  },
+  {
+    "md5Checksum": "00d31ab51ea8b9c5391bd262d0aacde4",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "371",
+    "id": "10aX6l7Z4JXVzcSZ5uhQlEcgl5m_hVqaE",
+    "name": "ImagePath.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImagePath.py"
+  },
+  {
+    "md5Checksum": "8e481563dc088051b14b1b80026ef70a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2010",
+    "id": "1Ko65yOnctCLel8loF3Ejg72athD6ogv_",
+    "name": "MpegImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/MpegImagePlugin.py"
+  },
+  {
+    "md5Checksum": "d33683ee576771665f3b0caedd0f2754",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6992",
+    "id": "12O-Gnax5ywMc2F2SZ4OjIB7SWqkeKmQi",
+    "name": "PSDraw.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PSDraw.py"
+  },
+  {
+    "md5Checksum": "200dc2342fd64ac5293f5f6b37041e03",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6364",
+    "id": "19QwTODkNX2o2dRRLXZYWTPeTImPPXa2X",
+    "name": "PcxImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PcxImagePlugin.py"
+  },
+  {
+    "md5Checksum": "b01b137be4d729c9d88349cc4bf0b24b",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1216",
+    "id": "1HcDPR0-kncEUpcha6lom4D5PMPf6-RUU",
+    "name": "PaletteFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PaletteFile.py"
+  },
+  {
+    "md5Checksum": "ea07cfa3f1e2771727ac83d1c32802f2",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2665",
+    "id": "17ltd3IfiG0tcCCmjsFJe1BTxYXIAO8tZ",
+    "name": "ImtImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImtImagePlugin.py"
+  },
+  {
+    "md5Checksum": "77bfddac937e7f6161a1a8b51a555084",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2599",
+    "id": "1BhOWXB4YJN3wSCi6-QzEBMw8VKxycDp1",
+    "name": "MicImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/MicImagePlugin.py"
+  },
+  {
+    "md5Checksum": "6a730cfcf4cfc03a99f128db48babc4b",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6784",
+    "id": "1pppggkJkWoRPqLcOisVQMw1IJCKS5EkV",
+    "name": "MpoImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/MpoImagePlugin.py"
+  },
+  {
+    "md5Checksum": "2c8331a48e09e45955f2d4b4219c52b3",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "12344",
+    "id": "1pIBVv_Jy7CZnPDByMIqVRVQ6hY5mxfqt",
+    "name": "PpmImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PpmImagePlugin.py"
+  },
+  {
+    "md5Checksum": "2b271dc4fa391d2a88ae134c2311480c",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "31334",
+    "id": "1kI5VBryPfhuLWCfDs9cAN91v-6aU1Tfi",
+    "name": "JpegImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/JpegImagePlugin.py"
+  },
+  {
+    "md5Checksum": "aedc60654ce0e45ca957a03c02d274b7",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1758",
+    "id": "1k8eOnXjDTydGHTbxRe1cmud7yWdia1qa",
+    "name": "PixarImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PixarImagePlugin.py"
+  },
+  {
+    "md5Checksum": "21245c0a72b08de0cd0268f7eac16e52",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9405",
+    "id": "1gvCEZZIQ65J3TWs_bJRQhUAw4sK16q64",
+    "name": "PdfImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PdfImagePlugin.py"
+  },
+  {
+    "md5Checksum": "6f6bfa156856b61ad345c43b6dc2c73d",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "12379",
+    "id": "1XLJr5IklOfhuNWhb_47ju5Du8HOwBGvu",
+    "name": "JpegPresets.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/JpegPresets.py"
+  },
+  {
+    "md5Checksum": "a742606a7681729d68f372fb2e2ff6fa",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6984",
+    "id": "1H_IYkygeuwydSFTe5odUS8nkx_-bmZBB",
+    "name": "PcfFontFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PcfFontFile.py"
+  },
+  {
+    "md5Checksum": "41d33d446dbf29ed61aec042854a798f",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8910",
+    "id": "1Y1nWiGM-5SsWUNj90ClO8Cz4D0DYM2vn",
+    "name": "PsdImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PsdImagePlugin.py"
+  },
+  {
+    "md5Checksum": "23e172c47fec0baa7cf1f6597f72dd35",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8132",
+    "id": "1Dbu15fVsWgsZ2vDuFMcEFGl3uwVNlGFS",
+    "name": "ImageTk.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageTk.py"
+  },
+  {
+    "md5Checksum": "1a75c4532940a9b74dbf7e7f45363588",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "5872",
+    "id": "168QcOiLwuFWj5wA-FXHY6ccpqzmZiSYc",
+    "name": "MspImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/MspImagePlugin.py"
+  },
+  {
+    "md5Checksum": "6d59a406eb123eba222d0687d635a498",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "5495",
+    "id": "1jeUuXskgFWiRw3gbddTEB95mXZlD692Q",
+    "name": "ImageStat.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageStat.py"
+  },
+  {
+    "md5Checksum": "c840f91d0b076a985ff0b661e021bef8",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1877",
+    "id": "1Zq-IJ-NppIAqLZhhhd1iJyF1sp88Joiq",
+    "name": "McIdasImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/McIdasImagePlugin.py"
+  },
+  {
+    "md5Checksum": "01a8610752aebc2b11f5ebe35b1d0ed3",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "14622",
+    "id": "1KfiXcJziWEOiGhZHdU7OsXI3PM0prZrG",
+    "name": "Jpeg2KImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/Jpeg2KImagePlugin.py"
+  },
+  {
+    "md5Checksum": "c0eaa799c77bd1143881058ac7eacc9b",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "52399",
+    "id": "1sH8U02YfBCsvuiRTVniRkrUD5siGE-1J",
+    "name": "PngImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/PngImagePlugin.py"
+  },
+  {
+    "md5Checksum": "d7e027246457b0276a680ed3e8caab62",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8596",
+    "id": "1K1izpaotKGVCTEHbQ09rUmObMLFTyN4y",
+    "name": "QoiImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/QoiImagePlugin.py"
+  },
+  {
+    "md5Checksum": "1738c440de896738dfdaeb2ca608ac3e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "6371",
+    "id": "18Zbh54vgL603RvBRMxfjek_BWHgE2aE3",
+    "name": "SgiImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/SgiImagePlugin.py"
+  },
+  {
+    "md5Checksum": "10b97e8c1e0a2eee2d806b464d3580a8",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "10317",
+    "id": "12NSJ9oKATpdoh68EEJet2ngUkQvxJhLf",
+    "name": "ImageShow.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageShow.py"
+  },
+  {
+    "md5Checksum": "54a2c9ddd0d5c6507ccd4f547a57b4bf",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "40695",
+    "id": "1SNOJ4xZf7K1sMKdKPiPec9SxCj_g6ZtD",
+    "name": "ImageCms.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageCms.py"
+  },
+  {
+    "md5Checksum": "99d196e9564b379dae277ff157be8ffe",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2395",
+    "id": "1mlRDOkKFfRhdWQ1YYJSpWi0S-4WNrUPG",
+    "name": "ImageMode.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageMode.py"
+  },
+  {
+    "md5Checksum": "ef0322a6216faf0e9f470e744c914619",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "19097",
+    "id": "1VohXxnxRoCgLluOxknUITBCsdpJBbzrL",
+    "name": "ImageFilter.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageFilter.py"
+  },
+  {
+    "md5Checksum": "7891413f27c95728cc09b2d3a1b39335",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "10356",
+    "id": "1u4t-MBNYk8KzKsEuzGu-yZq5l_XC0J_s",
+    "name": "ImageMorph.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageMorph.py"
+  },
+  {
+    "md5Checksum": "7552b46a33dccfc55ed2848530a19791",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9441",
+    "id": "1VzfYpFTVbhgZ_9u6FNK7YKrjn6lufJQ4",
+    "name": "ImageColor.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageColor.py"
+  },
+  {
+    "md5Checksum": "db612270fed203f11282322478897807",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "63750",
+    "id": "1S3UntWZgnvjiF7hHlMNLiGkQhmIJ8Dg4",
+    "name": "ImageFont.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageFont.py"
+  },
+  {
+    "md5Checksum": "9be3d5c8bbf7babc37da563e2cb0c7d5",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "8241",
+    "id": "10o2nS80eWotN9bhDmYq1AYxWLHfWzhSM",
+    "name": "ImageGrab.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageGrab.py"
+  },
+  {
+    "md5Checksum": "2bb6be165c323b8b78e77c1a2cdcf9ac",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "29890",
+    "id": "1ih_UyVs_FkXIIErIyhMygxorTwwuJh6i",
+    "name": "ImageFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageFile.py"
+  },
+  {
+    "md5Checksum": "39d28fbecaa186860ad5be044cc65103",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3627",
+    "id": "11li-ZLGQEhEXjAIGupfVRMmddWI5YEDv",
+    "name": "ImageEnhance.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageEnhance.py"
+  },
+  {
+    "md5Checksum": "96fc2aa6647aaf0bd6a54ab5ad44d53d",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "7946",
+    "id": "1eR0ex_p72HSwmNTEpbR7KHsCfTne5eJP",
+    "name": "ImageChops.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageChops.py"
+  },
+  {
+    "md5Checksum": "a748efd6d0c6f9d434da56945666dd16",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "35419",
+    "id": "1IGOHhlM_z4JnqNkQNdO4YknFYthFk92f",
+    "name": "ImageDraw.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageDraw.py"
+  },
+  {
+    "md5Checksum": "c251bb5b4bf0eff411eeaedc47b2d876",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "10345",
+    "id": "1KTfA70VOum10JWGyFM7zdLI_9cZCA5S1",
+    "name": "ImageMath.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageMath.py"
+  },
+  {
+    "md5Checksum": "158d7771031961e16b6562f2bb9b5872",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "7226",
+    "id": "1NRZ2c1tYwOeJ-J3Sc8BZPIS-zxO7fq-W",
+    "name": "ImageDraw2.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageDraw2.py"
+  },
+  {
+    "md5Checksum": "d306d549ed5d72961a90faea0760735d",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "25697",
+    "id": "1fB2hulwT_YMffUrYDoJoTcZbQVvFctxS",
+    "name": "ImageOps.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImageOps.py"
+  },
+  {
+    "md5Checksum": "2a3afc838c04bfb937b872a7a5f3e853",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3053",
+    "id": "1JUrcBtmIUnfXdEJkTsenESsiCm01C0Q8",
+    "name": "GbrImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GbrImagePlugin.py"
+  },
+  {
+    "md5Checksum": "e2a6aa1ac3fee55f082f60956873cce9",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "12397",
+    "id": "19iVZPUvF2kCtfCpbev99WLrffASW6zcC",
+    "name": "IcnsImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/IcnsImagePlugin.py"
+  },
+  {
+    "md5Checksum": "444205392e751e9db5430faebd5cd599",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "11602",
+    "id": "1eyPobfi8kAL9ZTerfeTp0pAvoXqnmILw",
+    "name": "ImImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ImImagePlugin.py"
+  },
+  {
+    "md5Checksum": "15ae9f53561a85acb63d68e3ce27913a",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "153786",
+    "id": "1UDKinyTvr15s61z6tUfGKALJsMtT6ay6",
+    "name": "Image.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/Image.py"
+  },
+  {
+    "md5Checksum": "58f758cdaa04340041e7db5d01fe2daf",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2847",
+    "id": "1MtD8v_lj_fLyHI6tM3O0Nu-QOPTlAIEL",
+    "name": "GdImageFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GdImageFile.py"
+  },
+  {
+    "md5Checksum": "4b49afd6f90965c2a218d06bd28aabeb",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3983",
+    "id": "1FSX8kf1DFloeW1LDh9bt8wBzV-6En371",
+    "name": "GimpGradientFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GimpGradientFile.py"
+  },
+  {
+    "md5Checksum": "21e5069919f88b6be82e99ac0f62f603",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "13103",
+    "id": "1Of3Bs1wdNBG6SKMm8JR0lWJ3tomjvKNy",
+    "name": "IcoImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/IcoImagePlugin.py"
+  },
+  {
+    "md5Checksum": "f54a8b47fef1bcd2f0724ddea25a4c0e",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4259",
+    "id": "1l5Z2zlWNXx7uLN4aMDKXGbVfi8qWuHLb",
+    "name": "FontFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/FontFile.py"
+  },
+  {
+    "md5Checksum": "5870d0f1aa9cdaad26dbe2b7f9e2b5d1",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1696",
+    "id": "1IwTQ2xzKckksX_zZYko_DnMpt8YPZ6aI",
+    "name": "Hdf5StubImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/Hdf5StubImagePlugin.py"
+  },
+  {
+    "md5Checksum": "4ba34030e413059bcf41a26c31b63f44",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1860",
+    "id": "11_ZpnLAlwKPeBlcaz73Vko_H-fZxU-Ba",
+    "name": "GimpPaletteFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GimpPaletteFile.py"
+  },
+  {
+    "md5Checksum": "b5c388f203dc0fd4374c8778073ce484",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1714",
+    "id": "1kYaCjNSNFNcq4gLbKfk8H3u3ptJa1dVI",
+    "name": "GribStubImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GribStubImagePlugin.py"
+  },
+  {
+    "md5Checksum": "66df1a10f9a2bce05fada5a07f984df9",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4929",
+    "id": "1v3ZgkwQgK-ROHUa6u71YJhUVt2QnvPt4",
+    "name": "FliImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/FliImagePlugin.py"
+  },
+  {
+    "md5Checksum": "5cf9b78c4d457c42bede7554e6ab4d9f",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "42373",
+    "id": "1UvuxJ46qV6XbweydIRrnRZlCm2hHKw9Z",
+    "name": "GifImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/GifImagePlugin.py"
+  },
+  {
+    "md5Checksum": "5552f2573b467cee3e577ebb558f89c6",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "7462",
+    "id": "1YGtytuAayPXYkkqDa4klFgBfRdwVosiU",
+    "name": "FpxImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/FpxImagePlugin.py"
+  },
+  {
+    "md5Checksum": "288bbc7eaa2455dce422b06a617f50d2",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3570",
+    "id": "1k_pZa58yAkhUm1i0xwcmtBzQQygOSGt1",
+    "name": "FtexImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/FtexImagePlugin.py"
+  },
+  {
+    "md5Checksum": "cf9b1cd9bc4e67228619706c6d95b4fe",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2180",
+    "id": "1S6oQ_W1XBrhs-syBxSrl5zncbUTDv2m3",
+    "name": "DcxImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/DcxImagePlugin.py"
+  },
+  {
+    "md5Checksum": "9fd45bfe9eb231523eed4f3f73db41a7",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4604",
+    "id": "1iJwHsy-Th2F_DjMjq_MhwbMFJhqXpaWb",
+    "name": "ContainerIO.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ContainerIO.py"
+  },
+  {
+    "md5Checksum": "8a64cbace04c9766740f1ea881dd426c",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "1685",
+    "id": "1BO85sstnQTjuZVRQEqCSglsW-lDmVP7Y",
+    "name": "BufrStubImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/BufrStubImagePlugin.py"
+  },
+  {
+    "md5Checksum": "2f3efa2349d254c86b876e005752ed3f",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "2711",
+    "id": "1YRqAhzOKY9y9vjtUJDxJtLfyjpEz08Pb",
+    "name": "CurImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/CurImagePlugin.py"
+  },
+  {
+    "md5Checksum": "6af8852064f69a581d315be3fa8a1af5",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9301",
+    "id": "1li-mrjw3505sN6dPy6C3vFZsrQ32Bwut",
+    "name": "AvifImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/AvifImagePlugin.py"
+  },
+  {
+    "md5Checksum": "d75c1308126d88811a1b0f956f7fc0b4",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "19863",
+    "id": "1Jyto8U7o_xXuGmPb2kVZwcmsTKxdTxs9",
+    "name": "BmpImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/BmpImagePlugin.py"
+  },
+  {
+    "md5Checksum": "79144c6aa7c52ec614c79988872fdf69",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "3339",
+    "id": "1eG-G_yFYqRv7Ok_jXSmr-ASEUTnqJH4X",
+    "name": "BdfFontFile.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/BdfFontFile.py"
+  },
+  {
+    "md5Checksum": "83227276483ea91644ebfd3f5a0f7d95",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "4722",
+    "id": "10zurJHKMBxYxfFUO7YIPX675ZyIaC07l",
+    "name": "FitsImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/FitsImagePlugin.py"
+  },
+  {
+    "md5Checksum": "90463fcc3971ecea3d2f569ea0bdb9e8",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "9955",
+    "id": "1vLlEGt3Hyqe0GYK3h0rMnd2MpWfCBXCP",
+    "name": "ExifTags.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/ExifTags.py"
+  },
+  {
+    "md5Checksum": "08f5356a83dca53a18520b8b324f2ebe",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "16769",
+    "id": "1rJ1wXghxCRud8WTR0PogV2WuZKvOjmwe",
+    "name": "EpsImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/EpsImagePlugin.py"
+  },
+  {
+    "md5Checksum": "04a0310271803651a06fb3ae0a4d6753",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "19101",
+    "id": "1GqfqBpfTgFr8KkXNXiheKu_RYOZJ5A2W",
+    "name": "DdsImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/DdsImagePlugin.py"
+  },
+  {
+    "md5Checksum": "77b353ad644ba102492aeae35865836b",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1WeU71M1xjNNqtF9tZxai1ShL1ZdGTnzN"
+    ],
+    "size": "16550",
+    "id": "1A7ThNrqrYoj3pTC5-2PdK4c07hqmUZXJ",
+    "name": "BlpImagePlugin.py",
+    "path": ".venv/lib/python3.14/site-packages/PIL/BlpImagePlugin.py"
+  },
+  {
+    "md5Checksum": "d2aed0895ec7f9a2775a0cf0abf42549",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "9438",
+    "id": "1l_Ce4T7JQe7z4WrDcjldeGCGxt8wa-KM",
+    "name": "ImageGrab.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageGrab.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "56c54d68ff5ebc3deae8b6560a50d6d1",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "21877",
+    "id": "1qR6nHUh8FsvvLcfHd0HSxiPjxa2vP9Lr",
+    "name": "ImageText.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageText.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "e48be83e73a6cde65404e690bcdce909",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "2013",
+    "id": "1EZpAjiDQPfCEZgvo8AazZyWUMtUVNyZq",
+    "name": "_typing.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/_typing.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "8b3f32fdd142d140af22cc3551a0b536",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "72733",
+    "id": "1Fmg9qmqmiapQB0xp897kWMsBMuf9ySGR",
+    "name": "ImageFont.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageFont.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "df983e8e83502b50c4fc0d980f9ae27d",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "45989",
+    "id": "1bTYnIrB89MVUO-9tuaLiMwhMjSY6SEYd",
+    "name": "ImageDraw.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageDraw.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "6d97960b47af418208cce3ce3055cb45",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "16352",
+    "id": "1HV5XOvBhatjJfHin-GtwaqKIJETgsz0a",
+    "name": "PpmImagePlugin.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/PpmImagePlugin.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "b64eb02650757f1293a3777a633f1fc0",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "18960",
+    "id": "1gcJMQdsmnVmbnix9JEEoFVpnsdzuP51B",
+    "name": "JpegPresets.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/JpegPresets.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "bf58fe092a9746e6de0411c401013581",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "38741",
+    "id": "1g1aGPRJmwc62iB3J6qOTCJ9JztxbiGDg",
+    "name": "JpegImagePlugin.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/JpegImagePlugin.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "e7330d760a308dd188c35d70e3c4f929",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "34752",
+    "id": "14hrcOyMvkFmZbbcRZGFUsOS3OnPRR9VB",
+    "name": "ImageOps.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageOps.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "883514e241b9294ebaa64e5e9b35574c",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "20181",
+    "id": "1BDfa3_uRiPwkco6tWlQSqns9JrAktaHC",
+    "name": "ImageMath.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageMath.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "35f8a5f1e46e484d0866543b5f287160",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "52674",
+    "id": "1TXRnRP85kZ3-x94JgcTQwzAI6Evcyzgy",
+    "name": "GifImagePlugin.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/GifImagePlugin.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "5aa5683363a8bfea22d6c17d208a5535",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "21181",
+    "id": "15G8c6aK-sSElXJxfdOC_mOIDSpqyzlkY",
+    "name": "BmpImagePlugin.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/BmpImagePlugin.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "65eb251766b7d4c4ef1671a2a764ac65",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "2362",
+    "id": "14PcEl_EuN8x-qjk-d8UqJypVC8rlSTN7",
+    "name": "PaletteFile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/PaletteFile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "76b817dc8eb7be6231b8c148a4902182",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "4219",
+    "id": "1LdT9E64fM8BHKU1hC8OqqBB2CTSOgnfz",
+    "name": "ImageSequence.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageSequence.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "368e3adc19f6dcc638ac43ff1a23b31a",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "13555",
+    "id": "1Pr1lansJ0wSDhCeUVPA40VPxfkNSRWar",
+    "name": "ImageColor.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageColor.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "742a4a34f2f31316d10e1810c332e7ab",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "3562",
+    "id": "1w_eFHteeIBt20Bb6Kl_ZW1LX8q4x-2b6",
+    "name": "GimpPaletteFile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/GimpPaletteFile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "bd130322f8f547fe4937ca17867a9ef5",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "7269",
+    "id": "1FGy_uYM17RdFiLI-Y0jhK_Y_ABO4reOa",
+    "name": "GimpGradientFile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/GimpGradientFile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "e3b0324f9e20e29aeb3857b0cf06c328",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "15462",
+    "id": "1ddKdbLt34InwKi1ILzMpEGtvGVBrwJdc",
+    "name": "ImagePalette.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImagePalette.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "65d45c46ab3b608cf3fc40b4361505c3",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "43214",
+    "id": "1tATKrJtt0ncoYBRudTZ5ekLIG7dn6Nw0",
+    "name": "ImageFile.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageFile.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "1af52ff39cecaca782ae7330ec6890b4",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "13891",
+    "id": "1tcWio614JFsI2lYPHvXyrJcYkN7IVTAO",
+    "name": "ImageChops.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageChops.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "a5d2153f7cf259bf31efe621939252bf",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "75849",
+    "id": "1M4Ci5EVT50YxYBGUQ1dOnF3UOt3kuvNN",
+    "name": "PngImagePlugin.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/PngImagePlugin.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "bcef57b82cd036478dfed5208808ad0e",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "2224",
+    "id": "1lBObRplOcsxilcsRIhpZFRdpO2F6963R",
+    "name": "_util.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/_util.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "e14a4178dcb9222f7de6790a20e34c89",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "5192",
+    "id": "1gDAK-H1Dnqd8keC61aWX5wHlNcm5o-AU",
+    "name": "_binary.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/_binary.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "b9b0353777e7825ee7ae8574d656e064",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "2750",
+    "id": "1VpEeQimI269aGC_CMK3pSc3vZwESop6L",
+    "name": "_deprecate.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/_deprecate.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "6f6348407dc1ce66fa981876d52740e4",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "20049",
+    "id": "1b6hKBdqdyTtZPGjnQ3xAjotuoLTeH6Ip",
+    "name": "TiffTags.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/TiffTags.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "fe3106780c7676eefbcf2f15ddf94cbc",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "3021",
+    "id": "1_CcJfnhtyDAAnZqNlXYWEKauO9AI7pm8",
+    "name": "ImageMode.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ImageMode.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "a5ca997107a16c390eec5e06d8bcd920",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "11518",
+    "id": "1MHN4IZxNAm2rjU4aAN8h02xlJ6FbCJOJ",
+    "name": "ExifTags.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/ExifTags.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "bf22ee6cc60fbc35eca8748fc731e3aa",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "203238",
+    "id": "1ClJzaV7Y37Fas6RWcwaN1XY6sNONjrPi",
+    "name": "Image.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/Image.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "6ca68f52a8579c45fc9db9ecf55b6d8c",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "288",
+    "id": "12maq61HMr1eEcO_u6Cd-Ti4jOKOuEmpj",
+    "name": "_version.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/_version.cpython-314.pyc"
+  },
+  {
+    "md5Checksum": "4e99e79d9390edf87fbd51a97d711e1c",
+    "mimeType": "application/x-python-bytecode",
+    "parents": [
+      "1NAs1ntvGST8sLoOHf18ettosjgd6fi5T"
+    ],
+    "size": "2777",
+    "id": "1StIWu2xYikvYptxKAc7DL_JGJgT8_dO0",
+    "name": "__init__.cpython-314.pyc",
+    "path": ".venv/lib/python3.14/site-packages/PIL/__pycache__/__init__.cpython-314.pyc"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1oSfNs2uH3YJGfQr9_SdFmTK7gnKr3AbB"
+    ],
+    "id": "1GXeZISsvH2KtJYPyoSLAlXHJDbT5Zaan",
+    "name": "jupyter",
+    "path": ".venv/share/jupyter"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1GXeZISsvH2KtJYPyoSLAlXHJDbT5Zaan"
+    ],
+    "id": "19KxuN6SWMisG6-sUe9oWvtw7I2yDkEmm",
+    "name": "kernels",
+    "path": ".venv/share/jupyter/kernels"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1GXeZISsvH2KtJYPyoSLAlXHJDbT5Zaan"
+    ],
+    "id": "1i2wFjpI9PZ9mbbLpqyrV85QTs5CgLuIN",
+    "name": "nbconvert",
+    "path": ".venv/share/jupyter/nbconvert"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1GXeZISsvH2KtJYPyoSLAlXHJDbT5Zaan"
+    ],
+    "id": "1kHYZ3ypzbAtV2uGJZeQoa0FpuREEyX_k",
+    "name": "labextensions",
+    "path": ".venv/share/jupyter/labextensions"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1kHYZ3ypzbAtV2uGJZeQoa0FpuREEyX_k"
+    ],
+    "id": "1iQtWDpSbokgH1g2co9BC3o5LPwAeAGmh",
+    "name": "jupyterlab_pygments",
+    "path": ".venv/share/jupyter/labextensions/jupyterlab_pygments"
+  },
+  {
+    "md5Checksum": "083cee177415b267db10251dc0f19862",
+    "mimeType": "application/json",
+    "parents": [
+      "1iQtWDpSbokgH1g2co9BC3o5LPwAeAGmh"
+    ],
+    "size": "199",
+    "id": "15iyutNOhAhDZX64ymnS0u65wbd2dne8e",
+    "name": "install.json",
+    "path": ".venv/share/jupyter/labextensions/jupyterlab_pygments/install.json"
+  },
+  {
+    "md5Checksum": "45e3f8b6ea127c71a1b19539789af331",
+    "mimeType": "application/json",
+    "parents": [
+      "1iQtWDpSbokgH1g2co9BC3o5LPwAeAGmh"
+    ],
+    "size": "5919",
+    "id": "1XaFSmMxdf7INqbxpmAbzjxEJUmeARCq9",
+    "name": "package.json",
+    "path": ".venv/share/jupyter/labextensions/jupyterlab_pygments/package.json"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "1i2wFjpI9PZ9mbbLpqyrV85QTs5CgLuIN"
+    ],
+    "id": "11GSxVqkrxccuPhyvBFPv7tVF541iZo0U",
+    "name": "templates",
+    "path": ".venv/share/jupyter/nbconvert/templates"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "11GSxVqkrxccuPhyvBFPv7tVF541iZo0U"
+    ],
+    "id": "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz",
+    "name": "base",
+    "path": ".venv/share/jupyter/nbconvert/templates/base"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "11GSxVqkrxccuPhyvBFPv7tVF541iZo0U"
+    ],
+    "id": "10pHi9M9hnGZ_czd2iSU01meGYhxLWkTp",
+    "name": "asciidoc",
+    "path": ".venv/share/jupyter/nbconvert/templates/asciidoc"
+  },
+  {
+    "md5Checksum": "5d5d27b39b5c230cf86a6b17866f3fd9",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10pHi9M9hnGZ_czd2iSU01meGYhxLWkTp"
+    ],
+    "size": "2298",
+    "id": "168QpAjZ8s5N5WPafMoW-qFI12KwfiPk2",
+    "name": "index.asciidoc.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/asciidoc/index.asciidoc.j2"
+  },
+  {
+    "md5Checksum": "b831ce48114f4fe9b408da5d38e43a69",
+    "mimeType": "application/json",
+    "parents": [
+      "10pHi9M9hnGZ_czd2iSU01meGYhxLWkTp"
+    ],
+    "size": "78",
+    "id": "1VdXOrSWQw9G0XSv4f6Sb_cbUi-WQeRV2",
+    "name": "conf.json",
+    "path": ".venv/share/jupyter/nbconvert/templates/asciidoc/conf.json"
+  },
+  {
+    "md5Checksum": "3e13453df7e7f5f771fda5e4bf10fd51",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "1680",
+    "id": "1TtN1CQMbMA2YgS75aVb8954QyznXV_KQ",
+    "name": "display_priority.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/display_priority.j2"
+  },
+  {
+    "md5Checksum": "e44258936800681db0cede78f7fc5d4e",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "231",
+    "id": "1NlN7xgG4ucRmAMqpLpMqXbD4Ol-lMNpq",
+    "name": "celltags.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/celltags.j2"
+  },
+  {
+    "md5Checksum": "6a8e289c2c6a384af5754b49afbd6f8a",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "1226",
+    "id": "1rEx-igf49LiwwLERWcCsVlFudMkfXQeQ",
+    "name": "mathjax.html.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/mathjax.html.j2"
+  },
+  {
+    "md5Checksum": "fe6b6184de0e96c44151e3045abc5264",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "6265",
+    "id": "1qsgYUoK8jSUCoLvnWBIwBVTkR45ZOxXI",
+    "name": "null.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/null.j2"
+  },
+  {
+    "md5Checksum": "cd136be29dba0377f9a3069acd6fd669",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "1250",
+    "id": "1bJ--tw1P76sKMre7Feprd0XygTASQHFs",
+    "name": "jupyter_widgets.html.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/jupyter_widgets.html.j2"
+  },
+  {
+    "md5Checksum": "65b67c659621a1ab3ba8bf9cfbae008c",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "10or7c1jp8PEHRY11T2EW3fLZ9w3Bjmcz"
+    ],
+    "size": "160",
+    "id": "1J_R3Pa8dow0r3Vs3slEYsoBrz6nMfKB7",
+    "name": "cell_id_anchor.j2",
+    "path": ".venv/share/jupyter/nbconvert/templates/base/cell_id_anchor.j2"
+  },
+  {
+    "mimeType": "application/vnd.google-apps.folder",
+    "parents": [
+      "19KxuN6SWMisG6-sUe9oWvtw7I2yDkEmm"
+    ],
+    "id": "10Lpme8PhBssVfg0Ci42R0iENbUhqaE6B",
+    "name": "mosquito-wingbeat",
+    "path": ".venv/share/jupyter/kernels/mosquito-wingbeat"
+  },
+  {
+    "md5Checksum": "6595dc586a4f5ee39311ed79c61e146d",
+    "mimeType": "application/json",
+    "parents": [
+      "10Lpme8PhBssVfg0Ci42R0iENbUhqaE6B"
+    ],
+    "size": "328",
+    "id": "1I1vrIymFeF25q6dnaRCVEs6IQS6GImD7",
+    "name": "kernel.json",
+    "path": ".venv/share/jupyter/kernels/mosquito-wingbeat/kernel.json"
+  },
+  {
+    "md5Checksum": "c587675e9c33df06a94745d34b868fe9",
+    "mimeType": "image/png",
+    "parents": [
+      "10Lpme8PhBssVfg0Ci42R0iENbUhqaE6B"
+    ],
+    "size": "2180",
+    "id": "11wjZOEeC-62v6Fx2BZq8mPtw7bhHJ-GF",
+    "name": "logo-64x64.png",
+    "path": ".venv/share/jupyter/kernels/mosquito-wingbeat/logo-64x64.png"
+  },
+  {
+    "md5Checksum": "67e3abc640fab4b73348e55d0ccca2cd",
+    "mimeType": "image/png",
+    "parents": [
+      "10Lpme8PhBssVfg0Ci42R0iENbUhqaE6B"
+    ],
+    "size": "1084",
+    "id": "1vF6cyfjqDcRdDZ3qSpaU7QNHLsGlixKZ",
+    "name": "logo-32x32.png",
+    "path": ".venv/share/jupyter/kernels/mosquito-wingbeat/logo-32x32.png"
+  },
+  {
+    "md5Checksum": "79ddc3d4363aebb071e76abf9f6850cb",
+    "mimeType": "image/svg+xml",
+    "parents": [
+      "10Lpme8PhBssVfg0Ci42R0iENbUhqaE6B"
+    ],
+    "size": "9605",
+    "id": "1dpJ03bvFFkQ-aLKGbuxDAvZ3FJvlbwba",
+    "name": "logo-svg.svg",
+    "path": ".venv/share/jupyter/kernels/mosquito-wingbeat/logo-svg.svg"
+  },
+  {
+    "md5Checksum": "4815c712c239964dd69b3d2ac129333f",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "226",
+    "id": "1r_Poo3C4iwQ4uix45nDO1ZjsgwJqeyhI",
+    "name": "pyserial-miniterm",
+    "path": ".venv/bin/pyserial-miniterm"
+  },
+  {
+    "md5Checksum": "05a77bf7c2fd5ad643e760b124d51acc",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "228",
+    "id": "1WRZ--rVDqclAZdvggqSCImCYurZkfb9i",
+    "name": "pyserial-ports",
+    "path": ".venv/bin/pyserial-ports"
+  },
+  {
+    "md5Checksum": "4166930e13faff482548b8fc3f33ccd5",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "374",
+    "id": "1KAEirJnC4GTmwzD9tBLKQi_Tkhk9WQ7D",
+    "name": "normalizer",
+    "path": ".venv/bin/normalizer"
+  },
+  {
+    "md5Checksum": "19c19b86c3b775e3f0e9e2fc17564f37",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "357",
+    "id": "1zubfdPnsGHc_Yk2wbZhvi2KmMstKvnUq",
+    "name": "f2py",
+    "path": ".venv/bin/f2py"
+  },
+  {
+    "md5Checksum": "7f0b0b8b609b3fd607e1de4ae96a2914",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "356",
+    "id": "1Avr2YInwuPJ_dNbtM4PRNpDFcvD-R72x",
+    "name": "pygmentize",
+    "path": ".venv/bin/pygmentize"
+  },
+  {
+    "md5Checksum": "c67409a589eb28fad1cb06ea2bdb0cdd",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "376",
+    "id": "1dQp_dMIgAKHQT2Ko6Fkq97q-A_6Vp9I4",
+    "name": "jupyter-dejavu",
+    "path": ".venv/bin/jupyter-dejavu"
+  },
+  {
+    "md5Checksum": "e5888a54f8e08453773303d7d1146456",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "354",
+    "id": "1W2MnNPavBVWCij72hf47lKgbkuBYODlv",
+    "name": "jsonschema",
+    "path": ".venv/bin/jsonschema"
+  },
+  {
+    "md5Checksum": "b3230173d69889f90f424b56c212cfec",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "357",
+    "id": "1OZCtffTe6cantshJUrtec2kgZjXKGZua",
+    "name": "numpy-config",
+    "path": ".venv/bin/numpy-config"
+  },
+  {
+    "md5Checksum": "b7da02100303f383db15cbba32e9fa8c",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "362",
+    "id": "1w9q2vurPpjXG8on4XzKXwNqt4_gQRjHC",
+    "name": "jupyter-nbconvert",
+    "path": ".venv/bin/jupyter-nbconvert"
+  },
+  {
+    "md5Checksum": "6ba518457ac2d8b20e52f912c4cd87cd",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "4116",
+    "id": "1naHXsu0hDfOlyqp-jfnMAJpNXw3qLX7u",
+    "name": "activate",
+    "path": ".venv/bin/activate"
+  },
+  {
+    "md5Checksum": "feefd247131cfc36aef8232a535ee988",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "360",
+    "id": "1mA6QNTdtYkqmaTHCXvZb1dQELykJtf-i",
+    "name": "jupyter",
+    "path": ".venv/bin/jupyter"
+  },
+  {
+    "md5Checksum": "b7f4bac9b8f94369f2301e1e44c93c68",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "393",
+    "id": "1rPbXzbUuGRDOcvTUl3WrmJzFzNa0vWjH",
+    "name": "jupyter-trust",
+    "path": ".venv/bin/jupyter-trust"
+  },
+  {
+    "md5Checksum": "ecd7b4ed7beb7452f14577fea6d618d0",
+    "mimeType": "application/x-bat",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "2625",
+    "id": "1sxF55KtK29nT8OeHCu73GTuD04LNRv9f",
+    "name": "activate.bat",
+    "path": ".venv/bin/activate.bat"
+  },
+  {
+    "md5Checksum": "76adbaafe4effb5f8702739ba77dc296",
+    "mimeType": "application/x-fishscript",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "4218",
+    "id": "158dG6f7dKqVg_MMO4x8dIo5XOB4SCozl",
+    "name": "activate.fish",
+    "path": ".venv/bin/activate.fish"
+  },
+  {
+    "md5Checksum": "2bfa2fcc118ddf75d7a9ca53527f6ce3",
+    "mimeType": "application/x-csh",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "2646",
+    "id": "1XUdI-HfLWCDv3WRkudfMbL0bZUOFco4D",
+    "name": "activate.csh",
+    "path": ".venv/bin/activate.csh"
+  },
+  {
+    "md5Checksum": "52560c749b67f0d15932a548742f0ed5",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "354",
+    "id": "1FHEzlkJB28X-YezHWGe64bQeNIVFYPlK",
+    "name": "mistune",
+    "path": ".venv/bin/mistune"
+  },
+  {
+    "md5Checksum": "dbb100a6dfaabd163c6a20b0468bec70",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "360",
+    "id": "1BCZtEfiClGeuWjYPA_C4HYN058Acdbsf",
+    "name": "jupyter-migrate",
+    "path": ".venv/bin/jupyter-migrate"
+  },
+  {
+    "md5Checksum": "a2cc7b4c5930745ca52ab7bf30b5feb7",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "352",
+    "id": "17gQwZ5JrUxTMgvGAdSHaX-OPFAyp7EyW",
+    "name": "jupyter-execute",
+    "path": ".venv/bin/jupyter-execute"
+  },
+  {
+    "md5Checksum": "a4689de908bccdde16ea41558c7afe21",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "381",
+    "id": "1r1HpHNJJHiVUKD15NO57_5NBgwaDwY6h",
+    "name": "jupyter-run",
+    "path": ".venv/bin/jupyter-run"
+  },
+  {
+    "md5Checksum": "021c7b0c8c447b0b6294639f97aa4f81",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "402",
+    "id": "1Pyui8ylD3OSCZIO8Zvqg6zfEsbPpxZRs",
+    "name": "jupyter-kernelspec",
+    "path": ".venv/bin/jupyter-kernelspec"
+  },
+  {
+    "md5Checksum": "ad7d1d7554472f5e15a2b1e6fde64bb5",
+    "mimeType": "application/x-nuscript",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "3788",
+    "id": "1KskzZ_8uCZC2HvEVi0js6ew5Lcp74ah_",
+    "name": "activate.nu",
+    "path": ".venv/bin/activate.nu"
+  },
+  {
+    "md5Checksum": "f27a3090d999ac4be4aa7e54588877c4",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "364",
+    "id": "1TP3pkzdY8XRh07f9ci8RCCjBvdmckKSX",
+    "name": "jupyter-kernel",
+    "path": ".venv/bin/jupyter-kernel"
+  },
+  {
+    "md5Checksum": "2d447cffb5f192fea345051683cd3cd4",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "356",
+    "id": "1UNgswiiz1xuXlqVWDjyfReyVRrdHHPNJ",
+    "name": "cffi-gen-src",
+    "path": ".venv/bin/cffi-gen-src"
+  },
+  {
+    "md5Checksum": "937d4290021a24b34c1f793d5a6f6f16",
+    "mimeType": "application/octet-stream",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "365",
+    "id": "1KZQbuq1gwZyJz_NEKKBfIcFpkQW8g9tR",
+    "name": "jupyter-troubleshoot",
+    "path": ".venv/bin/jupyter-troubleshoot"
+  },
+  {
+    "md5Checksum": "cb709b114fd0587654781a9cfa1692e1",
+    "mimeType": "application/x-powershell",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "2762",
+    "id": "1F4w1wASeu52z3T8fh93aTNlicpb14UPJ",
+    "name": "activate.ps1",
+    "path": ".venv/bin/activate.ps1"
+  },
+  {
+    "md5Checksum": "97ff2d34232e8f24881493af87325b94",
+    "mimeType": "text/x-python",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "2417",
+    "id": "1TH00xCGF0fR62DHyqfMfFEIAzu-sX_d8",
+    "name": "activate_this.py",
+    "path": ".venv/bin/activate_this.py"
+  },
+  {
+    "md5Checksum": "acc4fce6b0d2d8a950629ab7e58cbc56",
+    "mimeType": "application/x-bat",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "1217",
+    "id": "1ByNX4HlnYH7Mm5_jJgh8tg8N9MobmMX2",
+    "name": "pydoc.bat",
+    "path": ".venv/bin/pydoc.bat"
+  },
+  {
+    "md5Checksum": "492827886502ffc557958aa7f84ffcd5",
+    "mimeType": "application/x-bat",
+    "parents": [
+      "1iaEqIMFdJVG8Pp0ggEQAy573G09_CDui"
+    ],
+    "size": "1730",
+    "id": "1giNxu0ZlwuaDj4hYDJJtWq4mDyUSRIX2",
+    "name": "deactivate.bat",
+    "path": ".venv/bin/deactivate.bat"
+  }
+]

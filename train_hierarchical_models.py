@@ -1,4 +1,9 @@
-"""Treinamento e Avaliação Hierárquica Multi-Abordagem (Zero Data Leakage).
+"""Historical aggregation of saved species probabilities into species/genera.
+
+The calibrated ensemble used below has the validation dependency documented in
+reports/revisao_git_classificacao_especies_2026_10_08.md. This script does not
+train new hierarchical models or prove leakage-free calibration. Use
+nested_species_ensemble.py for the corrected three-member experiment.
 
 Implementa a taxonomia hierárquica baseada na literatura científica recente
 (BioDCASE 2026, SEMISH 2025, SBCAS 2023, HumBugDB 2021, eLife 2017):
@@ -15,8 +20,8 @@ Implementa a taxonomia hierárquica baseada na literatura científica recente
    - Resolução fina dentro de cada gênero.
    - Suporte a Priors Epidemiológicos Regionais (ex: Brasil / Neotropical).
 
-Todas as métricas são avaliadas estritamente Out-of-Fold (OOF) em grupos disjuntos,
-com verificação criptográfica anti-vazamento (Zero Contamination).
+Dataset folds have disjoint declared groups/paths/hashes. That property does
+not establish independence of the calibrated ensemble or biological individuals.
 """
 from __future__ import annotations
 
@@ -189,7 +194,7 @@ def evaluate_approach_at_all_tiers(
 
 def main():
     print("=" * 70)
-    print("TREINAMENTO E AVALIAÇÃO HIERÁRQUICA MULTI-ABORDAGEM (ZERO LEAKAGE)")
+    print("AGREGAÇÃO HISTÓRICA POR ESPÉCIE/GÊNERO; CALIBRAÇÃO NÃO VALIDADA NESTE SCRIPT")
     print("=" * 70)
 
     # 1. Auditoria Pré-Execução
@@ -277,7 +282,7 @@ def main():
     print(f"-> Relatório OOF salvo em: {report_path}")
 
     print("\n" + "=" * 70)
-    print("CONCLUÍDO COM SUCESSO: ZERO CONTAMINAÇÃO VERIFICADA!")
+    print("MÉTRICAS RECALCULADAS; SOMENTE DISJUNÇÃO DE PARTIÇÕES VERIFICADA.")
     print("=" * 70)
 
 

@@ -1,0 +1,5 @@
+[
+{"Path":"species_fold0.npz","Name":"species_fold0.npz","Size":76537,"MimeType":"application/x-zip","ModTime":"2026-09-30T00:50:22.830Z","IsDir":false,"Hashes":{"md5":"f63ae4c0e8fe84027f6c52e5f311f686","sha1":"48bdc3bc03ea47fe622cfc259f6cdbea9d775ed4","sha256":"e34feafa71f913edae60f04a3e0b7d6dc6542668c75b55f14cb44ae310882b56"},"ID":"1GMNGlxzxjLA41CF17FauF-yiE-QcswwH"},
+{"Path":"species_fold1.npz","Name":"species_fold1.npz","Size":12403,"MimeType":"application/x-zip","ModTime":"2026-09-30T00:50:22.896Z","IsDir":false,"Hashes":{"md5":"2ec26b37ed81a8cd8add2a13b03d7cfa","sha1":"f0e43f085d7c1c432022a7f0828c982a246921a3","sha256":"072d3c1990315f0ec658082e7d7e152b4d0b004fbe43403084eaf90ea5f893ed"},"ID":"19hHvuec7pfB2OYzQa7NpIHjDJ5t9hoWs"},
+{"Path":"species_fold2.npz","Name":"species_fold2.npz","Size":28994,"MimeType":"application/x-zip","ModTime":"2026-09-30T00:50:22.963Z","IsDir":false,"Hashes":{"md5":"bddffabcd1d6b130b440b161720ea2b3","sha1":"d4299139a08b14946bb98bc51f325db493fa965a","sha256":"bef203704b8f732d54b1f5065fa764d62447c15a068e5bb4e215931fbe017d38"},"ID":"1JKryoo0L-0m5rZhY2r6af9sIp_jlRRUy"}
+]

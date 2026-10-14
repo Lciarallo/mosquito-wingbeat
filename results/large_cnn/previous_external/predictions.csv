@@ -1,0 +1,6 @@
+path,start_s,step_s,quality_ok,state,forced_species,identified_species,presence_score,species_score
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.0,0.992,True,INCERTO,Anopheles arabiensis,-,0.6973424,0.31753528
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,0.992,0.992,True,INCERTO,Anopheles arabiensis,-,0.95889217,0.33123136
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,1.984,0.992,True,INCERTO,Anopheles dirus,-,0.96438694,0.57016003
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,2.976,0.992,True,INCERTO,Anopheles dirus,-,0.9732684,0.46797395
+tmp/fresh_external/Ae.Aegypti_1F_5D_25C_SmallCylinder_cut1_16bit.wav,3.968,0.992,True,INCERTO,Anopheles dirus,-,0.89261943,0.19349957

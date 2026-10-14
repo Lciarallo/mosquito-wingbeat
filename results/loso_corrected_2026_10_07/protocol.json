@@ -1,0 +1,76 @@
+{
+  "candidates": {
+    "et_baseline": {},
+    "hgb_baseline": {},
+    "lr_baseline": {
+      "scale": true
+    },
+    "et_no_positive_only_source": {
+      "drop": [
+        "figshare"
+      ]
+    },
+    "hgb_acoustic_only": {
+      "drop": [
+        "figshare"
+      ],
+      "acoustic_only": true
+    },
+    "et_consistent40": {
+      "consistent": 40,
+      "drop": [
+        "figshare"
+      ]
+    },
+    "lr_consistent40": {
+      "consistent": 40,
+      "drop": [
+        "figshare"
+      ],
+      "scale": true
+    },
+    "et_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ]
+    },
+    "lr_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ],
+      "scale": true
+    },
+    "hgb_source_norm": {
+      "srcnorm": true,
+      "drop": [
+        "figshare"
+      ]
+    }
+  },
+  "held_out": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+  ],
+  "seed": 20261003,
+  "created_utc": "2026-10-07T21:37:44.705802+00:00",
+  "inputs_sha256": {
+    "results/sex_balanced_reliability_2026_10_01/segments.csv": "80571f062c933956ecdd37a89c1453b6697ec7a77d099e08c884da354a70398b",
+    "data/cache/reliability_2026_10_01/features.npy": "3def452a455463113235e61e25cc5ac193901868ed6931aa021ad0b3d8c38d6b"
+  },
+  "code_sha256": "5fb610eabdc0d3759308b9e833d1c39c2cb6e7a7ea842f072d8e331d1f4e02d0",
+  "executed_candidates": [
+    "hgb_acoustic_only"
+  ],
+  "acoustic_sources": [
+    "dryad",
+    "esc50",
+    "figshare",
+    "humbug",
+    "mosquitosong"
+  ],
+  "source_normalisation": "Transductive: uses unlabelled statistics of the entire evaluated source, including test windows.",
+  "note": "Retrospective corrected analysis on previously examined sources; no independent confirmation or device approval."
+}

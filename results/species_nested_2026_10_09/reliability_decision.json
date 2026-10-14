@@ -1,0 +1,14 @@
+{
+  "status": "EXPERIMENTAL_SPECIES_GENERALISATION_UNPROVEN",
+  "primary_model": "calibrated",
+  "ensemble_calibration_excludes_outer_test": true,
+  "independent_new_campaign": false,
+  "can_release_to_user_device": false,
+  "arduino_compiled": false,
+  "limitations": [
+    "Retrospective internal corpus",
+    "Unknown biological ancestry of external excerpts",
+    "Sparse recordings per species",
+    "No operational presence/noise validation"
+  ]
+}

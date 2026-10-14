@@ -1,0 +1,554 @@
+{
+  "hist_boost_female": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.12343640810621942,
+          "upper95": 0.5869733303451367
+        },
+        "aedes_recall": {
+          "lower95": 0.014259362092179428,
+          "upper95": 0.08889671361502344
+        },
+        "aedes_f1": {
+          "lower95": 0.025749969659189957,
+          "upper95": 0.15139667345152746
+        },
+        "specificity": {
+          "lower95": 0.8886543218300609,
+          "upper95": 0.9625344153920701
+        },
+        "macro_f1": {
+          "lower95": 0.35360481242772607,
+          "upper95": 0.453456019633793
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4618204479212888,
+          "upper95": 0.5146885223582232
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.12901157981803144,
+          "upper95": 0.6270238095238093
+        },
+        "aedes_recall": {
+          "lower95": 0.014259362092179428,
+          "upper95": 0.08889671361502344
+        },
+        "aedes_f1": {
+          "lower95": 0.025531567131532523,
+          "upper95": 0.15155714666167622
+        },
+        "specificity": {
+          "lower95": 0.832871450196557,
+          "upper95": 0.9553085095770152
+        },
+        "macro_f1": {
+          "lower95": 0.2756397868624786,
+          "upper95": 0.40892147141127705
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4367526148732719,
+          "upper95": 0.5096931502057057
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.3333333333333333,
+          "upper95": 0.8676539955604884
+        },
+        "aedes_recall": {
+          "lower95": 0.014259362092179428,
+          "upper95": 0.08889671361502344
+        },
+        "aedes_f1": {
+          "lower95": 0.02724702960203155,
+          "upper95": 0.160393185357589
+        },
+        "specificity": {
+          "lower95": 0.797832939322301,
+          "upper95": 0.9664185365120704
+        },
+        "macro_f1": {
+          "lower95": 0.12031431045548983,
+          "upper95": 0.3177312602269958
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4207754970409457,
+          "upper95": 0.5156832012067747
+        }
+      }
+    }
+  },
+  "pcen_embedding_logistic": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.06756377163680535,
+          "upper95": 0.35528962492437977
+        },
+        "aedes_recall": {
+          "lower95": 0.012235732533259857,
+          "upper95": 0.04636874813972753
+        },
+        "aedes_f1": {
+          "lower95": 0.021052016724053123,
+          "upper95": 0.07895447652745305
+        },
+        "specificity": {
+          "lower95": 0.8474358251100839,
+          "upper95": 0.946969923765934
+        },
+        "macro_f1": {
+          "lower95": 0.3345219776713021,
+          "upper95": 0.4133677529735711
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4343571842526603,
+          "upper95": 0.4895935654831529
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.06973894208846329,
+          "upper95": 0.3492111302352266
+        },
+        "aedes_recall": {
+          "lower95": 0.012235732533259857,
+          "upper95": 0.04636874813972753
+        },
+        "aedes_f1": {
+          "lower95": 0.021115939779605776,
+          "upper95": 0.07829397903241318
+        },
+        "specificity": {
+          "lower95": 0.7536757996994418,
+          "upper95": 0.9245991023981468
+        },
+        "macro_f1": {
+          "lower95": 0.24844439203194627,
+          "upper95": 0.36879027376556456
+        },
+        "balanced_accuracy": {
+          "lower95": 0.390254066786875,
+          "upper95": 0.47729276555211037
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.3499709302325581,
+          "upper95": 0.8461538461538461
+        },
+        "aedes_recall": {
+          "lower95": 0.012235732533259857,
+          "upper95": 0.04636874813972753
+        },
+        "aedes_f1": {
+          "lower95": 0.023864141520825517,
+          "upper95": 0.08706218945343802
+        },
+        "specificity": {
+          "lower95": 0.834642836911573,
+          "upper95": 0.9801996482542991
+        },
+        "macro_f1": {
+          "lower95": 0.10475897707983493,
+          "upper95": 0.29409323259303316
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4302874490360895,
+          "upper95": 0.5062087169036548
+        }
+      }
+    }
+  },
+  "pcen_large": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.05855199369773361,
+          "upper95": 0.28496543778801836
+        },
+        "aedes_recall": {
+          "lower95": 0.02160845278390899,
+          "upper95": 0.08501902494875682
+        },
+        "aedes_f1": {
+          "lower95": 0.03242112743442531,
+          "upper95": 0.12631774603795734
+        },
+        "specificity": {
+          "lower95": 0.7269690803869041,
+          "upper95": 0.8712605860229722
+        },
+        "macro_f1": {
+          "lower95": 0.32005428801120084,
+          "upper95": 0.4117784282390526
+        },
+        "balanced_accuracy": {
+          "lower95": 0.38562333695622,
+          "upper95": 0.4649680539823011
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.06956019100276452,
+          "upper95": 0.3256208728107951
+        },
+        "aedes_recall": {
+          "lower95": 0.02160845278390899,
+          "upper95": 0.08501902494875682
+        },
+        "aedes_f1": {
+          "lower95": 0.03363808608623128,
+          "upper95": 0.1290394011257464
+        },
+        "specificity": {
+          "lower95": 0.5862522457143363,
+          "upper95": 0.8308225548514878
+        },
+        "macro_f1": {
+          "lower95": 0.22782368454814747,
+          "upper95": 0.3635756594810135
+        },
+        "balanced_accuracy": {
+          "lower95": 0.31828542126835624,
+          "upper95": 0.44527415894291605
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.4,
+          "upper95": 0.86
+        },
+        "aedes_recall": {
+          "lower95": 0.02160845278390899,
+          "upper95": 0.08501902494875682
+        },
+        "aedes_f1": {
+          "lower95": 0.041286871100491174,
+          "upper95": 0.15308934282471887
+        },
+        "specificity": {
+          "lower95": 0.7956118167710788,
+          "upper95": 0.9658385093167702
+        },
+        "macro_f1": {
+          "lower95": 0.12434468801791354,
+          "upper95": 0.31751595760396234
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4261364869100318,
+          "upper95": 0.5142347059509254
+        }
+      }
+    }
+  },
+  "previous_round3_extra_trees_regularized": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.264544289044289,
+          "upper95": 0.49020532741398437
+        },
+        "aedes_recall": {
+          "lower95": 0.40843459139764565,
+          "upper95": 0.5692547587610717
+        },
+        "aedes_f1": {
+          "lower95": 0.33248977369755295,
+          "upper95": 0.5031719754482956
+        },
+        "specificity": {
+          "lower95": 0.369400405136959,
+          "upper95": 0.5132790078278896
+        },
+        "macro_f1": {
+          "lower95": 0.39951519473487923,
+          "upper95": 0.512842083550138
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4087597835201925,
+          "upper95": 0.5199735852710623
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.30030342715350866,
+          "upper95": 0.5647755059087166
+        },
+        "aedes_recall": {
+          "lower95": 0.40843459139764565,
+          "upper95": 0.5692547587610717
+        },
+        "aedes_f1": {
+          "lower95": 0.3588578811036509,
+          "upper95": 0.5419945345618891
+        },
+        "specificity": {
+          "lower95": 0.1864520902700703,
+          "upper95": 0.33980756395995537
+        },
+        "macro_f1": {
+          "lower95": 0.3088894455479101,
+          "upper95": 0.42875503621297684
+        },
+        "balanced_accuracy": {
+          "lower95": 0.31892854001255116,
+          "upper95": 0.431905072689691
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.504419555582086,
+          "upper95": 0.8547476100531956
+        },
+        "aedes_recall": {
+          "lower95": 0.40843459139764565,
+          "upper95": 0.5692547587610717
+        },
+        "aedes_f1": {
+          "lower95": 0.46945111359437064,
+          "upper95": 0.6509935333090106
+        },
+        "specificity": {
+          "lower95": 0.175,
+          "upper95": 0.28143823464182743
+        },
+        "macro_f1": {
+          "lower95": 0.31254914898414055,
+          "upper95": 0.4027276888039224
+        },
+        "balanced_accuracy": {
+          "lower95": 0.30764479653310395,
+          "upper95": 0.4046025517195422
+        }
+      }
+    }
+  },
+  "trees_deep_female": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.1910502580315217,
+          "upper95": 0.5779963958060287
+        },
+        "aedes_recall": {
+          "lower95": 0.053861957995487646,
+          "upper95": 0.15735188022160068
+        },
+        "aedes_f1": {
+          "lower95": 0.08646565194745066,
+          "upper95": 0.2335698944350892
+        },
+        "specificity": {
+          "lower95": 0.8138706440688938,
+          "upper95": 0.9273877733106873
+        },
+        "macro_f1": {
+          "lower95": 0.3780205150824653,
+          "upper95": 0.48714535718204316
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4484761716636379,
+          "upper95": 0.5254697690372596
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.2092720795805888,
+          "upper95": 0.6405354449472095
+        },
+        "aedes_recall": {
+          "lower95": 0.053861957995487646,
+          "upper95": 0.15735188022160068
+        },
+        "aedes_f1": {
+          "lower95": 0.0874552860657941,
+          "upper95": 0.2395123619101401
+        },
+        "specificity": {
+          "lower95": 0.7346938775510204,
+          "upper95": 0.910241089132853
+        },
+        "macro_f1": {
+          "lower95": 0.30496573974668223,
+          "upper95": 0.44188814070996013
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4119346774325043,
+          "upper95": 0.51426844405629
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.3208809468283582,
+          "upper95": 0.8113347655520269
+        },
+        "aedes_recall": {
+          "lower95": 0.053861957995487646,
+          "upper95": 0.15735188022160068
+        },
+        "aedes_f1": {
+          "lower95": 0.09410283537875581,
+          "upper95": 0.25247751250152456
+        },
+        "specificity": {
+          "lower95": 0.5662628454996457,
+          "upper95": 0.8661127645502643
+        },
+        "macro_f1": {
+          "lower95": 0.1405012468656578,
+          "upper95": 0.3251009403813249
+        },
+        "balanced_accuracy": {
+          "lower95": 0.3286438007892944,
+          "upper95": 0.48792116421638293
+        }
+      }
+    }
+  },
+  "trees_regularized_female": {
+    "all_fresh": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 151,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.17615729898516785,
+          "upper95": 0.5810119047619045
+        },
+        "aedes_recall": {
+          "lower95": 0.04830486542443064,
+          "upper95": 0.13950959621136588
+        },
+        "aedes_f1": {
+          "lower95": 0.07743957431457431,
+          "upper95": 0.2122833191247513
+        },
+        "specificity": {
+          "lower95": 0.8153660797034291,
+          "upper95": 0.9369013670599503
+        },
+        "macro_f1": {
+          "lower95": 0.37285197211413923,
+          "upper95": 0.4773306671467814
+        },
+        "balanced_accuracy": {
+          "lower95": 0.44579305052917684,
+          "upper95": 0.5220973476969225
+        }
+      }
+    },
+    "mosquito_only": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 74,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.18897084400594505,
+          "upper95": 0.627469834087481
+        },
+        "aedes_recall": {
+          "lower95": 0.04830486542443064,
+          "upper95": 0.13950959621136588
+        },
+        "aedes_f1": {
+          "lower95": 0.07960089057475056,
+          "upper95": 0.21515446421832438
+        },
+        "specificity": {
+          "lower95": 0.7236166919942943,
+          "upper95": 0.9165359977004178
+        },
+        "macro_f1": {
+          "lower95": 0.2957392332321963,
+          "upper95": 0.4285638946655865
+        },
+        "balanced_accuracy": {
+          "lower95": 0.4030048440065681,
+          "upper95": 0.5105318103923767
+        }
+      }
+    },
+    "CDMSC2026_D3": {
+      "method": "2000 bootstrap replicates, original recording groups stratified by source; CDMSC file identity only, not independent individuals.",
+      "groups": 48,
+      "metrics": {
+        "aedes_precision": {
+          "lower95": 0.3014541487326638,
+          "upper95": 0.7921301688992426
+        },
+        "aedes_recall": {
+          "lower95": 0.04830486542443064,
+          "upper95": 0.13950959621136588
+        },
+        "aedes_f1": {
+          "lower95": 0.08446915112461142,
+          "upper95": 0.22992331509216582
+        },
+        "specificity": {
+          "lower95": 0.5515689288521104,
+          "upper95": 0.8732956281509395
+        },
+        "macro_f1": {
+          "lower95": 0.1310383706841959,
+          "upper95": 0.31591030475004456
+        },
+        "balanced_accuracy": {
+          "lower95": 0.31786541783247724,
+          "upper95": 0.4853833713348486
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "created_utc": "2026-10-01T20:58:19.733888+00:00",
+  "seed": 20261007,
+  "target": "Aedes aegypti versus other known species and noise",
+  "primary_metric": "Maximize source/species/recording-balanced validation accuracy at logit 0 (probability 0.5 for trees) plus 0.001 weighted validation AUC.",
+  "target_balanced_accuracy": 0.6,
+  "selection_partition": "validation",
+  "threshold_partition": "calibration",
+  "configs": [
+    {
+      "name": "fernandes_clean",
+      "augmentation": false,
+      "alignment": false,
+      "epochs": 25,
+      "lr": 0.0001
+    },
+    {
+      "name": "fernandes_noise",
+      "augmentation": true,
+      "alignment": false,
+      "epochs": 35,
+      "lr": 0.0001
+    },
+    {
+      "name": "mosquitosong_binary",
+      "augmentation": true,
+      "alignment": false,
+      "epochs": 40,
+      "lr": 0.0001
+    },
+    {
+      "name": "residual_noise",
+      "augmentation": true,
+      "alignment": false,
+      "epochs": 30,
+      "lr": 0.0002
+    },
+    {
+      "name": "residual_domain_swarm",
+      "augmentation": true,
+      "alignment": true,
+      "epochs": 35,
+      "lr": 0.0002
+    }
+  ],
+  "stopping": "Predefined 5 architectures, early stopping patience 7; no selection by test/private recordings.",
+  "source_splits_sha256": "511f65e4ed8b94829197d53ef452af802ffe34aee5620d8e355145ea87bfdff3",
+  "repositories": {
+    "fernandes": "66ad0aa3d8fdabd9a46f1508bb99b43205d087a4",
+    "mosquitosongp": "0e9187c454d7ce720cbb4925664554d1d44797c5"
+  },
+  "architecture_adaptations": [
+    "PyTorch implementation, one BCE output, grouped source sampling.",
+    "Fernandes 60x40 mel image: correct frequency-time axis and bilinear time resizing for real duration, no waveform extension.",
+    "MosquitoSong+ Figure 2 convolution/pooling/dense sizes; 300ms crops, average three disjoint real crops on long inputs.",
+    "Residual/domain-alignment network inspired by papers, not an exact DR-BioL replication."
+  ],
+  "unknowns_not_negative": true,
+  "ufrgs_completely_excluded_from_training": true,
+  "private_audio_in_training": false,
+  "original_artifacts_preserved": true,
+  "arduino_compiled": false,
+  "swarm_augmentation": "Same-labelled training sources only; never mixes held-out or private audio.",
+  "metadata_clarification": {
+    "utc": "2026-10-01T21:08:58.460042+00:00",
+    "reason": "Correct inaccurate prose to match the implemented BA + 0.001 AUC criterion; no minimum-source score was used.",
+    "before_any_test": true,
+    "model_parameters_changed": false,
+    "previous_protocol_sha256": "eb7a38182db075080c09a800c15e56bb7f9917cecd63905342d96bc9b9bf1899",
+    "previous_training_source_sha256": "91c1a38508453eab63b9cff5765add1824b51abbf557779c820bdb2de2da3a07"
+  }
+}
