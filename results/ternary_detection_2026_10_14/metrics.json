@@ -1,0 +1,107 @@
+{
+  "protocol": {
+    "n_splits": 5,
+    "seed": 20261014,
+    "validation": "StratifiedGroupKFold",
+    "group_leakage": 0
+  },
+  "dataset_statistics": {
+    "total_original": 49713,
+    "excluded_ufrgs": 417,
+    "excluded_figshare": 2944,
+    "excluded_unknown": 2406,
+    "excluded_quality": 255,
+    "excluded_non_finite": 0,
+    "retained_total": 44768,
+    "class_counts": {
+      "no_mosquito": 8658,
+      "other_mosquito": 33332,
+      "aedes_aegypti": 2778
+    },
+    "group_counts": {
+      "no_mosquito": 471,
+      "other_mosquito": 1014,
+      "aedes_aegypti": 64
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "model": "logistic_regression",
+      "accuracy": 0.7295836311651179,
+      "balanced_accuracy": 0.7645109854232345,
+      "noise_to_aedes_fpr": 0.02922152922152922,
+      "per_class": {
+        "no_mosquito": {
+          "precision": 0.637278935387848,
+          "recall": 0.8407253407253408,
+          "f1": 0.725,
+          "support": 8658
+        },
+        "other_mosquito": {
+          "precision": 0.9326765188834154,
+          "recall": 0.6986679467178687,
+          "f1": 0.798888526783417,
+          "support": 33332
+        },
+        "aedes_aegypti": {
+          "precision": 0.2500895308583025,
+          "recall": 0.7541396688264939,
+          "f1": 0.37561631555356345,
+          "support": 2778
+        }
+      }
+    },
+    "hist_gradient_boosting": {
+      "model": "hist_gradient_boosting",
+      "accuracy": 0.8985436025732666,
+      "balanced_accuracy": 0.7197688305770642,
+      "noise_to_aedes_fpr": 0.0001155001155001155,
+      "per_class": {
+        "no_mosquito": {
+          "precision": 0.9233030806595935,
+          "recall": 0.8342573342573343,
+          "f1": 0.876524482737698,
+          "support": 8658
+        },
+        "other_mosquito": {
+          "precision": 0.9099908966772872,
+          "recall": 0.9596783871354854,
+          "f1": 0.9341744057006016,
+          "support": 33332
+        },
+        "aedes_aegypti": {
+          "precision": 0.5660903513664249,
+          "recall": 0.36537077033837295,
+          "f1": 0.444104134762634,
+          "support": 2778
+        }
+      }
+    },
+    "ensemble": {
+      "model": "ensemble",
+      "accuracy": 0.8823936740528949,
+      "balanced_accuracy": 0.7751758931745657,
+      "noise_to_aedes_fpr": 0.006468006468006468,
+      "per_class": {
+        "no_mosquito": {
+          "precision": 0.8715135955187303,
+          "recall": 0.8625548625548626,
+          "f1": 0.8670110872467638,
+          "support": 8658
+        },
+        "other_mosquito": {
+          "precision": 0.9289171664282018,
+          "recall": 0.9154566182647306,
+          "f1": 0.922137773681268,
+          "support": 33332
+        },
+        "aedes_aegypti": {
+          "precision": 0.45402985074626867,
+          "recall": 0.5475161987041036,
+          "f1": 0.4964099216710183,
+          "support": 2778
+        }
+      }
+    }
+  }
+}
