@@ -1,7 +1,0 @@
-{
-  "cnn_sha256": "5957323a320dac2cacee88eba3e8000db48ac23ae0a8d391add10686cad7569a",
-  "baseline_sha256": "6e5a2cc72d628ad6bb2c05a2b745081d55a9c67de1b59fa97121e995bcabe39f",
-  "frozen_before_test_inference": true,
-  "best_epoch": 6,
-  "training_seconds": 78.91406035423279
-}

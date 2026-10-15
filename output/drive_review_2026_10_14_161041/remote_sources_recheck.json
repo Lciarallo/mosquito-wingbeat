@@ -1,8 +1,0 @@
-[
-{"Path":"acoustic_features_v5.py","Name":"acoustic_features_v5.py","Size":10548,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:42.817Z","IsDir":false,"Hashes":{"md5":"27158b7c6159f1db39900339c874db7d"},"ID":"1ROJdDzsQo-voAdYaiyci35KHXtp2CVdH"},
-{"Path":"compare_species_v5.py","Name":"compare_species_v5.py","Size":7503,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:55.411Z","IsDir":false,"Hashes":{"md5":"5199f50ef6e0be3203e2548ba9b3a96b"},"ID":"1lUqcvzJtND01dU-zAuHtGReHQSozzmIM"},
-{"Path":"fetch_species_v5_fresh.py","Name":"fetch_species_v5_fresh.py","Size":5803,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:50.734Z","IsDir":false,"Hashes":{"md5":"298b38f60c8fb7094ac3c68a1b211157"},"ID":"1-kS9IMRz_outQ-HvWggnog6dlDuPb7IJ"},
-{"Path":"nested_species_ensemble_v5.py","Name":"nested_species_ensemble_v5.py","Size":41535,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:46.483Z","IsDir":false,"Hashes":{"md5":"90336e620f96c720e0e5cf902b2e29af"},"ID":"1mpoVIzdX4P6Mf1AVPLnodDQaj48Vaf-0"},
-{"Path":"scripts/predict_audio.py","Name":"predict_audio.py","Size":38544,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:38.931Z","IsDir":false,"Hashes":{"md5":"88b8ea4af8a2acfbf1254d6b0cd7f2e9"},"ID":"13rteRrxq3AhmY4VnEwKwfYHVQXS7tq5C"},
-{"Path":"scripts/robust_audio_features.py","Name":"robust_audio_features.py","Size":11147,"MimeType":"text/x-python","ModTime":"2026-10-14T15:53:13.349Z","IsDir":false,"Hashes":{"md5":"7f5af3ea80625c1239ae94f1c6a06bce"},"ID":"1v3X_kFFgxT0JeBgXL2gEbr5utNOsVLNf"}
-]

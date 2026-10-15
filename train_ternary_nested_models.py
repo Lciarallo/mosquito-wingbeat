@@ -31,8 +31,8 @@ POLICY_NAMES = [
 ]
 CODE_FILES = [
     "ternary_protocol.py", "ternary_reporting.py", "train_ternary_nested_models.py",
-    "evaluate_ternary_event_pipeline.py", "predict_ternary.py", "fetch_ternary_fresh.py", "fetch_humbug.py",
-    "aedes_classical.py", "aedes_binary.py", "bioacoustic_invariance.py",
+    "evaluate_ternary_event_pipeline.py", "predict_ternary.py",
+    "aedes_classical.py", "bioacoustic_invariance.py",
 ]
 
 
@@ -178,13 +178,6 @@ def train(out, *, outer_splits=5, inner_splits=4, threads=4):
         "no_population_error_guarantee": True, "evaluation_unit": "original_group",
         "resampling_unit": "audited_pcm_block", "pcm_audit_limits": pcm_audit["limits"],
         "final_model_scope": "all development data; requires new independent evaluation",
-        "postfreeze_acquisition": {
-            "source": "https://zenodo.org/records/19095788", "target": "Aedes aegypti",
-            "archive_index_sha256": digest(ROOT / "tmp/reproductions_2026_10_01/cdmsc_central_full.json"),
-            "rule": "first two unused numeric S_1_D_3 clips, >=1.984 real seconds, "
-                    "exclude known bytes/declared PCM collisions without using predictions",
-            "not_a_new_biological_campaign": True,
-        },
         "code_sha256": code_hashes, "input_sha256": stats["input_sha256"],
         "environment": {"python": platform.python_version(), "numpy": np.__version__,
                         "pandas": pd.__version__, "sklearn": sklearn.__version__,

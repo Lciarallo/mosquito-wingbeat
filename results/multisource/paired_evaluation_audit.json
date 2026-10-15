@@ -1,6 +1,0 @@
-{
-  "models_unchanged": true,
-  "same_windows_and_duration_buckets": true,
-  "ufrgs_no_training_validation_calibration": true,
-  "biodcase_auxiliary_only_ancestry_not_fully_resolved": true
-}

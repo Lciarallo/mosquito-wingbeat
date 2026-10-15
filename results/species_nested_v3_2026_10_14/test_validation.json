@@ -1,9 +1,0 @@
-{
-  "completed_utc": "2026-10-14T04:41:12.108088+00:00",
-  "command": ".venv/bin/python -m pytest -q tests",
-  "exit_code": 0,
-  "summary": "177 passed, 13209 warnings in 27.86s",
-  "tests_passed": 177,
-  "skipped": 0,
-  "log_sha256": "d7987e7defe92810f9f1f52de18b759e3bd53b3202dfaf7f7397c080ee71628f"
-}

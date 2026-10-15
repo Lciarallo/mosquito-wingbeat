@@ -1,3 +1,0 @@
-model,windows,recordings,classes_observed,correct_recordings,window_accuracy,recording_accuracy,recording_balanced_accuracy,recording_macro_f1
-cnn_frequency,7845,190,20,132,0.4832377310388783,0.6947368421052632,0.7581635706914345,0.7145683542794843
-deep_mlp,7845,190,20,132,0.5221159974506054,0.6947368421052632,0.7744426016020444,0.7706190303994493

@@ -1,9 +1,0 @@
-{
-  "created_utc": "2026-10-14T20:40:54.779279+00:00",
-  "freeze_sha256": "a0eeecf176315b8d6d8dd122494e7051f07283d22b65429b978d69f13cc4a1c9",
-  "all_inputs_match_frozen_protocol": true,
-  "original_reference_sha256": "f0d714aa1e96443a6209ba25e73d145b22875a320e5cdf8c006394cc8e6e2d64",
-  "cli_sha256": "aadaf163af7e1dd18621379332ee654267a9c29e7b18ac188cd2c546e270538f",
-  "no_new_hyperparameters_or_thresholds": true,
-  "all_external_files_retrospective": true
-}

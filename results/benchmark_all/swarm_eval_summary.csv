@@ -1,8 +1,0 @@
-model,mean_score,aedes_emissions,non_aedes,uncertain,invalid
-tree_lightgbm,0.5325099663060308,38,35,32,2
-tree_hist_gradient_boosting,0.49798122718107024,36,45,24,2
-tree_extra_trees,0.6465189200483665,48,30,27,2
-tree_random_forest,0.6426414140875297,32,18,55,2
-committee_soft_voting,0.576520562171936,42,33,30,2
-committee_stacking,0.6034497093729068,38,33,34,2
-deep_hybrid_net,0.5603999495506287,59,32,14,2

@@ -1,9 +1,0 @@
-path,start_s,step_s,quality_ok,model,state,forced_species,identified_species,presence_score,class_score
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.0,0.992,True,baseline,SEM_EVIDENCIA,Anopheles farauti,-,0.39962932,0.26064378
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.992,0.992,True,baseline,SEM_EVIDENCIA,Anopheles farauti,-,0.5345869,0.21428919
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,1.984,0.992,True,baseline,SEM_EVIDENCIA,Anopheles farauti,-,0.38635004,0.31560212
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,2.976,0.992,True,baseline,SEM_EVIDENCIA,Anopheles farauti,-,0.295925,0.24175058
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.0,0.992,True,expanded,SEM_EVIDENCIA,Anopheles farauti,-,0.33027047,0.21196201
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.992,0.992,True,expanded,SEM_EVIDENCIA,Anopheles farauti,-,0.3671798,0.1961232
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,1.984,0.992,True,expanded,SEM_EVIDENCIA,Anopheles farauti,-,0.3841689,0.22340997
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,2.976,0.992,True,expanded,SEM_EVIDENCIA,Anopheles farauti,-,0.23915237,0.16610873

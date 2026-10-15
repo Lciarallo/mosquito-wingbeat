@@ -1,7 +1,0 @@
-{
-  "searched_utc": "2026-10-14T04:28:14.510744+00:00",
-  "source": "https://zenodo.org/records/19095788",
-  "secondary_source": "https://biodcase.github.io/challenge2026/task5",
-  "query": "BioDCASE 2026 D3 mosquito Aedes aegypti Zenodo 19095788 Development_data",
-  "rule": "Predeclared first two unused numeric D3 Aedes aegypti clips >=1 real second; no prediction-based selection."
-}

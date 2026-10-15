@@ -1,8 +1,0 @@
-{
-  "selected_model": "residual_noise",
-  "criterion": "Maximize source/species/recording-balanced validation accuracy at logit 0 (probability 0.5 for trees) plus 0.001 weighted validation AUC.",
-  "validation_weighted_ba": 0.9067991189486222,
-  "validation_weighted_auc": 0.950161938933973,
-  "validation_target_met": true,
-  "selected_before_evaluation": true
-}

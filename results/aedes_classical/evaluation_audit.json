@@ -1,8 +1,0 @@
-{
-  "models_unchanged": true,
-  "fresh_selection_after_all_models_frozen": true,
-  "fresh_recordings": 5,
-  "new_domain": false,
-  "private_audio_used_for_training": false,
-  "arduino_compiled": false
-}

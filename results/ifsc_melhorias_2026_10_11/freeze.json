@@ -1,9 +1,0 @@
-{
-  "selected_model": "deep_mlp",
-  "model_sha256": {
-    "cnn_frequency": "d3445c5c4120cb04798d6e754192ace12500aa045e5b2fa6e9cc8bd238d5782b",
-    "deep_mlp": "53307ae6b2e92ba8fe04a01170c33644f6f9af5547108bc01f3641833c2d360f"
-  },
-  "scaler_sha256": "42196c4f6810df97aa62c9ccc2fb681d752fc5c51876aa676c74ca2df49a50af",
-  "frozen_before_test_inference": true
-}

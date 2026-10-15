@@ -1,8 +1,0 @@
-{
-  "selected_model": "pcen_embedding_logistic",
-  "selected_before_new_test": true,
-  "selection_score": 0.4278404775800569,
-  "validation_precision": 0.4128878281622912,
-  "validation_recall": 0.7178423236514523,
-  "validation_minimum_recall": 0.675
-}

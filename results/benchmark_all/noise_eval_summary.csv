@@ -1,8 +1,0 @@
-model,total_windows,false_positives,fp_rate_pct,rejections,uncertain
-tree_lightgbm,436,0,0.0,435,1
-tree_hist_gradient_boosting,436,0,0.0,435,1
-tree_extra_trees,436,0,0.0,435,1
-tree_random_forest,436,0,0.0,435,1
-committee_soft_voting,436,0,0.0,436,0
-committee_stacking,436,0,0.0,435,1
-deep_hybrid_net,436,0,0.0,436,0

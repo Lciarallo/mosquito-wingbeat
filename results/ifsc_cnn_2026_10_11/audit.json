@@ -1,9 +1,0 @@
-{
-  "group_split_disjoint": true,
-  "path_split_disjoint": true,
-  "exact_window_hash_split_disjoint": true,
-  "cache_row_alignment_verified": true,
-  "weights_sha256": "5957323a320dac2cacee88eba3e8000db48ac23ae0a8d391add10686cad7569a",
-  "calibration_not_used": true,
-  "independent_field_validation": false
-}

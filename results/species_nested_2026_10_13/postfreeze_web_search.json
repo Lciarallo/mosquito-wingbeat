@@ -1,9 +1,0 @@
-{
-  "searched_utc": "2026-10-14T01:40:33.742741+00:00",
-  "source": "https://zenodo.org/records/19095788",
-  "secondary_official_source": "https://biodcase.github.io/challenge2026/task5",
-  "query": "BioDCASE Development_data D3 Aedes aegypti 19095788 Zenodo",
-  "archive_md5": "dbf35b9066e82cdee5461fca138f4986",
-  "selection_rule": "Unchanged predeclared first 2 unused numeric D3 files per Aedes aegypti/albopictus with >=1 s, no replacement after PCM rejection.",
-  "acquisition_code_sha256": "970a2a9484958863197b0c02a97688e7486a07cad69c9cd35c12ebd3d892138b"
-}

@@ -1,2 +1,0 @@
-Official unmodified logo: https://ifsc.edu.br/documents/d/comunicacao/florianopolis linked by https://ifsc.edu.br/web/campus-florianopolis/identidade-visual. Original PNG 662x965 RGBA; sha256 ca1e2b3c83ed91bdd2d27c80e49bc4f3279592f71c930b94b00a001f505cbcf5
-All existing photographs retained except campus photo explicitly replaced. Existing generated scientific figures are measured data, not illustrations. New charts are derived from actual metrics. Diagram elements remain native.

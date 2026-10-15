@@ -15,9 +15,9 @@ import soundfile as sf
 from scipy.signal import resample_poly
 
 ROOT = Path(__file__).resolve().parent
-SEGMENTS = ROOT / "results/sex_balanced_reliability_2026_10_01/segments.csv"
+SEGMENTS = ROOT / "data/metadata/ternary_segments.csv.gz"
 FEATURES = ROOT / "data/cache/reliability_2026_10_01/features.npy"
-KNOWN_MAP = ROOT / "results/species_nested_2026_10_13/recording_predictions.csv"
+KNOWN_MAP = ROOT / "data/metadata/known_recording_groups.csv"
 CLASS_NAMES = ["no_mosquito", "other_mosquito", "aedes_aegypti"]
 SEED = 20261014
 TEMPORAL = {"horizon_s": 1.984, "gap_tolerance_s": 0.01, "minimum_windows": 2}

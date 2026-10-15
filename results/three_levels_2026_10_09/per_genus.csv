@@ -1,8 +1,0 @@
-scope,genus,n,correct,recall
-dryad,Aedes,90,73,0.8111111111111111
-dryad,Anopheles,417,416,0.9976019184652278
-dryad,Culex,32,30,0.9375
-dryad,Culiseta,30,30,1.0
-external,Aedes,5,0,0.0
-external,Anopheles,8,7,0.875
-external,Culex,4,0,0.0

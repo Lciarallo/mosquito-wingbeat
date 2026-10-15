@@ -1,6 +1,0 @@
-model,windows,positive_windows,negative_windows,unknown_windows,forced_accuracy,forced_aedes_recall,forced_false_positive_rate,balanced_accuracy,auc,positive_emissions,true_positive_emissions,false_positive_emissions,emitted_aedes_precision,emitted_aedes_recall,emitted_false_positive_rate,known_coverage,accepted_accuracy,false_negative_emissions,unresolved_positive_emissions
-cnn_binary,8,3,5,0,0.75,0.3333333333333333,0.0,0.6666666666666666,0.8666666666666667,1,1,0,1.0,0.3333333333333333,0.0,1.0,0.75,2,0
-extra_trees,8,3,5,0,0.625,0.6666666666666666,0.4,0.6333333333333333,0.6,4,2,2,0.5,0.6666666666666666,0.4,1.0,0.625,1,0
-gradient_boosting,8,3,5,0,0.625,0.6666666666666666,0.4,0.6333333333333333,0.8666666666666667,4,2,2,0.5,0.6666666666666666,0.4,1.0,0.625,1,0
-logistic,8,3,5,0,0.625,0.3333333333333333,0.2,0.5666666666666667,0.6666666666666666,1,0,1,0.0,0.0,0.2,0.75,0.5,2,0
-svm_rbf,8,3,5,0,0.875,1.0,0.2,0.9,0.9333333333333333,4,3,1,0.75,1.0,0.2,0.75,0.8333333333333334,0,0

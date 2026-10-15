@@ -1,7 +1,0 @@
-{
-  "status": "EXPERIMENTAL_FALSE_POSITIVES_AND_CROSS_SOURCE_FAILURE",
-  "arduino_allowed": false,
-  "model_sha256": "31825194c64b48b81f24329b2dd0aacf74aade6fae5d5ee00256af31c5f7e243",
-  "fresh_external_completed": true,
-  "model_replaced_default": false
-}

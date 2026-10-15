@@ -1,6 +1,0 @@
-path,start_s,step_s,quality_ok,state,forced_species,identified_species,presence_score,species_score
-tmp/multisource_fresh/220391.wav,0.0,0.992,True,INCERTO,Aedes aegypti,-,0.70311266,0.8958876
-tmp/multisource_fresh/220391.wav,0.992,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.24909228,0.7316554
-tmp/multisource_fresh/220391.wav,1.984,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.07063487,0.9475316
-tmp/multisource_fresh/220391.wav,2.976,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.066002674,0.7668421
-tmp/multisource_fresh/220391.wav,3.968,0.992,True,SEM_EVIDENCIA,Aedes aegypti,-,0.084524885,0.89629817

@@ -1,3 +1,0 @@
-path,group,reference_species,seconds,sha256,entry,known_pcm_matches,within_pcm_matches,byte_duplicate,excluded
-data/external/species_nested_fresh_2026_10_13/S_1_D_3_83.wav,BioDCASE_D3|S_1_D_3_83,Aedes aegypti,33.018875,458d54beed90994e5337a8736e9968875c58434fb8bf1f0af3fd4c3e03577714,Development_data/raw_audio/S_1_D_3_83.wav,0,0,False,False
-data/external/species_nested_fresh_2026_10_13/S_1_D_3_84.wav,BioDCASE_D3|S_1_D_3_84,Aedes aegypti,31.95075,487c16bba82d24fd76e0d3091e3a4d194e1b2fe5831215322040806f5157ffc3,Development_data/raw_audio/S_1_D_3_84.wav,0,0,False,False

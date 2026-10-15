@@ -1,5 +1,0 @@
-path,start_s,step_s,quality_ok,state,forced_species,identified_species,presence_score,species_score
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.0,0.992,True,INCERTO,Anopheles minimus,-,0.6701873,0.16050637
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,0.992,0.992,True,INCERTO,Anopheles dirus,-,0.71977615,0.19467466
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,1.984,0.992,True,INCERTO,Anopheles minimus,-,0.5567922,0.2018442
-tmp/large_fresh/Ae.Aegypti_1M_5D_25C_SmallCylinder_cut10_16bit.wav,2.976,0.992,True,SEM_EVIDENCIA,Anopheles farauti,-,0.32367575,0.14276001
