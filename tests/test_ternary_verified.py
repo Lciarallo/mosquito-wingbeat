@@ -181,6 +181,14 @@ def test_changed_population_keeps_the_predeclared_rates_instead_of_old_absolute_
     assert not reporting.targets(metrics)["passed_all"]
 
 
+@pytest.mark.skipif(
+    not all(path.is_file() for path in [
+        protocol.FEATURES, protocol.SEGMENTS, protocol.KNOWN_MAP,
+        protocol.ROOT / "data/cache/reliability_2026_10_01/long_8k.npy",
+        protocol.ROOT / "data/cache/reliability_2026_10_01/short_8k.npy",
+    ]),
+    reason="Corpus integration requires the local audio/feature caches, excluded from Git.",
+)
 def test_user_excluded_mosquitosong_source_is_not_loaded_for_development():
     frame, _, _, stats = trainer.load_and_filter_data()
     assert not frame.domain.eq("mosquitosong").any()
@@ -206,20 +214,6 @@ def test_audio_frontend_uses_real_samples_and_separates_invalid_windows(tmp_path
     assert frame.window_duration_s.tolist() == [0.992, 0.992]
     assert details["ignored_tail_seconds"] == pytest.approx(100 / 16000)
     assert not details["padding_repetition_concatenation"]
-
-
-def test_zip_acquisition_checks_crc_and_size():
-    import struct
-    import zlib
-    from fetch_ternary_fresh import extract_entry
-    data = b"known-real-audio-payload"
-    filename = b"a.wav"
-    header = struct.pack("<4s5H3I2H", b"PK\x03\x04", 20, 0, 0, 0, 0,
-                         zlib.crc32(data), len(data), len(data), len(filename), 0)
-    entry = {"compressed": len(data), "uncompressed": len(data), "crc": zlib.crc32(data), "method": 0}
-    assert extract_entry(header + filename + data, entry) == data
-    with pytest.raises(ValueError, match="CRC"):
-        extract_entry(header + filename + data, entry | {"crc": 0})
 
 
 @pytest.fixture

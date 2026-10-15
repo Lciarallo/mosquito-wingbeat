@@ -10,6 +10,10 @@
 !/ternary_protocol.py
 !/ternary_reporting.py
 !/train_ternary_nested_models.py
+!/train_ternary_lstm.py
+!/torres_lstm.py
+!/predict_ternary_lstm.py
+!/verify_ternary_lstm.py
 !/data/
 !/data/metadata/
 /data/*
@@ -17,12 +21,15 @@
 /data/metadata/*
 !/data/metadata/ternary_segments.csv.gz
 !/data/metadata/known_recording_groups.csv
+!/data/metadata/ternary_neural_reference.json
 !/notebooks/
 /notebooks/*
 !/notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb
 !/tests/
 /tests/*
 !/tests/test_ternary_verified.py
+!/tests/test_ternary_lstm.py
+!/tests/test_notebook_workflow.py
 
 # Dados e saídas locais nunca são publicados.
 /drive_audio.wav
