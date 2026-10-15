@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "presentation": {
+    "id": "1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A",
+    "title": "Detecção ternária de Aedes aegypti — LSTM e Bi-LSTM — Luiz Eduardo do Nascimento Ciarallo — IFSC",
+    "revisionId": "Ye062rivK_4vEQ",
+    "slideCount": 18
+  },
+  "snapshotSha256": "9e6f0edc94a708e1fed9704ba013de937f37bc8e03c20e801491e56d429b4da8",
+  "summary": {
+    "totalIssues": 0,
+    "reportedIssues": 0,
+    "truncated": false,
+    "bySeverity": {},
+    "byCode": {}
+  },
+  "issues": []
+}

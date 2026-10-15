@@ -1,0 +1,90 @@
+[
+  {
+    "variant": "baseline",
+    "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/infected0001.wav",
+    "seconds": 4.085125,
+    "available_windows": 4,
+    "selected_window_indices": [
+      1,
+      2,
+      0
+    ],
+    "class_order": [
+      "no_mosquito",
+      "other_mosquito",
+      "aedes_aegypti"
+    ],
+    "probabilities": [
+      0.6693597602985867,
+      0.32862511200574973,
+      0.002015127695663727
+    ],
+    "decision": "no_mosquito",
+    "scope": "Illustrative WAV inference; relationship to author tensors unknown, not a guaranteed independent holdout"
+  },
+  {
+    "variant": "with_torres",
+    "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/infected0001.wav",
+    "seconds": 4.085125,
+    "available_windows": 4,
+    "selected_window_indices": [
+      1,
+      2,
+      0
+    ],
+    "class_order": [
+      "no_mosquito",
+      "other_mosquito",
+      "aedes_aegypti"
+    ],
+    "probabilities": [
+      0.0008870492138818494,
+      0.0011989687440632244,
+      0.9979139820420551
+    ],
+    "decision": "aedes_aegypti",
+    "scope": "Illustrative WAV inference; relationship to author tensors unknown, not a guaranteed independent holdout"
+  },
+  {
+    "variant": "baseline",
+    "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/healthy0001.wav",
+    "seconds": 1.980625,
+    "available_windows": 1,
+    "selected_window_indices": [
+      0
+    ],
+    "class_order": [
+      "no_mosquito",
+      "other_mosquito",
+      "aedes_aegypti"
+    ],
+    "probabilities": [
+      0.9561485503799665,
+      0.04303641277172996,
+      0.0008150368483035832
+    ],
+    "decision": "no_mosquito",
+    "scope": "Illustrative WAV inference; relationship to author tensors unknown, not a guaranteed independent holdout"
+  },
+  {
+    "variant": "with_torres",
+    "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/healthy0001.wav",
+    "seconds": 1.980625,
+    "available_windows": 1,
+    "selected_window_indices": [
+      0
+    ],
+    "class_order": [
+      "no_mosquito",
+      "other_mosquito",
+      "aedes_aegypti"
+    ],
+    "probabilities": [
+      0.9512168859749873,
+      0.022349629290632625,
+      0.026433484734380036
+    ],
+    "decision": "no_mosquito",
+    "scope": "Illustrative WAV inference; relationship to author tensors unknown, not a guaranteed independent holdout"
+  }
+]

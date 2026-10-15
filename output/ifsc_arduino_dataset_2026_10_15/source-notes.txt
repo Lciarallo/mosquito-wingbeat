@@ -1,0 +1,2 @@
+Official Arduino Nano 33 BLE Sense Rev2 documentation confirms the integrated digital PDM microphone. Official product photograph reused from the prior sourced project asset. Acquisition and dataset choices are proposed future work, not product specifications or measured outcomes.
+Image SHA256: 64f6a3f870788d6108f37f9c4e282e4bb97236b04a9bce5507dbbc480b1b4586

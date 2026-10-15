@@ -1,0 +1,12 @@
+{
+  "ternary_protocol.py": "06a159ea3f8afe415fe8a2c894fb8e2d8d37f338b0d262b6f8a296306ea04c9a",
+  "ternary_reporting.py": "be3e97e27139200e2ba009e8c7176aec8fdd27d4fb373ee3d3f25aea36ab0c66",
+  "train_ternary_nested_models.py": "b3a59277d3f176d57f0efa0a5e933f2faf64568c69edac2b21cece0b9d7e0695",
+  "evaluate_ternary_event_pipeline.py": "9590cb6490b5270b1abdf38132d34dba9c22ea24159ccbc2850035962d6ffb21",
+  "predict_ternary.py": "4bbe839a1a1ef8853810924769ea06076d54e0f43c339b5e1f140ebb78ea9b33",
+  "fetch_ternary_fresh.py": "7d7706d7a213d3f188a75f7275f091d9b0fed1f8ff987175b5f214c967bb1455",
+  "fetch_humbug.py": "0606956ea5c1229432c9cfe17f069faabac32fa98c2e15f4794ef548b1669882",
+  "aedes_classical.py": "666d07394aec11508eb67d8b5fabef1c707ee6848f0725eab5541b793b148f99",
+  "aedes_binary.py": "9ab78cb44b4caf89fcae61cd7c764aa7b5455a4f8be6a566e89a771edfb64c5f",
+  "bioacoustic_invariance.py": "a0623a268779cdfacda7bcfa94e7cd00e42fbc20eb4db7baa603a9cb2bf38b43"
+}

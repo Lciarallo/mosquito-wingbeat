@@ -1,6 +1,6 @@
 # Estudo de classificação acústica de mosquitos
 
-Rodada v2 de 13/10/2026: [relatório técnico](reports/ensemble_especies_v2_2026_10_13.md). Auditoria PCM uniu 613 grupos em 560 blocos, corrigindo colisões que atravessavam as partições históricas. Treinamento aninhado offline com normalização por janela, pesos espécie/aparelho, saliência, SHS multi-pico, MIL e rejeição própria de gênero. Nos mesmos 17 arquivos externos retrospectivos: espécie 4/17 (23.53%), gênero 8/17 (47.06%). Intervalos pareados, F1 por suporte e pela união, emissões e regressões estão no relatório. **Confiabilidade externa não atingida; sem liberação para Arduino.** Novos arquivos foram adquiridos somente depois do congelamento. Histórico e instalador preservados; 156 passed, 4117 warnings in 17.10s.
+Rodada v2 de 13/10/2026: [relatório técnico](reports/ensemble_especies_v2_2026_10_13.md). Auditoria PCM uniu 613 grupos em 560 blocos, corrigindo colisões que atravessavam as partições históricas. Treinamento aninhado offline com normalização por janela, pesos espécie/aparelho, saliência, SHS multi-pico, MIL e rejeição própria de gênero. Nos mesmos 17 arquivos externos retrospectivos: espécie 4/17 (23.53%), gênero 8/17 (47.06%). Intervalos pareados, F1 por suporte e pela união, emissões e regressões estão no relatório. **Confiabilidade externa não atingida; sem liberação para Arduino.** Novos arquivos foram adquiridos somente depois do congelamento. Checkpoints históricos foram preservados.
 
 ## Presença, gênero e espécie — comparação de 09/10/2026
 
@@ -66,7 +66,7 @@ Uma gravação só de Aedes não mede precisão ou especificidade binária.
 
 [Reproduções científicas e rodada ampliada](reports/confiabilidade_binaria_aedes_2026_10_01.md) ·
 [Notebook ampliado](confiabilidade_binaria_aedes_2026_10_01.ipynb).
-Os notebooks apenas leem resultados. Pesos anteriores, firmware e instalador
+Os notebooks apenas leem resultados. Pesos anteriores e firmware de pesquisa
 foram preservados; os downloads históricos abaixo não incorporam estes modelos.
 
 ```bash
@@ -105,15 +105,6 @@ reavaliar os modelos congelados, execute na raiz do projeto:
 
 Os checkpoints anteriores foram preservados. As distribuições Arduino abaixo
 são históricas; esta rodada não atualizou firmware ou instalador.
-
-**[⬇ Baixar instalador para Windows](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe)**
-— [passo a passo com imagens](WINDOWS.md) · [página de downloads](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest)
-
-Para instalar no **Arduino Nano 33 BLE Sense / Sense Rev2**: abra o `.exe`, conecte
-a placa, clique em **Buscar minha placa** e em **Instalar no Arduino**. A janela
-mostra os resultados automaticamente. **Não precisa de Python, Arduino IDE,
-comandos ou conta no GitHub.** Windows 10/11 de 64 bits; internet no primeiro uso
-e cerca de 1 GB livre. Modelo experimental; acurácia em uso real ainda não medida.
 
 Abra [mosquito_wingbeat_estudo.ipynb](mosquito_wingbeat_estudo.ipynb) para executar ou baixe
 [mosquito_wingbeat_estudo.html](mosquito_wingbeat_estudo.html) e abra no navegador
@@ -170,43 +161,12 @@ Também não identificou o áudio de enxame fornecido pelo usuário.
 [Protocolo de validação](MODEL_VALIDATION.md) ·
 [Decisão de confiabilidade](results/expanded/reliability_decision.json).
 
-As informações de instalação e métricas abaixo são da **versão anterior**,
-já publicada; o retreinamento não atualizou o instalador Windows.
+## Avaliação experimental do firmware Arduino
 
-## Arduino Nano 33 BLE Sense: identificar espécies
-
-Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
-a pasta **MosquitoSpecies**. No Linux/macOS com Python 3.9+, conecte a placa e execute:
-
-```bash
-bash flash_arduino.sh --monitor
-```
-
-O instalador por terminal baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
-compila, grava e abre o monitor a **115200 baud**. A primeira preparação precisa
-de internet e cerca de 1 GB livre. No Windows, use o **aplicativo gráfico acima**;
-**Instalar_no_Windows.cmd** abre o aplicativo ou seu download; opções por terminal
-são uma alternativa avançada que exige Python.
-O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
-e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
-`--compile-only` compila sem placa/upload; `--list-ports` consulta portas;
-`--port PORTA` seleciona uma placa e `--monitor-only` abre o serial sem regravar.
-
-Alternativa pela Arduino IDE, sem Python: abra **MosquitoSpecies.ino**, mantenha
-os quatro headers juntos, instale **Arduino Mbed OS Nano Boards 4.6.0**, selecione
-**Arduino Nano 33 BLE** e a porta, faça upload e abra o monitor em **115200 baud**.
-Preparação/compilação reais verificadas no Linux e pelo próprio `.exe` em Windows
-no GitHub Actions. A interface foi revisada visualmente. Não houve execução nativa
-macOS nem upload em placa física. [Auditoria do aplicativo Windows](results/arduino_species/windows_build_audit.json).
-
-O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
-integrado, FFT incremental e modelos treinados para indicar presença e classificar
+O sketch experimental usa o microfone PDM integrado, FFT incremental e modelos treinados para indicar presença e classificar
 **20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
 concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
-observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
-Montagem e gravação: [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
-O script **flash_arduino.sh** grava esse sketch por padrão; **serve.py** é o
-servidor de visualização incluído na atualização do projeto.
+observação.
 
 | Avaliação do modelo exportado | Resultado |
 |---|---:|
@@ -232,7 +192,7 @@ tem ruído contíguo elegível para testar a confirmação. Resultados/auditoria
 
 ## Arduino: detector de presença da versão anterior
 
-O [firmware](firmware/README.md) foi preparado para **Arduino Nano 33 BLE Sense / Sense Rev2**,
+O firmware histórico foi preparado para **Arduino Nano 33 BLE Sense / Sense Rev2**,
 com microfone PDM, frontend incremental FFT, rede neural de 16 unidades e confirmação 2/3.
 O objetivo é **presença acústica**, separado do reconhecimento das 20 espécies.
 
@@ -257,7 +217,7 @@ autonomia, sensibilidade por evento e falsos alarmes/hora.
 
 Coletar áudio com a placa no local de uso, anotar atividade real e gravar horas sem
 mosquito são os próximos passos necessários para reduzir e medir os erros de campo.
-Código, modos, instalação e limites: [firmware/README.md](firmware/README.md).
+Os arquivos de firmware e resultados permanecem em `firmware/` e `results/arduino/`.
 
 ## Relatório técnico
 
@@ -396,7 +356,7 @@ o notebook os regenera. Modelos numéricos compactos e headers C++ estão public
 
 `leakage_auditor.py` verifica interseções de grupos, caminhos e hashes declarados. Seu certificado não estabelece isolamento da calibração, dos limiares, dos indivíduos ou da linhagem das previsões. Portanto, o status histórico `ZERO_LEAKAGE_VERIFIED` não autoriza uma garantia geral de ausência de vazamento.
 
-`predict_audio.py` usa as MLPs Arduino históricas, filtros harmônicos, persistência temporal e priors opcionais. Esse pipeline tem pesos diferentes do ensemble calibrado do benchmark. `--compare` é uma simulação acústica por software; não substitui medição física. `--region brazil` altera o resultado, mas os pesos regionais não têm calibração externa demonstrada. A reexecução no áudio conhecido não confirmou espécie; sua referência de *Ae. aegypti* é informada pelo usuário, sem confirmação independente estabelecida nesta revisão.
+`predict_audio.py` usa as MLPs Arduino históricas, filtros harmônicos, persistência temporal e priors opcionais. Esse pipeline tem pesos diferentes do ensemble calibrado do benchmark. `--region brazil` altera o resultado, mas os pesos regionais não têm calibração externa demonstrada. A reexecução no áudio conhecido não confirmou espécie; sua referência de *Ae. aegypti* é informada pelo usuário, sem confirmação independente estabelecida nesta revisão.
 
 ## Fontes
 

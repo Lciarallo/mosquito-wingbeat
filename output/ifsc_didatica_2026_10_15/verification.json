@@ -1,0 +1,52 @@
+{
+  "verified_utc": "2026-10-15T19:14:24.997308+00:00",
+  "revision": "hFJoOoRvXsuyoA",
+  "slides": 20,
+  "duration_seconds": 1080,
+  "official_master_unchanged": true,
+  "official_layouts_unchanged": true,
+  "campus_photo_removed": true,
+  "authentic_logo_source": "https://ifsc.edu.br/web/campus-florianopolis/identidade-visual",
+  "author_verified": true,
+  "source_photos_preserved": true,
+  "all_20_slides_reviewed_at_full_resolution": true,
+  "repair_passes": 1,
+  "repaired_pages": [
+    1,
+    7,
+    11,
+    12,
+    14,
+    16,
+    20
+  ],
+  "unchanged_after_repair": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    13,
+    15,
+    17,
+    18,
+    19
+  ],
+  "all_native_notes_match_plan": true,
+  "all_metric_table_cells_match_results": true,
+  "chart_numbers_match_results": true,
+  "source_issues": 0,
+  "pdf": "IFSC_Mosquitos_Didatica_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+  "pdf_sha256": "a6f542d4f6a4ede156cee9a1005826247f30668e97ce2db58208b71a886e3933",
+  "pdf_bytes": 2505310,
+  "native_url": "https://docs.google.com/presentation/d/1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A/edit?usp=drivesdk",
+  "drive_delivery": {
+    "folder_url": "https://drive.google.com/drive/folders/1qpPt638ycwuGNiU-K5xaCC2GxUibws7q",
+    "pdf_file_id": "1x8q-kRCjHmNlLJ-IHvQ8ClZaWqCcJ8fc",
+    "files_uploaded": 6,
+    "checksum_check_log": "tmp/drive-entrega-2026-10-15/didatica-check.log"
+  }
+}

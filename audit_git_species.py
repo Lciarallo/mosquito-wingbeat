@@ -38,7 +38,7 @@ def main():
         'optimize_ensemble_oof.py', 'improve_device.py',
         'train_hierarchical_models.py', 'leakage_auditor.py',
         'experiment_mixed_datasets.py', 'predict_audio.py',
-        'arduino_mic_emulator.py', 'robust_audio_features.py', 'audit_git_species.py',
+        'robust_audio_features.py', 'audit_git_species.py',
         'drive_audio.wav',
         *[f'results/arduino_species/models/species_fold{k}.npz' for k in range(3)],
     ]

@@ -1,0 +1,7 @@
+file,status,model,expected_class,prediction,correct_aedes,windows,seconds,mc_disagreement
+infected0001.wav,infectado,classic,aedes_aegypti,other_mosquito,False,4,4.085125,
+infected0001.wav,infectado,lstm,aedes_aegypti,other_mosquito,False,4,4.085125,0.0
+infected0001.wav,infectado,bilstm,aedes_aegypti,other_mosquito,False,4,4.085125,0.0
+healthy0001.wav,saudável,classic,aedes_aegypti,other_mosquito,False,1,1.980625,
+healthy0001.wav,saudável,lstm,aedes_aegypti,other_mosquito,False,1,1.980625,0.0
+healthy0001.wav,saudável,bilstm,aedes_aegypti,other_mosquito,False,1,1.980625,0.0

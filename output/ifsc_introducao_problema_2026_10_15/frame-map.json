@@ -1,0 +1,56 @@
+{
+  "narrative": "Problem, current species identification and proposed acoustic support for surveillance",
+  "exemplar": "ifsc26_s02",
+  "construction": "duplicate native photo-led slide; replace content and use two source photos",
+  "elementMap": {
+    "ifsc26_s02_e00": {
+      "target": "ifsc26_introducao_problema_e00",
+      "action": "replace native text, keep style and geometry"
+    },
+    "ifsc26_s02_e01": {
+      "target": "ifsc26_introducao_problema_e01",
+      "action": "replace native text, keep style and geometry"
+    },
+    "ifsc26_s02_e02": {
+      "target": "ifsc26_introducao_problema_e02",
+      "action": "replace native text, keep style and geometry"
+    },
+    "ifsc26_s02_e03": {
+      "target": "ifsc26_introducao_problema_e03",
+      "action": "replace native text, keep style and geometry"
+    },
+    "ifsc26_s02_e04": {
+      "target": "ifsc26_introducao_problema_e04",
+      "action": "replace native text, keep style and geometry"
+    },
+    "ifsc26_s02_e05": {
+      "target": "ifsc26_introducao_problema_e05",
+      "action": "replace photograph and resize uniformly"
+    }
+  },
+  "allExemplarMediaMapped": true,
+  "addedMedia": "second photo of a water-holding container; fit full intrinsic ratio",
+  "finalOrder": [
+    "ifsc26_s01",
+    "ifsc26_introducao_problema",
+    "ifsc26_s02",
+    "ifsc26_s03",
+    "ifsc26_s04",
+    "ifsc26_s05",
+    "ifsc26_s06",
+    "ifsc26_s07",
+    "ifsc26_s08",
+    "ifsc26_s09",
+    "ifsc26_s11",
+    "ifsc26_s12",
+    "ifsc26_regularizacao",
+    "ifsc26_s14",
+    "ifsc26_s15",
+    "ifsc26_s10",
+    "ifsc26_s17",
+    "ifsc26_arduino_dataset",
+    "ifsc26_s19",
+    "ifsc26_s20"
+  ],
+  "officialMastersAndLayouts": "preserve unchanged"
+}

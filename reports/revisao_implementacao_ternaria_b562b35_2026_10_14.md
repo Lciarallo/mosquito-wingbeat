@@ -6,6 +6,8 @@ Commit revisado: `b562b35f9569032acf568caa003afce0102a0640`
 
 Referência anterior: `20d6fe9`
 
+> **Estado histórico:** esta revisão descreve o código e os resultados originais de `b562b35`, incluindo o corpus com MosquitoSong. O código local foi corrigido depois dela. Consulte a [entrega executada](correcoes_ternarias_2026_10_14.md) para a nova rodada, que exclui essa fonte do desenvolvimento. Os cinco resultados históricos alterados em paralelo foram preservados em [historical_snapshots/b562b35](../results/ternary_verified_2026_10_14_corrections/historical_snapshots/b562b35/); referências a linhas de scripts abaixo dizem respeito ao commit revisado.
+
 ## Parecer
 
 **A implementação corrigiu partes importantes do protocolo, mas ainda não atingiu as metas de desempenho e precisa de proteções adicionais para preservar o isolamento em novas execuções.**

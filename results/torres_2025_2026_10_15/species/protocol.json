@@ -1,0 +1,104 @@
+{
+  "task": "20-species classification",
+  "classes": [
+    "Aedes aegypti",
+    "Aedes albopictus",
+    "Aedes mediovittatus",
+    "Aedes sierrensis",
+    "Anopheles albimanus",
+    "Anopheles arabiensis",
+    "Anopheles atroparvus",
+    "Anopheles dirus",
+    "Anopheles farauti",
+    "Anopheles freeborni",
+    "Anopheles gambiae",
+    "Anopheles merus",
+    "Anopheles minimus",
+    "Anopheles quadriannulatus",
+    "Anopheles quadrimaculatus",
+    "Anopheles stephensi",
+    "Culex pipiens",
+    "Culex quinquefasciatus",
+    "Culex tarsalis",
+    "Culiseta incidens"
+  ],
+  "input_shape": [
+    19567,
+    59,
+    32
+  ],
+  "input_features": "data/cache/torres_2025/b636fe73a9ebc188aee218c91d7c5d7f094dc6ab3dd059cdf71e3990527527af.npy",
+  "feature_sha256": "80a4bd0c0b0953d1a42ab86a4c4f9a014219e3fadc105f9ca0c6177b447e0f8e",
+  "frontend": {
+    "sample_rate": 16000,
+    "n_fft": 1024,
+    "hop": 256,
+    "bands": 32,
+    "fmin": 80,
+    "fmax": 4000,
+    "center": false,
+    "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+  },
+  "duration_s": 0.992,
+  "source_partitions_sha256": "2170dc1480ddb84147ffb097b048bcb3ccde7a2813bce3bf9764789579962151",
+  "pcm_mapping_sha256": "540a5293538fa7fe6b0d14b446da7417ed7bd6f5961dfa9b20afa3722ac1b7a4",
+  "historical_test": true,
+  "unknown_individual_overlap": true,
+  "split_protocol": "historical partitions with whole-PCM-component priority test > validation > calibration > train",
+  "removed_windows": 1115,
+  "removed_groups": 36,
+  "excluded_mosquitosong": true,
+  "infection_labels_available": false,
+  "comparison": "fresh baseline fitted on identical retained training rows; older CNN/MLP scores not same-protocol comparators",
+  "training": {
+    "epochs": 80,
+    "lr": 0.0003,
+    "batch_size": 128,
+    "patience": 15,
+    "gradient_clip": 3
+  },
+  "seed": 20261015,
+  "device": "cuda",
+  "torch_version": "2.12.0+rocm7.2",
+  "recurrent": {
+    "layers": 2,
+    "hidden": 256,
+    "dropout": 0.2,
+    "readout": "linear(last_output) as author code"
+  },
+  "loss": "CrossEntropyLoss as public author code; paper table says binary cross entropy",
+  "mc_passes": 100,
+  "uncertainty_thresholds_predeclared": [
+    0,
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.5
+  ],
+  "selection": "minimum class-balanced recording validation log loss, never test",
+  "split_counts": {
+    "test": {
+      "windows": 7845,
+      "groups": 190,
+      "pcm_blocks": 174
+    },
+    "train": {
+      "windows": 9049,
+      "groups": 209,
+      "pcm_blocks": 209
+    },
+    "validation": {
+      "windows": 2673,
+      "groups": 59,
+      "pcm_blocks": 59
+    }
+  },
+  "author_repository": "https://github.com/NakanoMariko/Dengue-Infected-Mosquito-Detection",
+  "author_commit": "6c96ccd5347cf5bafc9b424579700af7b5ffb7ce",
+  "implementation_sha256": {
+    "torres_lstm.py": "f67bdce8a95fefb3ef4c2cc78fbbbf0917eb6ebcacdada0ec51e64e299a8aa27",
+    "apply_torres_2025.py": "7f6564e3f62fdd9ec2905c09e319a371b418201cf0d2e6dc9afb1cc1fca2832d",
+    "fetch_torres_2025.py": "79c8b347aa3309c08e0f27146e4e006182d266de1b2a1e60d651b4864c8e590d"
+  }
+}

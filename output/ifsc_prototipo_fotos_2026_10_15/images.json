@@ -1,0 +1,45 @@
+[
+  {
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_prototipo_fotos_2026_10_15/assets/prototipo_montado.jpg",
+    "requests": [
+      {
+        "replaceImage": {
+          "imageObjectId": "ifsc26_arduino_dataset_e05",
+          "url": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_prototipo_fotos_2026_10_15/assets/prototipo_montado.jpg",
+          "imageReplaceMethod": "CENTER_INSIDE"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_prototipo_fotos_2026_10_15/assets/placa_na_base.jpg",
+    "requests": [
+      {
+        "createImage": {
+          "objectId": "ifsc26_arduino_dataset_foto_placa_real",
+          "url": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_prototipo_fotos_2026_10_15/assets/placa_na_base.jpg",
+          "elementProperties": {
+            "pageObjectId": "ifsc26_arduino_dataset",
+            "size": {
+              "width": {
+                "magnitude": 145,
+                "unit": "PT"
+              },
+              "height": {
+                "magnitude": 108.75,
+                "unit": "PT"
+              }
+            },
+            "transform": {
+              "scaleX": 1,
+              "scaleY": 1,
+              "translateX": 433,
+              "translateY": 125.625,
+              "unit": "PT"
+            }
+          }
+        }
+      }
+    ]
+  }
+]

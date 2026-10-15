@@ -1,0 +1,37 @@
+{
+  "model": "lstm",
+  "decision": "other_mosquito",
+  "predicted_class": 1,
+  "class_order": [
+    "no_mosquito",
+    "other_mosquito",
+    "aedes_aegypti"
+  ],
+  "deterministic_probabilities": [
+    0.0005643758112744166,
+    0.06937041646081078,
+    0.9300652077279147
+  ],
+  "windows": 60,
+  "real_seconds": 60.0,
+  "ignored_tail_seconds": 0.48,
+  "frontend": {
+    "sample_rate": 8000,
+    "n_fft": 1024,
+    "hop": 128,
+    "bands": 64,
+    "fmin": 80,
+    "fmax": 4000,
+    "center": false,
+    "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+  },
+  "decision_rule": "frozen calibrated cascade on activity-pooled probabilities",
+  "mc_passes": 100,
+  "mc_majority_decision": "other_mosquito",
+  "mc_votes": {
+    "no_mosquito": 0,
+    "other_mosquito": 100,
+    "aedes_aegypti": 0
+  },
+  "mc_disagreement": 0.0
+}

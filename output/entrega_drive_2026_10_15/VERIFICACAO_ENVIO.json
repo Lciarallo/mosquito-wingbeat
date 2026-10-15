@@ -1,0 +1,114 @@
+{
+  "created_utc": "2026-10-15T16:05:39.686709+00:00",
+  "repository": "https://github.com/Lciarallo/mosquito-wingbeat",
+  "head": "a6e927f7a6681ce70875a1673b5d62767830d7fb",
+  "includes_uncommitted_changes": true,
+  "files": 5053,
+  "bytes": 1182515631,
+  "excluded_swarm_copies": [
+    "drive_audio.wav"
+  ],
+  "omits": [
+    "raw public datasets (download scripts and source manifests included)",
+    "feature caches",
+    "Python environments",
+    "Git internals",
+    "temporary files",
+    "private Drive swarm audio"
+  ],
+  "zip_bytes": 883323942,
+  "zip_sha256": "08d622d06aa0bf8e4ccf116b6577e3ecb31a38a9a2f4c80aaf1d66bf23fb968d",
+  "zip_md5": "b15f4303dc7c19497d3abdb125950d35",
+  "verified_utc": "2026-10-15T16:10:46.186934+00:00",
+  "folder_url": "https://drive.google.com/drive/folders/1qpPt638ycwuGNiU-K5xaCC2GxUibws7q",
+  "remote_files": 6,
+  "checksum_verification": "rclone check: MD5, 6 matching files, 0 differences",
+  "check_log": "tmp/drive-entrega-2026-10-15/check.log",
+  "remote_metadata": [
+    {
+      "Path": "IFSC_Mosquitos_Introducao_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+      "Name": "IFSC_Mosquitos_Introducao_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+      "Size": 2652271,
+      "MimeType": "application/pdf",
+      "ModTime": "2026-10-15T16:05:39.690Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "4ece3e616a0f2e2c485f5bec213be41c",
+        "sha1": "e348bce00b4570e99aaa6b946a7bb4ab3c1a8e26",
+        "sha256": "2f09e4621f34b2cadd0aa6c6b4139d7094af6a8e78a94a7739b4b60dd2cdddca"
+      },
+      "ID": "1x8q-kRCjHmNlLJ-IHvQ8ClZaWqCcJ8fc"
+    },
+    {
+      "Path": "LEIA-ME.txt",
+      "Name": "LEIA-ME.txt",
+      "Size": 2191,
+      "MimeType": "text/plain",
+      "ModTime": "2026-10-15T16:05:39.690Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "7db76c84eb83e975df29034bb8fd8729",
+        "sha1": "af828444a52f6c8e867dcd61e1977ab846ddc776",
+        "sha256": "27688768047cd2667cac4a442f1b90c5891d1e9eb6d8e096015eae3c21e651b5"
+      },
+      "ID": "1KBWaddP92guh6W1mM4Yzo5hlAhv89sgL"
+    },
+    {
+      "Path": "MANIFESTO_SHA256.json",
+      "Name": "MANIFESTO_SHA256.json",
+      "Size": 981708,
+      "MimeType": "application/json",
+      "ModTime": "2026-10-15T16:05:39.690Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "20258dea9359bb7e225a0a2a16123e4c",
+        "sha1": "1035cebbf14a714006c5f388f7a6dfd3ca03ef2f",
+        "sha256": "a24a7efe355be6128581241a74e43204eb3f022c64dbf61249948a9cd8de400e"
+      },
+      "ID": "1gOfbavGHj8Ou8GObmO1i3MK0bO37Wssh"
+    },
+    {
+      "Path": "PACOTE.json",
+      "Name": "PACOTE.json",
+      "Size": 689,
+      "MimeType": "application/json",
+      "ModTime": "2026-10-15T16:05:51.826Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "9d8be2e948898403661328ff8257434c",
+        "sha1": "2d258e7277d73d753977053853770d728599ea54",
+        "sha256": "0a2e43eaec6ad3eb00ef18280fa19576faf002a01c1a0f2c0cbdc4dc84f74bd8"
+      },
+      "ID": "1XC-3D91qNk4qiHLjCsojExzfWswEinVX"
+    },
+    {
+      "Path": "Slides_editaveis.url",
+      "Name": "Slides_editaveis.url",
+      "Size": 112,
+      "MimeType": "application/x-link-url",
+      "ModTime": "2026-10-15T16:05:39.691Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "6fdc6d1d7e9b1faacb921c1071d7e080",
+        "sha1": "6fb91e7d642088138f9e2e80ca1c1d8497b36692",
+        "sha256": "ed18bd9d834fd1ae342809dae6055f011a2dc567fb150c3adac1242967c3eefb"
+      },
+      "ID": "1gP5scwNJDlfKUN7t7CzKJZ8s43gGzmmu"
+    },
+    {
+      "Path": "mosquito-wingbeat_atualizado_2026-10-15.zip",
+      "Name": "mosquito-wingbeat_atualizado_2026-10-15.zip",
+      "Size": 883323942,
+      "MimeType": "application/zip",
+      "ModTime": "2026-10-15T16:05:48.715Z",
+      "IsDir": false,
+      "Hashes": {
+        "md5": "b15f4303dc7c19497d3abdb125950d35",
+        "sha1": "3589fd2d728d02488424ab503cb7d01655846f93",
+        "sha256": "08d622d06aa0bf8e4ccf116b6577e3ecb31a38a9a2f4c80aaf1d66bf23fb968d"
+      },
+      "ID": "1tlPrnJVK6x751UAgne-i9eJFkCXMo68m"
+    }
+  ],
+  "independent_size_and_md5_check": true
+}

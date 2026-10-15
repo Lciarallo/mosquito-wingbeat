@@ -1,0 +1,49 @@
+{
+  "complete": true,
+  "tasks": {
+    "author_checkpoints": {
+      "lstm": {
+        "total": 40,
+        "passes": 100,
+        "valid": true
+      },
+      "bilstm": {
+        "total": 40,
+        "passes": 100,
+        "valid": true
+      }
+    },
+    "infection": {
+      "lstm": {
+        "total": 60,
+        "passes": 100,
+        "valid": true
+      },
+      "bilstm": {
+        "total": 60,
+        "passes": 100,
+        "valid": true
+      }
+    },
+    "species": {
+      "lstm": {
+        "total": 190,
+        "passes": 100,
+        "valid": true
+      },
+      "bilstm": {
+        "total": 190,
+        "passes": 100,
+        "valid": true
+      }
+    }
+  },
+  "checks": [
+    "group/PCM/hash isolation",
+    "frozen checkpoint digests",
+    "validation-only model selection",
+    "100-draw probabilities",
+    "saved prediction agreement",
+    "coverage/abstention denominators"
+  ]
+}

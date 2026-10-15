@@ -1,0 +1,56 @@
+{
+  "slides": 19,
+  "seconds": 1015,
+  "master_unchanged": true,
+  "layouts_unchanged": true,
+  "visual_qa": "Todas as 19 páginas inspecionadas individualmente; sem defeitos concretos observados.",
+  "pdf_sha256": "73c5c5fbdf93e9976824525812ea32c872687f90a8c567d955e58204d97d957f",
+  "selection": {
+    "criterion": "Maior acurácia geral observada por arquitetura; comparação retrospectiva de regras já avaliadas. Não equivale a uma nova seleção independente por validação.",
+    "selected_original_rows": [
+      {
+        "label": "Cascata clássica",
+        "accuracy": "0.9002677376171352",
+        "balanced_accuracy": "0.8367221849616215",
+        "aedes_recall": "0.7833333333333333",
+        "aedes_precision": "0.6714285714285714",
+        "noise_to_aedes_fpr": "0.0",
+        "other_to_aedes_fpr": "0.022817460317460316",
+        "noise_to_mosquito_fpr": "0.23943661971830985"
+      },
+      {
+        "label": "LSTM · calibrada",
+        "accuracy": "0.8654618473895582",
+        "balanced_accuracy": "0.6621907370146806",
+        "aedes_recall": "0.3333333333333333",
+        "aedes_precision": "0.7142857142857143",
+        "noise_to_aedes_fpr": "0.004694835680751174",
+        "other_to_aedes_fpr": "0.005952380952380952",
+        "noise_to_mosquito_fpr": "0.323943661971831"
+      },
+      {
+        "label": "Bi-LSTM · calibrada",
+        "accuracy": "0.8527443105756358",
+        "balanced_accuracy": "0.6357152172293018",
+        "aedes_recall": "0.2833333333333333",
+        "aedes_precision": "0.8095238095238095",
+        "noise_to_aedes_fpr": "0.0",
+        "other_to_aedes_fpr": "0.003968253968253968",
+        "noise_to_mosquito_fpr": "0.3474178403755869"
+      }
+    ],
+    "visible_names": [
+      "Clássica",
+      "LSTM",
+      "Bi-LSTM"
+    ]
+  },
+  "drive": {
+    "upload_exit": 0,
+    "check_exit": 0,
+    "matched_files": 6,
+    "differences": 0,
+    "folder": "https://drive.google.com/drive/folders/1qpPt638ycwuGNiU-K5xaCC2GxUibws7q",
+    "log": "tmp/drive-entrega-2026-10-15/oral-check.log"
+  }
+}

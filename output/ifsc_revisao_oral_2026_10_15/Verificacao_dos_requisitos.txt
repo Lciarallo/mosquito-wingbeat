@@ -1,0 +1,14 @@
+VERIFICAÇÃO DOS REQUISITOS — REVISÃO ORAL — 15/10/2026
+Autor: Luiz Eduardo do Nascimento Ciarallo
+Fonte: Trabalho_Descrição-1.pdf fornecido pelo autor, páginas 2–4; análise completa preservada na entrega anterior.
+
+ATENDIDO: estudar técnicas e implementar rede profunda numa aplicação específica. LSTM e Bi-LSTM reais, duas camadas, código e resultados em results/ternary_lstm_2026_10_15/. Cascata serve como comparação clássica.
+ATENDIDO: contextualização (slides 2–3), trabalhos correlatos (5), proposta implementada (6–13), resultados (13–16), discussão final (19).
+ATENDIDO: autoria individual, nome completo na capa. Modelo oficial IFSC preservado, com master e 11 layouts intactos. Logotipo oficial, imagens com fontes, espectrogramas e fotos do protótipo preservados.
+COMPATÍVEL: exposição de 15–20 minutos. Roteiro dos 19 slides soma 16min55s; confirmar em ensaio.
+NÃO VERIFICÁVEL: execução do cronograma em três aulas.
+PENDENTE: envio ao professor; material entregue ao autor. Nenhum e-mail enviado.
+
+A pedido do autor, Adam e regularização não têm slides próprios; fundamentos e configurações continuam no guia e nas notas de treinamento. Três quadrados introdutórios apresentam cascata, LSTM e Bi-LSTM. Termos FFT, STFT, mel, etapas e agregação esclarecidos. Resultados exibem maior acurácia observada de cada arquitetura com métricas correspondentes e critério retrospectivo documentado. Não houve retreino nem alteração dos resultados. Não foram demonstrados superioridade estatística, generalização em campo ou execução neural na placa.
+
+VALIDAÇÃO: 19 páginas renderizadas e inspecionadas individualmente; sem recortes, títulos partidos ou sobreposições não intencionais. Verificador estrutural: zero ocorrências. Tabela confrontada com comparison.csv. Marca, autoria, três conceitos e duas fotos conferidos. A disciplina não exige superar a cascata, obter 90% com redes, detectar infecção ou portar a rede ao Arduino.

@@ -1,0 +1,29 @@
+{
+  "task": "DENV-2 infection status",
+  "classes": [
+    "infected_denv2",
+    "healthy"
+  ],
+  "input_shape": [
+    300,
+    188,
+    32
+  ],
+  "source_json_sha256": "9c018d74aca4e75b5108f5595d79137253be5fa15a65d742dee1e538fbc93a1f",
+  "author_commit": "6c96ccd5347cf5bafc9b424579700af7b5ffb7ce",
+  "identity_scope": "exact feature-tensor hash; individual/recording identifiers absent from public JSON",
+  "unknown_individual_overlap": true,
+  "original_raw_audio_available_for_all_examples": false,
+  "feature_scaling": "original author mel tensors, no fitted scaling",
+  "article_sample_rate": 48000,
+  "article_fft": 1024,
+  "article_hop": 256,
+  "article_mel_bands": 32,
+  "label_source": "authors Testing_LSTM_MC_DO.py class order: Infected=0, Healthy=1",
+  "scope": "retrospective reexecution: public checkpoint selected on this same 40-example subset",
+  "split_matches_public_code": true,
+  "differs_from_article_80_20": true,
+  "article_mc_passes": 100,
+  "author_testing_script_mc_passes": 10,
+  "implementation": "equivalent stacked single-layer LSTMs with explicit inter-layer dropout; RNG is not author-identical"
+}

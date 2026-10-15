@@ -1,0 +1,13 @@
+origin,split,target,count
+primary,test,0,86
+primary,test,1,195
+primary,test,2,12
+primary,train,0,258
+primary,train,1,614
+primary,train,2,36
+primary,validation,0,82
+primary,validation,1,199
+primary,validation,2,12
+torres,test,2,60
+torres,train,2,192
+torres,validation,2,48

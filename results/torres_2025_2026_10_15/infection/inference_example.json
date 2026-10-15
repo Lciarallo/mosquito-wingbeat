@@ -1,0 +1,24 @@
+{
+  "model": "bilstm",
+  "task": "DENV-2 infection status",
+  "windows": 1,
+  "monte_carlo_passes": 100,
+  "predicted_label": "infected_denv2",
+  "decision": "infected_denv2",
+  "accepted": true,
+  "disagreement_fraction": 0.0,
+  "maximum_allowed_disagreement": 0,
+  "probabilities": {
+    "infected_denv2": 0.9316711688041687,
+    "healthy": 0.0683288299664855
+  },
+  "votes": {
+    "infected_denv2": 100,
+    "healthy": 0
+  },
+  "reference": {
+    "source": "public author tensor",
+    "row": 0
+  },
+  "scope": "research model; MC agreement measures model disagreement, not confirmed biological status"
+}

@@ -1,0 +1,222 @@
+{
+  "infected0001.wav": {
+    "infection_status": "infectado",
+    "path": "data/external/torres_2025/Healthy and Infected mosquitos/infected0001.wav",
+    "overlap": {
+      "file_sha256": "643ec943bab890556a786c5d5a27ece9be0ddbb2766cee1f17bd090b0264bf22",
+      "training_byte_duplicate": false,
+      "training_pcm_matches": 0
+    },
+    "models": {
+      "classic": {
+        "run_id": "ternary_verified_2026_10_14_corrections",
+        "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/infected0001.wav",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "policies": {
+          "activity_gated_log_odds_cascade_event": 1,
+          "activity_gated_log_odds_no_temporal_event": 1,
+          "hist_gradient_boosting_constrained_event": 1,
+          "ensemble_constrained_event": 1
+        },
+        "temporal": {
+          "available": true,
+          "conditional_score": 0.21154635841282762
+        },
+        "real_seconds": 4.085125,
+        "windows": 4,
+        "ignored_tail_seconds": 0.117125,
+        "quality_invalid_windows": 0,
+        "padding_repetition_concatenation": false,
+        "experimental": true,
+        "biological_confirmation": false,
+        "independent_field_validation": false,
+        "reference_denominator_includes_invalid_audio": true
+      },
+      "lstm": {
+        "model": "lstm",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "class_order": [
+          "no_mosquito",
+          "other_mosquito",
+          "aedes_aegypti"
+        ],
+        "deterministic_probabilities": [
+          0.002512137790204455,
+          0.9955254991006189,
+          0.001962363109176689
+        ],
+        "windows": 4,
+        "real_seconds": 4.085125,
+        "ignored_tail_seconds": 0.117125,
+        "frontend": {
+          "sample_rate": 8000,
+          "n_fft": 1024,
+          "hop": 128,
+          "bands": 64,
+          "fmin": 80,
+          "fmax": 4000,
+          "center": false,
+          "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+        },
+        "decision_rule": "frozen calibrated cascade on activity-pooled probabilities",
+        "mc_passes": 100,
+        "mc_majority_decision": "other_mosquito",
+        "mc_votes": {
+          "no_mosquito": 0,
+          "other_mosquito": 100,
+          "aedes_aegypti": 0
+        },
+        "mc_disagreement": 0.0
+      },
+      "bilstm": {
+        "model": "bilstm",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "class_order": [
+          "no_mosquito",
+          "other_mosquito",
+          "aedes_aegypti"
+        ],
+        "deterministic_probabilities": [
+          0.013156146541921722,
+          0.983219689485738,
+          0.0036241639723402475
+        ],
+        "windows": 4,
+        "real_seconds": 4.085125,
+        "ignored_tail_seconds": 0.117125,
+        "frontend": {
+          "sample_rate": 8000,
+          "n_fft": 1024,
+          "hop": 128,
+          "bands": 64,
+          "fmin": 80,
+          "fmax": 4000,
+          "center": false,
+          "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+        },
+        "decision_rule": "frozen calibrated cascade on activity-pooled probabilities",
+        "mc_passes": 100,
+        "mc_majority_decision": "other_mosquito",
+        "mc_votes": {
+          "no_mosquito": 0,
+          "other_mosquito": 100,
+          "aedes_aegypti": 0
+        },
+        "mc_disagreement": 0.0
+      }
+    }
+  },
+  "healthy0001.wav": {
+    "infection_status": "saudável",
+    "path": "data/external/torres_2025/Healthy and Infected mosquitos/healthy0001.wav",
+    "overlap": {
+      "file_sha256": "d6aa312a57c7f5f11e23dc364070b6d5124c0ed1464bac536c1c354ea27fc7de",
+      "training_byte_duplicate": false,
+      "training_pcm_matches": 0
+    },
+    "models": {
+      "classic": {
+        "run_id": "ternary_verified_2026_10_14_corrections",
+        "audio": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/data/external/torres_2025/Healthy and Infected mosquitos/healthy0001.wav",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "policies": {
+          "activity_gated_log_odds_cascade_event": 1,
+          "activity_gated_log_odds_no_temporal_event": 1,
+          "hist_gradient_boosting_constrained_event": 1,
+          "ensemble_constrained_event": 2
+        },
+        "temporal": {
+          "available": false,
+          "conditional_score": null
+        },
+        "real_seconds": 1.980625,
+        "windows": 1,
+        "ignored_tail_seconds": 0.988625,
+        "quality_invalid_windows": 0,
+        "padding_repetition_concatenation": false,
+        "experimental": true,
+        "biological_confirmation": false,
+        "independent_field_validation": false,
+        "reference_denominator_includes_invalid_audio": true
+      },
+      "lstm": {
+        "model": "lstm",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "class_order": [
+          "no_mosquito",
+          "other_mosquito",
+          "aedes_aegypti"
+        ],
+        "deterministic_probabilities": [
+          0.008056763589593632,
+          0.09808187968314394,
+          0.8938613567272624
+        ],
+        "windows": 1,
+        "real_seconds": 1.980625,
+        "ignored_tail_seconds": 0.988625,
+        "frontend": {
+          "sample_rate": 8000,
+          "n_fft": 1024,
+          "hop": 128,
+          "bands": 64,
+          "fmin": 80,
+          "fmax": 4000,
+          "center": false,
+          "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+        },
+        "decision_rule": "frozen calibrated cascade on activity-pooled probabilities",
+        "mc_passes": 100,
+        "mc_majority_decision": "other_mosquito",
+        "mc_votes": {
+          "no_mosquito": 0,
+          "other_mosquito": 100,
+          "aedes_aegypti": 0
+        },
+        "mc_disagreement": 0.0
+      },
+      "bilstm": {
+        "model": "bilstm",
+        "decision": "other_mosquito",
+        "predicted_class": 1,
+        "class_order": [
+          "no_mosquito",
+          "other_mosquito",
+          "aedes_aegypti"
+        ],
+        "deterministic_probabilities": [
+          0.01631794002405692,
+          0.13156520344851402,
+          0.8521168565274291
+        ],
+        "windows": 1,
+        "real_seconds": 1.980625,
+        "ignored_tail_seconds": 0.988625,
+        "frontend": {
+          "sample_rate": 8000,
+          "n_fft": 1024,
+          "hop": 128,
+          "bands": 64,
+          "fmin": 80,
+          "fmax": 4000,
+          "center": false,
+          "scaling": "per-window zero mean/RMS; HTK mel; peak-relative dB clipped [-80,0]"
+        },
+        "decision_rule": "frozen calibrated cascade on activity-pooled probabilities",
+        "mc_passes": 100,
+        "mc_majority_decision": "other_mosquito",
+        "mc_votes": {
+          "no_mosquito": 0,
+          "other_mosquito": 100,
+          "aedes_aegypti": 0
+        },
+        "mc_disagreement": 0.0
+      }
+    }
+  }
+}

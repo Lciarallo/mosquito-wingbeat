@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "candidates_verified": 8,
+  "test_groups": 190,
+  "checks": [
+    "identical original partitions",
+    "group/PCM/hash isolation",
+    "source snapshots",
+    "selection frozen before new test inference",
+    "checkpoint/scaler hashes",
+    "normalizers fitted on training rows only",
+    "all saved confusion matrices",
+    "selected neural MC coverage"
+  ]
+}

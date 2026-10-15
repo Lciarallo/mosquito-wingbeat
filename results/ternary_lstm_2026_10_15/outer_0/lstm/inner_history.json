@@ -1,0 +1,80 @@
+[
+  {
+    "epoch": 1,
+    "train_loss": 0.6806046820988798,
+    "validation_group_loss": 0.4967842715918083,
+    "validation_accuracy": 0.7849829351535836
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.36819550604314805,
+    "validation_group_loss": 0.4885802873785529,
+    "validation_accuracy": 0.8191126279863481
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.2791944803924069,
+    "validation_group_loss": 0.4862084595643059,
+    "validation_accuracy": 0.8122866894197952
+  },
+  {
+    "epoch": 4,
+    "train_loss": 0.24048894332842893,
+    "validation_group_loss": 0.5300633779999974,
+    "validation_accuracy": 0.8703071672354948
+  },
+  {
+    "epoch": 5,
+    "train_loss": 0.20260151325190867,
+    "validation_group_loss": 0.5196294885540473,
+    "validation_accuracy": 0.8464163822525598
+  },
+  {
+    "epoch": 6,
+    "train_loss": 0.19296646351753666,
+    "validation_group_loss": 0.5194605140847124,
+    "validation_accuracy": 0.8395904436860068
+  },
+  {
+    "epoch": 7,
+    "train_loss": 0.16108999671941518,
+    "validation_group_loss": 0.5499020903191761,
+    "validation_accuracy": 0.8361774744027304
+  },
+  {
+    "epoch": 8,
+    "train_loss": 0.14482315588149658,
+    "validation_group_loss": 0.4657398285617598,
+    "validation_accuracy": 0.863481228668942
+  },
+  {
+    "epoch": 9,
+    "train_loss": 0.133137439504173,
+    "validation_group_loss": 0.545608514853224,
+    "validation_accuracy": 0.8430034129692833
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.13597802917627433,
+    "validation_group_loss": 0.47959526362892274,
+    "validation_accuracy": 0.8703071672354948
+  },
+  {
+    "epoch": 11,
+    "train_loss": 0.11605625193337547,
+    "validation_group_loss": 0.5467931641608158,
+    "validation_accuracy": 0.8532423208191127
+  },
+  {
+    "epoch": 12,
+    "train_loss": 0.09987378512643712,
+    "validation_group_loss": 0.6127717066544703,
+    "validation_accuracy": 0.8361774744027304
+  },
+  {
+    "epoch": 13,
+    "train_loss": 0.11063315022556411,
+    "validation_group_loss": 0.570729326722612,
+    "validation_accuracy": 0.8737201365187713
+  }
+]

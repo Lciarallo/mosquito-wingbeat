@@ -1,0 +1,147 @@
+{
+  "performance": [
+    {
+      "task": "infection",
+      "model": "linear",
+      "total": 60,
+      "correct": 49,
+      "accuracy": 0.8166666666666667,
+      "macro_f1": 0.8153846153846154
+    },
+    {
+      "task": "infection",
+      "model": "lstm",
+      "total": 60,
+      "correct": 52,
+      "accuracy": 0.8666666666666667,
+      "macro_f1": 0.8660714285714286
+    },
+    {
+      "task": "infection",
+      "model": "bilstm",
+      "total": 60,
+      "correct": 51,
+      "accuracy": 0.85,
+      "macro_f1": 0.849624060150376
+    },
+    {
+      "task": "species",
+      "model": "linear",
+      "total": 190,
+      "correct": 110,
+      "accuracy": 0.5789473684210527,
+      "macro_f1": 0.6247779905516478
+    },
+    {
+      "task": "species",
+      "model": "lstm",
+      "total": 190,
+      "correct": 96,
+      "accuracy": 0.5052631578947369,
+      "macro_f1": 0.6182932903437797
+    },
+    {
+      "task": "species",
+      "model": "bilstm",
+      "total": 190,
+      "correct": 100,
+      "accuracy": 0.5263157894736842,
+      "macro_f1": 0.6078206896415279
+    }
+  ],
+  "unanimous_decisions": [
+    {
+      "task": "infection",
+      "model": "lstm",
+      "total": 60,
+      "accepted": 58,
+      "correct_accepted": 51,
+      "accuracy_accepted": 0.8793103448275862,
+      "coverage": 0.9666666666666667,
+      "overall_correct_decision_rate": 0.85
+    },
+    {
+      "task": "infection",
+      "model": "bilstm",
+      "total": 60,
+      "accepted": 55,
+      "correct_accepted": 47,
+      "accuracy_accepted": 0.8545454545454545,
+      "coverage": 0.9166666666666666,
+      "overall_correct_decision_rate": 0.7833333333333333
+    },
+    {
+      "task": "species",
+      "model": "lstm",
+      "total": 190,
+      "accepted": 175,
+      "correct_accepted": 91,
+      "accuracy_accepted": 0.52,
+      "coverage": 0.9210526315789473,
+      "overall_correct_decision_rate": 0.4789473684210526
+    },
+    {
+      "task": "species",
+      "model": "bilstm",
+      "total": 190,
+      "accepted": 165,
+      "correct_accepted": 89,
+      "accuracy_accepted": 0.5393939393939394,
+      "coverage": 0.868421052631579,
+      "overall_correct_decision_rate": 0.46842105263157896
+    }
+  ],
+  "selected_neural_models": {
+    "infection": "bilstm",
+    "species": "bilstm"
+  },
+  "verification": {
+    "complete": true,
+    "tasks": {
+      "author_checkpoints": {
+        "lstm": {
+          "total": 40,
+          "passes": 100,
+          "valid": true
+        },
+        "bilstm": {
+          "total": 40,
+          "passes": 100,
+          "valid": true
+        }
+      },
+      "infection": {
+        "lstm": {
+          "total": 60,
+          "passes": 100,
+          "valid": true
+        },
+        "bilstm": {
+          "total": 60,
+          "passes": 100,
+          "valid": true
+        }
+      },
+      "species": {
+        "lstm": {
+          "total": 190,
+          "passes": 100,
+          "valid": true
+        },
+        "bilstm": {
+          "total": 190,
+          "passes": 100,
+          "valid": true
+        }
+      }
+    },
+    "checks": [
+      "group/PCM/hash isolation",
+      "frozen checkpoint digests",
+      "validation-only model selection",
+      "100-draw probabilities",
+      "saved prediction agreement",
+      "coverage/abstention denominators"
+    ]
+  }
+}

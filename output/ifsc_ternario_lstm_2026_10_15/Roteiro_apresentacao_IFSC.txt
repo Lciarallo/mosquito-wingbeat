@@ -1,0 +1,55 @@
+01. Capa (25 s)
+Apresentar o projeto de Luiz Eduardo do Nascimento Ciarallo para Computação Científica para a Indústria, IFSC. O problema é distinguir Aedes aegypti, outro mosquito e ausência de mosquito em áudio. A apresentação compara um detector clássico implementado com duas redes recorrentes profundas também implementadas.
+
+02. Uma entrada de áudio, três respostas (50 s)
+As asas geram padrões periódicos que podem ser analisados no áudio. A saída necessária tem três classes: Aedes aegypti, outro mosquito ou ruído sem mosquito. A fotografia é de um Aedes aegypti real. Os rótulos são de detecção acústica da espécie, sem inferir infecção. A decisão final é por grupo de gravação, reunindo suas janelas.
+
+03. Três estudos orientaram a proposta (55 s)
+Mukundarajan e colaboradores contextualizam a coleta acústica com celulares. Torres e colaboradores empregam redes LSTM e bidirecionais com Monte Carlo dropout para outra tarefa, a identificação de mosquitos infectados. Aqui, essas técnicas foram adaptadas e treinadas para as três classes do detector. Supratak e colaboradores ajudam a discutir robustez ao ruído. O conjunto MosquitoSong é apenas relacionado e permanece fora do treinamento deste detector.
+
+04. O sinal revela padrões no tempo e na frequência (45 s)
+À esquerda está a primeira janela retida de Aedes no corpus auditado, sem seleção pelo resultado de um modelo. À direita, o módulo da FFT do mesmo trecho, com janela de Hann e nível relativo ao pico. A forma de onda mostra variações de amplitude; o espectro revela componentes periódicas e harmônicos. A frequência de amostragem do cache utilizado é oito quilohertz.
+
+05. A frequência das asas ajuda a caracterizar o voo (50 s)
+O gráfico mantém as frequências médias publicadas por Sinka e colaboradores, a 25 graus Celsius, para fêmeas e machos. Para Aedes aegypti, os valores mostrados são 458 e 715 hertz. O padrão de vários harmônicos e sua evolução temporal motivam o uso do espectrograma, além de uma única frequência. Estes números são referências da literatura, não frequências medidas em todos os arquivos do projeto.
+
+06. A STFT acompanha o espectro ao longo do voo (55 s)
+A STFT aplica uma FFT em janelas sucessivas, preservando a posição temporal das componentes. Nesta execução o áudio tem oito quilohertz, com 1.024 amostras por Hann, equivalentes a 128 milissegundos. O avanço é de 128 amostras, ou 16 milissegundos. O quociente 8.000/1.024 dá 7,8125 hertz entre bins. O trecho de 7.936 amostras produz 55 passos com center false; o desenho exibe as frequências até 2.500 hertz para facilitar a leitura.
+
+07. Do espectrograma à sequência mel (55 s)
+O frontend transforma a potência da STFT em 64 bandas mel entre oitenta e quatro mil hertz. A sequência tem 55 passos temporais e 64 atributos por passo. Remove-se a média e normaliza-se o RMS de cada janela; depois a potência é expressa em decibéis relativos e limitada a menos oitenta até zero. A média e o desvio por banda usados para padronizar a entrada são calculados exclusivamente no treino de cada ajuste. A matriz exibida é anterior à padronização estatística por banda.
+
+08. Mesma população e cinco testes externos (70 s)
+A comparação conserva a mesma população e as cinco dobras externas da cascata auditada. São 42.029 janelas de 0,992 segundo, reunidas em 1.494 grupos: 426 de ruído, 1.008 de outros mosquitos e 60 de Aedes. Nenhum dos 1.441 blocos de conteúdo PCM atravessa treino e teste. Em cada treino externo, uma divisão interna agrupada escolhe época e limiares; o modelo é então reajustado em todo o treino externo, congelado e aplicado ao teste. A seleção das redes usa um holdout interno, a primeira divisão de quatro partes; a cascata usa calibração interna OOF mais ampla. Portanto, as cinco avaliações externas e a população são iguais, e os processos internos de seleção são descritos separadamente. MosquitoSong não participa de nenhum ajuste.
+
+09. Redes recorrentes para as três classes (85 s)
+A LSTM aprende dependências entre quadros mel consecutivos, com portas que atualizam sua memória. A versão unidirecional percorre o tempo em um sentido; a Bi-LSTM processa a sequência nos dois sentidos. As duas têm duas camadas de 128 unidades por direção, dropout de 0,20 entre camadas e uma projeção linear do último passo para três escores. O softmax produz probabilidades. O projeto adapta o artigo de Torres, que usava 256 unidades por camada em outra tarefa. A LSTM tem 231.811 parâmetros, e a bidirecional 594.691. A agregação das janelas em um grupo usa pesos de atividade iguais a um menos probabilidade de ruído, elevado a 1,5.
+
+10. A cascata clássica é a referência de comparação (45 s)
+O detector existente combina probabilidades de regressão logística e HistGradientBoosting. O agrupamento temporal dá maior peso às janelas ativas. Um primeiro limiar separa ruído de mosquito; um segundo decide Aedes versus outro mosquito. A composição e os limiares da referência foram definidos na calibração interna, antes de cada teste externo. Essa implementação é a fonte dos 90,03 por cento de acurácia geral, e serve como comparação para as redes profundas.
+
+11. Adam ajusta os pesos das redes (65 s)
+A entropia cruzada mede o erro das três saídas. A retropropagação calcula gradientes; o clipping limita a norma global em três. O Adam mantém estimativas dos primeiros e segundos momentos para atualizar os pesos com taxa de 0,0006. Cada lote contém 256 janelas amostradas com reposição e pesos equilibrados. O treino pode chegar a trinta épocas, com parada quando a perda de validação não melhora durante cinco épocas. Esses são os valores efetivamente executados; esta comparação não usa AdamW, scheduler cosseno ou label smoothing. Os hiperparâmetros foram fixados antes da leitura das métricas externas, sem uma busca retrospectiva pelo melhor teste.
+
+12. Regularização e seleção durante o treino (60 s)
+O dropout de vinte por cento atua entre as duas camadas recorrentes. A amostragem ponderada mantém massa igual por classe e usa amortecimento gamma de 0,50 por duração de gravação, com teto de sessenta janelas no fator de peso. A época é escolhida pela menor entropia cruzada de grupos, equilibrada por classe, na validação interna. A paciência é cinco. O normalizador também é calculado apenas no conjunto utilizado para ajustar cada rede. Na inferência de WAVs, Monte Carlo dropout executa cem passagens e informa a discordância de decisões; os resultados OOF apresentados adiante usam a inferência determinística.
+
+13. A validação escolhe a época de cada rede (55 s)
+As curvas são os históricos reais da seleção interna no ajuste final, separada dos cinco testes externos. A LSTM escolheu a época quatro; a Bi-LSTM, a época dois. A linha tracejada marca a melhor perda de validação. O treino e a validação usam níveis de agregação diferentes: janelas amostradas no treino e grupos equilibrados por classe na validação; o gráfico não deve ser interpretado como duas perdas da mesma população. Depois da seleção, cada rede é reinicializada e reajustada sobre todo o desenvolvimento pela quantidade escolhida de épocas. A LSTM final foi escolhida pela menor perda interna, sem usar a acurácia externa para escolher a arquitetura.
+
+14. A cascata mantém 90,03% de acurácia geral (65 s)
+A linha tracejada marca os 90,03 por cento da cascata clássica. A decisão direta das redes usa a classe de maior probabilidade agregada. A LSTM direta alcançou 85,74 por cento e a bidirecional 82,33. Aplicando os dois limiares selecionados internamente, as acurácias foram 86,55 e 85,27 por cento. Portanto, as duas arquiteturas treinadas não mantiveram a acurácia geral da referência. A próxima tabela mostra como a mudança de regra afeta a sensibilidade de Aedes e os falsos positivos. Todas as configurações são mostradas, sem escolher apenas o modo que teve maior acurácia no teste.
+
+15. Sensibilidade e falsos positivos mudam juntos (95 s)
+A cascata detectou 47 de 60 Aedes, com zero ruídos e 23 outros mosquitos classificados como Aedes. Na decisão direta, a LSTM detectou 52 de 60 e a Bi-LSTM 53 de 60, com mais falsos positivos em ambas as classes negativas. A calibração interna maximiza a sensibilidade respeitando tetos empíricos de falso positivo no holdout de treino. Nos testes, a LSTM calibrada detectou 20 de 60 e a Bi-LSTM 17 de 60. A precisão das redes diretas para Aedes é de 48,15 e 38,69 por cento, respectivamente. A comparação demonstra o compromisso entre detectar mais alvos e emitir mais alarmes; não se deve interpretar uma melhora isolada de acurácia após calibração como melhora de detecção de Aedes. Os limites internos não garantem limites populacionais. As contagens e as duas regras foram preservadas em metrics.json.
+
+16. Onde a cascata acerta e onde confunde (70 s)
+A matriz de confusão mostra a referência clássica nas três classes. A diagonal soma 1.345 acertos em 1.494 grupos. Entre sessenta Aedes, quarenta e sete foram detectados e treze classificados como outro mosquito. Nenhum foi perdido para ruído. Entre os ruídos, zero foram chamados de Aedes, mas cento e dois foram chamados de outro mosquito. Portanto, falso alarme para Aedes e falso alarme para qualquer mosquito são medidas diferentes. A sensibilidade de Aedes é 78,33 por cento, a precisão é 67,14 por cento e a acurácia equilibrada entre classes é 83,67 por cento.
+
+17. Referências e créditos (25 s)
+As referências e os créditos incluem os artigos usados na motivação, na modelagem temporal e na caracterização acústica, os dados e o código do projeto, o modelo oficial e a fotografia do campus IFSC, e a fotografia do mosquito do CDC. Os links completos e a origem de cada gráfico estão nas notas. Os resultados das redes são deste projeto, sem transferir para o detector os números do artigo de infecção.
+
+18. Discussão final: limites e próximo ciclo (75 s)
+O detector clássico teve um resultado positivo de 90,03 por cento, e as redes recorrentes foram implementadas e comparadas de fato, como exige o trabalho. As duas redes diretas aumentaram a sensibilidade de Aedes, acompanhada de mais falsos positivos. As redes calibradas reduziram falsos positivos com redução importante da sensibilidade. Esta é uma avaliação retrospectiva de um corpus já conhecido, não uma validação independente em campo. A comparação tem as mesmas dobras externas, mas diferentes processos internos de seleção, e não há ablação para atribuir ganho causal a cada técnica. MosquitoSong continua separado como fonte externa. O próximo ciclo deve testar novas sessões, indivíduos, microfones e níveis de ruído, mantendo pesos e decisões congelados. Não foi demonstrada inferência de infecção por dengue, nem execução dessas redes em Arduino. A conclusão é que a implementação profunda cumpre o objetivo acadêmico e que a cascata permanece a referência de acurácia geral desta avaliação.
+
+Duração sugerida: 17.42 minutos.

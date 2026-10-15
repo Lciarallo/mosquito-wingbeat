@@ -1,0 +1,1 @@
+Every delivered PNG (19 slides) visually inspected. No layout defects observed. Consolidated editorial repair: explicitly identify the new slide as future work in its title and add Arduino to the existing photo credits and reference notes. No metric/model changes.

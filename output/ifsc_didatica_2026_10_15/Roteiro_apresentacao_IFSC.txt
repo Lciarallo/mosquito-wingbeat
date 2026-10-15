@@ -1,0 +1,81 @@
+01. Mosquitos pelo som (20 s)
+Este trabalho investiga a identificação de Aedes aegypti pelo som do voo. Vou mostrar como representamos o áudio, como treinamos os modelos e o que os resultados permitem concluir.
+Transição: Primeiro, onde essa identificação pode ajudar?
+
+02. O áudio pode apoiar a vigilância do Aedes (50 s)
+Hoje há vistorias e coleta de material, com identificação por características do mosquito usando lupa ou microscópio. A proposta é acrescentar uma forma de triagem pelo som do voo. Isso pode ajudar a registrar a presença de Aedes e apoiar o monitoramento. As fotos mostram locais com água acumulada para contextualizar o problema; não são focos localizados automaticamente pelo sistema.
+Transição: Para isso, precisamos definir exatamente quais respostas o sistema deve dar.
+
+03. Um áudio deve levar a uma de três classes (40 s)
+A tarefa tem três respostas: Aedes aegypti, outro mosquito ou ruído sem mosquito. Não queremos identificar cada uma das outras espécies. Durante o treinamento, exemplos rotulados mostram ao modelo qual é a resposta correta. Durante o teste, ele recebe novos grupos de gravação sem acesso ao rótulo. Também não estamos inferindo se o mosquito está infectado por dengue.
+Transição: A escolha do áudio e das redes se apoia em trabalhos anteriores.
+
+04. A literatura orienta captura, memória e robustez (50 s)
+O primeiro estudo demonstra a aquisição acústica com celulares. O segundo usa LSTM e avaliação de incerteza em outra tarefa: distinguir fêmeas Aedes infectadas de saudáveis. Adaptamos as técnicas para nossas três classes. MosquitoSong+ usa redes convolucionais e ajuda a discutir robustez ao ruído. Uma CNN aprende padrões locais do sinal; a LSTM, que testamos aqui, aprende relações ao longo do tempo. Os números dos artigos não são resultados do nosso detector.
+Transição: Antes de discutir a rede, precisamos conhecer os dados que ela recebeu.
+
+05. Separar grupos permite avaliar o aprendizado (85 s)
+Dryad e HumBug fornecem mosquitos e sons de fundo; ESC-50 acrescenta sons ambientais. São 1.494 grupos, com apenas sessenta da classe-alvo. Cada grupo é testado uma vez no rodízio de cinco dobras: quatro ficam para o desenvolvimento e uma para o teste. Dentro do desenvolvimento, separamos validação para escolher época e limiares. A normalização é ajustada só no treino. Janelas, grupos e indivíduos não são a mesma coisa. A cascata e as redes usam a mesma população e as mesmas dobras de teste.
+Transição: Agora podemos acompanhar a transformação de uma janela real de áudio.
+
+06. A FFT revela as frequências presentes no trecho (45 s)
+À esquerda vemos como a amplitude muda no tempo. À direita, a FFT mostra quais frequências estão presentes no mesmo trecho. Picos podem representar periodicidade e harmônicos. A amostragem de oito quilohertz é a taxa de leitura do áudio, não a frequência do batimento das asas. Essa vista resume o trecho inteiro; ainda não mostra em que momento cada componente aparece.
+Transição: Também precisamos entender por que uma única frequência não resume o voo.
+
+07. Frequência fundamental e harmônicos (40 s)
+A frequência do voo varia entre condições e grupos biológicos. Neste exemplo da literatura, fêmeas e machos têm médias diferentes. Harmônicos aparecem em múltiplos da frequência básica. Por isso a rede recebe um padrão de frequências e sua evolução, em vez de apenas uma regra como procurar quinhentos hertz. Os valores mostrados aqui são publicados e não uma medição de todas as nossas gravações.
+Transição: Para preservar a evolução dessas frequências, usamos a STFT.
+
+08. A STFT localiza as frequências ao longo do voo (45 s)
+A STFT repete a análise de Fourier em pequenos intervalos. Assim, conseguimos enxergar a evolução do espectro. Aqui, cores mais claras indicam maior energia relativa, e as faixas horizontais mostram componentes persistentes. Usamos uma janela de cento e vinte e oito milissegundos, avançando dezesseis milissegundos por vez. Esses intervalos pertencem ao processamento dentro de cada trecho de quase um segundo.
+Transição: O espectrograma ainda pode ser resumido em uma representação mais compacta.
+
+09. As bandas mel formam a sequência de entrada (55 s)
+Cada coluna desta matriz representa um instante e cada linha uma banda mel. Portanto, uma entrada tem cinquenta e cinco vetores de sessenta e quatro valores. As cores mostram energia em decibéis. A escala mel concentra mais detalhe nas frequências baixas e resume as altas. A normalização torna as escalas mais comparáveis, mas seus parâmetros são calculados só nos dados de ajuste. Essa matriz é a sequência que a LSTM acompanha.
+Transição: Com a entrada definida, vamos comparar dois modos de tomar a decisão.
+
+10. A cascata organiza a decisão em duas etapas (60 s)
+A regressão logística aprende separações lineares entre os atributos acústicos. O HistGB usa árvores e pode representar relações não lineares. Combinamos os escores e damos mais peso às janelas consideradas ativas. A regra então passa por dois limiares: primeiro decide ruído ou mosquito; depois decide Aedes ou outro mosquito. Cascata descreve essas etapas de decisão, não é o nome de uma rede neural. Ela é nossa referência de comparação.
+Transição: A alternativa profunda tenta aprender a evolução temporal a partir da sequência mel.
+
+11. LSTM e Bi-LSTM aprendem relações no tempo (90 s)
+A LSTM recebe a sequência quadro a quadro. Suas portas controlam o que entra, permanece ou sai da memória. Na versão bidirecional, uma recorrência percorre a sequência do início ao fim e outra do fim ao início. Cada bloco no desenho é uma camada, não um instante. No final, uma camada linear produz três escores e o softmax os transforma em probabilidades que somam um. As duas arquiteturas foram treinadas de fato para a tarefa ternária. A hipótese é que o contexto temporal ajude a reconhecer o voo.
+Transição: Para aprender essas relações, precisamos transformar o erro em atualizações dos pesos.
+
+12. Adam transforma o erro em ajustes nos pesos (55 s)
+A entropia cruzada aumenta quando a rede dá pouca probabilidade à classe correta. A retropropagação calcula os gradientes desse erro. O Adam usa médias dos gradientes e de seus quadrados para adaptar a atualização dos pesos. A taxa de aprendizado controla o tamanho básico do passo. Também limitamos a norma dos gradientes em três, para evitar atualizações muito grandes. Esses são os parâmetros executados, não uma afirmação de que encontramos a configuração ótima.
+Transição: Aprender o conjunto de treino é necessário, mas precisamos controlar a memorização.
+
+13. Regularização e validação controlam o ajuste (60 s)
+Dropout zera aleatoriamente vinte por cento das ativações entre as camadas durante o treino. A amostragem mantém a mesma massa total nas três classes e reduz o domínio das gravações com muitas janelas. A validação escolhe o checkpoint de menor perda; a paciência de cinco épocas permite tentar mais ajustes antes de parar. Na inferência adicional, cem passagens com dropout medem a discordância das decisões. As métricas de teste mostradas aqui usam inferência determinística.
+Transição: As curvas registradas mostram como essa seleção ocorreu.
+
+14. A validação seleciona o checkpoint de cada rede (45 s)
+A curva de treino continua caindo, mas a validação deixa de melhorar. A LSTM foi observada por nove épocas e o melhor ponto foi a quarta; a bidirecional, por sete, com melhor ponto na segunda. Depois, o ajuste é reiniciado no desenvolvimento completo pela quantidade selecionada. Os dois gráficos são do contexto final e não uma média das cinco dobras. Treino é medido por janela e validação por grupo, então não devemos comparar suas alturas como populações idênticas.
+Transição: Com as escolhas encerradas, aplicamos os modelos aos grupos de teste.
+
+15. A cascata teve o maior acerto geral (55 s)
+A cascata acertou mil trezentos e quarenta e cinco dos mil quatrocentos e noventa e quatro grupos, chegando a noventa vírgula zero três por cento. As duas redes ficaram abaixo em acurácia geral. A decisão direta escolhe a classe com maior probabilidade agregada. A calibrada aplica dois limiares escolhidos na validação interna. Como a maioria dos grupos é de outros mosquitos, a acurácia sozinha não informa quantos Aedes conseguimos detectar.
+Transição: Por isso precisamos observar sensibilidade e falsos positivos em conjunto.
+
+16. Detectar mais Aedes muda o número de alarmes (85 s)
+A LSTM direta detectou cinquenta e dois Aedes, cinco a mais que a cascata. A bidirecional detectou cinquenta e três. Em troca, as duas chamaram mais ruídos e outros mosquitos de Aedes. Ao aplicar os limiares calibrados, os alarmes caíram, mas a sensibilidade também caiu bastante. Portanto, aumentar a acurácia ou reduzir o falso positivo isoladamente não basta. A escolha operacional depende do custo de perder um alvo e do custo de um alarme. Aqui mostramos todas as regras, sem escolher apenas a que ficou melhor no teste.
+Transição: A matriz de confusão permite enxergar esses erros como contagens concretas.
+
+17. A matriz mostra quais classes foram confundidas (55 s)
+Na diagonal estão os acertos. Dos sessenta grupos Aedes, quarenta e sete foram reconhecidos e treze viraram outros mosquitos. Nenhum virou ruído. No outro sentido, vinte e três outros mosquitos foram chamados de Aedes. Assim, entre setenta alertas de Aedes, quarenta e sete estavam corretos: essa é a precisão de sessenta e sete vírgula quatorze por cento. Já a sensibilidade pergunta quantos dos Aedes existentes foram encontrados. São perguntas diferentes.
+Transição: O próximo passo é coletar novos dados com condições e rótulos controlados.
+
+18. O protótipo prepara a coleta de uma base própria (60 s)
+As fotos mostram a montagem física e a placa conectada por USB. A próxima etapa é verificar a captura pelo microfone e salvar os arquivos WAV. Vamos incluir Aedes, outros mosquitos e controles sem mosquito, com identificação confirmada e registro de sessão e indivíduo. Parte da nova coleta será reservada antes de qualquer ajuste para avaliar o detector congelado. Somente a parcela de treino poderá ser usada depois para adaptação. Esses dados futuros não estão nos noventa por cento apresentados.
+Transição: As fontes e os arquivos de apoio permitem rastrear cada etapa do trabalho.
+
+19. Referências e material de apoio (20 s)
+As referências fundamentam as escolhas, e os links completos estão nas notas. Os gráficos de resultados vêm dos experimentos do projeto. O material de apoio contém os conceitos, as contas e as transições para revisar a apresentação.
+Transição: Para concluir, o que foi demonstrado e o que vem depois?
+
+20. Resultados, limites e próxima coleta (65 s)
+O programa profundo foi implementado e comparado como pede a disciplina. No corpus avaliado, a cascata teve maior acurácia geral, enquanto as redes diretas detectaram mais Aedes com mais alarmes. A conclusão é restrita a essa avaliação retrospectiva: separar gravações não prova independência de indivíduos, sessões ou microfones. MosquitoSong ficou fora do ajuste e seus quatro grupos Aedes não foram detectados. A próxima etapa é a coleta própria com teste reservado e detector congelado. Não demonstramos diagnóstico de infecção nem execução dessas redes na placa.
+Transição: Encerrar e abrir a discussão.
+
+Total sugerido: 18min00s.

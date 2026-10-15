@@ -1,0 +1,50 @@
+{
+  "verified_utc": "2026-10-15T14:03:46.069195+00:00",
+  "native_url": "https://docs.google.com/presentation/d/1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A/edit?usp=drivesdk",
+  "native_revision": "yn8LUfO8E4d4zQ",
+  "slide_count": 18,
+  "page_size": {
+    "width": {
+      "magnitude": 9144000,
+      "unit": "EMU"
+    },
+    "height": {
+      "magnitude": 5143500,
+      "unit": "EMU"
+    }
+  },
+  "original_master_count": 1,
+  "original_layout_count": 11,
+  "masters_preserved": true,
+  "layouts_preserved": true,
+  "original_campus_and_mosquito_photos_preserved": true,
+  "full_author_verified": true,
+  "final_native_text_matches_plan": true,
+  "all_18_pages_visually_reviewed": true,
+  "repair_passes": 2,
+  "changed_pages_reviewed": [
+    [
+      8,
+      9,
+      11,
+      13,
+      14
+    ],
+    [
+      9,
+      11
+    ]
+  ],
+  "structural_issues": 0,
+  "duration_seconds": 1045,
+  "professor_requirements": "mapped to slides in criterios_apresentacao.md",
+  "pdf": "IFSC_Detector_Ternario_LSTM_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+  "pdf_sha256": "f5976cab319692a0b3faf0d9356f385395cd321253eecfcf4eb9ffa4bc14d6a2",
+  "pdf_bytes": 2379419,
+  "model_run": "results/ternary_lstm_2026_10_15",
+  "model_probabilities_replayed": true,
+  "tests_passed": 313,
+  "metadata_modified_utc": "2026-10-15T13:58:16.993Z",
+  "historical_readme_preserved": true,
+  "original_deck_pdf_preserved": "output/ifsc_nova_2026_10_15/IFSC_Mosquitos_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf"
+}

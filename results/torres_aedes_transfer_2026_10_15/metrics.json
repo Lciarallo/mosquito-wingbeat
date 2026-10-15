@@ -1,0 +1,114 @@
+{
+  "baseline": {
+    "primary": {
+      "n": 293,
+      "accuracy": 0.8088737201365188,
+      "balanced_accuracy": 0.634993043132578,
+      "confusion_matrix": [
+        [
+          70,
+          16,
+          0
+        ],
+        [
+          26,
+          164,
+          5
+        ],
+        [
+          0,
+          9,
+          3
+        ]
+      ],
+      "aedes_recall": 0.25,
+      "noise_to_aedes_fpr": 0.0,
+      "other_to_aedes_fpr": 0.02564102564102564,
+      "aedes_detected": 3,
+      "aedes_total": 12
+    },
+    "torres": {
+      "n": 60,
+      "accuracy": 0.0,
+      "balanced_accuracy": 0.0,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          25,
+          35,
+          0
+        ]
+      ],
+      "aedes_recall": 0.0,
+      "noise_to_aedes_fpr": null,
+      "other_to_aedes_fpr": null,
+      "aedes_detected": 0,
+      "aedes_total": 60
+    }
+  },
+  "with_torres": {
+    "primary": {
+      "n": 293,
+      "accuracy": 0.825938566552901,
+      "balanced_accuracy": 0.645706618962433,
+      "confusion_matrix": [
+        [
+          71,
+          15,
+          0
+        ],
+        [
+          21,
+          168,
+          6
+        ],
+        [
+          0,
+          9,
+          3
+        ]
+      ],
+      "aedes_recall": 0.25,
+      "noise_to_aedes_fpr": 0.0,
+      "other_to_aedes_fpr": 0.03076923076923077,
+      "aedes_detected": 3,
+      "aedes_total": 12
+    },
+    "torres": {
+      "n": 60,
+      "accuracy": 0.9333333333333333,
+      "balanced_accuracy": 0.9333333333333333,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          56
+        ]
+      ],
+      "aedes_recall": 0.9333333333333333,
+      "noise_to_aedes_fpr": null,
+      "other_to_aedes_fpr": null,
+      "aedes_detected": 56,
+      "aedes_total": 60
+    }
+  }
+}

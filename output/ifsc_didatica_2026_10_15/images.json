@@ -1,0 +1,57 @@
+[
+  {
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/logo_ifsc_florianopolis_oficial.png",
+    "requests": [
+      {
+        "createImage": {
+          "objectId": "ifsc26_logo_oficial_florianopolis",
+          "url": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/logo_ifsc_florianopolis_oficial.png",
+          "elementProperties": {
+            "pageObjectId": "ifsc26_s01",
+            "size": {
+              "width": {
+                "magnitude": 150,
+                "unit": "PT"
+              },
+              "height": {
+                "magnitude": 218.65558912386706,
+                "unit": "PT"
+              }
+            },
+            "transform": {
+              "scaleX": 1,
+              "scaleY": 1,
+              "translateX": 418,
+              "translateY": 62,
+              "unit": "PT"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/dados_e_classes.png",
+    "requests": [
+      {
+        "replaceImage": {
+          "imageObjectId": "ifsc26_s08_e02",
+          "url": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/dados_e_classes.png",
+          "imageReplaceMethod": "CENTER_INSIDE"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/acuracia_cinco_regras.png",
+    "requests": [
+      {
+        "replaceImage": {
+          "imageObjectId": "ifsc26_s15_e02",
+          "url": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/output/ifsc_didatica_2026_10_15/assets/acuracia_cinco_regras.png",
+          "imageReplaceMethod": "CENTER_INSIDE"
+        }
+      }
+    ]
+  }
+]

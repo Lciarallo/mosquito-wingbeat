@@ -1,0 +1,19 @@
+Tempo sugerido: 65 segundos.
+
+Na próxima etapa, vamos usar o Arduino Nano 33 BLE Sense Rev2 para captar o som do voo com o microfone integrado. A proposta é transferir áudio PCM mono, inicialmente a 16 kHz e 16 bits, por USB e salvar WAVs no computador. A integridade da captura será verificada na placa.
+
+O novo dataset terá Aedes aegypti, outros mosquitos e períodos de ruído sem mosquito. Cada gravação receberá espécie confirmada, identificadores de indivíduo e sessão, distância e condições ambientais. O rótulo virá do protocolo de coleta, sem usar a previsão do modelo como verdade.
+
+Treino, validação e teste ficarão separados por indivíduo e sessão. Parte das novas gravações será reservada para avaliar o detector congelado. Depois, apenas a parcela de treino poderá ser usada para reajustá-lo. Mediremos novamente acurácia, sensibilidade de Aedes e falsos positivos.
+
+Este é um plano futuro; os 90,03% apresentados anteriormente não incluem esse novo dataset. A foto da placa é oficial da Arduino.
+
+[Sources]
+https://docs.arduino.cc/hardware/nano-33-ble-sense-rev2/
+https://docs.arduino.cc/tutorials/nano-33-ble-sense-rev2/microphone-sensor/
+https://store.arduino.cc/products/nano-33-ble-sense-rev2
+Arquivo local: firmware/README.md
+Arquivo local: firmware/MosquitoPresence/MosquitoPresence.ino
+Arquivo local: output/ifsc_2026_10_13_visual/assets/arduino_nano_sense_rev2.jpg
+Proposta futura de coleta elaborada para esta apresentação; não é um resultado medido.
+[/Sources]

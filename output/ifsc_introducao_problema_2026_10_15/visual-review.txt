@@ -1,0 +1,1 @@
+Todos os 20 PNGs foram inspecionados individualmente. Um ajuste editorial consolidado explicita a prevenção da dengue na mensagem do slide de introdução. O slide 2 foi novamente inspecionado; os outros 19 permanecem pixel a pixel idênticos. Sem cortes, distorções ou sobreposições observados.

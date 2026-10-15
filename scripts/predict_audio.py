@@ -19,11 +19,8 @@ sys.path.insert(0, str(SCRIPT_DIR))
 sys.path.insert(1, str(ROOT))
 
 import arduino_frontend
-from arduino_mic_emulator import (
-    TARGET_SR,
-    emulate_arduino_mic,
-    load_audio_via_ffmpeg,
-)
+from audio_io import load_audio_via_ffmpeg
+TARGET_SR = 16000
 from robust_audio_features import (
     analyze_harmonic_flutter,
 )
@@ -598,7 +595,6 @@ def _to_non_overlapping_timeline(df: pd.DataFrame, intervals: list[dict]) -> lis
 
 def process_audio_file(
     audio_path: str | Path,
-    emulate_mic: bool = False,
     hop_seconds: float = 0.5,
     classifier: HierarchicalMosquitoPipeline | None = None,
     presence_threshold: float | None = None,
@@ -619,12 +615,7 @@ def process_audio_file(
         sr = TARGET_SR
     duration = len(raw_audio) / float(TARGET_SR)
 
-    if emulate_mic:
-        processed_pcm = emulate_arduino_mic(
-            raw_audio, sr=TARGET_SR, inject_noise=True, quantize=True
-        ).ravel()
-    else:
-        processed_pcm = np.asarray(arduino_frontend.pcm16(raw_audio), dtype=np.int16).ravel()
+    processed_pcm = np.asarray(arduino_frontend.pcm16(raw_audio), dtype=np.int16).ravel()
 
     hop_samples = int(round(hop_seconds * TARGET_SR))
     total_samples = len(processed_pcm)
@@ -707,7 +698,6 @@ def process_audio_file(
     summary = {
         "audio_file": str(audio_path),
         "duration_seconds": round(duration, 2),
-        "emulate_arduino_mic": emulate_mic,
         "region_prior": classifier.region,
         "total_windows": total_windows,
         "detected_windows": detected_windows,
@@ -747,9 +737,7 @@ def print_cli_report(summary: dict, df: pd.DataFrame):
     print("=" * 82)
     print(f"Arquivo:               {summary['audio_file']}")
     print(f"Duração Total:         {summary['duration_seconds']} s")
-    print(
-        f"Emulação Mic Arduino:  {'ATIVADA (ST MP34DT05)' if summary['emulate_arduino_mic'] else 'DESATIVADA (Áudio Bruto)'}"
-    )
+
     print(f"Prior Epidemiológico:  {summary['region_prior'].upper()}")
     print(
         f"Janelas de Voo Ativo:  {summary['detected_windows']}/{summary['total_windows']} ({summary['active_ratio_pct']}%)"
@@ -807,14 +795,6 @@ def main():
     )
     parser.add_argument("--audio", dest="audio_option", type=str, help="Alias para o áudio de entrada")
     parser.add_argument(
-        "--emulate-arduino", action="store_true", help="Aplica emulação acústica do mic MP34DT05"
-    )
-    parser.add_argument(
-        "--compare",
-        action="store_true",
-        help="Executa comparação lado a lado (Bruto vs Mic Arduino)",
-    )
-    parser.add_argument(
         "--hop", type=float, default=0.5, help="Passo temporal em segundos (padrão: 0.5s)"
     )
     parser.add_argument(
@@ -869,41 +849,12 @@ def main():
     try:
         classifier = HierarchicalMosquitoPipeline(model_mode=args.model, region=args.region)
 
-        if args.compare:
-            print(
-                "\n[MODO DE COMPARAÇÃO ATIVADO: ÁUDIO BRUTO vs MICROFONE ARDUINO NANO 33 BLE SENSE]"
-            )
-            df_raw, sum_raw = process_audio_file(
-                audio_path,
-                emulate_mic=False,
-                hop_seconds=args.hop,
-                classifier=classifier,
-                presence_threshold=args.presence_threshold,
-                confidence_threshold=args.confidence_threshold,
-            )
-            df_emu, sum_emu = process_audio_file(
-                audio_path,
-                emulate_mic=True,
-                hop_seconds=args.hop,
-                classifier=classifier,
-                presence_threshold=args.presence_threshold,
-                confidence_threshold=args.confidence_threshold,
-            )
-
-            print_cli_report(sum_raw, df_raw)
-            print_cli_report(sum_emu, df_emu)
-
-            df_to_save, sum_to_save = df_emu, sum_emu
-        else:
-            df_to_save, sum_to_save = process_audio_file(
-                audio_path,
-                emulate_mic=args.emulate_arduino,
-                hop_seconds=args.hop,
-                classifier=classifier,
-                presence_threshold=args.presence_threshold,
-                confidence_threshold=args.confidence_threshold,
-            )
-            print_cli_report(sum_to_save, df_to_save)
+        df_to_save, sum_to_save = marginalize_genus_power(
+            audio_path, hop_seconds=args.hop, classifier=classifier,
+            presence_threshold=args.presence_threshold,
+            confidence_threshold=args.confidence_threshold,
+        )
+        print_cli_report(sum_to_save, df_to_save)
 
         if args.output_csv:
             out_csv = Path(args.output_csv)

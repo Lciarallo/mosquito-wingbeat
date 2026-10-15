@@ -1,0 +1,207 @@
+GUIA DE ESTUDO E FALA — Luiz Eduardo do Nascimento Ciarallo
+
+Roteiro sugerido: 18 minutos; ensaiar com margem até 20. As explicações abaixo são apoio de estudo, não texto para ler integralmente.
+
+01. Mosquitos pelo som — 20 s
+O que é: Classificação acústica supervisionada.
+Para que serve: Distinguir Aedes aegypti, outro mosquito e ausência de mosquito.
+Por que foi usado: O voo contém estrutura temporal e espectral explorável por algoritmos.
+Como foi feito/medido: Programa implementado com cascata clássica, LSTM e Bi-LSTM; os resultados são separados por modelo.
+Fala: Este trabalho investiga a identificação de Aedes aegypti pelo som do voo. Vou mostrar como representamos o áudio, como treinamos os modelos e o que os resultados permitem concluir.
+Transição: Primeiro, onde essa identificação pode ajudar?
+
+02. O áudio pode apoiar a vigilância do Aedes — 50 s
+O que é: Vigilância entomológica acompanha a presença dos vetores.
+Para que serve: Vistorias, coleta e identificação morfológica orientam o controle.
+Por que foi usado: A análise automática do voo pode acrescentar registros ao monitoramento.
+Como foi feito/medido: Fotos de criadouros são exemplos de contexto; o algoritmo recebe áudio de adultos, não detecta larvas na água.
+Fala: Hoje há vistorias e coleta de material, com identificação por características do mosquito usando lupa ou microscópio. A proposta é acrescentar uma forma de triagem pelo som do voo. Isso pode ajudar a registrar a presença de Aedes e apoiar o monitoramento. As fotos mostram locais com água acumulada para contextualizar o problema; não são focos localizados automaticamente pelo sistema.
+Transição: Para isso, precisamos definir exatamente quais respostas o sistema deve dar.
+
+03. Um áudio deve levar a uma de três classes — 40 s
+O que é: Aprendizado supervisionado usa exemplos com rótulos conhecidos.
+Para que serve: Ensinar a distinção entre Aedes aegypti, outros mosquitos e ruído.
+Por que foi usado: Separar ruído evita forçar toda gravação a ser uma espécie de mosquito.
+Como foi feito/medido: As saídas são 0=no_mosquito, 1=other_mosquito, 2=aedes_aegypti; a decisão reportada agrega janelas por grupo.
+Fala: A tarefa tem três respostas: Aedes aegypti, outro mosquito ou ruído sem mosquito. Não queremos identificar cada uma das outras espécies. Durante o treinamento, exemplos rotulados mostram ao modelo qual é a resposta correta. Durante o teste, ele recebe novos grupos de gravação sem acesso ao rótulo. Também não estamos inferindo se o mosquito está infectado por dengue.
+Transição: A escolha do áudio e das redes se apoia em trabalhos anteriores.
+
+04. A literatura orienta captura, memória e robustez — 50 s
+O que é: Trabalhos relacionados fornecem técnicas e protocolos de comparação.
+Para que serve: Fundamentar aquisição acústica, modelagem temporal e tratamento de ruído.
+Por que foi usado: Não é preciso reinventar cada etapa; técnicas são adaptadas à tarefa ternária.
+Como foi feito/medido: Mukundarajan 2017: celulares; Torres 2025: LSTM/Bi-LSTM e MC dropout para infectado/saudável; Supratak 2024: MosquitoSong+ e robustez.
+Fala: O primeiro estudo demonstra a aquisição acústica com celulares. O segundo usa LSTM e avaliação de incerteza em outra tarefa: distinguir fêmeas Aedes infectadas de saudáveis. Adaptamos as técnicas para nossas três classes. MosquitoSong+ usa redes convolucionais e ajuda a discutir robustez ao ruído. Uma CNN aprende padrões locais do sinal; a LSTM, que testamos aqui, aprende relações ao longo do tempo. Os números dos artigos não são resultados do nosso detector.
+Transição: Antes de discutir a rede, precisamos conhecer os dados que ela recebeu.
+
+05. Separar grupos permite avaliar o aprendizado — 85 s
+O que é: Uma janela é um trecho de áudio; um grupo reúne janelas da mesma unidade de gravação.
+Para que serve: Evitar que trechos de uma mesma gravação apareçam simultaneamente no ajuste e no teste.
+Por que foi usado: Cortes próximos compartilham som e condições de aquisição; tratá-los como testes independentes favorece estimativas otimistas.
+Como foi feito/medido: Dryad 613 grupos; HumBug 592; ESC-50 289. Total 42.029 janelas, 1.494 grupos, 1.441 blocos PCM. Classes: 426 ruído, 1.008 outros, 60 Aedes. Cinco dobras externas por grupo; LSTM: holdout interno agrupado escolhe época e limiares.
+Fala: Dryad e HumBug fornecem mosquitos e sons de fundo; ESC-50 acrescenta sons ambientais. São 1.494 grupos, com apenas sessenta da classe-alvo. Cada grupo é testado uma vez no rodízio de cinco dobras: quatro ficam para o desenvolvimento e uma para o teste. Dentro do desenvolvimento, separamos validação para escolher época e limiares. A normalização é ajustada só no treino. Janelas, grupos e indivíduos não são a mesma coisa. A cascata e as redes usam a mesma população e as mesmas dobras de teste.
+Transição: Agora podemos acompanhar a transformação de uma janela real de áudio.
+
+06. A FFT revela as frequências presentes no trecho — 45 s
+O que é: FFT é um algoritmo para calcular a transformada discreta de Fourier.
+Para que serve: Decompor o sinal temporal em componentes de frequência.
+Por que foi usado: O padrão de vários componentes ajuda a caracterizar o som do voo.
+Como foi feito/medido: Mesmo trecho real de 0,992 s a 8 kHz: forma de onda e módulo da FFT com Hann, nível relativo ao pico.
+Fala: À esquerda vemos como a amplitude muda no tempo. À direita, a FFT mostra quais frequências estão presentes no mesmo trecho. Picos podem representar periodicidade e harmônicos. A amostragem de oito quilohertz é a taxa de leitura do áudio, não a frequência do batimento das asas. Essa vista resume o trecho inteiro; ainda não mostra em que momento cada componente aparece.
+Transição: Também precisamos entender por que uma única frequência não resume o voo.
+
+07. Frequência fundamental e harmônicos — 40 s
+O que é: Fundamental é o ritmo periódico básico; harmônicos são componentes em seus múltiplos.
+Para que serve: Relacionar o espectro à vibração periódica das asas.
+Por que foi usado: Frequência, harmônicos e variação temporal oferecem pistas complementares.
+Como foi feito/medido: Médias publicadas por Sinka et al. a 25 °C: Aedes aegypti fêmeas 458 Hz e machos 715 Hz; demais valores são referências da literatura, não limites do detector.
+Fala: A frequência do voo varia entre condições e grupos biológicos. Neste exemplo da literatura, fêmeas e machos têm médias diferentes. Harmônicos aparecem em múltiplos da frequência básica. Por isso a rede recebe um padrão de frequências e sua evolução, em vez de apenas uma regra como procurar quinhentos hertz. Os valores mostrados aqui são publicados e não uma medição de todas as nossas gravações.
+Transição: Para preservar a evolução dessas frequências, usamos a STFT.
+
+08. A STFT localiza as frequências ao longo do voo — 45 s
+O que é: STFT é a transformada de Fourier de curta duração, calculada em janelas sucessivas.
+Para que serve: Construir o espectrograma: tempo no eixo horizontal, frequência no vertical e energia na cor.
+Por que foi usado: Uma passagem de voo muda dentro do trecho; a FFT global perde essa localização temporal.
+Como foi feito/medido: Hann de 1.024 amostras a 8 kHz =128 ms; avanço de 128 amostras =16 ms; espaçamento dos bins 7,8125 Hz. A janela de classificação tem 0,992 s, diferente da janela interna da STFT.
+Fala: A STFT repete a análise de Fourier em pequenos intervalos. Assim, conseguimos enxergar a evolução do espectro. Aqui, cores mais claras indicam maior energia relativa, e as faixas horizontais mostram componentes persistentes. Usamos uma janela de cento e vinte e oito milissegundos, avançando dezesseis milissegundos por vez. Esses intervalos pertencem ao processamento dentro de cada trecho de quase um segundo.
+Transição: O espectrograma ainda pode ser resumido em uma representação mais compacta.
+
+09. As bandas mel formam a sequência de entrada — 55 s
+O que é: Filtros mel agregam a potência espectral em bandas com espaçamento não uniforme.
+Para que serve: Produzir vetores compactos de energia para alimentar a rede temporal.
+Por que foi usado: Preserva a organização temporal e reduz a dimensionalidade do espectro completo.
+Como foi feito/medido: 64 bandas HTK entre 80–4.000 Hz,55 passos. DC/RMS por janela; log-potência relativa limitada a[-80,0] dB; média/desvio por banda ajustados apenas no fit.
+Fala: Cada coluna desta matriz representa um instante e cada linha uma banda mel. Portanto, uma entrada tem cinquenta e cinco vetores de sessenta e quatro valores. As cores mostram energia em decibéis. A escala mel concentra mais detalhe nas frequências baixas e resume as altas. A normalização torna as escalas mais comparáveis, mas seus parâmetros são calculados só nos dados de ajuste. Essa matriz é a sequência que a LSTM acompanha.
+Transição: Com a entrada definida, vamos comparar dois modos de tomar a decisão.
+
+10. A cascata organiza a decisão em duas etapas — 60 s
+O que é: Cascata é uma organização da decisão; ensemble combina mais de um modelo.
+Para que serve: Separar presença de mosquito e depois a identificação de Aedes.
+Por que foi usado: Uma referência clássica permite avaliar o que a rede profunda acrescenta.
+Como foi feito/medido: Regressão logística: separação linear nos atributos; HistGradientBoosting: conjunto de árvores ajustadas por boosting. Escores por janela são combinados; agregação com peso(1-p_ruído)^1,5; dois limiares definidos internamente.
+Fala: A regressão logística aprende separações lineares entre os atributos acústicos. O HistGB usa árvores e pode representar relações não lineares. Combinamos os escores e damos mais peso às janelas consideradas ativas. A regra então passa por dois limiares: primeiro decide ruído ou mosquito; depois decide Aedes ou outro mosquito. Cascata descreve essas etapas de decisão, não é o nome de uma rede neural. Ela é nossa referência de comparação.
+Transição: A alternativa profunda tenta aprender a evolução temporal a partir da sequência mel.
+
+11. LSTM e Bi-LSTM aprendem relações no tempo — 90 s
+O que é: LSTM é uma rede recorrente com memória controlada por portas; Bi-LSTM processa a sequência em dois sentidos.
+Para que serve: Relacionar quadros mel consecutivos para classificar o trecho.
+Por que foi usado: O padrão do voo evolui no tempo; memória pode reunir informação de vários instantes.
+Como foi feito/medido: Duas camadas,128 unidades por direção, dropout 0,20; projeção linear da última saída para 3 escores e softmax. LSTM 231.811 parâmetros; Bi-LSTM 594.691.
+Fala: A LSTM recebe a sequência quadro a quadro. Suas portas controlam o que entra, permanece ou sai da memória. Na versão bidirecional, uma recorrência percorre a sequência do início ao fim e outra do fim ao início. Cada bloco no desenho é uma camada, não um instante. No final, uma camada linear produz três escores e o softmax os transforma em probabilidades que somam um. As duas arquiteturas foram treinadas de fato para a tarefa ternária. A hipótese é que o contexto temporal ajude a reconhecer o voo.
+Transição: Para aprender essas relações, precisamos transformar o erro em atualizações dos pesos.
+
+12. Adam transforma o erro em ajustes nos pesos — 55 s
+O que é: Entropia cruzada mede o erro; gradientes indicam como alterá-lo; Adam é um otimizador adaptativo.
+Para que serve: Atualizar os parâmetros das redes a partir dos lotes rotulados.
+Por que foi usado: Adam combina estimativas de direção e escala dos gradientes; clipping limita a norma para estabilizar o ajuste.
+Como foi feito/medido: Adam, lr 0,0006, lote 256, clipping global 3, máximo 30 épocas. Hiperparâmetros fixados antes das métricas de teste; não há demonstração de ótimo global.
+Fala: A entropia cruzada aumenta quando a rede dá pouca probabilidade à classe correta. A retropropagação calcula os gradientes desse erro. O Adam usa médias dos gradientes e de seus quadrados para adaptar a atualização dos pesos. A taxa de aprendizado controla o tamanho básico do passo. Também limitamos a norma dos gradientes em três, para evitar atualizações muito grandes. Esses são os parâmetros executados, não uma afirmação de que encontramos a configuração ótima.
+Transição: Aprender o conjunto de treino é necessário, mas precisamos controlar a memorização.
+
+13. Regularização e validação controlam o ajuste — 60 s
+O que é: Regularização reduz dependências excessivas do treino; validação orienta escolhas sem usar o teste.
+Para que serve: Reduzir memorização e o domínio das classes ou gravações maiores.
+Por que foi usado: Há desequilíbrio entre classes e quantidades diferentes de janelas por gravação.
+Como foi feito/medido: Dropout 0,20 entre camadas; amostragem ponderada por classe/gravação, gamma 0,50 com contagem limitada a 60; escolha pela menor perda por grupo, paciência 5. MC dropout 100 apenas na inferência adicional de WAV.
+Fala: Dropout zera aleatoriamente vinte por cento das ativações entre as camadas durante o treino. A amostragem mantém a mesma massa total nas três classes e reduz o domínio das gravações com muitas janelas. A validação escolhe o checkpoint de menor perda; a paciência de cinco épocas permite tentar mais ajustes antes de parar. Na inferência adicional, cem passagens com dropout medem a discordância das decisões. As métricas de teste mostradas aqui usam inferência determinística.
+Transição: As curvas registradas mostram como essa seleção ocorreu.
+
+14. A validação seleciona o checkpoint de cada rede — 45 s
+O que é: Época é um ciclo de amostragem e atualização; checkpoint é um estado salvo dos pesos.
+Para que serve: Escolher o estado com menor erro de validação em vez de usar automaticamente a última época.
+Por que foi usado: Mais treino não garante melhor desempenho em grupos que ficaram de fora.
+Como foi feito/medido: Ajuste interno final: LSTM melhorépoca 4, observadas 9; Bi-LSTM melhorépoca 2, observadas 7; depois refit reiniciado por 4/2 épocas no desenvolvimento completo. Curvas não representam a média das 5 dobras.
+Fala: A curva de treino continua caindo, mas a validação deixa de melhorar. A LSTM foi observada por nove épocas e o melhor ponto foi a quarta; a bidirecional, por sete, com melhor ponto na segunda. Depois, o ajuste é reiniciado no desenvolvimento completo pela quantidade selecionada. Os dois gráficos são do contexto final e não uma média das cinco dobras. Treino é medido por janela e validação por grupo, então não devemos comparar suas alturas como populações idênticas.
+Transição: Com as escolhas encerradas, aplicamos os modelos aos grupos de teste.
+
+15. A cascata teve o maior acerto geral — 55 s
+O que é: Acurácia é a fração de classificações corretas entre todos os grupos avaliados.
+Para que serve: Comparar o desempenho global nas mesmas três classes.
+Por que foi usado: É uma visão inicial do resultado; deve ser acompanhada das métricas da classe-alvo.
+Como foi feito/medido: Cascata 1.345/1.494=90,03%; LSTM direta 85,74%, calibrada 86,55%; Bi direta 82,33%, calibrada 85,27%. Cada grupo contribui com uma decisão OOF.
+Fala: A cascata acertou mil trezentos e quarenta e cinco dos mil quatrocentos e noventa e quatro grupos, chegando a noventa vírgula zero três por cento. As duas redes ficaram abaixo em acurácia geral. A decisão direta escolhe a classe com maior probabilidade agregada. A calibrada aplica dois limiares escolhidos na validação interna. Como a maioria dos grupos é de outros mosquitos, a acurácia sozinha não informa quantos Aedes conseguimos detectar.
+Transição: Por isso precisamos observar sensibilidade e falsos positivos em conjunto.
+
+16. Detectar mais Aedes muda o número de alarmes — 85 s
+O que é: Sensibilidade mede alvos detectados; FPR mede negativos chamados de alvo.
+Para que serve: Avaliar o compromisso entre perder Aedes e gerar alertas indevidos.
+Por que foi usado: Acurácia global pode esconder comportamentos distintos na classe mais importante.
+Como foi feito/medido: Cascata 47/60=78,33%; LSTM direta 52/60=86,67%; Bi direta 53/60=88,33%. FPRs dividem os erros por 426 ruídos ou 1.008 outros. Calibração reduz alarmes e reduz recall das redes para 20/60 e 17/60.
+Fala: A LSTM direta detectou cinquenta e dois Aedes, cinco a mais que a cascata. A bidirecional detectou cinquenta e três. Em troca, as duas chamaram mais ruídos e outros mosquitos de Aedes. Ao aplicar os limiares calibrados, os alarmes caíram, mas a sensibilidade também caiu bastante. Portanto, aumentar a acurácia ou reduzir o falso positivo isoladamente não basta. A escolha operacional depende do custo de perder um alvo e do custo de um alarme. Aqui mostramos todas as regras, sem escolher apenas a que ficou melhor no teste.
+Transição: A matriz de confusão permite enxergar esses erros como contagens concretas.
+
+17. A matriz mostra quais classes foram confundidas — 55 s
+O que é: Matriz de confusão cruza classes reais nas linhas e previsões nas colunas.
+Para que serve: Localizar os erros em cada par de classes e conferir os denominadores.
+Por que foi usado: Contagens mostram a diferença entre detectar mosquito e identificar Aedes.
+Como foi feito/medido: Diagonal 324+974+47=1.345;13 Aedes viraram outros;102 ruídos viraram outros;23 outros viraramAedes. PrecisãoAedes 47/(47+23)=67,14%.
+Fala: Na diagonal estão os acertos. Dos sessenta grupos Aedes, quarenta e sete foram reconhecidos e treze viraram outros mosquitos. Nenhum virou ruído. No outro sentido, vinte e três outros mosquitos foram chamados de Aedes. Assim, entre setenta alertas de Aedes, quarenta e sete estavam corretos: essa é a precisão de sessenta e sete vírgula quatorze por cento. Já a sensibilidade pergunta quantos dos Aedes existentes foram encontrados. São perguntas diferentes.
+Transição: O próximo passo é coletar novos dados com condições e rótulos controlados.
+
+18. O protótipo prepara a coleta de uma base própria — 60 s
+O que é: Dataset é um conjunto de exemplos com dados, rótulos e metadados.
+Para que serve: Criar gravações compatíveis com o dispositivo e condições de uso propostas.
+Por que foi usado: Uma base própria permite testar novas sessões com origem e protocolo conhecidos.
+Como foi feito/medido: Fotos reais da montagem fornecidas pelo autor; protocolo futuro de microfone→USB→WAV,16 kHz/16 bitmono, checagem de integridade; trêsclasses, indivíduo, sessão, distância, temperatura, umidade.
+Fala: As fotos mostram a montagem física e a placa conectada por USB. A próxima etapa é verificar a captura pelo microfone e salvar os arquivos WAV. Vamos incluir Aedes, outros mosquitos e controles sem mosquito, com identificação confirmada e registro de sessão e indivíduo. Parte da nova coleta será reservada antes de qualquer ajuste para avaliar o detector congelado. Somente a parcela de treino poderá ser usada depois para adaptação. Esses dados futuros não estão nos noventa por cento apresentados.
+Transição: As fontes e os arquivos de apoio permitem rastrear cada etapa do trabalho.
+
+19. Referências e material de apoio — 20 s
+O que é: Referências e proveniência permitem rastrear afirmações e resultados.
+Para que serve: Separar literatura, código, dados, imagens e medições locais.
+Por que foi usado: A apresentação deve poder ser conferida e explicada além da exposição oral.
+Como foi feito/medido: Artigos, documentação técnica, código e métricas estão nas notas; marca oficial IFSC; fotografias públicas creditadas e montagem fornecida pelo autor.
+Fala: As referências fundamentam as escolhas, e os links completos estão nas notas. Os gráficos de resultados vêm dos experimentos do projeto. O material de apoio contém os conceitos, as contas e as transições para revisar a apresentação.
+Transição: Para concluir, o que foi demonstrado e o que vem depois?
+
+20. Resultados, limites e próxima coleta — 65 s
+O que é: Generalização é manter desempenho em dados diferentes dos usados no ajuste.
+Para que serve: Delimitar a conclusão científica e orientar a próxima avaliação.
+Por que foi usado: Bom resultado no corpus não substitui avaliar novas sessões e dispositivos.
+Como foi feito/medido: Avaliação retrospectiva por gravação/conteúdo; sessões e dispositivos podem repetir. MosquitoSong excluído do ajuste:0/4 grupos Aedes; não é confirmação cega nova. Modelos têm seleção interna diferente e não houve ablação causal. Drive é enxame e está fora do escopo.
+Fala: O programa profundo foi implementado e comparado como pede a disciplina. No corpus avaliado, a cascata teve maior acurácia geral, enquanto as redes diretas detectaram mais Aedes com mais alarmes. A conclusão é restrita a essa avaliação retrospectiva: separar gravações não prova independência de indivíduos, sessões ou microfones. MosquitoSong ficou fora do ajuste e seus quatro grupos Aedes não foram detectados. A próxima etapa é a coleta própria com teste reservado e detector congelado. Não demonstramos diagnóstico de infecção nem execução dessas redes na placa.
+Transição: Encerrar e abrir a discussão.
+
+PERGUNTAS QUE PODEM APARECER
+
+Os 90,03% são da LSTM? Não. São da cascata LR + HistGB; LSTM direta tem 85,74% de acurácia geral.
+
+Por que usar rede profunda se a cascata teve mais acertos? A disciplina pede sua implementação; comparar arquiteturas testa uma hipótese e revela compromissos, mesmo quando a referência permanece melhor.
+
+O dataset Torres melhorou os 90,03%? Não foi integrado ao treino ternário. Os 300 tensores são de infectado/saudável e pertencem a outro estudo. Aqui adaptamos técnicas, não herdamos esse resultado como detector Aedes.
+
+Época e janela são a mesma coisa? Não. Trecho de classificação: 0,992 s. Janela interna da STFT: 128 ms, avanço 16 ms. Época: ciclo de atualizações do treinamento com amostragem.
+
+Como surgem 55 passos? (7.936−1.024)/128+1 =55, sem preenchimento central.
+
+O que significa softmax? Transforma escores em valores positivos que somam um. Isso não garante probabilidades perfeitamente calibradas nem confiabilidade fora da distribuição.
+
+Acurácia e sensibilidade são iguais? Acurácia=(324+974+47)/1.494=90,03%. Sensibilidade Aedes=47/60=78,33%. Precisão Aedes=47/(47+23)=67,14%. FPR outros=23/1.008=2,28%. FPR ruído para Aedes=0/426=0%; ruído para qualquer mosquito=102/426=23,94%.
+
+O que significa calibrada aqui? Escolha de dois limiares pela validação interna; não significa prova de calibração probabilística ou garantia populacional de FPR.
+
+Treino/teste estão separados? Não há grupo de gravação nem bloco PCM atravessando as cinco dobras. Sessões/dispositivos podem se repetir; identidade biológica não foi demonstrada. A cascata usa calibração interna OOF; as redes usam um holdout interno agrupado. As dobras externas são iguais, os processos internos não.
+
+O modelo está rodando nessas fotos? As fotos documentam a montagem. Captura estruturada, novo dataset e porte das redes são etapas futuras; não apresentar como experimento embarcado já concluído.
+
+Por que o Drive saiu? É um enxame, fora do alvo de aquisição escolhido pelo autor. Não entrou nos resultados ternários. Originais históricos permanecem para auditoria.
+
+A intensidade mais variável faz o detector acertar? A análise descritiva mostrou diferenças entre fontes, mas não comprovou causalidade; dentro de Dryad/HumBug os erros não tinham menor variação. Não usar essa hipótese como explicação definitiva.
+
+O envio ao professor foi feito? Não. O material foi preparado e entregue ao autor no Drive; envio ao professor não foi solicitado.
+
+
+GLOSSÁRIO RÁPIDO
+FFT: Fast Fourier Transform; algoritmo para calcular a transformada discreta de Fourier.
+STFT: Short-Time Fourier Transform; análise de Fourier em janelas sucessivas.
+LSTM: Long Short-Term Memory; rede recorrente com memória controlada por portas.
+Bi-LSTM: LSTM bidirecional; combina os dois sentidos de processamento.
+LR: Logistic Regression; regressão logística.
+HistGB: Histogram-based Gradient Boosting; combinação de árvores por boosting.
+MC: Monte Carlo; repetição estocástica para observar a variabilidade das respostas.
+OOF: Out-of-Fold; previsão de um grupo feita pelo modelo que não o utilizou no ajuste daquela dobra.
+PCM: Pulse-Code Modulation; representação digital do sinal amostrado.
+RMS: raiz da média dos quadrados; medida de amplitude efetiva.
+FPR: False Positive Rate; proporção de negativos chamados de alvo.
+Checkpoint: estado salvo dos pesos da rede.
+Softmax: transformação de escores em probabilidades positivas cuja soma é um.

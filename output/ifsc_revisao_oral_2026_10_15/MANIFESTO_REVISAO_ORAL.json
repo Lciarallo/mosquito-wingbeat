@@ -1,0 +1,66 @@
+{
+  "output/ifsc_revisao_oral_2026_10_15/editar.py": {
+    "size": 11053,
+    "sha256": "25b72634c3070ea3cab358d934f6faba31a521bfc7724c2228792819ac56dfa0"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/selection_summary.json": {
+    "size": 1413,
+    "sha256": "9397911e25ca33f07fb9e7840731a172ec05630341ab1ed6588114fc79520cd9"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/plan.json": {
+    "size": 44690,
+    "sha256": "34ccc9453f4ea2470a88df361f1ddc26b5dfa3b658b111d1cb843b0338c38b18"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/structure.json": {
+    "size": 808,
+    "sha256": "afd070c2f0abc8d2f78eb2469f0420f589c1c6bce70e6d7d050ada2599635339"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/content.json": {
+    "size": 75005,
+    "sha256": "63082e6f0afb16c5471c344e50f076b6f27c43daffc8777e2b6c42ed03ce66dc"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/analise-lacunas.txt": {
+    "size": 555,
+    "sha256": "4ac958a04849612c2980774f468fd35d56b6df26f21ea0190d12e03b36946d51"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/output-issues.json": {
+    "size": 521,
+    "sha256": "3b2fb00fa8e92509c183cb9ba7d669caee1d703dde4759421fd22cf687445549"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/entregar.py": {
+    "size": 10970,
+    "sha256": "40b643d1de071dbb7ed8b50ca19df229c114d922a05ee7ea84d56b9dc4682750"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/Roteiro_apresentacao_IFSC.txt": {
+    "size": 8728,
+    "sha256": "e8a229b4132a7b7c033437e543f4649324584e44ca3dc283ede8325ee8ee1c42"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/Guia_de_estudo_e_fala.txt": {
+    "size": 21385,
+    "sha256": "d4283616a445cd48c72f5dbffc72136770996b36d3d64e14cca21e473cb51217"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/Verificacao_dos_requisitos.txt": {
+    "size": 2009,
+    "sha256": "0d3ac9e6b788af7e66bb91215fd135522344261fbd1b0fa430f9a98da4813348"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/IFSC_Mosquitos_Revisao_Oral_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf": {
+    "size": 2424652,
+    "sha256": "73c5c5fbdf93e9976824525812ea32c872687f90a8c567d955e58204d97d957f"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/verification.json": {
+    "size": 1791,
+    "sha256": "82daa63e5ce46a6e07fd80639bc38e0ca8f7803e08cd6cf3711f839d75944f6d"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/notes-final.json": {
+    "size": 36579,
+    "sha256": "9e22443ed52801f45b5cd16dc05321976e633fc6b1bd8ad843b606fd86045cf0"
+  },
+  "output/ifsc_revisao_oral_2026_10_15/assets/acuracia_tres_modelos.png": {
+    "size": 42606,
+    "sha256": "48a7a66b7268f179b3013df3b4698b614bd75d722902a4110cfd8fb9bc5077e4"
+  },
+  "results/ternary_lstm_2026_10_15/comparison.csv": {
+    "size": 847,
+    "sha256": "e17cec057933161a158af1d8e77e05273cb396a0a8e14f23415cb5cad9c53730"
+  }
+}

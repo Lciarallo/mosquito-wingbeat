@@ -1,0 +1,1 @@
+Existing native Google Slides edited in place. Managed dependency loader unavailable; native connector, provided Node helpers and installed Poppler used. No PPTX roundtrip. Marker run in presentations skill directory. Bounded legacy PDF compatibility is reused because streamed file references lack workspace_path; inline PDF stays below32MB and is not printed.

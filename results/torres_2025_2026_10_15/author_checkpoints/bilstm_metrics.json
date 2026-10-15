@@ -1,0 +1,296 @@
+{
+  "model": "bilstm",
+  "recordings": 40,
+  "windows": 40,
+  "mc_passes": 100,
+  "deterministic": {
+    "total": 40,
+    "correct": 38,
+    "accuracy": 0.95,
+    "balanced_accuracy": 0.95,
+    "macro_f1": 0.95,
+    "confusion_matrix": [
+      [
+        19,
+        1
+      ],
+      [
+        1,
+        19
+      ]
+    ]
+  },
+  "mc_mean": {
+    "total": 40,
+    "correct": 38,
+    "accuracy": 0.95,
+    "balanced_accuracy": 0.95,
+    "macro_f1": 0.95,
+    "confusion_matrix": [
+      [
+        19,
+        1
+      ],
+      [
+        1,
+        19
+      ]
+    ]
+  },
+  "mc_vote": {
+    "total": 40,
+    "correct": 38,
+    "accuracy": 0.95,
+    "balanced_accuracy": 0.95,
+    "macro_f1": 0.95,
+    "confusion_matrix": [
+      [
+        19,
+        1
+      ],
+      [
+        1,
+        19
+      ]
+    ]
+  },
+  "selective": [
+    {
+      "total": 38,
+      "correct": 36,
+      "accuracy": 0.9473684210526315,
+      "balanced_accuracy": 0.9473684210526315,
+      "macro_f1": 0.9473684210526315,
+      "confusion_matrix": [
+        [
+          18,
+          1
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "threshold": 0.0,
+      "input_total": 40,
+      "accepted": 38,
+      "abstained": 2,
+      "coverage": 0.95,
+      "overall_correct_decision_rate": 0.9,
+      "confusion_with_abstention": [
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          1,
+          18,
+          1
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 0.95,
+        "healthy": 0.95
+      }
+    },
+    {
+      "total": 38,
+      "correct": 36,
+      "accuracy": 0.9473684210526315,
+      "balanced_accuracy": 0.9473684210526315,
+      "macro_f1": 0.9473684210526315,
+      "confusion_matrix": [
+        [
+          18,
+          1
+        ],
+        [
+          1,
+          18
+        ]
+      ],
+      "threshold": 0.01,
+      "input_total": 40,
+      "accepted": 38,
+      "abstained": 2,
+      "coverage": 0.95,
+      "overall_correct_decision_rate": 0.9,
+      "confusion_with_abstention": [
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          1,
+          18,
+          1
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 0.95,
+        "healthy": 0.95
+      }
+    },
+    {
+      "total": 39,
+      "correct": 37,
+      "accuracy": 0.9487179487179487,
+      "balanced_accuracy": 0.9486842105263158,
+      "macro_f1": 0.9486842105263158,
+      "confusion_matrix": [
+        [
+          18,
+          1
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "threshold": 0.05,
+      "input_total": 40,
+      "accepted": 39,
+      "abstained": 1,
+      "coverage": 0.975,
+      "overall_correct_decision_rate": 0.925,
+      "confusion_with_abstention": [
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          1,
+          19,
+          0
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 0.95,
+        "healthy": 1.0
+      }
+    },
+    {
+      "total": 39,
+      "correct": 37,
+      "accuracy": 0.9487179487179487,
+      "balanced_accuracy": 0.9486842105263158,
+      "macro_f1": 0.9486842105263158,
+      "confusion_matrix": [
+        [
+          18,
+          1
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "threshold": 0.1,
+      "input_total": 40,
+      "accepted": 39,
+      "abstained": 1,
+      "coverage": 0.975,
+      "overall_correct_decision_rate": 0.925,
+      "confusion_with_abstention": [
+        [
+          18,
+          1,
+          1
+        ],
+        [
+          1,
+          19,
+          0
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 0.95,
+        "healthy": 1.0
+      }
+    },
+    {
+      "total": 40,
+      "correct": 38,
+      "accuracy": 0.95,
+      "balanced_accuracy": 0.95,
+      "macro_f1": 0.95,
+      "confusion_matrix": [
+        [
+          19,
+          1
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "threshold": 0.2,
+      "input_total": 40,
+      "accepted": 40,
+      "abstained": 0,
+      "coverage": 1.0,
+      "overall_correct_decision_rate": 0.95,
+      "confusion_with_abstention": [
+        [
+          19,
+          1,
+          0
+        ],
+        [
+          1,
+          19,
+          0
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 1.0
+      }
+    },
+    {
+      "total": 40,
+      "correct": 38,
+      "accuracy": 0.95,
+      "balanced_accuracy": 0.95,
+      "macro_f1": 0.95,
+      "confusion_matrix": [
+        [
+          19,
+          1
+        ],
+        [
+          1,
+          19
+        ]
+      ],
+      "threshold": 0.5,
+      "input_total": 40,
+      "accepted": 40,
+      "abstained": 0,
+      "coverage": 1.0,
+      "overall_correct_decision_rate": 0.95,
+      "confusion_with_abstention": [
+        [
+          19,
+          1,
+          0
+        ],
+        [
+          1,
+          19,
+          0
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 1.0
+      }
+    }
+  ],
+  "uncertainty_definition": "1 - largest class vote count / MC passes; binary equivalent of paper UC/100",
+  "recording_aggregation": "arithmetic mean of window probabilities within each draw",
+  "unanimous_does_not_mean_certainty": true
+}

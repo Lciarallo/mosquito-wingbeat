@@ -1,0 +1,26 @@
+{
+  "pytest": {
+    "passed": 308,
+    "new_tests_included": 10,
+    "log": "tmp/species_preprocessing_pytest_final_2026_10_15.log",
+    "sha256": "eecbdbf21c1d9b5bb0d2a29857ef030ce9daf02de84f9d37b903888931bb2206"
+  },
+  "inference_smoke": {
+    "linear": {
+      "path": "linear_inference_example.json",
+      "sha256": "aac795c135a4e65b89a000c042e6512752dbe05c215993984bc972a545409ecd",
+      "passed": true
+    },
+    "bilstm": {
+      "path": "bilstm_inference_example.json",
+      "sha256": "5988dc63574061da29558808b74c39fe7646099f2c6a45831e4772e684d9a251",
+      "passed": true
+    }
+  },
+  "additional_source_sha256": {
+    "predict_torres_2025.py": "41234923be52328860acb37d318902e10d70985d9920a6570bc9b79f18c71963",
+    "report_species_preprocessing.py": "2ef051b935a24e63ffb52540120d6d7bc1a59885c27a9e4e425ad12eafa3de9f",
+    "tests/test_species_preprocessing.py": "d010de0950b08ad029eb4cc51ca4e7d28812dde6e45a99c28e3854ba7ec1fb5d"
+  },
+  "note": "Smoke examples test software execution; accuracy comes from all 190 reserved test recordings."
+}

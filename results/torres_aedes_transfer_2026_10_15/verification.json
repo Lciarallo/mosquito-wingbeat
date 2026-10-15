@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "protected_hashes": {
+    "results/ternary_lstm_2026_10_15/freeze.json": "e0dc772fbe90bf6d9e671b15f07307b3fd88f43b1e317345fc553a457543aade",
+    "results/ternary_verified_2026_10_14_corrections/freeze.json": "34b7b1f1201f3722adcd4a451b4c4282d306e2a3beafb7df88c625cea74f04bd",
+    "output/ifsc_revisao_oral_2026_10_15/IFSC_Mosquitos_Revisao_Oral_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf": "73c5c5fbdf93e9976824525812ea32c872687f90a8c567d955e58204d97d957f"
+  },
+  "existing_models_and_pdf_unchanged": true,
+  "primary_pcm_disjoint": true,
+  "torres_exact_hash_disjoint": true,
+  "unknown_individual_overlap": true,
+  "presentation_edits": false,
+  "raw_author_300_signals_unavailable": true,
+  "source_frontend_approximation": true,
+  "prediction_reproduction": [
+    "baseline/primary: all saved probabilities reproduced",
+    "baseline/torres: all saved probabilities reproduced",
+    "with_torres/primary: all saved probabilities reproduced",
+    "with_torres/torres: all saved probabilities reproduced",
+    "primary: partition identities disjoint",
+    "torres: partition identities disjoint"
+  ],
+  "saved_model_sha256": {
+    "baseline": "e751c7cb6f76e644e1b9131db02092d3105604e84e3da1f2d7fc803ebff75a0d",
+    "with_torres": "c5f76598c31970974afdd62eff26a47fa8732b1d77ff384d0050164221eeffd1"
+  },
+  "all_prior_external_test_checkpoints_unchanged": true,
+  "primary_event_truth_reproduced": true,
+  "inference_script_sha256": "dfa82aed3f91201028816384e5b76af075ffc27710664230e644822164df067f",
+  "verifier_script_sha256": "fdb29b9ccf805ba2754e238787b04a1f3d0d623d41b6ee2a91d96e3b10181fd7"
+}

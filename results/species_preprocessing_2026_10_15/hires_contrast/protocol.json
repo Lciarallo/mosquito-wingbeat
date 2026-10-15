@@ -1,0 +1,74 @@
+{
+  "feature_path": "data/cache/species_preprocessing/d8865cc5aaacbe4ff3c4bfdf2a8d43a8ca410b6c87a61e90378ed46c252b9b09.npy",
+  "feature_sha256": "6285ec9b9a6595e4fe10cbd77117e9d900b68a5da4c441eb8821c18773d6008e",
+  "indices_sha256": "1bed42b9f4b5d4fd1c245326181dfdcedc2df9b63a4f46dce1abd61714af5f67",
+  "waveform_manifest_sha256": "e5177c4251d732a087d095ed483babefeb37b2772266022520a7dbec480fb92e",
+  "frontend": {
+    "sample_rate": 16000,
+    "n_fft": 2048,
+    "hop": 256,
+    "bands": 64,
+    "fmin": 80,
+    "fmax": 4000,
+    "center": false,
+    "scaling": "peak-relative log-mel minus 0.5 times local frequency envelope",
+    "variant": "hires_contrast",
+    "version": 1,
+    "frame_samples": 15872,
+    "fft_bin_spacing_hz": 7.8125,
+    "frame_stride_s": 0.016,
+    "contrast_bands": 9,
+    "envelope_compensation": 0.5
+  },
+  "implementation_sha256": "a35537bf454f9d1cda08e5a7e58a1997e38176a9f62c47daeeafbf5c28b516e7",
+  "mel_bank_implementation_sha256": "f8ccb98f22c3409dcecdd1b302db99270e79b0563431814544477b8070e959cd",
+  "task": "20-species classification",
+  "classes": [
+    "Aedes aegypti",
+    "Aedes albopictus",
+    "Aedes mediovittatus",
+    "Aedes sierrensis",
+    "Anopheles albimanus",
+    "Anopheles arabiensis",
+    "Anopheles atroparvus",
+    "Anopheles dirus",
+    "Anopheles farauti",
+    "Anopheles freeborni",
+    "Anopheles gambiae",
+    "Anopheles merus",
+    "Anopheles minimus",
+    "Anopheles quadriannulatus",
+    "Anopheles quadrimaculatus",
+    "Anopheles stephensi",
+    "Culex pipiens",
+    "Culex quinquefasciatus",
+    "Culex tarsalis",
+    "Culiseta incidens"
+  ],
+  "training": {
+    "epochs": 80,
+    "lr": 0.0003,
+    "batch_size": 128,
+    "patience": 15,
+    "gradient_clip": 3
+  },
+  "split_counts": {
+    "test": {
+      "windows": 7845,
+      "groups": 190,
+      "pcm_blocks": 174
+    },
+    "train": {
+      "windows": 9049,
+      "groups": 209,
+      "pcm_blocks": 209
+    },
+    "validation": {
+      "windows": 2673,
+      "groups": 59,
+      "pcm_blocks": 59
+    }
+  },
+  "selection": "minimum class-balanced recording validation log loss",
+  "seed": 20261015
+}

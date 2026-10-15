@@ -1,0 +1,31 @@
+{
+  "verified_utc": "2026-10-15T14:40:27.197973+00:00",
+  "native_url": "https://docs.google.com/presentation/d/1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A/edit?usp=drivesdk",
+  "presentation_id": "1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A",
+  "revision": "Cq2hUFFXUkPosA",
+  "slides": 19,
+  "new_slide_number": 17,
+  "new_slide_title": "Coleta futura: novo dataset com Arduino",
+  "duration_seconds": 1110,
+  "all_slides_visually_reviewed": true,
+  "consolidated_repair_passes": 1,
+  "repaired_pages_reviewed": [
+    17,
+    18
+  ],
+  "master_count": 1,
+  "layout_count": 11,
+  "official_template_preserved": true,
+  "original_results_preserved": true,
+  "future_collection_explicit": true,
+  "independent_ground_truth_in_notes": true,
+  "individual_session_split_in_notes": true,
+  "official_arduino_photo": true,
+  "arduino_image_sha256": "64f6a3f870788d6108f37f9c4e282e4bb97236b04a9bce5507dbbc480b1b4586",
+  "author_verified": true,
+  "pdf": "IFSC_Mosquitos_Arduino_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+  "pdf_sha256": "cf3a5cb32cc83f0e96e820a3bbd3e162b80ebffbbdb1e6f1155709b85e28b591",
+  "pdf_bytes": 2508690,
+  "structural_issues": 0,
+  "prior_pdf_preserved": "output/ifsc_ternario_lstm_2026_10_15/IFSC_Detector_Ternario_LSTM_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf"
+}

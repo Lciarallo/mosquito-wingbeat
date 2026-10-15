@@ -32,6 +32,29 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
+EXCLUDED_DRIVE_SHA256 = "138fce9b9780f22013011849d793938282695a06647eb3467491cf95b6838eca"
+
+
+def excluded_drive_audio_mask(frame):
+    """Exclude the private swarm recording, not public datasets hosted on Drive.
+
+    Use available provenance and known byte identity. Arbitrarily transformed,
+    renamed audio without provenance still requires an acquisition audit.
+    """
+    excluded = pd.Series(False, index=frame.index)
+    for column in ("domain", "source", "group"):
+        if column in frame:
+            value = frame[column].fillna("").astype(str).str.lower()
+            excluded |= value.str.match(r"^(?:drive|drive_test|private_swarm)(?::|$)")
+    if "path" in frame:
+        value = frame.path.fillna("").astype(str).str.lower().str.replace("\\", "/", regex=False)
+        excluded |= value.str.contains(r"(?:^|/)(?:drive_audio\.wav|drive_test|private-audio-test)(?:/|$)", regex=True)
+    for column in ("sha256", "content_sha256", "file_sha256"):
+        if column in frame:
+            excluded |= frame[column].astype(str).str.lower().eq(EXCLUDED_DRIVE_SHA256)
+    return excluded
+
+
 def digest(path):
     with Path(path).open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
@@ -121,7 +144,7 @@ def load_dataset(segments=SEGMENTS, features=FEATURES, collision_map=KNOWN_MAP):
     unknown = lower.isin(["unknown_mosquito", "unknown", "mosquito"])
     quality = original.quality_ok.isin([True, "True", "true", 1, "1"])
     finite = np.isfinite(raw).all(axis=1)
-    keep = ~ufrgs & ~figshare & ~mosquitosong & ~unknown & quality & finite
+    keep = ~ufrgs & ~figshare & ~mosquitosong & ~excluded_drive_audio_mask(original) & ~unknown & quality & finite
     frame = original.loc[keep].copy()
     frame.insert(0, "row_id", np.flatnonzero(keep))
     frame = frame.reset_index(drop=True)
@@ -161,6 +184,7 @@ def load_dataset(segments=SEGMENTS, features=FEATURES, collision_map=KNOWN_MAP):
         "total_original": len(original), "retained_total": len(frame),
         "excluded_ufrgs": int(ufrgs.sum()), "excluded_figshare": int(figshare.sum()),
         "excluded_mosquitosong": int(mosquitosong.sum()),
+        "excluded_drive_swarm": int(excluded_drive_audio_mask(original).sum()),
         "excluded_unknown": int(unknown.sum()), "excluded_quality": int((~quality).sum()),
         "excluded_non_finite": int((~finite).sum()),
         "exclusion_counts_overlap": True,

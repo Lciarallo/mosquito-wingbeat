@@ -1,0 +1,1 @@
+Native Google Slides edited in place; no PPTX roundtrip. Reuse local Node and Poppler because the managed dependency loader is unavailable. The authoring marker uses supported pptx format. Export uses the established bounded legacy include_base64 compatibility adapter because the streamed connector reference was not materialized to workspace_path.

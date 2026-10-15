@@ -19,6 +19,7 @@ import json
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from ternary_protocol import excluded_drive_audio_mask
 from sklearn.model_selection import StratifiedGroupKFold
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -80,7 +81,7 @@ def load_and_filter_data():
     mask_finite = np.isfinite(X_mat).all(axis=1)
 
     # Combinação de filtros
-    valid_idx = (~mask_ufrgs) & (~mask_figshare) & (~mask_mosquitosong) & (~mask_unknown) & mask_quality & mask_finite
+    valid_idx = (~mask_ufrgs) & (~mask_figshare) & (~mask_mosquitosong) & (~excluded_drive_audio_mask(df)) & (~mask_unknown) & mask_quality & mask_finite
     df_clean = df.loc[valid_idx].copy().reset_index(drop=True)
     X_clean = X_mat[valid_idx.to_numpy()]
 

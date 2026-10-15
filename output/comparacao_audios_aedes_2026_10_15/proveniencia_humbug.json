@@ -1,0 +1,13 @@
+{
+  "duration_s": 43.52,
+  "sample_rate": 44100,
+  "channels": 1,
+  "original": "data/external/humbug/audio/220312.wav",
+  "file": "humbug_aedes_acerto.wav",
+  "source": "HumBug",
+  "true_label": "aedes_aegypti",
+  "group_prediction": "aedes_aegypti",
+  "group": "humbug:Tanzania|13-03-20 00:00|IFA_40_10_1570.wav",
+  "unaltered": true,
+  "sha256": "0464b30e568825947275fa5a0d9d7e27529ec43ecdd609c4fefa833416a1cf6d"
+}

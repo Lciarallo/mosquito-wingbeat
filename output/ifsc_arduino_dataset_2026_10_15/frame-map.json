@@ -1,0 +1,54 @@
+{
+  "narrative": "Explain future Arduino audio acquisition and dataset organization",
+  "exemplar": "ifsc26_s02",
+  "method": "duplicate existing native photo-led slide",
+  "allSourceElementsMapped": true,
+  "elementMap": {
+    "ifsc26_s02_e00": {
+      "target": "ifsc26_arduino_dataset_e00",
+      "action": "replace native text; preserve all source run styles"
+    },
+    "ifsc26_s02_e01": {
+      "target": "ifsc26_arduino_dataset_e01",
+      "action": "replace native text; preserve all source run styles"
+    },
+    "ifsc26_s02_e02": {
+      "target": "ifsc26_arduino_dataset_e02",
+      "action": "replace native text; preserve all source run styles"
+    },
+    "ifsc26_s02_e03": {
+      "target": "ifsc26_arduino_dataset_e03",
+      "action": "replace native text; preserve all source run styles"
+    },
+    "ifsc26_s02_e04": {
+      "target": "ifsc26_arduino_dataset_e04",
+      "action": "replace native text; preserve all source run styles"
+    },
+    "ifsc26_s02_e05": {
+      "target": "ifsc26_arduino_dataset_e05",
+      "action": "replace CDC photo with official Arduino photo; CENTER_INSIDE"
+    }
+  },
+  "finalOrder": [
+    "ifsc26_s01",
+    "ifsc26_s02",
+    "ifsc26_s03",
+    "ifsc26_s04",
+    "ifsc26_s05",
+    "ifsc26_s06",
+    "ifsc26_s07",
+    "ifsc26_s08",
+    "ifsc26_s09",
+    "ifsc26_s11",
+    "ifsc26_s12",
+    "ifsc26_regularizacao",
+    "ifsc26_s14",
+    "ifsc26_s15",
+    "ifsc26_s10",
+    "ifsc26_s17",
+    "ifsc26_arduino_dataset",
+    "ifsc26_s19",
+    "ifsc26_s20"
+  ],
+  "officialMasterAndLayouts": "preserve unchanged"
+}

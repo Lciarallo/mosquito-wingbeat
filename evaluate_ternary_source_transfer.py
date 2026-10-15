@@ -10,7 +10,7 @@ import pandas as pd
 from threadpoolctl import threadpool_limits
 
 from ternary_protocol import (
-    ROOT, SEGMENTS, FEATURES, digest, json_write, now, aggregate_groups,
+    ROOT, SEGMENTS, FEATURES, digest, json_write, now, aggregate_groups, excluded_drive_audio_mask,
     apply_policy, pcm_signatures, read_audio, verify_freeze,
 )
 from ternary_reporting import evaluate_predictions, verify_evaluation
@@ -18,6 +18,8 @@ from train_ternary_nested_models import predict_pair
 
 
 def evaluate_source(run, source):
+    if source.lower() in {"drive", "drive_test", "private_swarm"}:
+        raise ValueError("Drive swarm audio is outside the scope of this detector.")
     run = Path(run).resolve()
     freeze = verify_freeze(run, inputs=True)
     verify_evaluation(run)
@@ -28,7 +30,7 @@ def evaluate_source(run, source):
     table = pd.read_csv(SEGMENTS, low_memory=False)
     raw = np.load(FEATURES, mmap_mode="r")
     quality = table.quality_ok.isin([True, "True", "true", 1, "1"])
-    mask = table.domain.eq(source) & quality & np.isfinite(raw).all(axis=1)
+    mask = table.domain.eq(source) & ~excluded_drive_audio_mask(table) & quality & np.isfinite(raw).all(axis=1)
     if not mask.any():
         raise ValueError("No valid labelled windows for this source.")
     frame = table.loc[mask].copy()

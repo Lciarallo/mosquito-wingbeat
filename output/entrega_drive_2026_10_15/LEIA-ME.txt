@@ -1,0 +1,26 @@
+MOSQUITO-WINGBEAT — ENTREGA ATUALIZADA — 15/10/2026
+
+Autor: Luiz Eduardo do Nascimento Ciarallo
+
+Conteúdo: cópia do código no workspace (incluindo alterações ainda sem commit), relatórios, resultados e pesos recentes de cascata ternária, LSTM/Bi-LSTM, Torres e pré-processamento; experimentos históricos selecionados pelo manifesto Git; apresentação e figuras. A rodada clássica verificada, ignorada localmente pelo Git, foi incluída explicitamente. A extração do ZIP preserva a estrutura do repositório.
+
+Comece por README_TORRES_2025.md. O README.md da raiz é histórico e foi preservado por seus contratos de reprodução.
+
+APRESENTAÇÃO ATUAL
+Arquivo PDF avulso nesta pasta e também dentro do ZIP em output/ifsc_introducao_problema_2026_10_15/.
+Slides editáveis: https://docs.google.com/presentation/d/1JzWMYfuNXbIpfwOVcMKuNk5R4xfhAw69S4DAAAfy99A/edit
+20 slides; autor completo; roteiro em português; template oficial IFSC.
+
+RESULTADOS
+Cascata: 90,03% de acurácia geral; 47/60 Aedes detectados (78,33%).
+LSTM direta: 85,74% de acurácia geral; 52/60 Aedes detectados.
+Torres é estudo auxiliar de infecção e não entra na acurácia ternária.
+MosquitoSong permanece fora de todo ajuste do detector atual.
+O áudio privado de enxame do Drive está fora do escopo; não integrou os resultados acima e foi retirado da comparação acústica corrente. Registros antigos são históricos, não avaliação atual.
+Suíte após a exclusão explícita: 317 testes aprovados (15/10/2026).
+
+DADOS E REPRODUÇÃO
+Não inclui bases brutas públicas já disponíveis por scripts de aquisição, caches de features/áudio, ambiente .venv, .git, instaladores de ferramentas nem arquivos temporários. Os scripts, manifestos de origem, partições, métricas, checkpoints recentes e hashes estão incluídos. Para repetir a inferência dos checkpoints ou os treinos a partir do zero, obtenha os dados e reconstrua os caches conforme os protocolos. Não é um pacote de execução inteiramente offline.
+
+MANIFESTO
+MANIFESTO_SHA256.json lista os arquivos e SHA256 do conteúdo empacotado. A cópia é um snapshot do workspace, não representa um novo commit ou push no GitHub.

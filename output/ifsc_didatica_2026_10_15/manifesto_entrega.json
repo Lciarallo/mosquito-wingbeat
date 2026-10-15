@@ -1,0 +1,175 @@
+{
+  "created_utc": "2026-10-15T19:16:33.043021+00:00",
+  "files": [
+    {
+      "path": "output/ifsc_didatica_2026_10_15/Guia_de_estudo_e_fala.txt",
+      "bytes": 25034,
+      "sha256": "926cb20224147ad27b7c2c7ef00194343e4c02bacb83f806a21cdc96dfced083"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/IFSC_Mosquitos_Didatica_Luiz_Eduardo_do_Nascimento_Ciarallo.pdf",
+      "bytes": 2505310,
+      "sha256": "a6f542d4f6a4ede156cee9a1005826247f30668e97ce2db58208b71a886e3933"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/Roteiro_apresentacao_IFSC.txt",
+      "bytes": 11660,
+      "sha256": "eb48d506a44d5d982566833c750c2656e9cae9d849369a73eac572cf74e18d88"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/Verificacao_dos_requisitos.txt",
+      "bytes": 3971,
+      "sha256": "f50f54a4959cb33d56ebb141ee9582a40b816304a7a523c8a46028651a7ec885"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/analise-lacunas.txt",
+      "bytes": 1758,
+      "sha256": "8394fab0bf15f67c5bd73e7eb4161fd2730d0e35d87bf83ba9abc41b05887bc6"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/assets/acuracia_cinco_regras.png",
+      "bytes": 103861,
+      "sha256": "99afbeda2822222c103c7d89cf0d63bdd96ac2ca806ab6dd365325af74117f66"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/assets/chart-provenance.json",
+      "bytes": 373,
+      "sha256": "5d7411e202f3cce526d1d5cb2f6293fb390f7b374562ea227b98c82f4cc0fa59"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/assets/dados_e_classes.png",
+      "bytes": 104078,
+      "sha256": "aeb6cadedcca9e8a99e8da6968d2a3a82c1339673cfe73c9bcd7d618dc90446d"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/assets/logo_ifsc_florianopolis_oficial.png",
+      "bytes": 32017,
+      "sha256": "ca1e2b3c83ed91bdd2d27c80e49bc4f3279592f71c930b94b00a001f505cbcf5"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/assets/marca_ifsc_florianopolis_oficial.zip",
+      "bytes": 1972848,
+      "sha256": "a3e7404002276ef9ca253a81c9ff04d9182a1715ff5dc70643ce204f8a21fc4c"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/content.json",
+      "bytes": 152358,
+      "sha256": "b37c7535824307888c905ea7c188b02a01b351effae3f1bc96b98b6dbeebdb6d"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/conteudo.py",
+      "bytes": 24985,
+      "sha256": "65c270aa5641b254333697b114860d749cc36aa34c7c4352047ce68000c93bf0"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/design-catalog-before.txt",
+      "bytes": 9730,
+      "sha256": "de750dea7ea2d1458540c4c44a80efbdd9a970da85887c7c348fbb91c9fe3cfd"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/design-catalog-output.txt",
+      "bytes": 9813,
+      "sha256": "bb3fb4be29cb05665644b65b17664ec2662595f4acf69b9b1ee1e7cab3715085"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/design-system-before.json",
+      "bytes": 870692,
+      "sha256": "0da0c1d86155885e1e9a1a355687474a9fc673f57c427212038cf53f840080ef"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/design-system-output.json",
+      "bytes": 880659,
+      "sha256": "a7b0195f1e9265c5585a8282aff515a65892c4bf155588d4fac81d68ddcb53c4"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/fallback-reasons.txt",
+      "bytes": 362,
+      "sha256": "1357b9ff6a5dc82094ec96c6df8e05cbea3bc68c2981bbfe99e289d57bc60cc2"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/frame-map.json",
+      "bytes": 19995,
+      "sha256": "c41928111a0c03acfd48b34dfad755c3dfd5cd6538293f671b087c3ffcbf20f4"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/graficos.py",
+      "bytes": 2784,
+      "sha256": "be48e02427ce7b3331bcf9ec97cd1bfa50c689c58f0d700b052fe24a09c88757"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/images.json",
+      "bytes": 1888,
+      "sha256": "c245e38df389ec6c48d867eef397004dc1034ae62ca43c0f64210974207566a2"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/output-issues.json",
+      "bytes": 521,
+      "sha256": "7045ed0a4ceb8bfa6b5ef4a0f01084bad7792c9ca42e634567e185c3b3837c7f"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/plan.json",
+      "bytes": 53983,
+      "sha256": "b9063174cb8ac9085e17f5b7a6b0753aa01e812a59c0643a6dcbfebd062319ee"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/preparar_edicao.py",
+      "bytes": 11211,
+      "sha256": "87b19c0e43840e02c89cc50720882b51748d4b07e2ee26faaf00049cd314f608"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/preparar_entrega.py",
+      "bytes": 3094,
+      "sha256": "ffc173cf6f7aa35c00b013266200d0a500bf30640a5b467a4574a231cdc32bd9"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/raw-approved.json",
+      "bytes": 1951176,
+      "sha256": "6709b81098f901631b94f2bb597dcf7b8ad656f40f6243650e1d28891fa0efd1"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/raw-before.json",
+      "bytes": 1619974,
+      "sha256": "f7442bd298f555083b484e7693777eea47c35286b9c73fd6a3e72b9987bb3293"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/raw-output.json",
+      "bytes": 1944255,
+      "sha256": "2db2dbdeafad9af95fccbd1b59dd310d8387f58abb28781b86e61921cfb5b5bd"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/reorder.json",
+      "bytes": 166,
+      "sha256": "1a8e4722d802f4450ab0269860ada0b181dfb1fd30b7fe5b537f0bbfe2f4553b"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/repair.json",
+      "bytes": 12321,
+      "sha256": "15a2ff7c615b8c00b2ed6eba608e6febb2432b6e840efd0a985cd575a344ea36"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/reparar.py",
+      "bytes": 2180,
+      "sha256": "7cb87ae6461c4693ea4b785dcbeb38e0ae9236c8b42cade57d59153e90e4355d"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/source-notes.txt",
+      "bytes": 484,
+      "sha256": "06e0d888a5aeab20eef0f0fa04831c92703e3adca335ecb0ee2d2799ac672d30"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/verificar.py",
+      "bytes": 5046,
+      "sha256": "57ba2d57d72e2b38475f5ba51e992a19ede7074d392cf2bff36012697d90a4cf"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/verification.json",
+      "bytes": 1133,
+      "sha256": "f3a044ba4b38b75ac1cf501cc83a9ef056c98dc4dbc5055b53f25218e4f089fa"
+    },
+    {
+      "path": "output/ifsc_didatica_2026_10_15/visual-review.txt",
+      "bytes": 532,
+      "sha256": "3559919da1b45bf0bf63d088931f49af95073ec67244947043c9b286a0be9897"
+    }
+  ]
+}

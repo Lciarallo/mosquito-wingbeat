@@ -1,0 +1,16 @@
+[
+  {
+    "duplicateObject": {
+      "objectId": "ifsc26_s02",
+      "objectIds": {
+        "ifsc26_s02": "ifsc26_introducao_problema",
+        "ifsc26_s02_e00": "ifsc26_introducao_problema_e00",
+        "ifsc26_s02_e01": "ifsc26_introducao_problema_e01",
+        "ifsc26_s02_e02": "ifsc26_introducao_problema_e02",
+        "ifsc26_s02_e03": "ifsc26_introducao_problema_e03",
+        "ifsc26_s02_e04": "ifsc26_introducao_problema_e04",
+        "ifsc26_s02_e05": "ifsc26_introducao_problema_e05"
+      }
+    }
+  }
+]

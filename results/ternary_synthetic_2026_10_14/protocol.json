@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-15T00:17:20.344107+00:00",
+  "seed": 20261015,
+  "model_run": "/home/lciarallo/Documentos/Git_projects/mosquito-wingbeat/results/ternary_verified_2026_10_14_corrections",
+  "freeze_sha256": "34b7b1f1201f3722adcd4a451b4c4282d306e2a3beafb7df88c625cea74f04bd",
+  "code_sha256": "893a40966ee8b4cf9054d37d881f55aaa4e63a75afffbbfa002e2a8bdc02d55a",
+  "sample_rate": 16000,
+  "donor_samples": 15872,
+  "conditions": [
+    "clean_control",
+    "white_snr20",
+    "pink_snr10",
+    "pink_snr0",
+    "pink_snr_minus5",
+    "attenuation18db",
+    "lowpass1200",
+    "passby_envelope"
+  ],
+  "negative_groups_per_fold_and_class": 24,
+  "positive_groups": "all 60",
+  "mixture_signal_to_other_db": [
+    10,
+    0,
+    -10
+  ],
+  "procedural_profiles": [
+    "white",
+    "pink",
+    "brown",
+    "mains_harmonics",
+    "fan_harmonics",
+    "chirp",
+    "clicks",
+    "modulated_fan"
+  ],
+  "procedural_replicates": 20,
+  "procedural_seconds": 4,
+  "donor_selection": "seeded source/taxon round robin; random window per group",
+  "primary_model": "original frozen outer fold excluding every real component",
+  "final_model_scope": "secondary for known donors; primary for procedural negatives",
+  "no_model_fitting_or_threshold_tuning": true,
+  "not_new_individuals_or_field_validation": true,
+  "snr_definition": "total donor clip RMS / added component RMS",
+  "prevalence_is_designed_not_field_prevalence": true
+}

@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    "author",
+    "infection",
+    "species"
+  ],
+  "seed": 20261015,
+  "device": "cuda",
+  "article": "Torres et al., IEEE Latin America Transactions 23(2), 135-143, 2025",
+  "author_repository": "https://github.com/NakanoMariko/Dengue-Infected-Mosquito-Detection",
+  "author_commit": "6c96ccd5347cf5bafc9b424579700af7b5ffb7ce",
+  "article_pdf_sha256": "32dc201db2ee94ade9c81f558ee4eba0c0a682dfdfb2c971f5bd0c1d43584dfc"
+}

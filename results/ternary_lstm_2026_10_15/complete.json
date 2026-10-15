@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "models": 2,
+  "outer_folds": 5,
+  "group_oof_coverage": 1494,
+  "windows": 42029,
+  "finished_utc": "2026-10-15T13:37:58.748799+00:00"
+}

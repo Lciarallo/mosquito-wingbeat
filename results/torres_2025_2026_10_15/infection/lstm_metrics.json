@@ -1,0 +1,296 @@
+{
+  "model": "lstm",
+  "recordings": 60,
+  "windows": 60,
+  "mc_passes": 100,
+  "deterministic": {
+    "total": 60,
+    "correct": 52,
+    "accuracy": 0.8666666666666667,
+    "balanced_accuracy": 0.8666666666666667,
+    "macro_f1": 0.8660714285714286,
+    "confusion_matrix": [
+      [
+        24,
+        6
+      ],
+      [
+        2,
+        28
+      ]
+    ]
+  },
+  "mc_mean": {
+    "total": 60,
+    "correct": 51,
+    "accuracy": 0.85,
+    "balanced_accuracy": 0.8500000000000001,
+    "macro_f1": 0.8499583217560434,
+    "confusion_matrix": [
+      [
+        25,
+        5
+      ],
+      [
+        4,
+        26
+      ]
+    ]
+  },
+  "mc_vote": {
+    "total": 60,
+    "correct": 51,
+    "accuracy": 0.85,
+    "balanced_accuracy": 0.8500000000000001,
+    "macro_f1": 0.8499583217560434,
+    "confusion_matrix": [
+      [
+        25,
+        5
+      ],
+      [
+        4,
+        26
+      ]
+    ]
+  },
+  "selective": [
+    {
+      "total": 58,
+      "correct": 51,
+      "accuracy": 0.8793103448275862,
+      "balanced_accuracy": 0.8809523809523809,
+      "macro_f1": 0.8792744573297651,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          2,
+          26
+        ]
+      ],
+      "threshold": 0.0,
+      "input_total": 60,
+      "accepted": 58,
+      "abstained": 2,
+      "coverage": 0.9666666666666667,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          2,
+          26,
+          2
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 0.9333333333333333
+      }
+    },
+    {
+      "total": 58,
+      "correct": 51,
+      "accuracy": 0.8793103448275862,
+      "balanced_accuracy": 0.8809523809523809,
+      "macro_f1": 0.8792744573297651,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          2,
+          26
+        ]
+      ],
+      "threshold": 0.01,
+      "input_total": 60,
+      "accepted": 58,
+      "abstained": 2,
+      "coverage": 0.9666666666666667,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          2,
+          26,
+          2
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 0.9333333333333333
+      }
+    },
+    {
+      "total": 59,
+      "correct": 51,
+      "accuracy": 0.864406779661017,
+      "balanced_accuracy": 0.8649425287356323,
+      "macro_f1": 0.864367816091954,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          3,
+          26
+        ]
+      ],
+      "threshold": 0.05,
+      "input_total": 60,
+      "accepted": 59,
+      "abstained": 1,
+      "coverage": 0.9833333333333333,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          3,
+          26,
+          1
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 0.9666666666666667
+      }
+    },
+    {
+      "total": 59,
+      "correct": 51,
+      "accuracy": 0.864406779661017,
+      "balanced_accuracy": 0.8649425287356323,
+      "macro_f1": 0.864367816091954,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          3,
+          26
+        ]
+      ],
+      "threshold": 0.1,
+      "input_total": 60,
+      "accepted": 59,
+      "abstained": 1,
+      "coverage": 0.9833333333333333,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          3,
+          26,
+          1
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 0.9666666666666667
+      }
+    },
+    {
+      "total": 59,
+      "correct": 51,
+      "accuracy": 0.864406779661017,
+      "balanced_accuracy": 0.8649425287356323,
+      "macro_f1": 0.864367816091954,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          3,
+          26
+        ]
+      ],
+      "threshold": 0.2,
+      "input_total": 60,
+      "accepted": 59,
+      "abstained": 1,
+      "coverage": 0.9833333333333333,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          3,
+          26,
+          1
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 0.9666666666666667
+      }
+    },
+    {
+      "total": 60,
+      "correct": 51,
+      "accuracy": 0.85,
+      "balanced_accuracy": 0.8500000000000001,
+      "macro_f1": 0.8499583217560434,
+      "confusion_matrix": [
+        [
+          25,
+          5
+        ],
+        [
+          4,
+          26
+        ]
+      ],
+      "threshold": 0.5,
+      "input_total": 60,
+      "accepted": 60,
+      "abstained": 0,
+      "coverage": 1.0,
+      "overall_correct_decision_rate": 0.85,
+      "confusion_with_abstention": [
+        [
+          25,
+          5,
+          0
+        ],
+        [
+          4,
+          26,
+          0
+        ]
+      ],
+      "per_class_coverage": {
+        "infected_denv2": 1.0,
+        "healthy": 1.0
+      }
+    }
+  ],
+  "uncertainty_definition": "1 - largest class vote count / MC passes; binary equivalent of paper UC/100",
+  "recording_aggregation": "arithmetic mean of window probabilities within each draw",
+  "unanimous_does_not_mean_certainty": true
+}

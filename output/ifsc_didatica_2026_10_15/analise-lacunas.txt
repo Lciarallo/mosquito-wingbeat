@@ -1,0 +1,9 @@
+REVISÃO DOS REQUISITOS E ANÁLISE DE LACUNAS — ANTES DA EDIÇÃO
+
+Fonte: PDF Trabalho_Descrição-1, páginas 2–4. Objetivo: estudar técnicas e desenvolver programa de análise com rede neural profunda aplicada a domínio específico. Tópicos: contextualização, abordagens e relacionados, proposta implementada, resultados e discussão. Até 2 integrantes; exposição de 15 a 20 min; entregar material ao professor. Não exige superar um baseline nem embarcar a rede.
+
+Trabalho: LSTM e Bi-LSTM de duas camadas implementadas e treinadas; scripts, checkpoints, curvas e métricas existem. Estudo principal ternário: 42.029 janelas, 1.494 grupos, cinco dobras. Métricas conferidas em comparison.csv e metrics.json. Cascata clássica com 90,03%; LSTM direta com 85,74%. Não é necessário novo treinamento para revisar a apresentação.
+
+Lacunas: cinco dobras chamadas de testes externos podem sugerir novas bases; fontes do corpus pouco visíveis; dados aparecem tarde; FFT, STFT, mel, LR, HistGB, Adam e métricas dependem demasiado da fala; falta definição visível de acurácia; 19min35s sem folga. Substituir foto do campus pelo logotipo oficial por instrução atual. Preservar fotos do protótipo e criadouros. Separar literatura, resultados locais e plano futuro.
+
+Direção: manter master, layouts, tipografia e padrões oficiais IFSC; reorganizar nativamente 20 slides; marca original do portal oficial; subtítulos explicativos; dois gráficos científicos regenerados das métricas; notas com conceito, função, motivação, obtenção e transição; discussão das limitações no último slide. Roteiro de 18 minutos. Entrega ao professor ainda não realizada; cumprimento da agenda de três aulas não verificável pelos arquivos.

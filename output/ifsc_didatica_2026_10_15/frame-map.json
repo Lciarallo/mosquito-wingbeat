@@ -1,0 +1,372 @@
+[
+  {
+    "number": 1,
+    "slideId": "ifsc26_s01",
+    "narrative": "Mosquitos pelo som",
+    "exemplar": "ifsc26_s01",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s01_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s01_e01": "keep source content/media and geometry",
+      "ifsc26_s01_e02": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s01_course": "keep source content/media and geometry",
+      "ifsc26_s01_campus_credit": "delete campus photograph/obsolete caption as explicitly requested",
+      "ifsc26_s01_campus": "delete campus photograph/obsolete caption as explicitly requested"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 2,
+    "slideId": "ifsc26_introducao_problema",
+    "narrative": "O áudio pode apoiar a vigilância do Aedes",
+    "exemplar": "ifsc26_introducao_problema",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_introducao_problema_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_introducao_problema_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_introducao_problema_e02": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_introducao_problema_e03": "keep source content/media and geometry",
+      "ifsc26_introducao_problema_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_introducao_problema_e05": "keep source content/media and geometry",
+      "ifsc26_introducao_problema_photo_recipiente": "keep source content/media and geometry"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 3,
+    "slideId": "ifsc26_s02",
+    "narrative": "Um áudio deve levar a uma de três classes",
+    "exemplar": "ifsc26_s02",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s02_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s02_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s02_e02": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s02_e03": "keep source content/media and geometry",
+      "ifsc26_s02_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s02_e05": "keep source content/media and geometry"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 4,
+    "slideId": "ifsc26_s03",
+    "narrative": "A literatura orienta captura, memória e robustez",
+    "exemplar": "ifsc26_s03",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s03_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e02": "keep source content/media and geometry",
+      "ifsc26_s03_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e04": "keep source content/media and geometry",
+      "ifsc26_s03_e05": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e06": "keep source content/media and geometry",
+      "ifsc26_s03_e07": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e11": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s03_e12": "keep source content/media and geometry",
+      "ifsc26_s03_e13": "keep source content/media and geometry",
+      "ifsc26_s03_e14": "keep source content/media and geometry"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 5,
+    "slideId": "ifsc26_s08",
+    "narrative": "Separar grupos permite avaliar o aprendizado",
+    "exemplar": "ifsc26_s08",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s08_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s08_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s08_e02": "replace with scientific figure recalculated from frozen metrics",
+      "ifsc26_s08_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s08_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 6,
+    "slideId": "ifsc26_s04",
+    "narrative": "A FFT revela as frequências presentes no trecho",
+    "exemplar": "ifsc26_s04",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s04_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s04_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s04_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s04_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s04_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 7,
+    "slideId": "ifsc26_s05",
+    "narrative": "O voo contém uma fundamental e seus harmônicos",
+    "exemplar": "ifsc26_s05",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s05_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s05_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s05_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s05_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s05_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 8,
+    "slideId": "ifsc26_s06",
+    "narrative": "A STFT localiza as frequências ao longo do voo",
+    "exemplar": "ifsc26_s06",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s06_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s06_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s06_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s06_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s06_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 9,
+    "slideId": "ifsc26_s07",
+    "narrative": "As bandas mel formam a sequência de entrada",
+    "exemplar": "ifsc26_s07",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s07_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s07_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s07_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s07_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s07_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 10,
+    "slideId": "ifsc26_s11",
+    "narrative": "A cascata organiza a decisão em duas etapas",
+    "exemplar": "ifsc26_s11",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s11_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s11_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s11_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_classic_edge0": "keep source content/media and geometry",
+      "tern_classic_edge1": "keep source content/media and geometry",
+      "tern_classic_edge2": "keep source content/media and geometry",
+      "tern_classic_node0": "keep source content/media and geometry",
+      "tern_classic_node1": "keep source content/media and geometry",
+      "tern_classic_node2": "keep source content/media and geometry",
+      "tern_classic_node3": "keep source content/media and geometry",
+      "tern_classic_result": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s11_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 11,
+    "slideId": "ifsc26_s09",
+    "narrative": "LSTM e Bi-LSTM aprendem relações no tempo",
+    "exemplar": "ifsc26_s09",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s09_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s09_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s09_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_lstm_edge0": "keep source content/media and geometry",
+      "tern_lstm_edge1": "keep source content/media and geometry",
+      "tern_lstm_edge2": "keep source content/media and geometry",
+      "tern_bilstm_edge0": "keep source content/media and geometry",
+      "tern_bilstm_edge1": "keep source content/media and geometry",
+      "tern_bilstm_edge2": "keep source content/media and geometry",
+      "tern_lstm_label": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_lstm_node0": "keep source content/media and geometry",
+      "tern_lstm_node1": "keep source content/media and geometry",
+      "tern_lstm_node2": "keep source content/media and geometry",
+      "tern_lstm_node3": "keep source content/media and geometry",
+      "tern_bilstm_label": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_bilstm_node0": "keep source content/media and geometry",
+      "tern_bilstm_node1": "keep source content/media and geometry",
+      "tern_bilstm_node2": "keep source content/media and geometry",
+      "tern_bilstm_node3": "keep source content/media and geometry"
+    },
+    "addedElements": [
+      "ifsc26_s09_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 12,
+    "slideId": "ifsc26_s12",
+    "narrative": "Adam transforma o erro em ajustes nos pesos",
+    "exemplar": "ifsc26_s12",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s12_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s12_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s12_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_adam_edge0": "keep source content/media and geometry",
+      "tern_adam_edge1": "keep source content/media and geometry",
+      "tern_adam_edge2": "keep source content/media and geometry",
+      "tern_adam_node0": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_adam_node1": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_adam_node2": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_adam_node3": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_adam_info": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s12_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 13,
+    "slideId": "ifsc26_regularizacao",
+    "narrative": "Regularização e validação controlam o ajuste",
+    "exemplar": "ifsc26_regularizacao",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_regularizacao_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e02": "keep source content/media and geometry",
+      "ifsc26_regularizacao_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e05": "keep source content/media and geometry",
+      "ifsc26_regularizacao_e06": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e07": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e08": "keep source content/media and geometry",
+      "ifsc26_regularizacao_e09": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e10": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_regularizacao_e11": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 14,
+    "slideId": "ifsc26_s14",
+    "narrative": "A validação seleciona o checkpoint de cada rede",
+    "exemplar": "ifsc26_s14",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s14_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s14_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s14_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s14_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s14_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 15,
+    "slideId": "ifsc26_s15",
+    "narrative": "A cascata teve o maior acerto geral",
+    "exemplar": "ifsc26_s15",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s15_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s15_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s15_e02": "replace with scientific figure recalculated from frozen metrics",
+      "ifsc26_s15_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s15_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 16,
+    "slideId": "ifsc26_s10",
+    "narrative": "Detectar mais Aedes muda o número de alarmes",
+    "exemplar": "ifsc26_s10",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s10_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s10_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s10_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "tern_metrics_table": "keep source content/media and geometry"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 17,
+    "slideId": "ifsc26_s17",
+    "narrative": "A matriz mostra quais classes foram confundidas",
+    "exemplar": "ifsc26_s17",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s17_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s17_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s17_e02": "keep measured scientific figure; uniform resize to accommodate explanatory subtitle",
+      "ifsc26_s17_e03": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": [
+      "ifsc26_s17_didatica_subtitulo"
+    ]
+  },
+  {
+    "number": 18,
+    "slideId": "ifsc26_arduino_dataset",
+    "narrative": "O protótipo prepara a coleta de uma base própria",
+    "exemplar": "ifsc26_arduino_dataset",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_arduino_dataset_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_arduino_dataset_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_arduino_dataset_e02": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_arduino_dataset_e03": "keep source content/media and geometry",
+      "ifsc26_arduino_dataset_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_arduino_dataset_e05": "keep source content/media and geometry",
+      "ifsc26_arduino_dataset_foto_placa_real": "keep source content/media and geometry"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 19,
+    "slideId": "ifsc26_s19",
+    "narrative": "Referências e material de apoio",
+    "exemplar": "ifsc26_s19",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s19_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e02": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e05": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e06": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e07": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s19_e08": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": []
+  },
+  {
+    "number": 20,
+    "slideId": "ifsc26_s20",
+    "narrative": "O estudo compara desempenho e orienta a coleta",
+    "exemplar": "ifsc26_s20",
+    "construction": "edit inspected native slide in place; official master and layout preserved",
+    "elementMap": {
+      "ifsc26_s20_e00": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e01": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e02": "keep source content/media and geometry",
+      "ifsc26_s20_e03": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e04": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e05": "keep source content/media and geometry",
+      "ifsc26_s20_e06": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e07": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e08": "keep source content/media and geometry",
+      "ifsc26_s20_e09": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e10": "replace native copy; preserve uniform source text and paragraph styles",
+      "ifsc26_s20_e11": "replace native copy; preserve uniform source text and paragraph styles"
+    },
+    "addedElements": []
+  }
+]

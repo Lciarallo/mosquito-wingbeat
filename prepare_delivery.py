@@ -57,15 +57,6 @@ arduino_rows = "\n".join(f"| {row.mode} | {row.window_recall:.1%} | {row.window_
                         for row in arduino.loc[arduino.model.eq("Escolha por validação interna")].itertuples())
 readme = f"""# Estudo de classificação acústica de mosquitos
 
-**[⬇ Baixar instalador para Windows](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest/download/MosquitoWingbeat-Windows.exe)**
-— [passo a passo com imagens](WINDOWS.md) · [página de downloads](https://github.com/Lciarallo/mosquito-wingbeat/releases/latest)
-
-Para instalar no **Arduino Nano 33 BLE Sense / Sense Rev2**: abra o `.exe`, conecte
-a placa, clique em **Buscar minha placa** e em **Instalar no Arduino**. A janela
-mostra os resultados automaticamente. **Não precisa de Python, Arduino IDE,
-comandos ou conta no GitHub.** Windows 10/11 de 64 bits; internet no primeiro uso
-e cerca de 1 GB livre. Modelo experimental; acurácia em uso real ainda não medida.
-
 Abra [mosquito_wingbeat_estudo.ipynb](mosquito_wingbeat_estudo.ipynb) para executar ou baixe
 [mosquito_wingbeat_estudo.html](mosquito_wingbeat_estudo.html) e abra no navegador
 para ler o estudo e os gráficos sem Jupyter.
@@ -76,90 +67,6 @@ de quatro classes, aparelhos reservados, ruído, abstenção, INT8 e exportaçã
 O código do downloader também está incorporado ao notebook, que não depende dos scripts
 auxiliares para definir os experimentos iniciais. A extensão executa os scripts incluídos
 para contraste/dinâmica, novos classificadores e detecção binária com firmware Arduino.
-
-## Arduino Nano 33 BLE Sense: identificar espécies
-
-Baixe [MosquitoSpecies.zip](output/arduino/MosquitoSpecies.zip), extraia e abra
-a pasta **MosquitoSpecies**. No Linux/macOS com Python 3.9+, conecte a placa e execute:
-
-```bash
-bash flash_arduino.sh --monitor
-```
-
-O instalador por terminal baixa/reutiliza CLI 1.5.1 e core 4.6.0 em uma pasta local, detecta a placa,
-compila, grava e abre o monitor a **115200 baud**. A primeira preparação precisa
-de internet e cerca de 1 GB livre. No Windows, use o **aplicativo gráfico acima**;
-**Instalar_no_Windows.cmd** abre o aplicativo ou seu download; opções por terminal
-são uma alternativa avançada que exige Python.
-O ZIP contém [guia rápido](firmware/LEIA_PRIMEIRO.md)
-e o [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
-`--compile-only` compila sem placa/upload; `--list-ports` consulta portas;
-`--port PORTA` seleciona uma placa e `--monitor-only` abre o serial sem regravar.
-
-Alternativa pela Arduino IDE, sem Python: abra **MosquitoSpecies.ino**, mantenha
-os quatro headers juntos, instale **Arduino Mbed OS Nano Boards 4.6.0**, selecione
-**Arduino Nano 33 BLE** e a porta, faça upload e abra o monitor em **115200 baud**.
-Preparação/compilação reais verificadas no Linux e pelo próprio `.exe` em Windows
-no GitHub Actions. A interface foi revisada visualmente. Não houve execução nativa
-macOS nem upload em placa física. [Auditoria do aplicativo Windows](results/arduino_species/windows_build_audit.json).
-
-O [sketch completo](firmware/MosquitoSpecies/MosquitoSpecies.ino) usa o microfone PDM
-integrado, FFT incremental e modelos treinados para indicar presença e classificar
-**20 espécies**. Emite candidata, identificação provisória ou **INCERTO**, com
-concordância da mesma espécie em 2/3 janelas. A primeira emissão exige 2,976 s de
-observação. [Manual de instalação, espécies e limites](firmware/MosquitoSpecies/README.md).
-Montagem e gravação: [manual completo](firmware/MANUAL_DE_MONTAGEM_E_INSTALACAO.md).
-O script **flash_arduino.sh** grava esse sketch por padrão; **serve.py** é o
-servidor de visualização incluído na atualização do projeto.
-
-| Avaliação do modelo exportado | Resultado |
-|---|---:|
-| Escolha forçada nas {int(species_default.positive_windows):,} janelas positivas do seu teste | {species_default.accuracy:.1%} geral; {species_default.balanced_accuracy:.1%} balanceada |
-| Rejeição + confirmação, acerto entre identificações emitidas | {species_selective.accepted_positive_class_accuracy:.1%}, {int(species_selective.accepted_positive_windows)} identificações |
-| Cobertura com confirmação | {species_selective.positive_coverage:.1%} de {int(species_selective.positive_windows):,} endpoints positivos contíguos |
-
-O acerto maior vem com **muita rejeição**; o aparelho deverá responder incerto com
-frequência. Os escores não garantem que uma identificação esteja correta. O padrão
-é a dobra {species_fold}, primeira que atingiu a meta de calibração; não foi escolhido
-pelo teste. O agregado das três dobras usa modelos próprios e teve {species_selected.accuracy:.1%} geral /
-{species_selected.balanced_accuracy:.1%} balanceada na escolha forçada. Estes são testes do corpus de celulares, sem
-anotação de cada voo ou validação no Arduino físico.
-
-Compilou para o alvo com **{species_compile['program_storage_bytes']:,} bytes de programa** /
-**{species_compile['global_static_memory_bytes']:,} bytes globais** (exclui pico de pilha/heap).
-C++/Python: **{species_native['feature_only_matching_threshold_decisions']}/{species_native['feature_only_test_windows']}**
-decisões com features iguais e **{species_native['complete_pcm_matching_threshold_decisions']}/{species_native['complete_pcm_test_windows']}**
-no caminho completo PCM. **Não houve upload ou teste físico**: microfone, distância,
-latência, autonomia e alarmes/hora continuam sem medição. A dobra exportada não
-tem ruído contíguo elegível para testar a confirmação. Resultados/auditorias:
-[results/arduino_species](results/arduino_species/); seção 19 do notebook.
-
-## Arduino: detector de presença da versão anterior
-
-O [firmware](firmware/README.md) foi preparado para **Arduino Nano 33 BLE Sense / Sense Rev2**,
-com microfone PDM, frontend incremental FFT, rede neural de 16 unidades e confirmação 2/3.
-O objetivo é **presença acústica**, separado do reconhecimento das 20 espécies.
-
-| Modo | Recall positivo por janela | Falso positivo no ruído por janela | Recall médio por fonte | Falso positivo médio por fonte |
-|---|---:|---:|---:|---:|
-{arduino_rows}
-
-São rótulos fracos por arquivo, sem anotação de cada voo. As metas de calibração
-não foram garantidas no teste. No modo padrão de 10%, perde cerca de **27,4%** dos
-trechos positivos e marca **29,2%** dos trechos de ruído como candidatos antes da
-confirmação. A confirmação temporal não demonstrou controle confiável de ruídos
-persistentes; o subconjunto contínuo tem somente duas fontes de ruído.
-
-Compilação: **{compile_audit['program_storage_bytes']:,} bytes de programa** e
-**{compile_audit['global_static_memory_bytes']:,} bytes globais**, CLI 1.5.1/core 4.6.0.
-O frontend completo C++/Python teve **{native_audit['matching_decisions']}/{native_audit['tested_windows']}**
-decisões iguais. O Uno R3/Nano clássico não comporta esse firmware.
-**Não houve teste numa placa física**: faltam pico de RAM, latência, distância,
-autonomia, sensibilidade por evento e falsos alarmes/hora.
-
-Coletar áudio com a placa no local de uso, anotar atividade real e gravar horas sem
-mosquito são os próximos passos necessários para reduzir e medir os erros de campo.
-Código, modos, instalação e limites: [firmware/README.md](firmware/README.md).
 
 ## Relatório técnico
 
@@ -310,24 +217,8 @@ delivered = [ROOT / name for name in [
     "improve_device.py", "arduino_frontend.py", "arduino_models.py", "train_arduino.py",
     "verify_arduino.py", "probe_arduino_noise.py",
     "arduino_species_models.py", "train_arduino_species.py", "verify_arduino_species.py",
-    "flash_arduino.sh", "install_arduino.py", "Instalar_no_Windows.cmd", "serve.py",
-    "tests/test_install_arduino.py", "tests/test_windows_installer.py",
-    "windows_installer.py", "WINDOWS.md", "requirements-windows.txt", "scripts/build_windows.py",
-    ".github/workflows/windows-installer.yml", "docs/windows-installer.png",
+    "serve.py",
 ]]
-# Pacote autônomo para IDE ou instalador; sem dataset/ambiente científico.
-sketch_bundle = ROOT/"output/arduino/MosquitoSpecies.zip"
-sketch_bundle.parent.mkdir(parents=True,exist_ok=True)
-sketch_files = [ROOT/"firmware/MosquitoSpecies"/name for name in [
-    "MosquitoSpecies.ino","StreamingFeatures.h","PresenceModel.h","SpeciesModel.h","SpeciesDecision.h","README.md"]]
-sketch_files += [ROOT/name for name in ["flash_arduino.sh", "install_arduino.py", "Instalar_no_Windows.cmd"]]
-sketch_files += [ROOT/"firmware"/name for name in ["LEIA_PRIMEIRO.md", "MANUAL_DE_MONTAGEM_E_INSTALACAO.md"]]
-with zipfile.ZipFile(sketch_bundle,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as handle:
-    for path in sketch_files:
-        handle.write(path,"MosquitoSpecies/"+path.name)
-with zipfile.ZipFile(sketch_bundle) as handle:
-    assert handle.testzip() is None
-delivered.append(sketch_bundle)
 delivered += [p for p in (ROOT / "firmware").rglob("*") if p.is_file()]
 delivered += sorted((ROOT / "data").glob("*.json"))
 delivered += [p for p in (ROOT / "reports").rglob("*") if p.is_file()]

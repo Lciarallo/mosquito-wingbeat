@@ -1,0 +1,31 @@
+{
+  "frozen_utc": "2026-10-15T13:37:58.655377+00:00",
+  "context_freeze_sha256": {
+    "outer_0/lstm": "cb73989ba77064077fe0e35204ee80fcf8add84f26c9e6567c1d1d70e1a91920",
+    "outer_0/bilstm": "6da854fd4e0a68987266fb48c48d6534928a29bfe3f2b44f67feb12688a47e48",
+    "outer_1/lstm": "04ac310989cf455a986c704a22798b73d06e752cb4f04cc3909d6b6ca71845c4",
+    "outer_1/bilstm": "920432a6045d5ac82cf6b0fd03df89429251a485555af65b9c26ab5e53f71a3b",
+    "outer_2/lstm": "9804700a7f3acd930e37f1b7ebca39f078e6aa95b4ea29903f0acd9bdc05b991",
+    "outer_2/bilstm": "d770a628581796272eca0f19b35b4f3d05e57bda7ac9d60cdb71edfeed9aab47",
+    "outer_3/lstm": "0442ba09bda980a008bb5aee35ddb5e1a98faa6b24371eec2bdb8f26e6315f17",
+    "outer_3/bilstm": "1bcbee776cd5e4ad7814994ceb16c4610e79647bd7a52236e8992edb12cd6ee3",
+    "outer_4/lstm": "6d69157beb231311d1036ba57b4f590de78a9e98e9807ec0441296e29910ea36",
+    "outer_4/bilstm": "3a7e337fddaecdf6f035ede3b1ae084127bf53a22dedbdbed99a6832001813d0",
+    "final/lstm": "10e536ea5ba7d8767dcdae66fb94e552ab85af91f14c9e33eefd2fc7d95c06bc",
+    "final/bilstm": "8a8fa81940436d8a08bc9e240e6bb874a2311f60ce4041985407bb7e9c08c522"
+  },
+  "selected_final_neural_model": "lstm",
+  "final_candidates": [
+    {
+      "model": "lstm",
+      "validation_loss": 0.44901326516878054,
+      "best_epoch": 4
+    },
+    {
+      "model": "bilstm",
+      "validation_loss": 0.45616506393863254,
+      "best_epoch": 2
+    }
+  ],
+  "selection_uses_outer_test": false
+}
