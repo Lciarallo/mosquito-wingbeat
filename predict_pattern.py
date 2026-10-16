@@ -10,7 +10,8 @@ import soundfile as sf
 import torch
 from scipy.signal import resample_poly
 
-from pattern_classifiers import SpectrogramCNN, AcousticMLP, temporal_statistics
+from pattern_classifiers import SpectrogramCNN, AcousticMLP, temporal_statistics, require
+from ternary_protocol import apply_policy
 from torres_lstm import MelSequence, digest, predict_probabilities
 from train_ternary_lstm import GroupPool
 from train_pattern_classifiers import ml_proba
@@ -24,7 +25,8 @@ def audio_sequences(path):
     divisor=np.gcd(sr,48000)
     wave=resample_poly(wave,48000//divisor,sr//divisor) if sr!=48000 else wave
     # Training originals: 7936 real samples at 8 kHz, then resampled to 48 kHz.
-    samples=47616;chunks=[wave[i:i+samples] for i in range(0,len(wave),samples)]
+    samples=47616
+    chunks=[wave[i:i+samples] for i in range(0,len(wave)-samples+1,samples)] if len(wave)>=samples else [wave]
     frontend=MelSequence(sample_rate=48000,n_fft=1024,hop=256,bands=32,fmin=0,fmax=24000).eval()
     sequences=[]
     for chunk in chunks:
@@ -38,18 +40,25 @@ def audio_sequences(path):
     return sequences
 
 
-def predict(model_dir,audio):
+def predict(model_dir,audio,rule='argmax'):
+    require(rule in ['argmax','calibrated'],f'Unsupported decision rule: {rule}')
     model_dir=Path(model_dir);manifest=json.loads((model_dir/'manifest.json').read_text())
     name=manifest['model'];device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     if name in ['cnn','mlp']:
-        assert digest(model_dir/'model.pt')==manifest['model_sha256']
+        require(digest(model_dir/'model.pt')==manifest['model_sha256'],'Model checkpoint SHA-256 mismatch.')
+        require(digest(model_dir/'scaler.npz')==manifest['scaler_sha256'],'Scaler SHA-256 mismatch.')
         checkpoint=torch.load(model_dir/'model.pt',map_location='cpu',weights_only=True)
         model=(SpectrogramCNN if name=='cnn' else AcousticMLP)(**checkpoint['config']).to(device)
         model.load_state_dict(checkpoint['state_dict']);z=np.load(model_dir/'scaler.npz')
-        assert digest(model_dir/'scaler.npz')==manifest['scaler_sha256']
+        policy=checkpoint.get('rule')
     else:
-        assert digest(model_dir/'model.joblib')==manifest['model_sha256']
+        require(digest(model_dir/'model.joblib')==manifest['model_sha256'],'Model bundle SHA-256 mismatch.')
         bundle=joblib.load(model_dir/'model.joblib')
+        policy=bundle.get('rule')
+    if not isinstance(policy,dict):
+        policy=manifest.get('calibrated_rule') if isinstance(manifest.get('calibrated_rule'),dict) else (
+            manifest.get('rule') if isinstance(manifest.get('rule'),dict) else None
+        )
     probabilities=[]
     for sequence in audio_sequences(audio):
         features=sequence if name=='cnn' else temporal_statistics(sequence)
@@ -60,18 +69,26 @@ def predict(model_dir,audio):
         probabilities.append(p[0])
     p=np.asarray(probabilities)
     frame=pd.DataFrame(dict(group='audio',pcm_block='audio',domain='external',true_label=0),index=range(len(p)))
-    pooled=GroupPool(frame).probabilities(p)[0];label=int(pooled.argmax())
+    groups=GroupPool(frame).table(p)
+    pooled=groups[[f'prob_{c}' for c in range(3)]].to_numpy()[0]
+    if rule=='calibrated':
+        require(isinstance(policy,dict),'Calibrated policy is not available for this model.')
+        label=int(apply_policy(groups,policy)[0])
+    else:
+        label=int(pooled.argmax())
     return dict(audio=str(audio),model=name,prediction=LABELS[label],prediction_index=label,
-                scores=dict(zip(LABELS,pooled.tolist())),windows=len(p),rule='argmax',
+                scores=dict(zip(LABELS,pooled.tolist())),windows=len(p),rule=rule,
                 scores_are_calibrated_probabilities=False,
                 frontend='approximate common16Mel frontend; short real windows accepted without padding')
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--model-dir',type=Path,required=True);parser.add_argument('--audio',type=Path,required=True)
+    parser.add_argument('--model-dir',type=Path,required=True)
+    parser.add_argument('--audio',type=Path,required=True)
+    parser.add_argument('--rule',choices=['argmax','calibrated'],default='argmax')
     args=parser.parse_args();torch.set_num_threads(4)
-    print(json.dumps(predict(args.model_dir,args.audio),ensure_ascii=False,indent=2))
+    print(json.dumps(predict(args.model_dir,args.audio,rule=args.rule),ensure_ascii=False,indent=2))
 
 
 if __name__=='__main__':main()

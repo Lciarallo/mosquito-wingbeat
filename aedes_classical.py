@@ -20,7 +20,7 @@ FEATURE_NAMES = [
 
 
 def features(waves, batch=128):
-    """Extrai 120 descritores por janela; não replica nem preenche áudio curto."""
+    """Extrai 122 descritores por janela; não replica nem preenche áudio curto."""
     waves = np.atleast_2d(waves)
     size = waves.shape[1]
     if size < 4800:

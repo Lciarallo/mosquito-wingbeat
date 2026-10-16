@@ -15,13 +15,18 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_notebook_executes_without_training_or_local_experiment_files(tmp_path):
     names = ['train_ternary_nested_models.py', 'ternary_protocol.py',
              'train_ternary_lstm.py', 'torres_lstm.py', 'predict_ternary_lstm.py',
-             'ternary_reporting.py', 'evaluate_ternary_event_pipeline.py',
-             'predict_ternary.py', 'aedes_classical.py', 'bioacoustic_invariance.py',
+             'verify_ternary_lstm.py', 'ternary_reporting.py',
+             'evaluate_ternary_event_pipeline.py', 'predict_ternary.py',
+             'aedes_classical.py', 'bioacoustic_invariance.py',
+             'pattern_classifiers.py', 'train_pattern_classifiers.py',
+             'verify_pattern_classifiers.py', 'predict_pattern.py',
+             'pattern_reporting.py',
              'notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb',
              'data/metadata/ternary_neural_reference.json',
              'data/metadata/ternary_segments.csv.gz',
-             'data/metadata/known_recording_groups.csv']
-    names += ['pattern_reporting.py','data/metadata/pattern_classifier_reference.json']
+             'data/metadata/known_recording_groups.csv',
+             'data/metadata/pattern_classifier_reference.json',
+             'data/metadata/document_revision.json']
     for name in names:
         target = tmp_path / name
         target.parent.mkdir(parents=True, exist_ok=True)

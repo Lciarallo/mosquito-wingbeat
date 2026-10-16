@@ -289,3 +289,49 @@ def test_thresholds_require_the_exact_frozen_run(tiny_run):
     path.write_text(json.dumps(payload))
     with pytest.raises(ValueError, match="artifact changed"):
         protocol.load_thresholds(tiny_run)
+
+
+def test_bioacoustic_edge_cases_avoid_nan_entropy_and_spurious_dc_hnr():
+    from bioacoustic_invariance import (
+        extract_swarm_modulation,
+        extract_temperature_invariant_harmonics,
+    )
+    freqs = np.linspace(0.0, 8000.0, 1025)
+    power = np.ones_like(freqs)
+    power[0] = 1e9
+    zero_f0 = extract_temperature_invariant_harmonics(power, freqs, 0.0, freqs[1] - freqs[0])
+    assert zero_f0["harmonic_to_noise_ratio_db"] == 0.0
+    assert zero_f0["harmonic_decay_slope"] == 0.0
+    assert zero_f0["harmonic_h2_ratio"] == 0.0
+    short_wave = np.sin(2 * np.pi * 500.0 * np.arange(400) / 16000.0).astype("float32")
+    swarm = extract_swarm_modulation(short_wave, sr=16000)
+    assert np.isfinite(list(swarm.values())).all()
+    assert swarm["envelope_mod_entropy"] == 0.0
+
+
+def test_predict_audio_succeeds_when_repo_code_differs_from_frozen_run(tiny_run, tmp_path, monkeypatch):
+    import predict_ternary
+    freeze_path = tiny_run / "freeze.json"
+    freeze = json.loads(freeze_path.read_text())
+    assert (tiny_run / "source" / "ternary_protocol.py").is_file()
+    freeze["code_sha256"]["ternary_protocol.py"] = "0" * 64
+    freeze_path.write_text(json.dumps(freeze))
+    monkeypatch.setattr(
+        predict_ternary,
+        "audio_features",
+        lambda path: (
+            pd.DataFrame({
+                "row_id": [0, 1], "path": [str(path)] * 2, "group": ["input_audio"] * 2,
+                "domain": ["inference"] * 2, "pcm_block": ["input_audio"] * 2,
+                "start_s": [0.0, 0.992], "window_duration_s": [0.992, 0.992],
+                "duration_s": [0.992, 0.992], "quality_ok": [True, True],
+            }),
+            np.zeros((2, 3), dtype="float32"),
+            {"real_seconds": 1.984, "windows": 2, "ignored_tail_seconds": 0.0,
+             "quality_invalid_windows": 0, "padding_repetition_concatenation": False},
+        ),
+    )
+    out_dir = tmp_path / "pred_out"
+    summary = predict_ternary.predict_audio(tiny_run, tmp_path / "dummy.wav", out_dir)
+    assert summary["run_id"] == freeze["run_id"]
+    assert (out_dir / "summary.json").is_file()

@@ -1,4 +1,5 @@
 """Behavioral contracts for the neural three-class comparison."""
+from pathlib import Path
 import numpy as np
 import pandas as pd
 import torch
@@ -68,3 +69,39 @@ def test_actual_8khz_frontend_retains_55_steps_and_64_bands():
     assert f.config["sample_rate"] == 8000
     assert f(wave).shape == (2,55,64)
     torch.testing.assert_close(f(wave),f(wave*3+.2),rtol=1e-4,atol=1e-4)
+
+
+def test_verify_replays_miniature_run_and_writes_receipt(tmp_path, monkeypatch):
+    import verify_ternary_lstm
+    settings = dict(study.SETTINGS, hidden=8, max_epochs=1, patience=1, batch_size=8)
+    monkeypatch.setattr(study, "SETTINGS", settings)
+    rows = []
+    for fold in range(5):
+        for label in range(3):
+            for _ in range(2):
+                group = f"f{fold}_c{label}"
+                rows.append(dict(row_id=len(rows), group=group, pcm_block=group,
+                                 path=group, true_label=label, domain="example"))
+    frame = pd.DataFrame(rows)
+    folds = frame.group.str.slice(1, 2).astype(int).to_numpy()
+    raw = np.random.default_rng(7).normal(size=(len(frame), 11, 64)).astype("float32")
+    features_path = tmp_path / "features.npy"
+    np.save(features_path, raw)
+    metadata = dict(features=str(features_path), feature_sha256=study.digest(features_path))
+    monkeypatch.setattr(study, "load_inputs", lambda ref, dev: (frame.copy(), raw, folds, metadata))
+    monkeypatch.setattr(verify_ternary_lstm, "ROOT", Path("/"))
+    reference = tmp_path / "reference"
+    reference.mkdir()
+    pd.DataFrame(dict(row_id=frame.row_id, fold=folds, role="test")).to_csv(
+        reference / "partitions.csv.gz", index=False)
+    study.write_json(reference / "event_level_metrics.json", dict(
+        models=dict(activity_gated_log_odds_cascade_event=dict(accuracy=0.8))))
+    run_dir = tmp_path / "lstm_run"
+    study.run(run_dir, reference, torch.device("cpu"))
+    receipt_path = tmp_path / "receipt.json"
+    result = verify_ternary_lstm.verify(run_dir, torch.device("cpu"), output=receipt_path)
+    assert result["complete"]
+    assert receipt_path.is_file()
+    assert study.read_json(receipt_path)["models"]["lstm"]["group_oof_coverage"] == 15
+    with pytest.raises(FileExistsError):
+        verify_ternary_lstm.verify(run_dir, torch.device("cpu"), output=receipt_path)

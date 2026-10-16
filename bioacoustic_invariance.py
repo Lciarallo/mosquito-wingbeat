@@ -10,7 +10,7 @@ Features:
 from __future__ import annotations
 import numpy as np
 from scipy.signal import hilbert, butter, sosfilt
-from scipy.fft import rfft, rfftfreq, dct
+from scipy.fft import rfft, rfftfreq
 
 SR = 16000
 CARRIER_LOW, CARRIER_HIGH = 400.0, 750.0  # Wingbeat fundamental band for Culicidae
@@ -74,36 +74,41 @@ def extract_temperature_invariant_harmonics(power: np.ndarray, freqs: np.ndarray
     whether ambient temperature shifts F0 from 480 Hz to 600 Hz, these ratios
     are temperature-invariant physical descriptors.
     """
-    tolerance = max(25.0, bin_width * 2)
-    harmonic_powers = []
-    
-    for k in range(1, 6):
-        target_f = k * f0
-        if target_f >= freqs[-1]:
-            harmonic_powers.append(1e-12)
-            continue
-        h_mask = np.abs(freqs - target_f) <= tolerance
-        if np.any(h_mask):
-            harmonic_powers.append(float(np.sum(power[h_mask])))
-        else:
-            harmonic_powers.append(1e-12)
-            
-    h1 = max(harmonic_powers[0], 1e-12)
-    ratios = [harmonic_powers[k] / h1 for k in range(1, 5)]
-    
-    # Estimate harmonic decay slope (linear fit of log harmonic energy vs harmonic index)
-    indices = np.arange(1, 6)
-    log_h = np.log10(np.clip(harmonic_powers, 1e-12, None))
-    # slope of log10 energy per harmonic step
-    slope = float(np.polyfit(indices, log_h, 1)[0])
-    
-    # Harmonic-to-Noise Ratio (HNR)
-    # Sum of all harmonic powers vs remaining power in the 200-3500 Hz range
     audible = (freqs >= 200.0) & (freqs <= 3500.0)
     total_audible = max(float(np.sum(power[audible])), 1e-12)
-    harmonics_sum = sum(harmonic_powers)
-    noise_energy = max(total_audible - harmonics_sum, 1e-12)
-    hnr_db = float(10.0 * np.log10(harmonics_sum / noise_energy))
+    if f0 <= 0.0:
+        ratios = [0.0, 0.0, 0.0, 0.0]
+        slope = 0.0
+        hnr_db = 0.0
+    else:
+        tolerance = max(25.0, bin_width * 2)
+        harmonic_powers = []
+
+        for k in range(1, 6):
+            target_f = k * f0
+            if target_f >= freqs[-1]:
+                harmonic_powers.append(1e-12)
+                continue
+            h_mask = np.abs(freqs - target_f) <= tolerance
+            if np.any(h_mask):
+                harmonic_powers.append(float(np.sum(power[h_mask])))
+            else:
+                harmonic_powers.append(1e-12)
+
+        h1 = max(harmonic_powers[0], 1e-12)
+        ratios = [harmonic_powers[k] / h1 for k in range(1, 5)]
+
+        # Estimate harmonic decay slope (linear fit of log harmonic energy vs harmonic index)
+        indices = np.arange(1, 6)
+        log_h = np.log10(np.clip(harmonic_powers, 1e-12, None))
+        # slope of log10 energy per harmonic step
+        slope = float(np.polyfit(indices, log_h, 1)[0])
+
+        # Harmonic-to-Noise Ratio (HNR)
+        # Sum of all harmonic powers vs remaining power in the 200-3500 Hz range
+        harmonics_sum = sum(harmonic_powers)
+        noise_energy = max(total_audible - harmonics_sum, 1e-12)
+        hnr_db = float(10.0 * np.log10(harmonics_sum / noise_energy))
     
     # Carrier band vs outside carrier band
     carrier_mask = (freqs >= CARRIER_LOW) & (freqs <= CARRIER_HIGH)
@@ -173,7 +178,7 @@ def extract_swarm_modulation(wave: np.ndarray, sr: int = SR) -> dict[str, float]
         # Entropy of modulation spectrum in 2-40 Hz
         p_mod = env_fft[mod_mask] / (np.sum(env_fft[mod_mask]) + 1e-12)
         p_mod = p_mod[p_mod > 1e-12]
-        mod_entropy = float(-np.sum(p_mod * np.log(p_mod)) / np.log(len(p_mod)))
+        mod_entropy = 0.0 if len(p_mod) <= 1 else float(-np.sum(p_mod * np.log(p_mod)) / np.log(len(p_mod)))
     else:
         peak_mod_hz = 0.0
         mod_entropy = 1.0

@@ -1,0 +1,11 @@
+{
+  "kind": "authorized_document_revision",
+  "reason": "User requested the existing Google Slides and notebook be updated with all new methods and results.",
+  "files": {
+    "notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb": {
+      "original_sha256": "40281a404369f58ddb50b6ae7eaae4a8bbe7a80aaeec17e73bfb1c800a3f60c7",
+      "current_sha256": "275c625fd2ff923bb3f41bc3b067195e0486a118cdb27511c2a4c60cb7774108"
+    }
+  },
+  "scientific_weights_modified": false
+}

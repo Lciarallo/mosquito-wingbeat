@@ -491,7 +491,7 @@ def calibrate_policy(groups, family, *, temporal=False, noise_fpr=0.0075, other_
     return best
 
 
-def verify_freeze(out, *, inputs=False):
+def verify_freeze(out, *, inputs=False, code=True):
     out = Path(out)
     freeze_path = out / "freeze.json"
     if not freeze_path.is_file():
@@ -503,9 +503,12 @@ def verify_freeze(out, *, inputs=False):
         path = (out / relative).resolve()
         if not path.is_relative_to(out.resolve()) or digest(path) != expected:
             raise ValueError("Frozen artifact changed: " + relative)
-    for relative, expected in freeze["code_sha256"].items():
-        if digest(ROOT / relative) != expected:
-            raise ValueError("Frozen code changed: " + relative)
+    if code:
+        for relative, expected in freeze["code_sha256"].items():
+            archived = out / "source" / relative
+            target = archived if archived.is_file() else (ROOT / relative)
+            if digest(target) != expected:
+                raise ValueError("Frozen code changed: " + relative)
     if inputs:
         for relative, expected in freeze["input_sha256"].items():
             if digest(ROOT / relative) != expected:

@@ -21,7 +21,7 @@ from sklearn.svm import SVC
 from threadpoolctl import threadpool_limits
 
 from pattern_classifiers import (SpectrogramCNN, AcousticMLP, source_class_weights,
-    source_class_loss, source_class_score, assert_partitions, temporal_statistics)
+    source_class_loss, source_class_score, assert_partitions, temporal_statistics, require)
 from torres_lstm import digest, predict_probabilities
 from train_ternary_lstm import GroupPool
 from ternary_protocol import calibrate_policy, apply_policy
@@ -192,7 +192,7 @@ def freeze(d,frame,fit,val,test,dev,selection,filename):
     write(d/'selection.json',selection)
     part=frame[['row_id','group','pcm_block','domain','true_label','window_target','fold']].copy()
     part['role']='test';part.loc[fit,'role']='fit';part.loc[val,'role']='validation'
-    part.to_csv(d/'partitions.csv.gz',index=False)
+    part.to_csv(d/'partitions.csv.gz',index=False,compression={'method':'gzip','mtime':0})
     write(d/'freeze.json',dict(before_test_inference=True,model_sha256=digest(d/filename),
         selection_sha256=digest(d/'selection.json'),fit_rows=dev.tolist(),
         scaler_sha256=digest(d/'scaler.npz') if filename.endswith('.pt') else None))
@@ -208,11 +208,13 @@ def finish(d,frame,p,rule,fold):
 
 
 def summarize(out):
+    out=Path(out)
     if not all((out/f'outer_{f}'/n/'complete.json').exists() for f in range(5) for n in NAMES):return
+    expected_groups=int(pd.read_csv(out/'segments.csv.gz',low_memory=False).group.nunique()) if (out/'segments.csv.gz').is_file() else 1794
     all_groups={}; selections=[]
     for name in NAMES:
         g=pd.concat([pd.read_csv(out/f'outer_{f}'/name/'group_predictions.csv') for f in range(5)],ignore_index=True)
-        assert len(g)==g.group.nunique()==1794
+        require(len(g)==g.group.nunique()==expected_groups,f'OOF group coverage mismatch for {name}')
         g.to_csv(out/f'{name}_oof.csv',index=False);all_groups[name]=g
     chosen=[]
     for fold in range(5):
@@ -224,22 +226,63 @@ def summarize(out):
     for name,g in all_groups.items():
         report[name]={rule:{key:metrics(s,s[rule+'_prediction']) for key,s in [('all',g),('original_corpus',g[g.source.ne('torres')]),*list(g.groupby('source'))]} for rule in ['argmax','calibrated']}
     write(out/'metrics.json',report);write(out/'model_selection.json',selections)
-    write(out/'complete.json',dict(complete=True,models=5,folds=5,examples_per_model=1794))
+    write(out/'complete.json',dict(complete=True,models=5,folds=5,examples_per_model=expected_groups))
+
+
+def finalize_model(out, frame, raw, stats, device):
+    out=Path(out)
+    require((out/'complete.json').is_file() and json.loads((out/'complete.json').read_text())['complete'],'Completed 5-fold evaluation is required before finalizing model.')
+    scores={name:float(np.mean([json.loads((out/f'outer_{fold}'/name/'selection.json').read_text())['validation_score'] for fold in range(5)])) for name in NAMES}
+    name=max(NAMES,key=lambda n:scores[n]);d=out/'final';d.mkdir(parents=True,exist_ok=True)
+    if (d/'manifest.json').exists():
+        return json.loads((d/'manifest.json').read_text())
+    write(d/'selection.json',dict(model=name,mean_inner_validation_scores=scores,
+        criterion='source/class-balanced accuracy from inner folds only; retrospective training candidate'))
+    oof=pd.read_csv(out/f'{name}_oof.csv')
+    calibrated_rule=calibrate_policy(oof,'lr',temporal=False)
+    indices=np.arange(len(frame))
+    if name in ['mlp','cnn']:
+        features=raw if name=='cnn' else stats
+        epochs=int(np.median([json.loads((out/f'outer_{fold}'/name/'selection.json').read_text())['best_epoch'] for fold in range(5)]))
+        x=normalize(features,indices,d/'scaler.npz');model,_=train_nn(name,frame,x,indices,None,device,d,SETTINGS['seed'],epochs=epochs)
+        torch.save(dict(name=name,config=model.config,state_dict={k:v.detach().cpu() for k,v in model.state_dict().items()},rule=calibrated_rule),d/'model.pt')
+        manifest=dict(model=name,model_sha256=digest(d/'model.pt'),scaler_sha256=digest(d/'scaler.npz'),epochs=epochs)
+    else:
+        candidates=GRIDS[name];averages=[]
+        for config in candidates:
+            vals=[]
+            for fold in range(5):
+                selection=json.loads((out/f'outer_{fold}'/name/'selection.json').read_text())
+                vals.extend(v['score'] for v in selection['candidates'] if v['configuration']==config)
+            averages.append(np.mean(vals))
+        config=candidates[int(np.argmax(averages))];scaler=StandardScaler().fit(stats)
+        with threadpool_limits(limits=4):
+            model=factory(name,config).fit(scaler.transform(stats),frame.window_target.to_numpy(int),sample_weight=source_class_weights(frame))
+        joblib.dump(dict(model=model,scaler=scaler,rule=calibrated_rule,name=name),d/'model.joblib',compress=3)
+        manifest=dict(model=name,model_sha256=digest(d/'model.joblib'),configuration=config)
+    manifest.update(rule='argmax',calibrated_rule=calibrated_rule,training_groups=int(frame.group.nunique()),
+        training_windows=len(frame),mean_inner_validation_scores=scores,
+        frontend='179time x16 lowfrequencyHTKMel approximate author frontend; stats80forML/MLP',
+        final_model_has_no_new_independent_test=True,not_field_validated=True)
+    write(d/'manifest.json',manifest)
+    return manifest
 
 
 def main():
+    from verify_pattern_classifiers import resolve_document_revision, verify_protected_files
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--reference',type=Path,required=True,help='Directory with segments.csv.gz, feature_cache.json, classical_features.npy')
     parser.add_argument('--sequences',type=Path,required=True,help='Real common-front-end sequence cache, .npy')
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--stage',choices=['ml','neural','all'],default='all')
+    parser.add_argument('--document-revision',type=Path,help='Explicit receipt for the authorized notebook update; never permits model/data changes.')
     args=parser.parse_args();out=args.out;out.mkdir(parents=True,exist_ok=True);torch.set_num_threads(4)
     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     frame=pd.read_csv(args.reference/'segments.csv.gz',low_memory=False)
     raw=np.load(args.sequences,mmap_mode='r');stats=np.load(args.reference/'classical_features.npy',mmap_mode='r')
-    assert len(frame)==len(raw)==len(stats) and raw.shape[1:]==(179,16)
-    cache=json.loads((args.reference/'feature_cache.json').read_text());assert digest(args.sequences)==cache['sha256']
-    assert frame.group.nunique()==1794 and frame.groupby('group').true_label.nunique().max()==1
+    require(len(frame)==len(raw)==len(stats) and raw.shape[1:]==(179,16),'Input feature shapes do not align with segment table.')
+    cache=json.loads((args.reference/'feature_cache.json').read_text());require(digest(args.sequences)==cache['sha256'],'Sequence cache SHA-256 mismatch.')
+    require(frame.group.nunique()==1794 and frame.groupby('group').true_label.nunique().max()==1,'Invalid group count or mixed group labels.')
     manifest=dict(settings=SETTINGS,grids=GRIDS,models=NAMES,
         selection='inner source/class-balanced group accuracy; neural epochs by source/class-balanced group log loss',
         primary_rule='argmax fixed before test; calibrated secondary',
@@ -248,15 +291,25 @@ def main():
         segments_sha256=digest(args.reference/'segments.csv.gz'),features_sha256=digest(args.reference/'classical_features.npy'),
         code_sha256={p:digest(ROOT/p) for p in ['pattern_classifiers.py','train_pattern_classifiers.py']},
         protected_sha256=json.loads((args.reference/'protocol.json').read_text())['protected_sha256'])
-    if (out/'protocol.json').exists():assert json.loads((out/'protocol.json').read_text())==manifest
-    else:write(out/'protocol.json',manifest)
-    frame.to_csv(out/'segments.csv.gz',index=False)
+    revision=resolve_document_revision(args.document_revision)
+    verify_protected_files(ROOT,manifest['protected_sha256'],revision)
+    if (out/'protocol.json').exists():
+        require(json.loads((out/'protocol.json').read_text())==manifest,'Existing protocol.json does not match current manifest.')
+    else:
+        snapshot=out/'source_snapshot';snapshot.mkdir(parents=True,exist_ok=True)
+        for p in ['pattern_classifiers.py','train_pattern_classifiers.py']:
+            (snapshot/p).write_bytes((ROOT/p).read_bytes())
+        write(out/'protocol.json',manifest)
+    if not (out/'segments.csv.gz').exists():
+        frame.to_csv(out/'segments.csv.gz',index=False,compression={'method':'gzip','mtime':0})
     for fold in range(5):
         for name in (NAMES[:3] if args.stage=='ml' else NAMES[3:] if args.stage=='neural' else NAMES):
             if name in NAMES[:3]:ml_context(name,fold,frame,stats,out)
             else:neural_context(name,fold,frame,raw,stats,out,device)
     summarize(out)
-    for path,sha in manifest['protected_sha256'].items():assert digest(ROOT/path)==sha
+    if (out/'complete.json').exists():
+        finalize_model(out,frame,raw,stats,device)
+    verify_protected_files(ROOT,manifest['protected_sha256'],revision)
 
 
 if __name__=='__main__':main()

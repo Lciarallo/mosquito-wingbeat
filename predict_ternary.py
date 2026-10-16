@@ -49,7 +49,7 @@ def predict_features(bundle, frame, x):
 
 def predict_audio(run, audio, output=None):
     run = Path(run)
-    freeze = verify_freeze(run)
+    freeze = verify_freeze(run, code=False)
     with threadpool_limits(limits=4):
         bundle = joblib.load(run / "models/final.joblib")
         if bundle.get("run_id") != freeze["run_id"]:

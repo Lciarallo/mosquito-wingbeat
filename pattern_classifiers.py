@@ -72,6 +72,11 @@ def source_class_score(groups, prediction):
     return float(table.groupby(['source', 'true_label']).correct.mean().mean())
 
 
+def require(condition, message='Verification check failed.'):
+    if not condition:
+        raise ValueError(message)
+
+
 def assert_partitions(frame, fit, validation, test):
     for a, b in [(fit, validation), (fit, test), (validation, test)]:
         for column in ['group', 'pcm_block']:

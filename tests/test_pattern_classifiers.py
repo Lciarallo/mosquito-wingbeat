@@ -85,3 +85,62 @@ def test_document_revision_receipt_cannot_authorize_changed_weights(tmp_path):
     weights.write_bytes(b'changed')
     receipt['files']['weights.pt']=dict(original_sha256=expected['weights.pt'],current_sha256=digest(weights))
     with pytest.raises(ValueError,match='scientific artifact'):verify_protected_files(tmp_path,expected,receipt)
+
+
+def test_full_miniature_pattern_pipeline_finalize_verify_and_predict(tmp_path,monkeypatch):
+    import soundfile as sf
+    import predict_pattern
+    import verify_pattern_classifiers
+    from torres_lstm import digest
+    torch.set_num_threads(2)
+    monkeypatch.setitem(study.SETTINGS,'max_epochs',1)
+    monkeypatch.setitem(study.SETTINGS,'batch_size',16)
+    monkeypatch.setitem(study.GRIDS,'svm_rbf',[dict(C=1.,gamma='scale')])
+    monkeypatch.setitem(study.GRIDS,'extra_trees',[dict(min_samples_leaf=2)])
+    monkeypatch.setitem(study.GRIDS,'histgb',[dict(l2_regularization=1.)])
+    f=tiny_frame();rng=np.random.default_rng(11)
+    raw=rng.normal(size=(len(f),15,16)).astype('float32')
+    stats=rng.normal(size=(len(f),80)).astype('float32')
+    ref=tmp_path/'ref';ref.mkdir()
+    out=tmp_path/'out';out.mkdir()
+    f.to_csv(ref/'segments.csv.gz',index=False,compression={'method':'gzip','mtime':0})
+    f.to_csv(out/'segments.csv.gz',index=False,compression={'method':'gzip','mtime':0})
+    np.save(ref/'classical_features.npy',stats)
+    seq_path=tmp_path/'sequences.npy';np.save(seq_path,raw)
+    study.write(ref/'feature_cache.json',dict(sha256=digest(seq_path),identity=dict(shape=list(raw.shape))))
+    snapshot=out/'source_snapshot';snapshot.mkdir()
+    for p in ['pattern_classifiers.py','train_pattern_classifiers.py']:
+        (snapshot/p).write_bytes((study.ROOT/p).read_bytes())
+    study.write(out/'protocol.json',dict(
+        segments_sha256=digest(ref/'segments.csv.gz'),
+        features_sha256=digest(ref/'classical_features.npy'),
+        code_sha256={p:digest(snapshot/p) for p in ['pattern_classifiers.py','train_pattern_classifiers.py']},
+        protected_sha256={}))
+    for fold in range(5):
+        for name in study.NAMES:
+            if name in study.NAMES[:3]:
+                study.ml_context(name,fold,f,stats,out)
+            else:
+                study.neural_context(name,fold,f,raw,stats,out,torch.device('cpu'))
+    study.summarize(out)
+    assert (out/'complete.json').is_file()
+    manifest=study.finalize_model(out,f,raw,stats,torch.device('cpu'))
+    assert (out/'final'/'manifest.json').is_file()
+    assert isinstance(manifest['calibrated_rule'],dict)
+    verified=verify_pattern_classifiers.verify_run(out,ref,seq_path,device=torch.device('cpu'))
+    assert verified['complete'] and verified['group_coverage_per_model']==15
+    wav_path=tmp_path/'sample.wav'
+    wave=rng.normal(scale=0.05,size=47616+8000).astype('float32')
+    sf.write(wav_path,wave,48000)
+    seqs=predict_pattern.audio_sequences(wav_path)
+    assert len(seqs)==1
+    pred_argmax=predict_pattern.predict(out/'final',wav_path,rule='argmax')
+    pred_cal=predict_pattern.predict(out/'final',wav_path,rule='calibrated')
+    assert pred_argmax['windows']==1 and pred_argmax['rule']=='argmax'
+    assert pred_cal['windows']==1 and pred_cal['rule']=='calibrated'
+    bad_manifest=dict(manifest,model_sha256='0'*64)
+    study.write(out/'final'/'manifest.json',bad_manifest)
+    with pytest.raises(ValueError,match='SHA-256'):
+        predict_pattern.predict(out/'final',wav_path)
+    with pytest.raises(ValueError,match='Final model SHA-256'):
+        verify_pattern_classifiers.verify_run(out,ref,seq_path,device=torch.device('cpu'))

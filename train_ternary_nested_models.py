@@ -170,6 +170,10 @@ def train(out, *, outer_splits=5, inner_splits=4, threads=4):
     stats["unique_pcm_blocks"] = int(frame.pcm_block.nunique())
     json_write(out / "dataset_statistics.json", stats)
     code_hashes = {name: digest(ROOT / name) for name in CODE_FILES}
+    source_dir = out / "source"
+    source_dir.mkdir(parents=True, exist_ok=True)
+    for name in CODE_FILES:
+        (source_dir / name).write_bytes((ROOT / name).read_bytes())
     protocol = {
         "schema_version": 1, "run_id": run_id, "created_utc": now(), "seed": SEED,
         "outer_splits": outer_splits, "inner_splits": inner_splits, "gammas": [0.5, 0.75],
