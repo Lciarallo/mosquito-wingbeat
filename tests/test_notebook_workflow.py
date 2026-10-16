@@ -21,6 +21,7 @@ def test_notebook_executes_without_training_or_local_experiment_files(tmp_path):
              'data/metadata/ternary_neural_reference.json',
              'data/metadata/ternary_segments.csv.gz',
              'data/metadata/known_recording_groups.csv']
+    names += ['pattern_reporting.py','data/metadata/pattern_classifier_reference.json']
     for name in names:
         target = tmp_path / name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -33,6 +34,8 @@ ns={'__name__':'__main__','display':display}
 for cell in nb['cells']:
     if cell['cell_type']=='code': exec(compile(''.join(cell['source']),'notebook','exec'),ns)
 assert not ns['RUN_NEW_TRAINING'] and not ns['RUN_NEURAL_TRAINING']
+assert not ns['RUN_PATTERN_TRAINING'] and not ns['RUN_PATTERN_VERIFY']
+assert ns['PATTERN_REFERENCE']['groups']==1794
 assert ns['TRAINED_RUN'] is None and ns['NEURAL_RUN'] is None
 assert len(ns['comparison_table'](ns['NEURAL_REFERENCE']['metrics']))==5
 from pathlib import Path
@@ -53,6 +56,22 @@ def test_historical_reference_metrics_reconcile_with_confusion_counts():
         assert row['accuracy'] == pytest.approx(cm.trace() / cm.sum())
         assert row['aedes_recall'] == pytest.approx(cm[2, 2] / cm[2].sum())
     assert not reference['protocol_summary']['pretrained_infection_weights_used']
+
+
+def test_current_pattern_reference_reconciles_counts_and_all_source_metrics():
+    reference=json.loads((ROOT/'data/metadata/pattern_classifier_reference.json').read_text())
+    assert sum(v['aedes'] for v in reference['source_counts'])==360
+    assert sum(v['total'] for v in reference['source_counts'])==1794
+    assert all(v['test_aedes']==72 and v['development_aedes']==288 for v in reference['folds'])
+    for model in reference['metrics'].values():
+        for rule in model.values():
+            for metric in rule.values():
+                cm=np.asarray(metric['confusion_matrix'])
+                assert cm.sum()==metric['n']
+                assert metric['accuracy']==pytest.approx(cm.trace()/cm.sum())
+                assert cm[2,2]==metric['aedes_tp']
+    assert len(reference['verification']['contexts'])==25
+    assert len(reference['source_holdout_verification']['contexts'])==8
 
 
 def test_missing_neural_training_inputs_fail_before_creating_output(tmp_path):

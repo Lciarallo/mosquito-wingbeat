@@ -1,22 +1,25 @@
 # Detector acústico ternário de mosquitos
 
-O ponto de entrada é o [notebook de treinamento, teste e aplicação](notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb). Ele reúne **cascata clássica, LSTM e Bi-LSTM** para classificar Aedes aegypti, outro mosquito e ruído.
+O ponto de entrada é o [notebook de treinamento, teste e aplicação](notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb). Ele explica **CNN, MLP, SVM, Extra Trees e HistGradientBoosting** para classificar Aedes aegypti, outro mosquito e ruído. O experimento atual usa 1.794 grupos/exemplos, com 360 Aedes. Cascata, LSTM e Bi-LSTM estão preservadas em um apêndice histórico de outro corpus.
 
 ## O que está incluído
 
 - Notebook didático com conceitos, métricas históricas, matrizes de confusão, treino opcional e aplicação em WAV.
 - Módulos essenciais da cascata e das duas redes profundas, com divisão por grupos/blocos PCM, normalização, seleção interna, congelamento e verificação.
 - Metadados de janelas/grupos e resultados neurais históricos compactos em `data/metadata/`.
+- Retrato verificado do experimento atual, com resultados por dataset, curvas, avaliação por fonte e 16 gráficos incorporados no notebook executado.
 - Testes de isolamento, arquitetura, integridade e execução do notebook sem arquivos locais ignorados.
 
 ## Executar o notebook
 
 1. Crie um ambiente Python e instale `requirements.txt`. PyTorch está incluído; para GPU, use uma distribuição compatível com sua máquina. CPU também é suportada.
 2. Execute as células em ordem. Os resultados de referência aparecem sem baixar áudios ou modelos e **sem iniciar treinamento**.
+   A parte principal mostra o experimento atual com 360 exemplos Aedes; o apêndice identifica explicitamente o corpus antigo com 60 grupos Aedes.
 3. Para uma nova cascata, prepare as entradas locais e habilite `RUN_NEW_TRAINING`.
 4. Para treinar **LSTM e Bi-LSTM**, habilite `RUN_NEURAL_TRAINING`. As redes usam a rodada clássica criada na sessão ou `NEURAL_REFERENCE_RUN`, que deve apontar para uma rodada concluída com cinco dobras externas. A mesma população e as mesmas partições são usadas na comparação.
 5. Para aplicar as redes existentes, configure `EXISTING_NEURAL_RUN` com uma rodada neural concluída e `AUDIO_PATH` com um WAV. O notebook aplica as duas arquiteturas, sem retreinar nem ajustar limiares.
 6. `VERIFY_NEURAL_RUN=True` reproduz as previsões OOF da rodada local. Essa verificação é opcional e pode demorar; não sobrescreve resultados existentes.
+7. Para os modelos atuais, use `RUN_PATTERN_TRAINING` (novo treino), `RUN_PATTERN_VERIFY` (reprodução auditada) e `PATTERN_AUDIO_PATH` (inferência com os pesos finais locais). Os três fluxos estão explicados passo a passo no caderno e ficam desativados por padrão.
 
 ### Entradas locais para treinar
 
@@ -37,6 +40,35 @@ Esses números são históricos, não recalculados ao abrir o caderno. O corpus 
 ## Testes
 
 Execute `python -m pytest -q tests/test_ternary_verified.py tests/test_ternary_lstm.py tests/test_notebook_workflow.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
+
+## Novos classificadores sem recorrência
+
+`pattern_classifiers.py` e `train_pattern_classifiers.py` implementam **CNN 2D, MLP, SVM RBF, Extra Trees e HistGradientBoosting** para a tarefa ternária. A CNN aprende padrões no espectrograma; as demais técnicas recebem 80 estatísticas Mel por janela. LSTM também permite classificação, mas não é necessária para essa abordagem.
+
+O experimento local `results/pattern_classifiers_2026_10_15/` usa as cinco dobras por grupo da base unificada: 1.794 grupos/exemplos, incluindo os 300 espectrogramas reais de Torres. Infectados e saudáveis são Aedes; não se prevê infecção. O treino equilibra fonte/classe. Parâmetros, épocas e arquitetura são escolhidos na validação interna, com normalização ajustada apenas no treino. Notebook e apresentação foram atualizados; os pesos e resultados científicos anteriores permanecem preservados.
+
+`data/metadata/pattern_classifier_reference.json` contém o retrato verificado usado pelo notebook; `pattern_reporting.py` produz os gráficos a partir desses números. A entrada de sequência real incluída no retrato serve somente para a figura didática, não substitui o cache para treinar. Uma revisão autorizada do notebook é registrada por recibo próprio para não alterar o protocolo original: `verify_pattern_classifiers.py --document-revision caminho/recibo.json` aceita somente a mudança documental explicitamente registrada e continua rejeitando qualquer alteração de pesos protegidos.
+
+Torres não fornece todos os áudios brutos. Esta rodada usa um frontend comum **aproximado** de 179 instantes × 16 bandas abaixo de 4 kHz, diferente da entrada das redes originais. A acurácia não deve ser comparada diretamente aos 90,03% históricos. O relatório local separa Aedes originais de Torres, falsos alarmes e testes exploratórios deixando uma fonte inteira fora do treino.
+
+Para executar, prepare explicitamente `segments.csv.gz` (com `window_target`, `true_label`, `domain`, `group`, `pcm_block`, `fold`, `row_id`), `classical_features.npy`, `feature_cache.json` e `protocol.json` da entrada comum. O JSON do cache contém a identidade e SHA-256 do `.npy` de sequências; o protocolo contém `protected_sha256` dos artefatos preservados. A rodada local `results/torres_tres_tecnicas_2026_10_15/` contém essas entradas, e seu gerador e dependências estão arquivados junto aos experimentos. Esses dados/caches não são distribuídos no Git.
+
+```bash
+python train_pattern_classifiers.py \
+  --reference results/torres_tres_tecnicas_2026_10_15 \
+  --sequences /tmp/mosquito_three_models_sequences_2026_10_15.npy \
+  --out results/pattern_classifiers_2026_10_15
+python verify_pattern_classifiers.py \
+  --reference results/torres_tres_tecnicas_2026_10_15 \
+  --sequences /tmp/mosquito_three_models_sequences_2026_10_15.npy \
+  --out results/pattern_classifiers_2026_10_15
+python predict_pattern.py \
+  --model-dir results/pattern_classifiers_2026_10_15/final \
+  --audio caminho/gravacao.wav
+python -m pytest -q tests/test_pattern_classifiers.py
+```
+
+`--stage ml` e `--stage neural` permitem executar as famílias separadamente. O treino não publica nem substitui modelos históricos. A inferência exige pesos finais e normalizador, além do manifesto de integridade; o comando de treino gera os modelos por dobra, enquanto o ajuste final está documentado no experimento local. Os escores de saída não representam probabilidades de campo calibradas.
 
 ## Limites dos resultados
 
