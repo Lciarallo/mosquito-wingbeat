@@ -1,0 +1,61 @@
+{
+  "candidate": "A_perch_white",
+  "eligible": false,
+  "candidates": [
+    {
+      "candidate": "A_perch_plain",
+      "precision": 0.017543859649122806,
+      "recall": 0.0009208103130755064,
+      "auroc": 0.5401695185480954,
+      "other_fpr": 0.006256517205422315,
+      "noise_fpr": 0.0,
+      "eligible": false
+    },
+    {
+      "candidate": "A_perch_white",
+      "precision": 0.05555555555555555,
+      "recall": 0.0009208103130755064,
+      "auroc": 0.6271153927449984,
+      "other_fpr": 0.0017379214459506429,
+      "noise_fpr": 0.0,
+      "eligible": false
+    },
+    {
+      "candidate": "B_mmd_plain",
+      "precision": 0.029411764705882356,
+      "recall": 0.0027624309392265192,
+      "auroc": 0.5741300416787353,
+      "other_fpr": 0.010775112964893988,
+      "noise_fpr": 0.0,
+      "eligible": false
+    },
+    {
+      "candidate": "B_mmd_white",
+      "precision": 0.03333333333333333,
+      "recall": 0.0009208103130755064,
+      "auroc": 0.6061148592741858,
+      "other_fpr": 0.00329890706687498,
+      "noise_fpr": 0.0,
+      "eligible": false
+    },
+    {
+      "candidate": "C_wingbeat",
+      "precision": 0.10077519379844961,
+      "recall": 0.023941068139963165,
+      "auroc": 0.507952687188001,
+      "other_fpr": 0.025462565883830928,
+      "noise_fpr": 0.0,
+      "eligible": false
+    },
+    {
+      "candidate": "D_tabular",
+      "precision": 0.3333333333333333,
+      "recall": 0.0009208103130755064,
+      "auroc": 0.6008165056690332,
+      "other_fpr": 0.0,
+      "noise_fpr": 0.0,
+      "eligible": false
+    }
+  ],
+  "reason": "No candidate met the development criteria; highest-AUROC descriptive fallback only"
+}

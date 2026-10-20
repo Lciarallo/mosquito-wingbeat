@@ -1,0 +1,2 @@
+# In addition to the root requirements.txt; only needed for Perch extraction.
+onnxruntime>=1.20,<2

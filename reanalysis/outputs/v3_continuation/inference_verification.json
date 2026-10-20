@@ -1,0 +1,18 @@
+{
+  "audio": "data/raw/Aedes aegypti/Aedes aegypti/Auburn_T209/Voice0121 AEGY ui.wav",
+  "source_role": "train",
+  "file_id": 0,
+  "expected_cached_label": "uncertain",
+  "cached_score": 0.6409289836883545,
+  "live": {
+    "label": "uncertain",
+    "aedes_score": 0.6409289836883545,
+    "presence_score": 0.9993090629577637,
+    "threshold": 0.4782800078392029,
+    "selected_model": "A_perch_white",
+    "development_eligible": false,
+    "field_validated": false,
+    "scores_are_not_field_probabilities": true
+  },
+  "cache_and_live_inference_match": true
+}

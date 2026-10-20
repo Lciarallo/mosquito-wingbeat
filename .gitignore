@@ -66,3 +66,6 @@ __pycache__/
 /reports/*
 !/reports/reanalise_v2.md
 !/tests/test_reanalysis_v2.py
+!/tests/test_v3_continuation.py
+!/reports/analise_de_lacunas_continuacao_v3.md
+!/reports/continuacao_v3.md

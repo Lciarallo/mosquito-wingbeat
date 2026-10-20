@@ -1,0 +1,38 @@
+{
+  "manifest_sha256": "a9cf31e6816ed51d9b8b56390b7b840c05050c297a80d4e6649daae04cef7479",
+  "model_sha256": "bf0c8467a924cb074663970ca4a0ab1e143602121930209657d0dff5d5cefa1f",
+  "code_sha256": "d2a60b2e0729aa015bf8e8b9d493143267a7b2c4a3a3d31ca4c729861effa11f",
+  "frontend_sha256": "0830f0e5fb9092472955225f1e74aa358bf2da258703c856e9610d65db06e098",
+  "whitening_code_sha256": "f5065eb7e216b58fe5535ac7c9ac4f8a0ef3d321f8a818e9610b5042d770eebb",
+  "block_size": 64,
+  "aggregation": "mean embedding per file; mean one-second acoustic vectors per file",
+  "input_gain_rms": 0.05,
+  "n_files": 11038,
+  "n_chunks": 23944,
+  "shapes": {
+    "file_ids": [
+      11038
+    ],
+    "perch_plain": [
+      11038,
+      1536
+    ],
+    "perch_white": [
+      11038,
+      1536
+    ],
+    "tabular_plain": [
+      11038,
+      89
+    ],
+    "tabular_white": [
+      11038,
+      89
+    ],
+    "n_chunks": [
+      11038
+    ]
+  },
+  "features_sha256": "d7bbe6b3066fe7a3d8f57f99387fc02d4bdf17a6c05d17095052b76b9bd2de63",
+  "complete": true
+}

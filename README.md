@@ -1,9 +1,13 @@
 # Detector acústico ternário de mosquitos
 
-> **Reanálise v2 (20/10/2026) — substitui as conclusões abaixo.** Uma auditoria mostrou três problemas nos resultados anteriores:
+> **Continuação v3 concluída (20/10/2026).** Foram comparados seis candidatos, com Perch congelado, MLP/MMD, descritores do batimento e HistGB. Nenhum atingiu os critérios de desenvolvimento. O candidato descritivo final detectou **0/197 Aedes** com o portão de concordância; sem esse portão, **17/197**, com **20/371** outros mosquitos chamados Aedes. A rodada não justifica substituir o modelo anterior para uso operacional. [Relatório e limites](reports/continuacao_v3.md) · [Resultados auditáveis](reanalysis/outputs/v3_continuation/).
+>
+> Os experimentos anteriores permanecem preservados como resultados retrospectivos dos respectivos corpora e protocolos. As novas rodadas ampliam a investigação de generalização; elas não isolam o efeito de cada mudança de arquitetura, processamento e composição dos dados.
+
+> **Reanálise v2 (20/10/2026).** Uma auditoria identificou três limitações relevantes para generalização:
 > - **Atalho de fonte.** Com a fonte inteira fora do treino, a detecção de Aedes caía para 0–12%.
 > - **Rótulo igual à fonte.** O Torres é 100% Aedes e o ESC-50 é 100% ruído.
-> - **Dobras por arquivo, não por sessão.** Por isso as cifras de 89–90% de acurácia e 98% de Aedes **não medem** reconhecimento de espécie em gravações novas.
+> - **Dobras por arquivo, não por sessão.** Por isso as cifras de 89–90% de acurácia e 98% de Aedes **não demonstram** reconhecimento em sessões, ambientes ou aparelhos novos.
 >
 > A reanálise usa protocolo pré-registrado (`reanalysis/protocol_v2.json`, congelado por SHA-256), um frontend comum (8 kHz, 100–3.400 Hz, ganho normalizado) e validação por **cluster** (sessão, laboratório+aparelho ou dia de gravação). Os intervalos de confiança vêm de bootstrap por cluster. O Torres sai do conjunto, porque não há áudio bruto e todos os exemplos são Aedes.
 >
@@ -16,10 +20,10 @@
 > | E2 · HumBug → Dryad | 0,79 [0,56–0,96] (HistGB) | ≤0,25 (chance 0,50) | 0–10% |
 > | E3 · MosquitoSong (externo, nunca visto) | ≤0,44 (abaixo do acaso) | ≤0,42 (chance 0,50) | 2–12% (CNN, HistGB, logística) |
 >
-> **Conclusão.** O critério declarado antes de rodar era IC inferior > acaso em E1 **e** E2. Nenhum modelo o cumpre nas duas direções, e todos falham no corpus externo.
+> **Conclusão da v2.** O critério declarado antes de rodar era IC inferior > acaso em E1 **e** E2. Nenhum modelo o cumpre nas duas direções, e todos falham no corpus externo.
 > - A origem da gravação continua decodificável dos atributos (acurácia balanceada de 0,96 ao distinguir Dryad de HumBug).
 > - Por oclusão de bandas, os modelos dependem principalmente da faixa de 130–280 Hz, abaixo do batimento de asa do Aedes.
-> - Hoje **não há evidência confiável** de que o detector reconheça *Ae. aegypti* em ambientes ou aparelhos novos. Ver [`reports/reanalise_v2.md`](reports/reanalise_v2.md).
+> - Essa rodada **não demonstrou confiabilidade operacional** em ambientes ou aparelhos novos. Ver [`reports/reanalise_v2.md`](reports/reanalise_v2.md). Decodificar a origem ou observar dependência de uma banda espectral não prova, por si só, que toda decisão use exclusivamente o aparelho ou o dataset.
 
 O ponto de entrada é o [notebook de treinamento, teste e aplicação](notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb). Ele explica **CNN, MLP, SVM, Extra Trees e HistGradientBoosting** para classificar Aedes aegypti, outro mosquito e ruído. O experimento atual usa 1.794 grupos/exemplos, com 360 Aedes. Cascata, LSTM e Bi-LSTM estão preservadas em um apêndice histórico de outro corpus.
 
