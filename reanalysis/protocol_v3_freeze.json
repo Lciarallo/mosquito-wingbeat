@@ -1,0 +1,8 @@
+{
+  "frozen_utc": "2026-10-20T20:44:05.843998+00:00",
+  "protocol_v3_sha256": "eeef5d3e2d83d879f27e6d9396fffea14ded49fe2eb9c6ef61239b787b5b8db2",
+  "dedup_code_sha256": "a4811d97dbc8edcd319a8964c6b9ae80ac090da63ae24a0421c039589b7d14f0",
+  "embed_code_sha256": "f5065eb7e216b58fe5535ac7c9ac4f8a0ef3d321f8a818e9610b5042d770eebb",
+  "no_v3_model_fitted": true,
+  "stage1_dedup_links": "23a52df3db81758c5f8c7154d5cecc1d8d28477d2c5c221d85b97f34af82320f"
+}

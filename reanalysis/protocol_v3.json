@@ -1,0 +1,55 @@
+{
+  "protocol": "mosquito-wingbeat detector v3",
+  "registered": "2026-10-20, before any v3 model was fitted",
+  "user_priorities": {
+    "primary": "few false positives (precision of Aedes alerts) over sensitivity",
+    "accepted": "a short per-device/per-site calibration is acceptable"
+  },
+  "data": {
+    "pool": "v2 manifest (Dryad/Abuzz, HumBug-307, ESC-50, Pete noise, MosquitoSong, UFRGS-15) + BioDCASE 2026 CD-MSC development D1-D4 + full HumBugDB (Zenodo 4904800)",
+    "excluded": {
+      "biodcase_D5": "5000-sample 8 kHz snippets of the six Wingbeats species = optical-sensor Wingbeats database (Fanioudakis et al. 2018), not microphone audio",
+      "torres_2025": "no raw audio", "figshare": "optical", "unknown_species": "label undefined", "private_drive_audio": "private"
+    },
+    "deduplication": "reanalysis/v3_dedup.py: exact PCM hash + spectral-peak landmark matching (validated 15/15 on resampled crops; max 5 votes between distinct files; link threshold >=12 votes and >=3% of query hashes). Linked files are merged into one component; a component is the smallest unit that may be split.",
+    "corpus_of_origin": "each component is assigned to its original corpus (abuzz, humbug, mosquitosong, ufrgs, esc50, pete, or bdc_unknown when no link exists); BioDCASE domain labels are NOT used as domains because the stage-1 audit found D2 to contain 400 exact MosquitoSong files, D1 178 exact HumBug files, D4 167 exact Dryad/Abuzz files and species 8/9 clips copied across D1-D4",
+    "clusters": "v2 rules (Dryad lab+device, HumBug country|place|device|setting|day, MosquitoSong individual, ESC-50 clip); bdc_unknown files: one cluster per BioDCASE domain x species (conservative); a component spanning clusters merges them"
+  },
+  "locked_final_test": {
+    "definition": "every component that contains a BioDCASE-D3 or UFRGS file and no file from any training corpus (abuzz, humbug, mosquitosong). This is the UFRGS smartphone/cup corpus (Brazil): Ae. aegypti females, Ae. albopictus, non-Aedes, plus any other D3 clips meeting the rule",
+    "use": "evaluated exactly once, after the final configuration is frozen; never used for fitting, selection, thresholds or calibration except in the pre-declared k-shot calibration arm, whose calibration files are drawn by fixed seed and excluded from its metrics",
+    "note": "15 UFRGS files were already scored in v2; they are reported separately from the 190+ never-scored files"
+  },
+  "task": {
+    "stage1": "mosquito present vs no mosquito",
+    "stage2": "Aedes aegypti vs other mosquito, among files called mosquito",
+    "output": ["no_mosquito", "other_mosquito", "aedes_aegypti", "uncertain"],
+    "operating_point": "Aedes alert only if calibrated p(Aedes) >= tau; tau chosen on inner validation as the smallest value with FPR(other mosquito) <= 2% and FPR(noise) <= 1%",
+    "abstention": "agreement gate: if the embedding model and the wingbeat-descriptor model disagree on Aedes vs not-Aedes, output 'uncertain'"
+  },
+  "features": {
+    "perch": "Perch 2.0 frozen embedding (ONNX port, sha256 bf0c8467...), 8 kHz band-limited audio upsampled to 32 kHz, 5 s chunks, unit RMS (reanalysis/v3_embed.py)",
+    "perch_whitened": "same after per-recording noise-floor whitening (20th percentile STFT magnitude)",
+    "wingbeat": "v2 descriptors (f0 250-1000 Hz, harmonic ratios, centroid, bandwidth, flatness) on whitened audio",
+    "v2_tabular": "v2 log-mel statistics on whitened audio (baseline)"
+  },
+  "models": {
+    "A_logreg": "logistic regression on perch (C grid 0.01/0.1/1 by inner CV)",
+    "B_mlp_mmd": "1-hidden-layer MLP (256) on perch, cross-entropy + lambda*MMD (Gaussian kernel, median heuristic) between training corpora on the hidden layer, lambda grid 0/0.3/1; no backbone fine-tuning, no domain rebalancing",
+    "C_wingbeat": "logistic regression on wingbeat descriptors",
+    "D_v2_hgb": "v2 HistGradientBoosting on whitened v2 tabular features (reference)",
+    "weights": "each file total weight 1, classes equal total weight; corpora NOT rebalanced",
+    "aggregation": "file score = mean chunk log-probability, softmax"
+  },
+  "evaluation": {
+    "primary_LODO": "leave-one-corpus-out over Aedes-bearing training corpora {abuzz, humbug, mosquitosong}; noise corpora always in training; inner model selection by cluster-grouped 3-fold CV inside the training corpora",
+    "secondary_pooled": "5-fold StratifiedGroupKFold by cluster over all training corpora",
+    "kshot": "for each held-out corpus: k in {5,10,20} files per class from k distinct clusters when possible (seed 20261023, 5 repeats) refit only the classifier head with the calibration files weighted x5, threshold kept from the source model; evaluate on the remaining clusters",
+    "metrics": "Aedes precision, recall, FPR in other mosquito and in noise, coverage (non-uncertain fraction), AUROC Aedes-vs-rest, AUPRC, balanced accuracy; 95% CI by cluster bootstrap (2000)",
+    "decision_rule_for_final_config": "highest mean LODO Aedes precision at recall >= 0.2; ties by AUROC; chosen before opening the locked test"
+  },
+  "interpretation": {
+    "success": "on the locked test, Aedes precision CI lower bound > prevalence of Aedes in that test and FPR(other mosquito) <= 5%",
+    "no_field_claim": "laboratory recordings only"
+  }
+}
