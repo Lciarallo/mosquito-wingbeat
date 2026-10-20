@@ -1,5 +1,26 @@
 # Detector acústico ternário de mosquitos
 
+> **Reanálise v2 (20/10/2026) — substitui as conclusões abaixo.** Uma auditoria mostrou três problemas nos resultados anteriores:
+> - **Atalho de fonte.** Com a fonte inteira fora do treino, a detecção de Aedes caía para 0–12%.
+> - **Rótulo igual à fonte.** O Torres é 100% Aedes e o ESC-50 é 100% ruído.
+> - **Dobras por arquivo, não por sessão.** Por isso as cifras de 89–90% de acurácia e 98% de Aedes **não medem** reconhecimento de espécie em gravações novas.
+>
+> A reanálise usa protocolo pré-registrado (`reanalysis/protocol_v2.json`, congelado por SHA-256), um frontend comum (8 kHz, 100–3.400 Hz, ganho normalizado) e validação por **cluster** (sessão, laboratório+aparelho ou dia de gravação). Os intervalos de confiança vêm de bootstrap por cluster. O Torres sai do conjunto, porque não há áudio bruto e todos os exemplos são Aedes.
+>
+> Resultados por arquivo, com IC95%:
+>
+> | Avaliação | Melhor AUROC Aedes | Acurácia balanceada | Detecção de Aedes (argmax) |
+> |---|---|---|---|
+> | E1 · CV por cluster, todas as fontes | 0,91 [0,86–0,94] (HistGB) | 0,66 [0,62–0,71] | 18–53% (precisão 14–46%) |
+> | E2 · Dryad → HumBug | 0,84 [0,75–0,93] (CNN) | 0,61 [0,59–0,64] | 0–22,5% |
+> | E2 · HumBug → Dryad | 0,79 [0,56–0,96] (HistGB) | ≤0,25 (chance 0,50) | 0–10% |
+> | E3 · MosquitoSong (externo, nunca visto) | ≤0,44 (abaixo do acaso) | ≤0,42 (chance 0,50) | 2–12% (CNN, HistGB, logística) |
+>
+> **Conclusão.** O critério declarado antes de rodar era IC inferior > acaso em E1 **e** E2. Nenhum modelo o cumpre nas duas direções, e todos falham no corpus externo.
+> - A origem da gravação continua decodificável dos atributos (acurácia balanceada de 0,96 ao distinguir Dryad de HumBug).
+> - Por oclusão de bandas, os modelos dependem principalmente da faixa de 130–280 Hz, abaixo do batimento de asa do Aedes.
+> - Hoje **não há evidência confiável** de que o detector reconheça *Ae. aegypti* em ambientes ou aparelhos novos. Ver [`reports/reanalise_v2.md`](reports/reanalise_v2.md).
+
 O ponto de entrada é o [notebook de treinamento, teste e aplicação](notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb). Ele explica **CNN, MLP, SVM, Extra Trees e HistGradientBoosting** para classificar Aedes aegypti, outro mosquito e ruído. O experimento atual usa 1.794 grupos/exemplos, com 360 Aedes. Cascata, LSTM e Bi-LSTM estão preservadas em um apêndice histórico de outro corpus.
 
 ## O que está incluído

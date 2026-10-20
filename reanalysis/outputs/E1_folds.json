@@ -1,0 +1,32 @@
+[
+ {
+  "fold": 0,
+  "test_files": 349,
+  "test_clusters": 88,
+  "test_aedes_clusters": 1
+ },
+ {
+  "fold": 1,
+  "test_files": 348,
+  "test_clusters": 81,
+  "test_aedes_clusters": 4
+ },
+ {
+  "fold": 2,
+  "test_files": 348,
+  "test_clusters": 85,
+  "test_aedes_clusters": 1
+ },
+ {
+  "fold": 3,
+  "test_files": 348,
+  "test_clusters": 86,
+  "test_aedes_clusters": 3
+ },
+ {
+  "fold": 4,
+  "test_files": 352,
+  "test_clusters": 84,
+  "test_aedes_clusters": 1
+ }
+]

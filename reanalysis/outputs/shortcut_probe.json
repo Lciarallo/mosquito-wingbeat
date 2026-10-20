@@ -1,0 +1,41 @@
+{
+ "source_dryad_vs_humbug_mosquitoes": {
+  "logistic": {
+   "balanced_accuracy": 0.9180545094429102,
+   "auroc": 0.9777387229056826,
+   "n_files": 1073,
+   "n_clusters": 89,
+   "positives": 504
+  },
+  "histgb": {
+   "balanced_accuracy": 0.9603453566546712,
+   "auroc": 0.9937372722961476,
+   "n_files": 1073,
+   "n_clusters": 89,
+   "positives": 504
+  }
+ },
+ "native_8k_vs_44k_dryad_other": {
+  "logistic": {
+   "balanced_accuracy": 0.6900891136801541,
+   "auroc": 0.7308009909165979,
+   "n_files": 509,
+   "n_clusters": 32,
+   "positives": 336
+  },
+  "histgb": {
+   "balanced_accuracy": 0.7096924029727498,
+   "auroc": 0.7907376823561794,
+   "n_files": 509,
+   "n_clusters": 32,
+   "positives": 336
+  }
+ },
+ "legacy_features": {
+  "task": "source_dryad_vs_humbug_mosquitoes",
+  "model": "histgb",
+  "n_files": 1073,
+  "balanced_accuracy": 0.9863377688509498,
+  "auroc": 0.9990863949563422
+ }
+}

@@ -59,3 +59,10 @@ __pycache__/
 *.py[cod]
 *.log
 .DS_Store
+
+# Reanálise v2 (código, protocolo, saídas leves e relatório)
+!/reanalysis/
+!/reports/
+/reports/*
+!/reports/reanalise_v2.md
+!/tests/test_reanalysis_v2.py
