@@ -59,7 +59,17 @@ Uma rodada completa pode demorar bastante e cria uma pasta nova em `results/`. N
 
 ### Testes
 
-Execute `python -m pytest -q tests/test_ternary_verified.py tests/test_ternary_lstm.py tests/test_notebook_workflow.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
+Execute `python -m pytest -q`. O `pytest.ini` coleta seis arquivos versionados (70 testes):
+`test_ternary_verified.py`, `test_ternary_lstm.py`, `test_notebook_workflow.py`, `test_pattern_classifiers.py`, `test_reanalysis_v2.py` e `test_v3_continuation.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
+
+Outros arquivos `tests/test_*.py` existem apenas em cópias locais de trabalho e **não são versionados nem coletados**. Revisão de 22/10/2026, com `.venv-v3`:
+
+| Situação | Arquivos | Motivo de ficarem fora |
+|---|---|---|
+| Passam num clone limpo | `test_torres_lstm.py`, `test_aedes_classical.py` | Importam só módulos versionados. Candidatos a entrar na suíte (pendente de decisão). |
+| Passam só na cópia local | `test_species_preprocessing`, `test_notebook_transfer`, `test_nested_species`, `test_nested_species_v5`, `test_aedes_binary`, `test_expanded_protocol`, `test_large_audio_model`, `test_audio_preprocessing`, `test_multisource_protocol`, `test_publication_artifacts`, `test_ternary_synthetic`, `test_ternary_detector` | Dependem de módulos ou dados locais não versionados; falham num clone. |
+| Falham | `test_nested_species_v2`, `_v3`, `_v4`, `test_faithful_reproduction`, `test_drive_exclusion` | Conferem hashes de artefatos de 14/10 que mudaram depois (`.gitignore`, toolchain Arduino), carregam pickles de uma versão antiga do scikit-learn (`_loss`) ou exigem `firmware/README.md` e uma rodada clássica real. |
+| Não importam | `test_reliability`, `test_reproduction`, `test_research_audit`, `test_corrected_validation`, `test_cross_domain_strategies`, `test_sex_balanced_reliability` | Pedem `aedes_classical.raw_scores`, que não existe mais no módulo atual, ou o pacote `requests`. |
 
 ## Resultados históricos
 
