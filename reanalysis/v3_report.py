@@ -21,10 +21,27 @@ def percent(value):
     return "indefinido" if value is None else f"{100 * value:.2f}%"
 
 
-def interval(result, key):
+DEGENERATE_NOTE = "bootstrap degenerado: zero eventos; ver IC binomial descritivo"
+
+
+def degenerate(result, key):
+    """Cluster bootstrap collapses to [x, x] when the event never occurs (e.g. 0/197)."""
+    ci = result.get("ci95", {}).get(key)
+    return bool(ci) and ci[0] == ci[1]
+
+
+def interval(result, key, annotate=False):
     value = result["point"].get(key)
     ci = result.get("ci95", {}).get(key)
+    if ci and degenerate(result, key):
+        return percent(value) + (f" — {DEGENERATE_NOTE}" if annotate else " (bootstrap degenerado)")
     return percent(value) + (f" [{100 * ci[0]:.2f}–{100 * ci[1]:.2f}]" if ci else "")
+
+
+def binomial(result, key):
+    """Per-file binomial 95% CI, published as description only (files of a cluster are not independent)."""
+    ci = result.get("file_binomial_ci95_descriptive_only", {}).get(key)
+    return f"[{100 * ci[0]:.2f}–{100 * ci[1]:.2f}]" if ci else "—"
 
 
 def main():
@@ -51,10 +68,59 @@ def main():
         compact.append({key: record[key] for key in ["corpus", "k", "repeat", "available"]} |
                        (record["metrics"] if record["available"] else {"reason": record["reason"]}))
     pd.DataFrame(compact).drop(columns=["confusion", "class_clusters"], errors="ignore").to_csv(PUBLIC / "fewshot_summary.csv", index=False)
-    _plots(dev, final, predictions)
+    _plots(dev, final, predictions, annotate=True)
+    selected = selection["candidate"]
+    model_path = OUT / "final" / f"{selected}.joblib"
+    amendment = json.loads((PUBLIC / "technical_amendment_A3.json").read_text())
+    body = report_lines(final, dev, selection, fewshot, digest(model_path), amendment, annotate=True)
+    report_path = ROOT / "reports/continuacao_v3.md"
+    report_path.write_text("\n".join(body) + "\n")
+    delivery = dict(complete=True, report_sha256=digest(report_path),
+                    files={str(p.relative_to(ROOT)): digest(p) for p in PUBLIC.iterdir() if p.is_file()},
+                    selected=selected, success=final["success"], historical_weights_modified=False,
+                    notebook_modified=False)
+    write_json(OUT / "delivery_verification.json", delivery)
+    print(json.dumps(dict(report=str(report_path), selected=selected, success=final["success"]), indent=2))
+
+
+REASONS = {"No candidate met the development criteria; highest-AUROC descriptive fallback only":
+           "Nenhum candidato atingiu as metas no desenvolvimento; este foi congelado apenas para uma avaliação descritiva, pelo maior AUROC médio."}
+FEWSHOT_CORPORA = ["abuzz", "humbug", "mosquitosong", "final_locked"]
+
+
+def results_table(final, annotate):
+    """Final-test table. With annotate=True, degenerate cluster-bootstrap intervals are flagged and the per-file
+    binomial CI (descriptive only) is shown next to every rate; no number is recomputed."""
+    m, n = final["locked_mosquito"]["point"], final["locked_noise"]["point"]
+    lm, ln = final["locked_mosquito"], final["locked_noise"]
+    rows = [("Aedes detectados", f"{m['aedes_tp']}/{m['aedes_n']}", lm, "aedes_recall"),
+            ("Alertas corretos entre alertas Aedes", f"{m['aedes_tp']}/{m['alerts']}", lm, "aedes_precision"),
+            ("Outros mosquitos chamados Aedes", f"{m['other_fp']}/{m['other_n']}", lm, "fpr_other"),
+            ("Ruídos chamados Aedes", f"{n['noise_fp']}/{n['noise_n']}", ln, "fpr_noise"),
+            ("Cobertura nos mosquitos (resposta diferente de incerto)", f"{m['n_files'] - m['uncertain']}/{m['n_files']}", lm, "coverage")]
+    if not annotate:
+        return (["| Avaliação final | Contagem | Taxa e IC95% por cluster |", "|---|---:|---|"] +
+                [f"| {label} | {count} | {interval(res, key)} |" for label, count, res, key in rows])
+    return (["| Avaliação final | Contagem | Taxa e IC95% por cluster | IC95% binomial por arquivo (descritivo) |",
+             "|---|---:|---|---|"] +
+            [f"| {label} | {count} | {interval(res, key, annotate=True)} | {binomial(res, key)} |" for label, count, res, key in rows])
+
+
+def report_lines(final, dev, selection, fewshot, model_sha256, amendment, annotate=False):
+    """Report text. annotate=False reproduces the 20/10/2026 revision (document_revision.json) byte for byte."""
     selected = selection["candidate"]
     m, n = final["locked_mosquito"]["point"], final["locked_noise"]["point"]
-    model_path = OUT / "final" / f"{selected}.joblib"
+    u = final["ungated_sensitivity_analysis"]["point"]
+    noise_upper = final["locked_noise"]["file_binomial_ci95_descriptive_only"]["fpr_noise"][1]
+    reason = REASONS.get(selection["reason"])
+    fewshot_rows = []
+    for corpus in FEWSHOT_CORPORA:
+        records = [r for r in fewshot if r["corpus"] == corpus]
+        recalls = [r["metrics"]["aedes_recall"] for r in records if r["available"]]
+        span = f"{percent(min(recalls))}–{percent(max(recalls))}" if recalls else "indisponível"
+        fewshot_rows.append(f"| {corpus} | {len(recalls)}/{len(records)} | {span} |")
+    locked_available = [r for r in fewshot if r["corpus"] == "final_locked" and r["available"]]
+    locked_hits = sum(r["metrics"]["aedes_tp"] > 0 for r in locked_available)
     body = [
         "# Continuação da v3: resultados e limites",
         "",
@@ -62,19 +128,21 @@ def main():
         "",
         "## Resultado principal",
         f"Candidato congelado pelo desenvolvimento: **{NAMES[selected]}** (`{selected}`). Elegível pelos critérios de desenvolvimento: **{'sim' if selection['eligible'] else 'não'}**.",
-        f"Motivo: {selection['reason']}.",
+        reason if reason else f"Motivo: {selection['reason']}.",
         "",
-        "| Avaliação final | Contagem | Taxa e IC95% por cluster |",
-        "|---|---:|---|",
-        f"| Aedes detectados | {m['aedes_tp']}/{m['aedes_n']} | {interval(final['locked_mosquito'], 'aedes_recall')} |",
-        f"| Alertas corretos entre alertas Aedes | {m['aedes_tp']}/{m['alerts']} | {interval(final['locked_mosquito'], 'aedes_precision')} |",
-        f"| Outros mosquitos chamados Aedes | {m['other_fp']}/{m['other_n']} | {interval(final['locked_mosquito'], 'fpr_other')} |",
-        f"| Ruídos chamados Aedes | {n['noise_fp']}/{n['noise_n']} | {interval(final['locked_noise'], 'fpr_noise')} |",
-        f"| Cobertura nos mosquitos (resposta diferente de incerto) | {m['n_files'] - m['uncertain']}/{m['n_files']} | {interval(final['locked_mosquito'], 'coverage')} |",
+        *results_table(final, annotate),
         "",
         f"AUROC Aedes no teste reservado: {final['locked_mosquito']['point']['auroc']:.3f}. Metas pontuais atingidas: **{'sim' if final['success']['observed_targets_met'] else 'não'}**. Apoio estatístico conforme a regra congelada: **{'sim' if final['success']['statistical_support'] else 'não'}**. **Não há validação de campo.**",
         "",
         "![Resultados reais da continuação](../reanalysis/outputs/v3_continuation/resultados.png)",
+        "",
+    ]
+    if annotate:
+        body += ["**Intervalos com zero eventos.** Quando a contagem é zero (0/197, 0/371, 0/107), o bootstrap por cluster reamostra apenas zeros e devolve `[0, 0]`. Isso é um artefato, não precisão: na tabela, esses casos aparecem como *" + DEGENERATE_NOTE + "*. A coluna binomial vem de `final_metrics.json` (`file_binomial_ci95_descriptive_only`) e trata arquivos como independentes, o que eles não são; serve só como descrição da incerteza mínima.", ""]
+    body += [
+        f"**Leitura operacional.** Zero falsos alertas veio acompanhado de zero Aedes detectados. Isso não constitui um detector útil nem comprova um limite populacional de falsos positivos. Em particular, {n['noise_fp']}/{n['noise_n']} ruídos tem limite superior binomial descritivo de {percent(noise_upper)} (IC95%), já acima da meta de 1%, mesmo antes de considerar dependência entre arquivos. Os intervalos bootstrap degenerados não resolvem essa limitação.",
+        "",
+        f"Na ablação predefinida **sem o portão de concordância**, a mesma cabeça detectou **{u['aedes_tp']}/{u['aedes_n']} Aedes ({percent(u['aedes_recall'])})**, com **{u['other_fp']}/{u['other_n']} falsos alertas entre outros mosquitos ({percent(u['fpr_other'])})** e precisão de **{percent(u['aedes_precision'])}**. O portão prejudicou a sensibilidade; removê-lo também não atinge as metas. Esse resultado não foi usado para mudar a configuração final.",
         "",
         "## Onde o trabalho foi retomado",
         "O Claude havia baixado e conferido o HumBugDB completo, calculado componentes de duplicação e preparado o manifesto v3, mas não havia salvo características nem treinado classificadores v3. A análise inicial e as decisões antes de qualquer novo resultado estão em `analise_de_lacunas_continuacao_v3.md`, `protocol_v3_continuation.json` e no congelamento correspondente.",
@@ -107,6 +175,12 @@ def main():
         "",
         f"Braços executados: {sum(bool(r['available']) for r in fewshot)}/{len(fewshot)}. Resultados individuais em `fewshot_summary.csv`; não somar os denominadores das repetições como se fossem novos mosquitos independentes.",
         "",
+        "| Corpus de adaptação | Braços disponíveis | Sensibilidade: mínimo–máximo entre repetições |",
+        "|---|---:|---|",
+        *fewshot_rows,
+        "",
+        f"No teste reservado, {'nenhum' if locked_hits == 0 else locked_hits} dos {['zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze'][len(locked_available)]} braços disponíveis detectou Aedes. As variações entre repetições não são campanhas independentes. Mantiveram-se limiares e calibradores de origem; isso limita a conclusão sobre outras formas de calibração local.",
+        "",
         "## Limites da evidência",
         f"- O teste de mosquitos tem {m['n_files']} arquivos e {m['n_clusters']} clusters, com apenas {m['class_clusters']['2']} clusters contendo Aedes. Não são {m['n_files']} indivíduos independentes.",
         "- O conjunto é relacionado ao domínio D3 do BioDCASE e aos áudios UFRGS conhecidos; a proveniência UFRGS não foi confirmada para todos os clipes. Metadados de origem e contagens aparecem separados.",
@@ -129,21 +203,27 @@ def main():
         "```",
         "Os áudios e os componentes herdados devem existir antes da primeira etapa. Não há aquisição automática de dados privados. `final` recusa mudança de configuração e reutiliza a avaliação registrada em vez de selecionar novamente pelo teste. A extração é retomável somente com a mesma identidade de dados/código/modelo.",
         "",
-        f"Modelo local: `results/v3_continuation/final/{selected}.joblib`, SHA-256 `{digest(model_path)}`. Inferência de pesquisa: `python -m reanalysis.v3_predict --audio caminho.wav`. O portão de batimento é carregado junto e a saída informa que o modelo não foi validado em campo.",
+        f"Modelo local: `results/v3_continuation/final/{selected}.joblib`, SHA-256 `{model_sha256}`. Inferência de pesquisa: `python -m reanalysis.v3_predict --audio caminho.wav`. O portão de batimento é carregado junto e a saída informa que o modelo não foi validado em campo.",
         "",
         "Referências de método: [Perch, código oficial](https://github.com/google-research/perch), [Gong et al., preprint de alinhamento de domínios](https://arxiv.org/abs/2610.09737), [BioDCASE, tarefa oficial](https://biodcase.github.io/challenge2026/task5). Esta implementação é uma adaptação registrada, não uma reprodução integral desses trabalhos.",
+        "",
+        "## Correção técnica e verificações finais",
+        "",
+        f"A emenda A3 recuperou as durações físicas de {amendment['n_missing_physical_durations_recovered']} arquivos MP4/M4A dos metadados v2 congelados, apenas para o diagnóstico de duração. Não houve imputação por rótulo, troca de partições, alteração de hiperparâmetros ou dos seis candidatos acústicos já executados. O código anterior, as identidades e os hashes dos modelos foram preservados; a auditoria está em `technical_amendment_A3.json`.",
+        "",
+        "A suíte terminou com **70 testes aprovados**. A inferência em um WAV real de desenvolvimento foi comparada às características em cache e produziu o mesmo rótulo e escore dentro da tolerância numérica. Os hashes do notebook, dos metadados de referência e dos pesos históricos permaneceram idênticos.",
     ])
-    report_path = ROOT / "reports/continuacao_v3.md"
-    report_path.write_text("\n".join(body) + "\n")
-    delivery = dict(complete=True, report_sha256=digest(report_path),
-                    files={str(p.relative_to(ROOT)): digest(p) for p in PUBLIC.iterdir() if p.is_file()},
-                    selected=selected, success=final["success"], historical_weights_modified=False,
-                    notebook_modified=False)
-    write_json(OUT / "delivery_verification.json", delivery)
-    print(json.dumps(dict(report=str(report_path), selected=selected, success=final["success"]), indent=2))
+    return body
 
 
-def _plots(dev, final, predictions):
+def plot_data(dev, predictions):
+    """Numbers drawn in resultados.png, so before/after regenerations can be compared exactly."""
+    auroc = {corpus: [dev[f"LODO_{corpus}"][name]["point"]["auroc"] for name in CANDIDATES] for corpus in CORPORA}
+    matrix = np.bincount(predictions.target.to_numpy(int) * 4 + predictions.pred.to_numpy(int), minlength=12).reshape(3, 4)
+    return dict(auroc=auroc, confusion=matrix.tolist())
+
+
+def _plots(dev, final, predictions, annotate=False):
     fig, axes = plt.subplots(1, 2, figsize=(13, 5), constrained_layout=True)
     colors = ["#176B87", "#D17A22", "#4D7C3A"]
     for j, corpus in enumerate(CORPORA):
@@ -160,9 +240,56 @@ def _plots(dev, final, predictions):
     axes[1].set_xticks(range(4), ["Ruído", "Outro", "Aedes", "Incerto"])
     axes[1].set_yticks(range(3), ["Ruído", "Outro mosquito", "Aedes"])
     axes[1].set(xlabel="Resposta", ylabel="Rótulo", title="Teste final: contagens, incluindo ruído reservado")
-    fig.savefig(PUBLIC / "resultados.png", dpi=170)
+    if annotate:
+        lm, ln = final["locked_mosquito"], final["locked_noise"]
+        m, n = lm["point"], ln["point"]
+        lines = ["IC95% por cluster das três taxas abaixo: bootstrap degenerado: zero eventos.",
+                 "Ver IC binomial descritivo por arquivo (arquivos não são independentes):",
+                 f"  Aedes detectados {m['aedes_tp']}/{m['aedes_n']}: {binomial(lm, 'aedes_recall')} %",
+                 f"  outros mosquitos chamados Aedes {m['other_fp']}/{m['other_n']}: {binomial(lm, 'fpr_other')} %",
+                 f"  ruídos chamados Aedes {n['noise_fp']}/{n['noise_n']}: {binomial(ln, 'fpr_noise')} %"]
+        axes[1].text(0.0, -0.2, "\n".join(lines), transform=axes[1].transAxes, ha="left", va="top", fontsize=8.5,
+                     bbox=dict(boxstyle="round", facecolor="#FFF4E0", edgecolor="#D17A22"))
+    fig.savefig(PUBLIC / "resultados.png", dpi=170, **({"bbox_inches": "tight", "pad_inches": 0.2} if annotate else {}))
     plt.close(fig)
 
 
+def derived_only():
+    """Regenerate only resultados.png and reports/continuacao_v3.md, with the degenerate-interval annotation.
+    Reads the frozen outputs; does not copy, recompute or overwrite metrics, CSVs, freezes or delivery records."""
+    final = json.loads((PUBLIC / "final_metrics.json").read_text())
+    dev = json.loads((PUBLIC / "development_metrics.json").read_text())
+    selection = json.loads((PUBLIC / "selection.json").read_text())
+    predictions = pd.read_csv(PUBLIC / "final_predictions.csv")
+    fewshot = json.loads((OUT / "fewshot_summary.json").read_text())
+    amendment = json.loads((PUBLIC / "technical_amendment_A3.json").read_text())
+    selected = selection["candidate"]
+    report_path = ROOT / "reports/continuacao_v3.md"
+    before = dict(report_sha256=digest(report_path), figure_sha256=digest(PUBLIC / "resultados.png"),
+                  metrics_sha256=digest(PUBLIC / "final_metrics.json"))
+    unannotated = "\n".join(report_lines(final, dev, selection, fewshot, digest(OUT / "final" / f"{selected}.joblib"),
+                                          amendment, annotate=False)) + "\n"
+    body = report_lines(final, dev, selection, fewshot, digest(OUT / "final" / f"{selected}.joblib"), amendment, annotate=True)
+    current = report_path.read_text()
+    if current == "\n".join(body) + "\n" and (PUBLIC / "document_revision_2026_10_22.json").exists():
+        print("relatório já anotado; nada foi escrito")
+        return
+    if current != unannotated:
+        raise SystemExit("o relatório atual não corresponde à revisão de 20/10/2026; nada foi escrito")
+    _plots(dev, final, predictions, annotate=True)
+    report_path.write_text("\n".join(body) + "\n")
+    revision = dict(kind="post_run_document_clarification", date="2026-10-22",
+                    changes="Flag degenerate zero-event cluster-bootstrap intervals in the report table and figure and show the "
+                            "per-file binomial CI (descriptive only) beside them. No number recomputed; no model, parameter, "
+                            "threshold, metric file or freeze changed.",
+                    previous_revision="document_revision.json", before=before,
+                    after=dict(report_sha256=digest(report_path), figure_sha256=digest(PUBLIC / "resultados.png"),
+                               metrics_sha256=digest(PUBLIC / "final_metrics.json")),
+                    plotted_numbers=plot_data(dev, predictions), scientific_model_and_threshold_changes=False)
+    write_json(PUBLIC / "document_revision_2026_10_22.json", revision)
+    print(json.dumps(dict(report=str(report_path), before=before, after=revision["after"]), indent=2))
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    derived_only() if "--derived-only" in sys.argv[1:] else main()

@@ -6,17 +6,19 @@ Experimento concluído em 20/10/2026. Os arquivos brutos, caches e pesos ficam l
 Candidato congelado pelo desenvolvimento: **Perch normalizado + logística** (`A_perch_white`). Elegível pelos critérios de desenvolvimento: **não**.
 Nenhum candidato atingiu as metas no desenvolvimento; este foi congelado apenas para uma avaliação descritiva, pelo maior AUROC médio.
 
-| Avaliação final | Contagem | Taxa e IC95% por cluster |
-|---|---:|---|
-| Aedes detectados | 0/197 | 0.00% (bootstrap degenerado) |
-| Alertas corretos entre alertas Aedes | 0/0 | indefinido |
-| Outros mosquitos chamados Aedes | 0/371 | 0.00% (bootstrap degenerado) |
-| Ruídos chamados Aedes | 0/107 | 0.00% (bootstrap degenerado) |
-| Cobertura nos mosquitos (resposta diferente de incerto) | 530/568 | 93.31% [90.89–97.26] |
+| Avaliação final | Contagem | Taxa e IC95% por cluster | IC95% binomial por arquivo (descritivo) |
+|---|---:|---|---|
+| Aedes detectados | 0/197 | 0.00% — bootstrap degenerado: zero eventos; ver IC binomial descritivo | [0.00–1.86] |
+| Alertas corretos entre alertas Aedes | 0/0 | indefinido | — |
+| Outros mosquitos chamados Aedes | 0/371 | 0.00% — bootstrap degenerado: zero eventos; ver IC binomial descritivo | [0.00–0.99] |
+| Ruídos chamados Aedes | 0/107 | 0.00% — bootstrap degenerado: zero eventos; ver IC binomial descritivo | [0.00–3.39] |
+| Cobertura nos mosquitos (resposta diferente de incerto) | 530/568 | 93.31% [90.89–97.26] | — |
 
 AUROC Aedes no teste reservado: 0.729. Metas pontuais atingidas: **não**. Apoio estatístico conforme a regra congelada: **não**. **Não há validação de campo.**
 
 ![Resultados reais da continuação](../reanalysis/outputs/v3_continuation/resultados.png)
+
+**Intervalos com zero eventos.** Quando a contagem é zero (0/197, 0/371, 0/107), o bootstrap por cluster reamostra apenas zeros e devolve `[0, 0]`. Isso é um artefato, não precisão: na tabela, esses casos aparecem como *bootstrap degenerado: zero eventos; ver IC binomial descritivo*. A coluna binomial vem de `final_metrics.json` (`file_binomial_ci95_descriptive_only`) e trata arquivos como independentes, o que eles não são; serve só como descrição da incerteza mínima.
 
 **Leitura operacional.** Zero falsos alertas veio acompanhado de zero Aedes detectados. Isso não constitui um detector útil nem comprova um limite populacional de falsos positivos. Em particular, 0/107 ruídos tem limite superior binomial descritivo de 3.39% (IC95%), já acima da meta de 1%, mesmo antes de considerar dependência entre arquivos. Os intervalos bootstrap degenerados não resolvem essa limitação.
 
