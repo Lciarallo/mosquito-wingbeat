@@ -71,6 +71,34 @@ Outros arquivos `tests/test_*.py` existem apenas em cópias locais de trabalho e
 | Falham | `test_nested_species_v2`, `_v3`, `_v4`, `test_faithful_reproduction`, `test_drive_exclusion` | Conferem hashes de artefatos de 14/10 que mudaram depois (`.gitignore`, toolchain Arduino), carregam pickles de uma versão antiga do scikit-learn (`_loss`) ou exigem `firmware/README.md` e uma rodada clássica real. |
 | Não importam | `test_reliability`, `test_reproduction`, `test_research_audit`, `test_corrected_validation`, `test_cross_domain_strategies`, `test_sex_balanced_reliability` | Pedem `aedes_classical.raw_scores`, que não existe mais no módulo atual, ou o pacote `requests`. |
 
+## O que dá e o que não dá para reproduzir
+
+Dados, caches e pesos ficam fora do Git. Conferido em 22/10/2026 num clone limpo de `detector-v3`, com `.venv-v3`:
+
+**Roda só com o clone**
+
+| Etapa | Como | Observação |
+|---|---|---|
+| Testes | `python -m pytest -q` | 68 aprovados e 2 pulados. Os 2 pulados exigem caches locais (`test_ternary_verified.py:184`) e o manifesto local da v3 (`test_v3_continuation.py:23`). Com os dados locais, são 70 aprovados. |
+| Notebook sem treino | executar as células com as flags de treino desligadas | Mostra os retratos históricos versionados em `data/metadata/`. |
+| Leitura e auditoria dos resultados v2/v3 | `reports/`, `reanalysis/outputs/` | As predições por arquivo da v2 (`reanalysis/outputs/predictions/*.csv`, com `p0`, `p1`, `p2`) permitem recalcular as métricas pontuais. As métricas, a figura e os congelamentos da v3 estão em `reanalysis/outputs/v3_continuation/`. |
+
+**Exige dados ou pesos locais** (caminhos relativos à raiz)
+
+| Etapa | Comando | Entradas esperadas |
+|---|---|---|
+| Inferência da cascata histórica | `python predict_ternary.py audio.wav --run <rodada> --output <saida>` | `<rodada>/models/final.joblib` |
+| Inferência LSTM/Bi-LSTM histórica | `predict_ternary_lstm.py` | `results/ternary_lstm_2026_10_15/` |
+| Inferência dos classificadores sem recorrência | `predict_pattern.py --model-dir ... --audio ...` | `results/pattern_classifiers_2026_10_15/final/` |
+| Inferência de pesquisa da v3 | `python -m reanalysis.v3_predict --audio audio.wav` | `results/v3_continuation/final/` e `data/models/perch_v2_onnx/perch_v2.onnx` |
+| Regerar o relatório da v3 | `python -m reanalysis.v3_report` | `results/v3_continuation/final/` |
+| Manifesto e frontend da v2 | `reanalysis/build_manifest.py`, `reanalysis/frontend.py` | `data/raw/`, `data/external/humbug/neurips_2021_zenodo_0_0_1.csv`, `data/external/additional/mosquitosong/`; gera `results/v2/manifest_files.csv` e `data/cache/v2/` |
+| Treino e avaliação da v2 | `python reanalysis/train_v2.py <etapa>` | `results/v2/manifest_files.csv`, `data/cache/v2/` |
+| Continuação da v3 | `reanalysis/v3_*.py` | `results/v3_continuation/manifest.csv`, `data/cache/v3_continuation/`, modelo Perch acima |
+| Cascata e redes históricas | ver "Entradas locais para treinar" | `data/cache/reliability_2026_10_01/` e rodadas em `results/` |
+
+O repositório não traz scripts de download para todos os corpora. Os protocolos congelados (`reanalysis/protocol_*.json`, `*_freeze.json`) registram os SHA-256 esperados das entradas.
+
 ## Resultados históricos
 
 Movidos para [reports/historico_ternario.md](reports/historico_ternario.md), sem alteração de números: cascata (90,03% / 47/60 Aedes), LSTM/Bi-LSTM, classificadores sem recorrência (CNN, MLP, SVM, Extra Trees, HistGB) com os comandos de treino, verificação e inferência, e os limites desses resultados. **São retrospectivos e não têm validação por sessão, ambiente ou aparelho.**
