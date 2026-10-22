@@ -59,17 +59,37 @@ Uma rodada completa pode demorar bastante e cria uma pasta nova em `results/`. N
 
 ### Testes
 
-Execute `python -m pytest -q`. O `pytest.ini` coleta seis arquivos versionados (70 testes):
-`test_ternary_verified.py`, `test_ternary_lstm.py`, `test_notebook_workflow.py`, `test_pattern_classifiers.py`, `test_reanalysis_v2.py` e `test_v3_continuation.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
+Execute `python -m pytest -q`. O `pytest.ini` coleta oito arquivos versionados (86 testes): `test_ternary_verified.py`, `test_ternary_lstm.py`, `test_notebook_workflow.py`, `test_pattern_classifiers.py`, `test_reanalysis_v2.py`, `test_v3_continuation.py`, `test_torres_lstm.py` e `test_aedes_classical.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
 
-Outros arquivos `tests/test_*.py` existem apenas em cópias locais de trabalho e **não são versionados nem coletados**. Revisão de 22/10/2026, com `.venv-v3`:
+Os demais `tests/test_*.py` existem só em cópias locais de trabalho e **não são versionados nem coletados**. Na revisão de 22/10/2026, cada um foi rodado isoladamente com `.venv-v3` na cópia local (com dados e módulos locais) e num clone limpo. Só entram na suíte os que passam sem dados locais. Nenhum deles é pulado por falta de dados: os que dependem de arquivos locais dão erro ou falham.
 
-| Situação | Arquivos | Motivo de ficarem fora |
-|---|---|---|
-| Passam num clone limpo | `test_torres_lstm.py`, `test_aedes_classical.py` | Importam só módulos versionados. Candidatos a entrar na suíte (pendente de decisão). |
-| Passam só na cópia local | `test_species_preprocessing`, `test_notebook_transfer`, `test_nested_species`, `test_nested_species_v5`, `test_aedes_binary`, `test_expanded_protocol`, `test_large_audio_model`, `test_audio_preprocessing`, `test_multisource_protocol`, `test_publication_artifacts`, `test_ternary_synthetic`, `test_ternary_detector` | Dependem de módulos ou dados locais não versionados; falham num clone. |
-| Falham | `test_nested_species_v2`, `_v3`, `_v4`, `test_faithful_reproduction`, `test_drive_exclusion` | Conferem hashes de artefatos de 14/10 que mudaram depois (`.gitignore`, toolchain Arduino), carregam pickles de uma versão antiga do scikit-learn (`_loss`) ou exigem `firmware/README.md` e uma rodada clássica real. |
-| Não importam | `test_reliability`, `test_reproduction`, `test_research_audit`, `test_corrected_validation`, `test_cross_domain_strategies`, `test_sex_balanced_reliability` | Pedem `aedes_classical.raw_scores`, que não existe mais no módulo atual, ou o pacote `requests`. |
+| Arquivo | Cópia local | Clone limpo | Classificação |
+|---|---|---|---|
+| `test_torres_lstm.py` | 13 aprovados | 13 aprovados | **Passa sem dados locais. Incluído.** |
+| `test_aedes_classical.py` | 3 aprovados | 3 aprovados | **Passa sem dados locais. Incluído.** |
+| `test_aedes_binary.py` | 3 aprovados | erro de importação | Depende de `aedes_binary.py`, não versionado. |
+| `test_audio_preprocessing.py` | 4 aprovados | erro de importação | Depende de `audio_preprocessing.py`, não versionado. |
+| `test_expanded_protocol.py` | 3 aprovados | erro de importação | Depende de `train_expanded.py`, não versionado. |
+| `test_large_audio_model.py` | 3 aprovados | erro de importação | Depende de `large_audio_model.py`, não versionado. |
+| `test_multisource_protocol.py` | 4 aprovados | erro de importação | Depende de `large_audio_model.py`, não versionado. |
+| `test_nested_species.py` | 13 aprovados | erro de importação | Depende de `nested_species_ensemble.py`, não versionado. |
+| `test_nested_species_v5.py` | 15 aprovados | erro de importação | Depende de `acoustic_features_v5.py`, `nested_species_ensemble_v5.py` e `research_metrics_v2.py`, não versionados. |
+| `test_notebook_transfer.py` | 12 aprovados | erro de importação | Depende de `notebook_transfer_features.py` e `reproduce_notebook_transfer.py`, não versionados. |
+| `test_publication_artifacts.py` | 5 aprovados | erro de coleta | Lê artefatos locais de publicação. |
+| `test_species_preprocessing.py` | 10 aprovados | erro de importação | Depende de `species_preprocessing.py`, não versionado. |
+| `test_ternary_detector.py` | 15 aprovados | 3 falhas, 4 erros, 3 pulados | Lê rodadas locais em `results/`. |
+| `test_ternary_synthetic.py` | 9 aprovados | erro de importação | Depende de `evaluate_ternary_synthetic.py`, não versionado. |
+| `test_drive_exclusion.py` | 1 falha, 3 aprovados | 3 falhas, 1 aprovado | Quebra: exige uma rodada clássica real (`partitions.csv.gz`, `event_level_metrics.json`). |
+| `test_faithful_reproduction.py` | 1 falha, 7 aprovados | 8 falhas | Quebra: exige `firmware/README.md`, ausente. |
+| `test_nested_species_v2.py` | 1 falha, 19 aprovados | erro de importação | Quebra: confere um arquivo da toolchain Arduino que mudou. |
+| `test_nested_species_v3.py` | 2 falhas, 19 aprovados | erro de importação | Quebra: confere o hash do `.gitignore` de 14/10 e carrega pickle de scikit-learn antigo (`_loss`). |
+| `test_nested_species_v4.py` | 2 falhas, 23 aprovados | erro de importação | Quebra: mesmos motivos do v3. |
+| `test_reliability.py` | erro de importação | erro de importação | Quebra: pacote `requests` ausente. |
+| `test_reproduction.py` | erro de importação | erro de importação | Quebra: importa `aedes_classical.raw_scores`, que não existe mais. |
+| `test_research_audit.py` | erro de importação | erro de importação | Quebra: idem. |
+| `test_corrected_validation.py` | erro de importação | erro de importação | Quebra: idem. |
+| `test_cross_domain_strategies.py` | erro de importação | erro de importação | Quebra: idem. |
+| `test_sex_balanced_reliability.py` | erro de importação | erro de importação | Quebra: idem. |
 
 ## O que dá e o que não dá para reproduzir
 
@@ -79,7 +99,7 @@ Dados, caches e pesos ficam fora do Git. Conferido em 22/10/2026 num clone limpo
 
 | Etapa | Como | Observação |
 |---|---|---|
-| Testes | `python -m pytest -q` | 68 aprovados e 2 pulados. Os 2 pulados exigem caches locais (`test_ternary_verified.py:184`) e o manifesto local da v3 (`test_v3_continuation.py:23`). Com os dados locais, são 70 aprovados. |
+| Testes | `python -m pytest -q` | 84 aprovados e 2 pulados. Os 2 pulados exigem caches locais (`test_ternary_verified.py:184`) e o manifesto local da v3 (`test_v3_continuation.py:23`). Com os dados locais, são 86 aprovados. |
 | Notebook sem treino | executar as células com as flags de treino desligadas | Mostra os retratos históricos versionados em `data/metadata/`. |
 | Leitura e auditoria dos resultados v2/v3 | `reports/`, `reanalysis/outputs/` | As predições por arquivo da v2 (`reanalysis/outputs/predictions/*.csv`, com `p0`, `p1`, `p2`) permitem recalcular as métricas pontuais. As métricas, a figura e os congelamentos da v3 estão em `reanalysis/outputs/v3_continuation/`. |
 
