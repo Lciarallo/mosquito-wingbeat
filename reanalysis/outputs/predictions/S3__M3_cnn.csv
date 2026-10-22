@@ -1,0 +1,408 @@
+path,source,species,class_name,target,cluster,native_sr,device,p0,p1,p2,pred,fold,model
+data/external/humbug/audio/220127.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.001957536,0.33315873,0.66488373,2,0,M3_cnn
+data/external/humbug/audio/220129.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.001402771,0.8231529,0.17544433,1,0,M3_cnn
+data/external/humbug/audio/220182.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.00072269654,0.15119594,0.8480813,2,0,M3_cnn
+data/external/humbug/audio/220907.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.0034223644,0.50348985,0.49308774,1,0,M3_cnn
+data/external/humbug/audio/220948.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-02-20,44100,tascam,0.00044901247,0.96325874,0.03629225,1,0,M3_cnn
+data/external/humbug/audio/221070.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|26-03-20,44100,tascam,0.0007525687,0.06484756,0.9343999,2,0,M3_cnn
+data/external/humbug/audio/221396.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0005863055,0.98761463,0.011799098,1,0,M3_cnn
+data/external/humbug/audio/221427.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.000333674,0.9960769,0.0035894606,1,0,M3_cnn
+data/external/humbug/audio/222203.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0030099354,0.78619385,0.21079625,1,0,M3_cnn
+data/external/humbug/audio/222518.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.001381006,0.9427857,0.0558333,1,0,M3_cnn
+data/external/reliability_2026_10_01/220131.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0029558435,0.76609147,0.23095274,1,0,M3_cnn
+data/external/reliability_2026_10_01/221387.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0006470554,0.9864503,0.012902599,1,0,M3_cnn
+data/external/reliability_2026_10_01/221443.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.00042723387,0.9943599,0.005212908,1,0,M3_cnn
+data/external/reliability_2026_10_01/222196.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0021284765,0.93168616,0.06618541,1,0,M3_cnn
+data/external/reliability_2026_10_01/222155.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.000250769,0.9991679,0.0005814119,1,0,M3_cnn
+data/external/reliability_2026_10_01/222150.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.002629864,0.89111346,0.10625663,1,0,M3_cnn
+data/external/reliability_2026_10_01/222527.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.0017253286,0.9477447,0.050529923,1,0,M3_cnn
+data/external/reliability_2026_10_01/222161.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0017766282,0.9566781,0.041545276,1,0,M3_cnn
+data/external/reliability_2026_10_01/221090.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|26-03-20,44100,tascam,0.0021459544,0.8615817,0.13627233,1,0,M3_cnn
+data/external/reliability_2026_10_01/222147.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0018129273,0.91696966,0.081217386,1,0,M3_cnn
+data/external/reliability_2026_10_01/222187.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0024894108,0.78563327,0.2118773,1,0,M3_cnn
+data/external/reliability_2026_10_01/221417.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0020365058,0.7964872,0.20147629,1,0,M3_cnn
+data/external/reliability_2026_10_01/221423.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0015924487,0.28843966,0.7099679,2,0,M3_cnn
+data/external/reliability_2026_10_01/220921.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.00025829187,0.99221015,0.0075314892,1,0,M3_cnn
+data/external/reliability_2026_10_01/220188.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0017556589,0.39131153,0.6069328,2,0,M3_cnn
+data/external/reliability_2026_10_01/221930.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|07-07-20,44100,tascam,0.0025372005,0.5426867,0.4547761,1,0,M3_cnn
+data/external/reliability_2026_10_01/221439.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0011532974,0.8088726,0.18997411,1,0,M3_cnn
+data/external/reliability_2026_10_01/221514.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.002409352,0.44302964,0.554561,2,0,M3_cnn
+data/external/reliability_2026_10_01/220880.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.0011309242,0.8580655,0.14080364,1,0,M3_cnn
+data/external/reliability_2026_10_01/220190.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0013078518,0.16596362,0.8327285,2,0,M3_cnn
+data/external/reliability_2026_10_01/221551.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0010005408,0.9647343,0.0342651,1,0,M3_cnn
+data/external/reliability_2026_10_01/221500.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0020264133,0.6723365,0.32563713,1,0,M3_cnn
+data/external/reliability_2026_10_01/221541.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0022202837,0.49642104,0.5013587,2,0,M3_cnn
+data/external/reliability_2026_10_01/220183.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.001087448,0.21859993,0.7803126,2,0,M3_cnn
+data/external/reliability_2026_10_01/220143.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0028769872,0.2245084,0.7726146,2,0,M3_cnn
+data/external/reliability_2026_10_01/220196.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0018943383,0.26552662,0.73257905,2,0,M3_cnn
+data/external/reliability_2026_10_01/220165.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0019799827,0.2882795,0.7097405,2,0,M3_cnn
+data/external/reliability_2026_10_01/221869.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|07-07-20,44100,tascam,0.0018274682,0.96364987,0.034522682,1,0,M3_cnn
+data/external/reliability_2026_10_01/220889.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.0010356474,0.93698454,0.06197979,1,0,M3_cnn
+data/external/reliability_2026_10_01/221880.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|07-07-20,44100,tascam,0.0028107853,0.87805855,0.11913067,1,0,M3_cnn
+data/external/reliability_2026_10_01/222175.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.00043390735,0.99448496,0.0050811246,1,0,M3_cnn
+data/external/reliability_2026_10_01/222171.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0013691855,0.9641205,0.034510314,1,0,M3_cnn
+data/external/reliability_2026_10_01/222210.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.004236987,0.71684295,0.27892005,1,0,M3_cnn
+data/external/reliability_2026_10_01/222190.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.00079001585,0.98790526,0.011304762,1,0,M3_cnn
+data/external/reliability_2026_10_01/222198.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0027478675,0.7251369,0.27211526,1,0,M3_cnn
+data/external/reliability_2026_10_01/222156.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0018283101,0.9543861,0.043785613,1,0,M3_cnn
+data/external/reliability_2026_10_01/222212.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0006657237,0.98704684,0.012287411,1,0,M3_cnn
+data/external/reliability_2026_10_01/222177.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0020690195,0.91349083,0.08444019,1,0,M3_cnn
+data/external/reliability_2026_10_01/222206.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0019708865,0.94861573,0.049413286,1,0,M3_cnn
+data/external/reliability_2026_10_01/222204.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0008513702,0.9729595,0.026189178,1,0,M3_cnn
+data/external/reliability_2026_10_01/222181.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0021247354,0.9023776,0.09549757,1,0,M3_cnn
+data/external/reliability_2026_10_01/222213.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.002614861,0.89106965,0.10631546,1,0,M3_cnn
+data/external/reliability_2026_10_01/222166.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0020324904,0.91100115,0.086966395,1,0,M3_cnn
+data/external/reliability_2026_10_01/222214.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0008252938,0.98719794,0.0119766975,1,0,M3_cnn
+data/external/reliability_2026_10_01/222199.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0007458237,0.98368925,0.015564892,1,0,M3_cnn
+data/external/reliability_2026_10_01/222172.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.003278174,0.52601314,0.47070864,1,0,M3_cnn
+data/external/reliability_2026_10_01/222144.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0026597066,0.93600124,0.06133904,1,0,M3_cnn
+data/external/reliability_2026_10_01/222217.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0027540876,0.82563007,0.17161582,1,0,M3_cnn
+data/external/reliability_2026_10_01/221885.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|07-07-20,44100,tascam,0.00081977097,0.99114907,0.008031183,1,0,M3_cnn
+data/external/reliability_2026_10_01/221069.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|26-03-20,44100,tascam,0.002623161,0.82152194,0.17585494,1,0,M3_cnn
+data/external/reliability_2026_10_01/221073.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|26-03-20,44100,tascam,0.0035903435,0.78285474,0.21355489,1,0,M3_cnn
+data/external/reliability_2026_10_01/222220.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0011761372,0.9789892,0.01983469,1,0,M3_cnn
+data/external/reliability_2026_10_01/220899.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.00025959167,0.994549,0.0051914062,1,0,M3_cnn
+data/external/reliability_2026_10_01/221398.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-06-20,44100,tascam,0.0013634521,0.94497234,0.053664338,1,0,M3_cnn
+data/external/reliability_2026_10_01/221538.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0018071152,0.94476587,0.053427063,1,0,M3_cnn
+data/external/reliability_2026_10_01/220118.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0008260443,0.977852,0.021321988,1,0,M3_cnn
+data/external/reliability_2026_10_01/220926.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-02-20,44100,tascam,0.0003608757,0.9950277,0.004611425,1,0,M3_cnn
+data/external/reliability_2026_10_01/222179.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0036267096,0.60683274,0.38954058,1,0,M3_cnn
+data/external/reliability_2026_10_01/220117.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0012033653,0.9434727,0.05532402,1,0,M3_cnn
+data/external/reliability_2026_10_01/221518.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.002452214,0.7083327,0.28921506,1,0,M3_cnn
+data/external/reliability_2026_10_01/220924.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-02-20,44100,tascam,0.00031440667,0.98771256,0.011973071,1,0,M3_cnn
+data/external/reliability_2026_10_01/220164.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0006812578,0.98814374,0.011175095,1,0,M3_cnn
+data/external/reliability_2026_10_01/220913.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.0010195374,0.97086054,0.028119933,1,0,M3_cnn
+data/external/reliability_2026_10_01/220884.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.0004526451,0.9929422,0.006605183,1,0,M3_cnn
+data/external/reliability_2026_10_01/220147.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.00035450747,0.9962209,0.003424602,1,0,M3_cnn
+data/external/reliability_2026_10_01/221522.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0022115563,0.91126144,0.086527035,1,0,M3_cnn
+data/external/reliability_2026_10_01/222471.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.0019278465,0.9439785,0.054093685,1,0,M3_cnn
+data/external/reliability_2026_10_01/221535.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0030031058,0.75352454,0.2434724,1,0,M3_cnn
+data/external/reliability_2026_10_01/222484.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.000531303,0.9965101,0.0029585084,1,0,M3_cnn
+data/external/reliability_2026_10_01/221546.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0001899112,0.9987091,0.001101,1,0,M3_cnn
+data/external/reliability_2026_10_01/221501.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.001996303,0.8704933,0.12751037,1,0,M3_cnn
+data/external/reliability_2026_10_01/220912.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-02-20,44100,tascam,0.00055222673,0.9821039,0.017343828,1,0,M3_cnn
+data/external/reliability_2026_10_01/222183.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0020052916,0.9096245,0.08837016,1,0,M3_cnn
+data/external/reliability_2026_10_01/222474.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.00029376062,0.99808925,0.0016169207,1,0,M3_cnn
+data/external/reliability_2026_10_01/222163.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|19-07-20,44100,tascam,0.0036992636,0.51930094,0.4769998,1,0,M3_cnn
+data/external/reliability_2026_10_01/222516.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.0005911746,0.9937397,0.0056692204,1,0,M3_cnn
+data/external/reliability_2026_10_01/220119.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|04-03-20,44100,tascam,0.0022613925,0.84817445,0.14956412,1,0,M3_cnn
+data/external/reliability_2026_10_01/222464.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-08-20,44100,tascam,0.0016820115,0.5790701,0.4192479,1,0,M3_cnn
+data/external/reliability_2026_10_01/221493.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|22-06-20,44100,tascam,0.0008395278,0.972936,0.026224546,1,0,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220969.wav,humbug,Anopheles leesoni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-02-20,44100,tascam,0.00036278277,0.99593794,0.0036992412,1,0,M3_cnn
+data/external/humbug/audio/220234.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00018547136,0.86193657,0.13787797,1,1,M3_cnn
+data/external/humbug/audio/220263.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00021790227,0.80953383,0.1902483,1,1,M3_cnn
+data/external/humbug/audio/220275.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00012383188,0.9579807,0.041895505,1,1,M3_cnn
+data/external/humbug/audio/220292.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,9.122254e-05,0.018022403,0.9818864,2,1,M3_cnn
+data/external/humbug/audio/220295.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.0007505211,0.2339274,0.7653221,2,1,M3_cnn
+data/external/humbug/audio/220296.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,1.621235e-05,0.0014911869,0.9984926,2,1,M3_cnn
+data/external/humbug/audio/220298.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.00035247486,0.07351393,0.92613363,2,1,M3_cnn
+data/external/humbug/audio/220300.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.0005386353,0.21127273,0.78818864,2,1,M3_cnn
+data/external/humbug/audio/220303.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.0005417515,0.14498463,0.8544736,2,1,M3_cnn
+data/external/humbug/audio/220309.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,2.9900964e-05,0.006235258,0.9937349,2,1,M3_cnn
+data/external/humbug/audio/220310.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.00019111882,0.032571815,0.96723706,2,1,M3_cnn
+data/external/humbug/audio/220312.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,6.865451e-05,0.029834244,0.97009706,2,1,M3_cnn
+data/external/humbug/audio/220317.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.0006788081,0.1763368,0.82298446,2,1,M3_cnn
+data/external/humbug/audio/220319.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.00016725827,0.025910156,0.9739226,2,1,M3_cnn
+data/external/humbug/audio/220320.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,6.49145e-05,0.016155355,0.9837797,2,1,M3_cnn
+data/external/humbug/audio/220321.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.0002366193,0.08790963,0.9118538,2,1,M3_cnn
+data/external/humbug/audio/220322.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.00011516949,0.012277338,0.98760754,2,1,M3_cnn
+data/external/humbug/audio/220323.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|13-03-20,44100,tascam,0.00041085618,0.07837781,0.9212113,2,1,M3_cnn
+data/external/humbug/audio/220526.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|08-02-20,44100,tascam,0.00029664877,0.8169376,0.18276577,1,1,M3_cnn
+data/external/reliability_2026_10_01/221328.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00047424863,0.35973555,0.6397902,2,1,M3_cnn
+data/external/reliability_2026_10_01/220252.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00012476274,0.967629,0.03224622,1,1,M3_cnn
+data/external/reliability_2026_10_01/220284.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,6.201164e-05,0.9977558,0.002182176,1,1,M3_cnn
+data/external/reliability_2026_10_01/220071.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-03-20,44100,tascam,0.0013291014,0.6502414,0.3484295,1,1,M3_cnn
+data/external/reliability_2026_10_01/220053.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-03-20,44100,tascam,0.0008443521,0.6760205,0.32313517,1,1,M3_cnn
+data/external/reliability_2026_10_01/220108.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-03-20,44100,tascam,0.00069524365,0.8413039,0.15800095,1,1,M3_cnn
+data/external/reliability_2026_10_01/220347.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.0008852232,0.21667655,0.7824382,2,1,M3_cnn
+data/external/reliability_2026_10_01/222236.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.0004762338,0.8532672,0.14625654,1,1,M3_cnn
+data/external/reliability_2026_10_01/222253.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00053910096,0.23562995,0.76383096,2,1,M3_cnn
+data/external/reliability_2026_10_01/222263.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.0004981101,0.29927152,0.70023036,2,1,M3_cnn
+data/external/reliability_2026_10_01/220546.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|08-02-20,44100,tascam,0.00028640102,0.48150355,0.51821005,2,1,M3_cnn
+data/external/reliability_2026_10_01/220352.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.0011254511,0.4632356,0.535639,2,1,M3_cnn
+data/external/reliability_2026_10_01/221344.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0001474422,0.075138144,0.92471445,2,1,M3_cnn
+data/external/reliability_2026_10_01/221486.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0010176548,0.6128854,0.38609692,1,1,M3_cnn
+data/external/reliability_2026_10_01/222535.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.0008529305,0.23009723,0.7690498,2,1,M3_cnn
+data/external/reliability_2026_10_01/221326.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00027354158,0.1545527,0.8451737,2,1,M3_cnn
+data/external/reliability_2026_10_01/221462.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.001000289,0.71744853,0.28155112,1,1,M3_cnn
+data/external/reliability_2026_10_01/221465.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00066791754,0.8099546,0.18937744,1,1,M3_cnn
+data/external/reliability_2026_10_01/221467.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00065765134,0.6154009,0.3839414,1,1,M3_cnn
+data/external/reliability_2026_10_01/222528.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.0003156592,0.1267474,0.87293696,2,1,M3_cnn
+data/external/reliability_2026_10_01/222550.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.00056600024,0.479622,0.51981205,2,1,M3_cnn
+data/external/reliability_2026_10_01/221466.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0004559801,0.2262397,0.7733044,2,1,M3_cnn
+data/external/reliability_2026_10_01/221372.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0002627834,0.11690428,0.88283294,2,1,M3_cnn
+data/external/reliability_2026_10_01/221490.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00096396764,0.3676329,0.63140315,2,1,M3_cnn
+data/external/reliability_2026_10_01/221312.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0003397976,0.16472682,0.83493334,2,1,M3_cnn
+data/external/reliability_2026_10_01/221351.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0008506827,0.6243144,0.3748349,1,1,M3_cnn
+data/external/reliability_2026_10_01/221339.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00020692528,0.05793232,0.94186074,2,1,M3_cnn
+data/external/reliability_2026_10_01/222247.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00051835907,0.5832277,0.41625392,1,1,M3_cnn
+data/external/reliability_2026_10_01/222586.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.00080901344,0.2047399,0.7944511,2,1,M3_cnn
+data/external/reliability_2026_10_01/221331.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0008265512,0.29885724,0.7003162,2,1,M3_cnn
+data/external/reliability_2026_10_01/222613.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.00010409977,0.017602943,0.98229295,2,1,M3_cnn
+data/external/reliability_2026_10_01/221628.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-06-20,44100,tascam,0.00031407087,0.07201663,0.9276693,2,1,M3_cnn
+data/external/reliability_2026_10_01/220255.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.0003918859,0.71374774,0.28586036,1,1,M3_cnn
+data/external/reliability_2026_10_01/220281.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.000521034,0.4040698,0.5954091,2,1,M3_cnn
+data/external/reliability_2026_10_01/222583.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.00034795544,0.118014805,0.8816372,2,1,M3_cnn
+data/external/reliability_2026_10_01/221564.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-06-20,44100,tascam,0.0005542319,0.39924842,0.6001974,2,1,M3_cnn
+data/external/reliability_2026_10_01/221359.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0003658907,0.14969191,0.84994215,2,1,M3_cnn
+data/external/reliability_2026_10_01/221329.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,4.4731267e-05,0.014918353,0.9850369,2,1,M3_cnn
+data/external/reliability_2026_10_01/222576.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-08-20,44100,tascam,0.0010084208,0.66041183,0.33857977,1,1,M3_cnn
+data/external/reliability_2026_10_01/220370.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.00027187137,0.1495885,0.8501396,2,1,M3_cnn
+data/external/reliability_2026_10_01/220367.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.00050075917,0.14211091,0.85738826,2,1,M3_cnn
+data/external/reliability_2026_10_01/220358.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.00057398464,0.3330414,0.6663846,2,1,M3_cnn
+data/external/reliability_2026_10_01/220336.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.0003867158,0.17912328,0.82049,2,1,M3_cnn
+data/external/reliability_2026_10_01/220247.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00022657184,0.63722193,0.36255148,1,1,M3_cnn
+data/external/reliability_2026_10_01/222232.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.0005962405,0.67740655,0.32199726,1,1,M3_cnn
+data/external/reliability_2026_10_01/222258.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00019600544,0.9816404,0.01816357,1,1,M3_cnn
+data/external/reliability_2026_10_01/222255.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00052115135,0.56491923,0.43455955,1,1,M3_cnn
+data/external/reliability_2026_10_01/222246.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.0005649557,0.7771417,0.2222934,1,1,M3_cnn
+data/external/reliability_2026_10_01/222341.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|26-07-20,44100,tascam,0.0005301646,0.7758533,0.22361654,1,1,M3_cnn
+data/external/reliability_2026_10_01/222240.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.0004842697,0.77099603,0.22851965,1,1,M3_cnn
+data/external/reliability_2026_10_01/222259.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00013717766,0.9866366,0.013226354,1,1,M3_cnn
+data/external/reliability_2026_10_01/222234.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|20-07-20,44100,tascam,0.00049388036,0.12083188,0.8786742,2,1,M3_cnn
+data/external/reliability_2026_10_01/220335.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.00041508538,0.3013092,0.6982757,2,1,M3_cnn
+data/external/reliability_2026_10_01/220341.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.0003011303,0.089534156,0.9101648,2,1,M3_cnn
+data/external/reliability_2026_10_01/221489.wav,humbug,Coquillettidia sp,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.00021117869,0.98316664,0.016622111,1,1,M3_cnn
+data/external/reliability_2026_10_01/221108.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.00027049662,0.10393427,0.8957952,2,1,M3_cnn
+data/external/reliability_2026_10_01/220074.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|02-03-20,44100,tascam,0.00055118516,0.40790868,0.5915401,2,1,M3_cnn
+data/external/reliability_2026_10_01/221131.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.00047091432,0.52913743,0.4703916,1,1,M3_cnn
+data/external/reliability_2026_10_01/221560.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-06-20,44100,tascam,0.0008882296,0.6438307,0.35528103,1,1,M3_cnn
+data/external/reliability_2026_10_01/221128.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.00024232687,0.9213503,0.07840736,1,1,M3_cnn
+data/external/reliability_2026_10_01/220777.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0002862055,0.12294259,0.8767713,2,1,M3_cnn
+data/external/reliability_2026_10_01/221460.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|17-06-20,44100,tascam,0.0006057808,0.83966464,0.15972963,1,1,M3_cnn
+data/external/reliability_2026_10_01/220782.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00013843956,0.28829637,0.7115652,2,1,M3_cnn
+data/external/reliability_2026_10_01/221102.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.00022644586,0.8072329,0.19254068,1,1,M3_cnn
+data/external/reliability_2026_10_01/220807.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00027269934,0.28734577,0.7123816,2,1,M3_cnn
+data/external/reliability_2026_10_01/221139.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.0003305839,0.6380192,0.36165026,1,1,M3_cnn
+data/external/reliability_2026_10_01/220802.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00022499204,0.9619107,0.037864294,1,1,M3_cnn
+data/external/reliability_2026_10_01/220797.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00012282135,0.936916,0.062961176,1,1,M3_cnn
+data/external/reliability_2026_10_01/220799.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0002652333,0.96677655,0.032958314,1,1,M3_cnn
+data/external/reliability_2026_10_01/220809.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0006218341,0.293353,0.7060251,2,1,M3_cnn
+data/external/reliability_2026_10_01/220800.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00050238386,0.58532685,0.4141708,1,1,M3_cnn
+data/external/reliability_2026_10_01/221103.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.0001247133,0.073115535,0.9267598,2,1,M3_cnn
+data/external/reliability_2026_10_01/221574.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|23-06-20,44100,tascam,0.00021693247,0.9770661,0.022716982,1,1,M3_cnn
+data/external/reliability_2026_10_01/221110.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,2.9890267e-05,0.9958038,0.004166349,1,1,M3_cnn
+data/external/reliability_2026_10_01/220749.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,7.371458e-05,0.9857848,0.014141442,1,1,M3_cnn
+data/external/reliability_2026_10_01/220805.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0004178663,0.33071312,0.66886896,2,1,M3_cnn
+data/external/reliability_2026_10_01/220819.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,6.2072424e-05,0.9337034,0.06623446,1,1,M3_cnn
+data/external/reliability_2026_10_01/221121.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-01-20,44100,tascam,0.00038418008,0.21810849,0.7815074,2,1,M3_cnn
+data/external/reliability_2026_10_01/220781.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0003439258,0.19215283,0.80750316,2,1,M3_cnn
+data/external/reliability_2026_10_01/220796.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00032376192,0.17217058,0.8275057,2,1,M3_cnn
+data/external/reliability_2026_10_01/220823.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.00022659129,0.9519462,0.047827207,1,1,M3_cnn
+data/external/reliability_2026_10_01/220266.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|11-03-20,44100,tascam,0.00042863347,0.8058852,0.19368614,1,1,M3_cnn
+data/external/reliability_2026_10_01/220825.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-02-20,44100,tascam,0.0001937397,0.8980139,0.10179237,1,1,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220364.wav,humbug,Anopheles ziemanni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-03-20,44100,tascam,0.0009388621,0.4631759,0.5358853,2,1,M3_cnn
+data/external/humbug/audio/220372.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,3.1984555e-07,1.5473728e-05,0.99998426,2,2,M3_cnn
+data/external/humbug/audio/220385.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,8.20707e-06,0.0005129847,0.9994789,2,2,M3_cnn
+data/external/humbug/audio/220388.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,6.0772727e-05,0.002709879,0.9972294,2,2,M3_cnn
+data/external/humbug/audio/220389.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,7.929441e-05,0.002693205,0.9972275,2,2,M3_cnn
+data/external/humbug/audio/220397.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,3.044487e-05,0.0018006244,0.99816895,2,2,M3_cnn
+data/external/humbug/audio/220399.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,0.0001146241,0.002830674,0.9970547,2,2,M3_cnn
+data/external/humbug/audio/220400.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,4.845954e-06,0.00024953688,0.99974567,2,2,M3_cnn
+data/external/humbug/audio/220405.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,7.1187956e-06,0.00043168972,0.99956113,2,2,M3_cnn
+data/external/humbug/audio/220408.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,2.1384549e-05,0.0009050925,0.9990735,2,2,M3_cnn
+data/external/humbug/audio/220415.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,1.3700451e-05,0.00067153067,0.9993148,2,2,M3_cnn
+data/external/humbug/audio/220427.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,0.000120072684,0.0068023317,0.99307764,2,2,M3_cnn
+data/external/humbug/audio/220430.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,7.53132e-05,0.003879007,0.99604565,2,2,M3_cnn
+data/external/humbug/audio/222273.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,2.2840532e-05,0.0016107714,0.9983664,2,2,M3_cnn
+data/external/humbug/audio/222301.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,3.9078455e-05,0.0017947834,0.99816614,2,2,M3_cnn
+data/external/humbug/audio/222314.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,1.1112286e-05,0.0006302995,0.9993586,2,2,M3_cnn
+data/external/reliability_2026_10_01/221974.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-07-20,44100,tascam,1.6455258e-05,0.0006524668,0.9993311,2,2,M3_cnn
+data/external/reliability_2026_10_01/220853.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00018493815,0.20163456,0.7981805,2,2,M3_cnn
+data/external/reliability_2026_10_01/220410.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,2.3022858e-05,0.0009933135,0.9989837,2,2,M3_cnn
+data/external/reliability_2026_10_01/221687.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,0.0002886931,0.01842618,0.9812851,2,2,M3_cnn
+data/external/reliability_2026_10_01/221670.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,9.4013674e-05,0.009480975,0.99042505,2,2,M3_cnn
+data/external/reliability_2026_10_01/221663.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,8.031145e-05,0.009144341,0.9907754,2,2,M3_cnn
+data/external/reliability_2026_10_01/221656.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,7.829958e-06,0.00061216054,0.99938,2,2,M3_cnn
+data/external/reliability_2026_10_01/222281.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,1.8305163e-05,0.0014695739,0.9985121,2,2,M3_cnn
+data/external/reliability_2026_10_01/220986.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-02-20,44100,tascam,2.1631628e-05,0.005415863,0.99456257,2,2,M3_cnn
+data/external/reliability_2026_10_01/222328.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,0.00031654048,0.022170763,0.97751266,2,2,M3_cnn
+data/external/reliability_2026_10_01/221987.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-07-20,44100,tascam,0.00022631997,0.020624915,0.97914875,2,2,M3_cnn
+data/external/reliability_2026_10_01/222316.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,6.770062e-05,0.004137779,0.99579453,2,2,M3_cnn
+data/external/reliability_2026_10_01/220676.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,5.047681e-05,0.0029618228,0.99698776,2,2,M3_cnn
+data/external/reliability_2026_10_01/220377.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,0.00085331313,0.061647646,0.937499,2,2,M3_cnn
+data/external/reliability_2026_10_01/221821.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|05-07-20,44100,tascam,8.182734e-05,0.0020530233,0.99786514,2,2,M3_cnn
+data/external/reliability_2026_10_01/220404.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,7.618558e-05,0.0037772893,0.99614656,2,2,M3_cnn
+data/external/reliability_2026_10_01/221825.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|05-07-20,44100,tascam,0.00010699214,0.013992594,0.98590046,2,2,M3_cnn
+data/external/reliability_2026_10_01/220396.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,5.8486066e-06,0.00033573044,0.99965847,2,2,M3_cnn
+data/external/reliability_2026_10_01/220975.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-02-20,44100,tascam,0.00026140214,0.02250364,0.9772349,2,2,M3_cnn
+data/external/reliability_2026_10_01/222271.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,3.0486379e-05,0.0017236688,0.99824584,2,2,M3_cnn
+data/external/reliability_2026_10_01/222336.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,0.00017143875,0.013732535,0.98609596,2,2,M3_cnn
+data/external/reliability_2026_10_01/222338.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,0.00013004114,0.00797775,0.9918922,2,2,M3_cnn
+data/external/reliability_2026_10_01/222306.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,4.9033482e-05,0.0030047968,0.99694616,2,2,M3_cnn
+data/external/reliability_2026_10_01/222311.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,0.00016142103,0.008220935,0.9916176,2,2,M3_cnn
+data/external/reliability_2026_10_01/222288.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,2.0922344e-05,0.0012317644,0.99874735,2,2,M3_cnn
+data/external/reliability_2026_10_01/222291.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,5.9795544e-05,0.002236523,0.99770373,2,2,M3_cnn
+data/external/reliability_2026_10_01/222283.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,1.8080491e-05,0.0011712512,0.99881065,2,2,M3_cnn
+data/external/reliability_2026_10_01/222315.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,0.00032126225,0.08481786,0.91486084,2,2,M3_cnn
+data/external/reliability_2026_10_01/222339.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,3.6615977e-05,0.0037679817,0.99619544,2,2,M3_cnn
+data/external/reliability_2026_10_01/222321.wav,humbug,Anopheles maculipalpis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-07-20,44100,tascam,7.952788e-05,0.004830578,0.9950899,2,2,M3_cnn
+data/external/reliability_2026_10_01/221669.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,2.5058916e-05,0.0010163692,0.9989586,2,2,M3_cnn
+data/external/reliability_2026_10_01/221682.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,2.2960923e-05,0.0011120997,0.998865,2,2,M3_cnn
+data/external/reliability_2026_10_01/221868.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|06-07-20,44100,tascam,0.00017835967,0.016682118,0.98313946,2,2,M3_cnn
+data/external/reliability_2026_10_01/220381.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,0.00015873316,0.0108785685,0.9889627,2,2,M3_cnn
+data/external/reliability_2026_10_01/221647.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,0.00013286155,0.007651213,0.99221593,2,2,M3_cnn
+data/external/reliability_2026_10_01/221679.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-06-20,44100,tascam,7.136021e-05,0.0036947918,0.9962339,2,2,M3_cnn
+data/external/reliability_2026_10_01/220991.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-02-20,44100,tascam,0.00014131193,0.023168813,0.97668993,2,2,M3_cnn
+data/external/reliability_2026_10_01/222272.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-07-20,44100,tascam,6.889329e-05,0.0036227643,0.99630827,2,2,M3_cnn
+data/external/reliability_2026_10_01/220610.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0001496176,0.02325427,0.9765961,2,2,M3_cnn
+data/external/reliability_2026_10_01/221975.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|12-07-20,44100,tascam,1.7559774e-05,0.0010024625,0.99898,2,2,M3_cnn
+data/external/reliability_2026_10_01/221839.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|05-07-20,44100,tascam,1.8534362e-05,0.0030101775,0.99697125,2,2,M3_cnn
+data/external/reliability_2026_10_01/221008.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-02-20,44100,tascam,7.1258364e-05,0.011921416,0.9880073,2,2,M3_cnn
+data/external/reliability_2026_10_01/220973.wav,humbug,Culex tigripes,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-02-20,44100,tascam,5.251071e-05,0.004739021,0.99520844,2,2,M3_cnn
+data/external/reliability_2026_10_01/220827.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,4.1613184e-05,0.0017584901,0.9981998,2,2,M3_cnn
+data/external/reliability_2026_10_01/220697.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,4.0443698e-05,0.0022276663,0.99773186,2,2,M3_cnn
+data/external/reliability_2026_10_01/220611.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0006163034,0.05340403,0.94597965,2,2,M3_cnn
+data/external/reliability_2026_10_01/220669.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00022432194,0.009042813,0.9907328,2,2,M3_cnn
+data/external/reliability_2026_10_01/220829.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,6.50583e-05,0.005403921,0.9945311,2,2,M3_cnn
+data/external/reliability_2026_10_01/220838.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00033823104,0.015779385,0.9838824,2,2,M3_cnn
+data/external/reliability_2026_10_01/220846.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00027253336,0.023891764,0.97583574,2,2,M3_cnn
+data/external/reliability_2026_10_01/220865.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,4.610633e-05,0.0065024905,0.99345136,2,2,M3_cnn
+data/external/reliability_2026_10_01/220860.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,7.7456636e-05,0.0035919026,0.9963307,2,2,M3_cnn
+data/external/reliability_2026_10_01/220844.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00010040535,0.004051964,0.9958476,2,2,M3_cnn
+data/external/reliability_2026_10_01/220594.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0002896334,0.046276018,0.95343435,2,2,M3_cnn
+data/external/reliability_2026_10_01/220832.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00032635586,0.01680206,0.98287153,2,2,M3_cnn
+data/external/reliability_2026_10_01/220613.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00033166897,0.014427784,0.9852406,2,2,M3_cnn
+data/external/reliability_2026_10_01/220563.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,5.199177e-05,0.0031675391,0.9967804,2,2,M3_cnn
+data/external/reliability_2026_10_01/220839.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00010287457,0.010902472,0.98899466,2,2,M3_cnn
+data/external/reliability_2026_10_01/220580.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,6.254728e-05,0.003166601,0.99677086,2,2,M3_cnn
+data/external/reliability_2026_10_01/220570.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0011029193,0.12062573,0.8782714,2,2,M3_cnn
+data/external/reliability_2026_10_01/220678.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,4.812452e-05,0.004648724,0.99530315,2,2,M3_cnn
+data/external/reliability_2026_10_01/220593.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0005513361,0.073425345,0.9260233,2,2,M3_cnn
+data/external/reliability_2026_10_01/220874.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00010208467,0.008079339,0.99181855,2,2,M3_cnn
+data/external/reliability_2026_10_01/220647.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00015520607,0.007899503,0.9919453,2,2,M3_cnn
+data/external/reliability_2026_10_01/220873.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.000209645,0.008205605,0.9915848,2,2,M3_cnn
+data/external/reliability_2026_10_01/220868.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.000106276,0.0050187157,0.994875,2,2,M3_cnn
+data/external/reliability_2026_10_01/220876.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0012239864,0.040690724,0.9580853,2,2,M3_cnn
+data/external/reliability_2026_10_01/220848.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00044937138,0.026297202,0.9732535,2,2,M3_cnn
+data/external/reliability_2026_10_01/220863.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,5.6214238e-05,0.004083416,0.9958604,2,2,M3_cnn
+data/external/reliability_2026_10_01/220612.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0003306292,0.028213382,0.971456,2,2,M3_cnn
+data/external/reliability_2026_10_01/220879.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00012724503,0.00951467,0.99035805,2,2,M3_cnn
+data/external/reliability_2026_10_01/220609.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0004928496,0.042175993,0.9573312,2,2,M3_cnn
+data/external/reliability_2026_10_01/220614.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0015472593,0.14758337,0.85086936,2,2,M3_cnn
+data/external/reliability_2026_10_01/220875.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,1.2346614e-05,0.000956849,0.9990308,2,2,M3_cnn
+data/external/reliability_2026_10_01/220603.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,3.798857e-05,0.002278278,0.99768376,2,2,M3_cnn
+data/external/reliability_2026_10_01/220607.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,9.29539e-05,0.0047804583,0.9951266,2,2,M3_cnn
+data/external/reliability_2026_10_01/220687.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.000140644,0.007974145,0.9918852,2,2,M3_cnn
+data/external/reliability_2026_10_01/220600.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0002244513,0.020809676,0.9789659,2,2,M3_cnn
+data/external/reliability_2026_10_01/220584.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0005307474,0.1002053,0.899264,2,2,M3_cnn
+data/external/reliability_2026_10_01/220672.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,3.8228613e-05,0.0026654124,0.9972964,2,2,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220413.wav,humbug,Anopheles rivulorum,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|21-03-20,44100,tascam,0.0001688253,0.01336171,0.9864695,2,2,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220568.wav,humbug,Anopheles ziemanni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.0012064192,0.084785886,0.91400766,2,2,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220619.wav,humbug,Anopheles ziemanni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00035683048,0.028595725,0.97104746,2,2,M3_cnn
+data/external/reproduction_fresh_2026_10_01/220623.wav,humbug,Anopheles pharoensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,3.0022953e-05,0.001717364,0.9982526,2,2,M3_cnn
+data/external/reproduction_final_2026_10_01/220637.wav,humbug,Anopheles ziemanni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,0.00024632373,0.010290515,0.98946315,2,2,M3_cnn
+data/external/reproduction_final_2026_10_01/220864.wav,humbug,Anopheles ziemanni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|10-02-20,44100,tascam,8.897379e-05,0.003629298,0.9962817,2,2,M3_cnn
+data/external/humbug/audio/220441.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0035677284,0.78981256,0.2066197,1,3,M3_cnn
+data/external/humbug/audio/220446.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.00364987,0.17854933,0.8178008,2,3,M3_cnn
+data/external/humbug/audio/220460.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.004100133,0.7976264,0.19827342,1,3,M3_cnn
+data/external/humbug/audio/220461.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0019516997,0.9675252,0.03052299,1,3,M3_cnn
+data/external/humbug/audio/220463.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0060055857,0.5893945,0.40459993,1,3,M3_cnn
+data/external/humbug/audio/220464.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0038500102,0.8197864,0.17636356,1,3,M3_cnn
+data/external/humbug/audio/220466.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.003543214,0.8687804,0.12767635,1,3,M3_cnn
+data/external/humbug/audio/220473.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.002274822,0.960539,0.037186157,1,3,M3_cnn
+data/external/humbug/audio/220488.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0045669805,0.6469019,0.3485311,1,3,M3_cnn
+data/external/humbug/audio/220498.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0049645,0.44705656,0.54797894,2,3,M3_cnn
+data/external/humbug/audio/220500.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0024128305,0.9343113,0.06327595,1,3,M3_cnn
+data/external/humbug/audio/220503.wav,humbug,Aedes aegypti,aedes_aegypti,2,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.004977116,0.7084002,0.2866227,1,3,M3_cnn
+data/external/humbug/audio/221180.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|03-02-20,44100,tascam,0.0042273737,0.91442394,0.08134868,1,3,M3_cnn
+data/external/humbug/audio/221197.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|03-02-20,44100,tascam,0.0056935586,0.69339454,0.30091193,1,3,M3_cnn
+data/external/humbug/audio/222008.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0028477034,0.94607055,0.051081754,1,3,M3_cnn
+data/external/humbug/audio/222024.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0013940417,0.9866152,0.011990759,1,3,M3_cnn
+data/external/humbug/audio/222089.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0024558033,0.9542262,0.043318074,1,3,M3_cnn
+data/external/humbug/audio/222136.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.002632019,0.93737036,0.05999759,1,3,M3_cnn
+data/external/humbug/audio/222438.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.001202728,0.9901985,0.008598831,1,3,M3_cnn
+data/external/reliability_2026_10_01/222370.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0019380329,0.96442795,0.033634026,1,3,M3_cnn
+data/external/reliability_2026_10_01/221182.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|03-02-20,44100,tascam,0.0036634053,0.94099975,0.055336855,1,3,M3_cnn
+data/external/reliability_2026_10_01/222376.wav,humbug,Anopheles arabiensis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0018328067,0.9708774,0.027289825,1,3,M3_cnn
+data/external/reliability_2026_10_01/221997.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0031824226,0.95047843,0.04633911,1,3,M3_cnn
+data/external/reliability_2026_10_01/221780.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0017924628,0.9817934,0.016414136,1,3,M3_cnn
+data/external/reliability_2026_10_01/221765.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0014211816,0.9822543,0.01632449,1,3,M3_cnn
+data/external/reliability_2026_10_01/222022.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.00064305397,0.9960433,0.0033136546,1,3,M3_cnn
+data/external/reliability_2026_10_01/221808.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0017474922,0.9814943,0.016758265,1,3,M3_cnn
+data/external/reliability_2026_10_01/221757.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0030532838,0.9566469,0.040299766,1,3,M3_cnn
+data/external/reliability_2026_10_01/221781.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.002340069,0.95334613,0.04431372,1,3,M3_cnn
+data/external/reliability_2026_10_01/221754.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0018111779,0.9780702,0.020118639,1,3,M3_cnn
+data/external/reliability_2026_10_01/220439.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0032937166,0.8980902,0.098616034,1,3,M3_cnn
+data/external/reliability_2026_10_01/221281.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0011003463,0.9932869,0.0056126486,1,3,M3_cnn
+data/external/reliability_2026_10_01/221718.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0021650586,0.974638,0.023196975,1,3,M3_cnn
+data/external/reliability_2026_10_01/221286.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.004287747,0.8689121,0.12680008,1,3,M3_cnn
+data/external/reliability_2026_10_01/221735.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0012633038,0.98915976,0.009577016,1,3,M3_cnn
+data/external/reliability_2026_10_01/221806.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0028392973,0.9753039,0.02185679,1,3,M3_cnn
+data/external/reliability_2026_10_01/222012.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0017356701,0.98197895,0.016285416,1,3,M3_cnn
+data/external/reliability_2026_10_01/221307.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.003782495,0.48019686,0.51602066,2,3,M3_cnn
+data/external/reliability_2026_10_01/221706.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0014889537,0.9764612,0.022049919,1,3,M3_cnn
+data/external/reliability_2026_10_01/222001.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0037270181,0.9266441,0.069628894,1,3,M3_cnn
+data/external/reliability_2026_10_01/221799.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.00204987,0.9775,0.020450145,1,3,M3_cnn
+data/external/reliability_2026_10_01/221276.wav,humbug,Anopheles coustani,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0047327075,0.834595,0.16067222,1,3,M3_cnn
+data/external/reliability_2026_10_01/222133.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0021423183,0.9533199,0.044537727,1,3,M3_cnn
+data/external/reliability_2026_10_01/221265.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.003669337,0.1948765,0.8014542,2,3,M3_cnn
+data/external/reliability_2026_10_01/221295.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0013396561,0.08432666,0.91433364,2,3,M3_cnn
+data/external/reliability_2026_10_01/221299.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.00245696,0.18128228,0.81626076,2,3,M3_cnn
+data/external/reliability_2026_10_01/221304.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0050388784,0.4297068,0.56525433,2,3,M3_cnn
+data/external/reliability_2026_10_01/221300.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0043257126,0.33565968,0.6600146,2,3,M3_cnn
+data/external/reliability_2026_10_01/220434.wav,humbug,Anopheles funestus sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.004781274,0.5624632,0.43275547,1,3,M3_cnn
+data/external/reliability_2026_10_01/221174.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|03-02-20,44100,tascam,0.0051522814,0.8272368,0.16761094,1,3,M3_cnn
+data/external/reliability_2026_10_01/220511.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|03-02-20,44100,tascam,0.0040802103,0.8183892,0.17753054,1,3,M3_cnn
+data/external/reliability_2026_10_01/222386.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0032756845,0.93033457,0.066389754,1,3,M3_cnn
+data/external/reliability_2026_10_01/222086.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0014188935,0.9784541,0.020126957,1,3,M3_cnn
+data/external/reliability_2026_10_01/222106.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0047511207,0.7407047,0.25454423,1,3,M3_cnn
+data/external/reliability_2026_10_01/222365.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0025938607,0.94888216,0.04852392,1,3,M3_cnn
+data/external/reliability_2026_10_01/222044.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.003868538,0.8735517,0.12257971,1,3,M3_cnn
+data/external/reliability_2026_10_01/221059.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|18-02-20,44100,tascam,0.0015704687,0.9878258,0.010603728,1,3,M3_cnn
+data/external/reliability_2026_10_01/222132.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0016144933,0.9718955,0.026490003,1,3,M3_cnn
+data/external/reliability_2026_10_01/221998.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.0049460228,0.69005376,0.30500022,1,3,M3_cnn
+data/external/reliability_2026_10_01/221220.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-06-20,44100,tascam,0.003019524,0.40146,0.5955205,2,3,M3_cnn
+data/external/reliability_2026_10_01/222102.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.0012970467,0.98786676,0.010836177,1,3,M3_cnn
+data/external/reliability_2026_10_01/221778.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.004733466,0.8124163,0.1828503,1,3,M3_cnn
+data/external/reliability_2026_10_01/222380.wav,humbug,Anopheles funestus ss,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.005271158,0.50148976,0.49323907,1,3,M3_cnn
+data/external/reliability_2026_10_01/221288.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.003763001,0.5566008,0.43963614,1,3,M3_cnn
+data/external/reliability_2026_10_01/221298.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.004298734,0.80243176,0.1932695,1,3,M3_cnn
+data/external/reliability_2026_10_01/220205.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|07-03-20,44100,tascam,0.004152328,0.9080808,0.08776689,1,3,M3_cnn
+data/external/reliability_2026_10_01/221280.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0009261257,0.034697983,0.96437585,2,3,M3_cnn
+data/external/reliability_2026_10_01/221285.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.005040453,0.62005734,0.3749022,1,3,M3_cnn
+data/external/reliability_2026_10_01/221301.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.0033456679,0.20994939,0.78670496,2,3,M3_cnn
+data/external/reliability_2026_10_01/221292.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.001132255,0.049419414,0.94944835,2,3,M3_cnn
+data/external/reliability_2026_10_01/220479.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0036671732,0.7890624,0.20727044,1,3,M3_cnn
+data/external/reliability_2026_10_01/220440.wav,humbug,Anopheles gambiae sl,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0040092105,0.81162685,0.18436402,1,3,M3_cnn
+data/external/reliability_2026_10_01/221275.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.005193841,0.752968,0.24183819,1,3,M3_cnn
+data/external/reliability_2026_10_01/221750.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.004050098,0.83825326,0.15769665,1,3,M3_cnn
+data/external/reliability_2026_10_01/221744.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0051749675,0.7355498,0.25927523,1,3,M3_cnn
+data/external/reliability_2026_10_01/221784.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0023786312,0.95188224,0.045739092,1,3,M3_cnn
+data/external/reliability_2026_10_01/221708.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0015515713,0.98431855,0.01412981,1,3,M3_cnn
+data/external/reliability_2026_10_01/221800.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0021950584,0.9376717,0.060133263,1,3,M3_cnn
+data/external/reliability_2026_10_01/220490.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0060025207,0.54958475,0.44441268,1,3,M3_cnn
+data/external/reliability_2026_10_01/221755.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0038474465,0.8940141,0.102138355,1,3,M3_cnn
+data/external/reliability_2026_10_01/220459.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.00076494383,0.99688405,0.0023510093,1,3,M3_cnn
+data/external/reliability_2026_10_01/221796.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0030144132,0.9306474,0.066338204,1,3,M3_cnn
+data/external/reliability_2026_10_01/222124.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-07-20,44100,tascam,0.002127433,0.9629154,0.034957115,1,3,M3_cnn
+data/external/reliability_2026_10_01/220448.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0013852316,0.976772,0.02184283,1,3,M3_cnn
+data/external/reliability_2026_10_01/221709.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0016646708,0.96856993,0.029765394,1,3,M3_cnn
+data/external/reliability_2026_10_01/221736.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0036250234,0.90589094,0.09048401,1,3,M3_cnn
+data/external/reliability_2026_10_01/220457.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0049504917,0.6953366,0.29971296,1,3,M3_cnn
+data/external/reliability_2026_10_01/221728.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0036791977,0.65048814,0.34583268,1,3,M3_cnn
+data/external/reliability_2026_10_01/220509.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0016671885,0.9794763,0.018856622,1,3,M3_cnn
+data/external/reliability_2026_10_01/220456.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0038999186,0.8178424,0.17825775,1,3,M3_cnn
+data/external/reliability_2026_10_01/220442.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.0035207085,0.79036844,0.20611088,1,3,M3_cnn
+data/external/reliability_2026_10_01/220489.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|24-03-20,44100,tascam,0.002770336,0.27535704,0.7218726,2,3,M3_cnn
+data/external/reliability_2026_10_01/221772.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.002659852,0.95971954,0.037620597,1,3,M3_cnn
+data/external/reliability_2026_10_01/221720.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0031336208,0.94639075,0.050475627,1,3,M3_cnn
+data/external/reliability_2026_10_01/221710.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.004383707,0.846695,0.14892128,1,3,M3_cnn
+data/external/reliability_2026_10_01/221305.wav,humbug,Anopheles squamosus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|27-03-20,44100,tascam,0.004407504,0.8039947,0.19159783,1,3,M3_cnn
+data/external/reliability_2026_10_01/221715.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.0023601202,0.96434337,0.033296555,1,3,M3_cnn
+data/external/reliability_2026_10_01/221014.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|18-02-20,44100,tascam,0.0010959523,0.9898797,0.0090242885,1,3,M3_cnn
+data/external/reliability_2026_10_01/221775.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.0050734584,0.7626092,0.23231734,1,3,M3_cnn
+data/external/reliability_2026_10_01/220733.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-02-20,44100,tascam,0.0013412039,0.9865563,0.012102563,1,3,M3_cnn
+data/external/reliability_2026_10_01/220705.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-02-20,44100,tascam,0.0011394207,0.99223983,0.006620763,1,3,M3_cnn
+data/external/reliability_2026_10_01/221040.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|18-02-20,44100,tascam,0.0015011267,0.98940676,0.009092147,1,3,M3_cnn
+data/external/reliability_2026_10_01/222419.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0037763854,0.90809447,0.088129066,1,3,M3_cnn
+data/external/reliability_2026_10_01/221054.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|18-02-20,44100,tascam,0.002780259,0.97290593,0.024313834,1,3,M3_cnn
+data/external/reliability_2026_10_01/221812.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|29-06-20,44100,tascam,0.003993173,0.8060407,0.1899661,1,3,M3_cnn
+data/external/reliability_2026_10_01/222064.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|13-07-20,44100,tascam,0.003621426,0.8978254,0.09855322,1,3,M3_cnn
+data/external/reliability_2026_10_01/220708.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|14-02-20,44100,tascam,0.0007085679,0.99666095,0.0026305225,1,3,M3_cnn
+data/external/reliability_2026_10_01/221025.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|18-02-20,44100,tascam,0.00088293426,0.99474686,0.0043701436,1,3,M3_cnn
+data/external/reliability_2026_10_01/221732.wav,humbug,Culex pipiens complex,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.00144521,0.98499715,0.013557661,1,3,M3_cnn
+data/external/reliability_2026_10_01/222440.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|28-07-20,44100,tascam,0.0018330554,0.9858052,0.012361767,1,3,M3_cnn
+data/external/reliability_2026_10_01/221229.wav,humbug,Mansonia africanus,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-06-20,44100,tascam,0.0015364541,0.9792682,0.019195357,1,3,M3_cnn
+data/external/reliability_2026_10_01/221259.wav,humbug,Mansonia uniformis,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|16-06-20,44100,tascam,0.00095610967,0.98701465,0.012029266,1,3,M3_cnn
+data/external/reproduction_fresh_2026_10_01/221724.wav,humbug,Anopheles leesoni,other_mosquito,1,humbug|Tanzania|Ifakara|tascam|cup|30-06-20,44100,tascam,0.004465874,0.81929624,0.17623793,1,3,M3_cnn

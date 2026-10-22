@@ -1,0 +1,65 @@
+{
+  "kind": "post_run_document_clarification",
+  "date": "2026-10-22",
+  "changes": "Flag degenerate zero-event cluster-bootstrap intervals in the report table and figure and show the per-file binomial CI (descriptive only) beside them. No number recomputed; no model, parameter, threshold, metric file or freeze changed.",
+  "previous_revision": "document_revision.json",
+  "before": {
+    "report_sha256": "c30315efed34e5874569187eff3a1911b999d219e8d09c920c492bed15b02973",
+    "figure_sha256": "c2e09227634eb9253e85b356352832b72b8ca97e0957d25d1ed54529c39e1aee",
+    "metrics_sha256": "1ddeb19f4d7063f164739344266dd60226fb37346eb0fdb975ae7767d16dbbca"
+  },
+  "after": {
+    "report_sha256": "d8766ba009110b4575dc2e06ee4fd72912c94f4f0cb9015dc9133e4aa8577e74",
+    "figure_sha256": "113ab42941b026fd8dbe709556ab773ec7eebc2b8ba249456da1834dd9e566b5",
+    "metrics_sha256": "1ddeb19f4d7063f164739344266dd60226fb37346eb0fdb975ae7767d16dbbca"
+  },
+  "plotted_numbers": {
+    "auroc": {
+      "abuzz": [
+        0.5619307832422588,
+        0.633424408014572,
+        0.613023679417122,
+        0.5764116575591985,
+        0.4408014571948998,
+        0.6668488160291439
+      ],
+      "humbug": [
+        0.5799772504494871,
+        0.6038087150697425,
+        0.5856625413449492,
+        0.6331409581020375,
+        0.5962206391889837,
+        0.6044995885161947
+      ],
+      "mosquitosong": [
+        0.4786005219525404,
+        0.6441130551506806,
+        0.5237039042741345,
+        0.6087919621613214,
+        0.48683596518011973,
+        0.531101112461761
+      ]
+    },
+    "confusion": [
+      [
+        87,
+        15,
+        0,
+        5
+      ],
+      [
+        47,
+        303,
+        0,
+        21
+      ],
+      [
+        0,
+        180,
+        0,
+        17
+      ]
+    ]
+  },
+  "scientific_model_and_threshold_changes": false
+}

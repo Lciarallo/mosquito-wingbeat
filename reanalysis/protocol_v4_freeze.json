@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-10-22T13:02:41.739307+00:00",
+  "no_v4_classifier_fitted": true,
+  "no_v4_augmented_feature_computed": true,
+  "v3_reserved_test_read_by_v4": false,
+  "sha256": {
+    "reanalysis/protocol_v4.json": "34cee8d7880ce95971ffec38d521d458006e31b06cbe9e8dc0c1729490c17bcf",
+    "reports/plano_v4.md": "485d4d62078fa90a43dbc2425e62f980acbab2fe665cf696ae6b7c0c61e53dbc",
+    "reanalysis/v4_train.py": "01f1e893a5b19d3269f4c30417ce8367699dc8556b49ac8702e1063bbc3f2921",
+    "reanalysis/v4_augment.py": "14421a5261dedc171db30753debfabd7d050a87010da0b9fecdbe0e6edb685d7",
+    "reanalysis/v4_diagnostics.py": "c87a444e06d9cbc1e6235e19dc2d20ce48fa70f4f68d2733eba1ce25956588df",
+    "reanalysis/v3_train.py": "d02da5fed3f91fdca9e3343d57501a9806a0176e982cf335302480a6382b722b",
+    "reanalysis/v3_metrics.py": "8babd4ecb2e945c68ff5ee94456510f2775df81adc6dfb167e47250becdfd3ab",
+    "reanalysis/v3_features.py": "d2a60b2e0729aa015bf8e8b9d493143267a7b2c4a3a3d31ca4c729861effa11f",
+    "results/v3_continuation/manifest.csv": "a9cf31e6816ed51d9b8b56390b7b840c05050c297a80d4e6649daae04cef7479",
+    "data/cache/v3_continuation/meta.json": "7e0f607df06513a1d696ec0f03c9e8e1204c5c2218221c5e4af13caf3be1aa5d",
+    "data/external/openslr28/rirs_noises.zip": "3b50cfde915b3984738169b4beb341e9f6b8062ae4c2076146c5db71c2c05dc7"
+  }
+}

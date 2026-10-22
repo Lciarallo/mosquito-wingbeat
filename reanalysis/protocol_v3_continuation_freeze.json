@@ -1,0 +1,11 @@
+{
+  "frozen_utc": "2026-10-20T21:17:52.554600+00:00",
+  "no_v3_classifier_fitted": true,
+  "sha256": {
+    "reanalysis/protocol_v3.json": "eeef5d3e2d83d879f27e6d9396fffea14ded49fe2eb9c6ef61239b787b5b8db2",
+    "reanalysis/protocol_v3_continuation.json": "37dfc1f597695031f2a8291a1f8ab00e222791644f360a0586818d2adc4ec6e2",
+    "reanalysis/v3_features.py": "d2a60b2e0729aa015bf8e8b9d493143267a7b2c4a3a3d31ca4c729861effa11f",
+    "reanalysis/v3_continue_manifest.py": "58344380e4515424d5918ab0525e3bbc4d33308b2404aaaaa90beabd0daf033d",
+    "results/v3_continuation/manifest.csv": "a9cf31e6816ed51d9b8b56390b7b840c05050c297a80d4e6649daae04cef7479"
+  }
+}

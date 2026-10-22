@@ -1,0 +1,18 @@
+{
+  "seed": 20261023,
+  "inherited_manifest_sha256": "1135561a8a97ff70995f8c6b03be8a2a9c63c7b5d7f44c5d8ec53dd2e8291caa",
+  "all_rows_sha256": "903f15d70a4112d871a2622648be1f835019bd05d7a44b71b94055530d30d677",
+  "manifest_sha256": "a9cf31e6816ed51d9b8b56390b7b840c05050c297a80d4e6649daae04cef7479",
+  "n_files": 11324,
+  "roles": {
+    "train": 9928,
+    "locked_test": 568,
+    "noise_train": 435,
+    "quarantine_holdout_related": 286,
+    "locked_noise": 107
+  },
+  "locked_aedes_clusters": 3,
+  "locked_previously_scored_components": 15,
+  "overlap_development_test_paths_components_clusters": 0,
+  "classification_results_inspected": false
+}
