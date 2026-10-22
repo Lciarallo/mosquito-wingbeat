@@ -42,7 +42,7 @@ RESERVED = ["locked_test", "locked_noise", "quarantine_holdout_related"]
 LODO_MOSQUITO = ["abuzz", "humbug", "mosquitosong"]
 LODO_NOISE = ["esc50", "pete_noise"]
 CANDIDATES = ["A0_perch_white", "A1_perch_coral", "A2_perch_dann", "B1_band_tabular", "B2_wingbeat",
-              "C1_aug_band_tabular", "C2_aug_perch_coral"]
+              "C1_aug_band_tabular", "C2_aug_perch_coral", "D1_perch_ft"]  # D1: amendment A1
 DIAGNOSTIC = ["R_tabular_full"]
 SPEC = {"A0_perch_white": ("perch_white", "logistic", False, False),
         "A1_perch_coral": ("perch_white", "logistic", True, False),
@@ -51,11 +51,15 @@ SPEC = {"A0_perch_white": ("perch_white", "logistic", False, False),
         "B2_wingbeat": ("wingbeat", "logistic", False, False),
         "C1_aug_band_tabular": ("band_tabular", "histgb", False, True),
         "C2_aug_perch_coral": ("perch_white", "logistic", True, True),
+        "D1_perch_ft": ("perch_ft", "logistic", False, False),
         "R_tabular_full": ("tabular_white", "histgb", False, False)}
+FINETUNE = ROOT / "results/v4/finetune"
+AMENDMENTS = [ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json"]
 LOW_BANDS = [0, 1, 2, 3, 4]  # mel centres 133-276 Hz, below the Aedes wingbeat
 BAND_COLUMNS = [b for b in range(40) if b not in LOW_BANDS] + [40 + b for b in range(40) if b not in LOW_BANDS] + list(range(80, 89))
 FROZEN_FILES = ["reanalysis/protocol_v4.json", "reports/plano_v4.md", "reanalysis/v4_train.py",
-                "reanalysis/v4_augment.py", "reanalysis/v4_diagnostics.py", "reanalysis/v3_train.py", "reanalysis/v3_metrics.py",
+                "reanalysis/v4_augment.py", "reanalysis/v4_diagnostics.py", "reanalysis/v4_finetune.py",
+                "reanalysis/protocol_v4_amendment_A1.json", "reanalysis/v3_train.py", "reanalysis/v3_metrics.py",
                 "reanalysis/v3_features.py", "results/v3_continuation/manifest.csv",
                 "data/cache/v3_continuation/meta.json"]
 
@@ -72,12 +76,21 @@ def write_json(path, value):
 
 
 def check_freeze():
-    """Refuse to run with code/protocol/data different from the pre-registered freeze."""
+    """Refuse to run with code/protocol/data different from the pre-registered freeze.
+    The original freeze is immutable; a later amendment freeze must list every file it changed and
+    re-hash all frozen inputs. Files not declared as changed must still match the original freeze."""
     frozen = json.loads(FREEZE.read_text())
-    changed = [p for p, sha in frozen["sha256"].items() if digest(ROOT / p) != sha]
-    if changed:
-        raise ValueError(f"Frozen v4 inputs changed (record an amendment): {changed}")
-    return frozen
+    declared = set()
+    latest = frozen
+    for path in AMENDMENTS:
+        if path.exists():
+            latest = json.loads(path.read_text())
+            declared |= set(latest["changed_files"])
+    stale = [p for p, sha in frozen["sha256"].items() if p not in declared and digest(ROOT / p) != sha]
+    changed = [p for p, sha in latest["sha256"].items() if digest(ROOT / p) != sha]
+    if stale or changed:
+        raise ValueError(f"Frozen v4 inputs changed (record an amendment): {stale + changed}")
+    return latest
 
 
 # ----------------------------------------------------------------------------- data
@@ -161,10 +174,26 @@ class Coral:
         return out.astype("float32")
 
 
-def fold_matrix(name, frame, arrays, aug, fit, cal, test, seed):
+def finetune_matrix(frame, tag, fit, cal, test):
+    """Fold-specific fine-tuned embeddings (amendment A1). The backbone must have been trained on exactly
+    the fitting rows of this fold: never on calibration or evaluation files."""
+    meta = json.loads((FINETUNE / tag / "embeddings.json").read_text())
+    if digest(FINETUNE / tag / "embeddings.npy") != meta["embeddings_sha256"]:
+        raise ValueError(f"Changed fine-tuned embeddings: {tag}")
+    trained = set(meta["training_file_ids"])
+    if trained != set(frame.file_id.iloc[fit]):
+        raise ValueError(f"Fine-tuning rows differ from the fold's fitting rows: {tag}")
+    if trained & set(frame.file_id.iloc[np.r_[cal, test]]):
+        raise ValueError(f"Fine-tuning touched calibration/evaluation files: {tag}")
+    return np.load(FINETUNE / tag / "embeddings.npy")
+
+
+def fold_matrix(name, frame, arrays, aug, fit, cal, test, seed, tag=None):
     """Feature matrix for every row of the fold, plus augmented fitting rows when the candidate uses them.
     CORAL statistics: training origins from their fit+cal rows, held-out origin from its unlabeled test rows."""
     feature, _, coral, augmented = SPEC[name]
+    if feature == "perch_ft":
+        return finetune_matrix(frame, tag, fit, cal, test), None, None
     X = arrays[feature]
     origins = frame.origin.to_numpy()
     extra = None
@@ -360,7 +389,7 @@ def run_fold(part, frame, arrays, aug, names, directory, seed):
     gate = None
     for name in ["B2_wingbeat"] + [n for n in names if n != "B2_wingbeat"]:
         path = directory / f"{name}.joblib"
-        X, extra, coral = fold_matrix(name, frame, arrays, aug, fit, cal, test, seed)
+        X, extra, coral = fold_matrix(name, frame, arrays, aug, fit, cal, test, seed, part["tag"])
         if path.exists():
             saved = json.loads((directory / f"{name}.info.json").read_text())
             if digest(path) != saved["model_sha256"]:
@@ -393,7 +422,7 @@ def fewshot(part, frame, arrays, aug, names, directory, seed):
     Xgate, _, _ = fold_matrix("B2_wingbeat", frame, arrays, aug, fit, cal, part["test"], seed)
     for name in names:
         bundle = joblib.load(directory / f"{name}.joblib")["bundle"]
-        X, _, _ = fold_matrix(name, frame, arrays, aug, fit, cal, part["test"], seed)
+        X, _, _ = fold_matrix(name, frame, arrays, aug, fit, cal, part["test"], seed, part["tag"])
         for k in [5, 10, 20]:
             for repeat in range(5):
                 chosen, evaluate, reason = v3.choose_fewshot(frame, part["test"], k, v3.SEED + repeat)
@@ -504,7 +533,7 @@ def final_stage():
     empty = np.array([], dtype=int)
     stored = {}
     for name in sorted({selection["candidate"], "B2_wingbeat"}):
-        X, extra, coral = fold_matrix(name, frame, arrays, aug, fit, cal, empty, SEED + 99)
+        X, extra, coral = fold_matrix(name, frame, arrays, aug, fit, cal, empty, SEED + 99, "final")
         with threadpool_limits(8):
             bundle = fit_bundle(name, frame, X, extra, fit, cal, SEED + 99)
         path = directory / f"{name}.joblib"

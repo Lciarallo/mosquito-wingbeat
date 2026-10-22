@@ -1,0 +1,25 @@
+{
+  "amendment": "A1",
+  "date": "2026-10-22",
+  "timing": "Recorded and frozen before any v4 classifier was fitted. The augmented features (v4_augment.py) were being computed under the original freeze; they do not depend on this amendment.",
+  "reason": "protocol_v4.json not_executed.perch_finetuning_or_lora said 'No GPU on this machine'. That premise was wrong: nvidia-smi was absent because the GPU is an AMD Radeon RX 9070 XT (gfx1201, 17 GB). The author asked for the GPU arm to be added before training. PyTorch 2.9.1+rocm6.4 was installed in a separate environment (.venv-v4-rocm); .venv-v3 is unchanged.",
+  "feasibility_checks_before_freezing": {
+    "gpu": "torch.cuda.is_available() True on gfx1201; convolution forward/backward ran.",
+    "conversion": "Perch v2 ONNX cut at its 'spectrogram' tensor (stale value_info removed first; values unchanged). The spectrogram->embedding backbone (no DFT op) converted with onnx2torch 1.5.15: 78 Conv2d, 8.77M trainable parameters (MatMul weights become constants).",
+    "parity": "On 12 real whitened development chunks, GPU PyTorch vs original ONNX embedding: max |diff| 1.9e-06, minimum cosine 1.000000. No score or label was used."
+  },
+  "added_candidate": {
+    "D1_perch_ft": {
+      "representation": "Fold-specific fine-tuned Perch embedding (mean of chunk embeddings per file) of the same whitened chunks as perch_white.",
+      "frontend": "Perch ONNX spectral frontend, frozen, CPU; spectrograms cached once in fp16 (the build refuses to continue if the fp16 path loses cosine < 0.999 against the ONNX embedding).",
+      "trainable": "Convolutions 71-77 in graph order only: the last MBConv stage (232->1392, depthwise 3x3, 1392->384, 384->2304, depthwise 3x3, 2304->384) and the 384->1536 head convolution, about 3.26M parameters; the structure is checked at run time. Everything else frozen.",
+      "objective": "Two linear heads on the 1536-d embedding: presence (mosquito vs noise, all fitting files) and Aedes among mosquitoes (mosquito fitting files). Sum of two weighted BCE losses; each file carries one unit of mass split over its chunks; classes balanced per task.",
+      "optimisation": "AdamW, lr 1e-4 (backbone) and 1e-3 (heads), weight decay 1e-3, 3 epochs, batch 32 chunks, seed 20261103 + fold index. Fixed in advance: no epoch, learning-rate or layer search, because with 16 Aedes clusters a search would select on noise.",
+      "training_rows": "Only the fitting rows of each fold (the same deterministic v3 cluster split used by every candidate). Calibration and evaluation files are never used; v4_train.finetune_matrix refuses embeddings whose training files differ from the fold's fitting files.",
+      "downstream": "The fine-tuned file embeddings go through the unchanged v4 pipeline as a logistic two-stage candidate: calibration maps, threshold, gated/ungated, few-shot calibration, per-corpus selection, final freeze.",
+      "final": "If selected, the backbone is fine-tuned again on the final fitting split (seed 20261103 + 99) and frozen with its SHA-256 before any new-test data exists.",
+      "determinism": "GPU kernels are not bitwise deterministic; seeds fix initialisation and data order. Pipeline determinism is tested on CPU."
+    }
+  },
+  "unchanged": "Data, development roles, partitions, selection rule and targets, evaluations, diagnostics, new-test criteria. The original freeze (protocol_v4_freeze.json) is kept; protocol_v4_amendment_A1_freeze.json lists the changed files and re-hashes every frozen input."
+}

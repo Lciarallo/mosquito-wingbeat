@@ -172,3 +172,76 @@ def test_v4_freeze_covers_protocol_and_code():
     for path in ["reanalysis/protocol_v4.json", "reanalysis/v4_train.py", "reanalysis/v4_augment.py",
                  "reanalysis/v4_diagnostics.py", "reports/plano_v4.md"]:
         assert path in frozen
+
+
+# ----------------------------------------------------------------------------- amendment A1
+from reanalysis import v4_finetune as ft
+
+
+def _fake_finetune(tmp_path, frame, fit, tag="LODO_x"):
+    d = tmp_path / tag
+    d.mkdir(parents=True)
+    np.save(d / "embeddings.npy", np.zeros((len(frame), 4), dtype="float32"))
+    meta = dict(training_file_ids=frame.file_id.iloc[fit].tolist(), embeddings_sha256=v4.digest(d / "embeddings.npy"))
+    (d / "embeddings.json").write_text(json.dumps(meta))
+    return tag
+
+
+def test_finetune_embeddings_must_come_from_fitting_rows_only(tmp_path, monkeypatch):
+    frame, _ = synthetic()
+    part = v4.partitions(frame)[1]
+    fit, cal = v3.split_fit_calibration(frame, part["train"], v4.SEED)
+    monkeypatch.setattr(v4, "FINETUNE", tmp_path)
+    tag = _fake_finetune(tmp_path, frame, fit)
+    assert v4.finetune_matrix(frame, tag, fit, cal, part["test"]).shape == (len(frame), 4)
+    leaked = _fake_finetune(tmp_path, frame, np.r_[fit, part["test"][:1]], "LODO_leak")
+    with pytest.raises(ValueError):
+        v4.finetune_matrix(frame, leaked, fit, cal, part["test"])
+
+
+def test_finetune_chunk_weights_give_each_file_unit_mass():
+    target = np.array([0, 0, 1, 1, 1, 2])
+    counts = np.array([1, 3, 2, 1, 6, 4])
+    fit = np.arange(6)
+    rows, wp, wa = ft.chunk_weights(target, counts, fit)
+    per_file_p = np.bincount(rows, weights=wp, minlength=6)
+    assert np.isclose(per_file_p[target == 0].sum(), per_file_p[target > 0].sum())
+    assert np.allclose(per_file_p, v3.balanced_weights((target > 0).astype(int)))
+    per_file_a = np.bincount(rows, weights=wa, minlength=6)
+    assert np.allclose(per_file_a[target == 0], 0)
+    assert np.isclose(per_file_a[target == 1].sum(), per_file_a[target == 2].sum())
+
+
+def test_amended_freeze_requires_declared_changes(tmp_path, monkeypatch):
+    (tmp_path / "a.txt").write_text("one")
+    (tmp_path / "b.txt").write_text("two")
+    base = dict(sha256={"a.txt": v4.digest(tmp_path / "a.txt"), "b.txt": v4.digest(tmp_path / "b.txt")})
+    (tmp_path / "freeze.json").write_text(json.dumps(base))
+    monkeypatch.setattr(v4, "ROOT", tmp_path)
+    monkeypatch.setattr(v4, "FREEZE", tmp_path / "freeze.json")
+    monkeypatch.setattr(v4, "AMENDMENTS", [tmp_path / "A1.json"])
+    v4.check_freeze()
+    (tmp_path / "a.txt").write_text("changed")
+    with pytest.raises(ValueError):
+        v4.check_freeze()
+    amended = dict(changed_files=["a.txt"], sha256={"a.txt": v4.digest(tmp_path / "a.txt"), "b.txt": base["sha256"]["b.txt"]})
+    (tmp_path / "A1.json").write_text(json.dumps(amended))
+    v4.check_freeze()
+    (tmp_path / "b.txt").write_text("undeclared")
+    with pytest.raises(ValueError):
+        v4.check_freeze()
+
+
+@pytest.mark.skipif(not (ROOT / "data/models/perch_v2_torch/backbone.pt").exists(), reason="Converted Perch not distributed")
+def test_trainable_layers_follow_the_preregistered_rule():
+    pytest.importorskip("onnx2torch")
+    backbone = ft.load_backbone()
+    chosen = ft.trainable_convolutions(backbone)
+    assert sum(p.numel() for m in chosen for p in m.parameters()) == 3_271_056 or len(chosen) == 7
+
+
+@pytest.mark.skipif(not (ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json").exists(), reason="A1 not frozen yet")
+def test_amendment_freeze_covers_finetuning():
+    frozen = json.loads((ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json").read_text())
+    assert {"reanalysis/v4_finetune.py", "reanalysis/protocol_v4_amendment_A1.json", "reanalysis/v4_train.py"} <= set(frozen["sha256"])
+    assert set(frozen["changed_files"]) <= set(frozen["sha256"])
