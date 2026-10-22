@@ -1,0 +1,457 @@
+{
+  "candidate": "B1_band_tabular",
+  "gated": false,
+  "eligible": false,
+  "eligibility_level": null,
+  "reason": "No candidate met the per-corpus development targets; highest mean LODO AUROC frozen as descriptive fallback",
+  "candidates": [
+    {
+      "candidate": "A0_perch_white",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.04065040650406504,
+        "mosquitosong": 0.055248618784530384
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0018214936247723133,
+        "humbug": 0.02696245733788396,
+        "mosquitosong": 0.058394160583941604
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0010554089709762533,
+        "LODO_esc50": 0.02127659574468085,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.09782030834662414,
+      "auroc": 0.5902459632628996,
+      "auroc_per_corpus": {
+        "abuzz": 0.6234061930783242,
+        "humbug": 0.5851582771146862,
+        "mosquitosong": 0.5621734195956885
+      }
+    },
+    {
+      "candidate": "A0_perch_white",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0010427528675703858
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.5902459632628996,
+      "auroc_per_corpus": {
+        "abuzz": 0.6234061930783242,
+        "humbug": 0.5851582771146862,
+        "mosquitosong": 0.5621734195956885
+      }
+    },
+    {
+      "candidate": "A1_perch_coral",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.11382113821138211,
+        "mosquitosong": 0.016574585635359115
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.018214936247723135,
+        "humbug": 0.058532423208191124,
+        "mosquitosong": 0.014598540145985401
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.021108179419525065,
+        "LODO_esc50": 0.00425531914893617,
+        "LODO_pete_noise": 0.02
+      },
+      "precision": 0.11175482787573467,
+      "auroc": 0.5354960902550289,
+      "auroc_per_corpus": {
+        "abuzz": 0.5254098360655738,
+        "humbug": 0.550732021826988,
+        "mosquitosong": 0.5303464128725248
+      }
+    },
+    {
+      "candidate": "A1_perch_coral",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.5354960902550289,
+      "auroc_per_corpus": {
+        "abuzz": 0.5254098360655738,
+        "humbug": 0.550732021826988,
+        "mosquitosong": 0.5303464128725248
+      }
+    },
+    {
+      "candidate": "A2_perch_dann",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.2,
+        "humbug": 0.04065040650406504,
+        "mosquitosong": 0.06629834254143646
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.012750455373406194,
+        "humbug": 0.03378839590443686,
+        "mosquitosong": 0.06569343065693431
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0010554089709762533,
+        "LODO_esc50": 0.029787234042553193,
+        "LODO_pete_noise": 0.005
+      },
+      "precision": 0.22129622550143999,
+      "auroc": 0.5862522550911011,
+      "auroc_per_corpus": {
+        "abuzz": 0.6272313296903461,
+        "humbug": 0.5769306977402462,
+        "mosquitosong": 0.5545947378427113
+      }
+    },
+    {
+      "candidate": "A2_perch_dann",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0027624309392265192
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0010427528675703858
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.16666666666666666,
+      "auroc": 0.5862522550911011,
+      "auroc_per_corpus": {
+        "abuzz": 0.6272313296903461,
+        "humbug": 0.5769306977402462,
+        "mosquitosong": 0.5545947378427113
+      }
+    },
+    {
+      "candidate": "B1_band_tabular",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.05,
+        "humbug": 0.024390243902439025,
+        "mosquitosong": 0.03867403314917127
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0018214936247723133,
+        "humbug": 0.01143344709897611,
+        "mosquitosong": 0.013555787278415016
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0005277044854881266,
+        "LODO_esc50": 0.00425531914893617,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.3535906798817597,
+      "auroc": 0.6097003727623486,
+      "auroc_per_corpus": {
+        "abuzz": 0.6910746812386155,
+        "humbug": 0.6317267118512577,
+        "mosquitosong": 0.5062997251971725
+      }
+    },
+    {
+      "candidate": "B1_band_tabular",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.6097003727623486,
+      "auroc_per_corpus": {
+        "abuzz": 0.6910746812386155,
+        "humbug": 0.6317267118512577,
+        "mosquitosong": 0.5062997251971725
+      }
+    },
+    {
+      "candidate": "B2_wingbeat",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.016574585635359115
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.053180396246089674
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.05106382978723404,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.03508771929824561,
+      "auroc": 0.44388260897032844,
+      "auroc_per_corpus": {
+        "abuzz": 0.459016393442623,
+        "humbug": 0.4593700366404051,
+        "mosquitosong": 0.41326139682795726
+      }
+    },
+    {
+      "candidate": "B2_wingbeat",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.016574585635359115
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.053180396246089674
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.05106382978723404,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.03508771929824561,
+      "auroc": 0.44388260897032844,
+      "auroc_per_corpus": {
+        "abuzz": 0.459016393442623,
+        "humbug": 0.4593700366404051,
+        "mosquitosong": 0.41326139682795726
+      }
+    },
+    {
+      "candidate": "C1_aug_band_tabular",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.032520325203252036,
+        "mosquitosong": 0.049723756906077346
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0018214936247723133,
+        "humbug": 0.018600682593856655,
+        "mosquitosong": 0.017726798748696558
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.00425531914893617,
+        "LODO_pete_noise": 0.005
+      },
+      "precision": 0.18322798145806996,
+      "auroc": 0.6043466118085393,
+      "auroc_per_corpus": {
+        "abuzz": 0.6706739526411657,
+        "humbug": 0.6330099123041522,
+        "mosquitosong": 0.5093559704803
+      }
+    },
+    {
+      "candidate": "C1_aug_band_tabular",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.6043466118085393,
+      "auroc_per_corpus": {
+        "abuzz": 0.6706739526411657,
+        "humbug": 0.6330099123041522,
+        "mosquitosong": 0.5093559704803
+      }
+    },
+    {
+      "candidate": "C2_aug_perch_coral",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.13821138211382114,
+        "mosquitosong": 0.011049723756906077
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.023679417122040074,
+        "humbug": 0.059044368600682594,
+        "mosquitosong": 0.016684045881126174
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.013192612137203167,
+        "LODO_esc50": 0.00425531914893617,
+        "LODO_pete_noise": 0.005
+      },
+      "precision": 0.08127147766323024,
+      "auroc": 0.5410435406616098,
+      "auroc_per_corpus": {
+        "abuzz": 0.5783242258652095,
+        "humbug": 0.5231505506544427,
+        "mosquitosong": 0.5216558454651772
+      }
+    },
+    {
+      "candidate": "C2_aug_perch_coral",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.5410435406616098,
+      "auroc_per_corpus": {
+        "abuzz": 0.5783242258652095,
+        "humbug": 0.5231505506544427,
+        "mosquitosong": 0.5216558454651772
+      }
+    },
+    {
+      "candidate": "D1_perch_ft",
+      "gated": false,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.04065040650406504,
+        "mosquitosong": 0.052486187845303865
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0018214936247723133,
+        "humbug": 0.03805460750853242,
+        "mosquitosong": 0.06256517205422316
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0010554089709762533,
+        "LODO_esc50": 0.01702127659574468,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.08741515318290222,
+      "auroc": 0.5836371374144649,
+      "auroc_per_corpus": {
+        "abuzz": 0.6266848816029145,
+        "humbug": 0.5694243944373679,
+        "mosquitosong": 0.5548021362031121
+      }
+    },
+    {
+      "candidate": "D1_perch_ft",
+      "gated": true,
+      "eligible_k0": false,
+      "eligible_k": null,
+      "recall_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_other_per_corpus": {
+        "abuzz": 0.0,
+        "humbug": 0.0,
+        "mosquitosong": 0.0
+      },
+      "fpr_noise": {
+        "LODO_humbug": 0.0,
+        "LODO_esc50": 0.0,
+        "LODO_pete_noise": 0.0
+      },
+      "precision": 0.0,
+      "auroc": 0.5836371374144649,
+      "auroc_per_corpus": {
+        "abuzz": 0.6266848816029145,
+        "humbug": 0.5694243944373679,
+        "mosquitosong": 0.5548021362031121
+      }
+    }
+  ]
+}

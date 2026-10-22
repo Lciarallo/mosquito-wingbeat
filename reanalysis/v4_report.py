@@ -73,7 +73,7 @@ def main():
 
     best = {c: max((r for r in sel["candidates"] if r["candidate"] == c), key=lambda r: r["auroc"]) for c in v4.CANDIDATES}
     L = ["# v4: resultados do desenvolvimento e estado do teste novo", "",
-         "Executado em 22/10/2026 conforme `reanalysis/protocol_v4.json` (congelado em `protocol_v4_freeze.json` antes de qualquer treino). "
+         "Executado em 22/10/2026 conforme `reanalysis/protocol_v4.json` (congelado em `protocol_v4_freeze.json`, com as emendas A1 — fine-tuning do Perch na GPU — e A2 — correção numérica —, todas congeladas antes de qualquer treino). "
          "Usa só os papéis de desenvolvimento da v3; o teste reservado da v3 não foi lido. Saídas auditáveis em `reanalysis/outputs/v4/`.", "",
          "## Resposta direta", "",
          "**Os resultados melhoraram no teste novo, com IC por cluster? Inconclusivo.** Não existe teste novo que cumpra os critérios pré-registrados "
@@ -121,12 +121,22 @@ def main():
     unavailable = few[~few.available.astype(bool)].groupby(["corpus", "k"]).reason.first()
     if len(unavailable):
         L += ["", "Braços indisponíveis: " + "; ".join(f"{c} k={k}: {r}" for (c, k), r in unavailable.items()) + "."]
+    a0 = next(r for r in sel["candidates"] if r["candidate"] == "A0_perch_white" and not r["gated"])
+    d1 = next(r for r in sel["candidates"] if r["candidate"] == "D1_perch_ft" and not r["gated"])
+    a1 = next(r for r in sel["candidates"] if r["candidate"] == "A1_perch_coral" and not r["gated"])
+    L += ["", "## Leitura", "",
+          f"- **Nenhuma hipótese tornou o detector utilizável.** Sem portão, o recall fica muito abaixo de 20% em quase todos os corpora; com portão, quase nenhum alerta é emitido (o mesmo padrão do 0/197 da v3). A calibração local com 5, 10 ou 20 arquivos não levou nenhum candidato às metas.",
+          f"- **O fine-tuning na GPU (D1) não superou o Perch congelado (A0):** AUROC médio {d1['auroc']:.3f} contra {a0['auroc']:.3f}, com IC sobrepostos.",
+          f"- **CORAL piorou o ranking** (AUROC médio {a1['auroc']:.3f}). Alinhar a distribuição de cada corpus também apaga diferenças reais de composição de espécies entre corpora.",
+          "- **O vencedor formal (B1) é indistinguível do A0** dentro dos IC por cluster; foi congelado só porque a regra exige um candidato descritivo.",
+          "- **A origem segue decodificável** em todas as representações não alinhadas, inclusive nos 9 descritores físicos do batimento. Restringir a banda reduz pouco.",
+          "- Diagnóstico consistente com o plano: com 16 clusters de Aedes, o problema é a diversidade de dados, não a arquitetura.", ""]
     probe = diag["source_probe"]
     L += ["", "## A origem ainda é decodificável?", "",
           "Classificador linear prevendo o corpus de origem (Abuzz, HumBug, MosquitoSong) entre arquivos de mosquito, 5 dobras por cluster. Acaso = 33,3%.", "",
           "| Representação | Acurácia balanceada |", "|---|---|"]
     L += [f"| {k} | {100 * v['balanced_accuracy']:.1f}% |" for k, v in probe.items()]
-    L += ["", "CORAL usa a identidade da origem como lote não rotulado; a queda na decodificação mede o alinhamento de segunda ordem, não a ausência de atalhos de ordem superior.", "",
+    L += ["", "CORAL usa a identidade da origem como lote não rotulado. O valor **abaixo do acaso** com CORAL é um artefato esperado: cada origem é centralizada na mesma média, e os clusters de validação ficam deslocados para o lado oposto da média de treino da própria origem. Ele mostra que a informação de primeira e segunda ordem foi removida, não que a origem deixou de influenciar o modelo.", "",
           "Alinhamento por grupo (MMD entre origens, só 'outro mosquito', menor = mais alinhado):", "", "| Par | Perch normalizado (PCA-128) | Perch + CORAL |", "|---|---|---|"]
     ga = diag["group_alignment"]
     for pair in ga["perch_white_pca128"]:
@@ -154,7 +164,8 @@ def main():
           "- Bootstrap por cluster com modelos fixos; não inclui a variabilidade de retreino. Zero eventos geram intervalos degenerados.",
           "- CORAL e A1/C2 são transdutivos: exigem um lote não rotulado do aparelho/corpus avaliado.",
           "- A normalização espectral por gravação (herdada da v3) já remove boa parte de uma equalização estática; o efeito do aumento vem sobretudo de ruído e reverberação externos.",
-          "- Fine-tuning do Perch e uso de sexo/temperatura como entrada não foram executados (`protocol_v4.json` › `not_executed`).",
+          "- O fine-tuning do Perch foi executado pela emenda A1 (GPU AMD RX 9070 XT, ROCm 6.4), com a correção numérica da emenda A2. Kernels de GPU não são bit a bit determinísticos; as seeds fixam inicialização e ordem dos dados (as perdas da dobra HumBug repetiram exatamente ao ser refeita).",
+          "- Sexo e temperatura não entraram como variáveis do modelo: só existem no MosquitoSong e em parte do HumBug.",
           "- Resultados da v2/v3 permanecem como estão; esta é uma rodada nova, não uma correção delas.", "",
           "## Reprodução", "", "```bash",
           "python -m reanalysis.v4_augment        # atributos da cópia aumentada (OpenSLR 28 em data/external/openslr28/)",
