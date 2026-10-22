@@ -4,6 +4,8 @@ Classifica gravações em três classes: ruído, outro mosquito e *Aedes aegypti
 
 ## Estado atual: não usar operacionalmente
 
+> **v4 (22/10/2026): sem melhora demonstrável; resposta sobre o teste novo: inconclusiva.** Rodada pré-registrada ([plano](reports/plano_v4.md), [protocolo](reanalysis/protocol_v4.json) congelado por SHA-256, emendas A1 e A2) com oito candidatos: Perch congelado, CORAL, DANN, bandas ≥ 300 Hz, descritores do batimento, aumento de dados com RIR/ruído externos e **fine-tuning do Perch na GPU**. Avaliação deixando cada corpus de fora (LODO), com IC por cluster e calibração local com 5/10/20 arquivos. **Nenhum candidato atingiu as metas** (recall ≥ 20%, FPR ≤ 2% em outros mosquitos e ≤ 1% em ruído, por corpus); o AUROC médio ficou entre 0,44 e 0,61, com IC sobrepostos, e a origem da gravação segue decodificável (92% no Perch, acaso 33%). **Não há teste novo disponível** que cumpra os critérios ([levantamento de datasets](reports/datasets_candidatos_v4.md)); o candidato descritivo foi congelado antes de qualquer dado novo. O gargalo é a diversidade de dados: só 16 clusters com Aedes no desenvolvimento. [Resultados](reports/resultados_v4.md) · [Saídas auditáveis](reanalysis/outputs/v4/).
+
 > **Continuação v3 concluída (20/10/2026).** Foram comparados seis candidatos, com Perch congelado, MLP/MMD, descritores do batimento e HistGB. Nenhum atingiu os critérios de desenvolvimento. O candidato descritivo final detectou **0/197 Aedes** com o portão de concordância; sem esse portão, **17/197**, com **20/371** outros mosquitos chamados Aedes. A rodada não justifica substituir o modelo anterior para uso operacional. [Relatório e limites](reports/continuacao_v3.md) · [Resultados auditáveis](reanalysis/outputs/v3_continuation/).
 >
 > Os experimentos anteriores permanecem preservados como resultados retrospectivos dos respectivos corpora e protocolos. As novas rodadas ampliam a investigação de generalização; elas não isolam o efeito de cada mudança de arquitetura, processamento e composição dos dados.
@@ -59,7 +61,7 @@ Uma rodada completa pode demorar bastante e cria uma pasta nova em `results/`. N
 
 ### Testes
 
-Execute `python -m pytest -q`. O `pytest.ini` coleta oito arquivos versionados (86 testes): `test_ternary_verified.py`, `test_ternary_lstm.py`, `test_notebook_workflow.py`, `test_pattern_classifiers.py`, `test_reanalysis_v2.py`, `test_v3_continuation.py`, `test_torres_lstm.py` e `test_aedes_classical.py`. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
+Execute `python -m pytest -q`. O `pytest.ini` coleta nove arquivos versionados: `test_ternary_verified.py`, `test_ternary_lstm.py`, `test_notebook_workflow.py`, `test_pattern_classifiers.py`, `test_reanalysis_v2.py`, `test_v3_continuation.py`, `test_torres_lstm.py`, `test_aedes_classical.py` e `test_v4.py`. Com `.venv-v3` e os dados locais: 103 aprovados e 1 pulado (a regra de camadas do fine-tuning exige `onnx2torch`, presente só em `.venv-v4-rocm`). `test_v4.py` verifica que o teste reservado da v3 nunca entra na v4, que não há vazamento entre clusters, a separação ajuste/calibração/teste, que o fine-tuning usa só as linhas de ajuste, CORAL sem rótulos, determinismo e os congelamentos. O teste que acessa o corpus completo é pulado quando os caches locais estão ausentes; os testes de treino mínimo e do notebook não precisam do corpus nem dos checkpoints históricos. As pequenas entradas geradas nos testes verificam o software e não compõem os resultados científicos.
 
 Os demais `tests/test_*.py` existem só em cópias locais de trabalho e **não são versionados nem coletados**. Na revisão de 22/10/2026, cada um foi rodado isoladamente com `.venv-v3` na cópia local (com dados e módulos locais) e num clone limpo. Só entram na suíte os que passam sem dados locais. Nenhum deles é pulado por falta de dados: os que dependem de arquivos locais dão erro ou falham.
 
@@ -99,9 +101,9 @@ Dados, caches e pesos ficam fora do Git. Conferido em 22/10/2026 num clone limpo
 
 | Etapa | Como | Observação |
 |---|---|---|
-| Testes | `python -m pytest -q` | 84 aprovados e 2 pulados. Os 2 pulados exigem caches locais (`test_ternary_verified.py:184`) e o manifesto local da v3 (`test_v3_continuation.py:23`). Com os dados locais, são 86 aprovados. |
+| Testes | `python -m pytest -q` | 100 aprovados e 4 pulados (conferido em 22/10/2026). Os pulados exigem caches locais (`test_ternary_verified.py:184`), o manifesto local da v3 (`test_v3_continuation.py:23`, `test_v4.py:160`) e o Perch convertido (`test_v4.py:235`). |
 | Notebook sem treino | executar as células com as flags de treino desligadas | Mostra os retratos históricos versionados em `data/metadata/`. |
-| Leitura e auditoria dos resultados v2/v3 | `reports/`, `reanalysis/outputs/` | As predições por arquivo da v2 (`reanalysis/outputs/predictions/*.csv`, com `p0`, `p1`, `p2`) permitem recalcular as métricas pontuais. As métricas, a figura e os congelamentos da v3 estão em `reanalysis/outputs/v3_continuation/`. |
+| Leitura e auditoria dos resultados v2/v3/v4 | `reports/`, `reanalysis/outputs/` | As predições por arquivo da v2 (`reanalysis/outputs/predictions/*.csv`, com `p0`, `p1`, `p2`) permitem recalcular as métricas pontuais. As métricas, a figura e os congelamentos da v3 estão em `reanalysis/outputs/v3_continuation/`. |
 
 **Exige dados ou pesos locais** (caminhos relativos à raiz)
 
@@ -115,6 +117,9 @@ Dados, caches e pesos ficam fora do Git. Conferido em 22/10/2026 num clone limpo
 | Manifesto e frontend da v2 | `reanalysis/build_manifest.py`, `reanalysis/frontend.py` | `data/raw/`, `data/external/humbug/neurips_2021_zenodo_0_0_1.csv`, `data/external/additional/mosquitosong/`; gera `results/v2/manifest_files.csv` e `data/cache/v2/` |
 | Treino e avaliação da v2 | `python reanalysis/train_v2.py <etapa>` | `results/v2/manifest_files.csv`, `data/cache/v2/` |
 | Continuação da v3 | `reanalysis/v3_*.py` | `results/v3_continuation/manifest.csv`, `data/cache/v3_continuation/`, modelo Perch acima |
+| v4: cópia aumentada | `python -m reanalysis.v4_augment` | Manifesto v3, `data/external/openslr28/` (OpenSLR 28, 1,3 GB) |
+| v4: fine-tuning do Perch (GPU AMD) | `.venv-v4-rocm/bin/python -m reanalysis.v4_finetune prepare` e `folds` | PyTorch 2.9.1+rocm6.4 (≈ 4,7 GB); `data/models/perch_v2_onnx/perch_v2.onnx` |
+| v4: desenvolvimento, seleção, diagnósticos, congelamento, relatório | `python -m reanalysis.v4_train dev`, `select`, `diagnostics`, `final`; `python -m reanalysis.v4_report` | `data/cache/v3_continuation/`, `data/cache/v4_augmented/`, `results/v4/finetune/` |
 | Cascata e redes históricas | ver "Entradas locais para treinar" | `data/cache/reliability_2026_10_01/` e rodadas em `results/` |
 
 O repositório não traz scripts de download para todos os corpora. Os protocolos congelados (`reanalysis/protocol_*.json`, `*_freeze.json`) registram os SHA-256 esperados das entradas.
@@ -127,7 +132,7 @@ Movidos para [reports/historico_ternario.md](reports/historico_ternario.md), sem
 
 - `notebooks/`: notebook didático (conceitos, métricas históricas, treino opcional, aplicação em WAV).
 - Módulos na raiz: cascata ternária, LSTM/Bi-LSTM e classificadores sem recorrência, com divisão por grupos, congelamento e verificação.
-- `reanalysis/`: protocolos pré-registrados v2/v3 (congelados por SHA-256), código e saídas leves auditáveis.
-- `reports/`: relatórios da v2, da v3, análise de lacunas e resultados históricos.
+- `reanalysis/`: protocolos pré-registrados v2/v3/v4 (congelados por SHA-256, com emendas), código e saídas leves auditáveis.
+- `reports/`: relatórios da v2, da v3 e da v4, plano da v4, datasets candidatos, análise de lacunas, resultados históricos, inventário da raiz e plano de limpeza do histórico git.
 - `data/metadata/`: metadados de janelas/grupos e retratos compactos dos resultados históricos.
 - `tests/`: testes de isolamento, integridade, protocolo e execução do notebook.
