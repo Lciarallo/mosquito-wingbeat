@@ -54,12 +54,13 @@ SPEC = {"A0_perch_white": ("perch_white", "logistic", False, False),
         "D1_perch_ft": ("perch_ft", "logistic", False, False),
         "R_tabular_full": ("tabular_white", "histgb", False, False)}
 FINETUNE = ROOT / "results/v4/finetune"
-AMENDMENTS = [ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json"]
+AMENDMENTS = [ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json",
+              ROOT / "reanalysis/protocol_v4_amendment_A2_freeze.json"]
 LOW_BANDS = [0, 1, 2, 3, 4]  # mel centres 133-276 Hz, below the Aedes wingbeat
 BAND_COLUMNS = [b for b in range(40) if b not in LOW_BANDS] + [40 + b for b in range(40) if b not in LOW_BANDS] + list(range(80, 89))
 FROZEN_FILES = ["reanalysis/protocol_v4.json", "reports/plano_v4.md", "reanalysis/v4_train.py",
                 "reanalysis/v4_augment.py", "reanalysis/v4_diagnostics.py", "reanalysis/v4_finetune.py",
-                "reanalysis/protocol_v4_amendment_A1.json", "reanalysis/v3_train.py", "reanalysis/v3_metrics.py",
+                "reanalysis/protocol_v4_amendment_A1.json", "reanalysis/protocol_v4_amendment_A2.json", "reanalysis/v3_train.py", "reanalysis/v3_metrics.py",
                 "reanalysis/v3_features.py", "results/v3_continuation/manifest.csv",
                 "data/cache/v3_continuation/meta.json"]
 

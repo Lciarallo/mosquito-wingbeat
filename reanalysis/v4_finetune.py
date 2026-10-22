@@ -55,9 +55,27 @@ def split_onnx(out_dir=MODELS):
     return out_dir / "frontend.onnx", out_dir / "backbone.onnx"
 
 
-def load_backbone():
+EXP_CLAMP = 80.  # amendment A2: exp(80) is finite in fp32; the ONNX sigmoid 1/(1+exp(-x)) gave NaN gradients
+
+
+def stable_exp(x):
     import torch
-    return torch.load(MODELS / "backbone.pt", weights_only=False)
+    return torch.exp(torch.clamp(x, max=EXP_CLAMP))
+
+
+def load_backbone():
+    """Converted backbone with every Exp node clamped (amendment A2). Forward values change only where
+    the exponent exceeds 80, i.e. where the ONNX sigmoid is already below 2e-35."""
+    import torch
+    backbone = torch.load(MODELS / "backbone.pt", weights_only=False)
+    patched = 0
+    for module in backbone.modules():
+        if getattr(module, "function", None) is torch.exp:
+            module.function = stable_exp
+            patched += 1
+    if patched != 104:
+        raise ValueError(f"Expected 104 Exp nodes in the Perch backbone, found {patched}")
+    return backbone
 
 
 def trainable_convolutions(backbone):

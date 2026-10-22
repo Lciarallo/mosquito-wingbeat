@@ -1,0 +1,11 @@
+{
+  "amendment": "A2",
+  "date": "2026-10-22",
+  "type": "numerical bug fix, before any valid fine-tuning result",
+  "observation": "The first GPU fine-tuning run (fold LODO_abuzz) reported a NaN mean loss in epoch 0 and was stopped. No model, embedding, prediction or metric was written (results/v4/finetune/LODO_abuzz/ is empty).",
+  "diagnosis": "The Perch ONNX graph implements the sigmoid as 1/(1+exp(-x)). onnx2torch converts each of its 104 Exp nodes literally. For x < about -88, exp(-x) overflows to inf in fp32: the forward value is still 0, but ExpBackward returns NaN (inf*0), detected with torch.autograd anomaly mode at the 14th step of a label-free probe.",
+  "change": "v4_finetune.load_backbone replaces the function of the 104 Exp modules by exp(clamp(x, max=80)). exp(80) is finite. Forward values change only where the sigmoid is already below 2e-35. The count of patched nodes is checked at load time.",
+  "checks": {"parity_vs_original_onnx": "max |diff| 1.9e-06 on the same 12 real whitened chunks as in A1 (unchanged)",
+             "stability": "300 label-free training steps (constant target, random cached chunks): 0 non-finite losses. No development label or score used."},
+  "unchanged": "Everything else in protocol_v4.json and amendment A1 (trainable layers, objective, hyper-parameters, rows, selection, evaluations)."
+}

@@ -237,7 +237,8 @@ def test_trainable_layers_follow_the_preregistered_rule():
     pytest.importorskip("onnx2torch")
     backbone = ft.load_backbone()
     chosen = ft.trainable_convolutions(backbone)
-    assert sum(p.numel() for m in chosen for p in m.parameters()) == 3_271_056 or len(chosen) == 7
+    assert len(chosen) == 7
+    assert sum(p.numel() for m in chosen for p in m.parameters()) == 3_259_728
 
 
 @pytest.mark.skipif(not (ROOT / "reanalysis/protocol_v4_amendment_A1_freeze.json").exists(), reason="A1 not frozen yet")
