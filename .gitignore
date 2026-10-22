@@ -69,3 +69,4 @@ __pycache__/
 !/tests/test_v3_continuation.py
 !/reports/analise_de_lacunas_continuacao_v3.md
 !/reports/continuacao_v3.md
+!/reports/historico_ternario.md
