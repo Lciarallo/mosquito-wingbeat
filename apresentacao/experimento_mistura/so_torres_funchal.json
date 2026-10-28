@@ -1,0 +1,36 @@
+{
+ "sem normalização": {
+  "cv_auroc_aedes": 0.695,
+  "cv_aedes_detectados": {
+   "torres": "295/300",
+   "funchal": "811/1867"
+  },
+  "cv_outros_chamados_aedes": "931/3050",
+  "cv_ruido_chamado_aedes": "16/426",
+  "cv_auroc_dentro_do_funchal(aedes_x_culex_mesmos_aparelhos)": 0.164,
+  "externo_aedes_detectados": {
+   "dryad": "1/20",
+   "humbug": "0/40",
+   "mosquitosong": "0/362",
+   "ufrgs": "3/10"
+  },
+  "externo_auroc(aedes_novos_vs_negativos_OOF)": 0.391
+ },
+ "com normalização por fonte": {
+  "cv_auroc_aedes": 0.723,
+  "cv_aedes_detectados": {
+   "torres": "295/300",
+   "funchal": "697/1867"
+  },
+  "cv_outros_chamados_aedes": "374/3050",
+  "cv_ruido_chamado_aedes": "9/426",
+  "cv_auroc_dentro_do_funchal(aedes_x_culex_mesmos_aparelhos)": 0.488,
+  "externo_aedes_detectados": {
+   "dryad": "1/20",
+   "humbug": "0/40",
+   "mosquitosong": "13/362",
+   "ufrgs": "1/10"
+  },
+  "externo_auroc(aedes_novos_vs_negativos_OOF)": 0.412
+ }
+}

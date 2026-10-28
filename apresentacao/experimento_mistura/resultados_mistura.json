@@ -1,0 +1,91 @@
+{
+ "nota": "Experimento didático (retrospectivo): misturar Torres e Funchal ao corpus original.\n\nPergunta: somar positivos de fontes únicas ensina \"Aedes\" ou ensina \"fonte\"?\nCompara duas formas de dividir treino/teste com o MESMO modelo:\n  A) por clipe/tensor  (Torres e Funchal tratados como exemplos independentes)\n  B) por fonte/aparelho (Torres = 1 grupo; Funchal = pasta espécie×taxa de amostragem)\nO corpus original sempre usa blocos PCM. Nada aqui é teste cego.",
+ "n": {
+  "original": 1494,
+  "torres": 300,
+  "funchal": 2944,
+  "funchal_aedes": 1867,
+  "funchal_pastas": [
+   "44.1khz",
+   "48khz",
+   "8khz",
+   "Mix Pipiens & Quinquefasciatus_48khz",
+   "Quinquefasciatus_44.1khz",
+   "Quinquefasciatus_8khz"
+  ]
+ },
+ "A_por_clipe": {
+  "aedes_dryad": [
+   2,
+   20
+  ],
+  "aedes_humbug": [
+   2,
+   40
+  ],
+  "aedes_torres": [
+   294,
+   300
+  ],
+  "aedes_funchal": [
+   1816,
+   1867
+  ],
+  "aedes_total": [
+   2114,
+   2227
+  ],
+  "funchal_outros_chamados_aedes": [
+   30,
+   1077
+  ],
+  "ruido_chamado_aedes": [
+   21,
+   426
+  ]
+ },
+ "B_por_fonte": {
+  "aedes_dryad": [
+   1,
+   20
+  ],
+  "aedes_humbug": [
+   0,
+   40
+  ],
+  "aedes_torres": [
+   98,
+   300
+  ],
+  "aedes_funchal": [
+   917,
+   1867
+  ],
+  "aedes_total": [
+   1016,
+   2227
+  ],
+  "funchal_outros_chamados_aedes": [
+   973,
+   1077
+  ],
+  "ruido_chamado_aedes": [
+   15,
+   426
+  ]
+ },
+ "probe_origem_entre_aedes": {
+  "classes": [
+   "original",
+   "torres",
+   "funchal"
+  ],
+  "balanced_accuracy": 0.9784728917455215,
+  "chance": 0.3333333333333333,
+  "n": {
+   "original": 60,
+   "torres": 300,
+   "funchal": 1867
+  }
+ }
+}
