@@ -1,0 +1,52 @@
+{
+  "source_probe": {
+    "perch_plain": {
+      "balanced_accuracy": 0.9396233417166847,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    },
+    "perch_white": {
+      "balanced_accuracy": 0.9192290436065896,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    },
+    "tabular_white": {
+      "balanced_accuracy": 0.7266880534059398,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    },
+    "band_tabular": {
+      "balanced_accuracy": 0.6962520168428648,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    },
+    "wingbeat": {
+      "balanced_accuracy": 0.6913538777180778,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    },
+    "coral(perch_white)": {
+      "balanced_accuracy": 0.09672332642932413,
+      "chance": 0.3333333333333333,
+      "n_files": 7873,
+      "n_clusters": 125
+    }
+  },
+  "group_alignment": {
+    "perch_white_pca128": {
+      "abuzz~humbug": 0.04776579141616821,
+      "abuzz~mosquitosong": 0.06848007440567017,
+      "humbug~mosquitosong": 0.023040771484375
+    },
+    "coral(perch_white)": {
+      "abuzz~humbug": 0.005469977855682373,
+      "abuzz~mosquitosong": 0.003043234348297119,
+      "humbug~mosquitosong": 0.002573370933532715
+    }
+  }
+}

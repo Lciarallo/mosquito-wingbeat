@@ -1,0 +1,48 @@
+{
+  "protocol": "v3 continuation A2, before any v3 classifier or classification score",
+  "date": "2026-10-20",
+  "parent": "protocol_v3.json (immutable), amendment A1 preserved",
+  "manifest": "results/v3_continuation/manifest.csv",
+  "data_changes": {
+    "shared_clusters": "Quarantine development rows whose inherited cluster is present in the locked test; keep the inherited locked test unchanged.",
+    "noise_test": "Reserve 20 percent of noise-only clusters per origin, with seed 20261023, before fitting; this is a supplementary within-origin background test.",
+    "provenance": "D3-related is not synonymous with proven UFRGS origin. Known previously scored components are reported separately.",
+    "short_audio": "Keep the inherited v3 inclusion rule. Centre and zero-pad short audio to the fixed window, never repeat it. Report duration distribution and a duration-only diagnostic. No label-dependent rejection."
+  },
+  "features": {
+    "perch": "Unmodified inherited Perch ONNX weights; bandpass 100-3400 Hz at 8 kHz; resample to 32 kHz; up to six five-second chunks; RMS 0.05 including padding. Mean 1536-dimensional embedding per file.",
+    "whitening": "Compare plain audio with the inherited per-recording 20th percentile spectral whitening. No statistics from other recordings.",
+    "tabular": "80 log-mel mean/std values and 9 inherited wingbeat descriptors per one-second window, averaged over at most 30 windows. Short audio is zero-padded once to one second.",
+    "aggregation_change": "One feature vector and one unit of training mass per file. For linear heads, mean embeddings produce the same mean-logit aggregation; for the nonlinear MLP this is an explicit change from the parent's chunk-log-probability aggregation."
+  },
+  "candidates": ["A_perch_plain", "A_perch_white", "B_mmd_plain", "B_mmd_white", "C_wingbeat", "D_tabular"],
+  "models": {
+    "A": "StandardScaler + logistic regression, C in [0.01,0.1,1], max_iter 3000; scaler and class weights from fitting rows only.",
+    "B": "StandardScaler + 256-unit ReLU MLP + dropout 0.2, AdamW lr 0.001 weight_decay 0.001, 20 epochs, batch 256; unconditioned Gaussian-kernel MMD between fitting corpora on hidden activations, lambda in [0,0.3,1], bandwidth from fitting features. No backbone fine-tuning or domain-rebalanced sampling.",
+    "C": "Logistic regression on the 9 white-audio wingbeat descriptors, same C grid.",
+    "D": "HistGradientBoosting on white tabular features, max_leaf_nodes in [15,31], max_iter 200, learning_rate 0.05, l2 1, no early stopping.",
+    "stage1": "Binary presence logistic head for A/B/C, HistGB for D. Stage 2 uses only mosquito rows; A/C logistic, B MLP-MMD, D HistGB.",
+    "class_weighting": "Equal total weight per present binary class from fitting rows, uniform file sampling, no corpus rebalancing."
+  },
+  "calibration": {
+    "split": "Within every outer-training set, reserve approximately one quarter of clusters stratified by cluster maximum class, seed 20261023 plus outer index. All calibration clusters stay outside fitting and inner model selection.",
+    "inner_cv": "Three StratifiedGroupKFold splits within fitting data, seed 20261024. Parameters selected by mean binary balanced accuracy. Epoch count fixed in advance.",
+    "probability_mapping": "Logistic mapping of raw stage logits on calibration rows only, separately for presence and conditional Aedes. No claim of calibrated field probabilities.",
+    "threshold": "On calibration rows choose the smallest alert-score threshold satisfying empirical other-mosquito FPR <=0.02 and noise FPR <=0.01. Require the presence score >=0.5. If no positive alert is admissible, choose a threshold above the maximum score and report zero alerts.",
+    "gate": "For A/B/D, disagreement with the separately calibrated C_wingbeat Aedes decision yields uncertain. Primary metrics include the gate; ungated metrics reported as a sensitivity analysis. C itself is an ungated baseline.",
+    "no_refit_on_calibration": true
+  },
+  "evaluation": {
+    "development": "LODO across abuzz, humbug, mosquitosong; remove any fitting cluster touching the held-out corpus; external noise corpora remain development data. Also five-fold cluster-grouped pooled CV.",
+    "selection": "Highest macro-average LODO Aedes precision among candidates with macro-average recall >=0.2 and observed other FPR <=0.02 and noise FPR <=0.01 wherever measurable. Ties by AUROC. If no candidate qualifies, freeze the highest mean-AUROC candidate for a descriptive final evaluation and mark not eligible.",
+    "duration_diagnostic": "Logistic models using only log(duration) and the padded fraction; never eligible for final selection.",
+    "final": "Freeze the selected configuration and development results hashes before opening locked prediction scores. Report all locked mosquitoes, known previously scored components, not-previously-scored components, provenance subgroups, and supplementary locked noise separately.",
+    "few_shot": "Selected candidate only. For each held-out corpus and the final locked mosquitoes, k=[5,10,20] files per present class, seeds 20261023 through 20261027. Sample at most half of each class's clusters for calibration, draw k files only there, exclude every file in any touched cluster from evaluation, and refit only the lightweight heads with these files weighted x5. Keep source calibrators, hyperparameters and thresholds. If insufficient calibration files or disjoint positive evaluation clusters, mark the arm unavailable. No augmentation or synthetic audio.",
+    "metrics": "Counts, Aedes precision/recall, other/noise FPR, uncertain coverage, AUROC, AUPRC, balanced accuracy, cluster counts. Uncertain Aedes count as missed; uncertain negatives remain in the FPR denominator.",
+    "uncertainty": "2000 cluster-bootstrap draws stratified by cluster maximum class. Count undefined draws per metric. Also report exact binomial intervals descriptively, labelled as file-level and not accounting for cluster dependence.",
+    "success_observed": "Final observed other FPR <=0.02, supplementary noise FPR <=0.01, and Aedes recall >=0.2. These are descriptive targets, not a population guarantee.",
+    "success_supported": "In addition, one-sided cluster-bootstrap 95 percent upper bounds for both FPRs meet the same caps, lower bound for recall >=0.2, and precision lower bound exceeds test prevalence. Undefined or degenerate uncertainty with too few independent error/positive clusters cannot support reliability.",
+    "field_validation": false
+  },
+  "preservation": "Do not modify historical weights, notebook, reference metrics, parent protocol or inherited manifest. Preserve all unfavorable results and pre-existing exclusions."
+}

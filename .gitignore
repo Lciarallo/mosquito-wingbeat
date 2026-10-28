@@ -39,6 +39,9 @@
 !/tests/test_ternary_lstm.py
 !/tests/test_notebook_workflow.py
 !/tests/test_pattern_classifiers.py
+!/tests/test_torres_lstm.py
+!/tests/test_aedes_classical.py
+!/tests/test_v4.py
 
 # Dados e saídas locais nunca são publicados.
 /drive_audio.wav
@@ -60,5 +63,20 @@ __pycache__/
 *.log
 .DS_Store
 
+# Reanálise v2 (código, protocolo, saídas leves e relatório)
+!/reanalysis/
+!/reports/
+/reports/*
+!/reports/reanalise_v2.md
+!/tests/test_reanalysis_v2.py
+!/tests/test_v3_continuation.py
+!/reports/analise_de_lacunas_continuacao_v3.md
+!/reports/continuacao_v3.md
+!/reports/historico_ternario.md
+!/reports/plano_filter_repo.md
+!/reports/inventario_raiz_2026_10_22.md
+!/reports/datasets_candidatos_v4.md
+!/reports/plano_v4.md
+!/reports/resultados_v4.md
 # Apresentação didática e scripts do experimento de mistura
 !/apresentacao/

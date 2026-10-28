@@ -1,0 +1,8 @@
+{
+  "kind": "post_run_document_clarification",
+  "changes": "Clarify degenerate zero-error intervals, operational failure, prespecified ungated/few-shot results and the technical duration correction. No new model or parameter selection.",
+  "original_report_sha256": "b945eef4cbfd91615208805b2a14f1adb531e133348e9eb8003d71f1c95550dc",
+  "current_report_sha256": "c30315efed34e5874569187eff3a1911b999d219e8d09c920c492bed15b02973",
+  "scientific_model_and_threshold_changes": false,
+  "test_count": 70
+}

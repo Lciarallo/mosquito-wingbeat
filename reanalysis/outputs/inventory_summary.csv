@@ -1,0 +1,12 @@
+role,source,class_name,files,clusters,hours
+development,dryad,aedes_aegypti,20,6,0.47570098261526833
+development,dryad,other_mosquito,549,33,8.316367826339757
+development,esc50,no_mosquito,293,293,0.40694444444444444
+development,humbug,aedes_aegypti,40,4,0.27218884479717814
+development,humbug,no_mosquito,138,45,2.7911789241622578
+development,humbug,other_mosquito,464,53,2.422603249086672
+development,pete_noise,no_mosquito,249,44,0.15239385333994707
+external,mosquitosong,aedes_aegypti,362,4,0.1669945833333333
+external,mosquitosong,other_mosquito,960,12,0.5609639930555556
+external,ufrgs,aedes_aegypti,10,2,0.07622732638888888
+external,ufrgs,other_mosquito,5,1,0.040570972222222224

@@ -1,0 +1,16 @@
+model,kind,n,called_aedes,called_other_mosquito,called_no_mosquito
+M1_logistic,electrical_hum,2,0,2,0
+M1_logistic,harmonic_tone,13,5,7,1
+M1_logistic,pink_noise,5,0,5,0
+M1_logistic,pure_tone,13,7,6,0
+M1_logistic,white_noise,5,0,5,0
+M2_histgb,electrical_hum,2,0,0,2
+M2_histgb,harmonic_tone,13,0,8,5
+M2_histgb,pink_noise,5,0,0,5
+M2_histgb,pure_tone,13,0,0,13
+M2_histgb,white_noise,5,0,0,5
+M3_cnn,electrical_hum,2,0,0,2
+M3_cnn,harmonic_tone,13,0,0,13
+M3_cnn,pink_noise,5,0,0,5
+M3_cnn,pure_tone,13,0,0,13
+M3_cnn,white_noise,5,0,0,5

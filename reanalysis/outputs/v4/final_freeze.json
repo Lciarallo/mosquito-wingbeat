@@ -1,0 +1,13 @@
+{
+  "frozen_utc": "2026-10-22T23:26:11.256981+00:00",
+  "selection": "B1_band_tabular",
+  "gated": false,
+  "eligible": false,
+  "model_sha256": {
+    "B1_band_tabular": "ae8f821864e1e11bc82794fd3f53ce4c149ebb1571c6cfe82d75ad2cd8bd92b5",
+    "B2_wingbeat": "7b620439bb40cf53aa749691d159eb3da37b9679b1962e9a9f2b0782e89ff916"
+  },
+  "protocol_freeze_sha256": "44ed81779a62838e8042d9574f3f89bd9fbc72bbf98a5619fe18b6c30fa623da",
+  "new_test_data_read": false,
+  "note": "Scored once on a new test that meets protocol_v4.json new_test.eligibility; until then the claim is inconclusive."
+}

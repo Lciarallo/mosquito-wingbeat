@@ -1,0 +1,4034 @@
+{
+  "LODO_abuzz": {
+    "A_perch_plain": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 1,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 0.9982425307557118,
+        "balanced_accuracy": 0.35154826958105645,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            162,
+            386,
+            0,
+            1
+          ],
+          [
+            6,
+            14,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.5619307832422588,
+        "auprc": 0.057824652330381095
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9938003615702479,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.26610942794346587,
+          0.42721439424515084
+        ],
+        "auroc": [
+          0.24945766051343946,
+          0.840507553670819
+        ],
+        "auprc": [
+          0.0299697767719515,
+          0.14844150813587714
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9946947254759279,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.28006106587712803,
+          0.4161383356037456
+        ],
+        "auroc": [
+          0.29183815457856405,
+          0.8115566079019755
+        ],
+        "auprc": [
+          0.034064562501633026,
+          0.13125815425353632
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "A_perch_white": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 1,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 0.9982425307557118,
+        "balanced_accuracy": 0.3679417122040073,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            144,
+            404,
+            0,
+            1
+          ],
+          [
+            7,
+            13,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.633424408014572,
+        "auprc": 0.08242798827549763
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9938003615702479,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2788933209647495,
+          0.4407952650111193
+        ],
+        "auroc": [
+          0.3565332523831456,
+          0.8714850712920282
+        ],
+        "auprc": [
+          0.03678233467747998,
+          0.2189589275823333
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9946947254759279,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.29229578931706596,
+          0.43267326732673267
+        ],
+        "auroc": [
+          0.39622328407169993,
+          0.8444511066336654
+        ],
+        "auprc": [
+          0.042169804129267345,
+          0.19089032289475574
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "B_mmd_plain": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 1,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 0.9982425307557118,
+        "balanced_accuracy": 0.35154826958105645,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            162,
+            386,
+            0,
+            1
+          ],
+          [
+            6,
+            14,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.613023679417122,
+        "auprc": 0.07864618572683306
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9932753101240497,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.26594409169999084,
+          0.42679022873194217
+        ],
+        "auroc": [
+          0.2704704293815825,
+          0.892044992650033
+        ],
+        "auprc": [
+          0.03336418095156986,
+          0.182450853426954
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9943486774524911,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2800651392632525,
+          0.41627358490566035
+        ],
+        "auroc": [
+          0.3212367578360458,
+          0.873804365978091
+        ],
+        "auprc": [
+          0.038779601963564746,
+          0.1648250831123134
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "B_mmd_white": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 1,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 0.9982425307557118,
+        "balanced_accuracy": 0.3679417122040073,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            144,
+            404,
+            0,
+            1
+          ],
+          [
+            7,
+            13,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.5764116575591985,
+        "auprc": 0.06153808782788116
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9938003615702479,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2788933209647495,
+          0.4407952650111193
+        ],
+        "auroc": [
+          0.2784895779196284,
+          0.8201391541700124
+        ],
+        "auprc": [
+          0.028916273240934477,
+          0.16616482123930373
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9946947254759279,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.29229578931706596,
+          0.43267326732673267
+        ],
+        "auroc": [
+          0.326341070804959,
+          0.7976297209937552
+        ],
+        "auprc": [
+          0.03238801978263091,
+          0.14884485728906804
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "C_wingbeat": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 0,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.4990892531876138,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            548,
+            0,
+            0
+          ],
+          [
+            0,
+            20,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.4408014571948998,
+        "auprc": 0.03027966118710268
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.49714828897338403,
+          0.5
+        ],
+        "auroc": [
+          0.26204199154867786,
+          0.6316753051849151
+        ],
+        "auprc": [
+          0.01983447706183544,
+          0.05823734635815229
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.497530762503305,
+          0.5
+        ],
+        "auroc": [
+          0.28442355086533505,
+          0.600046923538536
+        ],
+        "auprc": [
+          0.02139670291315131,
+          0.051897368622644505
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "D_tabular": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 1,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 0.9982425307557118,
+        "balanced_accuracy": 0.23406193078324225,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            292,
+            257,
+            0,
+            0
+          ],
+          [
+            6,
+            13,
+            0,
+            1
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.6668488160291439,
+        "auprc": 0.27327393760794216
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9949173540369995,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.17528204705899966,
+          0.3026959712429732
+        ],
+        "auroc": [
+          0.2876435915275201,
+          0.9427288717626088
+        ],
+        "auprc": [
+          0.050336992905664485,
+          0.5505430994589524
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9954440182509295,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.1814558994712705,
+          0.2946673604417811
+        ],
+        "auroc": [
+          0.3409435152553594,
+          0.928904481910567
+        ],
+        "auprc": [
+          0.06967821010732289,
+          0.5041329904846146
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "duration_diagnostic": {
+      "point": {
+        "n_files": 569,
+        "n_clusters": 35,
+        "aedes_n": 20,
+        "other_n": 549,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 0,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.0351493848857645,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.4763205828779599,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            26,
+            523,
+            0,
+            0
+          ],
+          [
+            3,
+            17,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 33,
+          "2": 6
+        },
+        "auroc": 0.3474043715846994,
+        "auprc": 0.04257038861304605
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.4512417561349693,
+          0.4937899897898409
+        ],
+        "auroc": [
+          0.23334340593489186,
+          0.4576622361822308
+        ],
+        "auprc": [
+          0.018034528859706765,
+          0.07766133579400479
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.45568087241053,
+          0.4908839453526469
+        ],
+        "auroc": [
+          0.25454054743992655,
+          0.43349222192595915
+        ],
+        "auprc": [
+          0.02162584282967538,
+          0.07058210291030759
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.1684334709830853
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0066967465869297495
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    }
+  },
+  "LODO_humbug": {
+    "A_perch_plain": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 492,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 0.9375476009139375,
+        "balanced_accuracy": 0.512367586097178,
+        "confusion": [
+          [
+            1304,
+            590,
+            0,
+            1
+          ],
+          [
+            395,
+            4975,
+            0,
+            490
+          ],
+          [
+            10,
+            112,
+            0,
+            1
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.5799772504494871,
+        "auprc": 0.017096954998527116
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.897700877555076,
+          0.9630474766850581
+        ],
+        "balanced_accuracy": [
+          0.3991149981471609,
+          0.5685162591018472
+        ],
+        "auroc": [
+          0.43218821086105136,
+          0.6991526290913322
+        ],
+        "auprc": [
+          0.008285156119418794,
+          0.02881996091274605
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.90488294483268,
+          0.9595990865613396
+        ],
+        "balanced_accuracy": [
+          0.40514003336981713,
+          0.5613665000816832
+        ],
+        "auroc": [
+          0.4508790658292109,
+          0.6866033853683896
+        ],
+        "auprc": [
+          0.009984249280129276,
+          0.02656838560680183
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0006293035187585618
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors",
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "A_perch_white": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 438,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 0.9444021325209444,
+        "balanced_accuracy": 0.44091105567912686,
+        "confusion": [
+          [
+            782,
+            1109,
+            0,
+            4
+          ],
+          [
+            97,
+            5333,
+            0,
+            430
+          ],
+          [
+            3,
+            116,
+            0,
+            4
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.6038087150697425,
+        "auprc": 0.019886780085979768
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9220278712024633,
+          0.9603141177204066
+        ],
+        "balanced_accuracy": [
+          0.33646443356088274,
+          0.4917408198446223
+        ],
+        "auroc": [
+          0.4587350855170579,
+          0.7058072438315491
+        ],
+        "auprc": [
+          0.009257610462340488,
+          0.03443707373660581
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9255413956629795,
+          0.9577122459522504
+        ],
+        "balanced_accuracy": [
+          0.33813461844482595,
+          0.4860639192668268
+        ],
+        "auroc": [
+          0.4842202970757893,
+          0.6915422788381438
+        ],
+        "auprc": [
+          0.010910728621350403,
+          0.032199246767670546
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0006293035187585618
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors",
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "B_mmd_plain": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 493,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 0.9374206651434375,
+        "balanced_accuracy": 0.512367586097178,
+        "confusion": [
+          [
+            1304,
+            589,
+            0,
+            2
+          ],
+          [
+            395,
+            4975,
+            0,
+            490
+          ],
+          [
+            10,
+            112,
+            0,
+            1
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.5856625413449492,
+        "auprc": 0.017545522060463642
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9058652176279883,
+          0.9591267192914622
+        ],
+        "balanced_accuracy": [
+          0.3984197787961596,
+          0.5695520173120765
+        ],
+        "auroc": [
+          0.439531395209873,
+          0.7088357947522183
+        ],
+        "auprc": [
+          0.008301572467703302,
+          0.029695855595319252
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9109983414170779,
+          0.9559579213697255
+        ],
+        "balanced_accuracy": [
+          0.4045313808949441,
+          0.561496212281539
+        ],
+        "auroc": [
+          0.4572204922097693,
+          0.6921888463721944
+        ],
+        "auprc": [
+          0.01011662455605231,
+          0.027644083501947785
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0006293035187585618
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors",
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "B_mmd_white": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 3,
+        "noise_fp": 0,
+        "alerts": 3,
+        "uncertain": 463,
+        "aedes_precision": 0.0,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0005119453924914676,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 0.9412287382584412,
+        "balanced_accuracy": 0.43954586796581624,
+        "confusion": [
+          [
+            782,
+            1108,
+            0,
+            5
+          ],
+          [
+            97,
+            5309,
+            3,
+            451
+          ],
+          [
+            3,
+            113,
+            0,
+            7
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.6331409581020375,
+        "auprc": 0.02127623890740728
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.00107094461647492
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9226325221577935,
+          0.9542136442256896
+        ],
+        "balanced_accuracy": [
+          0.3362881786049839,
+          0.487850647904794
+        ],
+        "auroc": [
+          0.5121420282666073,
+          0.7203677612101175
+        ],
+        "auprc": [
+          0.010297355506717525,
+          0.03613489043541645
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.00013072794825925456,
+          0.000981370325080024
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9256652957341613,
+          0.9523695111004679
+        ],
+        "balanced_accuracy": [
+          0.3383596898076852,
+          0.48311545645594856
+        ],
+        "auroc": [
+          0.5286939512813863,
+          0.7078754404976846
+        ],
+        "auprc": [
+          0.012271126471257207,
+          0.033501788525956554
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 100,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": [
+          0.0,
+          0.7075982261787133
+        ],
+        "fpr_other": [
+          0.00010558789334596303,
+          0.0014953856186712645
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "C_wingbeat": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 81,
+        "noise_fp": 0,
+        "alerts": 81,
+        "uncertain": 0,
+        "aedes_precision": 0.0,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.013822525597269625,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.438122746824918,
+        "confusion": [
+          [
+            1085,
+            810,
+            0,
+            0
+          ],
+          [
+            1432,
+            4347,
+            81,
+            0
+          ],
+          [
+            25,
+            98,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.5962206391889837,
+        "auprc": 0.02003096289733291
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.008899837188925721,
+          0.01909004180813154
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2823390510836595,
+          0.5129188625800322
+        ],
+        "auroc": [
+          0.5133442923116257,
+          0.6659221473127438
+        ],
+        "auprc": [
+          0.011203922932503397,
+          0.031090019837774357
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.009595525131007844,
+          0.01812569553245756
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2858475425445953,
+          0.5043141983986135
+        ],
+        "auroc": [
+          0.5261861915309656,
+          0.6563125005418011
+        ],
+        "auprc": [
+          0.012861134955738531,
+          0.029443024485960343
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": [
+          0.0,
+          0.04452026245632174
+        ],
+        "fpr_other": [
+          0.010991827063520298,
+          0.017151230622237282
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "D_tabular": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 111,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": 0.0,
+        "prevalence": 0.015613099771515614,
+        "coverage": 0.9859101294744859,
+        "balanced_accuracy": 0.5139287869100472,
+        "confusion": [
+          [
+            1298,
+            596,
+            0,
+            1
+          ],
+          [
+            730,
+            5021,
+            0,
+            109
+          ],
+          [
+            11,
+            111,
+            0,
+            1
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.6044995885161947,
+        "auprc": 0.01953101716520908
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9804093472043903,
+          0.9897933750004723
+        ],
+        "balanced_accuracy": [
+          0.3794685473628633,
+          0.5724546130902476
+        ],
+        "auroc": [
+          0.4983392482831093,
+          0.7207071959335644
+        ],
+        "auprc": [
+          0.011232570551960688,
+          0.028759094067016763
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9812629350189697,
+          0.9891740725837378
+        ],
+        "balanced_accuracy": [
+          0.38328769230544896,
+          0.5674126816684194
+        ],
+        "auroc": [
+          0.5122564641143756,
+          0.6976334388676029
+        ],
+        "auprc": [
+          0.012904179702854186,
+          0.027373363038290896
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.029545625527072385
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0006293035187585618
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0019447447629870516
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors",
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "duration_diagnostic": {
+      "point": {
+        "n_files": 7878,
+        "n_clusters": 79,
+        "aedes_n": 123,
+        "other_n": 5860,
+        "noise_n": 1895,
+        "aedes_tp": 4,
+        "other_fp": 54,
+        "noise_fp": 4,
+        "alerts": 62,
+        "uncertain": 0,
+        "aedes_precision": 0.06451612903225806,
+        "aedes_recall": 0.032520325203252036,
+        "fpr_other": 0.009215017064846417,
+        "fpr_noise": 0.0021108179419525065,
+        "prevalence": 0.015613099771515614,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.30808737007106757,
+        "confusion": [
+          [
+            169,
+            1722,
+            4,
+            0
+          ],
+          [
+            1103,
+            4703,
+            54,
+            0
+          ],
+          [
+            31,
+            88,
+            4,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 66,
+          "1": 73,
+          "2": 5
+        },
+        "auroc": 0.5532737861227741,
+        "auprc": 0.03092844190415801
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.08421052631578947
+        ],
+        "aedes_recall": [
+          0.0,
+          0.09302325581395349
+        ],
+        "fpr_other": [
+          0.0,
+          0.021996041535817714
+        ],
+        "fpr_noise": [
+          0.0,
+          0.010459494773519129
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.277119802298425,
+          0.32182029879919244
+        ],
+        "auroc": [
+          0.3884811891441004,
+          0.7908330009134645
+        ],
+        "auprc": [
+          0.0072675937188326906,
+          0.0699884383228416
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.08333333333333333
+        ],
+        "aedes_recall": [
+          0.0,
+          0.08633093525179857
+        ],
+        "fpr_other": [
+          0.00018214770385983488,
+          0.019905324428265894
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0083691756971226
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2793872363293313,
+          0.3194550102621663
+        ],
+        "auroc": [
+          0.3981447037094013,
+          0.7609307806754899
+        ],
+        "auprc": [
+          0.008905502086645383,
+          0.06453102081439281
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 6,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.008930432655649825,
+          0.0811725034891735
+        ],
+        "aedes_precision": [
+          0.017856697163650504,
+          0.15702808403757407
+        ],
+        "fpr_other": [
+          0.00692997129717176,
+          0.012006692103514204
+        ],
+        "fpr_noise": [
+          0.0005754169587369297,
+          0.005395637362714754
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": []
+    }
+  },
+  "LODO_mosquitosong": {
+    "A_perch_plain": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 1,
+        "other_fp": 18,
+        "noise_fp": 0,
+        "alerts": 19,
+        "uncertain": 113,
+        "aedes_precision": 0.05263157894736842,
+        "aedes_recall": 0.0027624309392265192,
+        "fpr_other": 0.018769551616266946,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 0.9144587433762301,
+        "balanced_accuracy": 0.42056786823290837,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            60,
+            804,
+            18,
+            77
+          ],
+          [
+            9,
+            316,
+            1,
+            36
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.4786005219525404,
+        "auprc": 0.2539025881293978
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.2727272727272727
+        ],
+        "aedes_recall": [
+          0.0,
+          0.007281553398058253
+        ],
+        "fpr_other": [
+          0.0048538994572871865,
+          0.03912245678100015
+        ],
+        "coverage": [
+          0.8769731040564374,
+          0.9474535947712419
+        ],
+        "balanced_accuracy": [
+          0.3778034960710128,
+          0.4628670354119929
+        ],
+        "auroc": [
+          0.34385759546996364,
+          0.6046270682830525
+        ],
+        "auprc": [
+          0.18577627595862714,
+          0.365956754218677
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.2222222222222222
+        ],
+        "aedes_recall": [
+          0.0,
+          0.007211538461538462
+        ],
+        "fpr_other": [
+          0.005723813448191859,
+          0.035844107454339816
+        ],
+        "coverage": [
+          0.8824825914742753,
+          0.9435421409550954
+        ],
+        "balanced_accuracy": [
+          0.38516083467416556,
+          0.4575716101598949
+        ],
+        "auroc": [
+          0.36944807693842463,
+          0.5893000405554545
+        ],
+        "auprc": [
+          0.19519597613569423,
+          0.3531075742002599
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          6.993625043560883e-05,
+          0.015294443870664434
+        ],
+        "aedes_precision": [
+          0.0013316288041794228,
+          0.2602806541952142
+        ],
+        "fpr_other": [
+          0.011161013851995537,
+          0.029502271104796304
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters"
+      ]
+    },
+    "A_perch_white": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 1,
+        "other_fp": 5,
+        "noise_fp": 0,
+        "alerts": 6,
+        "uncertain": 103,
+        "aedes_precision": 0.16666666666666666,
+        "aedes_recall": 0.0027624309392265192,
+        "fpr_other": 0.005213764337851929,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 0.9220287660862982,
+        "balanced_accuracy": 0.4575855950316571,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            875,
+            5,
+            69
+          ],
+          [
+            10,
+            317,
+            1,
+            34
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.6441130551506806,
+        "auprc": 0.3701677374989959
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.75
+        ],
+        "aedes_recall": [
+          0.0,
+          0.009554140127388535
+        ],
+        "fpr_other": [
+          0.0,
+          0.011463945924955098
+        ],
+        "coverage": [
+          0.8942722441254816,
+          0.9490563249427245
+        ],
+        "balanced_accuracy": [
+          0.43947808409327416,
+          0.47565931788663873
+        ],
+        "auroc": [
+          0.5577571592099703,
+          0.7255474064958384
+        ],
+        "auprc": [
+          0.28184587770455277,
+          0.4970032666311902
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.6
+        ],
+        "aedes_recall": [
+          0.0,
+          0.006172839506172839
+        ],
+        "fpr_other": [
+          0.0009398496240601503,
+          0.01042922078393331
+        ],
+        "coverage": [
+          0.8984987010044937,
+          0.9451437424835852
+        ],
+        "balanced_accuracy": [
+          0.442162049418052,
+          0.4726144032150924
+        ],
+        "auroc": [
+          0.5713818278761461,
+          0.7151528081986139
+        ],
+        "auprc": [
+          0.294209692783235,
+          0.48259577646880375
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 25,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          6.993625043560883e-05,
+          0.015294443870664434
+        ],
+        "aedes_precision": [
+          0.00421074451448947,
+          0.6412345789976748
+        ],
+        "fpr_other": [
+          0.001694997229917819,
+          0.012124933280454062
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters"
+      ]
+    },
+    "B_mmd_plain": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 3,
+        "other_fp": 31,
+        "noise_fp": 0,
+        "alerts": 34,
+        "uncertain": 180,
+        "aedes_precision": 0.08823529411764706,
+        "aedes_recall": 0.008287292817679558,
+        "fpr_other": 0.03232533889468196,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 0.8637395912187736,
+        "balanced_accuracy": 0.39100496027745296,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            60,
+            742,
+            31,
+            126
+          ],
+          [
+            9,
+            296,
+            3,
+            54
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.5237039042741345,
+        "auprc": 0.26676807105041156
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.25
+        ],
+        "aedes_recall": [
+          0.0,
+          0.015306122448979591
+        ],
+        "fpr_other": [
+          0.01383594329597177,
+          0.05500866630176975
+        ],
+        "coverage": [
+          0.8105906068657387,
+          0.911695296560258
+        ],
+        "balanced_accuracy": [
+          0.345343783330601,
+          0.43754139866972114
+        ],
+        "auroc": [
+          0.4252600103879394,
+          0.635575436192275
+        ],
+        "auprc": [
+          0.208632165252002,
+          0.36284244347442063
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.21739130434782608
+        ],
+        "aedes_recall": [
+          0.0,
+          0.01507537688442211
+        ],
+        "fpr_other": [
+          0.015550181111405601,
+          0.05178543561584048
+        ],
+        "coverage": [
+          0.8186442393687047,
+          0.9057105820059993
+        ],
+        "balanced_accuracy": [
+          0.35262271723075855,
+          0.43158071426080685
+        ],
+        "auroc": [
+          0.4369227612023277,
+          0.6219246919596176
+        ],
+        "auprc": [
+          0.21761955546767267,
+          0.3461707841043342
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0017123105756847784,
+          0.024026730650403096
+        ],
+        "aedes_precision": [
+          0.018579503440840323,
+          0.2367752742869376
+        ],
+        "fpr_other": [
+          0.022067037433553423,
+          0.04557119625474146
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters"
+      ]
+    },
+    "B_mmd_white": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 1,
+        "other_fp": 9,
+        "noise_fp": 0,
+        "alerts": 10,
+        "uncertain": 122,
+        "aedes_precision": 0.1,
+        "aedes_recall": 0.0027624309392265192,
+        "fpr_other": 0.009384775808133473,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 0.9076457229371688,
+        "balanced_accuracy": 0.449243572091094,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            10,
+            859,
+            9,
+            81
+          ],
+          [
+            10,
+            310,
+            1,
+            41
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.6087919621613214,
+        "auprc": 0.33365889346361755
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.5
+        ],
+        "aedes_recall": [
+          0.0,
+          0.009554140127388535
+        ],
+        "fpr_other": [
+          0.001064906139549728,
+          0.020601047901039057
+        ],
+        "coverage": [
+          0.8789008917448036,
+          0.9360809828113771
+        ],
+        "balanced_accuracy": [
+          0.4307196474301431,
+          0.4677807520871739
+        ],
+        "auroc": [
+          0.5292185390931213,
+          0.6899565330331002
+        ],
+        "auprc": [
+          0.2602782166135324,
+          0.43772324604350854
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.5
+        ],
+        "aedes_recall": [
+          0.0,
+          0.006172839506172839
+        ],
+        "fpr_other": [
+          0.0018423097765586077,
+          0.0190122107090893
+        ],
+        "coverage": [
+          0.8828374066957578,
+          0.931644777265745
+        ],
+        "balanced_accuracy": [
+          0.4331917083159593,
+          0.46501701432276604
+        ],
+        "auroc": [
+          0.5419212946037294,
+          0.6794553025637886
+        ],
+        "auprc": [
+          0.27152623863252145,
+          0.42472508185665847
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 6,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          6.993625043560883e-05,
+          0.015294443870664434
+        ],
+        "aedes_precision": [
+          0.0025285785444617848,
+          0.4450161170281954
+        ],
+        "fpr_other": [
+          0.0043000416652073025,
+          0.017740181611894893
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters"
+      ]
+    },
+    "C_wingbeat": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 26,
+        "other_fp": 60,
+        "noise_fp": 0,
+        "alerts": 86,
+        "uncertain": 0,
+        "aedes_precision": 0.3023255813953488,
+        "aedes_recall": 0.0718232044198895,
+        "fpr_other": 0.06256517205422316,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.5046290161828332,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            899,
+            60,
+            0
+          ],
+          [
+            0,
+            336,
+            26,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.48683596518011973,
+        "auprc": 0.290697530561486
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.1267605633802817,
+          0.5194935064935063
+        ],
+        "aedes_recall": [
+          0.025714285714285714,
+          0.11407766990291263
+        ],
+        "fpr_other": [
+          0.03257911851808838,
+          0.09431241441924147
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.47721376935713045,
+          0.5324346564426621
+        ],
+        "auroc": [
+          0.2522390161498022,
+          0.7041047526570173
+        ],
+        "auprc": [
+          0.17840871131248656,
+          0.49566089175354344
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.15115182097411145,
+          0.4789091693015234
+        ],
+        "aedes_recall": [
+          0.03333333333333333,
+          0.10989010989010989
+        ],
+        "fpr_other": [
+          0.03744581311434615,
+          0.08929070231444533
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.48124543920572227,
+          0.5277597288692044
+        ],
+        "auroc": [
+          0.28856828632058695,
+          0.6711730721741911
+        ],
+        "auprc": [
+          0.19012967125209443,
+          0.463902675734368
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.04745083555008704,
+          0.10346854303761896
+        ],
+        "aedes_precision": [
+          0.20789989233453585,
+          0.410830129107672
+        ],
+        "fpr_other": [
+          0.04807979152055741,
+          0.07980345115226306
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters"
+      ]
+    },
+    "D_tabular": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 1,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 1,
+        "uncertain": 86,
+        "aedes_precision": 1.0,
+        "aedes_recall": 0.0027624309392265192,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 0.9348978046934141,
+        "balanced_accuracy": 0.46697037083979054,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            893,
+            0,
+            61
+          ],
+          [
+            1,
+            335,
+            1,
+            25
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.531101112461761,
+        "auprc": 0.30417150920078273
+      },
+      "ci95": {
+        "aedes_precision": [
+          1.0,
+          1.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.008426966292134831
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.907440670513145,
+          0.9597311585471208
+        ],
+        "balanced_accuracy": [
+          0.45073282803134773,
+          0.48206622043283415
+        ],
+        "auroc": [
+          0.4027894391705351,
+          0.6568688726838523
+        ],
+        "auprc": [
+          0.2194970809001162,
+          0.4449200938091445
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          1.0,
+          1.0
+        ],
+        "aedes_recall": [
+          0.0,
+          0.006172839506172839
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.9130051061531925,
+          0.9560034202164533
+        ],
+        "balanced_accuracy": [
+          0.4533438189326831,
+          0.4798858823746722
+        ],
+        "auroc": [
+          0.4267693741493129,
+          0.6404683158095696
+        ],
+        "auprc": [
+          0.23053835101093323,
+          0.42333588808467826
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 615,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          6.993625043560883e-05,
+          0.015294443870664434
+        ],
+        "aedes_precision": [
+          0.025,
+          1.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0038392009797486148
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters",
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "duration_diagnostic": {
+      "point": {
+        "n_files": 1321,
+        "n_clusters": 16,
+        "aedes_n": 362,
+        "other_n": 959,
+        "noise_n": 0,
+        "aedes_tp": 0,
+        "other_fp": 0,
+        "noise_fp": 0,
+        "alerts": 0,
+        "uncertain": 0,
+        "aedes_precision": null,
+        "aedes_recall": 0.0,
+        "fpr_other": 0.0,
+        "fpr_noise": null,
+        "prevalence": 0.27403482210446634,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.5,
+        "confusion": [
+          [
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            959,
+            0,
+            0
+          ],
+          [
+            0,
+            362,
+            0,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 0,
+          "1": 12,
+          "2": 4
+        },
+        "auroc": 0.51169928389955,
+        "auprc": 0.2696897055675427
+      },
+      "ci95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.5
+        ],
+        "auroc": [
+          0.36179098551591427,
+          0.6379036923665259
+        ],
+        "auprc": [
+          0.18910254206024243,
+          0.3738149555148689
+        ]
+      },
+      "one_sided95": {
+        "aedes_recall": [
+          0.0,
+          0.0
+        ],
+        "fpr_other": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.5,
+          0.5
+        ],
+        "auroc": [
+          0.3875181773531489,
+          0.6204915231780198
+        ],
+        "auprc": [
+          0.20209507993534034,
+          0.3587751071435526
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 2000,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 2000,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.0,
+          0.010138529799725038
+        ],
+        "aedes_precision": null,
+        "fpr_other": [
+          0.0,
+          0.0038392009797486148
+        ],
+        "fpr_noise": null
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "fewer_than_5_Aedes_clusters",
+        "zero_other_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    }
+  },
+  "pooled": {
+    "A_perch_plain": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 1,
+        "other_fp": 24,
+        "noise_fp": 0,
+        "alerts": 25,
+        "uncertain": 1217,
+        "aedes_precision": 0.04,
+        "aedes_recall": 0.0019723865877712033,
+        "fpr_other": 0.0031889449906989105,
+        "fpr_noise": 0.0,
+        "prevalence": 0.04892405674032616,
+        "coverage": 0.8825629643925504,
+        "balanced_accuracy": 0.5144961072060498,
+        "confusion": [
+          [
+            1606,
+            184,
+            0,
+            540
+          ],
+          [
+            476,
+            6414,
+            24,
+            612
+          ],
+          [
+            15,
+            426,
+            1,
+            65
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.7033513361638362,
+        "auprc": 0.11853537399934269
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.25
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0058823529411764705
+        ],
+        "fpr_other": [
+          0.0006488872648156432,
+          0.006467261083006134
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8076229045401998,
+          0.9526140106144196
+        ],
+        "balanced_accuracy": [
+          0.45456742141832934,
+          0.6188810877544648
+        ],
+        "auroc": [
+          0.5251913472473734,
+          0.8427439795289412
+        ],
+        "auprc": [
+          0.035484828648841005,
+          0.31349394310123363
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.18181818181818182
+        ],
+        "aedes_recall": [
+          0.0,
+          0.005235602094240838
+        ],
+        "fpr_other": [
+          0.0009153816835339527,
+          0.0058960123715175485
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8177381127574375,
+          0.9473660010549335
+        ],
+        "balanced_accuracy": [
+          0.46232897129863404,
+          0.6141892001923983
+        ],
+        "auroc": [
+          0.5577572519593346,
+          0.8241287115728171
+        ],
+        "auprc": [
+          0.04255066509649295,
+          0.27667058037049325
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 4,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          4.993525809347302e-05,
+          0.010940016375896571
+        ],
+        "aedes_precision": [
+          0.0010121996993108446,
+          0.203516913922414
+        ],
+        "fpr_other": [
+          0.0020442531800775134,
+          0.004741205087905481
+        ],
+        "fpr_noise": [
+          0.0,
+          0.001581957450225134
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "A_perch_white": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 2,
+        "other_fp": 20,
+        "noise_fp": 0,
+        "alerts": 22,
+        "uncertain": 1147,
+        "aedes_precision": 0.09090909090909091,
+        "aedes_recall": 0.0039447731755424065,
+        "fpr_other": 0.0026574541589157587,
+        "fpr_noise": 0.0,
+        "prevalence": 0.04892405674032616,
+        "coverage": 0.8893177651259287,
+        "balanced_accuracy": 0.5207803769175124,
+        "confusion": [
+          [
+            1654,
+            138,
+            0,
+            538
+          ],
+          [
+            589,
+            6386,
+            20,
+            531
+          ],
+          [
+            34,
+            393,
+            2,
+            78
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.7611088831040754,
+        "auprc": 0.15384908616642037
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.4444444444444444
+        ],
+        "aedes_recall": [
+          0.0,
+          0.011764705882352941
+        ],
+        "fpr_other": [
+          0.0006269186952098007,
+          0.005445764667730085
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8136945654899443,
+          0.9587201346120883
+        ],
+        "balanced_accuracy": [
+          0.4611857540470977,
+          0.6234493010297217
+        ],
+        "auroc": [
+          0.5987355656384239,
+          0.8712591242001152
+        ],
+        "auprc": [
+          0.05037620787975605,
+          0.33408165243834076
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.3333333333333333
+        ],
+        "aedes_recall": [
+          0.0,
+          0.010471204188481676
+        ],
+        "fpr_other": [
+          0.0007998997018475729,
+          0.0049941324282381456
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8236855312949704,
+          0.9535286885000689
+        ],
+        "balanced_accuracy": [
+          0.468799271221236,
+          0.6191283939851621
+        ],
+        "auroc": [
+          0.6313347532509392,
+          0.8612512788886946
+        ],
+        "auprc": [
+          0.05869561619760961,
+          0.30146726626400683
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.00047808786334704894,
+          0.014176642494679158
+        ],
+        "aedes_precision": [
+          0.011205586024150994,
+          0.29161274155393346
+        ],
+        "fpr_other": [
+          0.0016239743128858538,
+          0.0041012530654766085
+        ],
+        "fpr_noise": [
+          0.0,
+          0.001581957450225134
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "B_mmd_plain": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 1,
+        "other_fp": 20,
+        "noise_fp": 1,
+        "alerts": 22,
+        "uncertain": 1301,
+        "aedes_precision": 0.045454545454545456,
+        "aedes_recall": 0.0019723865877712033,
+        "fpr_other": 0.0026574541589157587,
+        "fpr_noise": 0.00042918454935622315,
+        "prevalence": 0.04892405674032616,
+        "coverage": 0.8744572035124963,
+        "balanced_accuracy": 0.5116171985338911,
+        "confusion": [
+          [
+            1606,
+            183,
+            1,
+            540
+          ],
+          [
+            476,
+            6349,
+            20,
+            681
+          ],
+          [
+            15,
+            411,
+            1,
+            80
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.7031041874791875,
+        "auprc": 0.13175848928426642
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.2
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0058823529411764705
+        ],
+        "fpr_other": [
+          0.0007033115698390703,
+          0.004949420024729393
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0007068928024328727
+        ],
+        "coverage": [
+          0.8010010211506157,
+          0.9458223521184709
+        ],
+        "balanced_accuracy": [
+          0.45128114230189353,
+          0.6163417529723201
+        ],
+        "auroc": [
+          0.5296283434586864,
+          0.845463195442191
+        ],
+        "auprc": [
+          0.03680713330803111,
+          0.35359050273304143
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.16666666666666666
+        ],
+        "aedes_recall": [
+          0.0,
+          0.005235602094240838
+        ],
+        "fpr_other": [
+          0.0009555483745459074,
+          0.004623744501268601
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0006757099507353143
+        ],
+        "coverage": [
+          0.8112347998760757,
+          0.9393438060965958
+        ],
+        "balanced_accuracy": [
+          0.4597034164845985,
+          0.611358798699041
+        ],
+        "auroc": [
+          0.5557246385124593,
+          0.8261666005760895
+        ],
+        "auprc": [
+          0.04355316998266896,
+          0.31114037854605336
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          4.993525809347302e-05,
+          0.010940016375896571
+        ],
+        "aedes_precision": [
+          0.0011501475265735751,
+          0.22844439766763341
+        ],
+        "fpr_other": [
+          0.0016239743128858538,
+          0.0041012530654766085
+        ],
+        "fpr_noise": [
+          1.0865952975530159e-05,
+          0.002388918653302584
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": []
+    },
+    "B_mmd_white": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 3,
+        "other_fp": 18,
+        "noise_fp": 0,
+        "alerts": 21,
+        "uncertain": 1185,
+        "aedes_precision": 0.14285714285714285,
+        "aedes_recall": 0.005917159763313609,
+        "fpr_other": 0.0023917087430241827,
+        "fpr_noise": 0.0,
+        "prevalence": 0.04892405674032616,
+        "coverage": 0.8856508732992376,
+        "balanced_accuracy": 0.5203748574498699,
+        "confusion": [
+          [
+            1654,
+            137,
+            0,
+            539
+          ],
+          [
+            589,
+            6362,
+            18,
+            557
+          ],
+          [
+            34,
+            381,
+            3,
+            89
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.7489529701068164,
+        "auprc": 0.14686235369922657
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.5454545454545454
+        ],
+        "aedes_recall": [
+          0.0,
+          0.01764705882352941
+        ],
+        "fpr_other": [
+          0.0006248833451566976,
+          0.004495129930023489
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8101908902873295,
+          0.9561031004125109
+        ],
+        "balanced_accuracy": [
+          0.4605724011370183,
+          0.623573677158237
+        ],
+        "auroc": [
+          0.5865651241897457,
+          0.8670696944159481
+        ],
+        "auprc": [
+          0.04576362846052816,
+          0.33179688537988294
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.45
+        ],
+        "aedes_recall": [
+          0.0,
+          0.015706806282722512
+        ],
+        "fpr_other": [
+          0.0008633722036745304,
+          0.0041211304122704745
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.820520178413033,
+          0.9502554899244094
+        ],
+        "balanced_accuracy": [
+          0.468241630158257,
+          0.618913298157984
+        ],
+        "auroc": [
+          0.6169599764596713,
+          0.8523111341070178
+        ],
+        "auprc": [
+          0.05576358563524831,
+          0.29512552460624464
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 1,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.001221926856304014,
+          0.017194342198521284
+        ],
+        "aedes_precision": [
+          0.03048896762151555,
+          0.363423987016981
+        ],
+        "fpr_other": [
+          0.0014180750229986854,
+          0.003777306994266837
+        ],
+        "fpr_noise": [
+          0.0,
+          0.001581957450225134
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "C_wingbeat": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 21,
+        "other_fp": 360,
+        "noise_fp": 538,
+        "alerts": 919,
+        "uncertain": 0,
+        "aedes_precision": 0.022850924918389554,
+        "aedes_recall": 0.04142011834319527,
+        "fpr_other": 0.04783417486048366,
+        "fpr_noise": 0.23090128755364808,
+        "prevalence": 0.04892405674032616,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.3027385045873698,
+        "confusion": [
+          [
+            50,
+            1742,
+            538,
+            0
+          ],
+          [
+            804,
+            6362,
+            360,
+            0
+          ],
+          [
+            96,
+            390,
+            21,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.4953100785432516,
+        "auprc": 0.07122267078743223
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.11880719511934969
+        ],
+        "aedes_recall": [
+          0.0,
+          0.0954810519371574
+        ],
+        "fpr_other": [
+          0.01762308190483683,
+          0.0765764025939972
+        ],
+        "fpr_noise": [
+          0.011237273755656108,
+          0.3672891600315462
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.2867155483590942,
+          0.3245197974309994
+        ],
+        "auroc": [
+          0.2645151840974746,
+          0.7419713142682512
+        ],
+        "auprc": [
+          0.01798029970787692,
+          0.2843758169201573
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.001451378809869376,
+          0.1
+        ],
+        "aedes_recall": [
+          0.0038945433983601924,
+          0.08511576971214016
+        ],
+        "fpr_other": [
+          0.021843754659371755,
+          0.072871910113916
+        ],
+        "fpr_noise": [
+          0.013370975730559682,
+          0.3516308625693779
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.28924643951410706,
+          0.32060025092492256
+        ],
+        "auroc": [
+          0.2937858060747829,
+          0.6990561857053356
+        ],
+        "auprc": [
+          0.02136431969982243,
+          0.24139024805278217
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.025819510110137858,
+          0.06262014971950167
+        ],
+        "aedes_precision": [
+          0.014199422578860922,
+          0.0347188133365645
+        ],
+        "fpr_other": [
+          0.043122083640102386,
+          0.052900290728856735
+        ],
+        "fpr_noise": [
+          0.2139225337667659,
+          0.24855921491361016
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": []
+    },
+    "D_tabular": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 3,
+        "other_fp": 14,
+        "noise_fp": 0,
+        "alerts": 17,
+        "uncertain": 1021,
+        "aedes_precision": 0.17647058823529413,
+        "aedes_recall": 0.005917159763313609,
+        "fpr_other": 0.0018602179112410311,
+        "fpr_noise": 0.0,
+        "prevalence": 0.04892405674032616,
+        "coverage": 0.9014764064460098,
+        "balanced_accuracy": 0.5045915186609619,
+        "confusion": [
+          [
+            1509,
+            282,
+            0,
+            539
+          ],
+          [
+            574,
+            6474,
+            14,
+            464
+          ],
+          [
+            19,
+            467,
+            3,
+            18
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.5831113998181306,
+        "auprc": 0.05959865357732428
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.5
+        ],
+        "aedes_recall": [
+          0.0,
+          0.014708605664488002
+        ],
+        "fpr_other": [
+          0.0005710554955809269,
+          0.003364220571883034
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8229644560028183,
+          0.9718771773440539
+        ],
+        "balanced_accuracy": [
+          0.4695187809441792,
+          0.5669766187441085
+        ],
+        "auroc": [
+          0.37252377284464294,
+          0.7820785010499873
+        ],
+        "auprc": [
+          0.023672054611193732,
+          0.14386028321177532
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.0,
+          0.42857142857142855
+        ],
+        "aedes_recall": [
+          0.0,
+          0.013193774481884857
+        ],
+        "fpr_other": [
+          0.0007310024208160004,
+          0.0031285213641228066
+        ],
+        "fpr_noise": [
+          0.0,
+          0.0
+        ],
+        "coverage": [
+          0.8335860913402986,
+          0.9681170487136056
+        ],
+        "balanced_accuracy": [
+          0.4734374177347237,
+          0.56116947716561
+        ],
+        "auroc": [
+          0.4057112545947219,
+          0.7471574832747175
+        ],
+        "auprc": [
+          0.027852687746070474,
+          0.12402599661543111
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.001221926856304014,
+          0.017194342198521284
+        ],
+        "aedes_precision": [
+          0.037985068070626,
+          0.43431787284428397
+        ],
+        "fpr_other": [
+          0.0010173599142334843,
+          0.0031191618086201076
+        ],
+        "fpr_noise": [
+          0.0,
+          0.001581957450225134
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": [
+        "zero_noise_errors_bootstrap_cannot_bound_unseen_errors"
+      ]
+    },
+    "duration_diagnostic": {
+      "point": {
+        "n_files": 10363,
+        "n_clusters": 408,
+        "aedes_n": 507,
+        "other_n": 7526,
+        "noise_n": 2330,
+        "aedes_tp": 65,
+        "other_fp": 631,
+        "noise_fp": 13,
+        "alerts": 709,
+        "uncertain": 0,
+        "aedes_precision": 0.09167842031029619,
+        "aedes_recall": 0.1282051282051282,
+        "fpr_other": 0.08384267871379218,
+        "fpr_noise": 0.005579399141630901,
+        "prevalence": 0.04892405674032616,
+        "coverage": 1.0,
+        "balanced_accuracy": 0.36644949453342446,
+        "confusion": [
+          [
+            347,
+            1970,
+            13,
+            0
+          ],
+          [
+            707,
+            6188,
+            631,
+            0
+          ],
+          [
+            16,
+            426,
+            65,
+            0
+          ]
+        ],
+        "class_clusters": {
+          "0": 337,
+          "1": 124,
+          "2": 16
+        },
+        "auroc": 0.6130915358679782,
+        "auprc": 0.08777206388257823
+      },
+      "ci95": {
+        "aedes_precision": [
+          0.0,
+          0.2931337216007379
+        ],
+        "aedes_recall": [
+          0.0,
+          0.27584255235654953
+        ],
+        "fpr_other": [
+          0.01572808934512167,
+          0.1853950287324262
+        ],
+        "fpr_noise": [
+          0.0,
+          0.027331022018957693
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.32254942803722925,
+          0.45858784762156984
+        ],
+        "auroc": [
+          0.3660097636275235,
+          0.8082481904415925
+        ],
+        "auprc": [
+          0.021309919157727956,
+          0.23942555558182635
+        ]
+      },
+      "one_sided95": {
+        "aedes_precision": [
+          0.038900395573136584,
+          0.23885305334526102
+        ],
+        "aedes_recall": [
+          0.030845377898223426,
+          0.24942457193766093
+        ],
+        "fpr_other": [
+          0.01930633218738374,
+          0.17256503720675864
+        ],
+        "fpr_noise": [
+          0.0,
+          0.022793051925237534
+        ],
+        "coverage": [
+          1.0,
+          1.0
+        ],
+        "balanced_accuracy": [
+          0.328873443459887,
+          0.4426113154098652
+        ],
+        "auroc": [
+          0.4177862372424391,
+          0.7826425946466122
+        ],
+        "auprc": [
+          0.026209620834481834,
+          0.2075829168166818
+        ]
+      },
+      "undefined_draws": {
+        "aedes_precision": 0,
+        "aedes_recall": 0,
+        "fpr_other": 0,
+        "fpr_noise": 0,
+        "coverage": 0,
+        "balanced_accuracy": 0,
+        "auroc": 0,
+        "auprc": 0
+      },
+      "file_binomial_ci95_descriptive_only": {
+        "aedes_recall": [
+          0.10035696286189008,
+          0.16047246164432885
+        ],
+        "aedes_precision": [
+          0.07146763243473953,
+          0.11535970030161621
+        ],
+        "fpr_other": [
+          0.07767673552134706,
+          0.09033312711142225
+        ],
+        "fpr_noise": [
+          0.0029740394528868807,
+          0.009522044493863194
+        ]
+      },
+      "bootstrap": {
+        "draws": 2000,
+        "unit": "cluster_merged",
+        "stratification": "cluster maximum target",
+        "fixed_fitted_models": true,
+        "includes_training_variability": false
+      },
+      "cautions": []
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+ "stage": "S3",
+ "code_sha256": {
+  "reanalysis/train_v2.py": "768a9fd6837cddfdc1cf8f00d17c420e90b01940832093b51a27bf37025985be",
+  "reanalysis/frontend.py": "0830f0e5fb9092472955225f1e74aa358bf2da258703c856e9610d65db06e098",
+  "reanalysis/protocol_v2.json": "6b4f37c3558c7b6bd27248a3f94fc2a322bf0db27b59ca6955021ce94c66def4"
+ },
+ "cache_sha256": {
+  "logmel.npy": "6db2e9b0e4c4ec1285542fc9221d21e0b2d1f413fb6775e36c1505313d9e390b",
+  "tabular.npy": "9223771b010e8d00ebae1adc386e012b34ec9d2a778ff41d3e35d5916e5d57ea",
+  "windows.csv": "07bba9f6e4fe7ff226f40137bac1324c20d4cc4a8c09a024f73311512e055319"
+ }
+}

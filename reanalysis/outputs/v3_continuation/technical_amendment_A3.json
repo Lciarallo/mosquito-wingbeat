@@ -1,0 +1,25 @@
+{
+  "date_utc": "2026-10-20T21:55:47.551804+00:00",
+  "technical_amendment": "A3, physical duration metadata only",
+  "old_code_sha256": "bd534e3569e65e868bc04181620a13b5d1514963174a7ecca2406985dd98046e",
+  "new_code_sha256": "d02da5fed3f91fdca9e3343d57501a9806a0176e982cf335302480a6382b722b",
+  "changed_existing_definitions": [
+    "load"
+  ],
+  "added_definitions": [
+    "repair_duration_metadata"
+  ],
+  "all_other_function_and_class_definitions_unchanged": true,
+  "n_missing_physical_durations_recovered": 67,
+  "duration_source_sha256": "d976be712c5025fc8a95015ff5dda33093f2f2dec7a274e77b4775e5dedd4a08",
+  "cached_models_unchanged": {
+    "results/v3_continuation/development/LODO_abuzz/C_wingbeat.joblib": "c4ebe444e575556597d7a0372e37dc0afb115f16ba778fb58ddcbc5c96fda596",
+    "results/v3_continuation/development/LODO_abuzz/A_perch_plain.joblib": "17248f7a90a2677a58553e2858f9a68ea38ffd9374aca5992e3997cb82a06da0",
+    "results/v3_continuation/development/LODO_abuzz/A_perch_white.joblib": "86b18cd887be69dca2a04c83a9ee50fa788d7e139f30d4446601aef8a457d7d5",
+    "results/v3_continuation/development/LODO_abuzz/B_mmd_plain.joblib": "ee96cafc089184efd15fcdf994e7f0fca15f743523c29c2d47137c442553143f",
+    "results/v3_continuation/development/LODO_abuzz/B_mmd_white.joblib": "1c89862f057159f8b1182f6cb494e0fdfc4a7b902791b01029305e69bcf9980d",
+    "results/v3_continuation/development/LODO_abuzz/D_tabular.joblib": "b7d48ac51ea23dcc254f413a74db111c9be3d4a477f5dcbd742a57a5ebbbe0ed",
+    "results/v3_continuation/development/LODO_abuzz/duration_diagnostic.joblib": "15d6afbfa2ca9cf74c84c1bd311176c74520e09e1d96bc02924d44ef844ce7cf"
+  },
+  "locked_predictions_inspected": false
+}
