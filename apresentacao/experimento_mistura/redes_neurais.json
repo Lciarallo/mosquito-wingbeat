@@ -1,0 +1,84 @@
+{
+ "arvores": {
+  "auroc": [
+   0.826,
+   0.003
+  ],
+  "precisao": [
+   0.792,
+   0.008
+  ],
+  "deteccao": [
+   0.456,
+   0.003
+  ],
+  "outros_alarme": [
+   0.083,
+   0.004
+  ],
+  "ruido_alarme": [
+   0.013,
+   0.001
+  ],
+  "auroc_aedes_x_culex": [
+   0.731,
+   0.008
+  ]
+ },
+ "mlp": {
+  "auroc": [
+   0.853,
+   0.01
+  ],
+  "precisao": [
+   0.79,
+   0.003
+  ],
+  "deteccao": [
+   0.584,
+   0.013
+  ],
+  "outros_alarme": [
+   0.107,
+   0.005
+  ],
+  "ruido_alarme": [
+   0.027,
+   0.006
+  ],
+  "auroc_aedes_x_culex": [
+   0.856,
+   0.009
+  ]
+ },
+ "cnn": {
+  "auroc": [
+   0.854,
+   0.007
+  ],
+  "precisao": [
+   0.813,
+   0.023
+  ],
+  "deteccao": [
+   0.612,
+   0.018
+  ],
+  "outros_alarme": [
+   0.097,
+   0.016
+  ],
+  "ruido_alarme": [
+   0.025,
+   0.004
+  ],
+  "auroc_aedes_x_culex": [
+   0.689,
+   0.017
+  ]
+ },
+ "parametros": {
+  "mlp": 18689,
+  "cnn": 9889
+ }
+}

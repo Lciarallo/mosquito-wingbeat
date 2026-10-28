@@ -445,7 +445,7 @@ f0 = cand[np.<span class="f">argmax</span>(harm)]  <span class="c"># o "tom"</sp
   <div class="rise" style="--d:2;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:40px">
     <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:34px;font-weight:600;color:#3d5a98">Python</div><p style="font-size:21px;margin-top:6px">A linguagem de quase todo projeto de ML. Legível e com bibliotecas para tudo.</p></div>
     <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#2f7f86">NumPy · pandas</div><p style="font-size:21px;margin-top:6px">Tabelas e matrizes de números: cada gravação vira uma linha com 80 colunas.</p></div>
-    <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#7a5a20">SciPy · PyTorch</div><p style="font-size:21px;margin-top:6px">Processamento de sinais: filtros, reamostragem e o espectrograma mel.</p></div>
+    <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#7a5a20">SciPy · PyTorch</div><p style="font-size:21px;margin-top:6px">Sinais (espectrograma mel) e as <b>redes neurais</b> (MLP e CNN).</p></div>
     <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#d1453b">scikit-learn</div><p style="font-size:21px;margin-top:6px">Os modelos (árvores), a validação cruzada e as métricas, prontos para usar.</p></div>
     <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#4c8a4a">Matplotlib</div><p style="font-size:21px;margin-top:6px">Gráficos: espectros, matriz de confusão, curva ROC. Olhar antes de acreditar.</p></div>
     <div class="card" style="padding:20px 22px"><div class="mono" style="font-size:30px;font-weight:600;color:#1f6fb2">VS Code · Jupyter</div><p style="font-size:21px;margin-top:6px">Editor e notebooks: código, texto e gráfico na mesma página.</p></div>
@@ -553,6 +553,36 @@ X = np.<span class="f">concatenate</span>([z.<span class="f">mean</span>(<span c
 et  = <span class="f">ExtraTreesClassifier</span>(n_estimators=<span class="n">400</span>, min_samples_leaf=<span class="n">2</span>)
 p_aedes = (hgb.<span class="f">predict_proba</span>(X)[:, <span class="n">1</span>] + et.<span class="f">predict_proba</span>(X)[:, <span class="n">1</span>]) / <span class="n">2</span>   <span class="c"># média dos dois</span></div>
   <div class="foot"><span><svg><use href="#mini"/></svg>por que árvores? funcionam bem com atributos tabulares, poucos milhares de exemplos e sem GPU</span><span class="pn"></span></div>
+</section>
+
+<!-- ============ NN · REDES NEURAIS ============ -->
+<section class="slide" data-title="Redes neurais: MLP e CNN">
+  <div class="kicker rise">e as redes neurais?</div>
+  <h2 class="rise" style="--d:1">Redes neurais: <span class="hl">MLP</span> e <span class="hl">CNN</span></h2>
+  <div class="grid2" style="margin-top:26px;gap:40px">
+    <div class="card rise" style="--d:2;padding:22px 26px">
+      <svg width="100%" height="215" viewBox="0 0 760 250" id="mlpSvg"></svg>
+      <h3 style="margin-top:4px">MLP <span class="muted" style="font-size:22px;font-weight:400">(perceptron multicamadas)</span></h3>
+      <p style="margin-bottom:14px">Camadas de “neurônios”: cada um soma os 80 números com <b>pesos</b> e passa por uma função (ReLU). O treino ajusta os pesos para errar menos.</p>
+      <div class="code" style="font-size:18px;box-shadow:5px 6px 0 rgba(61,90,152,.85)">mlp = nn.<span class="f">Sequential</span>(
+    nn.<span class="f">Linear</span>(<span class="n">80</span>, <span class="n">128</span>), nn.<span class="f">ReLU</span>(),   <span class="c"># camada 1</span>
+    nn.<span class="f">Linear</span>(<span class="n">128</span>, <span class="n">64</span>), nn.<span class="f">ReLU</span>(),   <span class="c"># camada 2</span>
+    nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))                  <span class="c"># nota de Aedes</span></div>
+    </div>
+    <div class="card rise" style="--d:3;padding:22px 26px">
+      <svg width="100%" height="215" viewBox="0 0 760 250" id="cnnSvg"></svg>
+      <h3 style="margin-top:4px">CNN <span class="muted" style="font-size:22px;font-weight:400">(rede convolucional)</span></h3>
+      <p style="margin-bottom:14px">Um <b>filtro</b> pequeno desliza pelas 16 faixas de frequência procurando padrões (como “pico + harmônico”), em qualquer posição.</p>
+      <div class="code" style="font-size:18px;box-shadow:5px 6px 0 rgba(209,69,59,.85)">cnn = nn.<span class="f">Sequential</span>(
+    nn.<span class="f">Conv1d</span>(<span class="n">5</span>, <span class="n">32</span>, kernel_size=<span class="n">3</span>), nn.<span class="f">ReLU</span>(),  <span class="c"># filtros</span>
+    nn.<span class="f">Conv1d</span>(<span class="n">32</span>, <span class="n">64</span>, kernel_size=<span class="n">3</span>), nn.<span class="f">ReLU</span>(),
+    nn.<span class="f">AdaptiveMaxPool1d</span>(<span class="n">1</span>), nn.<span class="f">Flatten</span>(),
+    nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))                      <span class="c"># nota</span></div>
+    </div>
+  </div>
+  <div class="code rise" style="--d:4;position:absolute;left:120px;right:120px;top:912px;font-size:18px;padding:12px 22px;box-shadow:5px 6px 0 rgba(76,138,74,.85)"><span class="k">for</span> epoca <span class="k">in</span> <span class="f">range</span>(<span class="n">60</span>):   <span class="c"># treino: mostrar os exemplos várias vezes e corrigir os pesos</span>
+    perda = <span class="f">binary_cross_entropy</span>(rede(X_lote), y_lote); perda.<span class="f">backward</span>(); otimizador.<span class="f">step</span>()</div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>PyTorch · mesmos 80 atributos e mesma receita das árvores (dois estágios, pesos e prova por grupo)</span><span class="pn"></span></div>
 </section>
 
 <!-- ============ 7 · VALIDAÇÃO ============ -->
@@ -809,6 +839,15 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <div class="foot"><span><svg><use href="#mini"/></svg>média de 3 repetições · validação cruzada por grupo</span><span class="pn"></span></div>
 </section>
 
+<!-- ============ CMP · ÁRVORES x REDES ============ -->
+<section class="slide" data-title="Árvores x redes neurais">
+  <div class="kicker rise">a mesma prova para todos</div>
+  <h2 class="rise" style="--d:1">Árvores × <span class="hl">redes neurais</span></h2>
+  <svg class="abs rise" style="--d:2;left:100px;top:240px" width="1150" height="740" viewBox="0 0 1150 740" id="cmpSvg"></svg>
+  <div class="abs" style="left:1300px;top:260px;width:520px" id="cmpText"></div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>mesmos dados, mesmos ajustes, validação por grupo · média de 3 repetições</span><span class="pn"></span></div>
+</section>
+
 <!-- ============ 16e · PROVA JUSTA ============ -->
 <section class="slide" data-title="A prova mais justa">
   <div class="kicker rise">a prova mais justa</div>
@@ -962,7 +1001,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     <div class="grid3" style="gap:40px">
       <div class="rise" style="--d:2;border-top:5px solid var(--yellow);padding-top:20px">
         <div style="font-size:64px;font-weight:700;color:var(--yellow)">1</div>
-        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Dados primeiro:</b> escolher o que cada dataset ensina e normalizar por fonte pesou mais que trocar de modelo.</p>
+        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Dados primeiro, depois o modelo:</b> os ajustes de dados deram o maior salto; trocar árvores por <b style="color:#fff">redes neurais</b> (MLP/CNN) deu mais um passo: AUROC <b style="color:#fff">0,85</b>.</p>
       </div>
       <div class="rise" style="--d:3;border-top:5px solid #7fc8d0;padding-top:20px">
         <div style="font-size:64px;font-weight:700;color:#7fc8d0">2</div>
@@ -1219,6 +1258,128 @@ const CURVAS={"classes":["ruido","outro_mosquito","aedes"],"matriz_confusao":[[3
     if(i<4)el('path',{d:`M${x+180} 135 L${x+200} 135`,stroke:'#1d2433','stroke-width':5,'marker-end':'url(#arr)'},s);});
   el('text',{x:500,y:36,'text-anchor':'middle','font-family':'Caveat','font-size':34,fill:'#1d2433'},s,'tudo dentro de uma placa do tamanho de um dedo');
   el('text',{x:500,y:270,'text-anchor':'middle','font-family':'Caveat','font-size':32,fill:'#4a5163'},s,'o mesmo ciclo de ML, só que com pouca memória e pouca energia');
+})();
+/* --- redes neurais --- */
+const NN={
+ "arvores": {
+  "auroc": [
+   0.826,
+   0.003
+  ],
+  "precisao": [
+   0.792,
+   0.008
+  ],
+  "deteccao": [
+   0.456,
+   0.003
+  ],
+  "outros_alarme": [
+   0.083,
+   0.004
+  ],
+  "ruido_alarme": [
+   0.013,
+   0.001
+  ],
+  "auroc_aedes_x_culex": [
+   0.731,
+   0.008
+  ]
+ },
+ "mlp": {
+  "auroc": [
+   0.853,
+   0.01
+  ],
+  "precisao": [
+   0.79,
+   0.003
+  ],
+  "deteccao": [
+   0.584,
+   0.013
+  ],
+  "outros_alarme": [
+   0.107,
+   0.005
+  ],
+  "ruido_alarme": [
+   0.027,
+   0.006
+  ],
+  "auroc_aedes_x_culex": [
+   0.856,
+   0.009
+  ]
+ },
+ "cnn": {
+  "auroc": [
+   0.854,
+   0.007
+  ],
+  "precisao": [
+   0.813,
+   0.023
+  ],
+  "deteccao": [
+   0.612,
+   0.018
+  ],
+  "outros_alarme": [
+   0.097,
+   0.016
+  ],
+  "ruido_alarme": [
+   0.025,
+   0.004
+  ],
+  "auroc_aedes_x_culex": [
+   0.689,
+   0.017
+  ]
+ },
+ "parametros": {
+  "mlp": 18689,
+  "cnn": 9889
+ }
+};
+(function(){
+  const s=document.getElementById('mlpSvg'); if(!s)return;
+  const layers=[[6,'80 atributos'],[7,'128'],[5,'64'],[1,'nota']], xs=[70,280,490,690];
+  const pos=layers.map(([n],l)=>Array.from({length:n},(_,i)=>[xs[l],125+(i-(n-1)/2)*30]));
+  for(let l=0;l<3;l++)pos[l].forEach(a=>pos[l+1].forEach(b=>el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'#3d5a98','stroke-width':1.2,opacity:.35},s)));
+  pos.forEach((L,l)=>L.forEach(([x,y])=>el('circle',{cx:x,cy:y,r:l===3?16:11,fill:l===0?'#f5c84b':l===3?'#d1453b':'#7fc8d0',stroke:'#1d2433','stroke-width':2.5},s)));
+  layers.forEach(([n,t],l)=>el('text',{x:xs[l],y:240,'text-anchor':'middle','font-family':'Space Grotesk','font-size':20,'font-weight':700,fill:'#1d2433'},s,t));
+  el('text',{x:385,y:24,'text-anchor':'middle','font-family':'Caveat','font-size':30,fill:'#1d2433'},s,'cada linha é um peso ajustado no treino');
+})();
+(function(){
+  const s=document.getElementById('cnnSvg'); if(!s)return;
+  const v=[.3,.35,.3,.45,.55,.6,.95,.5,.75,.9,.45,.35,.3,.4,.3,.5], x0=40,bw=40;
+  v.forEach((h,i)=>el('rect',{x:x0+i*bw+3,y:190-h*140,width:bw-6,height:h*140,rx:4,fill:'#3d5a98','fill-opacity':.35+h*.5,stroke:'#1d2433','stroke-width':1.5},s));
+  el('rect',{x:x0+6*bw-4,y:30,width:3*bw+8,height:170,rx:10,fill:'#f5c84b','fill-opacity':.25,stroke:'#d1453b','stroke-width':4,'stroke-dasharray':'10 6'},s);
+  el('path',{d:`M${x0+6*bw+60} 22 L${x0+11*bw} 22`,stroke:'#d1453b','stroke-width':4,'marker-end':'url(#arrR)'},s);
+  el('text',{x:x0+6*bw-10,y:18,'text-anchor':'end','font-family':'Caveat','font-size':28,fill:'#d1453b'},s,'o filtro desliza');
+  el('text',{x:x0+8*bw,y:232,'text-anchor':'middle','font-family':'Space Grotesk','font-size':20,'font-weight':700,fill:'#1d2433'},s,'16 faixas de frequência');
+})();
+(function(){
+  const s=document.getElementById('cmpSvg'); if(!s)return;
+  const M=[['arvores','Árvores (HistGB + Extra Trees)','#4c8a4a'],['mlp','MLP','#3d5a98'],['cnn','CNN','#d1453b']];
+  const met=[['auroc','AUROC',1],['precisao','Precisão',1],['deteccao','Detecção',1],['auroc_aedes_x_culex','Aedes × Culex (mesmo aparelho)',1]];
+  const x0=60,gw=270,bw=70,base=560,H=v=>v*480;
+  el('line',{x1:x0-10,y1:base,x2:x0+gw*4,y2:base,stroke:'#1d2433','stroke-width':3},s);
+  met.forEach(([k,n],g)=>{const gx=x0+g*gw;
+    M.forEach(([m,,c],j)=>{const v=NN[m][k][0],x=gx+j*(bw+8);
+      el('rect',{x,y:base-H(v),width:bw,height:H(v),rx:6,fill:c,stroke:'#1d2433','stroke-width':3,filter:'url(#sketch)'},s);
+      el('text',{x:x+bw/2,y:base-H(v)-10,'text-anchor':'middle','font-family':'Space Grotesk','font-size':21,'font-weight':700,fill:'#1d2433'},s,(k.startsWith('auroc')?v.toFixed(2).replace('.',','):Math.round(v*100)+'%'));});
+    const lines=n.length>14?[n.split(' (')[0],'('+n.split(' (')[1]]:[n];
+    lines.forEach((t,li)=>el('text',{x:gx+(bw*3+16)/2,y:base+36+li*26,'text-anchor':'middle','font-family':'Space Grotesk','font-size':21,'font-weight':li?400:700,fill:'#1d2433'},s,t));});
+  M.forEach(([m,n,c],j)=>{el('rect',{x:x0+j*360,y:0,width:24,height:24,fill:c,stroke:'#1d2433','stroke-width':2},s);el('text',{x:x0+j*360+34,y:20,'font-family':'Space Grotesk','font-size':22},s,n);});
+  const t=document.getElementById('cmpText'), f2=v=>v.toFixed(2).replace('.',','), pc=v=>Math.round(v*100)+'%';
+  t.innerHTML=`<div class="card" style="padding:18px 24px"><h3 style="font-size:28px">As redes ganharam</h3><p style="font-size:21px">Com a mesma precisão (~80%), a MLP e a CNN acharam <b>mais Aedes</b>: ${pc(NN.mlp.deteccao[0])} e ${pc(NN.cnn.deteccao[0])}, contra ${pc(NN.arvores.deteccao[0])} das árvores.</p></div>
+  <div class="card" style="margin-top:24px;padding:18px 24px;background:#e8f1e4"><p style="font-size:21px">Na prova mais justa (Aedes × Culex no mesmo aparelho), a <b>MLP</b> chegou a <b>${f2(NN.mlp.auroc_aedes_x_culex[0])}</b> (árvores: ${f2(NN.arvores.auroc_aedes_x_culex[0])}).</p></div>
+  <div class="card" style="margin-top:24px;padding:18px 24px;background:#fde9e4"><p style="font-size:21px"><b>O custo:</b> um pouco mais de alarme falso (${pc(NN.mlp.outros_alarme[0])} contra ${pc(NN.arvores.outros_alarme[0])} dos outros mosquitos).</p></div>
+  <div class="postit" style="margin-top:28px;font-size:28px">Testar vários modelos <b>com a mesma prova</b> faz parte do trabalho. Aqui, as redes foram o melhor passo depois dos ajustes de dados.</div>`;
 })();
 
 /* --- navigation --- */

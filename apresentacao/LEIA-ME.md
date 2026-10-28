@@ -1,6 +1,6 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (23 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
+Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (25 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
@@ -19,6 +19,7 @@ Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor d
 |---|---|
 | `pool_features.py` | Monta o dataset único (atributos de todas as fontes) em `pool.npz`, fora do Git |
 | `aedes_torres_funchal.py` | Modelo final: Aedes de Torres + Funchal; outras fontes só com não-Aedes; normalização e pesos por fonte; dois estágios |
+| `redes_neurais.py` | MLP e CNN (PyTorch) na mesma receita do modelo final, comparadas com as árvores (3 repetições) |
 | `curvas_modelo_final.py` | Matriz de confusão, curva ROC e métricas por limiar do modelo final |
 | `interpretabilidade_final.py` | Importância por banda de frequência (permutação) e probe de origem no modelo final |
 | `probe_torres.py`, `mistura_torres_funchal.py`, `melhorias.py`, `melhorias2.py`, `so_torres_funchal.py` | Experimentos exploratórios anteriores, mantidos como registro |
