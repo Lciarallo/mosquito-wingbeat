@@ -1,6 +1,6 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (25 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore e as redes neurais (MLP e CNN), a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
+Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (26 slides): o processo, as ferramentas, os dados, os atributos, os modelos (árvores, redes neurais MLP e CNN, e a SVM, que é o modelo final), o ranking de 9 modelos na mesma prova, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
@@ -18,10 +18,11 @@ Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor d
 | Arquivo | O que faz |
 |---|---|
 | `pool_features.py` | Monta o dataset único (atributos de todas as fontes) em `pool.npz`, fora do Git |
-| `aedes_torres_funchal.py` | Modelo final: Aedes de Torres + Funchal; outras fontes só com não-Aedes; normalização e pesos por fonte; dois estágios |
+| `aedes_torres_funchal.py` | Receita de dados com árvores (modelo final anterior): Aedes de Torres + Funchal; outras fontes só com não-Aedes; normalização e pesos por fonte; dois estágios |
 | `redes_neurais.py` | MLP e CNN (PyTorch) na mesma receita do modelo final, comparadas com as árvores (3 repetições) |
 | `seq_features.py` | Sequências no tempo (32 instantes × 16 faixas) alinhadas ao `pool.npz`, para LSTM/Bi-LSTM (`seq.npy`, fora do Git) |
 | `metodos_restantes.py` | Logística, SVM, DANN, CORAL + árvores, LSTM e Bi-LSTM na mesma receita (3 repetições; LSTM na GPU via ROCm) |
+| `svm_final.py` | **Modelo final dos slides (SVM RBF)**: matriz de confusão, ROC, métricas por limiar e importância por faixa (`curvas_svm.json`, `interpretabilidade_svm.json`) |
 | `curvas_modelo_final.py` | Matriz de confusão, curva ROC e métricas por limiar do modelo final |
 | `interpretabilidade_final.py` | Importância por banda de frequência (permutação) e probe de origem no modelo final |
 | `probe_torres.py`, `mistura_torres_funchal.py`, `melhorias.py`, `melhorias2.py`, `so_torres_funchal.py` | Experimentos exploratórios anteriores, mantidos como registro |
