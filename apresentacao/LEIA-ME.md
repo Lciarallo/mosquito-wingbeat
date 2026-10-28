@@ -1,6 +1,6 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (25 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
+Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (25 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore e as redes neurais (MLP e CNN), a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
