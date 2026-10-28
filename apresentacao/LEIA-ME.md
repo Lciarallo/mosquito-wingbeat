@@ -1,10 +1,10 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação didática do projeto (25 slides): o problema, os métodos de ML, os resultados, a interpretabilidade e o experimento de mistura de datasets.
+Apresentação didática do projeto (22 slides): o problema, os métodos de ML, os resultados, a interpretabilidade e a receita final de dados (slides 17–20).
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; use as setas ou clique para navegar e `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
-- `experimento_mistura/`: scripts e resultados (JSON) dos experimentos mostrados nos slides 12–14 e 20–23.
+- `experimento_mistura/`: scripts e resultados (JSON) dos experimentos; o resultado final aparece nos slides 17–20, os demais ficam como registro.
 
 ## Experimento de mistura (resumo)
 
@@ -15,7 +15,7 @@ Apresentação didática do projeto (25 slides): o problema, os métodos de ML, 
 | `pool_features.py` | Monta o dataset único (atributos de todas as fontes) em `pool.npz`, fora do Git |
 | `melhorias.py`, `melhorias2.py` | Variantes: todas as fontes, normalização por fonte, limiar, ensemble, dois estágios |
 | `so_torres_funchal.py` | Aedes só de Torres + Funchal no treino, testado nos Aedes das outras fontes |
-| `aedes_torres_funchal.py` | Receita final (slides 20–23): Aedes de Torres + Funchal; outras fontes só com não-Aedes |
+| `aedes_torres_funchal.py` | Receita final (slides 17–20): Aedes de Torres + Funchal; outras fontes só com não-Aedes |
 
 Todos são **retrospectivos**: usam dados já conhecidos do projeto e não constituem teste cego. Os atributos vêm de `results/torres_aedes_transfer_2026_10_15/` e dos caches de áudio locais, que não são versionados (ver o README principal). A extração de atributos também usa `train_torres_aedes_transfer.py`, que fica só na cópia local (`results/torres_aedes_transfer_2026_10_15/source/`). Executar com o ambiente `.venv-v3`, a partir da raiz do repositório, por exemplo `python apresentacao/experimento_mistura/pool_features.py`.
 
