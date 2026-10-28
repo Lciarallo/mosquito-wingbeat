@@ -1,0 +1,161 @@
+{
+ "auroc_base": 0.829,
+ "auroc_base_aedes_x_culex": 0.743,
+ "bandas": [
+  {
+   "centro_hz": 80,
+   "faixa_hz": [
+    0,
+    169
+   ],
+   "queda_auroc": 0.0219,
+   "queda_auroc_aedes_x_culex": 0.015
+  },
+  {
+   "centro_hz": 169,
+   "faixa_hz": [
+    80,
+    268
+   ],
+   "queda_auroc": 0.0236,
+   "queda_auroc_aedes_x_culex": 0.0163
+  },
+  {
+   "centro_hz": 268,
+   "faixa_hz": [
+    169,
+    378
+   ],
+   "queda_auroc": 0.0166,
+   "queda_auroc_aedes_x_culex": -0.0114
+  },
+  {
+   "centro_hz": 378,
+   "faixa_hz": [
+    268,
+    501
+   ],
+   "queda_auroc": 0.035,
+   "queda_auroc_aedes_x_culex": -0.0271
+  },
+  {
+   "centro_hz": 501,
+   "faixa_hz": [
+    378,
+    638
+   ],
+   "queda_auroc": 0.0322,
+   "queda_auroc_aedes_x_culex": -0.0062
+  },
+  {
+   "centro_hz": 638,
+   "faixa_hz": [
+    501,
+    791
+   ],
+   "queda_auroc": 0.0356,
+   "queda_auroc_aedes_x_culex": -0.0101
+  },
+  {
+   "centro_hz": 791,
+   "faixa_hz": [
+    638,
+    961
+   ],
+   "queda_auroc": 0.0865,
+   "queda_auroc_aedes_x_culex": 0.0188
+  },
+  {
+   "centro_hz": 961,
+   "faixa_hz": [
+    791,
+    1150
+   ],
+   "queda_auroc": 0.0402,
+   "queda_auroc_aedes_x_culex": 0.0011
+  },
+  {
+   "centro_hz": 1150,
+   "faixa_hz": [
+    961,
+    1361
+   ],
+   "queda_auroc": 0.082,
+   "queda_auroc_aedes_x_culex": 0.0344
+  },
+  {
+   "centro_hz": 1361,
+   "faixa_hz": [
+    1150,
+    1596
+   ],
+   "queda_auroc": 0.1313,
+   "queda_auroc_aedes_x_culex": 0.0619
+  },
+  {
+   "centro_hz": 1596,
+   "faixa_hz": [
+    1361,
+    1858
+   ],
+   "queda_auroc": 0.0359,
+   "queda_auroc_aedes_x_culex": 0.0206
+  },
+  {
+   "centro_hz": 1858,
+   "faixa_hz": [
+    1596,
+    2149
+   ],
+   "queda_auroc": 0.0237,
+   "queda_auroc_aedes_x_culex": 0.0054
+  },
+  {
+   "centro_hz": 2149,
+   "faixa_hz": [
+    1858,
+    2474
+   ],
+   "queda_auroc": 0.026,
+   "queda_auroc_aedes_x_culex": 0.0052
+  },
+  {
+   "centro_hz": 2474,
+   "faixa_hz": [
+    2149,
+    2836
+   ],
+   "queda_auroc": 0.0484,
+   "queda_auroc_aedes_x_culex": 0.0267
+  },
+  {
+   "centro_hz": 2836,
+   "faixa_hz": [
+    2474,
+    3240
+   ],
+   "queda_auroc": 0.025,
+   "queda_auroc_aedes_x_culex": -0.0071
+  },
+  {
+   "centro_hz": 3240,
+   "faixa_hz": [
+    2836,
+    3689
+   ],
+   "queda_auroc": 0.0717,
+   "queda_auroc_aedes_x_culex": 0.0353
+  }
+ ],
+ "probe_origem_outros_mosquitos": {
+  "fontes": [
+   "dryad",
+   "funchal",
+   "humbug",
+   "mosquitosong",
+   "ufrgs"
+  ],
+  "acc_balanceada": 0.174,
+  "acaso": 0.2
+ }
+}
