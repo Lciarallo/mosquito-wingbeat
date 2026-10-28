@@ -1,0 +1,198 @@
+{
+ "V0_antes_original_histgb": {
+  "auroc_aedes": 0.8332054858205485,
+  "bal_acc_3classes": 0.5962459944854311,
+  "acc": 0.8259705488621151,
+  "aedes_recall": 0.13333333333333333,
+  "aedes_precision": 0.2857142857142857,
+  "fp_outros": 0.01984126984126984,
+  "fp_ruido": 0.0,
+  "por_fonte": {
+   "dryad": "1/20",
+   "humbug": "7/40"
+  }
+ },
+ "V1_todas_histgb": {
+  "auroc_aedes": 0.5707164302814529,
+  "bal_acc_3classes": 0.5746535217150747,
+  "acc": 0.5178600823045267,
+  "aedes_recall": 0.49018853405155827,
+  "aedes_precision": 0.4809362023405058,
+  "fp_outros": 0.4432786885245902,
+  "fp_ruido": 0.0539906103286385,
+  "por_fonte": {
+   "dryad": "4/20",
+   "funchal": "915/1867",
+   "humbug": "2/40",
+   "mosquitosong": "58/362",
+   "torres": "291/300",
+   "ufrgs": "4/10"
+  }
+ },
+ "V1_todas_logistica": {
+  "auroc_aedes": 0.5692239778865111,
+  "bal_acc_3classes": 0.5136225910102974,
+  "acc": 0.41975308641975306,
+  "aedes_recall": 0.5325125048095422,
+  "aedes_precision": 0.5131627734519837,
+  "fp_outros": 0.4180327868852459,
+  "fp_ruido": 0.0892018779342723,
+  "por_fonte": {
+   "dryad": "3/20",
+   "funchal": "1050/1867",
+   "humbug": "0/40",
+   "mosquitosong": "119/362",
+   "torres": "209/300",
+   "ufrgs": "3/10"
+  }
+ },
+ "V1_todas_extra_trees": {
+  "auroc_aedes": 0.5497647585975132,
+  "bal_acc_3classes": 0.5316376779315893,
+  "acc": 0.5066666666666667,
+  "aedes_recall": 0.43747595228934205,
+  "aedes_precision": 0.4590230117077109,
+  "fp_outros": 0.4245901639344262,
+  "fp_ruido": 0.1056338028169014,
+  "por_fonte": {
+   "dryad": "2/20",
+   "funchal": "809/1867",
+   "humbug": "0/40",
+   "mosquitosong": "30/362",
+   "torres": "291/300",
+   "ufrgs": "5/10"
+  }
+ },
+ "V1_todas_mlp": {
+  "auroc_aedes": 0.5585361126325031,
+  "bal_acc_3classes": 0.5427700828558537,
+  "acc": 0.4951440329218107,
+  "aedes_recall": 0.4224701808387841,
+  "aedes_precision": 0.46076374318086444,
+  "fp_outros": 0.41442622950819674,
+  "fp_ruido": 0.04929577464788732,
+  "por_fonte": {
+   "dryad": "3/20",
+   "funchal": "708/1867",
+   "humbug": "2/40",
+   "mosquitosong": "92/362",
+   "torres": "287/300",
+   "ufrgs": "6/10"
+  }
+ },
+ "V2_todas_norm_histgb": {
+  "auroc_aedes": 0.7313793788971682,
+  "bal_acc_3classes": 0.645541000407072,
+  "acc": 0.631440329218107,
+  "aedes_recall": 0.5486725663716814,
+  "aedes_precision": 0.6514390132480585,
+  "fp_outros": 0.24491803278688526,
+  "fp_ruido": 0.03755868544600939,
+  "por_fonte": {
+   "dryad": "4/20",
+   "funchal": "1052/1867",
+   "humbug": "9/40",
+   "mosquitosong": "74/362",
+   "torres": "285/300",
+   "ufrgs": "2/10"
+  }
+ },
+ "V3_todas_norm_bal_thr_histgb": {
+  "auroc_aedes": 0.741416212573571,
+  "bal_acc_3classes": 0.6462721996663963,
+  "acc": 0.6470781893004115,
+  "aedes_recall": 0.7079646017699115,
+  "aedes_precision": 0.6195286195286195,
+  "fp_outros": 0.3560655737704918,
+  "fp_ruido": 0.10328638497652583,
+  "por_fonte": {
+   "dryad": "9/20",
+   "funchal": "1386/1867",
+   "humbug": "11/40",
+   "mosquitosong": "136/362",
+   "torres": "293/300",
+   "ufrgs": "5/10"
+  }
+ },
+ "V2_todas_norm_extra_trees": {
+  "auroc_aedes": 0.6940742677430595,
+  "bal_acc_3classes": 0.574204483050487,
+  "acc": 0.6174485596707819,
+  "aedes_recall": 0.4917275875336668,
+  "aedes_precision": 0.6377245508982036,
+  "fp_outros": 0.2259016393442623,
+  "fp_ruido": 0.08685446009389672,
+  "por_fonte": {
+   "dryad": "1/20",
+   "funchal": "945/1867",
+   "humbug": "3/40",
+   "mosquitosong": "36/362",
+   "torres": "289/300",
+   "ufrgs": "4/10"
+  }
+ },
+ "V3_todas_norm_bal_thr_extra_trees": {
+  "auroc_aedes": 0.6893893641486435,
+  "bal_acc_3classes": 0.4947790894715351,
+  "acc": 0.5218106995884774,
+  "aedes_recall": 0.632935744517122,
+  "aedes_precision": 0.49384569198438905,
+  "fp_outros": 0.5331147540983606,
+  "fp_ruido": 0.14084507042253522,
+  "por_fonte": {
+   "dryad": "12/20",
+   "funchal": "1170/1867",
+   "humbug": "17/40",
+   "mosquitosong": "140/362",
+   "torres": "300/300",
+   "ufrgs": "6/10"
+  }
+ },
+ "V2_todas_norm_logistica": {
+  "auroc_aedes": 0.7137155744154055,
+  "bal_acc_3classes": 0.4266210306649763,
+  "acc": 0.342880658436214,
+  "aedes_recall": 0.4994228549442093,
+  "aedes_precision": 0.6756897449245185,
+  "fp_outros": 0.18524590163934426,
+  "fp_ruido": 0.13615023474178403,
+  "por_fonte": {
+   "dryad": "4/20",
+   "funchal": "1164/1867",
+   "humbug": "16/40",
+   "mosquitosong": "49/362",
+   "torres": "62/300",
+   "ufrgs": "3/10"
+  }
+ },
+ "V3_todas_norm_bal_thr_logistica": {
+  "auroc_aedes": 0.6830522804424646,
+  "bal_acc_3classes": 0.31723043794035527,
+  "acc": 0.22156378600823046,
+  "aedes_recall": 0.18737976144671029,
+  "aedes_precision": 0.3541818181818182,
+  "fp_outros": 0.26852459016393443,
+  "fp_ruido": 0.1619718309859155,
+  "por_fonte": {
+   "dryad": "17/20",
+   "funchal": "285/1867",
+   "humbug": "27/40",
+   "mosquitosong": "75/362",
+   "torres": "81/300",
+   "ufrgs": "2/10"
+  }
+ },
+ "V3_original_norm_bal_thr_histgb": {
+  "auroc_aedes": 0.824674569967457,
+  "bal_acc_3classes": 0.6233679856919293,
+  "acc": 0.7657295850066934,
+  "aedes_recall": 0.36666666666666664,
+  "aedes_precision": 0.21359223300970873,
+  "fp_outros": 0.07341269841269842,
+  "fp_ruido": 0.01643192488262911,
+  "por_fonte": {
+   "dryad": "6/20",
+   "humbug": "16/40"
+  }
+ }
+}

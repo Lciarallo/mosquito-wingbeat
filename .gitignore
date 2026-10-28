@@ -59,3 +59,6 @@ __pycache__/
 *.py[cod]
 *.log
 .DS_Store
+
+# Apresentação didática e scripts do experimento de mistura
+!/apresentacao/

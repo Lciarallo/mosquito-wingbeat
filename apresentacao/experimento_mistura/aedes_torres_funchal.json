@@ -1,0 +1,104 @@
+{
+ "ternario (com ruído) | sem normalização": {
+  "auroc": 0.778,
+  "auroc_funchal_aedes_x_culex": 0.404,
+  "aedes_torres": 0.968,
+  "aedes_funchal": 0.464,
+  "precisao": 0.615,
+  "outros_chamados_aedes": 0.234,
+  "culex_funchal_chamados_aedes": 0.606,
+  "ruido_chamado_aedes": 0.03,
+  "acc_balanceada_aedes": 0.663,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 426
+  }
+ },
+ "ternario (com ruído) | normalização por fonte": {
+  "auroc": 0.784,
+  "auroc_funchal_aedes_x_culex": 0.761,
+  "aedes_torres": 0.956,
+  "aedes_funchal": 0.371,
+  "precisao": 0.787,
+  "outros_chamados_aedes": 0.084,
+  "culex_funchal_chamados_aedes": 0.125,
+  "ruido_chamado_aedes": 0.022,
+  "acc_balanceada_aedes": 0.688,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 426
+  }
+ },
+ "ternario (com ruído) | normalização + dois estágios/ensemble": {
+  "auroc": 0.826,
+  "auroc_funchal_aedes_x_culex": 0.731,
+  "aedes_torres": 0.952,
+  "aedes_funchal": 0.376,
+  "precisao": 0.792,
+  "outros_chamados_aedes": 0.083,
+  "culex_funchal_chamados_aedes": 0.124,
+  "ruido_chamado_aedes": 0.013,
+  "acc_balanceada_aedes": 0.691,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 426
+  }
+ },
+ "binario (Aedes x outros mosquitos) | sem normalização": {
+  "auroc": 0.747,
+  "auroc_funchal_aedes_x_culex": 0.371,
+  "aedes_torres": 0.981,
+  "aedes_funchal": 0.519,
+  "precisao": 0.607,
+  "outros_chamados_aedes": 0.268,
+  "culex_funchal_chamados_aedes": 0.695,
+  "ruido_chamado_aedes": NaN,
+  "acc_balanceada_aedes": 0.658,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 0
+  }
+ },
+ "binario (Aedes x outros mosquitos) | normalização por fonte": {
+  "auroc": 0.771,
+  "auroc_funchal_aedes_x_culex": 0.777,
+  "aedes_torres": 0.963,
+  "aedes_funchal": 0.441,
+  "precisao": 0.788,
+  "outros_chamados_aedes": 0.098,
+  "culex_funchal_chamados_aedes": 0.16,
+  "ruido_chamado_aedes": NaN,
+  "acc_balanceada_aedes": 0.708,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 0
+  }
+ },
+ "binario (Aedes x outros mosquitos) | normalização + dois estágios/ensemble": {
+  "auroc": 0.802,
+  "auroc_funchal_aedes_x_culex": 0.707,
+  "aedes_torres": 0.968,
+  "aedes_funchal": 0.428,
+  "precisao": 0.781,
+  "outros_chamados_aedes": 0.1,
+  "culex_funchal_chamados_aedes": 0.161,
+  "ruido_chamado_aedes": NaN,
+  "acc_balanceada_aedes": 0.701,
+  "n": {
+   "aedes_torres": 300,
+   "aedes_funchal": 1867,
+   "outros": 3050,
+   "ruido": 0
+  }
+ }
+}

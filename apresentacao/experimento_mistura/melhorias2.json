@@ -1,0 +1,209 @@
+{
+ "antes: só fontes originais, sem normalização": {
+  "auroc": [
+   0.85,
+   0.012
+  ],
+  "auroc_dentro_media": [
+   0.815,
+   0.012
+  ],
+  "bal_acc": [
+   0.606,
+   0.009
+  ],
+  "aedes_recall": [
+   0.156,
+   0.034
+  ],
+  "aedes_precision": [
+   0.271,
+   0.024
+  ],
+  "fp_outros": [
+   0.023,
+   0.002
+  ],
+  "fp_ruido": [
+   0.002,
+   0.0
+  ],
+  "auroc_dentro_da_fonte(seed11)": {
+   "dryad": 0.785,
+   "humbug": 0.873
+  },
+  "recall_originais(seeds)": [
+   "9/60",
+   "12/60",
+   "7/60"
+  ]
+ },
+ "todas as fontes, sem normalização": {
+  "auroc": [
+   0.596,
+   0.006
+  ],
+  "auroc_dentro_media": [
+   0.575,
+   0.005
+  ],
+  "bal_acc": [
+   0.594,
+   0.004
+  ],
+  "aedes_recall": [
+   0.611,
+   0.018
+  ],
+  "aedes_precision": [
+   0.507,
+   0.008
+  ],
+  "fp_outros": [
+   0.499,
+   0.003
+  ],
+  "fp_ruido": [
+   0.052,
+   0.008
+  ],
+  "auroc_dentro_da_fonte(seed11)": {
+   "dryad": 0.712,
+   "funchal": 0.227,
+   "humbug": 0.771,
+   "mosquitosong": 0.297,
+   "ufrgs": 0.86
+  },
+  "recall_originais(seeds)": [
+   "22/60",
+   "20/60",
+   "20/60"
+  ]
+ },
+ "todas + normalização por fonte": {
+  "auroc": [
+   0.745,
+   0.003
+  ],
+  "auroc_dentro_media": [
+   0.706,
+   0.008
+  ],
+  "bal_acc": [
+   0.651,
+   0.0
+  ],
+  "aedes_recall": [
+   0.647,
+   0.004
+  ],
+  "aedes_precision": [
+   0.646,
+   0.003
+  ],
+  "fp_outros": [
+   0.294,
+   0.004
+  ],
+  "fp_ruido": [
+   0.052,
+   0.006
+  ],
+  "auroc_dentro_da_fonte(seed11)": {
+   "dryad": 0.802,
+   "funchal": 0.728,
+   "humbug": 0.8,
+   "mosquitosong": 0.325,
+   "ufrgs": 0.82
+  },
+  "recall_originais(seeds)": [
+   "22/60",
+   "23/60",
+   "22/60"
+  ]
+ },
+ "todas + normalização + ensemble": {
+  "auroc": [
+   0.738,
+   0.002
+  ],
+  "auroc_dentro_media": [
+   0.692,
+   0.007
+  ],
+  "bal_acc": [
+   0.639,
+   0.003
+  ],
+  "aedes_recall": [
+   0.662,
+   0.002
+  ],
+  "aedes_precision": [
+   0.638,
+   0.003
+  ],
+  "fp_outros": [
+   0.311,
+   0.002
+  ],
+  "fp_ruido": [
+   0.063,
+   0.008
+  ],
+  "auroc_dentro_da_fonte(seed11)": {
+   "dryad": 0.823,
+   "funchal": 0.698,
+   "humbug": 0.79,
+   "mosquitosong": 0.319,
+   "ufrgs": 0.84
+  },
+  "recall_originais(seeds)": [
+   "24/60",
+   "23/60",
+   "28/60"
+  ]
+ },
+ "todas + normalização + dois estágios": {
+  "auroc": [
+   0.752,
+   0.001
+  ],
+  "auroc_dentro_media": [
+   0.691,
+   0.007
+  ],
+  "bal_acc": [
+   0.66,
+   0.008
+  ],
+  "aedes_recall": [
+   0.693,
+   0.004
+  ],
+  "aedes_precision": [
+   0.628,
+   0.002
+  ],
+  "fp_outros": [
+   0.342,
+   0.004
+  ],
+  "fp_ruido": [
+   0.055,
+   0.003
+  ],
+  "auroc_dentro_da_fonte(seed11)": {
+   "dryad": 0.814,
+   "funchal": 0.726,
+   "humbug": 0.777,
+   "mosquitosong": 0.319,
+   "ufrgs": 0.84
+  },
+  "recall_originais(seeds)": [
+   "32/60",
+   "32/60",
+   "26/60"
+  ]
+ }
+}
