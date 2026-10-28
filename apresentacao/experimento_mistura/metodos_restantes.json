@@ -1,0 +1,158 @@
+{
+ "logistica": {
+  "auroc": [
+   0.702,
+   0.003
+  ],
+  "precisao": [
+   0.744,
+   0.006
+  ],
+  "deteccao": [
+   0.323,
+   0.006
+  ],
+  "outros_alarme": [
+   0.072,
+   0.001
+  ],
+  "ruido_alarme": [
+   0.05,
+   0.008
+  ],
+  "auroc_aedes_x_culex": [
+   0.824,
+   0.003
+  ]
+ },
+ "coral_arvores": {
+  "auroc": [
+   0.513,
+   0.005
+  ],
+  "precisao": [
+   0.349,
+   0.013
+  ],
+  "deteccao": [
+   0.106,
+   0.004
+  ],
+  "outros_alarme": [
+   0.124,
+   0.003
+  ],
+  "ruido_alarme": [
+   0.127,
+   0.015
+  ],
+  "auroc_aedes_x_culex": [
+   0.616,
+   0.009
+  ]
+ },
+ "dann": {
+  "auroc": [
+   0.862,
+   0.014
+  ],
+  "precisao": [
+   0.796,
+   0.027
+  ],
+  "deteccao": [
+   0.576,
+   0.005
+  ],
+  "outros_alarme": [
+   0.103,
+   0.015
+  ],
+  "ruido_alarme": [
+   0.017,
+   0.009
+  ],
+  "auroc_aedes_x_culex": [
+   0.86,
+   0.005
+  ]
+ },
+ "svm": {
+  "auroc": [
+   0.859,
+   0.003
+  ],
+  "precisao": [
+   0.824,
+   0.006
+  ],
+  "deteccao": [
+   0.558,
+   0.004
+  ],
+  "outros_alarme": [
+   0.08,
+   0.004
+  ],
+  "ruido_alarme": [
+   0.038,
+   0.004
+  ],
+  "auroc_aedes_x_culex": [
+   0.867,
+   0.002
+  ]
+ },
+ "lstm": {
+  "auroc": [
+   0.789,
+   0.022
+  ],
+  "precisao": [
+   0.759,
+   0.016
+  ],
+  "deteccao": [
+   0.533,
+   0.03
+  ],
+  "outros_alarme": [
+   0.118,
+   0.007
+  ],
+  "ruido_alarme": [
+   0.016,
+   0.002
+  ],
+  "auroc_aedes_x_culex": [
+   0.752,
+   0.059
+  ]
+ },
+ "bilstm": {
+  "auroc": [
+   0.833,
+   0.019
+  ],
+  "precisao": [
+   0.77,
+   0.012
+  ],
+  "deteccao": [
+   0.55,
+   0.023
+  ],
+  "outros_alarme": [
+   0.115,
+   0.004
+  ],
+  "ruido_alarme": [
+   0.013,
+   0.004
+  ],
+  "auroc_aedes_x_culex": [
+   0.792,
+   0.036
+  ]
+ }
+}

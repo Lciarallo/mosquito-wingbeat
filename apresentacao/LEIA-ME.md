@@ -20,6 +20,8 @@ Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor d
 | `pool_features.py` | Monta o dataset único (atributos de todas as fontes) em `pool.npz`, fora do Git |
 | `aedes_torres_funchal.py` | Modelo final: Aedes de Torres + Funchal; outras fontes só com não-Aedes; normalização e pesos por fonte; dois estágios |
 | `redes_neurais.py` | MLP e CNN (PyTorch) na mesma receita do modelo final, comparadas com as árvores (3 repetições) |
+| `seq_features.py` | Sequências no tempo (32 instantes × 16 faixas) alinhadas ao `pool.npz`, para LSTM/Bi-LSTM (`seq.npy`, fora do Git) |
+| `metodos_restantes.py` | Logística, SVM, DANN, CORAL + árvores, LSTM e Bi-LSTM na mesma receita (3 repetições; LSTM na GPU via ROCm) |
 | `curvas_modelo_final.py` | Matriz de confusão, curva ROC e métricas por limiar do modelo final |
 | `interpretabilidade_final.py` | Importância por banda de frequência (permutação) e probe de origem no modelo final |
 | `probe_torres.py`, `mistura_torres_funchal.py`, `melhorias.py`, `melhorias2.py`, `so_torres_funchal.py` | Experimentos exploratórios anteriores, mantidos como registro |
