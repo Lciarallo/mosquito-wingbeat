@@ -1,13 +1,13 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (23 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, o uso de assistentes de IA no código e a ponte com o hardware (Arduino).
+Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (23 slides): o processo, as ferramentas, os dados, os atributos, os modelos de árvore, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, o código resumido (bibliotecas e métodos), o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
-- `demo/detector_aedes_demo.ipynb`: notebook para a parte ao vivo no VS Code (slide 12). Já vem executado, com os gráficos salvos; rodar de novo leva cerca de 1 minuto.
+- `demo/detector_aedes_demo.ipynb`: material extra (não aparece nos slides), caso queira mostrar o código rodando no VS Code. Já vem executado, com os gráficos salvos; rodar de novo leva cerca de 1 minuto.
 - `experimento_mistura/`: scripts e resultados (JSON).
 
-## Demo no VS Code
+## Demo opcional no VS Code
 
 1. Abra a pasta do repositório no VS Code com as extensões Python e Jupyter.
 2. Abra `apresentacao/demo/detector_aedes_demo.ipynb` e escolha o kernel do `.venv-v3`.
