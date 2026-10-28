@@ -681,35 +681,72 @@ p = [<span class="n">1</span> - p_m,          <span class="c"># ruído</span>
   <div class="foot"><span><svg><use href="#mini"/></svg>com classes desbalanceadas, “acertar 90%” pode significar só chutar a classe mais comum</span><span class="pn"></span></div>
 </section>
 
-<!-- ============ C · O CÓDIGO ============ -->
-<section class="slide" data-title="O projeto em código">
-  <div class="kicker rise">o código, resumido</div>
-  <h2 class="rise" style="--d:1">O projeto em <span class="hl">15 linhas</span></h2>
-  <div class="abs" style="left:120px;top:250px;width:560px;display:flex;flex-direction:column;gap:18px">
-    <div class="card rise" style="--d:2;padding:14px 22px"><div class="mono" style="font-size:26px;font-weight:600;color:#2f7f86">NumPy</div><p style="font-size:20px">guarda tudo como matriz: 5.643 gravações × 80 números</p></div>
-    <div class="card rise" style="--d:3;padding:14px 22px"><div class="mono" style="font-size:26px;font-weight:600;color:#7a5a20">SciPy · PyTorch</div><p style="font-size:20px">transformam o áudio no espectrograma mel</p></div>
-    <div class="card rise" style="--d:4;padding:14px 22px"><div class="mono" style="font-size:26px;font-weight:600;color:#d1453b">scikit-learn</div><p style="font-size:20px">os <b>métodos</b>: HistGB e Extra Trees (árvores), validação por grupo, matriz de confusão e AUROC</p></div>
-    <div class="card rise" style="--d:5;padding:14px 22px"><div class="mono" style="font-size:26px;font-weight:600;color:#4c8a4a">Matplotlib</div><p style="font-size:20px">desenha as curvas e os gráficos dos próximos slides</p></div>
+<!-- ============ C · MÉTODOS EM CÓDIGO ============ -->
+<section class="slide" data-title="Cada método em código">
+  <div class="kicker rise">os métodos, em código</div>
+  <h2 class="rise" style="--d:1">Cada método em <span class="hl">poucas linhas</span></h2>
+  <div style="position:absolute;left:120px;right:120px;top:240px;bottom:90px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:1fr 1fr;gap:28px 30px">
+    <div class="card rise" style="--d:2;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#3d5a98;font-size:18px">1 · boosting</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">HistGradientBoosting</h3>
+      <p style="font-size:19px;margin-bottom:10px">Árvores pequenas em fila; cada uma corrige os erros da anterior.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #3d5a98;margin-top:auto"><span class="k">from</span> sklearn.ensemble <span class="k">import</span> (
+    HistGradientBoostingClassifier)
+hgb = <span class="f">HistGradientBoostingClassifier</span>(
+    learning_rate=<span class="n">0.05</span>, max_iter=<span class="n">300</span>)
+hgb.<span class="f">fit</span>(X_treino, y_treino)
+p = hgb.<span class="f">predict_proba</span>(X_teste)[:, <span class="n">1</span>]</div>
+    </div>
+    <div class="card rise" style="--d:3;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#2f7f86;font-size:18px">2 · floresta</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">Extra Trees</h3>
+      <p style="font-size:19px;margin-bottom:10px">Centenas de árvores independentes com cortes sorteados; todas votam.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #2f7f86;margin-top:auto"><span class="k">from</span> sklearn.ensemble <span class="k">import</span> (
+    ExtraTreesClassifier)
+et = <span class="f">ExtraTreesClassifier</span>(n_estimators=<span class="n">400</span>)
+et.<span class="f">fit</span>(X_treino, y_treino)
+p = et.<span class="f">predict_proba</span>(X_teste)[:, <span class="n">1</span>]</div>
+    </div>
+    <div class="card rise" style="--d:4;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#d1453b;font-size:18px">3 · cascata</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">Dois estágios + média</h3>
+      <p style="font-size:19px;margin-bottom:10px">Primeiro “tem mosquito?”, depois “é Aedes?”, com a média dos dois modelos.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #d1453b;margin-top:auto">p_mosq  = etapa1.<span class="f">predict_proba</span>(X)[:, <span class="n">1</span>]
+p_aedes = (hgb.<span class="f">predict_proba</span>(X)[:, <span class="n">1</span>]
+         + et.<span class="f">predict_proba</span>(X)[:, <span class="n">1</span>]) / <span class="n">2</span>
+p_final = p_mosq * p_aedes  <span class="c"># nota</span></div>
+    </div>
+    <div class="card rise" style="--d:5;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#4c8a4a;font-size:18px">4 · validação</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">Validação cruzada por grupo</h3>
+      <p style="font-size:19px;margin-bottom:10px">5 rodadas; em cada uma, aparelhos inteiros ficam fora do treino.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #4c8a4a;margin-top:auto"><span class="k">from</span> sklearn.model_selection <span class="k">import</span> (
+    StratifiedGroupKFold)
+cv = <span class="f">StratifiedGroupKFold</span>(n_splits=<span class="n">5</span>)
+<span class="k">for</span> tr, te <span class="k">in</span> cv.<span class="f">split</span>(X, y, aparelho):
+    modelo.<span class="f">fit</span>(X[tr], y[tr])
+    P[te] = modelo.<span class="f">predict_proba</span>(X[te])</div>
+    </div>
+    <div class="card rise" style="--d:6;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#a0662e;font-size:18px">5 · métricas</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">Matriz de confusão e AUROC</h3>
+      <p style="font-size:19px;margin-bottom:10px">Comparam o que o modelo disse com o que era de verdade.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #a0662e;margin-top:auto"><span class="k">from</span> sklearn.metrics <span class="k">import</span> (
+    confusion_matrix, roc_auc_score)
+<span class="f">confusion_matrix</span>(y, y_previsto)  <span class="c"># 3×3</span>
+<span class="f">roc_auc_score</span>(y == <span class="n">2</span>, p_aedes)  <span class="c"># 0,83</span></div>
+    </div>
+    <div class="card rise" style="--d:7;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#7a5a9e;font-size:18px">6 · interpretação</span></div>
+      <h3 style="font-size:27px;margin-bottom:2px">Importância por permutação</h3>
+      <p style="font-size:19px;margin-bottom:10px">Embaralha uma faixa de frequência e mede quanto o modelo piora.</p>
+      <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #7a5a9e;margin-top:auto">Z = X_teste.<span class="f">copy</span>()
+Z[:, faixa] = rng.<span class="f">permutation</span>(Z[:, faixa])
+p = modelo.<span class="f">predict_proba</span>(Z)[:, <span class="n">1</span>]
+queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
+    </div>
   </div>
-  <div class="code rise" style="--d:3;position:absolute;left:730px;right:110px;top:250px;font-size:20px;line-height:1.62"><span class="tag">pipeline completo, versão resumida</span><span class="k">import</span> numpy <span class="k">as</span> np
-<span class="k">from</span> sklearn.ensemble <span class="k">import</span> HistGradientBoostingClassifier, ExtraTreesClassifier
-<span class="k">from</span> sklearn.model_selection <span class="k">import</span> StratifiedGroupKFold
-<span class="k">from</span> sklearn.metrics <span class="k">import</span> confusion_matrix, roc_auc_score
-
-X, y, fonte, grupo = <span class="f">carregar_atributos</span>()       <span class="c"># 1. dados: 5.643 × 80</span>
-X = <span class="f">normalizar_por_fonte</span>(X, fonte)              <span class="c"># 2. tira o "sotaque"</span>
-P = np.<span class="f">zeros</span>((<span class="f">len</span>(y), <span class="n">3</span>))
-
-<span class="k">for</span> tr, te <span class="k">in</span> <span class="f">StratifiedGroupKFold</span>(<span class="n">5</span>).<span class="f">split</span>(X, y, grupo):  <span class="c"># 3. prova</span>
-    w   = <span class="f">pesos_por_fonte</span>(y[tr], fonte[tr])
-    hgb = <span class="f">HistGradientBoostingClassifier</span>().<span class="f">fit</span>(X[tr], y[tr], sample_weight=w)
-    et  = <span class="f">ExtraTreesClassifier</span>(<span class="n">400</span>).<span class="f">fit</span>(X[tr], y[tr], sample_weight=w)
-    P[te] = (hgb.<span class="f">predict_proba</span>(X[te]) + et.<span class="f">predict_proba</span>(X[te])) / <span class="n">2</span>
-
-<span class="f">print</span>(<span class="f">confusion_matrix</span>(y, P.<span class="f">argmax</span>(<span class="n">1</span>)))            <span class="c"># 4. avaliação</span>
-<span class="f">print</span>(<span class="f">roc_auc_score</span>(y == <span class="n">2</span>, P[:, <span class="n">2</span>]))</div>
-  <div class="postit abs rise" style="--d:5;left:730px;top:885px;width:1080px;font-size:27px">O modelo de verdade faz o mesmo em <b>duas etapas</b> (tem mosquito? → é Aedes?). O resto é igual: dados → preparo → prova por grupo → métricas.</div>
-  <div class="foot"><span><svg><use href="#mini"/></svg>versão didática do código do projeto · Python + scikit-learn</span><span class="pn"></span></div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>tudo com <b>&nbsp;scikit-learn</b> · NumPy para as matrizes · trechos resumidos do código do projeto</span><span class="pn"></span></div>
 </section>
 
 <!-- ============ M · MATRIZ REAL ============ -->
