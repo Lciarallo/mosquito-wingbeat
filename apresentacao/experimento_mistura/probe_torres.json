@@ -1,0 +1,15 @@
+{
+ "aedes_original_vs_torres": {
+  "balanced_accuracy": 0.9916666666666667,
+  "auroc": 0.9998888888888888,
+  "n": 360,
+  "positives": 300
+ },
+ "tudo_vs_torres": {
+  "balanced_accuracy": 0.9879718875502008,
+  "auroc": 0.9981950022311469,
+  "n": 1794,
+  "positives": 300
+ },
+ "nota": "retrospectivo; Torres sem IDs biologicos (cada tensor = 1 grupo); atributos HTK aproximados <4 kHz de results/torres_aedes_transfer_2026_10_15"
+}
