@@ -1,0 +1,2053 @@
+{
+ "nota": "Pool da apresentação (80 atributos HTK por arquivo), sem UFRGS e sem Torres (só Aedes, não permite AUROC dentro da fonte). AUROC = Aedes x outros mosquitos DENTRO do corpus deixado de fora; média sobre os subconjuntos de tamanho k.",
+ "clusters_por_corpus": {
+  "dryad": {
+   "aedes": 20,
+   "outros": 497
+  },
+  "humbug": {
+   "aedes": 40,
+   "outros": 459
+  },
+  "mosquitosong": {
+   "aedes": 4,
+   "outros": 6
+  },
+  "funchal": {
+   "aedes": 3,
+   "outros": 3
+  }
+ },
+ "resumo": {
+  "logistica | norm. por fonte": {
+   "dryad": {
+    "1": 0.454,
+    "2": 0.508,
+    "3": 0.58
+   },
+   "humbug": {
+    "1": 0.64,
+    "2": 0.627,
+    "3": 0.655
+   },
+   "mosquitosong": {
+    "1": 0.555,
+    "2": 0.565,
+    "3": 0.575
+   },
+   "funchal": {
+    "1": 0.719,
+    "2": 0.744,
+    "3": 0.757
+   }
+  },
+  "logistica | sem norm.": {
+   "dryad": {
+    "1": 0.602,
+    "2": 0.653,
+    "3": 0.803
+   },
+   "humbug": {
+    "1": 0.611,
+    "2": 0.608,
+    "3": 0.601
+   },
+   "mosquitosong": {
+    "1": 0.534,
+    "2": 0.562,
+    "3": 0.582
+   },
+   "funchal": {
+    "1": 0.695,
+    "2": 0.736,
+    "3": 0.717
+   }
+  },
+  "svm | norm. por fonte": {
+   "dryad": {
+    "1": 0.483,
+    "2": 0.591,
+    "3": 0.703
+   },
+   "humbug": {
+    "1": 0.682,
+    "2": 0.72,
+    "3": 0.742
+   },
+   "mosquitosong": {
+    "1": 0.547,
+    "2": 0.571,
+    "3": 0.597
+   },
+   "funchal": {
+    "1": 0.651,
+    "2": 0.777,
+    "3": 0.811
+   }
+  },
+  "svm | sem norm.": {
+   "dryad": {
+    "1": 0.465,
+    "2": 0.552,
+    "3": 0.681
+   },
+   "humbug": {
+    "1": 0.577,
+    "2": 0.529,
+    "3": 0.498
+   },
+   "mosquitosong": {
+    "1": 0.536,
+    "2": 0.55,
+    "3": 0.556
+   },
+   "funchal": {
+    "1": 0.545,
+    "2": 0.593,
+    "3": 0.55
+   }
+  },
+  "hgb | norm. por fonte": {
+   "dryad": {
+    "1": 0.541,
+    "2": 0.666,
+    "3": 0.777
+   },
+   "humbug": {
+    "1": 0.642,
+    "2": 0.701,
+    "3": 0.72
+   },
+   "mosquitosong": {
+    "1": 0.498,
+    "2": 0.489,
+    "3": 0.512
+   },
+   "funchal": {
+    "1": 0.506,
+    "2": 0.594,
+    "3": 0.626
+   }
+  },
+  "hgb | sem norm.": {
+   "dryad": {
+    "1": 0.545,
+    "2": 0.564,
+    "3": 0.67
+   },
+   "humbug": {
+    "1": 0.581,
+    "2": 0.48,
+    "3": 0.384
+   },
+   "mosquitosong": {
+    "1": 0.55,
+    "2": 0.519,
+    "3": 0.497
+   },
+   "funchal": {
+    "1": 0.442,
+    "2": 0.447,
+    "3": 0.317
+   }
+  }
+ },
+ "execucoes": [
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.372
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.546
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.402
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.356
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.601
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.518
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.381
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.596
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.473
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.418
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.499
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.581
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.608
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.665
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.573
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.621
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.522
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.535
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.322
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.457
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.47
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.386
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.651
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.456
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.49
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.665
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.512
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.709
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.602
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.642
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.713
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.837
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.792
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.562
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.744
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.595
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.58,
+   "ic95_cluster": [
+    0.4381520535669562,
+    0.7119807414189817
+   ]
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.803,
+   "ic95_cluster": [
+    0.705732590395313,
+    0.8892454317742507
+   ]
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.703,
+   "ic95_cluster": [
+    0.5875678471531774,
+    0.8098131630954857
+   ]
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.681,
+   "ic95_cluster": [
+    0.6003478934184554,
+    0.7688266533141297
+   ]
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.777,
+   "ic95_cluster": [
+    0.6916315614470445,
+    0.8584694555112882
+   ]
+  },
+  {
+   "alvo": "dryad",
+   "treino": [
+    "humbug",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.67,
+   "ic95_cluster": [
+    0.537406217304082,
+    0.7905497738154601
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.645
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.601
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.674
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.579
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.514
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.648
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.579
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.639
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.647
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.504
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.663
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.523
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.695
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.592
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.724
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.649
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.75
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.572
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.632
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.668
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.743
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.604
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.71
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.507
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.57
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.547
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.662
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.538
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.682
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.464
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.679
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.61
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.756
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.446
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.712
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.469
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.655,
+   "ic95_cluster": [
+    0.5969567081964587,
+    0.7107251535423814
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.601,
+   "ic95_cluster": [
+    0.5417803977924868,
+    0.659980940100903
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.742,
+   "ic95_cluster": [
+    0.6700300452382514,
+    0.8130865457313629
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.498,
+   "ic95_cluster": [
+    0.4133849944425196,
+    0.5781815747472993
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.72,
+   "ic95_cluster": [
+    0.6446424638970059,
+    0.793112310439052
+   ]
+  },
+  {
+   "alvo": "humbug",
+   "treino": [
+    "dryad",
+    "mosquitosong",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.384,
+   "ic95_cluster": [
+    0.30396718709510234,
+    0.4648915567274099
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.594
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.505
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.602
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.575
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.543
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.574
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.584
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.574
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.61
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.567
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.518
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.563
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.486
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.522
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.43
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.466
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.434
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "funchal"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.513
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.626
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.603
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.647
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.623
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.573
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.604
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.519
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.554
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.514
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.471
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.46
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.498
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.549
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.528
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.551
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.557
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.435
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "humbug",
+    "funchal"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.455
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.575,
+   "ic95_cluster": [
+    0.46921035399084127,
+    0.7087623332968582
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.582,
+   "ic95_cluster": [
+    0.40593997546343563,
+    0.780944475171992
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.597,
+   "ic95_cluster": [
+    0.4898950584305601,
+    0.714051901312394
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.556,
+   "ic95_cluster": [
+    0.4860133651401601,
+    0.634559875998718
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.512,
+   "ic95_cluster": [
+    0.3937705019055665,
+    0.6542174584004294
+   ]
+  },
+  {
+   "alvo": "mosquitosong",
+   "treino": [
+    "dryad",
+    "humbug",
+    "funchal"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.497,
+   "ic95_cluster": [
+    0.40699371065784545,
+    0.5897639630468547
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.798
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.802
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.682
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.457
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.459
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.447
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.787
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.773
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.767
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.756
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.641
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.49
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.573
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.51
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.504
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.422
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.418
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "mosquitosong"
+   ],
+   "k": 1,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.388
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.751
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.783
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.817
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.491
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.738
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.394
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.784
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.747
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.78
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.628
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.519
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.448
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.697
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.677
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.733
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.66
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.524
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 2,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.5
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.757,
+   "ic95_cluster": [
+    0.38913362701908955,
+    0.811014690236284
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "logistica",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.717,
+   "ic95_cluster": [
+    0.38120411160058737,
+    0.7804447608427258
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.811,
+   "ic95_cluster": [
+    0.24248653940283899,
+    0.9090366004221593
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "svm",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.55,
+   "ic95_cluster": [
+    0.2057758198727362,
+    0.5928618638466622
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": true,
+   "auroc": 0.626,
+   "ic95_cluster": [
+    0.2615271659324523,
+    0.6902526413408965
+   ]
+  },
+  {
+   "alvo": "funchal",
+   "treino": [
+    "dryad",
+    "humbug",
+    "mosquitosong"
+   ],
+   "k": 3,
+   "modelo": "hgb",
+   "normalizacao_por_fonte": false,
+   "auroc": 0.317,
+   "ic95_cluster": [
+    0.25683022023975466,
+    0.6126900198281559
+   ]
+  }
+ ]
+}
