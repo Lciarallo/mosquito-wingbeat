@@ -84,7 +84,7 @@ def run(name, batch=24):
         extra["text_species"] = SPECIES_TEXT
 
         def encode(clips):
-            inputs = proc(audios=clips, sampling_rate=rate, return_tensors="pt").to(device)
+            inputs = proc(audio=clips, sampling_rate=rate, return_tensors="pt").to(device)
             a = model.get_audio_features(**inputs)
             sims = torch.nn.functional.normalize(a, dim=-1) @ text.T
             return torch.cat([a, sims], 1)

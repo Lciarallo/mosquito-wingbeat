@@ -1,0 +1,741 @@
+{
+ "n": {
+  "abuzz": {
+   "aedes": 20,
+   "outros": 549,
+   "clusters_aedes": 6
+  },
+  "humbug": {
+   "aedes": 123,
+   "outros": 5860,
+   "clusters_aedes": 5
+  },
+  "mosquitosong": {
+   "aedes": 362,
+   "outros": 959,
+   "clusters_aedes": 4
+  },
+  "funchal": {
+   "aedes": 1876,
+   "outros": 1112,
+   "clusters_aedes": 3
+  }
+ },
+ "resumo": {
+  "A0_perch": {
+   "auroc_medio": 0.675,
+   "ganho_sobre_A0": 0.0,
+   "melhor_que_A0_em": "0/4",
+   "promissor": false
+  },
+  "H2_ast": {
+   "auroc_medio": 0.627,
+   "ganho_sobre_A0": -0.048,
+   "melhor_que_A0_em": "2/4",
+   "promissor": false
+  },
+  "H2_clap": {
+   "auroc_medio": 0.574,
+   "ganho_sobre_A0": -0.101,
+   "melhor_que_A0_em": "0/4",
+   "promissor": false
+  },
+  "H2_biolingual": {
+   "auroc_medio": 0.615,
+   "ganho_sobre_A0": -0.06,
+   "melhor_que_A0_em": "1/4",
+   "promissor": false
+  },
+  "H1b_optico_embedding_aug": {
+   "auroc_medio": 0.708,
+   "ganho_sobre_A0": 0.033,
+   "melhor_que_A0_em": "3/4",
+   "promissor": false
+  },
+  "H1b_optico_embedding_noaug": {
+   "auroc_medio": 0.571,
+   "ganho_sobre_A0": -0.104,
+   "melhor_que_A0_em": "2/4",
+   "promissor": false
+  },
+  "H2_clap_zeroshot": {
+   "auroc_medio": 0.468,
+   "ganho_sobre_A0": -0.207,
+   "melhor_que_A0_em": "0/4",
+   "promissor": false
+  },
+  "H2_biolingual_zeroshot": {
+   "auroc_medio": 0.639,
+   "ganho_sobre_A0": -0.036,
+   "melhor_que_A0_em": "2/4",
+   "promissor": false
+  },
+  "H1a_optico_direto_aug": {
+   "auroc_medio": 0.574,
+   "ganho_sobre_A0": -0.101,
+   "melhor_que_A0_em": "1/4",
+   "promissor": false
+  },
+  "H1a_optico_direto_noaug": {
+   "auroc_medio": 0.41,
+   "ganho_sobre_A0": -0.265,
+   "melhor_que_A0_em": "1/4",
+   "promissor": false
+  },
+  "C0_cnn_do_zero_acustico": {
+   "auroc_medio": 0.675,
+   "ganho_sobre_A0": -0.0,
+   "melhor_que_A0_em": "2/4",
+   "promissor": false
+  },
+  "H1c_cnn_optica_afinada": {
+   "auroc_medio": 0.699,
+   "ganho_sobre_A0": 0.024,
+   "melhor_que_A0_em": "3/4",
+   "promissor": false
+  },
+  "H5_perch_mmd": {
+   "auroc_medio": 0.536,
+   "ganho_sobre_A0": -0.138,
+   "melhor_que_A0_em": "0/4",
+   "promissor": false
+  },
+  "H3_fusao_top3_aninhada": {
+   "auroc_medio": 0.738,
+   "ganho_sobre_A0": 0.063,
+   "melhor_que_A0_em": "3/4",
+   "promissor": true
+  },
+  "H3_fusao_top3_poshoc": {
+   "auroc_medio": 0.761,
+   "ganho_sobre_A0": 0.086,
+   "melhor_que_A0_em": "3/4",
+   "promissor": false
+  }
+ },
+ "por_corpus": {
+  "A0_perch": {
+   "abuzz": {
+    "auroc": 0.706,
+    "ic95": [
+     0.607,
+     0.814
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.009
+   },
+   "humbug": {
+    "auroc": 0.638,
+    "ic95": [
+     0.509,
+     0.841
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.003
+   },
+   "mosquitosong": {
+    "auroc": 0.582,
+    "ic95": [
+     0.527,
+     0.644
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.0
+   },
+   "funchal": {
+    "auroc": 0.774,
+    "ic95": [
+     0.474,
+     0.855
+    ],
+    "recall": 0.006,
+    "fpr_outros": 0.002
+   }
+  },
+  "H2_ast": {
+   "abuzz": {
+    "auroc": 0.801,
+    "ic95": [
+     0.603,
+     0.941
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.004
+   },
+   "humbug": {
+    "auroc": 0.645,
+    "ic95": [
+     0.576,
+     0.819
+    ],
+    "recall": 0.057,
+    "fpr_outros": 0.018
+   },
+   "mosquitosong": {
+    "auroc": 0.545,
+    "ic95": [
+     0.469,
+     0.632
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.002
+   },
+   "funchal": {
+    "auroc": 0.517,
+    "ic95": [
+     0.407,
+     0.702
+    ],
+    "recall": 0.06,
+    "fpr_outros": 0.022
+   }
+  },
+  "H2_clap": {
+   "abuzz": {
+    "auroc": 0.679,
+    "ic95": [
+     0.451,
+     0.86
+    ],
+    "recall": 0.1,
+    "fpr_outros": 0.038
+   },
+   "humbug": {
+    "auroc": 0.597,
+    "ic95": [
+     0.416,
+     0.815
+    ],
+    "recall": 0.024,
+    "fpr_outros": 0.006
+   },
+   "mosquitosong": {
+    "auroc": 0.49,
+    "ic95": [
+     0.377,
+     0.619
+    ],
+    "recall": 0.008,
+    "fpr_outros": 0.021
+   },
+   "funchal": {
+    "auroc": 0.528,
+    "ic95": [
+     0.445,
+     0.627
+    ],
+    "recall": 0.002,
+    "fpr_outros": 0.0
+   }
+  },
+  "H2_biolingual": {
+   "abuzz": {
+    "auroc": 0.749,
+    "ic95": [
+     0.512,
+     0.928
+    ],
+    "recall": 0.25,
+    "fpr_outros": 0.033
+   },
+   "humbug": {
+    "auroc": 0.625,
+    "ic95": [
+     0.515,
+     0.76
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.006
+   },
+   "mosquitosong": {
+    "auroc": 0.467,
+    "ic95": [
+     0.363,
+     0.585
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.017
+   },
+   "funchal": {
+    "auroc": 0.619,
+    "ic95": [
+     0.502,
+     0.661
+    ],
+    "recall": 0.003,
+    "fpr_outros": 0.001
+   }
+  },
+  "H1b_optico_embedding_aug": {
+   "abuzz": {
+    "auroc": 0.746,
+    "ic95": [
+     0.603,
+     0.877
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.0
+   },
+   "humbug": {
+    "auroc": 0.723,
+    "ic95": [
+     0.645,
+     0.822
+    ],
+    "recall": 0.041,
+    "fpr_outros": 0.017
+   },
+   "mosquitosong": {
+    "auroc": 0.649,
+    "ic95": [
+     0.418,
+     0.836
+    ],
+    "recall": 0.019,
+    "fpr_outros": 0.005
+   },
+   "funchal": {
+    "auroc": 0.714,
+    "ic95": [
+     0.196,
+     0.75
+    ],
+    "recall": 0.118,
+    "fpr_outros": 0.013
+   }
+  },
+  "H1b_optico_embedding_noaug": {
+   "abuzz": {
+    "auroc": 0.771,
+    "ic95": [
+     0.594,
+     0.927
+    ],
+    "recall": 0.4,
+    "fpr_outros": 0.111
+   },
+   "humbug": {
+    "auroc": 0.567,
+    "ic95": [
+     0.484,
+     0.765
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.015
+   },
+   "mosquitosong": {
+    "auroc": 0.64,
+    "ic95": [
+     0.505,
+     0.789
+    ],
+    "recall": 0.122,
+    "fpr_outros": 0.04
+   },
+   "funchal": {
+    "auroc": 0.306,
+    "ic95": [
+     0.267,
+     0.882
+    ],
+    "recall": 0.005,
+    "fpr_outros": 0.001
+   }
+  },
+  "H2_clap_zeroshot": {
+   "abuzz": {
+    "auroc": 0.279,
+    "ic95": [
+     0.144,
+     0.44
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.002
+   },
+   "humbug": {
+    "auroc": 0.48,
+    "ic95": [
+     0.322,
+     0.768
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.009
+   },
+   "mosquitosong": {
+    "auroc": 0.539,
+    "ic95": [
+     0.42,
+     0.648
+    ],
+    "recall": 0.16,
+    "fpr_outros": 0.13
+   },
+   "funchal": {
+    "auroc": 0.575,
+    "ic95": [
+     0.391,
+     0.694
+    ],
+    "recall": 0.024,
+    "fpr_outros": 0.011
+   }
+  },
+  "H2_biolingual_zeroshot": {
+   "abuzz": {
+    "auroc": 0.716,
+    "ic95": [
+     0.424,
+     0.892
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.004
+   },
+   "humbug": {
+    "auroc": 0.596,
+    "ic95": [
+     0.484,
+     0.696
+    ],
+    "recall": 0.138,
+    "fpr_outros": 0.102
+   },
+   "mosquitosong": {
+    "auroc": 0.644,
+    "ic95": [
+     0.534,
+     0.738
+    ],
+    "recall": 0.006,
+    "fpr_outros": 0.003
+   },
+   "funchal": {
+    "auroc": 0.6,
+    "ic95": [
+     0.301,
+     0.728
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.0
+   }
+  },
+  "H1a_optico_direto_aug": {
+   "abuzz": {
+    "auroc": 0.427,
+    "ic95": [
+     0.18,
+     0.743
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.009
+   },
+   "humbug": {
+    "auroc": 0.557,
+    "ic95": [
+     0.399,
+     0.676
+    ],
+    "recall": 0.024,
+    "fpr_outros": 0.03
+   },
+   "mosquitosong": {
+    "auroc": 0.497,
+    "ic95": [
+     0.232,
+     0.77
+    ],
+    "recall": 0.008,
+    "fpr_outros": 0.017
+   },
+   "funchal": {
+    "auroc": 0.816,
+    "ic95": [
+     0.075,
+     0.876
+    ],
+    "recall": 0.237,
+    "fpr_outros": 0.01
+   }
+  },
+  "H1a_optico_direto_noaug": {
+   "abuzz": {
+    "auroc": 0.204,
+    "ic95": [
+     0.053,
+     0.434
+    ],
+    "recall": 0.0,
+    "fpr_outros": 0.018
+   },
+   "humbug": {
+    "auroc": 0.664,
+    "ic95": [
+     0.547,
+     0.783
+    ],
+    "recall": 0.008,
+    "fpr_outros": 0.015
+   },
+   "mosquitosong": {
+    "auroc": 0.43,
+    "ic95": [
+     0.228,
+     0.611
+    ],
+    "recall": 0.022,
+    "fpr_outros": 0.07
+   },
+   "funchal": {
+    "auroc": 0.342,
+    "ic95": [
+     0.183,
+     0.658
+    ],
+    "recall": 0.001,
+    "fpr_outros": 0.0
+   }
+  },
+  "C0_cnn_do_zero_acustico": {
+   "abuzz": {
+    "auroc": 0.824,
+    "ic95": [
+     0.616,
+     0.976
+    ]
+   },
+   "humbug": {
+    "auroc": 0.679,
+    "ic95": [
+     0.583,
+     0.788
+    ]
+   },
+   "mosquitosong": {
+    "auroc": 0.524,
+    "ic95": [
+     0.33,
+     0.758
+    ]
+   },
+   "funchal": {
+    "auroc": 0.672,
+    "ic95": [
+     0.536,
+     0.695
+    ]
+   }
+  },
+  "H1c_cnn_optica_afinada": {
+   "abuzz": {
+    "auroc": 0.863,
+    "ic95": [
+     0.669,
+     0.979
+    ]
+   },
+   "humbug": {
+    "auroc": 0.713,
+    "ic95": [
+     0.646,
+     0.822
+    ]
+   },
+   "mosquitosong": {
+    "auroc": 0.606,
+    "ic95": [
+     0.489,
+     0.741
+    ]
+   },
+   "funchal": {
+    "auroc": 0.613,
+    "ic95": [
+     0.366,
+     0.673
+    ]
+   }
+  },
+  "H5_perch_mmd": {
+   "abuzz": {
+    "auroc": 0.503,
+    "ic95": [
+     0.309,
+     0.693
+    ]
+   },
+   "humbug": {
+    "auroc": 0.491,
+    "ic95": [
+     0.439,
+     0.563
+    ]
+   },
+   "mosquitosong": {
+    "auroc": 0.454,
+    "ic95": [
+     0.321,
+     0.584
+    ]
+   },
+   "funchal": {
+    "auroc": 0.698,
+    "ic95": [
+     0.473,
+     0.744
+    ]
+   }
+  },
+  "H3_fusao_top3_aninhada": {
+   "abuzz": {
+    "auroc": 0.863,
+    "ic95": [
+     0.758,
+     0.946
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "A0_perch",
+     "H1c_cnn_optica_afinada"
+    ]
+   },
+   "humbug": {
+    "auroc": 0.742,
+    "ic95": [
+     0.682,
+     0.811
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "H1c_cnn_optica_afinada",
+     "A0_perch"
+    ]
+   },
+   "mosquitosong": {
+    "auroc": 0.628,
+    "ic95": [
+     0.461,
+     0.79
+    ],
+    "componentes": [
+     "H1c_cnn_optica_afinada",
+     "H1b_optico_embedding_aug",
+     "C0_cnn_do_zero_acustico"
+    ]
+   },
+   "funchal": {
+    "auroc": 0.718,
+    "ic95": [
+     0.385,
+     0.769
+    ],
+    "componentes": [
+     "H1c_cnn_optica_afinada",
+     "H1b_optico_embedding_aug",
+     "C0_cnn_do_zero_acustico"
+    ]
+   }
+  },
+  "H3_fusao_top3_poshoc": {
+   "abuzz": {
+    "auroc": 0.863,
+    "ic95": [
+     0.758,
+     0.946
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "H1c_cnn_optica_afinada",
+     "A0_perch"
+    ]
+   },
+   "humbug": {
+    "auroc": 0.742,
+    "ic95": [
+     0.682,
+     0.811
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "H1c_cnn_optica_afinada",
+     "A0_perch"
+    ]
+   },
+   "mosquitosong": {
+    "auroc": 0.669,
+    "ic95": [
+     0.513,
+     0.798
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "H1c_cnn_optica_afinada",
+     "A0_perch"
+    ]
+   },
+   "funchal": {
+    "auroc": 0.771,
+    "ic95": [
+     0.257,
+     0.848
+    ],
+    "componentes": [
+     "H1b_optico_embedding_aug",
+     "H1c_cnn_optica_afinada",
+     "A0_perch"
+    ]
+   }
+  }
+ },
+ "diagnostico_A0_sem_funchal_no_treino": {
+  "abuzz": {
+   "auroc": 0.652,
+   "ic95": [
+    0.539,
+    0.779
+   ]
+  },
+  "humbug": {
+   "auroc": 0.552,
+   "ic95": [
+    0.387,
+    0.76
+   ]
+  },
+  "mosquitosong": {
+   "auroc": 0.587,
+   "ic95": [
+    0.496,
+    0.685
+   ]
+  }
+ },
+ "diagnostico_H5_mlp_sem_mmd": {
+  "abuzz": {
+   "auroc": 0.639,
+   "ic95": [
+    0.415,
+    0.871
+   ]
+  },
+  "humbug": {
+   "auroc": 0.61,
+   "ic95": [
+    0.469,
+    0.815
+   ]
+  },
+  "mosquitosong": {
+   "auroc": 0.524,
+   "ic95": [
+    0.458,
+    0.624
+   ]
+  },
+  "funchal": {
+   "auroc": 0.747,
+   "ic95": [
+    0.487,
+    0.802
+   ]
+  }
+ }
+}

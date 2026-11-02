@@ -49,11 +49,15 @@ def optical():
     print(pd.Series(species).map(BDC_SPECIES).value_counts().to_dict())
 
 
+def funchal_device(folder):
+    """Aparelho do Funchal pela taxa de amostragem da pasta. '48khz' testado antes de '8khz', que está contido nele."""
+    return "48k" if "48khz" in folder else "44k" if "44.1khz" in folder else "8k"
+
+
 def funchal_frame():
     rows = []
     for p in sorted(FUNCHAL.rglob("*.wav")):
-        folder = p.parent.name
-        rate = "48k" if "48khz" in folder else "44k" if "44.1khz" in folder else "8k"
+        rate = funchal_device(p.parent.name)
         aedes = p.parent.parent.name == "Aedes Aegypti"
         rows.append(dict(path=str(p.relative_to(ROOT)), origin="funchal", target=2 if aedes else 1,
                          species="Aedes aegypti" if aedes else p.parent.parent.name,
