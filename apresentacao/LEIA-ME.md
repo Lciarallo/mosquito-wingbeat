@@ -4,8 +4,9 @@ Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor d
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
-- O notebook único do projeto é `notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb`; a demo antiga foi removida.
-- `experimento_mistura/`: scripts e resultados (JSON).
+- `videos/`: os quatro vídeos curtos usados nos slides (ver abaixo).
+
+**Todos os números e gráficos dos slides saem do caderno** `notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb`, que é a única fonte da verdade do projeto: ele vai do áudio bruto ao resultado, sem scripts externos. Se os dois divergirem, vale o caderno.
 
 ## Vídeos
 
@@ -18,18 +19,20 @@ Os quatro vídeos (`videos/`) vêm de Mukundarajan H., Hol F. J. H., Castillo E.
 | `espectrograma_ao_vivo` | 9 | Espectrograma de *Anopheles gambiae* sendo montado |
 
 
-## Scripts
+## Como a apresentação se liga ao caderno
 
-| Arquivo | O que faz |
+| Slides | Seção do caderno |
 |---|---|
-| `pool_features.py` | Monta o dataset único (atributos de todas as fontes) em `pool.npz`, fora do Git |
-| `aedes_torres_funchal.py` | Receita de dados com árvores (modelo final anterior): Aedes de Torres + Funchal; outras fontes só com não-Aedes; normalização e pesos por fonte; dois estágios |
-| `redes_neurais.py` | MLP e CNN (PyTorch) na mesma receita do modelo final, comparadas com as árvores (3 repetições) |
-| `seq_features.py` | Sequências no tempo (32 instantes × 16 faixas) alinhadas ao `pool.npz`, para LSTM/Bi-LSTM (`seq.npy`, fora do Git) |
-| `metodos_restantes.py` | Logística, SVM, DANN, CORAL + árvores, LSTM e Bi-LSTM na mesma receita (3 repetições; LSTM na GPU via ROCm) |
-| `svm_final.py` | **Modelo final dos slides (SVM RBF)**: matriz de confusão, ROC, métricas por limiar e importância por faixa (`curvas_svm.json`, `interpretabilidade_svm.json`) |
-| `curvas_modelo_final.py` | Matriz de confusão, curva ROC e métricas por limiar do modelo final |
-| `interpretabilidade_final.py` | Importância por banda de frequência (permutação) e probe de origem no modelo final |
-| `probe_torres.py`, `mistura_torres_funchal.py`, `melhorias.py`, `melhorias2.py`, `so_torres_funchal.py` | Experimentos exploratórios anteriores, mantidos como registro |
+| 4 (física do zumbido) | §3 |
+| 8 (dados) | §2 e §5 |
+| 9 (do zumbido aos números) | §4 |
+| 10–12 e 16 (modelos e métodos em código) | §9 |
+| 13 (não colar na prova) | §7 |
+| 14 (três ajustes) | §6 e §10 (ablação) |
+| 15 (como medir) | §8 |
+| 17 (ranking de 9 modelos) | §10 |
+| 18–21 (matriz, ROC, limiar, resultado) | §11–§13 |
+| 22 (prova mais justa) | §14 |
+| 24 (o que o modelo ouve) | §15 e §16 |
 
-Todos são **retrospectivos** (dados já conhecidos do projeto; não é teste cego). Dependem de atributos e caches de áudio locais e de `train_torres_aedes_transfer.py`, que ficam só na cópia local. Limites: a detecção de ~95% no Torres reflete reconhecimento da fonte (o Torres só tem Aedes); Aedes de aparelhos fora do Torres e do Funchal ainda não são reconhecidos (AUROC 0,41 em `so_torres_funchal.json`).
+**Limites** (detalhados em §17 e §19 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota).

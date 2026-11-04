@@ -432,9 +432,9 @@ cand = np.<span class="f">arange</span>(<span class="n">250</span>, <span class=
 harm = np.<span class="f">exp</span>(<span class="f">sum</span>(np.<span class="f">log</span>(<span class="f">amp</span>(k*cand))
           <span class="k">for</span> k <span class="k">in</span> <span class="f">range</span>(<span class="n">1</span>, <span class="n">4</span>)) / <span class="n">3</span>)
 f0 = cand[np.<span class="f">argmax</span>(harm)]  <span class="c"># o "tom"</span></div>
-    <div class="postit rise" style="--d:4;margin-top:56px;font-size:34px">⚠ Mas os tons <b>se sobrepõem</b>: Aedes aparece de ~300 a ~900 Hz, outras espécies de 250 a 1000 Hz. Macho ≠ fêmea. Só o tom não basta.</div>
+    <div class="postit rise" style="--d:4;margin-top:56px;font-size:34px">⚠ Mas os tons <b>se sobrepõem</b>: em 80% dos grupos Aedes, f₀ fica entre ~260 e ~580 Hz; nos outros mosquitos, entre ~260 e ~620 Hz. Só o tom não basta.</div>
   </div>
-  <div class="foot"><span><svg><use href="#mini"/></svg>fonte: <span class="mono">reanalysis/frontend.py · descriptors()</span></span><span class="pn"></span></div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>fonte: <span class="mono">caderno · §3 (f₀ por soma harmônica)</span></span><span class="pn"></span></div>
 </section>
 
 <!-- ============ P · PROCESSO ============ -->
@@ -590,19 +590,19 @@ p_aedes = (hgb.<span class="f">predict_proba</span>(X)[:, <span class="n">1</spa
       <h3 style="margin-top:4px">MLP <span class="muted" style="font-size:22px;font-weight:400">(perceptron multicamadas)</span></h3>
       <p style="margin-bottom:14px">Camadas de “neurônios”: cada um soma os 80 números com <b>pesos</b> e passa por uma função (ReLU). O treino ajusta os pesos para errar menos.</p>
       <div class="code" style="font-size:18px;box-shadow:5px 6px 0 rgba(61,90,152,.85)">mlp = nn.<span class="f">Sequential</span>(
-    nn.<span class="f">Linear</span>(<span class="n">80</span>, <span class="n">128</span>), nn.<span class="f">ReLU</span>(),   <span class="c"># camada 1</span>
-    nn.<span class="f">Linear</span>(<span class="n">128</span>, <span class="n">64</span>), nn.<span class="f">ReLU</span>(),   <span class="c"># camada 2</span>
-    nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))                  <span class="c"># nota de Aedes</span></div>
+  nn.<span class="f">Linear</span>(<span class="n">80</span>, <span class="n">128</span>), nn.<span class="f">ReLU</span>(), nn.<span class="f">Dropout</span>(<span class="n">0.3</span>),  <span class="c"># camada 1</span>
+  nn.<span class="f">Linear</span>(<span class="n">128</span>, <span class="n">64</span>), nn.<span class="f">ReLU</span>(), nn.<span class="f">Dropout</span>(<span class="n">0.3</span>),  <span class="c"># camada 2</span>
+  nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))  <span class="c"># nota de Aedes</span></div>
     </div>
     <div class="card rise" style="--d:3;padding:22px 26px">
       <svg width="100%" height="215" viewBox="0 0 760 250" id="cnnSvg"></svg>
       <h3 style="margin-top:4px">CNN <span class="muted" style="font-size:22px;font-weight:400">(rede convolucional)</span></h3>
       <p style="margin-bottom:14px">Um <b>filtro</b> pequeno desliza pelas 16 faixas de frequência procurando padrões (como “pico + harmônico”), em qualquer posição.</p>
       <div class="code" style="font-size:18px;box-shadow:5px 6px 0 rgba(209,69,59,.85)">cnn = nn.<span class="f">Sequential</span>(
-    nn.<span class="f">Conv1d</span>(<span class="n">5</span>, <span class="n">32</span>, kernel_size=<span class="n">3</span>), nn.<span class="f">ReLU</span>(),  <span class="c"># filtros</span>
-    nn.<span class="f">Conv1d</span>(<span class="n">32</span>, <span class="n">64</span>, kernel_size=<span class="n">3</span>), nn.<span class="f">ReLU</span>(),
-    nn.<span class="f">AdaptiveMaxPool1d</span>(<span class="n">1</span>), nn.<span class="f">Flatten</span>(),
-    nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))                      <span class="c"># nota</span></div>
+  nn.<span class="f">Conv1d</span>(<span class="n">5</span>, <span class="n">32</span>, <span class="n">3</span>, padding=<span class="n">1</span>), nn.<span class="f">ReLU</span>(),  <span class="c"># filtros</span>
+  nn.<span class="f">Conv1d</span>(<span class="n">32</span>, <span class="n">32</span>, <span class="n">3</span>, padding=<span class="n">1</span>), nn.<span class="f">ReLU</span>(), nn.<span class="f">MaxPool1d</span>(<span class="n">2</span>),
+  nn.<span class="f">Conv1d</span>(<span class="n">32</span>, <span class="n">64</span>, <span class="n">3</span>, padding=<span class="n">1</span>), nn.<span class="f">ReLU</span>(), nn.<span class="f">AdaptiveMaxPool1d</span>(<span class="n">1</span>),
+  nn.<span class="f">Flatten</span>(), nn.<span class="f">Dropout</span>(<span class="n">0.3</span>), nn.<span class="f">Linear</span>(<span class="n">64</span>, <span class="n">1</span>))  <span class="c"># nota</span></div>
     </div>
   </div>
   <div class="code rise" style="--d:4;position:absolute;left:120px;right:120px;top:912px;font-size:18px;padding:12px 22px;box-shadow:5px 6px 0 rgba(76,138,74,.85)"><span class="k">for</span> epoca <span class="k">in</span> <span class="f">range</span>(<span class="n">60</span>):   <span class="c"># treino: mostrar os exemplos várias vezes e corrigir os pesos</span>
@@ -806,7 +806,7 @@ cv = <span class="f">StratifiedGroupKFold</span>(n_splits=<span class="n">5</spa
       <div class="code" style="font-size:15.5px;line-height:1.5;padding:14px 16px;box-shadow:4px 5px 0 #a0662e;margin-top:auto"><span class="k">from</span> sklearn.metrics <span class="k">import</span> (
     confusion_matrix, roc_auc_score)
 <span class="f">confusion_matrix</span>(y, y_previsto)  <span class="c"># 3×3</span>
-<span class="f">roc_auc_score</span>(y == <span class="n">2</span>, p_aedes)  <span class="c"># 0,86</span></div>
+<span class="f">roc_auc_score</span>(y == <span class="n">2</span>, p_aedes)  <span class="c"># 0,83</span></div>
     </div>
     <div class="card rise" style="--d:7;padding:16px 20px 18px;display:flex;flex-direction:column;min-width:0">
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px"><span class="pill" style="color:#7a5a9e;font-size:18px">6 · interpretação</span></div>
@@ -836,10 +836,10 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <h2 class="rise" style="--d:1">A matriz de confusão do <span class="hl">nosso modelo</span></h2>
   <svg class="abs rise" style="--d:2;left:110px;top:240px" width="1060" height="740" viewBox="0 0 1060 740" id="matrizSvg"></svg>
   <div class="abs" style="left:1210px;top:270px;width:610px;display:flex;flex-direction:column;gap:24px">
-    <div class="card rise" style="--d:3;padding:16px 24px"><p style="font-size:23px"><b class="green" style="color:var(--green)">Diagonal = acertos.</b> 1.205 Aedes, 2.653 outros mosquitos e 224 ruídos.</p></div>
-    <div class="card rise" style="--d:4;padding:16px 24px;background:#fde9e4"><p style="font-size:23px"><b class="red">O erro mais comum:</b> 911 Aedes chamados de “outro mosquito”. O modelo é <b>cauteloso</b>.</p></div>
-    <div class="card rise" style="--d:5;padding:16px 24px"><p style="font-size:23px"><b>Alarmes falsos são raros:</b> 250 de 3.050 outros mosquitos (8%) e 14 de 426 ruídos (3%).</p></div>
-    <div class="postit rise" style="--d:6;font-size:30px">Precisão = 1.205 / 1.469 = <b>82%</b><br>Detecção = 1.205 / 2.167 = <b>56%</b></div>
+    <div class="card rise" style="--d:3;padding:16px 24px"><p style="font-size:23px"><b class="green" style="color:var(--green)">Diagonal = acertos.</b> 1.131 Aedes, 2.554 outros mosquitos e 225 ruídos.</p></div>
+    <div class="card rise" style="--d:4;padding:16px 24px;background:#fde9e4"><p style="font-size:23px"><b class="red">O erro mais comum:</b> 1.027 Aedes chamados de “outro mosquito”. O modelo é <b>cauteloso</b>.</p></div>
+    <div class="card rise" style="--d:5;padding:16px 24px"><p style="font-size:23px"><b>Alarmes falsos:</b> 333 de 3.050 outros mosquitos (11%) e 17 de 426 ruídos (4%).</p></div>
+    <div class="postit rise" style="--d:6;font-size:30px">Precisão = 1.131 / 1.481 = <b>76%</b><br>Detecção = 1.131 / 2.167 = <b>52%</b></div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>5.643 gravações, cada uma prevista por um modelo que nunca a viu · limiar 0,5 · modelo: SVM</span><span class="pn"></span></div>
 </section>
@@ -851,8 +851,8 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <svg class="abs rise" style="--d:2;left:110px;top:230px" width="900" height="760" viewBox="0 0 900 760" id="rocSvg"></svg>
   <div class="abs" style="left:1080px;top:270px;width:740px">
     <div class="card rise" style="--d:3;padding:20px 26px"><h3 style="font-size:30px">Como ler</h3><p style="font-size:23px">Cada ponto é um <b>limiar</b> diferente. Para cima = mais Aedes encontrados; para a direita = mais alarmes falsos. A diagonal é o chute (moeda).</p></div>
-    <div class="card rise" style="--d:4;margin-top:28px;padding:20px 26px"><h3 style="font-size:30px">AUROC = 0,86</h3><p style="font-size:23px">A área sob a curva. Escolhendo um Aedes e um não-Aedes ao acaso, em <b>86%</b> das vezes o Aedes recebe nota maior.</p></div>
-    <div class="postit rise" style="--d:5;margin-top:34px;font-size:30px">O ponto vermelho é o limiar 0,5 que usamos: <b>56%</b> dos Aedes com só <b>8%</b> de alarmes falsos.</div>
+    <div class="card rise" style="--d:4;margin-top:28px;padding:20px 26px"><h3 style="font-size:30px">AUROC = 0,83</h3><p style="font-size:23px">A área sob a curva. Escolhendo um Aedes e um não-Aedes ao acaso, em <b>83%</b> das vezes o Aedes recebe nota maior.</p></div>
+    <div class="postit rise" style="--d:5;margin-top:34px;font-size:30px">O ponto vermelho é o limiar 0,5 que usamos: <b>52%</b> dos Aedes com <b>11%</b> de alarmes falsos nos outros mosquitos.</div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>Aedes × tudo o que não é Aedes · validação cruzada por grupo</span><span class="pn"></span></div>
 </section>
@@ -864,8 +864,8 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <svg class="abs rise" style="--d:2;left:100px;top:240px" width="1700" height="560" viewBox="0 0 1700 560" id="limSvg"></svg>
   <div class="grid3 abs" style="left:120px;right:120px;top:820px;gap:36px">
     <div class="card rise" style="--d:3;padding:16px 22px"><p style="font-size:22px"><b>O modelo não diz “sim/não”:</b> dá uma nota de 0 a 1. Quem escolhe o corte somos nós.</p></div>
-    <div class="card rise" style="--d:4;padding:16px 22px"><p style="font-size:22px"><b>Limiar 0,2</b> (vigilância, não perder Aedes): 67% detectados, 76% de precisão.</p></div>
-    <div class="card rise" style="--d:5;padding:16px 22px"><p style="font-size:22px"><b>Limiar 0,5</b> (poucos alarmes): 56% detectados, 82% de precisão, 8% dos outros mosquitos apitam.</p></div>
+    <div class="card rise" style="--d:4;padding:16px 22px"><p style="font-size:22px"><b>Limiar 0,2</b> (vigilância, não perder Aedes): 64% detectados, 72% de precisão.</p></div>
+    <div class="card rise" style="--d:5;padding:16px 22px"><p style="font-size:22px"><b>Limiar 0,5</b> (poucos alarmes): 52% detectados, 76% de precisão, 11% dos outros mosquitos apitam.</p></div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>esquerda: notas que o modelo dá · direita: as três métricas para cada limiar</span><span class="pn"></span></div>
 </section>
@@ -875,16 +875,16 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <div class="kicker rise">resultado</div>
   <h2 class="rise" style="--d:1">Quando apita, <span class="hl">costuma ser Aedes</span></h2>
   <div class="rise" style="--d:2;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:40px">
-    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1">0,86</div><p style="font-size:23px;margin-top:6px">AUROC para Aedes</p></div>
-    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--green)">82%</div><p style="font-size:23px;margin-top:6px">dos alertas de Aedes estão certos</p></div>
-    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--teal)">8%</div><p style="font-size:23px;margin-top:6px">dos outros mosquitos viram alarme</p></div>
-    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--blue)">3%</div><p style="font-size:23px;margin-top:6px">dos ruídos viram alarme</p></div>
+    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1">0,83</div><p style="font-size:23px;margin-top:6px">AUROC para Aedes</p></div>
+    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--green)">76%</div><p style="font-size:23px;margin-top:6px">dos alertas de Aedes estão certos</p></div>
+    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--teal)">11%</div><p style="font-size:23px;margin-top:6px">dos outros mosquitos viram alarme</p></div>
+    <div class="card" style="padding:20px 24px;text-align:center"><div style="font-size:88px;font-weight:700;line-height:1;color:var(--blue)">4%</div><p style="font-size:23px;margin-top:6px">dos ruídos viram alarme</p></div>
   </div>
   <svg class="abs rise" style="--d:3;left:110px;top:510px" width="1150" height="470" viewBox="0 0 1150 470" id="cemSvg"></svg>
   <div class="abs" style="left:1320px;top:540px;width:500px">
-    <div class="postit rise" style="--d:4;font-size:32px">Quando o modelo diz <b>“é Aedes”</b>, ele acerta <b>mais de 8 em cada 10</b> vezes.</div>
+    <div class="postit rise" style="--d:4;font-size:32px">Quando o modelo diz <b>“é Aedes”</b>, ele acerta <b>cerca de 3 em cada 4</b> vezes.</div>
     <div class="card rise" style="--d:5;margin-top:36px;padding:18px 24px">
-      <p style="font-size:22px">O modelo é <b>cauteloso</b>: prefere ficar quieto a dar alarme falso. Detecta <b>56%</b> dos Aedes, mas quando apita, costuma estar certo.</p>
+      <p style="font-size:22px">O modelo é <b>cauteloso</b>: prefere ficar quieto a dar alarme falso. Detecta <b>52%</b> dos Aedes, mas quando apita, costuma estar certo.</p>
     </div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>média de 3 repetições · validação cruzada por grupo · modelo: SVM</span><span class="pn"></span></div>
@@ -903,7 +903,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     </div>
     <div class="card rise" style="--d:5;margin-top:30px;padding:20px 26px;background:#fde9e4">
       <h3 style="font-size:26px">Ainda falta</h3>
-      <p style="font-size:21px">O modelo só viu Aedes de <b>dois datasets</b>. Aedes gravados em <b>outros aparelhos</b> ainda não são reconhecidos: o próximo passo é coletar mais fontes.</p>
+      <p style="font-size:21px">O modelo só viu Aedes de <b>dois datasets</b>. Aedes gravados em <b>outros aparelhos</b> ainda não são reconhecidos (AUROC 0,51, igual ao acaso): o próximo passo é coletar mais fontes.</p>
     </div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>AUROC Aedes × Culex, aparelho fora do treino · média de 3 repetições</span><span class="pn"></span></div>
@@ -930,7 +930,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
 <!-- ============ 13i · INTERPRETABILIDADE FINAL ============ -->
 <section class="slide" data-title="O que o modelo ouve">
   <div class="kicker rise">importância por permutação</div>
-  <h2 class="rise" style="--d:1">Ele presta atenção no <span class="hl">batimento de asa</span></h2>
+  <h2 class="rise" style="--d:1">Ele usa o <span class="hl">espectro todo</span></h2>
   <svg class="abs rise" style="--d:2;left:100px;top:250px" width="1180" height="720" viewBox="0 0 1180 720" id="impSvg"></svg>
   <div class="abs" style="left:1320px;top:250px;width:500px">
     <div class="code rise" style="--d:3;font-size:19px"><span class="tag">embaralhar uma faixa</span><span class="k">for</span> banda <span class="k">in</span> <span class="f">range</span>(<span class="n">16</span>):
@@ -940,10 +940,10 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     queda[banda] = auroc_base \
         - <span class="f">roc_auc_score</span>(y, <span class="f">modelo</span>(Z))</div>
     <div class="card rise" style="--d:4;margin-top:34px;padding:18px 24px">
-      <p style="font-size:22px">Se embaralhar uma faixa <b>derruba</b> o AUROC, o modelo depende dela. As maiores quedas estão em <b>0,6–1,6 kHz</b>: o batimento e seu primeiro harmônico. Os graves (&lt; 300 Hz) pesam pouco.</p>
+      <p style="font-size:22px">Se embaralhar uma faixa <b>derruba</b> o AUROC, o modelo depende dela. A maior queda está em <b>~1,4 kHz</b> (perto de 3·f₀), mas graves (170 Hz) e agudos (2,5 e 3,2 kHz) também pesam: parte do que o modelo usa pode ser fundo ou aparelho.</p>
     </div>
     <div class="card rise" style="--d:5;margin-top:30px;padding:18px 24px;background:#e8f1e4">
-      <p style="font-size:22px"><b>E o aparelho?</b> Depois da normalização, um classificador linear não consegue mais dizer de qual fonte veio um mosquito: <b>17%</b> (acaso: 20%).</p>
+      <p style="font-size:22px"><b>E o aparelho?</b> Antes da normalização, um classificador linear adivinha de qual fonte veio um mosquito em <b>50%</b> das vezes; depois, em <b>14%</b> (acaso: 20%).</p>
     </div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>modelo final (SVM) · queda de AUROC no teste ao embaralhar cada faixa (16 bandas mel)</span><span class="pn"></span></div>
@@ -1071,7 +1071,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     <div><h3 style="font-size:28px;color:var(--red);margin-bottom:10px">Dados e trabalhos sobre mosquitos</h3><ol style="font-size:19px;line-height:1.38;color:var(--ink2);padding-left:22px;display:flex;flex-direction:column;gap:11px"><li>Mukundarajan H., Hol F.J.H., Castillo E.A., Newby C., Prakash M. <i>Using mobile phones as acoustic sensors for high-throughput mosquito surveillance</i>. <b>eLife</b> 6:e27854, 2017. doi:10.7554/eLife.27854 — dataset Abuzz e vídeos (CC BY 4.0).</li><li>Kiskin I. et al. <i>HumBugDB: A Large-scale Acoustic Mosquito Dataset</i>. NeurIPS Datasets and Benchmarks, 2021. arXiv:2110.07607.</li><li>Sinka M.E. et al. <i>HumBug – An Acoustic Mosquito Monitoring Tool for use on budget smartphones</i>. <b>Methods Ecol. Evol.</b> 12, 2021. doi:10.1111/2041-210X.13663.</li><li>Torres I., Nakano M., Cime-Castillo J. et al. <i>Dengue-Infected Mosquito Detection with Uncertainty Evaluation based on Monte Carlo Dropout</i>. <b>IEEE Latin America Trans.</b> 23(2):135–143, 2025.</li><li>Vasconcelos D., Nunes N.J., Gomes J. <i>An annotated dataset of bioacoustic sensing and features of mosquitoes</i>. <b>Scientific Data</b> 7:382, 2020 — dataset Funchal.</li><li>Supratak A. et al. <i>MosquitoSong+: A noise-robust deep learning model for mosquito classification from wingbeat sounds</i>. <b>PLOS ONE</b> 19, 2024. doi:10.1371/journal.pone.0310121.</li><li>Paim K.O., Rohweder R., Recamonde-Mendoza M., Mansilha R.B., Cordeiro W. <i>Acoustic Identification of Ae. aegypti Mosquitoes using Smartphone Apps and Residual CNNs</i>. arXiv:2306.10091, 2023 — dados UFRGS.</li><li>Piczak K.J. <i>ESC: Dataset for Environmental Sound Classification</i>. ACM Multimedia, 2015 — ruídos ESC-50.</li></ol></div>
     <div><h3 style="font-size:28px;color:var(--blue);margin-bottom:10px">Métodos, ferramentas e hardware</h3><ol style="font-size:19px;line-height:1.38;color:var(--ink2);padding-left:22px;display:flex;flex-direction:column;gap:11px"><li>Cortes C., Vapnik V. <i>Support-vector networks</i>. <b>Machine Learning</b> 20:273–297, 1995 — SVM.</li><li>Friedman J.H. <i>Greedy function approximation: a gradient boosting machine</i>. <b>Ann. Statist.</b> 29(5), 2001; Ke G. et al. <i>LightGBM</i>. NeurIPS, 2017 — HistGB.</li><li>Geurts P., Ernst D., Wehenkel L. <i>Extremely randomized trees</i>. <b>Machine Learning</b> 63:3–42, 2006.</li><li>Hochreiter S., Schmidhuber J. <i>Long short-term memory</i>. <b>Neural Computation</b> 9(8), 1997 — LSTM.</li><li>Ganin Y. et al. <i>Domain-adversarial training of neural networks</i>. <b>JMLR</b> 17, 2016 — DANN.</li><li>Sun B., Feng J., Saenko K. <i>Return of frustratingly easy domain adaptation</i>. AAAI, 2016 — CORAL.</li><li>Breiman L. <i>Random forests</i>. <b>Machine Learning</b> 45:5–32, 2001 — importância por permutação.</li><li>Pedregosa F. et al. <i>Scikit-learn: Machine learning in Python</i>. <b>JMLR</b> 12, 2011; Paszke A. et al. <i>PyTorch</i>. NeurIPS, 2019.</li><li>Arduino. <i>Nano 33 BLE Sense Rev2 — documentação</i>. docs.arduino.cc; Nordic Semiconductor. <i>nRF52840 Product Specification</i>.</li></ol></div>
   </div>
-  <div class="foot"><span><svg><use href="#mini"/></svg>código, resultados e esta apresentação: github.com/Lciarallo/mosquito-wingbeat</span><span class="pn"></span></div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>todos os números saem do caderno <span class="mono">notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb</span> · github.com/Lciarallo/mosquito-wingbeat</span><span class="pn"></span></div>
 </section>
 
 <!-- ============ 18 · CONCLUSÃO ============ -->
@@ -1086,15 +1086,15 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     <div class="grid3" style="gap:40px">
       <div class="rise" style="--d:2;border-top:5px solid var(--yellow);padding-top:20px">
         <div style="font-size:64px;font-weight:700;color:var(--yellow)">1</div>
-        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Dados primeiro, depois o modelo:</b> os ajustes de dados deram o maior salto; comparar <b style="color:#fff">9 modelos</b> na mesma prova levou à <b style="color:#fff">SVM</b>.</p>
+        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Dados primeiro, depois o modelo:</b> os ajustes de dados cortaram os alarmes falsos de 28% para 11%; entre <b style="color:#fff">9 modelos</b> na mesma prova, vários empatam no topo e a <b style="color:#fff">SVM</b> ganha pela estabilidade.</p>
       </div>
       <div class="rise" style="--d:3;border-top:5px solid #7fc8d0;padding-top:20px">
         <div style="font-size:64px;font-weight:700;color:#7fc8d0">2</div>
-        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Prova honesta:</b> validar por grupo e aparelho. Resultado: <b style="color:#fff">82% de precisão</b>, AUROC <b style="color:#fff">0,86</b>; Aedes × Culex no mesmo aparelho: <b style="color:#fff">0,87</b>.</p>
+        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Prova honesta:</b> validar por grupo e aparelho. Resultado: <b style="color:#fff">76% de precisão</b>, AUROC <b style="color:#fff">0,83</b>; Aedes × Culex no mesmo aparelho: <b style="color:#fff">0,78</b>.</p>
       </div>
       <div class="rise" style="--d:4;border-top:5px solid var(--red2);padding-top:20px">
         <div style="font-size:64px;font-weight:700;color:var(--red2)">3</div>
-        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Interpretabilidade:</b> o modelo se apoia na faixa do <b style="color:#fff">batimento de asa (0,6–1,6 kHz)</b>, não no aparelho.</p>
+        <p style="font-size:30px;line-height:1.35;color:#e9e3d2"><b style="color:#fff">Interpretabilidade:</b> o maior peso está em <b style="color:#fff">~1,4 kHz</b>, mas graves e agudos também contam. Depois de normalizar, a fonte deixa de ser adivinhável (<b style="color:#fff">14%</b>, acaso 20%).</p>
       </div>
     </div>
     <div class="rise" style="--d:5;margin-top:110px;display:flex;align-items:baseline;gap:40px">
@@ -1160,7 +1160,7 @@ const fmt=v=>v.toFixed(2).replace('.',',');
 (function(){
   const s=document.getElementById('passosSvg'); if(!s)return;
   const steps=['sem ajustes','+ normalização','+ dois estágios'];
-  const metr=[['Precisão dos alertas',[61.5,78.7,79.2],'#4c8a4a'],['Outros mosquitos → alarme',[23.4,8.4,8.3],'#d1453b'],['AUROC × 100',[77.8,78.4,82.6],'#3d5a98']];
+  const metr=[['Precisão dos alertas',[63.5,71.6,72.7],'#4c8a4a'],['Outros mosquitos → alarme',[27.5,11.6,10.8],'#d1453b'],['AUROC × 100',[78.0,77.1,80.8],'#3d5a98']];
   const x0=60,gw=350,bw=80,base=380,H=v=>v/100*300;
   el('line',{x1:x0-10,y1:base,x2:x0+gw*3,y2:base,stroke:'#1d2433','stroke-width':3},s);
   metr.forEach(([n,vals,c],g)=>{const gx=x0+g*gw;
@@ -1185,15 +1185,15 @@ const fmt=v=>v.toFixed(2).replace('.',',');
   const cx=780,cy=380,r=260,ang=v=>Math.PI*(1-v);
   const P=v=>[cx+r*Math.cos(ang(v)),cy-r*Math.sin(ang(v))];
   const arc=(a,b,col,w)=>{const [x1,y1]=P(a),[x2,y2]=P(b);el('path',{d:`M${x1} ${y1} A${r} ${r} 0 0 1 ${x2} ${y2}`,fill:'none',stroke:col,'stroke-width':w,'stroke-linecap':'butt'},s);};
-  arc(0,.5,'#f2b8ae',46); arc(.5,1,'#cfe0d6',46); arc(.5,.87,'#2f7f86',46);
+  arc(0,.5,'#f2b8ae',46); arc(.5,1,'#cfe0d6',46); arc(.5,0.78,'#2f7f86',46);
   el('path',{d:`M${P(0)[0]-30} ${cy} A${r+30} ${r+30} 0 0 1 ${P(1)[0]+30} ${cy}`,fill:'none',stroke:'#1d2433','stroke-width':3,filter:'url(#sketch)'},s);
-  const [nx,ny]=P(.87);el('line',{x1:cx,y1:cy,x2:cx+(nx-cx)*.86,y2:cy+(ny-cy)*.86,stroke:'#1d2433','stroke-width':9,'stroke-linecap':'round'},s);
+  const [nx,ny]=P(0.78);el('line',{x1:cx,y1:cy,x2:cx+(nx-cx)*.86,y2:cy+(ny-cy)*.86,stroke:'#1d2433','stroke-width':9,'stroke-linecap':'round'},s);
   el('circle',{cx,cy,r:18,fill:'#d1453b',stroke:'#1d2433','stroke-width':4},s);
   const [ax,ay]=P(.5);el('line',{x1:ax,y1:ay-34,x2:ax,y2:ay+34,stroke:'#d1453b','stroke-width':4,'stroke-dasharray':'8 6'},s);
   el('text',{x:ax,y:ay-46,'text-anchor':'middle','font-family':'Caveat','font-size':34,fill:'#d1453b'},s,'acaso (0,5)');
   el('text',{x:P(0)[0],y:cy+44,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#4a5163'},s,'0');
   el('text',{x:P(1)[0],y:cy+44,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#4a5163'},s,'1');
-  el('text',{x:cx,y:cy+110,'text-anchor':'middle','font-family':'Space Grotesk','font-size':96,'font-weight':700,fill:'#2f7f86'},s,'0,87');
+  el('text',{x:cx,y:cy+110,'text-anchor':'middle','font-family':'Space Grotesk','font-size':96,'font-weight':700,fill:'#2f7f86'},s,'0,78');
   el('text',{x:cx,y:cy+150,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#4a5163'},s,'AUROC Aedes × Culex · aparelho nunca visto');
 })();
 
@@ -1201,13 +1201,13 @@ const fmt=v=>v.toFixed(2).replace('.',',');
 (function(){
   const s=document.getElementById('cemSvg'); if(!s)return;
   el('text',{x:0,y:30,'font-family':'Space Grotesk','font-size':28,'font-weight':700,fill:'#1d2433'},s,'De cada 100 alertas de “Aedes”…');
-  for(let i=0;i<100;i++){const c=i%20,r=Math.floor(i/20),ok=i<82;
+  for(let i=0;i<100;i++){const c=i%20,r=Math.floor(i/20),ok=i<76;
     el('use',{href:'#mini',x:c*52,y:60+r*58,width:50,height:35,opacity:ok?1:.9,style:ok?'':'filter:sepia(1) saturate(3) hue-rotate(-20deg) brightness(1.15)'},s);}
   el('rect',{x:0,y:370,width:22,height:22,fill:'#1d2433'},s);
-  el('text',{x:32,y:389,'font-family':'Space Grotesk','font-size':24,fill:'#1d2433'},s,'82 são Aedes de verdade');
+  el('text',{x:32,y:389,'font-family':'Space Grotesk','font-size':24,fill:'#1d2433'},s,'76 são Aedes de verdade');
   el('rect',{x:380,y:370,width:22,height:22,fill:'#a0662e'},s);
-  el('text',{x:412,y:389,'font-family':'Space Grotesk','font-size':24,fill:'#1d2433'},s,'18 são outro mosquito ou ruído');
-  el('text',{x:0,y:440,'font-family':'Caveat','font-size':36,fill:'#4a5163'},s,'e só 8% dos outros mosquitos (3% dos ruídos) disparam alarme');
+  el('text',{x:412,y:389,'font-family':'Space Grotesk','font-size':24,fill:'#1d2433'},s,'24 são outro mosquito ou ruído');
+  el('text',{x:0,y:440,'font-family':'Caveat','font-size':36,fill:'#4a5163'},s,'e 11% dos outros mosquitos (4% dos ruídos) disparam alarme');
 })();
 /* --- árvores: boosting e floresta --- */
 (function(){
@@ -1227,10 +1227,10 @@ const fmt=v=>v.toFixed(2).replace('.',',');
 /* --- importância por banda --- */
 (function(){
   const s=document.getElementById('impSvg'); if(!s)return;
-  const B=[[0, 169, 80, 0.0302], [80, 268, 169, 0.046], [169, 378, 268, 0.0312], [268, 501, 378, 0.0163], [378, 638, 501, 0.0232], [501, 791, 638, 0.0403], [638, 961, 791, 0.0849], [791, 1150, 961, 0.0369], [961, 1361, 1150, 0.0946], [1150, 1596, 1361, 0.1408], [1361, 1858, 1596, 0.0415], [1596, 2149, 1858, 0.0289], [1858, 2474, 2149, 0.0048], [2149, 2836, 2474, 0.0661], [2474, 3240, 2836, 0.014], [2836, 3689, 3240, 0.0656]];
+  const B=[[0, 169, 80, 0.0302], [80, 268, 169, 0.0894], [169, 378, 268, 0.0376], [268, 501, 378, 0.0144], [378, 638, 501, 0.0132], [501, 791, 638, 0.0357], [638, 961, 791, 0.0857], [791, 1150, 961, 0.0387], [961, 1361, 1150, 0.0876], [1150, 1596, 1361, 0.1455], [1361, 1858, 1596, 0.0583], [1596, 2149, 1858, 0.0326], [1858, 2474, 2149, 0.0088], [2149, 2836, 2474, 0.0799], [2474, 3240, 2836, 0.0206], [2836, 3689, 3240, 0.073]];
   const x0=90,bw=64,base=560,H=v=>v/0.17*460;
   el('rect',{x:x0+bw*3,y:40,width:bw*7,height:base-40,fill:'url(#hatchTeal)'},s);
-  el('text',{x:x0+bw*6.5,y:70,'text-anchor':'middle','font-family':'Caveat','font-size':36,fill:'#2f7f86'},s,'batimento de asa + 1º harmônico');
+  el('text',{x:x0+bw*6.5,y:70,'text-anchor':'middle','font-family':'Caveat','font-size':36,fill:'#2f7f86'},s,'zona de f₀ e harmônicos');
   [0,.04,.08,.12].forEach(t=>{const y=base-H(t);el('line',{x1:x0,y1:y,x2:x0+bw*16,y2:y,stroke:'#1d2433','stroke-width':t?1:3,opacity:t?.18:1},s);
     el('text',{x:x0-12,y:y+7,'text-anchor':'end','font-family':'Space Grotesk','font-size':20,fill:'#4a5163'},s,t.toFixed(2).replace('.',','));});
   el('text',{x:24,y:base-230,'text-anchor':'middle','font-family':'Space Grotesk','font-size':21,fill:'#4a5163',transform:`rotate(-90 24 ${base-230})`},s,'queda no AUROC');
@@ -1241,7 +1241,7 @@ const fmt=v=>v.toFixed(2).replace('.',',');
     if(hot)el('text',{x:x+(bw-16)/2,y:base-H(v)-12,'text-anchor':'middle','font-family':'Space Grotesk','font-size':20,'font-weight':700,fill:'#d1453b'},s,v.toFixed(2).replace('.',','));});
   el('text',{x:x0+bw*8,y:base+110,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#4a5163'},s,'centro de cada faixa de frequência');
   el('use',{href:'#mini',x:x0+bw*0.2,y:110,width:150,height:106},s);
-  el('text',{x:x0+bw*0.2,y:250,'font-family':'Caveat','font-size':32,fill:'#4a5163'},s,'graves: pesam pouco');
+  el('text',{x:x0+bw*0.2,y:250,'font-family':'Caveat','font-size':32,fill:'#4a5163'},s,'graves também pesam');
 })();
 /* --- desenho da SVM --- */
 (function(){const s=document.getElementById('svmSvg'); if(!s)return;
@@ -1261,7 +1261,7 @@ const fmt=v=>v.toFixed(2).replace('.',',');
   el('text',{x:450,y:660,'text-anchor':'middle','font-family':'Caveat','font-size':32,fill:'#4a5163'},s,'○ amarelo = vetores de suporte (os que definem a fronteira)');
 })();
 /* --- aula: processo, VS Code, matriz, ROC, limiar, IA, hardware --- */
-const CURVAS={"modelo":"SVM RBF, dois est\u00e1gios","classes":["ruido","outro_mosquito","aedes"],"matriz_confusao":[[224,188,14],[147,2653,250],[51,911,1205]],"auroc":0.855635293074324,"auroc_aedes_x_culex":0.865177278828542,"roc":{"fpr":[0.0,0.0017,0.0043,0.0066,0.0089,0.0115,0.0144,0.0167,0.019,0.021,0.0233,0.0262,0.0282,0.0308,0.0331,0.036,0.0383,0.0409,0.0429,0.046,0.0483,0.0506,0.0529,0.0564,0.0598,0.063,0.0662,0.0682,0.0705,0.0731,0.0759,0.0785,0.0817,0.0852,0.0898,0.0944,0.0984,0.1024,0.1082,0.1116,0.1159,0.1182,0.1214,0.124,0.1286,0.132,0.1349,0.1421,0.1459,0.1528,0.1565,0.16,0.1625,0.1669,0.1703,0.1787,0.181,0.1853,0.1902,0.1974,0.202,0.2077,0.2123,0.2166,0.2232,0.229,0.2348,0.2391,0.2451,0.248,0.2572,0.2635,0.2684,0.2759,0.2802,0.2862,0.2952,0.3035,0.309,0.3139,0.3231,0.3283,0.3363,0.3441,0.3501,0.359,0.3832,0.3913,0.3993,0.4088,0.4217,0.4289,0.4364,0.4491,0.4626,0.4758,0.4839,0.4894,0.5006,0.5155,0.5348,0.5498,0.5679,0.5788,0.5929,0.6087,0.6266,0.6341,0.6545,0.6787,0.6948,0.7048,0.7186,0.7442,0.7661,0.813,0.8334,0.8636,0.9235,1.0],"tpr":[0.0,0.1108,0.1283,0.1574,0.191,0.2035,0.2312,0.2561,0.2843,0.3004,0.312,0.3244,0.3373,0.3484,0.3618,0.3724,0.3876,0.3982,0.419,0.4296,0.437,0.4564,0.4739,0.4887,0.4965,0.5076,0.5155,0.5238,0.5298,0.5422,0.5561,0.5662,0.5731,0.5861,0.5925,0.5994,0.6096,0.6202,0.6285,0.6382,0.6437,0.6511,0.6557,0.6627,0.6677,0.6714,0.677,0.6848,0.6899,0.6973,0.7033,0.7084,0.7153,0.7208,0.7268,0.731,0.7356,0.7407,0.749,0.755,0.7605,0.766,0.7707,0.7748,0.7794,0.7836,0.7868,0.7905,0.7956,0.7997,0.8071,0.8122,0.8173,0.8214,0.8269,0.8302,0.8348,0.8399,0.8436,0.8473,0.8509,0.8556,0.8606,0.8653,0.8699,0.8749,0.8786,0.8823,0.8865,0.8902,0.8943,0.8989,0.9036,0.9072,0.9114,0.9151,0.9183,0.922,0.9252,0.9285,0.9317,0.9363,0.9395,0.9432,0.9469,0.952,0.9552,0.9589,0.9631,0.9663,0.9695,0.9732,0.9769,0.9802,0.9834,0.9866,0.9898,0.9931,0.9968,1.0]},"por_limiar":[{"limiar":0.05,"precisao":0.6900945334977394,"recall":0.774803876326719,"fp_outros":0.22524590163934427,"fp_ruido":0.1572769953051643},{"limiar":0.1,"precisao":0.729312762973352,"recall":0.7198892478080295,"fp_outros":0.1740983606557377,"fp_ruido":0.11267605633802817},{"limiar":0.15,"precisao":0.7474899598393574,"recall":0.6871250576834333,"fp_outros":0.15081967213114755,"fp_ruido":0.10093896713615023},{"limiar":0.2,"precisao":0.7641160949868074,"recall":0.6682048915551454,"fp_outros":0.13409836065573771,"fp_ruido":0.0892018779342723},{"limiar":0.25,"precisao":0.7747797356828194,"recall":0.6492847254268574,"fp_outros":0.12393442622950819,"fp_ruido":0.07276995305164319},{"limiar":0.3,"precisao":0.7822120866590649,"recall":0.633133364097831,"fp_outros":0.1160655737704918,"fp_ruido":0.06572769953051644},{"limiar":0.35,"precisao":0.7916666666666666,"recall":0.6137517305029996,"fp_outros":0.10688524590163935,"fp_ruido":0.056338028169014086},{"limiar":0.4,"precisao":0.8029925187032418,"recall":0.594370096908168,"fp_outros":0.09770491803278689,"fp_ruido":0.04225352112676056},{"limiar":0.45,"precisao":0.8105670103092784,"recall":0.5805260729118598,"fp_outros":0.09114754098360656,"fp_ruido":0.03755868544600939},{"limiar":0.5,"precisao":0.820285908781484,"recall":0.5560682971850485,"fp_outros":0.08196721311475409,"fp_ruido":0.03286384976525822},{"limiar":0.55,"precisao":0.823404255319149,"recall":0.5357637286571296,"fp_outros":0.07770491803278688,"fp_ruido":0.028169014084507043},{"limiar":0.6,"precisao":0.8325859491778774,"recall":0.5140747577295801,"fp_outros":0.07081967213114754,"fp_ruido":0.018779342723004695},{"limiar":0.65,"precisao":0.8385335413416537,"recall":0.4960775265343793,"fp_outros":0.0659016393442623,"fp_ruido":0.014084507042253521},{"limiar":0.7,"precisao":0.8465955701394585,"recall":0.47623442547300415,"fp_outros":0.05934426229508197,"fp_ruido":0.014084507042253521},{"limiar":0.75,"precisao":0.8485639686684073,"recall":0.44993077988001845,"fp_outros":0.05508196721311476,"fp_ruido":0.014084507042253521},{"limiar":0.8,"precisao":0.8588899341486359,"recall":0.4213197969543147,"fp_outros":0.047540983606557376,"fp_ruido":0.011737089201877934},{"limiar":0.85,"precisao":0.8665955176093917,"recall":0.3747115828334102,"fp_outros":0.04,"fp_ruido":0.007042253521126761},{"limiar":0.9,"precisao":0.8841843088418431,"recall":0.32764190124596215,"fp_outros":0.03016393442622951,"fp_ruido":0.002347417840375587},{"limiar":0.95,"precisao":0.9113712374581939,"recall":0.2514997692662667,"fp_outros":0.01737704918032787,"fp_ruido":0.0}],"histograma":{"bins":[0.0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.85,0.9,0.95,1.0],"aedes":[488,119,71,41,41,35,42,42,30,53,44,47,39,43,57,62,101,102,165,545],"outros":[2363,156,71,51,31,24,28,28,20,28,13,21,15,20,13,23,23,30,39,53],"ruido":[359,19,5,5,7,3,4,6,2,2,2,4,2,0,0,1,2,2,1,0]}};
+const CURVAS={"modelo": "SVM RBF, dois estágios", "classes": ["ruido", "outro_mosquito", "aedes"], "matriz_confusao": [[225, 184, 17], [163, 2554, 333], [9, 1027, 1131]], "auroc": 0.8291651687117623, "auroc_aedes_x_culex": 0.784, "roc": {"fpr": [0.0, 0.002, 0.0043, 0.0066, 0.0095, 0.0129, 0.0152, 0.0181, 0.021, 0.0233, 0.0253, 0.0276, 0.0299, 0.0322, 0.0354, 0.0388, 0.0414, 0.0449, 0.0475, 0.0501, 0.0526, 0.0558, 0.0593, 0.0613, 0.0644, 0.0676, 0.0711, 0.0742, 0.0783, 0.0808, 0.0843, 0.0869, 0.0912, 0.0935, 0.0975, 0.1018, 0.105, 0.1085, 0.1122, 0.1151, 0.1177, 0.122, 0.1263, 0.1306, 0.1372, 0.1407, 0.1441, 0.149, 0.1516, 0.1545, 0.1585, 0.1628, 0.1669, 0.1697, 0.1755, 0.1789, 0.1821, 0.1876, 0.1925, 0.1988, 0.2031, 0.2086, 0.2132, 0.2172, 0.2209, 0.2281, 0.2359, 0.2391, 0.2486, 0.2552, 0.2641, 0.2701, 0.2745, 0.2814, 0.2871, 0.2923, 0.2989, 0.3104, 0.3185, 0.3259, 0.3377, 0.347, 0.359, 0.3633, 0.3766, 0.3904, 0.4005, 0.4068, 0.4125, 0.4223, 0.4304, 0.4456, 0.4548, 0.4652, 0.4784, 0.4928, 0.5037, 0.5213, 0.5383, 0.5561, 0.5679, 0.5817, 0.5898, 0.6076, 0.6228, 0.6384, 0.6487, 0.6631, 0.6833, 0.6971, 0.7097, 0.7339, 0.7509, 0.775, 0.7917, 0.8213, 0.8369, 0.8616, 0.9171, 1.0], "tpr": [0.0, 0.0438, 0.0757, 0.0904, 0.1144, 0.1301, 0.1574, 0.1749, 0.1975, 0.2127, 0.2247, 0.2423, 0.2557, 0.275, 0.2926, 0.3096, 0.3235, 0.341, 0.3489, 0.3604, 0.3738, 0.3826, 0.3969, 0.4056, 0.4172, 0.4278, 0.4416, 0.4536, 0.4615, 0.4716, 0.4836, 0.4924, 0.497, 0.5062, 0.5168, 0.5251, 0.5344, 0.5445, 0.5528, 0.5593, 0.5681, 0.5754, 0.5842, 0.5907, 0.5981, 0.6059, 0.6161, 0.6221, 0.6345, 0.6433, 0.6502, 0.6571, 0.6654, 0.6747, 0.6816, 0.6899, 0.6977, 0.7033, 0.7084, 0.7171, 0.7227, 0.73, 0.7347, 0.742, 0.7462, 0.7527, 0.7582, 0.7651, 0.7725, 0.7771, 0.7826, 0.7882, 0.7946, 0.7997, 0.8062, 0.8126, 0.8168, 0.821, 0.8246, 0.8306, 0.8348, 0.8394, 0.8431, 0.8482, 0.8528, 0.8569, 0.862, 0.8662, 0.8717, 0.8772, 0.8828, 0.8869, 0.8916, 0.8957, 0.8994, 0.904, 0.9082, 0.9119, 0.916, 0.9192, 0.9234, 0.9271, 0.9303, 0.9359, 0.9405, 0.9451, 0.9492, 0.9534, 0.958, 0.9622, 0.9668, 0.9705, 0.9737, 0.9778, 0.982, 0.9852, 0.9894, 0.9931, 0.9968, 1.0]}, "por_limiar": [{"limiar": 0.05, "precisao": 0.669795918367347, "recall": 0.7572681125980618, "fp_outros": 0.24163934426229508, "fp_ruido": 0.16901408450704225}, {"limiar": 0.1, "precisao": 0.6977168949771689, "recall": 0.705122288878634, "fp_outros": 0.19967213114754098, "fp_ruido": 0.12441314553990611}, {"limiar": 0.15, "precisao": 0.7123958843704067, "recall": 0.6709736963544071, "fp_outros": 0.17737704918032787, "fp_ruido": 0.107981220657277}, {"limiar": 0.2, "precisao": 0.7219057483169342, "recall": 0.6432856483617905, "fp_outros": 0.16393442622950818, "fp_ruido": 0.08685446009389672}, {"limiar": 0.25, "precisao": 0.7277686852154938, "recall": 0.615597600369174, "fp_outros": 0.15344262295081967, "fp_ruido": 0.07276995305164319}, {"limiar": 0.3, "precisao": 0.732650739476678, "recall": 0.594370096908168, "fp_outros": 0.14491803278688525, "fp_ruido": 0.06572769953051644}, {"limiar": 0.35, "precisao": 0.7440898345153665, "recall": 0.5809875403784033, "fp_outros": 0.13409836065573771, "fp_ruido": 0.056338028169014086}, {"limiar": 0.4, "precisao": 0.7513846153846154, "recall": 0.5634517766497462, "fp_outros": 0.1259016393442623, "fp_ruido": 0.046948356807511735}, {"limiar": 0.45, "precisao": 0.7578676942838792, "recall": 0.5445316105214583, "fp_outros": 0.11737704918032787, "fp_ruido": 0.04460093896713615}, {"limiar": 0.5, "precisao": 0.763673193787981, "recall": 0.5219197046608214, "fp_outros": 0.10918032786885246, "fp_ruido": 0.03990610328638498}, {"limiar": 0.55, "precisao": 0.7721788502484032, "recall": 0.5020766035994463, "fp_outros": 0.10032786885245902, "fp_ruido": 0.035211267605633804}, {"limiar": 0.6, "precisao": 0.7805782060785768, "recall": 0.48592524227041994, "fp_outros": 0.09245901639344262, "fp_ruido": 0.03286384976525822}, {"limiar": 0.65, "precisao": 0.7854914196567863, "recall": 0.46469773880941395, "fp_outros": 0.08622950819672132, "fp_ruido": 0.028169014084507043}, {"limiar": 0.7, "precisao": 0.7941666666666667, "recall": 0.4397784956160591, "fp_outros": 0.07770491803278688, "fp_ruido": 0.023474178403755867}, {"limiar": 0.75, "precisao": 0.8025247971145176, "recall": 0.4107060452238117, "fp_outros": 0.06950819672131148, "fp_ruido": 0.01643192488262911}, {"limiar": 0.8, "precisao": 0.812992125984252, "recall": 0.38117212736502076, "fp_outros": 0.061311475409836065, "fp_ruido": 0.007042253521126761}, {"limiar": 0.85, "precisao": 0.8239202657807309, "recall": 0.34333179510844486, "fp_outros": 0.05180327868852459, "fp_ruido": 0.002347417840375587}, {"limiar": 0.9, "precisao": 0.8365261813537676, "recall": 0.30226119058606365, "fp_outros": 0.0419672131147541, "fp_ruido": 0.0}, {"limiar": 0.95, "precisao": 0.8487544483985765, "recall": 0.22011998154130133, "fp_outros": 0.027868852459016394, "fp_ruido": 0.0}], "histograma": {"bins": [0.0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1.0], "aedes": [526, 113, 74, 60, 60, 46, 29, 38, 41, 49, 43, 35, 46, 54, 63, 64, 82, 89, 178, 477], "outros": [2313, 128, 68, 41, 32, 26, 33, 25, 26, 25, 27, 24, 19, 26, 25, 25, 29, 30, 43, 85], "ruido": [354, 19, 7, 9, 6, 3, 4, 4, 1, 2, 2, 1, 2, 2, 3, 4, 2, 1, 0, 0]}};
 (function(){
   const s=document.getElementById('cicloSvg'); if(!s)return;
   const steps=[['1','Pergunta','é Aedes ou não?','#f5c84b'],['2','Dados','gravar e rotular','#c9a96b'],['3','Atributos','som → números','#7fc8d0'],['4','Modelo','treinar e comparar','#3d5a98'],['5','Prova','validar por grupo','#2f7f86'],['6','Métricas','matriz, ROC','#d1453b'],['7','Interpretar','em que ele se baseia?','#7a5a9e']];
@@ -1309,7 +1309,7 @@ const CURVAS={"modelo":"SVM RBF, dois est\u00e1gios","classes":["ruido","outro_m
   const op=CURVAS.por_limiar.find(d=>d.limiar===0.5), fprop=(op.fp_outros*3050+op.fp_ruido*426)/3476;
   el('circle',{cx:X(fprop),cy:Y(op.recall),r:14,fill:'#d1453b',stroke:'#1d2433','stroke-width':4},s);
   el('text',{x:X(fprop)+24,y:Y(op.recall)+40,'font-family':'Caveat','font-size':34,fill:'#1d2433'},s,'limiar 0,5');
-  el('text',{x:X(.55),y:Y(.42),'font-family':'Space Grotesk','font-size':30,'font-weight':700,fill:'#d1453b'},s,'área = 0,86');
+  el('text',{x:X(.55),y:Y(.42),'font-family':'Space Grotesk','font-size':30,'font-weight':700,fill:'#d1453b'},s,'área = 0,83');
   el('text',{x:X(.62),y:Y(.66)+60,'font-family':'Caveat','font-size':32,fill:'#8a8577',transform:`rotate(-42 ${X(.62)} ${Y(.66)+60})`},s,'moeda (0,5)');
   el('text',{x:x0+W/2,y:y0+H+74,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#1d2433'},s,'alarmes falsos (não-Aedes que apitam)');
   el('text',{x:30,y:y0+H/2,'text-anchor':'middle','font-family':'Space Grotesk','font-size':22,fill:'#1d2433',transform:`rotate(-90 30 ${y0+H/2})`},s,'Aedes encontrados');
@@ -1362,7 +1362,7 @@ const CURVAS={"modelo":"SVM RBF, dois est\u00e1gios","classes":["ruido","outro_m
   el('text',{x:500,y:270,'text-anchor':'middle','font-family':'Caveat','font-size':32,fill:'#4a5163'},s,'o mesmo ciclo de ML, só que com pouca memória e pouca energia');
 })();
 /* --- redes neurais --- */
-const NN={"arvores": {"auroc": [0.826, 0.003], "precisao": [0.792, 0.008], "deteccao": [0.456, 0.003], "outros_alarme": [0.083, 0.004], "ruido_alarme": [0.013, 0.001], "auroc_aedes_x_culex": [0.731, 0.008]}, "mlp": {"auroc": [0.853, 0.01], "precisao": [0.79, 0.003], "deteccao": [0.584, 0.013], "outros_alarme": [0.107, 0.005], "ruido_alarme": [0.027, 0.006], "auroc_aedes_x_culex": [0.856, 0.009]}, "cnn": {"auroc": [0.854, 0.007], "precisao": [0.813, 0.023], "deteccao": [0.612, 0.018], "outros_alarme": [0.097, 0.016], "ruido_alarme": [0.025, 0.004], "auroc_aedes_x_culex": [0.689, 0.017]}, "parametros": {"mlp": 18689, "cnn": 9889}, "logistica": {"auroc": [0.702, 0.003], "precisao": [0.744, 0.006], "deteccao": [0.323, 0.006], "outros_alarme": [0.072, 0.001], "ruido_alarme": [0.05, 0.008], "auroc_aedes_x_culex": [0.824, 0.003]}, "coral_arvores": {"auroc": [0.513, 0.005], "precisao": [0.349, 0.013], "deteccao": [0.106, 0.004], "outros_alarme": [0.124, 0.003], "ruido_alarme": [0.127, 0.015], "auroc_aedes_x_culex": [0.616, 0.009]}, "dann": {"auroc": [0.862, 0.014], "precisao": [0.796, 0.027], "deteccao": [0.576, 0.005], "outros_alarme": [0.103, 0.015], "ruido_alarme": [0.017, 0.009], "auroc_aedes_x_culex": [0.86, 0.005]}, "svm": {"auroc": [0.859, 0.003], "precisao": [0.824, 0.006], "deteccao": [0.558, 0.004], "outros_alarme": [0.08, 0.004], "ruido_alarme": [0.038, 0.004], "auroc_aedes_x_culex": [0.867, 0.002]}, "lstm": {"auroc": [0.789, 0.022], "precisao": [0.759, 0.016], "deteccao": [0.533, 0.03], "outros_alarme": [0.118, 0.007], "ruido_alarme": [0.016, 0.002], "auroc_aedes_x_culex": [0.752, 0.059]}, "bilstm": {"auroc": [0.833, 0.019], "precisao": [0.77, 0.012], "deteccao": [0.55, 0.023], "outros_alarme": [0.115, 0.004], "ruido_alarme": [0.013, 0.004], "auroc_aedes_x_culex": [0.792, 0.036]}};
+const NN={"svm": {"auroc": [0.828, 0.001], "precisao": [0.758, 0.004], "deteccao": [0.524, 0.007], "outros_alarme": [0.113, 0.002], "ruido_alarme": [0.041, 0.002], "auroc_aedes_x_culex": [0.784, 0.002]}, "dann": {"auroc": [0.827, 0.026], "precisao": [0.761, 0.021], "deteccao": [0.569, 0.024], "outros_alarme": [0.123, 0.011], "ruido_alarme": [0.027, 0.003], "auroc_aedes_x_culex": [0.797, 0.008]}, "cnn": {"auroc": [0.79, 0.012], "precisao": [0.767, 0.011], "deteccao": [0.488, 0.024], "outros_alarme": [0.103, 0.007], "ruido_alarme": [0.02, 0.009], "auroc_aedes_x_culex": [0.593, 0.027]}, "mlp": {"auroc": [0.818, 0.005], "precisao": [0.758, 0.008], "deteccao": [0.566, 0.016], "outros_alarme": [0.125, 0.003], "ruido_alarme": [0.026, 0.004], "auroc_aedes_x_culex": [0.788, 0.006]}, "bilstm": {"auroc": [0.811, 0.028], "precisao": [0.751, 0.031], "deteccao": [0.533, 0.014], "outros_alarme": [0.123, 0.018], "ruido_alarme": [0.02, 0.004], "auroc_aedes_x_culex": [0.742, 0.05]}, "arvores": {"auroc": [0.808, 0.002], "precisao": [0.727, 0.004], "deteccao": [0.414, 0.004], "outros_alarme": [0.108, 0.003], "ruido_alarme": [0.016, 0.001], "auroc_aedes_x_culex": [0.668, 0.005]}, "lstm": {"auroc": [0.791, 0.031], "precisao": [0.763, 0.023], "deteccao": [0.529, 0.023], "outros_alarme": [0.114, 0.011], "ruido_alarme": [0.019, 0.002], "auroc_aedes_x_culex": [0.756, 0.009]}, "logistica": {"auroc": [0.71, 0.003], "precisao": [0.735, 0.003], "deteccao": [0.221, 0.008], "outros_alarme": [0.05, 0.004], "ruido_alarme": [0.049, 0.007], "auroc_aedes_x_culex": [0.887, 0.006]}, "coral_arvores": {"auroc": [0.507, 0.006], "precisao": [0.36, 0.005], "deteccao": [0.123, 0.004], "outros_alarme": [0.138, 0.006], "ruido_alarme": [0.126, 0.008], "auroc_aedes_x_culex": [0.557, 0.004]}, "parametros": {"mlp": 18689, "cnn": 9889}};
 (function(){
   const s=document.getElementById('mlpSvg'); if(!s)return;
   const layers=[[6,'80 atributos'],[7,'128'],[5,'64'],[1,'nota']], xs=[70,280,490,690];
@@ -1399,8 +1399,8 @@ const NN={"arvores": {"auroc": [0.826, 0.003], "precisao": [0.792, 0.008], "dete
     el('text',{x:X(v)+10,y:y+35,'font-family':'Space Grotesk','font-size':22,'font-weight':700,fill:'#1d2433'},s,cols[0][2](v));
     cols.slice(1).forEach(([kk,,fmt],j)=>el('text',{x:x0+bw+90+j*130,y:y+35,'text-anchor':'middle','font-family':'Space Grotesk','font-size':23,'font-weight':top?700:400,fill:'#1d2433'},s,fmt(NN[k][kk][0])));});
   const t=document.getElementById('cmpText');
-  t.innerHTML=`<div class="card" style="padding:18px 22px"><h3 style="font-size:28px">Escolhemos a SVM</h3><p style="font-size:21px">Empatou no topo do AUROC e venceu no que importa na prática: <b>maior precisão</b> (82%), <b>menos alarmes</b> e a melhor prova Aedes × Culex (0,87).</p></div>
-  <div class="card" style="margin-top:22px;padding:18px 22px"><p style="font-size:20px"><b>Redes neurais</b> (DANN, CNN, MLP) chegaram muito perto. As <b>LSTMs</b> do artigo do Torres ficaram atrás, e o <b>CORAL</b> atrapalhou.</p></div>
+  t.innerHTML=`<div class="card" style="padding:18px 22px"><h3 style="font-size:28px">Escolhemos a SVM</h3><p style="font-size:21px">Lidera o AUROC (0,83) com a <b>menor variação</b> entre repetições, treina em segundos na CPU e é simples de explicar. Mas <b>não vence em tudo</b>: DANN e MLP empatam no AUROC e detectam um pouco mais.</p></div>
+  <div class="card" style="margin-top:22px;padding:18px 22px"><p style="font-size:20px"><b>Redes neurais</b> (DANN, MLP, Bi-LSTM) ficaram muito perto; a <b>CNN</b> e a <b>LSTM</b> ficaram atrás, e o <b>CORAL</b> atrapalhou (AUROC 0,51, igual ao acaso).</p></div>
   <div class="postit" style="margin-top:26px;font-size:27px">O modelo mais novo não é sempre o melhor: <b>teste vários com a mesma prova</b> e escolha pelos números.</div>`;
 })();
 
