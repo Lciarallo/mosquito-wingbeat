@@ -4,7 +4,7 @@ Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor d
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
-- `demo/detector_aedes_demo.ipynb`: material extra (não aparece nos slides), caso queira mostrar o código rodando no VS Code. Já vem executado, com os gráficos salvos; rodar de novo leva cerca de 1 minuto.
+- O notebook único do projeto é `notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb`; a demo antiga foi removida.
 - `experimento_mistura/`: scripts e resultados (JSON).
 
 ## Vídeos
@@ -17,11 +17,6 @@ Os quatro vídeos (`videos/`) vêm de Mukundarajan H., Hol F. J. H., Castillo E.
 | `gravando_garrafa`, `gravando_decolagem` | 7 | Gravação com celular: mosquito na garrafa e decolando |
 | `espectrograma_ao_vivo` | 9 | Espectrograma de *Anopheles gambiae* sendo montado |
 
-## Demo opcional no VS Code
-
-1. Abra a pasta do repositório no VS Code com as extensões Python e Jupyter.
-2. Abra `apresentacao/demo/detector_aedes_demo.ipynb` e escolha o kernel do `.venv-v3`.
-3. As saídas já estão no arquivo; para rodar ao vivo, use "Run All". O notebook lê `experimento_mistura/pool.npz` (atributos de todas as fontes), que não é versionado: gere-o com `pool_features.py` na cópia local.
 
 ## Scripts
 
