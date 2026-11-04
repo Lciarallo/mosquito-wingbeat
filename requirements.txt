@@ -1,12 +1,12 @@
+# Dependências do caderno notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb
+# Testado com Python 3.11, NumPy 2.4, pandas 3.0, SciPy 1.17, scikit-learn 1.9, Matplotlib 3.11,
+# SoundFile 0.14 e PyTorch 2.9.1 (ROCm 6.4). Para GPU, instale o torch da sua plataforma em pytorch.org.
+# Também é preciso o programa ffmpeg no sistema (lê os arquivos .m4a do Dryad).
 numpy>=2.0,<3
 scipy>=1.14,<2
 pandas>=2.2,<4
 matplotlib>=3.8,<4
 scikit-learn>=1.5,<1.11
 soundfile>=0.12,<1
-joblib>=1.4,<2
-threadpoolctl>=3.5,<4
-nbformat>=5.10,<6
-ipykernel>=6.29,<8
 torch>=2.6,<3
-pytest>=8,<10
+ipykernel>=6.29,<8

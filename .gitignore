@@ -1,89 +1,32 @@
-# Publicar apenas o notebook, os módulos que ele executa e seus metadados.
+# Este repositório publica apenas: o caderno (única fonte da verdade), a apresentação e a lista de dependências.
 /*
 !/.gitignore
+!/.gitattributes
+!/.nojekyll
 !/README.md
-!/pytest.ini
 !/requirements.txt
-!/aedes_classical.py
-!/bioacoustic_invariance.py
-!/evaluate_ternary_event_pipeline.py
-!/predict_ternary.py
-!/ternary_protocol.py
-!/ternary_reporting.py
-!/train_ternary_nested_models.py
-!/train_ternary_lstm.py
-!/torres_lstm.py
-!/predict_ternary_lstm.py
-!/verify_ternary_lstm.py
-!/pattern_classifiers.py
-!/train_pattern_classifiers.py
-!/verify_pattern_classifiers.py
-!/predict_pattern.py
-!/pattern_reporting.py
+!/notebooks/
+!/apresentacao/
 !/data/
-!/data/metadata/
+
+# Metadados mínimos que o caderno lê (os áudios em si não são publicados).
 /data/*
 !/data/metadata/
 /data/metadata/*
 !/data/metadata/ternary_segments.csv.gz
 !/data/metadata/known_recording_groups.csv
-!/data/metadata/ternary_neural_reference.json
-!/data/metadata/pattern_classifier_reference.json
-!/data/metadata/document_revision.json
-!/notebooks/
+
 /notebooks/*
 !/notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb
-!/tests/
-/tests/*
-!/tests/test_ternary_verified.py
-!/tests/test_ternary_lstm.py
-!/tests/test_notebook_workflow.py
-!/tests/test_pattern_classifiers.py
-!/tests/test_torres_lstm.py
-!/tests/test_aedes_classical.py
-!/tests/test_v4.py
-!/tests/test_v5.py
 
-# Dados e saídas locais nunca são publicados.
-/drive_audio.wav
+# Dados, caches e saídas locais nunca são publicados.
+/cache_notebook/
 /data/raw/
 /data/archives/
-/data/cache/
 /data/external/
 /data/noise/
-/results/
-/output/
-/tmp/
-/external/
-/reports/
-/literature/
-/dist/
 __pycache__/
 .ipynb_checkpoints/
 *.py[cod]
 *.log
 .DS_Store
-
-# Reanálise v2 (código, protocolo, saídas leves e relatório)
-!/reanalysis/
-!/reports/
-/reports/*
-!/reports/reanalise_v2.md
-!/tests/test_reanalysis_v2.py
-!/tests/test_v3_continuation.py
-!/reports/analise_de_lacunas_continuacao_v3.md
-!/reports/continuacao_v3.md
-!/reports/historico_ternario.md
-!/reports/plano_filter_repo.md
-!/reports/inventario_raiz_2026_10_22.md
-!/reports/datasets_candidatos_v4.md
-!/reports/plano_v4.md
-!/reports/resultados_v4.md
-!/reports/analise_dados_e_melhorias_2026_11_01.md
-!/reports/plano_v5_exploratorio.md
-!/reports/resultados_v5_exploratorio.md
-# Apresentação didática e scripts do experimento de mistura
-!/apresentacao/
-
-# GitHub Pages: servir os arquivos sem Jekyll
-!/.nojekyll

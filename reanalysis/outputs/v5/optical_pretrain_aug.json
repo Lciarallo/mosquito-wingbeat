@@ -1,8 +1,0 @@
-{
- "tag": "aug",
- "epochs": 4,
- "steps": 1972,
- "optico_validacao_acc_balanceada_6_especies": 0.8842,
- "optico_recall_aegypti": 0.8538,
- "n_validacao": 13118
-}
