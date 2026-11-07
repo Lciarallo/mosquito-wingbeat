@@ -25,3 +25,5 @@ AUROC 0,83 · precisão 76% · detecção 52% (limiar 0,5) · AUROC Aedes × Cul
 ## Primeiro teste com um aparelho nosso: Arduino de laboratório (§19)
 
 Sete gravações contínuas de *Aedes aegypti* feitas com um Arduino em duas armadilhas (05/11/2026). Uma regra baseada nos harmônicos do bater de asas separa, segundo a segundo, os trechos com mosquito (259 s) dos trechos só com ruído ambiente (137 s); nenhum arquivo é só ruído. Os modelos atuais, **sem retreino**, avaliados nesses trechos: o SVM final acerta quase sempre quando avisa "Aedes" (precisão 98%, 1% de alarmes no ruído), mas só reconhece 34% dos segundos de Aedes (melhor na Armadilha 1 que na 2), e o estágio "tem mosquito?" chama o ruído do Arduino de mosquito. Os 9 modelos ficam entre 0,60 e 0,74 de AUROC Aedes × ruído. A tabela de janelas rotuladas está em `data/metadata/arduino_lab_2026_11_05_janelas.csv`.
+
+Treinando com o Arduino de 05/11 e provando em outros dias (21/10 e 30/09, nunca vistos no treino), a detecção continua baixa: no limiar 0,5 nenhum modelo passa de 1/3 dos segundos de Aedes, embora os alarmes falsos fiquem em 0–3%. O SVM sobe de AUROC 0,65 para 0,86; LSTM e Bi-LSTM pioram (§19.3).
