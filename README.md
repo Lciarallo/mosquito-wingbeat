@@ -8,7 +8,7 @@ Detector ternário de mosquitos pelo som: dada uma gravação curta, o som é **
 |---|---|
 | `notebooks/detector_ternario_treinamento_teste_aplicacao.ipynb` | **O caderno é a única fonte da verdade.** Vai do áudio bruto ao resultado (atributos, validação por grupo, 9 modelos, SVM final, curvas, interpretabilidade, aplicação a um WAV), com código, explicação, o porquê de cada passo e glossário. Não importa nenhum script do repositório. |
 | `apresentacao/` | Os slides ("Zzzz… é Aedes?", HTML e PDF), alinhados ao caderno. |
-| `data/` | Os áudios (não publicados no Git) e dois arquivos de metadados que o caderno lê em `data/metadata/`. |
+| `data/` | Os áudios (não publicados no Git) e os metadados em `data/metadata/` (os dois que o caderno lê e a tabela de janelas do Arduino que ele gera na §19). |
 
 ## Como reproduzir
 
@@ -21,3 +21,7 @@ Detector ternário de mosquitos pelo som: dada uma gravação curta, o som é **
 AUROC 0,83 · precisão 76% · detecção 52% (limiar 0,5) · AUROC Aedes × Culex no mesmo aparelho 0,78.
 
 **Limites:** os resultados são retrospectivos (dados já conhecidos do projeto), não um teste cego. O modelo só viu Aedes de dois datasets e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso). O resultado também depende de como os poucos aparelhos do Funchal são agrupados: com 8 e 48 kHz juntos (agrupamento usado antes, por um erro de comparação de texto) a AUROC seria 0,86. Detalhes e números nas §11, §14 e §17 do caderno.
+
+## Primeiro teste com um aparelho nosso: Arduino de laboratório (§19)
+
+Sete gravações contínuas de *Aedes aegypti* feitas com um Arduino em duas armadilhas (05/11/2026). Uma regra baseada nos harmônicos do bater de asas separa, segundo a segundo, os trechos com mosquito (259 s) dos trechos só com ruído ambiente (137 s); nenhum arquivo é só ruído. Os modelos atuais, **sem retreino**, avaliados nesses trechos: o SVM final acerta quase sempre quando avisa "Aedes" (precisão 98%, 1% de alarmes no ruído), mas só reconhece 34% dos segundos de Aedes (melhor na Armadilha 1 que na 2), e o estágio "tem mosquito?" chama o ruído do Arduino de mosquito. Os 9 modelos ficam entre 0,60 e 0,74 de AUROC Aedes × ruído. A tabela de janelas rotuladas está em `data/metadata/arduino_lab_2026_11_05_janelas.csv`.

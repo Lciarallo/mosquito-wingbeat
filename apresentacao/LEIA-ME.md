@@ -35,4 +35,4 @@ Os quatro vídeos (`videos/`) vêm de Mukundarajan H., Hol F. J. H., Castillo E.
 | 22 (prova mais justa) | §14 |
 | 24 (o que o modelo ouve) | §15 e §16 |
 
-**Limites** (detalhados em §17 e §19 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota).
+**Limites** (detalhados em §17 e §20 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota).
