@@ -903,7 +903,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
     </div>
     <div class="card rise" style="--d:5;margin-top:30px;padding:20px 26px;background:#fde9e4">
       <h3 style="font-size:26px">Ainda falta</h3>
-      <p style="font-size:21px">O modelo só viu Aedes de <b>dois datasets</b>. Aedes gravados em <b>outros aparelhos</b> ainda não são reconhecidos (AUROC 0,51, igual ao acaso): o próximo passo é coletar mais fontes.</p>
+      <p style="font-size:21px">O modelo só viu Aedes de <b>dois datasets</b>. Aedes gravados em <b>outros aparelhos</b> ainda não são reconhecidos (AUROC 0,51, igual ao acaso). No Arduino do laboratório, com ajustes, já chega a 61% (slide 27).</p>
     </div>
   </div>
   <div class="foot"><span><svg><use href="#mini"/></svg>AUROC Aedes × Culex, aparelho fora do treino · média de 3 repetições</span><span class="pn"></span></div>
@@ -1029,6 +1029,48 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
   <div class="foot"><span><svg><use href="#mini"/></svg>TinyML: rodar o modelo no microcontrolador, perto do sensor · hoje o firmware de presença é experimental</span><span class="pn"></span></div>
 </section>
 
+<!-- ============ TESTE NO ARDUINO DO LABORATÓRIO ============ -->
+<section class="slide" data-title="Teste no Arduino">
+  <div class="kicker rise">teste no Arduino do laboratório</div>
+  <h2 class="rise" style="--d:1">No Arduino: <span class="hl">6 em cada 10</span> segundos de Aedes</h2>
+  <div class="rise" style="--d:2;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:34px">
+    <div class="card" style="padding:18px 22px;text-align:center"><div style="font-size:84px;font-weight:700;line-height:1;color:var(--red)">61%</div><p style="font-size:22px;margin-top:6px">dos segundos de Aedes de outubro viraram alarme</p></div>
+    <div class="card" style="padding:18px 22px;text-align:center"><div style="font-size:84px;font-weight:700;line-height:1;color:var(--blue)">3%</div><p style="font-size:22px;margin-top:6px">do ruído do ambiente virou alarme</p></div>
+    <div class="card" style="padding:18px 22px;text-align:center"><div style="font-size:84px;font-weight:700;line-height:1;color:var(--green)">98%</div><p style="font-size:22px;margin-top:6px">dos alarmes eram mosquito</p></div>
+    <div class="card" style="padding:18px 22px;text-align:center"><div style="font-size:84px;font-weight:700;line-height:1;color:var(--teal)">0</div><p style="font-size:22px;margin-top:6px">segundos do Arduino no treino</p></div>
+  </div>
+  <div class="card rise" style="--d:3;position:absolute;left:120px;top:500px;width:1060px;padding:20px 30px">
+    <h3 style="font-size:30px;margin-bottom:14px">O detector híbrido</h3>
+    <div style="display:flex;align-items:center;gap:18px">
+      <div style="flex:1;background:#e8f1e4;border:3px solid var(--ink);border-radius:14px;padding:14px 18px">
+        <div style="font-size:24px;font-weight:700">1 · tem mosquito?</div>
+        <p style="font-size:20px">rede massiva <b>AST</b> (87 milhões de pesos, 2 milhões de clipes do YouTube), classe “Mosquito”, <b>sem treino</b></p>
+      </div>
+      <div style="font-size:54px;font-weight:700;color:var(--ink)">×</div>
+      <div style="flex:1;background:#fdf3d8;border:3px solid var(--ink);border-radius:14px;padding:14px 18px">
+        <div style="font-size:24px;font-weight:700">2 · é Aedes?</div>
+        <p style="font-size:20px">os <b>80 números</b> do zumbido + regressão logística, treinada só na base do caderno</p>
+      </div>
+    </div>
+    <div style="margin-top:16px;font-size:21px;color:var(--ink2)">
+      <div style="display:grid;grid-template-columns:330px 1fr 70px;gap:8px 14px;align-items:center">
+        <span>modelo do caderno, como está</span><div style="height:24px;width:1%;background:var(--gray);border:2px solid var(--ink)"></div><b>~1%</b>
+        <span>+ limiar próprio para o Arduino</span><div style="height:24px;width:48%;background:var(--blue);border:2px solid var(--ink)"></div><b>48%</b>
+        <span>+ AST no estágio 1 (híbrido)</span><div style="height:24px;width:61%;background:var(--red);border:2px solid var(--ink)"></div><b>61%</b>
+      </div>
+      <p style="font-size:18px;margin-top:8px">detecção nos dias 21/10 e 30/09; limiar escolhido só com as gravações de 05/11</p>
+    </div>
+  </div>
+  <div class="abs" style="left:1250px;top:500px;width:560px">
+    <div class="postit rise" style="--d:4;font-size:31px">A rede gigante é ótima para <b>achar</b> o mosquito. Para dizer <b>qual</b> mosquito, os 80 números da física do zumbido ainda ganham.</div>
+    <div class="card rise" style="--d:5;margin-top:30px;padding:18px 24px;background:#fde9e4">
+      <h3 style="font-size:26px">Cuidado ao ler</h3>
+      <p style="font-size:20px">Conta <b>segundos</b>, não mosquitos. O Arduino só gravou <b>Aedes e ruído</b>: falta gravar <em>Culex</em> no mesmo aparelho para provar que ele não chama tudo de Aedes. São 2 dias e 5 arquivos.</p>
+    </div>
+  </div>
+  <div class="foot"><span><svg><use href="#mini"/></svg>prova em 21/10 e 30/09 (231 s de Aedes, 89 s de ruído) · caderno §19.4–§19.6</span><span class="pn"></span></div>
+</section>
+
 <!-- ============ 17 · PRÓXIMOS PASSOS ============ -->
 <section class="slide" data-title="Próximos passos">
   <div class="kicker rise">próximos passos</div>
@@ -1039,7 +1081,7 @@ queda = auc_base - <span class="f">roc_auc_score</span>(y, p)</div>
       <ol style="list-style:none;font-size:31px;line-height:1.35">
         <li style="display:flex;gap:22px;margin-bottom:26px"><span class="hand red" style="font-size:54px;line-height:.8">☐</span><span><b>Controles pareados:</b> Aedes <em>e</em> outras espécies gravados no <b>mesmo aparelho, setup e dia</b> — em vários aparelhos e locais.</span></li>
         <li style="display:flex;gap:22px;margin-bottom:26px"><span class="hand red" style="font-size:54px;line-height:.8">☐</span><span><b>Ruído in situ</b> dos ambientes reais, no lugar de ESC-50/Pete.</span></li>
-        <li style="display:flex;gap:22px;margin-bottom:26px"><span class="hand red" style="font-size:54px;line-height:.8">☐</span><span><b>Mais fontes de Aedes:</b> o modelo só viu Aedes de dois datasets e ainda não reconhece Aedes de aparelhos novos.</span></li>
+        <li style="display:flex;gap:22px;margin-bottom:26px"><span class="hand red" style="font-size:54px;line-height:.8">☐</span><span><b>Mais fontes de Aedes:</b> no Arduino do laboratório o detector já acha 61% dos segundos de Aedes, mas falta gravar <b>outras espécies</b> nele e em mais dias.</span></li>
         <li style="display:flex;gap:22px"><span class="hand red" style="font-size:54px;line-height:.8">☐</span><span><b>Um teste cego único</b>, numa campanha nova, com o protocolo congelado <b>antes</b> da coleta.</span></li>
       </ol>
     </div>

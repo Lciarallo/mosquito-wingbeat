@@ -1,6 +1,6 @@
 # Apresentação: "Zzzz… é Aedes?"
 
-Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (29 slides, com referências no penúltimo): o processo, as ferramentas, os dados, os atributos, os modelos (árvores, redes neurais MLP e CNN, e a SVM, que é o modelo final), o ranking de 9 modelos na mesma prova, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek) e a ponte com o hardware (Arduino).
+Apresentação para alunos da Eletrônica sobre o trabalho de um desenvolvedor de ML (30 slides, com referências no penúltimo): o processo, as ferramentas, os dados, os atributos, os modelos (árvores, redes neurais MLP e CNN, e a SVM, que é o modelo final), o ranking de 9 modelos na mesma prova, a validação por grupo, as métricas (matriz de confusão, curva ROC, limiar), o resultado, a interpretabilidade, cada método de ML em poucas linhas de código, o uso de assistentes de IA no código (Claude Code, Codex, Hermes, DeepSeek), a ponte com o hardware (Arduino) e o primeiro teste com gravações do Arduino do laboratório.
 
 - `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para navegar, `f` para tela cheia.
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática.
@@ -34,5 +34,6 @@ Os quatro vídeos (`videos/`) vêm de Mukundarajan H., Hol F. J. H., Castillo E.
 | 18–21 (matriz, ROC, limiar, resultado) | §11–§13 |
 | 22 (prova mais justa) | §14 |
 | 24 (o que o modelo ouve) | §15 e §16 |
+| 27 (teste no Arduino do laboratório) | §19.4–§19.6 |
 
-**Limites** (detalhados em §17 e §20 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota).
+**Limites** (detalhados em §17 e §20 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota). No Arduino do laboratório (slide 27, §19), o detector híbrido (classe "Mosquito" do AST + os 80 atributos) acha 61% dos segundos de Aedes de dias novos com 3% de alarmes no ruído, sem dados do Arduino no treino; falta testar outras espécies no mesmo aparelho.
