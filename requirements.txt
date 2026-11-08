@@ -10,3 +10,7 @@ scikit-learn>=1.5,<1.11
 soundfile>=0.12,<1
 torch>=2.6,<3
 ipykernel>=6.29,<8
+# §19.6 (redes massivas pré-treinadas: Perch 2.0 em ONNX e AST)
+onnxruntime>=1.18,<2
+transformers>=4.40,<5
+huggingface_hub>=0.23,<1
