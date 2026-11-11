@@ -34,6 +34,6 @@ Os quatro vídeos (`videos/`) vêm de Mukundarajan H., Hol F. J. H., Castillo E.
 | 18–21 (matriz, ROC, limiar, resultado) | §11–§13 |
 | 22 (prova mais justa) | §14 |
 | 24 (o que o modelo ouve) | §15 e §16 |
-| 27 (teste no Arduino do laboratório) | §19.4–§19.6 |
+| 27 (teste no Arduino do laboratório) | §19.16, §19.17 e §19.19 |
 
-**Limites** (detalhados em §17 e §20 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota). No Arduino do laboratório (slide 27, §19), o detector híbrido (classe "Mosquito" do AST + os 80 atributos) acha 61% dos segundos de Aedes de dias novos com 3% de alarmes no ruído, sem dados do Arduino no treino; falta testar outras espécies no mesmo aparelho.
+**Limites** (detalhados em §17 e §20 do caderno): os resultados são retrospectivos, não é teste cego; o modelo só viu Aedes de dois datasets (Torres e Funchal) e **não** reconhece Aedes de aparelhos novos (AUROC 0,51, igual ao acaso); o resultado depende de como os poucos aparelhos do Funchal são agrupados (§11, nota). No Arduino do laboratório (slide 27, §19), a melhor receita (CNN treinada com a base e os outros dias do Arduino, calibração pelo ruído da armadilha e enxames sintéticos) acha 81% dos segundos de Aedes de um dia nunca visto, com 3% do ruído e 0% do outro mosquito em alarme. Esse número usa o rótulo de quem ouviu o áudio de 30/09, corrigido depois da primeira prova (com o rótulo automático são 69%); falta confirmar num dia novo, com outra espécie na mesma armadilha.
