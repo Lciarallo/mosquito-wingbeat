@@ -2,7 +2,7 @@
 
 Versão **para leigos** (23 slides): conta a história do projeto sem entrar em modelos, bibliotecas ou código. Pouco texto por slide, uma ideia por vez, e animações: o mosquito voando, o zumbido como onda (com botão para ouvir um zumbido sintético), o som virando imagem, os exemplos entrando na "máquina", números que contam e gráficos que crescem.
 
-- `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para avançar, `f` para tela cheia. Nos slides 6, 18 e 19 o conteúdo aparece **em passos**, um a cada clique (há um aviso "clique ▸" no canto).
+- `Apresentacao_Mosquito_Interpretabilidade.html`: versão animada e autocontida. Abra no navegador; setas ou clique para avançar, `f` para tela cheia. Nos slides 6, 11, 18 e 19 o conteúdo aparece **em passos**, um a cada clique (há um aviso "clique ▸" no canto).
 - `Apresentacao_Mosquito_Interpretabilidade.pdf`: versão estática, com tudo já revelado.
 - `videos/`: os vídeos usados nos slides (ver abaixo).
 - `fotos/`: as fotos do laboratório usadas nos slides 14 a 16, já recortadas e comprimidas.
@@ -34,7 +34,7 @@ Os slides 14 a 16 usam dez fotos e um vídeo curto feitos no laboratório durant
 | 8 | o som vira imagem (espectrograma) | §4 |
 | 9 | aprender com exemplos: 2.167 Aedes, 3.050 outros mosquitos, 426 ruídos | §2 e §5 |
 | 10 | prova com aparelho nunca ouvido | §7 |
-| 11 | 76% dos alarmes são Aedes; avisa em metade dos Aedes (52%) | §11 e §12 |
+| 11 | duas perguntas separadas: de cada 100 avisos, 76 eram Aedes; de cada 100 Aedes, ela avisou em 52 | §11 e §12 |
 | 12 | em que faixas do som a máquina presta atenção | §15 |
 | 14 a 16 | fotos e vídeo do laboratório: a criação, a preparação da armadilha e a gravação | §19 (de onde vêm as gravações) |
 | 17 | Arduino do laboratório: 81% de detecção, 3% do ruído e 0% do outro mosquito em alarme; 54% → 62% → 69% → 81% | §19.16, §19.17 e §19.19 |

@@ -606,18 +606,13 @@ body.static .slide{transform:none;transition:none}
 </section>
 
 <!-- ============ 11 · RESULTADO ============ -->
-<section class="slide" data-title="Quando apita, costuma ser Aedes">
-  <div class="kicker rise">o resultado</div>
-  <h2 class="rise" style="--d:1">Quando apita, <span class="hl">costuma ser Aedes</span></h2>
-  <svg class="abs" style="left:120px;top:280px" width="1100" height="640" viewBox="0 0 1100 640" id="cemSvg"></svg>
-  <div class="abs" style="left:1290px;top:290px;width:530px">
-    <div class="rise" style="--d:3"><span class="big" style="color:var(--green)"><span class="count" data-to="76">76</span>%</span>
-      <p style="font-size:38px;line-height:1.2;font-weight:700;margin-top:6px">dos alarmes são Aedes de verdade</p></div>
-    <div class="postit rise" style="--d:6;margin-top:50px;font-size:46px">3 em cada 4 avisos estão certos.</div>
-    <div class="card rise" style="--d:8;margin-top:46px;padding:18px 24px;background:#fde9e4">
-      <p style="font-size:28px;color:var(--ink)">Mas ela é tímida: só avisa em <b>metade</b> dos Aedes.</p>
-    </div>
-  </div>
+<section class="slide" data-title="Avisa pouco, mas acerta quando avisa">
+  <div class="kicker rise">o resultado: duas perguntas diferentes</div>
+  <h2 class="rise" style="--d:1">Avisa pouco, mas <span class="hl">acerta quando avisa</span></h2>
+  <svg class="abs" style="left:120px;top:275px" width="790" height="650" viewBox="0 0 790 650" id="cemSvg"></svg>
+  <svg class="abs step" style="left:1010px;top:275px" width="790" height="650" viewBox="0 0 790 650" id="percSvg"></svg>
+  <p class="lead abs step" style="left:120px;top:938px;width:1680px;max-width:none;font-size:38px;color:var(--ink);text-align:center">Ela fica quieta em metade dos Aedes. Mas, <b>quando avisa, quase sempre é Aedes</b>.</p>
+  <div class="stephint">clique ▸</div>
   <div class="foot"><span><svg><use href="#mini"/></svg>gravações públicas, prova com aparelhos nunca ouvidos · caderno §11 e §12</span><span class="pn"></span></div>
 </section>
 
@@ -901,14 +896,17 @@ const T=(s,x,y,t,o={})=>el('text',Object.assign({x,y,'font-family':'Space Grotes
   for(let k=0;k<4;k++)fone(good,606+k*90,420,cols[4]);
 })();
 
-/* --- 100 alarmes --- */
+/* --- duas perguntas: de 100 avisos, quantos eram Aedes? de 100 Aedes, quantos ela avisou? --- */
 (function(){
-  const s=document.getElementById('cemSvg');
-  T(s,0,40,'De cada 100 alarmes de “Aedes”…',{'text-anchor':'start','font-size':38,'font-weight':700});
-  for(let i=0;i<100;i++){const c=i%10,r=Math.floor(i/10),ok=i<76;
-    el('use',{href:'#mini',class:'dot',x:c*108,y:80+r*46,width:64,height:45,style:`--i:${i}`+(ok?'':';filter:sepia(1) saturate(3) hue-rotate(-20deg) brightness(1.25)')},s);}
-  el('rect',{x:0,y:570,width:28,height:28,fill:'#1d2433'},s);T(s,42,594,'76 são Aedes',{'text-anchor':'start','font-size':32,'font-weight':700});
-  el('rect',{x:330,y:570,width:28,height:28,fill:'#b0703a'},s);T(s,372,594,'24 são outro mosquito ou ruído',{'text-anchor':'start','font-size':32});
+  const grade=(id,titulo1,titulo2,n,cor,estilo,grande,frase,resto)=>{const s=document.getElementById(id);
+    T(s,0,34,titulo1,{'text-anchor':'start','font-size':34,'font-weight':700});T(s,0,76,titulo2,{'text-anchor':'start','font-size':34,'font-weight':700,fill:cor});
+    for(let i=0;i<100;i++){const c=i%10,r=Math.floor(i/10);
+      el('use',{href:'#mini',class:'dot',x:c*78,y:100+r*41,width:60,height:42,style:`--i:${i}`+(i<n?'':';'+estilo)},s);}
+    T(s,0,600,grande,{'text-anchor':'start','font-size':104,'font-weight':700,fill:cor});
+    T(s,150,566,frase,{'text-anchor':'start','font-size':34,'font-weight':700});
+    T(s,150,606,resto,{'text-anchor':'start','font-size':28,fill:'#4a5163'});};
+  grade('cemSvg','1 · Ela deu 100 avisos.','Quantos eram Aedes mesmo?',76,'#4c8a4a','filter:sepia(1) saturate(3) hue-rotate(-20deg) brightness(1.25)','76','eram Aedes de verdade','24 eram outro mosquito ou ruído (em marrom)');
+  grade('percSvg','2 · Passaram 100 Aedes.','Em quantos ela avisou?',52,'#d1453b','filter:opacity(.18)','52','ela avisou','48 passaram sem aviso (apagados)');
 })();
 
 /* --- em que faixas do som a máquina presta atenção --- */
